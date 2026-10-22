@@ -1,0 +1,464 @@
+{
+  "schema_version": "atlas.current-route-evidence/29.5.0",
+  "phase": "DEV",
+  "risk_level": "R2",
+  "version": "V29.5",
+  "release_approved": false,
+  "parent": {
+    "version": "V29.4 Scenario Admissibility r01",
+    "archive_sha256": "59b11b3d9061f9f1ca9603ee8b02aeda1aed19365908512ba673b6c8f5fc211e",
+    "authority_dataset_hash": "44197c3e15d3b44bb82b9abfbd6562bdbbdeae8bc9eb6f07a9c44ea4be65b646"
+  },
+  "analysis_as_of": "2026-10-09",
+  "selection": {
+    "formula": "5*simulation_impact + 4*dependency_impact + 3*uncertainty_reduction + 2*new_primary_source_availability - research_cost",
+    "maximum_selected": 2,
+    "selected_route_ids": [
+      "route:v295:kansanshi-to-kansanshi-smelter",
+      "route:v295:sentinel-to-kansanshi-smelter"
+    ],
+    "candidate_scores": [
+      {
+        "route_id": "route:v295:kansanshi-to-kansanshi-smelter",
+        "score": 41,
+        "selected": true
+      },
+      {
+        "route_id": "route:v295:sentinel-to-kansanshi-smelter",
+        "score": 41,
+        "selected": true
+      },
+      {
+        "route_id": "route:v295:chuquicamata-integrated-processing",
+        "score": 36,
+        "selected": false
+      }
+    ]
+  },
+  "source_manifest": {
+    "schema_version": "atlas.source-manifest/29.5.0",
+    "accessed_at": "2026-10-09",
+    "sources": [
+      {
+        "source_id": "fqm-q2-2026-mda",
+        "publisher": "First Quantum Minerals Ltd.",
+        "title": "2026 Q2 Management's Discussion and Analysis",
+        "source_quality": "COMPANY_PRIMARY_REGULATORY_REPORT",
+        "published_at": "2026-07-28",
+        "report_prepared_at": "2026-07-28",
+        "url": "https://www.first-quantum.com/wp-content/uploads/2026/07/2026-Q2-FQM-Managements-Discussion-Analysis-FINAL.pdf",
+        "access_status": "PUBLICLY_ACCESSIBLE",
+        "retrieval_method": "Direct HTTPS download from the operator's official investor-report URL; PDF text extracted locally with pdftotext -layout.",
+        "raw_artifact": "foundation/V29/current-route-evidence/raw/fqm-q2-2026-mda.pdf",
+        "raw_sha256": "e5d88fb002f4b77dedd3eb390e6035ac3571fc549fa04093067f3f6705f85f66",
+        "raw_bytes": 5820924,
+        "text_artifact": "foundation/V29/current-route-evidence/raw/fqm-q2-2026-mda.txt",
+        "text_sha256": "708e846c279094b81997147eeea3edae847bb0ef1fb9dcd072601e9f00c75105",
+        "evidence_completeness": "PINNED_PRIMARY_PDF_AND_TEXT_EXTRACT",
+        "usage_limits": [
+          "REPORTING_PERIOD_IS_Q2_AND_H1_2026_NOT_CONTINUOUS_CURRENT_VALIDITY",
+          "AGGREGATE_SMELTER_FEED_INCLUDES_TRIDENT_AND_THIRD_PARTY_CONCENTRATE",
+          "SALES_BY_ORIGIN_AND_PRODUCT_FORM_ARE_NOT_MINE_TO_SMELTER_FEED_DMT",
+          "NAMEPLATE_OR_OPTIMIZATION_TARGET_IS_NOT_AVAILABLE_SPARE_CAPACITY"
+        ]
+      }
+    ]
+  },
+  "shared_facility_observations": [
+    {
+      "observation_id": "observation:v295:kcs-h1-2026-aggregate-feed",
+      "field": "aggregate_concentrate_processed",
+      "value": 727353,
+      "unit": "DMT",
+      "material": "COPPER",
+      "material_basis": "CONCENTRATE_DRY_MASS",
+      "period_start": "2026-01-01",
+      "period_end": "2026-07-01",
+      "fact_status": "FACT",
+      "locator": {
+        "pdf_pages_1based": [
+          19,
+          20
+        ],
+        "text_lines": "1053-1079, 1166-1179",
+        "search_text": "Concentrate processed"
+      },
+      "scope_limit": "Inclusive of Trident and third-party concentrate; not allocable to either selected mine."
+    }
+  ],
+  "routes": [
+    {
+      "route_id": "route:v295:kansanshi-to-kansanshi-smelter",
+      "identity": {
+        "source_entity_id": "entity:2c1aa724-2bc5-4753-9f32-e7b4a8713fa5",
+        "target_entity_id": "entity:436387f3-1b53-48a2-8f3d-35722a6bcffd",
+        "entity_identity_status": "PRESERVED_EXISTING_IDS"
+      },
+      "preserved_claim_ids": [
+        "claim:b8bb3e2b-e5e8-5a24-8dec-8505c9d5b487"
+      ],
+      "preserved_relationship_ids": [
+        "relationship:b8bb3e2b-e5e8-5a24-8dec-8505c9d5b487"
+      ],
+      "material": {
+        "commodity": "COPPER",
+        "upstream_form": "CONCENTRATE",
+        "downstream_observed_form": "ANODE",
+        "compatibility_status": "DIRECTLY_EVIDENCED_FOR_REPORTED_OUTPUT_ONLY"
+      },
+      "reference_period": {
+        "period_type": "HALF_YEAR",
+        "start": "2026-01-01",
+        "end": "2026-07-01"
+      },
+      "current_period_evidence_status": "ORIGIN_ATTRIBUTED_SALES_REPORTED",
+      "physical_route_status": "PARTIALLY_EVIDENCED_CURRENT_PERIOD",
+      "direct_observations": [
+        {
+          "route_id": "route:v295:kansanshi-to-kansanshi-smelter",
+          "observation_id": "observation:v295:kansanshi-h1-2026-anode-sales",
+          "field": "origin_attributed_anode_sales",
+          "value": 68840,
+          "unit": "t_Cu",
+          "material": "COPPER",
+          "material_basis": "CONTAINED_METAL",
+          "material_form": "ANODE",
+          "period_start": "2026-01-01",
+          "period_end": "2026-07-01",
+          "fact_status": "FACT",
+          "locator": {
+            "pdf_pages_1based": [
+              61
+            ],
+            "text_lines": "3596-3619",
+            "search_text": "Kansanshi anode"
+          },
+          "scope_limit": "Sales quantity attributable to Kansanshi; not direct mine-to-smelter concentrate feed DMT and not a complete flow allocation."
+        }
+      ],
+      "actual_delivery_or_feed_quantity": null,
+      "actual_delivery_or_feed_quantity_status": "UNKNOWN",
+      "facility_aggregate_feed_observation_refs": [
+        "observation:v295:kcs-h1-2026-aggregate-feed"
+      ],
+      "facility_aggregate_feed_allocation_status": "UNALLOCATED_SHARED_QUANTITY",
+      "genuinely_available_alternative_capacity": null,
+      "alternative_capacity_status": "UNKNOWN",
+      "capacity_evidence": {
+        "field": "smelter_optimization_target",
+        "value": 1.6,
+        "unit": "Mtpa",
+        "fact_status": "FACT",
+        "locator": {
+          "pdf_pages_1based": [
+            21
+          ],
+          "text_lines": "1176-1180",
+          "search_text": "optimization continues towards 1.6Mtpa"
+        },
+        "capacity_state": "TARGET_NOT_AVAILABLE_SPARE_CAPACITY",
+        "available_spare_capacity": null,
+        "available_spare_capacity_status": "UNKNOWN"
+      },
+      "calculation_eligibility": {
+        "structural_current_period": true,
+        "route_specific_quantity": false,
+        "quantified_disruption": false,
+        "substitution": false
+      },
+      "source_refs": [
+        "fqm-q2-2026-mda"
+      ],
+      "data_gap_refs": [
+        "gap:209838aa-73c0-54fd-ab30-5f0e345a62f4",
+        "gap:3b3ec3ac-c857-54ab-b7fb-57dfe1d62ced"
+      ],
+      "usage_restrictions": [
+        "NO_ORIGIN_SALES_TO_FEED_DMT_CONVERSION",
+        "NO_AGGREGATE_SMELTER_FEED_ALLOCATION",
+        "NO_CONTINUOUS_VALIDITY_OUTSIDE_REPORTED_PERIOD",
+        "NO_SPARE_CAPACITY_FROM_NAMEPLATE_OR_TARGET",
+        "NO_QUANTIFIED_DISRUPTION",
+        "NO_VERIFIED_SUBSTITUTION"
+      ]
+    },
+    {
+      "route_id": "route:v295:sentinel-to-kansanshi-smelter",
+      "identity": {
+        "source_entity_id": "entity:0b5ed61e-0045-4039-8655-a9a62aac482a",
+        "target_entity_id": "entity:436387f3-1b53-48a2-8f3d-35722a6bcffd",
+        "entity_identity_status": "PRESERVED_EXISTING_IDS"
+      },
+      "preserved_claim_ids": [
+        "claim:3e433423-c1b8-5190-b045-efaaed316804"
+      ],
+      "preserved_relationship_ids": [
+        "relationship:0d55d5a0-9901-5595-9a6e-bb324a0104f5",
+        "relationship:6c327896-66c1-539c-bb0e-aae335ba2a50"
+      ],
+      "material": {
+        "commodity": "COPPER",
+        "upstream_form": "CONCENTRATE",
+        "downstream_observed_form": "ANODE",
+        "compatibility_status": "DIRECTLY_EVIDENCED_FOR_REPORTED_OUTPUT_ONLY"
+      },
+      "reference_period": {
+        "period_type": "HALF_YEAR",
+        "start": "2026-01-01",
+        "end": "2026-07-01"
+      },
+      "current_period_evidence_status": "ORIGIN_ATTRIBUTED_SALES_REPORTED",
+      "physical_route_status": "PARTIALLY_EVIDENCED_CURRENT_PERIOD",
+      "direct_observations": [
+        {
+          "route_id": "route:v295:sentinel-to-kansanshi-smelter",
+          "observation_id": "observation:v295:sentinel-h1-2026-anode-sales",
+          "field": "origin_attributed_anode_sales",
+          "value": 83004,
+          "unit": "t_Cu",
+          "material": "COPPER",
+          "material_basis": "CONTAINED_METAL",
+          "material_form": "ANODE",
+          "period_start": "2026-01-01",
+          "period_end": "2026-07-01",
+          "fact_status": "FACT",
+          "locator": {
+            "pdf_pages_1based": [
+              61
+            ],
+            "text_lines": "3596-3619",
+            "search_text": "Sentinel anode"
+          },
+          "scope_limit": "Sales quantity attributable to Sentinel/Trident; not direct Sentinel-to-smelter concentrate feed DMT."
+        },
+        {
+          "route_id": "route:v295:sentinel-to-kansanshi-smelter",
+          "observation_id": "observation:v295:sentinel-h1-2026-concentrate-sales",
+          "field": "origin_attributed_concentrate_sales",
+          "value": 4797,
+          "unit": "t_Cu",
+          "material": "COPPER",
+          "material_basis": "CONTAINED_METAL",
+          "material_form": "CONCENTRATE",
+          "period_start": "2026-01-01",
+          "period_end": "2026-07-01",
+          "fact_status": "FACT",
+          "locator": {
+            "pdf_pages_1based": [
+              61
+            ],
+            "text_lines": "3596-3619",
+            "search_text": "Sentinel concentrate"
+          },
+          "scope_limit": "Sales quantity, not a destination-specific delivery or feed allocation."
+        }
+      ],
+      "actual_delivery_or_feed_quantity": null,
+      "actual_delivery_or_feed_quantity_status": "UNKNOWN",
+      "facility_aggregate_feed_observation_refs": [
+        "observation:v295:kcs-h1-2026-aggregate-feed"
+      ],
+      "facility_aggregate_feed_allocation_status": "UNALLOCATED_SHARED_QUANTITY",
+      "genuinely_available_alternative_capacity": null,
+      "alternative_capacity_status": "UNKNOWN",
+      "capacity_evidence": {
+        "field": "smelter_optimization_target",
+        "value": 1.6,
+        "unit": "Mtpa",
+        "fact_status": "FACT",
+        "locator": {
+          "pdf_pages_1based": [
+            21
+          ],
+          "text_lines": "1176-1180",
+          "search_text": "optimization continues towards 1.6Mtpa"
+        },
+        "capacity_state": "TARGET_NOT_AVAILABLE_SPARE_CAPACITY",
+        "available_spare_capacity": null,
+        "available_spare_capacity_status": "UNKNOWN"
+      },
+      "calculation_eligibility": {
+        "structural_current_period": true,
+        "route_specific_quantity": false,
+        "quantified_disruption": false,
+        "substitution": false
+      },
+      "source_refs": [
+        "fqm-q2-2026-mda"
+      ],
+      "data_gap_refs": [
+        "gap:481d3dcd-f040-5c3e-ab53-003ec583a301"
+      ],
+      "usage_restrictions": [
+        "NO_ORIGIN_SALES_TO_FEED_DMT_CONVERSION",
+        "NO_AGGREGATE_SMELTER_FEED_ALLOCATION",
+        "NO_CONTINUOUS_VALIDITY_OUTSIDE_REPORTED_PERIOD",
+        "NO_SPARE_CAPACITY_FROM_NAMEPLATE_OR_TARGET",
+        "NO_QUANTIFIED_DISRUPTION",
+        "NO_VERIFIED_SUBSTITUTION"
+      ]
+    }
+  ],
+  "public_availability_envelope": {
+    "schema_version": "atlas.current-route-field-availability/29.5.0",
+    "records": [
+      {
+        "gap_id": "gap:209838aa-73c0-54fd-ab30-5f0e345a62f4",
+        "field_path": "flow_quantity",
+        "fact_status": "UNKNOWN",
+        "research_status": "RESEARCH_INCOMPLETE",
+        "availability_status": "RESEARCH_INCOMPLETE",
+        "evidence_completeness": "PARTIAL_FIELD_EVIDENCE_CURRENT_PERIOD",
+        "access_status": "PUBLICLY_ACCESSIBLE",
+        "checked_at": "2026-10-09",
+        "source_ids": [
+          "fqm-q2-2026-mda"
+        ],
+        "query_scope": "Operator Q2/H1 2026 MD&A: origin-attributed product sales, aggregate smelter feed, material basis, route validity and available alternative capacity.",
+        "methods": [
+          "Official investor-results discovery",
+          "Direct primary PDF retrieval",
+          "Pinned PDF hash",
+          "Layout-preserving text extraction",
+          "Field-specific literal and table review"
+        ],
+        "failed_attempts": [],
+        "evidence_refs": [
+          "observation:v295:kansanshi-h1-2026-anode-sales"
+        ],
+        "locator": "foundation/V29/current-route-evidence/evidence-input.json",
+        "result": "Origin-attributed downstream sales and aggregate facility throughput are evidenced, but route-specific mine-to-smelter feed DMT remains undisclosed.",
+        "recheck_condition": "A later operator or regulatory disclosure publishes origin-specific feed mass, shipment/delivery records, bounded route validity or explicitly available compatible capacity.",
+        "usage_restrictions": [
+          "DO_NOT_CLOSE_ORIGINAL_GAP",
+          "DO_NOT_INFER_FEED_FROM_SALES",
+          "DO_NOT_INFER_SPARE_CAPACITY",
+          "NO_QUANTIFIED_DISRUPTION"
+        ]
+      },
+      {
+        "gap_id": "gap:3b3ec3ac-c857-54ab-b7fb-57dfe1d62ced",
+        "field_path": "relationships.validity",
+        "fact_status": "UNKNOWN",
+        "research_status": "RESEARCH_INCOMPLETE",
+        "availability_status": "RESEARCH_INCOMPLETE",
+        "evidence_completeness": "PARTIAL_FIELD_EVIDENCE_CURRENT_PERIOD",
+        "access_status": "PUBLICLY_ACCESSIBLE",
+        "checked_at": "2026-10-09",
+        "source_ids": [
+          "fqm-q2-2026-mda"
+        ],
+        "query_scope": "Operator Q2/H1 2026 MD&A: origin-attributed product sales, aggregate smelter feed, material basis, route validity and available alternative capacity.",
+        "methods": [
+          "Official investor-results discovery",
+          "Direct primary PDF retrieval",
+          "Pinned PDF hash",
+          "Layout-preserving text extraction",
+          "Field-specific literal and table review"
+        ],
+        "failed_attempts": [],
+        "evidence_refs": [
+          "observation:v295:kansanshi-h1-2026-anode-sales"
+        ],
+        "locator": "foundation/V29/current-route-evidence/evidence-input.json",
+        "result": "Current-period output and facility operation are evidenced, but no continuous relationship validity interval is disclosed.",
+        "recheck_condition": "A later operator or regulatory disclosure publishes origin-specific feed mass, shipment/delivery records, bounded route validity or explicitly available compatible capacity.",
+        "usage_restrictions": [
+          "DO_NOT_CLOSE_ORIGINAL_GAP",
+          "DO_NOT_INFER_FEED_FROM_SALES",
+          "DO_NOT_INFER_SPARE_CAPACITY",
+          "NO_QUANTIFIED_DISRUPTION"
+        ]
+      },
+      {
+        "gap_id": "gap:481d3dcd-f040-5c3e-ab53-003ec583a301",
+        "field_path": "flow_quantity",
+        "fact_status": "UNKNOWN",
+        "research_status": "RESEARCH_INCOMPLETE",
+        "availability_status": "RESEARCH_INCOMPLETE",
+        "evidence_completeness": "PARTIAL_FIELD_EVIDENCE_CURRENT_PERIOD",
+        "access_status": "PUBLICLY_ACCESSIBLE",
+        "checked_at": "2026-10-09",
+        "source_ids": [
+          "fqm-q2-2026-mda"
+        ],
+        "query_scope": "Operator Q2/H1 2026 MD&A: origin-attributed product sales, aggregate smelter feed, material basis, route validity and available alternative capacity.",
+        "methods": [
+          "Official investor-results discovery",
+          "Direct primary PDF retrieval",
+          "Pinned PDF hash",
+          "Layout-preserving text extraction",
+          "Field-specific literal and table review"
+        ],
+        "failed_attempts": [],
+        "evidence_refs": [
+          "observation:v295:sentinel-h1-2026-anode-sales",
+          "observation:v295:sentinel-h1-2026-concentrate-sales"
+        ],
+        "locator": "foundation/V29/current-route-evidence/evidence-input.json",
+        "result": "Origin-attributed downstream sales and aggregate facility throughput are evidenced, but route-specific mine-to-smelter feed DMT remains undisclosed.",
+        "recheck_condition": "A later operator or regulatory disclosure publishes origin-specific feed mass, shipment/delivery records, bounded route validity or explicitly available compatible capacity.",
+        "usage_restrictions": [
+          "DO_NOT_CLOSE_ORIGINAL_GAP",
+          "DO_NOT_INFER_FEED_FROM_SALES",
+          "DO_NOT_INFER_SPARE_CAPACITY",
+          "NO_QUANTIFIED_DISRUPTION"
+        ]
+      }
+    ]
+  },
+  "deltas": {
+    "entities": 0,
+    "relationships": 0,
+    "canonical_claims": 0,
+    "canonical_evidence": 0,
+    "canonical_sources": 0,
+    "research_history_append": 1,
+    "raw_data_gaps": 0,
+    "resolved_data_gaps": 0,
+    "partial_gap_evidence_records": 3,
+    "scenario_count": 0,
+    "quantified_disruption_results": 0
+  },
+  "open_p0": [
+    "ON-01",
+    "TM-01",
+    "PR-01",
+    "SC-01",
+    "V28.3-NEW-P0-01"
+  ],
+  "stop_condition": {
+    "status": "BOUNDED_LEADS_RESOLVED_WITH_PARTIAL_EVIDENCE",
+    "reason": "The new Q2 2026 primary report was exhausted for the selected fields; exact feed allocation and available alternative capacity were not disclosed.",
+    "next_method": "Review a later operator/regulatory report or route-specific logistics/feed ledger; do not repeat the Q2 2026 MD&A search."
+  },
+  "lineage": {
+    "input_record_ids": [
+      "claim:3e433423-c1b8-5190-b045-efaaed316804",
+      "claim:b8bb3e2b-e5e8-5a24-8dec-8505c9d5b487",
+      "entity:0b5ed61e-0045-4039-8655-a9a62aac482a",
+      "entity:2c1aa724-2bc5-4753-9f32-e7b4a8713fa5",
+      "entity:436387f3-1b53-48a2-8f3d-35722a6bcffd",
+      "fqm-q2-2026-mda",
+      "gap:209838aa-73c0-54fd-ab30-5f0e345a62f4",
+      "gap:3b3ec3ac-c857-54ab-b7fb-57dfe1d62ced",
+      "gap:481d3dcd-f040-5c3e-ab53-003ec583a301",
+      "relationship:0d55d5a0-9901-5595-9a6e-bb324a0104f5",
+      "relationship:6c327896-66c1-539c-bb0e-aae335ba2a50",
+      "relationship:b8bb3e2b-e5e8-5a24-8dec-8505c9d5b487"
+    ],
+    "input_hashes": {
+      "selection_sha256": "63b16e362359a212194f4c20ee36269df0c51200858ac8c97b62344fe9652583",
+      "evidence_input_sha256": "33de14a8ee2c6971b2b69464ab1c88988ef79201b9d1825c2ccdf2596c2e8b49",
+      "source_manifest_sha256": "35b8279ad83c323cb6186e657c16e154700a7c61aedc9dc94e177be3cc584adf",
+      "canonical_graph_sha256": "07419ef6d1adab6c3bb9ae3ac88c9c953748fef0db30931759538144519cf7c0",
+      "gap_register_sha256": "407b30671157543b42397c653e621823db3f24b631cc71025c7fed9d1b0480eb",
+      "source_pdf_sha256": "e5d88fb002f4b77dedd3eb390e6035ac3571fc549fa04093067f3f6705f85f66"
+    },
+    "transformation_id": "ATLAS_CURRENT_ROUTE_EVIDENCE",
+    "transformation_version": "29.5.0",
+    "formula_or_rule": "Only source-literal current-period observations are promoted; aggregate feed, origin-attributed sales and capacity targets remain non-interchangeable.",
+    "output_hash": "ed97164567cdf96a763f13b74ba1a580083952ee28dba0a892480287132c0af2",
+    "execution_hash": "3fe8011bce51ecd4a383abca763462e937ab9334d7936a22d0b16b28abfbbded"
+  }
+}

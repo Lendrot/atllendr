@@ -1,0 +1,27 @@
+{
+  "schema_version": "atlas.current-route-evidence-catalog/29.5.0",
+  "version": "V29.5",
+  "release_approved": false,
+  "artifacts": {
+    "json": {
+      "path": "route-evidence-package.json",
+      "bytes": 19141,
+      "sha256": "12c79aaceab0624edc663fa5e9d9b9522307a3cdf8735353209c28b879f4e17a"
+    },
+    "csv": {
+      "path": "route-evidence-package.csv",
+      "bytes": 1233,
+      "sha256": "bce2b94109c572fff1eae7414c0d625d4c8ff5b027f92225a87085d78047df84"
+    },
+    "api": {
+      "path": "current-route-api.json",
+      "bytes": 8104,
+      "sha256": "bdcca78ea1754ed11b990b7e4ebc38807d5149d847b40146db39053f6544182e"
+    },
+    "gap_overlay": {
+      "path": "gap-evidence-overlay.json",
+      "bytes": 5313,
+      "sha256": "ac447a419146169f134282574a5c1f183937f29c6ddf2cab1070ecf383ca315a"
+    }
+  }
+}

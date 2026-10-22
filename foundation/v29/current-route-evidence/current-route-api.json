@@ -1,0 +1,189 @@
+{
+  "schema_version": "atlas.current-route-evidence-api/29.5.0",
+  "version": "V29.5",
+  "release_approved": false,
+  "analysis_as_of": "2026-10-09",
+  "routes": [
+    {
+      "route_id": "route:v295:kansanshi-to-kansanshi-smelter",
+      "status": "PARTIALLY_EVIDENCED_CURRENT_PERIOD",
+      "reference_period": {
+        "period_type": "HALF_YEAR",
+        "start": "2026-01-01",
+        "end": "2026-07-01"
+      },
+      "source_entity_id": "entity:2c1aa724-2bc5-4753-9f32-e7b4a8713fa5",
+      "target_entity_id": "entity:436387f3-1b53-48a2-8f3d-35722a6bcffd",
+      "material": {
+        "commodity": "COPPER",
+        "upstream_form": "CONCENTRATE",
+        "downstream_observed_form": "ANODE",
+        "compatibility_status": "DIRECTLY_EVIDENCED_FOR_REPORTED_OUTPUT_ONLY"
+      },
+      "actual_delivery_or_feed_quantity": null,
+      "alternative_capacity": null,
+      "calculation_eligibility": {
+        "structural_current_period": true,
+        "route_specific_quantity": false,
+        "quantified_disruption": false,
+        "substitution": false
+      },
+      "data_gap_refs": [
+        "gap:209838aa-73c0-54fd-ab30-5f0e345a62f4",
+        "gap:3b3ec3ac-c857-54ab-b7fb-57dfe1d62ced"
+      ],
+      "usage_restrictions": [
+        "NO_ORIGIN_SALES_TO_FEED_DMT_CONVERSION",
+        "NO_AGGREGATE_SMELTER_FEED_ALLOCATION",
+        "NO_CONTINUOUS_VALIDITY_OUTSIDE_REPORTED_PERIOD",
+        "NO_SPARE_CAPACITY_FROM_NAMEPLATE_OR_TARGET",
+        "NO_QUANTIFIED_DISRUPTION",
+        "NO_VERIFIED_SUBSTITUTION"
+      ]
+    },
+    {
+      "route_id": "route:v295:sentinel-to-kansanshi-smelter",
+      "status": "PARTIALLY_EVIDENCED_CURRENT_PERIOD",
+      "reference_period": {
+        "period_type": "HALF_YEAR",
+        "start": "2026-01-01",
+        "end": "2026-07-01"
+      },
+      "source_entity_id": "entity:0b5ed61e-0045-4039-8655-a9a62aac482a",
+      "target_entity_id": "entity:436387f3-1b53-48a2-8f3d-35722a6bcffd",
+      "material": {
+        "commodity": "COPPER",
+        "upstream_form": "CONCENTRATE",
+        "downstream_observed_form": "ANODE",
+        "compatibility_status": "DIRECTLY_EVIDENCED_FOR_REPORTED_OUTPUT_ONLY"
+      },
+      "actual_delivery_or_feed_quantity": null,
+      "alternative_capacity": null,
+      "calculation_eligibility": {
+        "structural_current_period": true,
+        "route_specific_quantity": false,
+        "quantified_disruption": false,
+        "substitution": false
+      },
+      "data_gap_refs": [
+        "gap:481d3dcd-f040-5c3e-ab53-003ec583a301"
+      ],
+      "usage_restrictions": [
+        "NO_ORIGIN_SALES_TO_FEED_DMT_CONVERSION",
+        "NO_AGGREGATE_SMELTER_FEED_ALLOCATION",
+        "NO_CONTINUOUS_VALIDITY_OUTSIDE_REPORTED_PERIOD",
+        "NO_SPARE_CAPACITY_FROM_NAMEPLATE_OR_TARGET",
+        "NO_QUANTIFIED_DISRUPTION",
+        "NO_VERIFIED_SUBSTITUTION"
+      ]
+    }
+  ],
+  "public_availability_envelope": {
+    "schema_version": "atlas.current-route-field-availability/29.5.0",
+    "records": [
+      {
+        "gap_id": "gap:209838aa-73c0-54fd-ab30-5f0e345a62f4",
+        "field_path": "flow_quantity",
+        "fact_status": "UNKNOWN",
+        "research_status": "RESEARCH_INCOMPLETE",
+        "availability_status": "RESEARCH_INCOMPLETE",
+        "evidence_completeness": "PARTIAL_FIELD_EVIDENCE_CURRENT_PERIOD",
+        "access_status": "PUBLICLY_ACCESSIBLE",
+        "checked_at": "2026-10-09",
+        "source_ids": [
+          "fqm-q2-2026-mda"
+        ],
+        "query_scope": "Operator Q2/H1 2026 MD&A: origin-attributed product sales, aggregate smelter feed, material basis, route validity and available alternative capacity.",
+        "methods": [
+          "Official investor-results discovery",
+          "Direct primary PDF retrieval",
+          "Pinned PDF hash",
+          "Layout-preserving text extraction",
+          "Field-specific literal and table review"
+        ],
+        "failed_attempts": [],
+        "evidence_refs": [
+          "observation:v295:kansanshi-h1-2026-anode-sales"
+        ],
+        "locator": "foundation/V29/current-route-evidence/evidence-input.json",
+        "result": "Origin-attributed downstream sales and aggregate facility throughput are evidenced, but route-specific mine-to-smelter feed DMT remains undisclosed.",
+        "recheck_condition": "A later operator or regulatory disclosure publishes origin-specific feed mass, shipment/delivery records, bounded route validity or explicitly available compatible capacity.",
+        "usage_restrictions": [
+          "DO_NOT_CLOSE_ORIGINAL_GAP",
+          "DO_NOT_INFER_FEED_FROM_SALES",
+          "DO_NOT_INFER_SPARE_CAPACITY",
+          "NO_QUANTIFIED_DISRUPTION"
+        ]
+      },
+      {
+        "gap_id": "gap:3b3ec3ac-c857-54ab-b7fb-57dfe1d62ced",
+        "field_path": "relationships.validity",
+        "fact_status": "UNKNOWN",
+        "research_status": "RESEARCH_INCOMPLETE",
+        "availability_status": "RESEARCH_INCOMPLETE",
+        "evidence_completeness": "PARTIAL_FIELD_EVIDENCE_CURRENT_PERIOD",
+        "access_status": "PUBLICLY_ACCESSIBLE",
+        "checked_at": "2026-10-09",
+        "source_ids": [
+          "fqm-q2-2026-mda"
+        ],
+        "query_scope": "Operator Q2/H1 2026 MD&A: origin-attributed product sales, aggregate smelter feed, material basis, route validity and available alternative capacity.",
+        "methods": [
+          "Official investor-results discovery",
+          "Direct primary PDF retrieval",
+          "Pinned PDF hash",
+          "Layout-preserving text extraction",
+          "Field-specific literal and table review"
+        ],
+        "failed_attempts": [],
+        "evidence_refs": [
+          "observation:v295:kansanshi-h1-2026-anode-sales"
+        ],
+        "locator": "foundation/V29/current-route-evidence/evidence-input.json",
+        "result": "Current-period output and facility operation are evidenced, but no continuous relationship validity interval is disclosed.",
+        "recheck_condition": "A later operator or regulatory disclosure publishes origin-specific feed mass, shipment/delivery records, bounded route validity or explicitly available compatible capacity.",
+        "usage_restrictions": [
+          "DO_NOT_CLOSE_ORIGINAL_GAP",
+          "DO_NOT_INFER_FEED_FROM_SALES",
+          "DO_NOT_INFER_SPARE_CAPACITY",
+          "NO_QUANTIFIED_DISRUPTION"
+        ]
+      },
+      {
+        "gap_id": "gap:481d3dcd-f040-5c3e-ab53-003ec583a301",
+        "field_path": "flow_quantity",
+        "fact_status": "UNKNOWN",
+        "research_status": "RESEARCH_INCOMPLETE",
+        "availability_status": "RESEARCH_INCOMPLETE",
+        "evidence_completeness": "PARTIAL_FIELD_EVIDENCE_CURRENT_PERIOD",
+        "access_status": "PUBLICLY_ACCESSIBLE",
+        "checked_at": "2026-10-09",
+        "source_ids": [
+          "fqm-q2-2026-mda"
+        ],
+        "query_scope": "Operator Q2/H1 2026 MD&A: origin-attributed product sales, aggregate smelter feed, material basis, route validity and available alternative capacity.",
+        "methods": [
+          "Official investor-results discovery",
+          "Direct primary PDF retrieval",
+          "Pinned PDF hash",
+          "Layout-preserving text extraction",
+          "Field-specific literal and table review"
+        ],
+        "failed_attempts": [],
+        "evidence_refs": [
+          "observation:v295:sentinel-h1-2026-anode-sales",
+          "observation:v295:sentinel-h1-2026-concentrate-sales"
+        ],
+        "locator": "foundation/V29/current-route-evidence/evidence-input.json",
+        "result": "Origin-attributed downstream sales and aggregate facility throughput are evidenced, but route-specific mine-to-smelter feed DMT remains undisclosed.",
+        "recheck_condition": "A later operator or regulatory disclosure publishes origin-specific feed mass, shipment/delivery records, bounded route validity or explicitly available compatible capacity.",
+        "usage_restrictions": [
+          "DO_NOT_CLOSE_ORIGINAL_GAP",
+          "DO_NOT_INFER_FEED_FROM_SALES",
+          "DO_NOT_INFER_SPARE_CAPACITY",
+          "NO_QUANTIFIED_DISRUPTION"
+        ]
+      }
+    ]
+  }
+}

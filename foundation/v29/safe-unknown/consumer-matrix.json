@@ -1,0 +1,134 @@
+{
+  "schema_version": "atlas.safe-unknown-consumer-matrix/29.6.0",
+  "scope": "Discoverable material-sensitive consumers in the V29.5 r02 static Atlas baseline",
+  "consumers": [
+    {
+      "id": "MINES_GLOBE_3D",
+      "path": "/minen/",
+      "module": "ma-intelligence/site/dist/assets/mines-globe.js",
+      "classification": "UNVERIFIED",
+      "evidence": "Detail warnings plus hydrated safeResourceExport and CSV gap sidecars; failed gap hydration blocks export. Containment wiring/source inspected; loaded browser and switch/device behavior NOT_TESTABLE."
+    },
+    {
+      "id": "MINES_MAP_2D",
+      "path": "/minen/karte/",
+      "module": "ma-intelligence/site/dist/assets/mines.js",
+      "classification": "UNVERIFIED",
+      "evidence": "Raw capacity is explicitly UNKNOWN_MATERIAL_BASIS; gap and availability panel remains linked; no capacity aggregation. Containment wiring/source inspected; loaded browser and switch/device behavior NOT_TESTABLE."
+    },
+    {
+      "id": "ECONOMY_COMMODITY_GLOBE",
+      "path": "/atlas/",
+      "module": "ma-intelligence/site/dist/assets/globe-app.js",
+      "classification": "UNVERIFIED",
+      "evidence": "PR-01 legacy capacity records are not loaded; partner observations are selected by material_id and exact period and are never used as capacity or alternative capacity. Containment wiring/source inspected; loaded browser and switch/device behavior NOT_TESTABLE."
+    },
+    {
+      "id": "WORLD_SWITCH",
+      "path": "/atlas/ <-> /minen/",
+      "module": "ma-intelligence/site/dist/assets/world-switch.mjs",
+      "classification": "UNVERIFIED",
+      "evidence": "Separate applications and datasets remain separate across pointer/touch switching; no cross-world numeric aggregation. Containment wiring/source inspected; loaded browser and switch/device behavior NOT_TESTABLE."
+    },
+    {
+      "id": "DATA_GAP_UI_API",
+      "path": "/datenluecken/ and /foundation/v28.4/*.json",
+      "module": "ma-intelligence/site/dist/assets/data-gaps.mjs",
+      "classification": "VERIFIED_SAFE",
+      "evidence": "Hash-pinned source-integrity, manifest, lookups and pages; JSDOM actual record filters/deleted row negative; field denominators displayed. Independent final audit required."
+    },
+    {
+      "id": "RESOURCE_GRAPH_CACHE",
+      "path": "internal mines graph",
+      "module": "ma-intelligence/site/dist/assets/resource-graph.mjs",
+      "classification": "VERIFIED_SAFE",
+      "evidence": "Raw capacity arrays remain inspectable, but every node carries the central policy version and quantitative-analysis gate; visibility uses IDs/coordinates only."
+    },
+    {
+      "id": "LEGACY_RAW_ASSETS",
+      "path": "/assets/mines-global.json; /assets/plants-global.json; /assets/terminals-global.json",
+      "module": "static JSON",
+      "classification": "TECHNICALLY_QUARANTINED",
+      "evidence": "Raw source assertions are retained for inspection. They are not an approved semantic API; supported consumers add gap sidecars and fail-closed policy."
+    },
+    {
+      "id": "FILTERED_CSV",
+      "path": "/minen/ export",
+      "module": "ma-intelligence/site/dist/assets/intelligence-model.mjs",
+      "classification": "VERIFIED_SAFE",
+      "evidence": "Export loads every selected asset's gaps, includes public availability and analysis exclusions, and labels missing hydration NOT_LOADED."
+    },
+    {
+      "id": "COPPER_DEPENDENCY_READINESS",
+      "path": "/kupfer/ dependency/readiness JSON",
+      "module": "ma-intelligence/site/dist/assets/copper-readiness-v293.mjs",
+      "classification": "VERIFIED_SAFE",
+      "evidence": "Typed material compatibility, flow allocation, capacity type, actual throughput, spare capacity and alternatives remain separate; unavailable quantity is null."
+    },
+    {
+      "id": "COPPER_SCENARIOS",
+      "path": "/kupfer/ scenario JSON/CSV",
+      "module": "ma-intelligence/site/dist/assets/copper-scenario-v294.mjs",
+      "classification": "VERIFIED_SAFE",
+      "evidence": "Structural analysis never enables quantified disruption or replacement tonnage; CSV exports null as UNKNOWN."
+    },
+    {
+      "id": "V29_5_ROUTE_EVIDENCE",
+      "path": "/kupfer/routenbelege/ JSON/CSV",
+      "module": "ma-intelligence/site/dist/assets/current-route-evidence-v295.mjs",
+      "classification": "VERIFIED_SAFE",
+      "evidence": "Feed quantity and genuinely available alternative capacity are null; source assertions are aggregate and guarded against conversion/allocation."
+    },
+    {
+      "id": "PRODUCTION_RAW_VIEW_EXPORT",
+      "path": "/produktion/",
+      "module": "ma-intelligence/site/dist/assets/production-page.mjs",
+      "classification": "VERIFIED_SAFE",
+      "evidence": "Independent JSDOM loaded production UI and CSV: 108 actual observations, source/raw warnings and policy restrictions PASS; browser presentation unverified."
+    },
+    {
+      "id": "LEGACY_CAPACITY_IMPORT",
+      "path": "CLI importMaterials",
+      "module": "ma-intelligence/src/cli/import-materials.ts",
+      "classification": "TECHNICALLY_QUARANTINED",
+      "evidence": "Legacy capacity in incoming OR merged previous+incoming observations rejected before output writes; source schema/raw inputs retained; independently reproduced."
+    },
+    {
+      "id": "ECONOMY_PARTNER_SHARE",
+      "path": "/atlas/ partnerShareTrace",
+      "module": "ma-intelligence/site/dist/assets/material-logic.mjs",
+      "classification": "VERIFIED_SAFE",
+      "evidence": "Independent real legacy observations return no unsupported derived share; typed material, measurement, unit and period controls PASS in Node. Browser unverified."
+    },
+    {
+      "id": "SAFE_RESOURCE_EXPORT_API",
+      "path": "safeResourceExport / resourceGapRefs",
+      "module": "ma-intelligence/site/dist/assets/safe-unknown.mjs",
+      "classification": "VERIFIED_SAFE",
+      "evidence": "Source snapshot/hash validation, full hydrated payload comparison, partial and missing register status explicit; independent runtime negatives."
+    },
+    {
+      "id": "INDIA_RAW_VIEW_EXPORT",
+      "path": "/indien/",
+      "module": "ma-intelligence/site/dist/assets/india-app.js",
+      "classification": "UNVERIFIED",
+      "evidence": "Raw capacity/detail/download labels and blocked partner percentages implemented; source checks only, loaded browser NOT_TESTABLE."
+    },
+    {
+      "id": "INDIA_RAW_STATIC_DATA",
+      "path": "/assets/india-materials.json",
+      "module": "static JSON",
+      "classification": "TECHNICALLY_QUARANTINED",
+      "evidence": "Unchanged raw source assertions downloadable with raw/unknown labels in supported UI; static endpoint has no ACL. No quantitative approval; import promotion blocked."
+    }
+  ],
+  "classification_counts": {
+    "VERIFIED_SAFE": 9,
+    "UNSAFE_REPRODUCED": 0,
+    "UNVERIFIED": 5,
+    "TECHNICALLY_QUARANTINED": 3
+  },
+  "browser_status": "NOT_TESTABLE_CONTROL_BROWSER_SKILL_UNAVAILABLE_IN_MANAGED_ENVIRONMENT",
+  "pr01_closure_status": "IN_PROGRESS_NOT_CLOSED_VERIFIED",
+  "verification_scope": "Independent Node functions, immutable-source queries and JSDOM loaded production/gap UI; browser/Desktop/Mobile/WebGL/Touch remain NOT_TESTABLE; classification is bounded to cited evidence."
+}

@@ -1,0 +1,502 @@
+[
+  {
+    "source_gap_ref": "gap:ffddad5a4826a08d13041395bb8c068c",
+    "original_record_id": "capacity:claim:01cc7e3d-9059-46c4-9a20-7b4336009610",
+    "original_record_hash": "750524c718a85df70187cd8a8299503bc86d8628c573f47528bc840ba5642218",
+    "original_record_locator": {
+      "collection": "mines",
+      "database": "foundation/V28.1/foundation.sqlite",
+      "id": "capacity:claim:01cc7e3d-9059-46c4-9a20-7b4336009610",
+      "ordinal": 6166,
+      "source_file": "mines-global.json",
+      "table": "capacity"
+    },
+    "entity_ids": [
+      "entity:49939c5d-91f4-4955-9510-447f137abf8c"
+    ],
+    "claim_ids": [
+      "claim:01cc7e3d-9059-46c4-9a20-7b4336009610"
+    ],
+    "legacy_asset_id": "gem-gcmt-M6442",
+    "field_path": "capacity.material_basis",
+    "fact_status": "UNKNOWN",
+    "research_status": "UNKNOWN",
+    "status": "OPEN",
+    "raw_value": {
+      "audit": "NEEDS_RESEARCH",
+      "material_form": "Kohle (Quellenform nicht aufgelöst)",
+      "period_basis": "UNKNOWN",
+      "source_field": "capacity",
+      "source_id": "gcmt",
+      "source_project_id": "M6442",
+      "source_row": 5537,
+      "status": "closed",
+      "unit": "Mio. t/Jahr",
+      "value": null
+    },
+    "public_availability_snapshot": {
+      "field_path": "capacity.material_basis",
+      "source_scope": "RECORDED_SCOPE_UNVERIFIED",
+      "checked_sources": [],
+      "last_checked": null,
+      "access_status": "UNKNOWN",
+      "availability_status": "UNKNOWN_AVAILABILITY",
+      "evidence_refs": [],
+      "source_locator": {
+        "collection": "mines",
+        "database": "foundation/V28.1/foundation.sqlite",
+        "id": "capacity:claim:01cc7e3d-9059-46c4-9a20-7b4336009610",
+        "ordinal": 6166,
+        "source_file": "mines-global.json",
+        "table": "capacity"
+      },
+      "reason": "No reconstructable field availability check.",
+      "recheck_condition": "Research field-level evidence; preserve original claim and record resolution history",
+      "prohibited_uses": [
+        "DO_NOT_DOWNGRADE_P0_FOR_SOURCE_ACCESS",
+        "DO_NOT_INFER_MISSING_VALUE",
+        "DO_NOT_TREAT_AS_SOLVED_FACTUAL_GAP",
+        "NO_CAPACITY_CONVERSION",
+        "NO_CAPACITY_MATERIAL_AGGREGATION",
+        "NO_CAPACITY_PRODUCTION_COMPARISON"
+      ]
+    },
+    "excluded_from": [
+      "capacity_material_aggregation",
+      "capacity_conversion",
+      "capacity_production_comparison",
+      "mine_feed_allocation",
+      "route_quantity_allocation",
+      "available_alternative_capacity",
+      "replacement_tonnage",
+      "quantified_disruption"
+    ],
+    "policy_version": "atlas.safe-unknown-material/29.6.0",
+    "authority_note": "Projection only; canonical gap remains foundation/v28.4",
+    "lineage": {
+      "derived_record_id": "pr01-exclusion:gap:ffddad5a4826a08d13041395bb8c068c",
+      "input_record_ids": [
+        "capacity:claim:01cc7e3d-9059-46c4-9a20-7b4336009610",
+        "claim:01cc7e3d-9059-46c4-9a20-7b4336009610"
+      ],
+      "transformation_id": "atlas.safe-unknown-material-exclusion",
+      "transformation_version": "29.6.0",
+      "formula_or_rule": "UNKNOWN_MATERIAL_BASIS excludes metadata-dependent quantitative uses; raw source assertion and factual gap remain unchanged",
+      "parameters": {
+        "source_gap_ref": "gap:ffddad5a4826a08d13041395bb8c068c",
+        "source_record_sha256": "750524c718a85df70187cd8a8299503bc86d8628c573f47528bc840ba5642218"
+      },
+      "output": [
+        "capacity_material_aggregation",
+        "capacity_conversion",
+        "capacity_production_comparison",
+        "mine_feed_allocation",
+        "route_quantity_allocation",
+        "available_alternative_capacity",
+        "replacement_tonnage",
+        "quantified_disruption"
+      ],
+      "execution_hash": "2ef9adef1a3a963751d2bc91e18c3bd0a093e0bed09b7b0f4c980cbf9d68b3ec"
+    }
+  },
+  {
+    "source_gap_ref": "gap:ffdf8c49002236ced5a3c107dda8b30f",
+    "original_record_id": "capacity:claim:985f1267-e49e-45b5-985b-a78d47482e3e",
+    "original_record_hash": "27925946b6fb77e7afb0134cc9cada4aa7b076e34a916ca8d9f4acb7b05f2a8f",
+    "original_record_locator": {
+      "collection": "mines",
+      "database": "foundation/V28.1/foundation.sqlite",
+      "id": "capacity:claim:985f1267-e49e-45b5-985b-a78d47482e3e",
+      "ordinal": 41,
+      "source_file": "plants-global.json",
+      "table": "capacity"
+    },
+    "entity_ids": [
+      "entity:d647a401-a0e2-4f42-8ece-d3ea05add377"
+    ],
+    "claim_ids": [
+      "claim:985f1267-e49e-45b5-985b-a78d47482e3e"
+    ],
+    "legacy_asset_id": "gem-gist-P100000120421",
+    "field_path": "capacity.material_basis",
+    "fact_status": "UNKNOWN",
+    "research_status": "UNKNOWN",
+    "status": "OPEN",
+    "raw_value": {
+      "audit": "NEEDS_RESEARCH",
+      "material_form": "BF",
+      "period_basis": "UNKNOWN",
+      "source_field": "capacity-by-status",
+      "source_id": "gist",
+      "source_project_id": "P100000120421",
+      "source_row": 41,
+      "status": "mothballed pre-retirement",
+      "unit": "1000 t/Jahr",
+      "value": 1700
+    },
+    "public_availability_snapshot": {
+      "field_path": "capacity.material_basis",
+      "source_scope": "RECORDED_SCOPE_UNVERIFIED",
+      "checked_sources": [],
+      "last_checked": null,
+      "access_status": "UNKNOWN",
+      "availability_status": "UNKNOWN_AVAILABILITY",
+      "evidence_refs": [],
+      "source_locator": {
+        "collection": "mines",
+        "database": "foundation/V28.1/foundation.sqlite",
+        "id": "capacity:claim:985f1267-e49e-45b5-985b-a78d47482e3e",
+        "ordinal": 41,
+        "source_file": "plants-global.json",
+        "table": "capacity"
+      },
+      "reason": "No reconstructable field availability check.",
+      "recheck_condition": "Research field-level evidence; preserve original claim and record resolution history",
+      "prohibited_uses": [
+        "DO_NOT_DOWNGRADE_P0_FOR_SOURCE_ACCESS",
+        "DO_NOT_INFER_MISSING_VALUE",
+        "DO_NOT_TREAT_AS_SOLVED_FACTUAL_GAP",
+        "NO_CAPACITY_CONVERSION",
+        "NO_CAPACITY_MATERIAL_AGGREGATION",
+        "NO_CAPACITY_PRODUCTION_COMPARISON"
+      ]
+    },
+    "excluded_from": [
+      "capacity_material_aggregation",
+      "capacity_conversion",
+      "capacity_production_comparison",
+      "mine_feed_allocation",
+      "route_quantity_allocation",
+      "available_alternative_capacity",
+      "replacement_tonnage",
+      "quantified_disruption"
+    ],
+    "policy_version": "atlas.safe-unknown-material/29.6.0",
+    "authority_note": "Projection only; canonical gap remains foundation/v28.4",
+    "lineage": {
+      "derived_record_id": "pr01-exclusion:gap:ffdf8c49002236ced5a3c107dda8b30f",
+      "input_record_ids": [
+        "capacity:claim:985f1267-e49e-45b5-985b-a78d47482e3e",
+        "claim:985f1267-e49e-45b5-985b-a78d47482e3e"
+      ],
+      "transformation_id": "atlas.safe-unknown-material-exclusion",
+      "transformation_version": "29.6.0",
+      "formula_or_rule": "UNKNOWN_MATERIAL_BASIS excludes metadata-dependent quantitative uses; raw source assertion and factual gap remain unchanged",
+      "parameters": {
+        "source_gap_ref": "gap:ffdf8c49002236ced5a3c107dda8b30f",
+        "source_record_sha256": "27925946b6fb77e7afb0134cc9cada4aa7b076e34a916ca8d9f4acb7b05f2a8f"
+      },
+      "output": [
+        "capacity_material_aggregation",
+        "capacity_conversion",
+        "capacity_production_comparison",
+        "mine_feed_allocation",
+        "route_quantity_allocation",
+        "available_alternative_capacity",
+        "replacement_tonnage",
+        "quantified_disruption"
+      ],
+      "execution_hash": "306eb4fbc7e7e04436f8c84cc79dd6eba8c0e32e1c3e018c9c179b5c0cfd4837"
+    }
+  },
+  {
+    "source_gap_ref": "gap:ffe677b42d644ade922b06ce52ac80d8",
+    "original_record_id": "capacity:claim:d73d5e57-0aec-4486-a831-76453a89e79e",
+    "original_record_hash": "6d703966da27a16f678ef943d44680d572a853884bea5ae24db7fca2fb46e722",
+    "original_record_locator": {
+      "collection": "mines",
+      "database": "foundation/V28.1/foundation.sqlite",
+      "id": "capacity:claim:d73d5e57-0aec-4486-a831-76453a89e79e",
+      "ordinal": 7339,
+      "source_file": "mines-global.json",
+      "table": "capacity"
+    },
+    "entity_ids": [
+      "entity:580126cb-d08b-41a3-82b5-410908abbf8b"
+    ],
+    "claim_ids": [
+      "claim:d73d5e57-0aec-4486-a831-76453a89e79e"
+    ],
+    "legacy_asset_id": "gem-gcmt-M3442",
+    "field_path": "capacity.material_basis",
+    "fact_status": "UNKNOWN",
+    "research_status": "UNKNOWN",
+    "status": "OPEN",
+    "raw_value": {
+      "audit": "NEEDS_RESEARCH",
+      "material_form": "Kohle (Quellenform nicht aufgelöst)",
+      "period_basis": "UNKNOWN",
+      "source_field": "capacity",
+      "source_id": "gcmt",
+      "source_project_id": "M3442",
+      "source_row": 6834,
+      "status": "operating",
+      "unit": "Mio. t/Jahr",
+      "value": null
+    },
+    "public_availability_snapshot": {
+      "field_path": "capacity.material_basis",
+      "source_scope": "RECORDED_SCOPE_UNVERIFIED",
+      "checked_sources": [],
+      "last_checked": null,
+      "access_status": "UNKNOWN",
+      "availability_status": "UNKNOWN_AVAILABILITY",
+      "evidence_refs": [],
+      "source_locator": {
+        "collection": "mines",
+        "database": "foundation/V28.1/foundation.sqlite",
+        "id": "capacity:claim:d73d5e57-0aec-4486-a831-76453a89e79e",
+        "ordinal": 7339,
+        "source_file": "mines-global.json",
+        "table": "capacity"
+      },
+      "reason": "No reconstructable field availability check.",
+      "recheck_condition": "Research field-level evidence; preserve original claim and record resolution history",
+      "prohibited_uses": [
+        "DO_NOT_DOWNGRADE_P0_FOR_SOURCE_ACCESS",
+        "DO_NOT_INFER_MISSING_VALUE",
+        "DO_NOT_TREAT_AS_SOLVED_FACTUAL_GAP",
+        "NO_CAPACITY_CONVERSION",
+        "NO_CAPACITY_MATERIAL_AGGREGATION",
+        "NO_CAPACITY_PRODUCTION_COMPARISON"
+      ]
+    },
+    "excluded_from": [
+      "capacity_material_aggregation",
+      "capacity_conversion",
+      "capacity_production_comparison",
+      "mine_feed_allocation",
+      "route_quantity_allocation",
+      "available_alternative_capacity",
+      "replacement_tonnage",
+      "quantified_disruption"
+    ],
+    "policy_version": "atlas.safe-unknown-material/29.6.0",
+    "authority_note": "Projection only; canonical gap remains foundation/v28.4",
+    "lineage": {
+      "derived_record_id": "pr01-exclusion:gap:ffe677b42d644ade922b06ce52ac80d8",
+      "input_record_ids": [
+        "capacity:claim:d73d5e57-0aec-4486-a831-76453a89e79e",
+        "claim:d73d5e57-0aec-4486-a831-76453a89e79e"
+      ],
+      "transformation_id": "atlas.safe-unknown-material-exclusion",
+      "transformation_version": "29.6.0",
+      "formula_or_rule": "UNKNOWN_MATERIAL_BASIS excludes metadata-dependent quantitative uses; raw source assertion and factual gap remain unchanged",
+      "parameters": {
+        "source_gap_ref": "gap:ffe677b42d644ade922b06ce52ac80d8",
+        "source_record_sha256": "6d703966da27a16f678ef943d44680d572a853884bea5ae24db7fca2fb46e722"
+      },
+      "output": [
+        "capacity_material_aggregation",
+        "capacity_conversion",
+        "capacity_production_comparison",
+        "mine_feed_allocation",
+        "route_quantity_allocation",
+        "available_alternative_capacity",
+        "replacement_tonnage",
+        "quantified_disruption"
+      ],
+      "execution_hash": "615995f18ea8fa96642cf782a9a55499a811fbeeddf67aa686c9c948a591188a"
+    }
+  },
+  {
+    "source_gap_ref": "gap:ffe82d74bd04d4108854421c66841302",
+    "original_record_id": "capacity:claim:5998cc45-01c9-4be4-93fb-0034a0fa069f",
+    "original_record_hash": "a3cc84eff5756b730bd30c2b0fef40b38ad6bd5e2435dac0848814b8c2bd73d9",
+    "original_record_locator": {
+      "collection": "mines",
+      "database": "foundation/V28.1/foundation.sqlite",
+      "id": "capacity:claim:5998cc45-01c9-4be4-93fb-0034a0fa069f",
+      "ordinal": 661,
+      "source_file": "plants-global.json",
+      "table": "capacity"
+    },
+    "entity_ids": [
+      "entity:8749968c-6880-4ca4-b53b-48d6b21486d3"
+    ],
+    "claim_ids": [
+      "claim:5998cc45-01c9-4be4-93fb-0034a0fa069f"
+    ],
+    "legacy_asset_id": "gem-gist-P100000120404",
+    "field_path": "capacity.material_basis",
+    "fact_status": "UNKNOWN",
+    "research_status": "UNKNOWN",
+    "status": "OPEN",
+    "raw_value": {
+      "audit": "NEEDS_RESEARCH",
+      "material_form": "EAF",
+      "period_basis": "UNKNOWN",
+      "source_field": "capacity-by-status",
+      "source_id": "gist",
+      "source_project_id": "P100000120404",
+      "source_row": 661,
+      "status": "retired",
+      "unit": "1000 t/Jahr",
+      "value": 1100
+    },
+    "public_availability_snapshot": {
+      "field_path": "capacity.material_basis",
+      "source_scope": "RECORDED_SCOPE_UNVERIFIED",
+      "checked_sources": [],
+      "last_checked": null,
+      "access_status": "UNKNOWN",
+      "availability_status": "UNKNOWN_AVAILABILITY",
+      "evidence_refs": [],
+      "source_locator": {
+        "collection": "mines",
+        "database": "foundation/V28.1/foundation.sqlite",
+        "id": "capacity:claim:5998cc45-01c9-4be4-93fb-0034a0fa069f",
+        "ordinal": 661,
+        "source_file": "plants-global.json",
+        "table": "capacity"
+      },
+      "reason": "No reconstructable field availability check.",
+      "recheck_condition": "Research field-level evidence; preserve original claim and record resolution history",
+      "prohibited_uses": [
+        "DO_NOT_DOWNGRADE_P0_FOR_SOURCE_ACCESS",
+        "DO_NOT_INFER_MISSING_VALUE",
+        "DO_NOT_TREAT_AS_SOLVED_FACTUAL_GAP",
+        "NO_CAPACITY_CONVERSION",
+        "NO_CAPACITY_MATERIAL_AGGREGATION",
+        "NO_CAPACITY_PRODUCTION_COMPARISON"
+      ]
+    },
+    "excluded_from": [
+      "capacity_material_aggregation",
+      "capacity_conversion",
+      "capacity_production_comparison",
+      "mine_feed_allocation",
+      "route_quantity_allocation",
+      "available_alternative_capacity",
+      "replacement_tonnage",
+      "quantified_disruption"
+    ],
+    "policy_version": "atlas.safe-unknown-material/29.6.0",
+    "authority_note": "Projection only; canonical gap remains foundation/v28.4",
+    "lineage": {
+      "derived_record_id": "pr01-exclusion:gap:ffe82d74bd04d4108854421c66841302",
+      "input_record_ids": [
+        "capacity:claim:5998cc45-01c9-4be4-93fb-0034a0fa069f",
+        "claim:5998cc45-01c9-4be4-93fb-0034a0fa069f"
+      ],
+      "transformation_id": "atlas.safe-unknown-material-exclusion",
+      "transformation_version": "29.6.0",
+      "formula_or_rule": "UNKNOWN_MATERIAL_BASIS excludes metadata-dependent quantitative uses; raw source assertion and factual gap remain unchanged",
+      "parameters": {
+        "source_gap_ref": "gap:ffe82d74bd04d4108854421c66841302",
+        "source_record_sha256": "a3cc84eff5756b730bd30c2b0fef40b38ad6bd5e2435dac0848814b8c2bd73d9"
+      },
+      "output": [
+        "capacity_material_aggregation",
+        "capacity_conversion",
+        "capacity_production_comparison",
+        "mine_feed_allocation",
+        "route_quantity_allocation",
+        "available_alternative_capacity",
+        "replacement_tonnage",
+        "quantified_disruption"
+      ],
+      "execution_hash": "e1e6658c0bf10f0d4316829ff7958c01d06f43696c1b7873358617a48d787e34"
+    }
+  },
+  {
+    "source_gap_ref": "gap:ffe974a7447e1eb945849d6e4c33f375",
+    "original_record_id": "capacity:claim:85f3d554-a627-4a3b-9422-fc1dc7405700",
+    "original_record_hash": "1dc583a73f9d981e70c97a7eda85eafdb26eb9bd32e582726f09b5309365dca9",
+    "original_record_locator": {
+      "collection": "mines",
+      "database": "foundation/V28.1/foundation.sqlite",
+      "id": "capacity:claim:85f3d554-a627-4a3b-9422-fc1dc7405700",
+      "ordinal": 594,
+      "source_file": "plants-global.json",
+      "table": "capacity"
+    },
+    "entity_ids": [
+      "entity:7653a020-9234-4aab-95e0-41837ca22ca9"
+    ],
+    "claim_ids": [
+      "claim:85f3d554-a627-4a3b-9422-fc1dc7405700"
+    ],
+    "legacy_asset_id": "gem-gist-P100001061571",
+    "field_path": "capacity.material_basis",
+    "fact_status": "UNKNOWN",
+    "research_status": "UNKNOWN",
+    "status": "OPEN",
+    "raw_value": {
+      "audit": "NEEDS_RESEARCH",
+      "material_form": "BF",
+      "period_basis": "UNKNOWN",
+      "source_field": "capacity-by-status",
+      "source_id": "gist",
+      "source_project_id": "P100001061571",
+      "source_row": 594,
+      "status": "retired",
+      "unit": "1000 t/Jahr",
+      "value": 550
+    },
+    "public_availability_snapshot": {
+      "field_path": "capacity.material_basis",
+      "source_scope": "RECORDED_SCOPE_UNVERIFIED",
+      "checked_sources": [],
+      "last_checked": null,
+      "access_status": "UNKNOWN",
+      "availability_status": "UNKNOWN_AVAILABILITY",
+      "evidence_refs": [],
+      "source_locator": {
+        "collection": "mines",
+        "database": "foundation/V28.1/foundation.sqlite",
+        "id": "capacity:claim:85f3d554-a627-4a3b-9422-fc1dc7405700",
+        "ordinal": 594,
+        "source_file": "plants-global.json",
+        "table": "capacity"
+      },
+      "reason": "No reconstructable field availability check.",
+      "recheck_condition": "Research field-level evidence; preserve original claim and record resolution history",
+      "prohibited_uses": [
+        "DO_NOT_DOWNGRADE_P0_FOR_SOURCE_ACCESS",
+        "DO_NOT_INFER_MISSING_VALUE",
+        "DO_NOT_TREAT_AS_SOLVED_FACTUAL_GAP",
+        "NO_CAPACITY_CONVERSION",
+        "NO_CAPACITY_MATERIAL_AGGREGATION",
+        "NO_CAPACITY_PRODUCTION_COMPARISON"
+      ]
+    },
+    "excluded_from": [
+      "capacity_material_aggregation",
+      "capacity_conversion",
+      "capacity_production_comparison",
+      "mine_feed_allocation",
+      "route_quantity_allocation",
+      "available_alternative_capacity",
+      "replacement_tonnage",
+      "quantified_disruption"
+    ],
+    "policy_version": "atlas.safe-unknown-material/29.6.0",
+    "authority_note": "Projection only; canonical gap remains foundation/v28.4",
+    "lineage": {
+      "derived_record_id": "pr01-exclusion:gap:ffe974a7447e1eb945849d6e4c33f375",
+      "input_record_ids": [
+        "capacity:claim:85f3d554-a627-4a3b-9422-fc1dc7405700",
+        "claim:85f3d554-a627-4a3b-9422-fc1dc7405700"
+      ],
+      "transformation_id": "atlas.safe-unknown-material-exclusion",
+      "transformation_version": "29.6.0",
+      "formula_or_rule": "UNKNOWN_MATERIAL_BASIS excludes metadata-dependent quantitative uses; raw source assertion and factual gap remain unchanged",
+      "parameters": {
+        "source_gap_ref": "gap:ffe974a7447e1eb945849d6e4c33f375",
+        "source_record_sha256": "1dc583a73f9d981e70c97a7eda85eafdb26eb9bd32e582726f09b5309365dca9"
+      },
+      "output": [
+        "capacity_material_aggregation",
+        "capacity_conversion",
+        "capacity_production_comparison",
+        "mine_feed_allocation",
+        "route_quantity_allocation",
+        "available_alternative_capacity",
+        "replacement_tonnage",
+        "quantified_disruption"
+      ],
+      "execution_hash": "2205508b5b834bf89fd31c6040648258f7c172d36110176e081f0e63c7d060a2"
+    }
+  }
+]

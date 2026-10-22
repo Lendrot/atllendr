@@ -1,0 +1,18 @@
+{
+  "schema_version": "atlas.safe-unknown-material/29.6.0",
+  "unknown_marker": "UNKNOWN_MATERIAL_BASIS",
+  "conflict_precedence": true,
+  "blocked_operations": [
+    "capacity_material_aggregation",
+    "capacity_conversion",
+    "capacity_production_comparison",
+    "mine_feed_allocation",
+    "route_quantity_allocation",
+    "available_alternative_capacity",
+    "replacement_tonnage",
+    "quantified_disruption"
+  ],
+  "raw_values_preserved": true,
+  "missing_value_is_not_zero": true,
+  "technical_containment_does_not_resolve_data_gap": true
+}
