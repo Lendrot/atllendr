@@ -1,0 +1,207 @@
+{
+  "schema_version": "28.0",
+  "source_commit": "ab755857d11427df3fab353d8e22c16854bd73c8",
+  "source_file_sha256": {
+    "intelligence-coverage.json": "9205e28853291305aef7bb610068c4f30b2fc5c90c7783b6d45d4cad28334d82",
+    "world.json": "04342cdc1e3016bcd7db1630de95684d67b79fe3c8c460321e87aef469502394",
+    "acquisitions.json": "df945b2d4cb80d4cb969334e0e3f24ce86e98ad9be166802778acff346c72cbd",
+    "mines-candidates.json": "4f91cf3b86c2edb5a8c2c25bfb6a60a2266b3681fe295fd2fa344659280dd7d2",
+    "companies.json": "73841b2a59afb43c6ffc93f93877963385f6d5c1790cd1c1d8a51ba08fe75ed0",
+    "production-observations.json": "07efa33df66e0998f08c1a7633b9d1e80fecef1707be885b27296aafd11c333b",
+    "tri-2024-facilities.json": "e9ca28346b6c60e6bd78cb40f4b1b3fa0c391b8ec687a423f2e014367283ab93",
+    "plants-global.json": "5b84e00abeae03e0e28b71a871a2613551934bf2836890471ca66d3960e2f4b9",
+    "market-data.json": "82712b0528bc1d1fa9a9a7f4a5487b7dc0fd8dd85073eee7c2210851bb21d86b",
+    "india-materials.json": "1056c777455f76cdb83784fcede8093c8ca6d9db992f3a862da04d03caf20c64",
+    "mines-reviewed.json": "98109730bd4f8c4c3047170bafdfd5fafb18ad8a1bd689fff5fc43646711332a",
+    "atlas-claims.json": "5f2f46d4a6f4f7c34f89a6ecca2c8892cbbe606862cfb572389f275f80cbbacd",
+    "terminals-global.json": "804ff9121ea599b5b248f329075b78846b3a1b78dee0f6476fb257f9a8b85b14",
+    "deutschland-ma.json": "48013a3a19f5a2351b60c70b55fde1c3bbe2c40f2406e5bda40ebcd1fc1605a6",
+    "atlas-connections.json": "0f0199a27dc73578afeac1ae7d0423a5c9ce949699012043a93260e3de71da9d",
+    "waste-discovery.json": "e86e8cf32378afe7b0173c469fd44501f462102d45f6d1958f482b858bdee6ce",
+    "atlas-location-relations.json": "4479ec5408f77f8ab54a4d5633d70db78bd42f858c57f4be3566f242ca2d3bdb",
+    "intelligence-graph.json": "c0d0c722aeaee94f4bfdabcdcc9e7326ca52fd2dfc1a2bc0e5b4c16033a68644",
+    "mines-global.json": "b626a0d0b8868ee3fcee220b26e925504de2fc54cc328d538ddcc4ee634dca24",
+    "primary-network.json": "e750a9321db5d7b23d004023d2121f8489d065a6bd148a1ee372deb86db8ea5a",
+    "intelligence-globe.json": "2e5ece11db9c70d81cf5ddd3eb1e3efad04c8b96889e602d27d99229a99d38b0"
+  },
+  "counts": {
+    "entity_count": 43233,
+    "relationship_count": 19639,
+    "claim_count": 1495,
+    "source_count": 124,
+    "ownership_record_count": 19557,
+    "production_record_count": 108,
+    "capacity_record_count": 11463,
+    "additional_legacy_singular_capacity_count": 2,
+    "capacity_rows_without_numeric_value": 3131,
+    "facility_count": 15130,
+    "mine_count": 7894,
+    "P0_count": 5,
+    "P1_count": 10,
+    "P2_count": 0,
+    "P3_count": 0,
+    "duplicate_entity_ids": 0,
+    "duplicate_relationship_ids": 6,
+    "entity_resolution_candidates": 904,
+    "ownership_conflicts": 3,
+    "capacity_unknown_periods": 11463,
+    "coordinate_unknown_accuracy": 7377,
+    "geolocation_country_candidates": 312,
+    "coordinate_source_url_missing": 1735,
+    "unit_issue_records": "UNKNOWN",
+    "referential_integrity_issues_on_checked_ownership_and_production": 0
+  },
+  "scope": "Counts are disjoint rows in named source collections, not globally resolved entities; source_count is catalogue rows, not deduplicated publications. Derived capacity/coordinate assertions not included in baseline claim_count.",
+  "findings": [
+    {
+      "audit_finding_id": "ID-01",
+      "severity": "P0",
+      "description": "Sechs ID-Kollisionen in Eigentums-/Mutterbehauptungen; fünf Gruppen enthalten verschiedene Nutzdaten.",
+      "affected_records": "See evidence; global cardinality UNKNOWN where no exact counter exists",
+      "evidence": "id-collisions.csv; dist/assets/intelligence-graph.json relationships; IDs are exposed in ownership detail and exports.",
+      "status": "OPEN"
+    },
+    {
+      "audit_finding_id": "ON-01",
+      "severity": "P0",
+      "description": "owner_or_operator und ultimate_parent trennen Eigentum, Betrieb und Kontrolle semantisch nicht sicher.",
+      "affected_records": "See evidence; global cardinality UNKNOWN where no exact counter exists",
+      "evidence": "inventory.json ownership_relation_types; dist/assets/intelligence-graph.json source_field and type.",
+      "status": "OPEN"
+    },
+    {
+      "audit_finding_id": "TM-01",
+      "severity": "P0",
+      "description": "Mehrheit der Kapazitäten ohne verifizierten Referenzzeitraum; Status je Phase darf nicht als heutiger Betriebszustand gelesen werden.",
+      "affected_records": "See evidence; global cardinality UNKNOWN where no exact counter exists",
+      "evidence": "inventory.json: 11463/11463 capacities period_basis UNKNOWN/empty; mines-global.json capacities/statuses.",
+      "status": "OPEN"
+    },
+    {
+      "audit_finding_id": "PR-01",
+      "severity": "P0",
+      "description": "Minenkapazitäten nennen oft die Materialform nicht aufgelöst; Stahlkapazitäten benutzen Technologietypen als material_form.",
+      "affected_records": "See evidence; global cardinality UNKNOWN where no exact counter exists",
+      "evidence": "inventory.json capacity_material_form_counts; plants-global.json capacities.",
+      "status": "OPEN"
+    },
+    {
+      "audit_finding_id": "SC-01",
+      "severity": "P0",
+      "description": "Rohstoffwelt lädt ganze Standortdateien; bei Unternehmensauswahl zusätzlich den vollständigen Eigentumsgraphen. Keine serverseitige Pagination/Indexabfrage.",
+      "affected_records": "See evidence; global cardinality UNKNOWN where no exact counter exists",
+      "evidence": "mines-globe.js loadAll()/fetch and showCompanyNetwork(); inventory.json source_file_bytes; dual-globe.mjs loads two iframe apps.",
+      "status": "OPEN"
+    },
+    {
+      "audit_finding_id": "ER-01",
+      "severity": "P1",
+      "description": "Gleiche normalisierte Standortnamen über Quellbestände werden als getrennte IDs geführt.",
+      "affected_records": "See evidence; global cardinality UNKNOWN where no exact counter exists",
+      "evidence": "entity-resolution-candidates.csv; cross-source Beispiele Western Cluster Bomi/Mano und Barapukuria.",
+      "status": "OPEN"
+    },
+    {
+      "audit_finding_id": "PV-01",
+      "severity": "P1",
+      "description": "Claim-Abdeckung endet vor großen GEM-/TRI-Datensätzen; Herkunft ist in mehreren nebeneinander liegenden Formaten modelliert.",
+      "affected_records": "See evidence; global cardinality UNKNOWN where no exact counter exists",
+      "evidence": "atlas-claims.json contains 1,463 claims; mines-global.json and tri-2024-facilities.json have separate provenance fields.",
+      "status": "OPEN"
+    },
+    {
+      "audit_finding_id": "PV-02",
+      "severity": "P1",
+      "description": "Für einen Teil der Minenkoordinaten fehlt ein direkter Quelllink am Koordinatenfeld.",
+      "affected_records": "See evidence; global cardinality UNKNOWN where no exact counter exists",
+      "evidence": "inventory.json coordinates_without_source_url = 1735; mines-global.json coordinates.source_id is present, but URL absent.",
+      "status": "OPEN"
+    },
+    {
+      "audit_finding_id": "CF-01",
+      "severity": "P1",
+      "description": "Drei Gruppen gleicher Quellenzeile und Entität enthalten widersprüchliche Prozentwerte.",
+      "affected_records": "See evidence; global cardinality UNKNOWN where no exact counter exists",
+      "evidence": "ownership-conflicts.csv; ownership-index.mjs marks these claims CONFLICT.",
+      "status": "OPEN"
+    },
+    {
+      "audit_finding_id": "TM-02",
+      "severity": "P1",
+      "description": "Quellen-Snapshotdatum, Gültigkeit der einzelnen Eigentumsbehauptung und M&A-Vollzug sind nicht äquivalent.",
+      "affected_records": "See evidence; global cardinality UNKNOWN where no exact counter exists",
+      "evidence": "intelligence-graph.json status_at_source/source_row without assertion valid_from/to; atlas-connections.json has dates and M&A schemas separately.",
+      "status": "OPEN"
+    },
+    {
+      "audit_finding_id": "ID-02",
+      "severity": "P1",
+      "description": "Name-hash-basierte SOURCE_NAME_ONLY Unternehmen haben keine belastbare Identitätsauflösung über Quellen hinweg.",
+      "affected_records": "See evidence; global cardinality UNKNOWN where no exact counter exists",
+      "evidence": "intelligence-graph.json companies.identity_status; ma-intelligence/src/domain/ids.ts companyId(); distinct GEM IDs and name IDs.",
+      "status": "OPEN"
+    },
+    {
+      "audit_finding_id": "GE-01",
+      "severity": "P1",
+      "description": "UNKNOWN-Genauigkeit ist für viele Kartenpunkte hinterlegt; Koordinate beweist keine exakte Anlageposition.",
+      "affected_records": "See evidence; global cardinality UNKNOWN where no exact counter exists",
+      "evidence": "inventory.json asset_coordinate_precision; mines-globe.js displays unknown precision separately.",
+      "status": "OPEN"
+    },
+    {
+      "audit_finding_id": "NE-01",
+      "severity": "P1",
+      "description": "UNKNOWN unterscheidet ungesucht und ergebnislos recherchiert nicht maschinenlesbar.",
+      "affected_records": "See evidence; global cardinality UNKNOWN where no exact counter exists",
+      "evidence": "mines-global.json processors/transport empty arrays; candidates.json UNKNOWN; no research_status/last_checked/sources_checked/result on assets.",
+      "status": "OPEN"
+    },
+    {
+      "audit_finding_id": "MA-01",
+      "severity": "P1",
+      "description": "Keine überprüfbare Materialbilanz entlang der 14 primären Beziehungen, da keine Menge gespeichert ist.",
+      "affected_records": "See evidence; global cardinality UNKNOWN where no exact counter exists",
+      "evidence": "inventory.json primary_edges_with_quantity = 0; primary-network.json relationships.",
+      "status": "OPEN"
+    },
+    {
+      "audit_finding_id": "SE-01",
+      "severity": "P1",
+      "description": "Gesamtansicht lädt zwei separate iframe-Anwendungen mit unterschiedlichen Datenmodellen und eigenem Speicherbedarf.",
+      "affected_records": "See evidence; global cardinality UNKNOWN where no exact counter exists",
+      "evidence": "dual-globe.mjs iframes /atlas/ and /minen/; atlas-ui.mjs and mines-globe.js each fetch snapshots. Gemeinsame Dateien können vom Browser gecacht werden.",
+      "status": "OPEN"
+    }
+  ],
+  "candidate_files": [
+    "audit/V28.0/entity-resolution-candidates.csv",
+    "audit/V28.0/entity-resolution-alias-candidates.csv"
+  ],
+  "new_findings": [
+    {
+      "audit_finding_id": "NEW-01",
+      "severity": "P1",
+      "description": "Two singular reviewed-mine capacity objects were omitted by the V28.0 plural-capacities counter.",
+      "affected_records": 2,
+      "evidence": "mines-reviewed.json capacity (singular)",
+      "status": "FIXED"
+    },
+    {
+      "audit_finding_id": "NEW-02",
+      "severity": "P1",
+      "description": "Capacity rows without a numeric value must not be treated as measured quantities or zero.",
+      "affected_records": 3131,
+      "evidence": "Source capacity.value IS NULL across mines, plants and terminals",
+      "status": "OPEN"
+    },
+    {
+      "audit_finding_id": "NEW-03",
+      "severity": "P1",
+      "description": "Native claims are preserved as source rows but remain unlinked to new entity or relationship IDs.",
+      "affected_records": 1495,
+      "evidence": "atlas-claims.json and intelligence-globe.json subject formats versus ledger IDs",
+      "status": "OPEN"
+    }
+  ]
+}

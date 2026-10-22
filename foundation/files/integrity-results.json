@@ -1,0 +1,232 @@
+{
+  "counts": {
+    "source_record": 65868,
+    "entity": 43233,
+    "relationship": 19639,
+    "claim": 119407,
+    "capacity": 11465,
+    "coordinate": 33314,
+    "source": 124,
+    "resolution_candidate": 904,
+    "migration_mapping": 64491,
+    "research": 19618,
+    "anomaly": 3
+  },
+  "legacy_claim_count": 1495,
+  "capacity_time_status": {
+    "UNKNOWN_PERIOD": 11465
+  },
+  "coordinate_accuracy_status": {
+    "APPROXIMATE_FACILITY": 451,
+    "CITY": 8750,
+    "UNKNOWN_ACCURACY": 24113
+  },
+  "taxonomy": {
+    "schema_errors": 0,
+    "referential_errors": 0,
+    "duplicate_ids": 0,
+    "domain_anomalies": 0,
+    "source_conflicts": 3,
+    "unknown_records": 11465,
+    "legacy_evidence_incomplete": 119407
+  },
+  "tests": [
+    {
+      "test_id": "duplicate_entity_id",
+      "records_checked": 43233,
+      "affected_records": 0,
+      "status": "PASS",
+      "evidence": "PK entity_id"
+    },
+    {
+      "test_id": "duplicate_relationship_id",
+      "records_checked": 19639,
+      "affected_records": 0,
+      "status": "PASS",
+      "evidence": "PK relationship_id; legacy collisions retained"
+    },
+    {
+      "test_id": "null_entity_id",
+      "records_checked": 43233,
+      "affected_records": 0,
+      "status": "PASS",
+      "evidence": "entity IDs"
+    },
+    {
+      "test_id": "invalid_entity_id",
+      "records_checked": 43233,
+      "affected_records": 0,
+      "status": "PASS",
+      "evidence": "persistent opaque entity UUID"
+    },
+    {
+      "test_id": "null_relationship_id",
+      "records_checked": 19639,
+      "affected_records": 0,
+      "status": "PASS",
+      "evidence": "relationship IDs"
+    },
+    {
+      "test_id": "orphan_relationship_source",
+      "records_checked": 19639,
+      "affected_records": 0,
+      "status": "PASS",
+      "evidence": "FK/source join"
+    },
+    {
+      "test_id": "orphan_relationship_target",
+      "records_checked": 19639,
+      "affected_records": 0,
+      "status": "PASS",
+      "evidence": "FK/target join"
+    },
+    {
+      "test_id": "invalid_entity_type",
+      "records_checked": 43233,
+      "affected_records": 0,
+      "status": "PASS",
+      "evidence": "controlled source classification, unresolved types explicit"
+    },
+    {
+      "test_id": "unclassified_relationship_without_status",
+      "records_checked": 19639,
+      "affected_records": 0,
+      "status": "PASS",
+      "evidence": "ontology catalog and legacy status"
+    },
+    {
+      "test_id": "invalid_coordinates",
+      "records_checked": 33314,
+      "affected_records": 0,
+      "status": "PASS",
+      "evidence": "coordinate CHECK"
+    },
+    {
+      "test_id": "coordinate_without_accuracy_status",
+      "records_checked": 33314,
+      "affected_records": 0,
+      "status": "PASS",
+      "evidence": "explicit accuracy, raw legacy label retained"
+    },
+    {
+      "test_id": "invalid_temporal_interval",
+      "records_checked": 139046,
+      "affected_records": 0,
+      "status": "PASS",
+      "evidence": "half-open [start,end) where known"
+    },
+    {
+      "test_id": "capacity_without_time_status",
+      "records_checked": 11465,
+      "affected_records": 0,
+      "status": "PASS",
+      "evidence": "UNKNOWN_PERIOD is allowed"
+    },
+    {
+      "test_id": "invalid_unit",
+      "records_checked": 11465,
+      "affected_records": 0,
+      "status": "PASS",
+      "evidence": "source unit preserved; unknown remains UNKNOWN_UNIT"
+    },
+    {
+      "test_id": "newly_verified_FACT_without_evidence",
+      "records_checked": 119407,
+      "affected_records": 0,
+      "status": "PASS",
+      "evidence": "newly verified FACT requires refs; no legacy auto promotion"
+    },
+    {
+      "test_id": "FACT_without_evidence_refs",
+      "records_checked": 119407,
+      "affected_records": 0,
+      "status": "PASS",
+      "evidence": "Unreferenced legacy FACT field claims demoted to UNKNOWN; raw source label retained"
+    },
+    {
+      "test_id": "capacity_value_status",
+      "records_checked": 11465,
+      "affected_records": 0,
+      "status": "PASS",
+      "evidence": "NULL is UNKNOWN_VALUE, never zero"
+    },
+    {
+      "test_id": "foreign_key_integrity",
+      "records_checked": 248147,
+      "affected_records": 0,
+      "status": "PASS",
+      "evidence": "SQLite FK check"
+    },
+    {
+      "test_id": "source_record_payload_hashes",
+      "records_checked": 65868,
+      "affected_records": 0,
+      "status": "PASS",
+      "evidence": "all 30 collection rows checked against original snapshots"
+    },
+    {
+      "test_id": "unexplained_entity_loss",
+      "records_checked": 43233,
+      "affected_records": 0,
+      "status": "PASS",
+      "evidence": "one mapping per legacy row, no merges"
+    },
+    {
+      "test_id": "unexplained_relationship_loss",
+      "records_checked": 19639,
+      "affected_records": 0,
+      "status": "PASS",
+      "evidence": "one mapping per legacy row, no merges"
+    },
+    {
+      "test_id": "unexplained_source_loss",
+      "records_checked": 124,
+      "affected_records": 0,
+      "status": "PASS",
+      "evidence": "one mapping per legacy row, no merges"
+    },
+    {
+      "test_id": "unexplained_claim_loss",
+      "records_checked": 1495,
+      "affected_records": 0,
+      "status": "PASS",
+      "evidence": "all 1,495 native claim rows preserved; derived claims are additive"
+    },
+    {
+      "test_id": "entity_mapping_completeness",
+      "records_checked": 43233,
+      "affected_records": 0,
+      "status": "PASS",
+      "evidence": "source ordinal to ledger ID"
+    },
+    {
+      "test_id": "relationship_mapping_completeness",
+      "records_checked": 19639,
+      "affected_records": 0,
+      "status": "PASS",
+      "evidence": "source ordinal to ledger ID"
+    },
+    {
+      "test_id": "source_mapping_completeness",
+      "records_checked": 124,
+      "affected_records": 0,
+      "status": "PASS",
+      "evidence": "source ordinal to ledger ID"
+    },
+    {
+      "test_id": "baseline_resolution_queue",
+      "records_checked": 904,
+      "affected_records": 0,
+      "status": "PASS",
+      "evidence": "795 name groups and 109 alias pairs; no merge"
+    },
+    {
+      "test_id": "ownership_conflict_preservation",
+      "records_checked": 3,
+      "affected_records": 0,
+      "status": "PASS",
+      "evidence": "both original share rows preserved"
+    }
+  ],
+  "critical_integrity_result": "PASS"
+}

@@ -1,0 +1,98 @@
+[
+  {
+    "TEST_ID": "REG-01",
+    "TEST_METHOD": "node check-atlas.mjs",
+    "EXPECTED_RESULT": "main Atlas graph/data valid",
+    "ACTUAL_RESULT": "68 edges, 53 trade rows",
+    "STATUS": "PASS",
+    "EVIDENCE": "68 edges, 53 trade rows"
+  },
+  {
+    "TEST_ID": "REG-02",
+    "TEST_METHOD": "node check-resource-world.mjs",
+    "EXPECTED_RESULT": "mine/resource view graph valid",
+    "ACTUAL_RESULT": "9,809 nodes and 14 directed edges",
+    "STATUS": "PASS",
+    "EVIDENCE": "9,809 nodes and 14 directed edges"
+  },
+  {
+    "TEST_ID": "REG-03",
+    "TEST_METHOD": "node check-dual-overview.mjs",
+    "EXPECTED_RESULT": "two independent iframe URLs and responsive structure",
+    "ACTUAL_RESULT": "URL isolation/static structure",
+    "STATUS": "PASS",
+    "EVIDENCE": "URL isolation/static structure"
+  },
+  {
+    "TEST_ID": "REG-04",
+    "TEST_METHOD": "node check-navigation.mjs",
+    "EXPECTED_RESULT": "pointer logic and pinch continuity",
+    "ACTUAL_RESULT": "scripted input logic",
+    "STATUS": "PASS",
+    "EVIDENCE": "scripted input logic"
+  },
+  {
+    "TEST_ID": "REG-05",
+    "TEST_METHOD": "node check-unified.mjs",
+    "EXPECTED_RESULT": "filter and existing single views",
+    "ACTUAL_RESULT": "same deal statuses/dates/sources",
+    "STATUS": "PASS",
+    "EVIDENCE": "same deal statuses/dates/sources"
+  },
+  {
+    "TEST_ID": "REG-06",
+    "TEST_METHOD": "node check-ownership-context.mjs",
+    "EXPECTED_RESULT": "selection ownership context/conflicts",
+    "ACTUAL_RESULT": "19,557 assertions, 3 conflict groups",
+    "STATUS": "PASS",
+    "EVIDENCE": "19,557 assertions, 3 conflict groups"
+  },
+  {
+    "TEST_ID": "REG-07",
+    "TEST_METHOD": "pnpm --dir ma-intelligence check",
+    "EXPECTED_RESULT": "typecheck/lint/tests",
+    "ACTUAL_RESULT": "270/270 unit/integration tests",
+    "STATUS": "PASS",
+    "EVIDENCE": "270/270 unit/integration tests"
+  },
+  {
+    "TEST_ID": "REG-08",
+    "TEST_METHOD": "source hashes and unchanged assets",
+    "EXPECTED_RESULT": "existing data reachable at same paths",
+    "ACTUAL_RESULT": "21 asset hashes checked; no Atlas JSON mutation",
+    "STATUS": "PASS",
+    "EVIDENCE": "21 asset hashes checked; no Atlas JSON mutation"
+  },
+  {
+    "TEST_ID": "REG-09",
+    "TEST_METHOD": "actual 3D browser on desktop",
+    "EXPECTED_RESULT": "both WebGL globes independently interact",
+    "ACTUAL_RESULT": "Not executed in real authenticated browser",
+    "STATUS": "MANUAL_VERIFICATION_REQUIRED",
+    "EVIDENCE": "private site auth wall; static checks do not execute GPU"
+  },
+  {
+    "TEST_ID": "REG-10",
+    "TEST_METHOD": "actual iPhone/mobile browser",
+    "EXPECTED_RESULT": "touch, layout, node selection, edge/source view",
+    "ACTUAL_RESULT": "Not executed in real authenticated browser",
+    "STATUS": "MANUAL_VERIFICATION_REQUIRED",
+    "EVIDENCE": "no authenticated device in test environment"
+  },
+  {
+    "TEST_ID": "REG-11",
+    "TEST_METHOD": "actual browser historical claim display",
+    "EXPECTED_RESULT": "time presentation remains correct",
+    "ACTUAL_RESULT": "Not executed in real authenticated browser",
+    "STATUS": "MANUAL_VERIFICATION_REQUIRED",
+    "EVIDENCE": "legacy UI path unchanged; no live WebGL session"
+  },
+  {
+    "TEST_ID": "REG-12",
+    "TEST_METHOD": "actual browser UNKNOWN/CONFLICT display",
+    "EXPECTED_RESULT": "labels and contradictions visible",
+    "ACTUAL_RESULT": "Not executed in real authenticated browser",
+    "STATUS": "MANUAL_VERIFICATION_REQUIRED",
+    "EVIDENCE": "ownership context logic passed; visual interaction not observed"
+  }
+]

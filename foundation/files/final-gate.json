@@ -1,0 +1,130 @@
+{
+  "P0_FIXED": [
+    "ID-01"
+  ],
+  "P0_OPEN": [
+    "ON-01",
+    "TM-01",
+    "PR-01",
+    "SC-01"
+  ],
+  "P1_FIXED": [
+    "NEW-01"
+  ],
+  "P1_OPEN": [
+    "ER-01",
+    "PV-01",
+    "PV-02",
+    "CF-01",
+    "TM-02",
+    "ID-02",
+    "GE-01",
+    "NE-01",
+    "MA-01",
+    "SE-01",
+    "NEW-02",
+    "NEW-03"
+  ],
+  "P2_OPEN": [],
+  "P3_OPEN": [],
+  "NEW_FINDINGS": [
+    {
+      "audit_finding_id": "NEW-01",
+      "severity": "P1",
+      "description": "Two singular reviewed-mine capacity objects were omitted by the V28.0 plural-capacities counter.",
+      "affected_records": 2,
+      "evidence": "mines-reviewed.json capacity (singular)",
+      "status": "FIXED"
+    },
+    {
+      "audit_finding_id": "NEW-02",
+      "severity": "P1",
+      "description": "Capacity rows without a numeric value must not be treated as measured quantities or zero.",
+      "affected_records": 3131,
+      "evidence": "Source capacity.value IS NULL across mines, plants and terminals",
+      "status": "OPEN"
+    },
+    {
+      "audit_finding_id": "NEW-03",
+      "severity": "P1",
+      "description": "Native claims are preserved as source rows but remain unlinked to new entity or relationship IDs.",
+      "affected_records": 1495,
+      "evidence": "atlas-claims.json and intelligence-globe.json subject formats versus ledger IDs",
+      "status": "OPEN"
+    }
+  ],
+  "IMPLEMENTED_COMPONENTS": [
+    "SQLite indexed foundation",
+    "persistent opaque UUID identities",
+    "relationship ontology",
+    "claim/time/evidence schema",
+    "research status",
+    "automated tests"
+  ],
+  "MIGRATED_COMPONENTS": [
+    "43,233 counted entity rows",
+    "19,639 counted relationship rows",
+    "1,495 native claims retained but subject links unresolved",
+    "124 native sources",
+    "11,465 capacity rows, 3,131 NULL",
+    "33,314 coordinates",
+    "904 resolution queue entries"
+  ],
+  "VERIFIED_COMPONENTS": [
+    "row hash mapping",
+    "unique ledger IDs",
+    "FK relations",
+    "capacity time status",
+    "coordinate status",
+    "idempotency",
+    "isolated rollback"
+  ],
+  "OPEN_COMPONENTS": [
+    "SC-01 browser query service",
+    "legacy relation semantics",
+    "verified capacity periods",
+    "3,131 capacity NULL values",
+    "material basis",
+    "1,495 native claim subject links",
+    "field evidence",
+    "entity match decisions",
+    "full temporal coverage",
+    "desktop/mobile live WebGL"
+  ],
+  "SCHEMA_ERRORS": 0,
+  "REFERENTIAL_ERRORS": 0,
+  "DUPLICATE_IDS": 0,
+  "DOMAIN_ANOMALIES": 0,
+  "SOURCE_CONFLICTS": 3,
+  "UNKNOWN_RECORDS": 11465,
+  "LEGACY_EVIDENCE_INCOMPLETE": 119407,
+  "P0_OPEN_COUNT": 4,
+  "P1_OPEN_COUNT": 12,
+  "NEW_FINDINGS_COUNT": 3,
+  "INTEGRITY_TEST_RESULT": "PASS",
+  "IDEMPOTENCY_RESULT": "PASS",
+  "ROLLBACK_RESULT": "PASS",
+  "REGRESSION_RESULT": "OPEN: structural PASS, real device MANUAL_VERIFICATION_REQUIRED",
+  "AUDITOR_RESULT": "NEEDS_RESEARCH",
+  "FINAL_STATUS": "NEEDS_RESEARCH",
+  "finding_status": {
+    "ID-01": "FIXED",
+    "ON-01": "OPEN",
+    "TM-01": "OPEN",
+    "PR-01": "OPEN",
+    "SC-01": "OPEN",
+    "ER-01": "OPEN",
+    "PV-01": "OPEN",
+    "PV-02": "OPEN",
+    "CF-01": "OPEN",
+    "TM-02": "OPEN",
+    "ID-02": "OPEN",
+    "GE-01": "OPEN",
+    "NE-01": "OPEN",
+    "MA-01": "OPEN",
+    "SE-01": "OPEN",
+    "NEW-01": "FIXED",
+    "NEW-02": "OPEN",
+    "NEW-03": "OPEN"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "rollback_test_method": "extract immutable V28.0 archive to isolated temp tree; compare 21 audited source hashes and 30 collection counts",
+  "records_checked": 51,
+  "result": "PASS",
+  "differences": [],
+  "status": "PASS",
+  "limitation": "Deployment switch and real device runtime not exercised; the V28.0 site commit and archive are pinned."
+}

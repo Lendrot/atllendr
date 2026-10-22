@@ -1,0 +1,10 @@
+{
+  "method": "copy ledger, rerun identical migration without new source data, compare entire SQLite bytes",
+  "before_sha256": "a24043ff4222256d5ecc4e17354f2b8d5f59ca489efa8a63aefe7bbfc332f44a",
+  "after_sha256": "a24043ff4222256d5ecc4e17354f2b8d5f59ca489efa8a63aefe7bbfc332f44a",
+  "unexpected_entity_changes": 0,
+  "unexpected_relationship_changes": 0,
+  "unexpected_claim_changes": 0,
+  "unexpected_source_changes": 0,
+  "status": "PASS"
+}

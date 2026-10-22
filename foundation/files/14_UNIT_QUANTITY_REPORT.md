@@ -1,0 +1,3 @@
+# Unit / Quantity Report
+
+**Status: IMPLEMENTED; material compatibility OPEN.** All 11,465 capacity rows retain source unit, commodity, raw material form, separate process stage where BF/BOF/EAF/DRI/IF, measurement basis and explicit `UNKNOWN` material basis. Only 8,334 rows have numeric values; 3,131 are `UNKNOWN_VALUE`. No arithmetic sum or conversion was performed. Quantitative production claims preserve fiscal periods and material descriptors. The 14 primary edges still have no flow quantities, so an input/output material balance is **UNKNOWN**. Unit whitelist validates observed capacity-unit strings; it does not certify wet/dry or ore/metal compatibility.

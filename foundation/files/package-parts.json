@@ -1,0 +1,43 @@
+{
+  "schema_version": "28.1",
+  "part_size": 4194304,
+  "artifacts": {
+    "identity-registry.json": {
+      "original_sha256": "3441b2750a416a393f23fd695371cf86bff2f62d257ad79d40e2ed81b9461929",
+      "packed_sha256": "f35966b96cacb1a7c513f76d5bbb695e93df1eb444a5435cef7410e41365e910",
+      "parts": [
+        "identity-registry.json.gz"
+      ]
+    },
+    "claim-identity-registry.json": {
+      "original_sha256": "a72531e0805007f08ee95bd80e8fcd008ee8733c1c76e4f87283246ce3a45f2e",
+      "packed_sha256": "5a295e2394675b8aa6b4c942ded686830cc362d511128703cf1f01011c9f53b3",
+      "parts": [
+        "claim-identity-registry.json.gz"
+      ]
+    },
+    "legacy-evidence-backfill.csv": {
+      "original_sha256": "d8789357dc78c67b23d955044c591a1c6075981a1d65db8afd1b5a7097b9d38b",
+      "packed_sha256": "0f3860f8e9e961d64c8da222cff03ec16718f9dd8772e8120acd4b60baf4f5ea",
+      "parts": [
+        "legacy-evidence-backfill.csv.gz"
+      ]
+    },
+    "foundation.sqlite.gz": {
+      "original_sha256": "6b40e7dcbb224a07f04271c6f77718c516cdb792d2c9c511019ed2f1b77f734e",
+      "packed_sha256": "6b40e7dcbb224a07f04271c6f77718c516cdb792d2c9c511019ed2f1b77f734e",
+      "parts": [
+        "foundation.sqlite.gz.part-000",
+        "foundation.sqlite.gz.part-001",
+        "foundation.sqlite.gz.part-002",
+        "foundation.sqlite.gz.part-003",
+        "foundation.sqlite.gz.part-004",
+        "foundation.sqlite.gz.part-005",
+        "foundation.sqlite.gz.part-006",
+        "foundation.sqlite.gz.part-007",
+        "foundation.sqlite.gz.part-008"
+      ],
+      "uncompressed_sha256": "a24043ff4222256d5ecc4e17354f2b8d5f59ca489efa8a63aefe7bbfc332f44a"
+    }
+  }
+}
