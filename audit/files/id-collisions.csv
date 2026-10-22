@@ -1,0 +1,7 @@
+dataset,id,rows,distinct_payloads
+ownership_assertions,gem-giomt-P100000128037-ultimate_parent-gem-company-E100000001237-3,2,2
+ownership_assertions,gem-giomt-P100000128382-owner_or_operator-gem-company-E100002003135-265,2,2
+ownership_assertions,gem-giomt-P100000128382-ultimate_parent-gem-company-E100002003135-265,2,2
+ownership_assertions,gem-gcmt-M3796-ultimate_parent-name-gcmt-25d3e3d11dea117f-1289,2,2
+ownership_assertions,gem-gcmt-M0349-ultimate_parent-name-gcmt-61f12831d753a491-1807,2,2
+ownership_assertions,gem-gcmt-M1260-ultimate_parent-name-gcmt-bd4a74d67cb605d9-6147,2,1

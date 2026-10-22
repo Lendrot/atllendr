@@ -1,0 +1,43 @@
+{
+  "as_of": "2026-09-29",
+  "scope": "Curated research candidates; not a global mine census or chief-analyst approval",
+  "license": "GEM wiki content: CC BY-NC-SA; attribution and source links retained",
+  "mines": [
+    {
+      "id": "gem-bhp-jimblebar", "name": "BHP Jimblebar Mine", "country": "Australien", "commodity": "Eisenerz", "status": "operating",
+      "coordinates": {"lat": -23.369261, "lon": 120.061885, "precision": "EXACT", "source_url": "https://www.gem.wiki/BHP_Jimblebar_Mine"},
+      "owner": {"name": "BHP Minerals Pty Ltd; ITOCHU Minerals & Energy of Australia Pty Ltd; Mitsui & Co. Iron Ore Exploration & Mining Pty Ltd", "shares": "85 %; 8 %; 7 %", "parent": "BHP Group Ltd; ITOCHU Corp; Mitsui & Co Ltd", "location": "BHP Group Hauptsitz: 171 Collins Street, Melbourne. Standorte der übrigen direkten Eigentümer UNKNOWN.", "coordinates": {"lat": -37.8152, "lon": 144.96816, "precision": "APPROXIMATE", "role": "BHP Group Ltd Konzernsitz; mittelbarer 85%-Bezug, kein Standort von BHP Minerals Pty Ltd", "source_url": "https://mapcarta.com/N2456680377", "address_source_url": "https://www.bhp.com/what-we-do/global-locations/offices"}},
+      "capacity": {"value": 71000, "unit": "1000 t/Jahr", "material_form": "Eisenerz (Quellenform prüfen)", "source_url": "https://www.gem.wiki/BHP_Jimblebar_Mine"},
+      "production": {"2021": null, "2022": 69156, "2023": 78589, "2024": null, "2025": null, "2026": null},
+      "production_unit": "1000 t/Jahr", "production_form": "Eisenerz laut GEM; Form pro Jahr nicht weiter aufgeschlüsselt",
+      "processors": ["Jimblebar-Aufbereitungshub, Pilbara; Betreiber BHP WAIO, genaue Anlagenkoordinate UNKNOWN"], "transport": ["Jimblebar → Port Hedland: Bandförderer und BHP-Bahn; Hafenanlagen Finucane Island / Nelson Point. Zielkunde UNKNOWN."], "transport_source_url": "https://www.bhp.com/what-we-do/global-locations/australia/western-australia/jimblebar", "evidence": "FACT", "audit": "NEEDS_RESEARCH", "confidence": null,
+      "source_url": "https://www.gem.wiki/BHP_Jimblebar_Mine", "data_period": "GEM-Wiki: 2022–2023 Produktion; aktueller Status laut Seite", "access_date": "2026-09-29"
+    },
+    {
+      "id": "gem-vale-serra-sul", "name": "Vale Serra Sul Complex Mine", "country": "Brasilien", "commodity": "Eisenerz", "status": "operating",
+      "coordinates": {"lat": -6.403310, "lon": -50.324008, "precision": "EXACT", "source_url": "https://www.gem.wiki/Vale_Serra_Sul_Complex_Mine"},
+      "owner": {"name": "Vale SA", "shares": "100 %", "parent": "Vale SA", "location": "Hauptsitz Rio de Janeiro (Stadt, keine geprüfte Bürokoordinate)", "coordinates": null, "location_source_url": "https://www.vale.com/en/where-we-are"},
+      "capacity": {"value": 90000, "unit": "1000 t/Jahr", "material_form": "Eisenerz (Quellenform prüfen)", "source_url": "https://www.gem.wiki/Vale_Serra_Sul_Complex_Mine"},
+      "production": {"2021": null, "2022": 69300, "2023": 75000, "2024": null, "2025": null, "2026": null},
+      "production_unit": "1000 t/Jahr", "production_form": "Eisenerz laut GEM; Form pro Jahr nicht weiter aufgeschlüsselt",
+      "processors": ["S11D-Minen- und Aufbereitungskomplex, Canaã dos Carajás; Betreiber Vale; separate Anlagenkoordinate UNKNOWN"], "transport": ["Serra Sul / Carajás → Ponta da Madeira: Carajás-Eisenbahn; konkreter Industrieabnehmer UNKNOWN."], "transport_source_url": "https://www.vale.com/en/logistics", "evidence": "FACT", "audit": "NEEDS_RESEARCH", "confidence": null,
+      "source_url": "https://www.gem.wiki/Vale_Serra_Sul_Complex_Mine", "data_period": "GEM-Wiki: 2022–2023 Produktion; aktueller Status laut Seite", "access_date": "2026-09-29"
+    },
+    {
+      "id": "gem-western-bomi", "name": "Western Cluster Bomi Hills Mine", "country": "Liberia", "commodity": "Eisenerz", "status": "operating",
+      "coordinates": {"lat": 6.897493, "lon": -10.822327, "precision": "EXACT", "source_url": "https://www.gem.wiki/Western_Cluster_Bomi_Hills_Mine"},
+      "owner": {"name": "Western Cluster Ltd", "shares": "100 %", "parent": "Vedanta Ltd", "location": "Eigentümerbüro nicht GPS-verifiziert", "coordinates": null},
+      "capacity": null, "production": {"2021": null, "2022": null, "2023": null, "2024": null, "2025": null, "2026": null},
+      "production_unit": "1000 t/Jahr", "production_form": "UNKNOWN", "processors": [], "transport": [], "evidence": "FACT", "audit": "NEEDS_RESEARCH", "confidence": null,
+      "source_url": "https://www.gem.wiki/Western_Cluster_Bomi_Hills_Mine", "data_period": "GEM-Wiki: Kapazität und Produktion unbekannt", "access_date": "2026-09-29"
+    },
+    {
+      "id": "gem-western-mano", "name": "Western Cluster Mano River Mine", "country": "Liberia", "commodity": "Eisenerz", "status": "proposed",
+      "coordinates": {"lat": 7.338179, "lon": -11.121342, "precision": "APPROXIMATE", "source_url": "https://www.gem.wiki/Western_Cluster_Mano_River_Mine"},
+      "owner": {"name": "Western Cluster Ltd", "shares": "100 %", "parent": "Vedanta Ltd", "location": "Eigentümerbüro nicht GPS-verifiziert", "coordinates": null},
+      "capacity": null, "production": {"2021": null, "2022": null, "2023": null, "2024": null, "2025": null, "2026": null},
+      "production_unit": "1000 t/Jahr", "production_form": "UNKNOWN", "processors": [], "transport": [], "evidence": "FACT", "audit": "NEEDS_RESEARCH", "confidence": null,
+      "source_url": "https://www.gem.wiki/Western_Cluster_Mano_River_Mine", "data_period": "GEM-Wiki: Projektstatus vorgeschlagen, keine laufende Produktion belegt", "access_date": "2026-09-29"
+    }
+  ]
+}

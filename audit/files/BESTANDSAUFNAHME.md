@@ -1,0 +1,18 @@
+# Atlas V28.0 — 1. Tatsächlicher Ist-Zustand
+
+| Ebene | Befund | Beleg |
+| --- | --- | --- |
+| Kernmodell | TypeScript/Zod modelliert `Company`, `Deal`, `Ownership`, `Asset`, `Commodity`, `Source`, `Event`, `Claim`; feste Präfix-IDs und referenzielle Prüfung. | `ma-intelligence/src/domain/entities.ts`, `ids.ts`, `store/integrity.ts` |
+| Weitere Datenmodelle | Statische JSON-Snapshots für Gesamtatlas, Marktdaten, Indien-Materialien, Minen, Stahlwerke, Terminals, EPA TRI, Produktionsreihen und Unternehmensgraph. Nicht alle durchlaufen dasselbe Zod-Modell. | `ma-intelligence/site/dist/assets/*.json`, `src/ingest/atlas.ts` |
+| Standortbestände | 7.894 GEM-Minenprojekte, 1.293 Stahlwerke, 466 Terminals, vier manuell recherchierte Minen, 148 alte Kandidaten und acht primäre Netzwerkknoten. **9.813 Datensätze**, 9.813 eindeutige Standort-IDs in diesen Dateien. | `inventory.json` |
+| Eigentumsgraph | 9.608 Unternehmensreferenzen, 19.557 Beziehungszeilen. Typen: `owner_or_operator` (9.960) und `ultimate_parent` (9.597). Die Referenzen auf Unternehmen und Assets sind auf ID-Ebene auflösbar. | `intelligence-graph.json`, `inventory.json` |
+| Andere Beziehungen | 14 gerichtete Primärnetzwerk-Kanten; 68 Atlas-Kanten (`customs_trade`, `ownership`, `supply`, `financing`); 1.000 Wikidata-Ortsbezüge. Kein gemeinsamer globaler Beziehungskatalog für alle Bestände. | `primary-network.json`, `atlas-connections.json`, `atlas-location-relations.json` |
+| Kennzahlen | 108 BHP-Beobachtungen mit `FY_JUNE`, Start/Ende, Materialform und Quelle; 11.463 Kapazitätszeilen in Standortobjekten. Die allgemeinen `production`-Jahresfelder der großen GEM-Snapshots sind ohne Zahlen. | `production-observations.json`, `inventory.json` |
+| M&A, Handel, Geld | 10.207 Markt-Unternehmenszeilen, 58 Markt-Entity-Einträge und 31 Marktdaten-Deals; die 22 `acquisitions.json`-Deal-IDs sind darin enthalten. Das Kernmodell hat 33 Deals, wovon die 23 `deutschland-ma.json`-IDs Teilmenge sind. Markt- und Kernmodell-Deal-IDs haben keine direkte Überschneidung; semantische Dubletten bleiben ungeprüft. Dazu 68 Atlas-Kanten einschließlich Handelswerten und Finanzierung. Ein Geldwert ist nicht automatisch eine Unternehmenszahlung. | `market-data.json`, `acquisitions.json`, `deutschland-ma.json`, `intelligence-globe.json`, `atlas-connections.json` |
+| Abfall und Recycling | 13.367 EPA TRI-Anlagenzeilen für 2024 mit aggregierten Mengen, zusätzlich India-Materialien und Abfall-Erkundung. Kein globales, einheitliches Recycling-Anlagenschema mit durchgehendem Input-Output. | `tri-2024-facilities.json`, `india-materials.json`, `waste-discovery.json` |
+| Speicher und Schnittstellen | Git-verwaltete JSON-Dateien und Browser-Fetch, kein nachgewiesener produktiver DB-Indexdienst für diese Karten. Die Doppelsicht lädt `/atlas/` und `/minen/` in getrennten iframes mit URL-isolierten Filtern. `dist/` ist eine Kopie des kanonischen `ma-intelligence/site/dist/`. | `.openai/hosting.json`, `scripts/prepare-site.mjs`, `dual-globe.mjs`, `mines-globe.js` |
+| Datenstatus | `FACT/INFERENCE/ASSUMPTION/UNKNOWN` im Kernmodell, `OBSERVED/CALCULATED/ESTIMATED/UNKNOWN` in der Claim-Schicht sowie `NEEDS_RESEARCH`, `REVIEW`, `VALID`, `CONFLICT` in verschiedenen Teilbeständen. `VALID` bedeutet nur strukturelle Gültigkeit. | `domain/vocabulary.ts`, `claim-model.mjs`, `ownership-index.mjs` |
+
+**Skalierungsaussage:** Es gibt keine Messung mit 100.000 oder 1.000.000 Entitäten. Browserseitiges vollständiges Laden und Filtern ist als künftiges Skalierungsrisiko belegt, eine konkrete Grenze für bestimmte Hardware bleibt `UNKNOWN`. Eine Produktionsdatenbank oder Serverpagination wird im aktuellen UI-Pfad nicht genutzt.
+
+

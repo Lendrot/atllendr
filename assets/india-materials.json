@@ -1,0 +1,3937 @@
+{
+  "kind": "material_delivery",
+  "dataset_id": "india_materials",
+  "as_of": "2026-09-10",
+  "country": "IN",
+  "scope_note": "Ausgewählte amtliche Jahresdaten und belegte Unternehmen sowie einzeln nachgewiesene zollstatistische EU-Länderströme nach Indien. Keine vollständige Stoffstrombilanz oder Sendungsverfolgung. Zollwarenströme sind keine rechtlich notifizierten Abfallverbringungen nach Basel-Konvention. Abweichende Spiegelwerte bleiben in der Prüfliste.",
+  "materials": [
+    {
+      "id": "coal",
+      "name": "Kohle",
+      "description": "Stein- und Kokskohle; Koks und weitere Kohleprodukte nicht enthalten.",
+      "unit": "million_tonnes"
+    },
+    {
+      "id": "lignite",
+      "name": "Braunkohle",
+      "description": "Separat von Steinkohle erfasst.",
+      "unit": "million_tonnes"
+    },
+    {
+      "id": "crude_oil",
+      "name": "Rohöl",
+      "description": "Förderung, Einfuhr und Einsatz in Raffinerien; nicht mit Fertigprodukten addieren.",
+      "unit": "million_tonnes"
+    },
+    {
+      "id": "oil_products",
+      "name": "Ölprodukte",
+      "description": "Erzeugnisse nach der Raffination; eigene Produktstufe.",
+      "unit": "million_tonnes"
+    },
+    {
+      "id": "natural_gas",
+      "name": "Erdgas",
+      "description": "Netto-Inlandsproduktion und Import in Milliarden Kubikmetern.",
+      "unit": "billion_m3"
+    },
+    {
+      "id": "crude_steel",
+      "name": "Rohstahl",
+      "description": "Produktionsstufe vor Fertigstahl; keine Addition beider Stufen.",
+      "unit": "million_tonnes"
+    },
+    {
+      "id": "finished_steel",
+      "name": "Fertigstahl",
+      "description": "Produktion, Außenhandel, Verfügbarkeit und Verbrauch aus derselben Bilanz.",
+      "unit": "million_tonnes"
+    },
+    {
+      "id": "pellets",
+      "name": "Eisenerzpellets",
+      "description": "Bisher belegte Anlagenkapazität; tatsächlicher Materialdurchsatz unbekannt.",
+      "unit": "million_tonnes"
+    },
+    {
+      "id": "waste_plastic_hs3915",
+      "name": "Kunststoffabfälle (HS 3915)",
+      "description": "Zollstatistische Warengruppe HS 3915: Abfälle, Schnitzel und Bruch von Kunststoffen. Keine automatische Gleichsetzung mit einer rechtlich notifizierten Abfallverbringung.",
+      "unit": "million_tonnes"
+    },
+    {
+      "id": "waste_paper_hs4707",
+      "name": "Altpapier (HS 4707)",
+      "description": "Zollstatistische Warengruppe HS 4707: wiedergewonnene Papier- und Pappeabfälle. Keine automatische Gleichsetzung mit einer rechtlich notifizierten Abfallverbringung.",
+      "unit": "million_tonnes"
+    },
+    {
+      "id": "waste_ferrous_hs7204",
+      "name": "Eisen- und Stahlschrott (HS 7204)",
+      "description": "Zollstatistische Warengruppe HS 7204: Eisen- und Stahlschrott einschließlich Umschmelzschrottblöcken. Keine automatische Gleichsetzung mit einer rechtlich notifizierten Abfallverbringung.",
+      "unit": "million_tonnes"
+    },
+    {
+      "id": "waste_copper_hs7404",
+      "name": "Kupferschrott (HS 7404)",
+      "description": "Zollstatistische Warengruppe HS 7404: Abfälle und Schrott aus Kupfer. Keine automatische Gleichsetzung mit einer rechtlich notifizierten Abfallverbringung.",
+      "unit": "million_tonnes"
+    },
+    {
+      "id": "waste_aluminium_hs7602",
+      "name": "Aluminiumschrott (HS 7602)",
+      "description": "Zollstatistische Warengruppe HS 7602: Abfälle und Schrott aus Aluminium. Keine automatische Gleichsetzung mit einer rechtlich notifizierten Abfallverbringung.",
+      "unit": "million_tonnes"
+    },
+    {
+      "id": "waste_electrical_hs8549",
+      "name": "Elektro- und Elektronikschrott (HS 8549)",
+      "description": "Zollstatistische Warengruppe HS 8549: elektrische und elektronische Abfälle und Schrott. Keine automatische Gleichsetzung mit einer rechtlich notifizierten Abfallverbringung.",
+      "unit": "million_tonnes"
+    }
+  ],
+  "sources": [
+    {
+      "id": "mospi_energy_2026",
+      "url": "https://www.mospi.gov.in/uploads/publications_reports/publications_reports1776236408576_e41fac2e-cde2-4002-9055-aa42a4140c25_Energy_Statistics_India_2026_Final.pdf",
+      "title": "Energy Statistics India 2026",
+      "publisher": "MoSPI",
+      "published_on": null,
+      "accessed_on": "2026-09-08",
+      "excerpt": "Crude throughput in terms of crude oil processed.",
+      "note": "Tabellen 2.2, 4.1, 5.2 und 5.3. FY2024-25 vorläufig. PDF lokal gelesen und relevante Tabellen visuell geprüft."
+    },
+    {
+      "id": "coal_trade_2024_25",
+      "url": "https://coal.gov.in/sites/default/files/2024-03/chap8180326.pdf",
+      "title": "Coal Directory: Coal & Lignite Statistics, Chapter 8",
+      "publisher": "Ministry of Coal",
+      "published_on": null,
+      "accessed_on": "2026-09-08",
+      "excerpt": "Country Wise Import of Coal, Coke and Other Coal Products to India during 2024-25",
+      "note": "Tabellen 8.1–8.5. Kohle ohne zusätzliche Koksprodukte. Länder sind Handelspartner, keine verifizierten Abbauorte; Hafenpositionen sind getrennte Zollmeldungen."
+    },
+    {
+      "id": "coal_production_2026",
+      "url": "https://coal.nic.in/sites/default/files/2026-02/chap9AnnualReport2026en.pdf",
+      "title": "Annual Report 2025-26, Chapter 9",
+      "publisher": "Ministry of Coal",
+      "published_on": null,
+      "accessed_on": "2026-09-08",
+      "excerpt": "Production, Marketing & Distribution",
+      "note": "Nur tatsächliche FY2024-25-Mengen; keine FY2025-26-Teiljahre/Prognosen."
+    },
+    {
+      "id": "steel_march_2026",
+      "url": "https://steel.gov.in/sites/default/files/2026-04/Monthly%20Economic%20Report-%20March%202026%20%285%29.pdf",
+      "title": "Monthly Economic Report, March 2026",
+      "publisher": "Ministry of Steel",
+      "published_on": null,
+      "accessed_on": "2026-09-08",
+      "excerpt": "Annexure I",
+      "note": "Annex I, FY2025-26 (P). Rohstahl und Fertigstahl getrennt. PDF am 08.09. lokal gelesen und visuell geprüft; erneuter Web-Direktabruf zeitweise fehlgeschlagen."
+    },
+    {
+      "id": "ppac_refineries",
+      "url": "https://ppac.gov.in/infrastructure/location-of-refineries",
+      "title": "Location of Refineries",
+      "publisher": "PPAC",
+      "published_on": null,
+      "accessed_on": "2026-09-08",
+      "excerpt": "Indian Oil Corporation Limited (IOCL)",
+      "note": "Betreibernamen; Mengen aus MoSPI."
+    },
+    {
+      "id": "tata_close",
+      "url": "https://www.tatasteel.com/media/25351/tata-steel-announcement.pdf",
+      "title": "Acquisition of equity stake in Thriveni Pellets Private Limited",
+      "publisher": "Tata Steel Limited",
+      "published_on": "2026-01-30",
+      "accessed_on": "2026-09-08",
+      "excerpt": "completed the acquisition",
+      "note": "Am 08.09.2026 gelesen. Seite 1: completed the acquisition; 50,01%, INR 635,13 crore. Direkte TPPL- und indirekte BRPL-Beteiligung getrennt."
+    },
+    {
+      "id": "tata_plan",
+      "url": "https://www.tatasteel.com/newsroom/press-releases/india/2025/tata-steel-board-affirms-the-long-term-strategy-for-growth-in-india/",
+      "title": "Tata Steel Board affirms the long-term strategy for growth in India",
+      "publisher": "Tata Steel Limited",
+      "published_on": "2025-12-10",
+      "accessed_on": "2026-09-08",
+      "excerpt": "4 MTPA pellet plant",
+      "note": "Am 08.09.2026 gelesen. BRPL: 4 Mt/Jahr Pelletkapazität in Jajpur, 212 km Pipeline. Erstabruf gelesen, wiederholter Abruf später 403."
+    },
+    {
+      "id": "jsw_q1",
+      "url": "https://jsw-steel-s3.s3.ap-south-1.amazonaws.com/jsw-steel-images/uploads/2026/07/Results-Q1FY27.pdf",
+      "title": "Unaudited consolidated financial results, quarter ended 30 June 2026",
+      "publisher": "JSW Steel Limited",
+      "published_on": "2026-07-17",
+      "accessed_on": "2026-09-08",
+      "excerpt": "On 30 June 2026, JFE has acquired the aforesaid additional 25% stake",
+      "note": "Am 08.09.2026 gelesen. Seite 7 visuell gelesen: additional 25% stake am 30.06.2026, damit 50:50. Erste 25% am 30.03.2026; gemeinsame Kontrolle ab 27.03.2026 ist eine separate Aussage."
+    },
+    {
+      "id": "jfe_jv",
+      "url": "https://www.jfe-steel.co.jp/en/release/2026/03/260331.html",
+      "title": "Completion of the Integrated Steelworks Joint Venture with JSW Steel in India",
+      "publisher": "JFE Steel Corporation",
+      "published_on": "2026-03-31",
+      "accessed_on": "2026-09-08",
+      "excerpt": "Production Capacity: Crude Steel Production 4.5 million tons/year",
+      "note": "Am 08.09.2026 gelesen. Standort Sambalpur und operative Anlagen; 4,5 Mt/Jahr Rohstahlkapazität. Frühe 50:50-Beschreibung durch spätere konkrete JSW-Anteilstranchen präzisiert."
+    },
+    {
+      "id": "eurostat_ds045409_hs3915_2025",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?lang=en&freq=A&partner=IN&product=3915&flow=2&sinceTimePeriod=2025&untilTimePeriod=2025",
+      "title": "EU trade since 1988 by HS2-4-6 and CN8 — HS 3915, exports to India, 2025",
+      "publisher": "Eurostat / Comext",
+      "published_on": null,
+      "accessed_on": "2026-09-10",
+      "excerpt": "Datensatz DS-045409; flow 2 = EXPORT; partner IN; product 3915; Indikatoren VALUE_IN_EUROS und QUANTITY_IN_100KG.",
+      "note": "Datenstand laut API 2026-08-14T11:00:00+0200. Zollstatistischer Warenstrom; kein Beleg für einen konkreten Schiffsweg, Vertrag oder eine Basel-Notifizierung."
+    },
+    {
+      "id": "eurostat_ds045409_hs4707_2025",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?lang=en&freq=A&partner=IN&product=4707&flow=2&sinceTimePeriod=2025&untilTimePeriod=2025",
+      "title": "EU trade since 1988 by HS2-4-6 and CN8 — HS 4707, exports to India, 2025",
+      "publisher": "Eurostat / Comext",
+      "published_on": null,
+      "accessed_on": "2026-09-10",
+      "excerpt": "Datensatz DS-045409; flow 2 = EXPORT; partner IN; product 4707; Indikatoren VALUE_IN_EUROS und QUANTITY_IN_100KG.",
+      "note": "Datenstand laut API 2026-08-14T11:00:00+0200. Zollstatistischer Warenstrom; kein Beleg für einen konkreten Schiffsweg, Vertrag oder eine Basel-Notifizierung."
+    },
+    {
+      "id": "eurostat_ds045409_hs7204_2025",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?lang=en&freq=A&partner=IN&product=7204&flow=2&sinceTimePeriod=2025&untilTimePeriod=2025",
+      "title": "EU trade since 1988 by HS2-4-6 and CN8 — HS 7204, exports to India, 2025",
+      "publisher": "Eurostat / Comext",
+      "published_on": null,
+      "accessed_on": "2026-09-10",
+      "excerpt": "Datensatz DS-045409; flow 2 = EXPORT; partner IN; product 7204; Indikatoren VALUE_IN_EUROS und QUANTITY_IN_100KG.",
+      "note": "Datenstand laut API 2026-08-14T11:00:00+0200. Zollstatistischer Warenstrom; kein Beleg für einen konkreten Schiffsweg, Vertrag oder eine Basel-Notifizierung."
+    },
+    {
+      "id": "eurostat_ds045409_hs7404_2025",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?lang=en&freq=A&partner=IN&product=7404&flow=2&sinceTimePeriod=2025&untilTimePeriod=2025",
+      "title": "EU trade since 1988 by HS2-4-6 and CN8 — HS 7404, exports to India, 2025",
+      "publisher": "Eurostat / Comext",
+      "published_on": null,
+      "accessed_on": "2026-09-10",
+      "excerpt": "Datensatz DS-045409; flow 2 = EXPORT; partner IN; product 7404; Indikatoren VALUE_IN_EUROS und QUANTITY_IN_100KG.",
+      "note": "Datenstand laut API 2026-08-14T11:00:00+0200. Zollstatistischer Warenstrom; kein Beleg für einen konkreten Schiffsweg, Vertrag oder eine Basel-Notifizierung."
+    },
+    {
+      "id": "eurostat_ds045409_hs7602_2025",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?lang=en&freq=A&partner=IN&product=7602&flow=2&sinceTimePeriod=2025&untilTimePeriod=2025",
+      "title": "EU trade since 1988 by HS2-4-6 and CN8 — HS 7602, exports to India, 2025",
+      "publisher": "Eurostat / Comext",
+      "published_on": null,
+      "accessed_on": "2026-09-10",
+      "excerpt": "Datensatz DS-045409; flow 2 = EXPORT; partner IN; product 7602; Indikatoren VALUE_IN_EUROS und QUANTITY_IN_100KG.",
+      "note": "Datenstand laut API 2026-08-14T11:00:00+0200. Zollstatistischer Warenstrom; kein Beleg für einen konkreten Schiffsweg, Vertrag oder eine Basel-Notifizierung."
+    },
+    {
+      "id": "eurostat_ds045409_hs8549_2025",
+      "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409?lang=en&freq=A&partner=IN&product=8549&flow=2&sinceTimePeriod=2025&untilTimePeriod=2025",
+      "title": "EU trade since 1988 by HS2-4-6 and CN8 — HS 8549, exports to India, 2025",
+      "publisher": "Eurostat / Comext",
+      "published_on": null,
+      "accessed_on": "2026-09-10",
+      "excerpt": "Datensatz DS-045409; flow 2 = EXPORT; partner IN; product 8549; Indikatoren VALUE_IN_EUROS und QUANTITY_IN_100KG.",
+      "note": "Datenstand laut API 2026-08-14T11:00:00+0200. Zollstatistischer Warenstrom; kein Beleg für einen konkreten Schiffsweg, Vertrag oder eine Basel-Notifizierung."
+    },
+    {
+      "id": "uncomtrade_hs3915_nl_in_2025",
+      "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2025&reporterCode=528&cmdCode=3915&flowCode=X&partnerCode=699&partner2Code=0&customsCode=C00&motCode=0&maxRecords=500&typeCode=C&freqCode=A&clCode=HS",
+      "title": "UN Comtrade mirror — NL exports to India, HS 3915, 2025",
+      "publisher": "United Nations Statistics Division / UN Comtrade",
+      "published_on": null,
+      "accessed_on": "2026-09-10",
+      "excerpt": "netWgt 2983140 kg; primaryValue 1429050.115; reporter 528; partner 699; flow X; cmdCode 3915.",
+      "note": "Plausibilitätsprüfung des Eurostat-Netto-Gewichts 2983140 kg. Der USD-Wert wird in v017 nicht als Euro-Wert dargestellt."
+    },
+    {
+      "id": "uncomtrade_hs3915_ro_in_2025",
+      "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2025&reporterCode=642&cmdCode=3915&flowCode=X&partnerCode=699&partner2Code=0&customsCode=C00&motCode=0&maxRecords=500&typeCode=C&freqCode=A&clCode=HS",
+      "title": "UN Comtrade mirror — RO exports to India, HS 3915, 2025",
+      "publisher": "United Nations Statistics Division / UN Comtrade",
+      "published_on": null,
+      "accessed_on": "2026-09-10",
+      "excerpt": "netWgt 399290 kg; primaryValue 127329.15; reporter 642; partner 699; flow X; cmdCode 3915.",
+      "note": "Plausibilitätsprüfung des Eurostat-Netto-Gewichts 399290 kg. Der USD-Wert wird in v017 nicht als Euro-Wert dargestellt."
+    },
+    {
+      "id": "uncomtrade_hs3915_gr_in_2025",
+      "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2025&reporterCode=300&cmdCode=3915&flowCode=X&partnerCode=699&partner2Code=0&customsCode=C00&motCode=0&maxRecords=500&typeCode=C&freqCode=A&clCode=HS",
+      "title": "UN Comtrade mirror — GR exports to India, HS 3915, 2025",
+      "publisher": "United Nations Statistics Division / UN Comtrade",
+      "published_on": null,
+      "accessed_on": "2026-09-10",
+      "excerpt": "netWgt 238020 kg; primaryValue 93695.409; reporter 300; partner 699; flow X; cmdCode 3915.",
+      "note": "Plausibilitätsprüfung des Eurostat-Netto-Gewichts 238020 kg. Der USD-Wert wird in v017 nicht als Euro-Wert dargestellt."
+    },
+    {
+      "id": "uncomtrade_hs4707_it_in_2025",
+      "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2025&reporterCode=380&cmdCode=4707&flowCode=X&partnerCode=699&partner2Code=0&customsCode=C00&motCode=0&maxRecords=500&typeCode=C&freqCode=A&clCode=HS",
+      "title": "UN Comtrade mirror — IT exports to India, HS 4707, 2025",
+      "publisher": "United Nations Statistics Division / UN Comtrade",
+      "published_on": null,
+      "accessed_on": "2026-09-10",
+      "excerpt": "netWgt 725494216 kg; primaryValue 103660739.612; reporter 380; partner 699; flow X; cmdCode 4707.",
+      "note": "Plausibilitätsprüfung des Eurostat-Netto-Gewichts 725494216 kg. Der USD-Wert wird in v017 nicht als Euro-Wert dargestellt."
+    },
+    {
+      "id": "uncomtrade_hs4707_ie_in_2025",
+      "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2025&reporterCode=372&cmdCode=4707&flowCode=X&partnerCode=699&partner2Code=0&customsCode=C00&motCode=0&maxRecords=500&typeCode=C&freqCode=A&clCode=HS",
+      "title": "UN Comtrade mirror — IE exports to India, HS 4707, 2025",
+      "publisher": "United Nations Statistics Division / UN Comtrade",
+      "published_on": null,
+      "accessed_on": "2026-09-10",
+      "excerpt": "netWgt 341675398 kg; primaryValue 58562398.234; reporter 372; partner 699; flow X; cmdCode 4707.",
+      "note": "Plausibilitätsprüfung des Eurostat-Netto-Gewichts 341675487 kg. Der USD-Wert wird in v017 nicht als Euro-Wert dargestellt."
+    },
+    {
+      "id": "uncomtrade_hs4707_gr_in_2025",
+      "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2025&reporterCode=300&cmdCode=4707&flowCode=X&partnerCode=699&partner2Code=0&customsCode=C00&motCode=0&maxRecords=500&typeCode=C&freqCode=A&clCode=HS",
+      "title": "UN Comtrade mirror — GR exports to India, HS 4707, 2025",
+      "publisher": "United Nations Statistics Division / UN Comtrade",
+      "published_on": null,
+      "accessed_on": "2026-09-10",
+      "excerpt": "netWgt 130037270 kg; primaryValue 18973743.604; reporter 300; partner 699; flow X; cmdCode 4707.",
+      "note": "Plausibilitätsprüfung des Eurostat-Netto-Gewichts 130037225 kg. Der USD-Wert wird in v017 nicht als Euro-Wert dargestellt."
+    },
+    {
+      "id": "uncomtrade_hs7204_pl_in_2025",
+      "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2025&reporterCode=616&cmdCode=7204&flowCode=X&partnerCode=699&partner2Code=0&customsCode=C00&motCode=0&maxRecords=500&typeCode=C&freqCode=A&clCode=HS",
+      "title": "UN Comtrade mirror — PL exports to India, HS 7204, 2025",
+      "publisher": "United Nations Statistics Division / UN Comtrade",
+      "published_on": null,
+      "accessed_on": "2026-09-10",
+      "excerpt": "netWgt 418595257 kg; primaryValue 145957788; reporter 616; partner 699; flow X; cmdCode 7204.",
+      "note": "Plausibilitätsprüfung des Eurostat-Netto-Gewichts 418595261 kg. Der USD-Wert wird in v017 nicht als Euro-Wert dargestellt."
+    },
+    {
+      "id": "uncomtrade_hs7204_de_in_2025",
+      "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2025&reporterCode=276&cmdCode=7204&flowCode=X&partnerCode=699&partner2Code=0&customsCode=C00&motCode=0&maxRecords=500&typeCode=C&freqCode=A&clCode=HS",
+      "title": "UN Comtrade mirror — DE exports to India, HS 7204, 2025",
+      "publisher": "United Nations Statistics Division / UN Comtrade",
+      "published_on": null,
+      "accessed_on": "2026-09-10",
+      "excerpt": "netWgt 122629058 kg; primaryValue 101643089.765; reporter 276; partner 699; flow X; cmdCode 7204.",
+      "note": "Plausibilitätsprüfung des Eurostat-Netto-Gewichts 122633110 kg. Der USD-Wert wird in v017 nicht als Euro-Wert dargestellt."
+    },
+    {
+      "id": "uncomtrade_hs7204_it_in_2025",
+      "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2025&reporterCode=380&cmdCode=7204&flowCode=X&partnerCode=699&partner2Code=0&customsCode=C00&motCode=0&maxRecords=500&typeCode=C&freqCode=A&clCode=HS",
+      "title": "UN Comtrade mirror — IT exports to India, HS 7204, 2025",
+      "publisher": "United Nations Statistics Division / UN Comtrade",
+      "published_on": null,
+      "accessed_on": "2026-09-10",
+      "excerpt": "netWgt 68059267 kg; primaryValue 53266605.192; reporter 380; partner 699; flow X; cmdCode 7204.",
+      "note": "Plausibilitätsprüfung des Eurostat-Netto-Gewichts 68059267 kg. Der USD-Wert wird in v017 nicht als Euro-Wert dargestellt."
+    },
+    {
+      "id": "uncomtrade_hs7404_de_in_2025",
+      "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2025&reporterCode=276&cmdCode=7404&flowCode=X&partnerCode=699&partner2Code=0&customsCode=C00&motCode=0&maxRecords=500&typeCode=C&freqCode=A&clCode=HS",
+      "title": "UN Comtrade mirror — DE exports to India, HS 7404, 2025",
+      "publisher": "United Nations Statistics Division / UN Comtrade",
+      "published_on": null,
+      "accessed_on": "2026-09-10",
+      "excerpt": "netWgt 47786756 kg; primaryValue 248490375.137; reporter 276; partner 699; flow X; cmdCode 7404.",
+      "note": "Plausibilitätsprüfung des Eurostat-Netto-Gewichts 47786753 kg. Der USD-Wert wird in v017 nicht als Euro-Wert dargestellt."
+    },
+    {
+      "id": "uncomtrade_hs7404_it_in_2025",
+      "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2025&reporterCode=380&cmdCode=7404&flowCode=X&partnerCode=699&partner2Code=0&customsCode=C00&motCode=0&maxRecords=500&typeCode=C&freqCode=A&clCode=HS",
+      "title": "UN Comtrade mirror — IT exports to India, HS 7404, 2025",
+      "publisher": "United Nations Statistics Division / UN Comtrade",
+      "published_on": null,
+      "accessed_on": "2026-09-10",
+      "excerpt": "netWgt 11986811 kg; primaryValue 42139892.859; reporter 380; partner 699; flow X; cmdCode 7404.",
+      "note": "Plausibilitätsprüfung des Eurostat-Netto-Gewichts 11986811 kg. Der USD-Wert wird in v017 nicht als Euro-Wert dargestellt."
+    },
+    {
+      "id": "uncomtrade_hs7404_nl_in_2025",
+      "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2025&reporterCode=528&cmdCode=7404&flowCode=X&partnerCode=699&partner2Code=0&customsCode=C00&motCode=0&maxRecords=500&typeCode=C&freqCode=A&clCode=HS",
+      "title": "UN Comtrade mirror — NL exports to India, HS 7404, 2025",
+      "publisher": "United Nations Statistics Division / UN Comtrade",
+      "published_on": null,
+      "accessed_on": "2026-09-10",
+      "excerpt": "netWgt 5300693 kg; primaryValue 32039238.833; reporter 528; partner 699; flow X; cmdCode 7404.",
+      "note": "Plausibilitätsprüfung des Eurostat-Netto-Gewichts 5300693 kg. Der USD-Wert wird in v017 nicht als Euro-Wert dargestellt."
+    },
+    {
+      "id": "uncomtrade_hs7602_de_in_2025",
+      "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2025&reporterCode=276&cmdCode=7602&flowCode=X&partnerCode=699&partner2Code=0&customsCode=C00&motCode=0&maxRecords=500&typeCode=C&freqCode=A&clCode=HS",
+      "title": "UN Comtrade mirror — DE exports to India, HS 7602, 2025",
+      "publisher": "United Nations Statistics Division / UN Comtrade",
+      "published_on": null,
+      "accessed_on": "2026-09-10",
+      "excerpt": "netWgt 68387139 kg; primaryValue 142127175.84; reporter 276; partner 699; flow X; cmdCode 7602.",
+      "note": "Plausibilitätsprüfung des Eurostat-Netto-Gewichts 68387129 kg. Der USD-Wert wird in v017 nicht als Euro-Wert dargestellt."
+    },
+    {
+      "id": "uncomtrade_hs7602_it_in_2025",
+      "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2025&reporterCode=380&cmdCode=7602&flowCode=X&partnerCode=699&partner2Code=0&customsCode=C00&motCode=0&maxRecords=500&typeCode=C&freqCode=A&clCode=HS",
+      "title": "UN Comtrade mirror — IT exports to India, HS 7602, 2025",
+      "publisher": "United Nations Statistics Division / UN Comtrade",
+      "published_on": null,
+      "accessed_on": "2026-09-10",
+      "excerpt": "netWgt 30162819 kg; primaryValue 60667981.199; reporter 380; partner 699; flow X; cmdCode 7602.",
+      "note": "Plausibilitätsprüfung des Eurostat-Netto-Gewichts 30162819 kg. Der USD-Wert wird in v017 nicht als Euro-Wert dargestellt."
+    },
+    {
+      "id": "uncomtrade_hs7602_gr_in_2025",
+      "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2025&reporterCode=300&cmdCode=7602&flowCode=X&partnerCode=699&partner2Code=0&customsCode=C00&motCode=0&maxRecords=500&typeCode=C&freqCode=A&clCode=HS",
+      "title": "UN Comtrade mirror — GR exports to India, HS 7602, 2025",
+      "publisher": "United Nations Statistics Division / UN Comtrade",
+      "published_on": null,
+      "accessed_on": "2026-09-10",
+      "excerpt": "netWgt 13830711 kg; primaryValue 29153206.588; reporter 300; partner 699; flow X; cmdCode 7602.",
+      "note": "Plausibilitätsprüfung des Eurostat-Netto-Gewichts 13830705 kg. Der USD-Wert wird in v017 nicht als Euro-Wert dargestellt."
+    },
+    {
+      "id": "uncomtrade_hs8549_es_in_2025",
+      "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2025&reporterCode=724&cmdCode=8549&flowCode=X&partnerCode=699&partner2Code=0&customsCode=C00&motCode=0&maxRecords=500&typeCode=C&freqCode=A&clCode=HS",
+      "title": "UN Comtrade mirror — ES exports to India, HS 8549, 2025",
+      "publisher": "United Nations Statistics Division / UN Comtrade",
+      "published_on": null,
+      "accessed_on": "2026-09-10",
+      "excerpt": "netWgt 261212 kg; primaryValue 241793.787; reporter 724; partner 699; flow X; cmdCode 8549.",
+      "note": "Plausibilitätsprüfung des Eurostat-Netto-Gewichts 261212 kg. Der USD-Wert wird in v017 nicht als Euro-Wert dargestellt."
+    },
+    {
+      "id": "uncomtrade_hs8549_dk_in_2025",
+      "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2025&reporterCode=208&cmdCode=8549&flowCode=X&partnerCode=699&partner2Code=0&customsCode=C00&motCode=0&maxRecords=500&typeCode=C&freqCode=A&clCode=HS",
+      "title": "UN Comtrade mirror — DK exports to India, HS 8549, 2025",
+      "publisher": "United Nations Statistics Division / UN Comtrade",
+      "published_on": null,
+      "accessed_on": "2026-09-10",
+      "excerpt": "netWgt 138506 kg; primaryValue 62746.032; reporter 208; partner 699; flow X; cmdCode 8549.",
+      "note": "Plausibilitätsprüfung des Eurostat-Netto-Gewichts 138506 kg. Der USD-Wert wird in v017 nicht als Euro-Wert dargestellt."
+    },
+    {
+      "id": "uncomtrade_hs8549_lv_in_2025",
+      "url": "https://comtradeapi.un.org/public/v1/preview/C/A/HS?period=2025&reporterCode=428&cmdCode=8549&flowCode=X&partnerCode=699&partner2Code=0&customsCode=C00&motCode=0&maxRecords=500&typeCode=C&freqCode=A&clCode=HS",
+      "title": "UN Comtrade mirror — LV exports to India, HS 8549, 2025",
+      "publisher": "United Nations Statistics Division / UN Comtrade",
+      "published_on": null,
+      "accessed_on": "2026-09-10",
+      "excerpt": "netWgt 102860 kg; primaryValue 115294.209; reporter 428; partner 699; flow X; cmdCode 8549.",
+      "note": "Plausibilitätsprüfung des Eurostat-Netto-Gewichts 102860 kg. Der USD-Wert wird in v017 nicht als Euro-Wert dargestellt."
+    }
+  ],
+  "operators": [
+    {
+      "company_id": "company_coal_india",
+      "material_ids": [
+        "coal"
+      ],
+      "role": "Produzent / Betreiber",
+      "description": "Rolle laut Originalquelle; Mengen nur, soweit separat belegt. Keine vollständige Konzern- oder Lieferantenstruktur.",
+      "source_ids": [
+        "coal_production_2026"
+      ]
+    },
+    {
+      "company_id": "company_singareni_collieries",
+      "material_ids": [
+        "coal"
+      ],
+      "role": "Produzent / Betreiber",
+      "description": "Rolle laut Originalquelle; Mengen nur, soweit separat belegt. Keine vollständige Konzern- oder Lieferantenstruktur.",
+      "source_ids": [
+        "coal_production_2026"
+      ]
+    },
+    {
+      "company_id": "company_indian_oil",
+      "material_ids": [
+        "crude_oil",
+        "oil_products"
+      ],
+      "role": "Produzent / Betreiber",
+      "description": "Rolle laut Originalquelle; Mengen nur, soweit separat belegt. Keine vollständige Konzern- oder Lieferantenstruktur.",
+      "source_ids": [
+        "ppac_refineries"
+      ]
+    },
+    {
+      "company_id": "company_bharat_petroleum",
+      "material_ids": [
+        "crude_oil",
+        "oil_products"
+      ],
+      "role": "Produzent / Betreiber",
+      "description": "Rolle laut Originalquelle; Mengen nur, soweit separat belegt. Keine vollständige Konzern- oder Lieferantenstruktur.",
+      "source_ids": [
+        "ppac_refineries"
+      ]
+    },
+    {
+      "company_id": "company_hindustan_petroleum",
+      "material_ids": [
+        "crude_oil",
+        "oil_products"
+      ],
+      "role": "Produzent / Betreiber",
+      "description": "Rolle laut Originalquelle; Mengen nur, soweit separat belegt. Keine vollständige Konzern- oder Lieferantenstruktur.",
+      "source_ids": [
+        "ppac_refineries"
+      ]
+    },
+    {
+      "company_id": "company_chennai_petroleum",
+      "material_ids": [
+        "crude_oil",
+        "oil_products"
+      ],
+      "role": "Produzent / Betreiber",
+      "description": "Rolle laut Originalquelle; Mengen nur, soweit separat belegt. Keine vollständige Konzern- oder Lieferantenstruktur.",
+      "source_ids": [
+        "ppac_refineries"
+      ]
+    },
+    {
+      "company_id": "company_numaligarh_refinery",
+      "material_ids": [
+        "crude_oil",
+        "oil_products"
+      ],
+      "role": "Produzent / Betreiber",
+      "description": "Rolle laut Originalquelle; Mengen nur, soweit separat belegt. Keine vollständige Konzern- oder Lieferantenstruktur.",
+      "source_ids": [
+        "ppac_refineries"
+      ]
+    },
+    {
+      "company_id": "company_mangalore_refinery",
+      "material_ids": [
+        "crude_oil",
+        "oil_products"
+      ],
+      "role": "Produzent / Betreiber",
+      "description": "Rolle laut Originalquelle; Mengen nur, soweit separat belegt. Keine vollständige Konzern- oder Lieferantenstruktur.",
+      "source_ids": [
+        "ppac_refineries"
+      ]
+    },
+    {
+      "company_id": "company_ongc",
+      "material_ids": [
+        "crude_oil",
+        "oil_products"
+      ],
+      "role": "Produzent / Betreiber",
+      "description": "Rolle laut Originalquelle; Mengen nur, soweit separat belegt. Keine vollständige Konzern- oder Lieferantenstruktur.",
+      "source_ids": [
+        "ppac_refineries"
+      ]
+    },
+    {
+      "company_id": "company_reliance_industries",
+      "material_ids": [
+        "crude_oil",
+        "oil_products"
+      ],
+      "role": "Produzent / Betreiber",
+      "description": "Rolle laut Originalquelle; Mengen nur, soweit separat belegt. Keine vollständige Konzern- oder Lieferantenstruktur.",
+      "source_ids": [
+        "ppac_refineries"
+      ]
+    },
+    {
+      "company_id": "company_nayara_energy",
+      "material_ids": [
+        "crude_oil",
+        "oil_products"
+      ],
+      "role": "Produzent / Betreiber",
+      "description": "Rolle laut Originalquelle; Mengen nur, soweit separat belegt. Keine vollständige Konzern- oder Lieferantenstruktur.",
+      "source_ids": [
+        "ppac_refineries"
+      ]
+    },
+    {
+      "company_id": "company_hpcl_mittal_energy",
+      "material_ids": [
+        "crude_oil",
+        "oil_products"
+      ],
+      "role": "Produzent / Betreiber",
+      "description": "Rolle laut Originalquelle; Mengen nur, soweit separat belegt. Keine vollständige Konzern- oder Lieferantenstruktur.",
+      "source_ids": [
+        "ppac_refineries"
+      ]
+    },
+    {
+      "company_id": "company_tata_steel",
+      "material_ids": [
+        "crude_steel",
+        "pellets"
+      ],
+      "role": "Industriekonzern / Erwerber",
+      "description": "Rolle laut Originalquelle; Mengen nur, soweit separat belegt. Keine vollständige Konzern- oder Lieferantenstruktur.",
+      "source_ids": [
+        "tata_close"
+      ]
+    },
+    {
+      "company_id": "company_thriveni_pellets",
+      "material_ids": [
+        "pellets"
+      ],
+      "role": "Beteiligungsgesellschaft",
+      "description": "TPPL → 100% BRPL; Tata → 50,01% TPPL seit 30.01.2026.",
+      "source_ids": [
+        "tata_close"
+      ]
+    },
+    {
+      "company_id": "company_brahmani_river_pellets",
+      "material_ids": [
+        "pellets"
+      ],
+      "role": "Produzent / Betreiber",
+      "description": "TPPL → 100% BRPL; Tata → 50,01% TPPL seit 30.01.2026.",
+      "source_ids": [
+        "tata_close"
+      ]
+    },
+    {
+      "company_id": "company_jsw_steel",
+      "material_ids": [
+        "crude_steel"
+      ],
+      "role": "Produzent / Betreiber",
+      "description": "JFE → 50% JSW JFE Kalinga nach Vollzug 30.06.2026; Kalinga → 100% operative JSW JFE Steel. Restlicher JV-Partner: JSW-Gruppe über Piombino Steel.",
+      "source_ids": [
+        "jsw_q1"
+      ]
+    },
+    {
+      "company_id": "company_jfe_steel",
+      "material_ids": [
+        "crude_steel"
+      ],
+      "role": "Industriekonzern / Erwerber",
+      "description": "JFE → 50% JSW JFE Kalinga nach Vollzug 30.06.2026; Kalinga → 100% operative JSW JFE Steel. Restlicher JV-Partner: JSW-Gruppe über Piombino Steel.",
+      "source_ids": [
+        "jsw_q1"
+      ]
+    },
+    {
+      "company_id": "company_jsw_jfe_kalinga_steel",
+      "material_ids": [
+        "crude_steel"
+      ],
+      "role": "Beteiligungsgesellschaft",
+      "description": "JFE → 50% JSW JFE Kalinga nach Vollzug 30.06.2026; Kalinga → 100% operative JSW JFE Steel. Restlicher JV-Partner: JSW-Gruppe über Piombino Steel.",
+      "source_ids": [
+        "jsw_q1"
+      ]
+    },
+    {
+      "company_id": "company_jsw_jfe_steel",
+      "material_ids": [
+        "crude_steel"
+      ],
+      "role": "Produzent / Betreiber",
+      "description": "JFE → 50% JSW JFE Kalinga nach Vollzug 30.06.2026; Kalinga → 100% operative JSW JFE Steel. Restlicher JV-Partner: JSW-Gruppe über Piombino Steel.",
+      "source_ids": [
+        "jsw_q1"
+      ]
+    }
+  ],
+  "revisions": [],
+  "observations": [
+    {
+      "id": "in_coal_2024_production_national_1",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "production",
+      "scope": "national",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": null,
+      "quantity": 1047.52,
+      "unit": "million_tonnes",
+      "provisional": true,
+      "source_ids": [
+        "mospi_energy_2026"
+      ],
+      "locator": "Tabelle 5.2/5.3, gedruckte Seiten 53/54; Außenhandel Tabelle 4.1, Seite 46",
+      "note": null
+    },
+    {
+      "id": "in_coal_2024_import_national_2",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "national",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": null,
+      "quantity": 243.622,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.1, Zeile 2024-25",
+      "note": null
+    },
+    {
+      "id": "in_coal_2024_export_national_3",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "export",
+      "scope": "national",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": null,
+      "quantity": 1.914,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.2, Zeile 2024-25",
+      "note": null
+    },
+    {
+      "id": "in_coal_2024_availability_national_4",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "availability",
+      "scope": "national",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": null,
+      "quantity": 1267.09,
+      "unit": "million_tonnes",
+      "provisional": true,
+      "source_ids": [
+        "mospi_energy_2026"
+      ],
+      "locator": "Tabelle 5.2/5.3, gedruckte Seiten 53/54; Außenhandel Tabelle 4.1, Seite 46",
+      "note": null
+    },
+    {
+      "id": "in_lignite_2024_production_national_5",
+      "material_id": "lignite",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "production",
+      "scope": "national",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": null,
+      "quantity": 45.13,
+      "unit": "million_tonnes",
+      "provisional": true,
+      "source_ids": [
+        "mospi_energy_2026"
+      ],
+      "locator": "Tabelle 5.2/5.3, gedruckte Seiten 53/54; Außenhandel Tabelle 4.1, Seite 46",
+      "note": null
+    },
+    {
+      "id": "in_lignite_2024_import_national_6",
+      "material_id": "lignite",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "national",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": null,
+      "quantity": 0.14,
+      "unit": "million_tonnes",
+      "provisional": true,
+      "source_ids": [
+        "mospi_energy_2026"
+      ],
+      "locator": "Tabelle 5.2/5.3, gedruckte Seiten 53/54; Außenhandel Tabelle 4.1, Seite 46",
+      "note": null
+    },
+    {
+      "id": "in_lignite_2024_export_national_7",
+      "material_id": "lignite",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "export",
+      "scope": "national",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": null,
+      "quantity": 0.02,
+      "unit": "million_tonnes",
+      "provisional": true,
+      "source_ids": [
+        "mospi_energy_2026"
+      ],
+      "locator": "Tabelle 5.2/5.3, gedruckte Seiten 53/54; Außenhandel Tabelle 4.1, Seite 46",
+      "note": null
+    },
+    {
+      "id": "in_lignite_2024_availability_national_8",
+      "material_id": "lignite",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "availability",
+      "scope": "national",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": null,
+      "quantity": 44.56,
+      "unit": "million_tonnes",
+      "provisional": true,
+      "source_ids": [
+        "mospi_energy_2026"
+      ],
+      "locator": "Tabelle 5.2/5.3, gedruckte Seiten 53/54; Außenhandel Tabelle 4.1, Seite 46",
+      "note": null
+    },
+    {
+      "id": "in_crude_oil_2024_production_national_9",
+      "material_id": "crude_oil",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "production",
+      "scope": "national",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": null,
+      "quantity": 28.7,
+      "unit": "million_tonnes",
+      "provisional": true,
+      "source_ids": [
+        "mospi_energy_2026"
+      ],
+      "locator": "Tabelle 5.2/5.3, gedruckte Seiten 53/54; Außenhandel Tabelle 4.1, Seite 46",
+      "note": null
+    },
+    {
+      "id": "in_crude_oil_2024_import_national_10",
+      "material_id": "crude_oil",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "national",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": null,
+      "quantity": 243.22,
+      "unit": "million_tonnes",
+      "provisional": true,
+      "source_ids": [
+        "mospi_energy_2026"
+      ],
+      "locator": "Tabelle 5.2/5.3, gedruckte Seiten 53/54; Außenhandel Tabelle 4.1, Seite 46",
+      "note": null
+    },
+    {
+      "id": "in_crude_oil_2024_export_national_11",
+      "material_id": "crude_oil",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "export",
+      "scope": "national",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": null,
+      "quantity": 0,
+      "unit": "million_tonnes",
+      "provisional": true,
+      "source_ids": [
+        "mospi_energy_2026"
+      ],
+      "locator": "Tabelle 5.2/5.3, gedruckte Seiten 53/54; Außenhandel Tabelle 4.1, Seite 46",
+      "note": "Gerundete Quellenangabe 0,00; kein Nachweis absolut fehlenden Handels."
+    },
+    {
+      "id": "in_crude_oil_2024_availability_national_12",
+      "material_id": "crude_oil",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "availability",
+      "scope": "national",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": null,
+      "quantity": 271.93,
+      "unit": "million_tonnes",
+      "provisional": true,
+      "source_ids": [
+        "mospi_energy_2026"
+      ],
+      "locator": "Tabelle 5.2/5.3, gedruckte Seiten 53/54; Außenhandel Tabelle 4.1, Seite 46",
+      "note": null
+    },
+    {
+      "id": "in_crude_oil_2024_refinery_input_national_13",
+      "material_id": "crude_oil",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "refinery_input",
+      "scope": "national",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": null,
+      "quantity": 268.613,
+      "unit": "million_tonnes",
+      "provisional": true,
+      "source_ids": [
+        "mospi_energy_2026"
+      ],
+      "locator": "Tabelle 2.2, gedruckte Seite 24. 268.613 Tsd. t / 1.000.",
+      "note": "Einsatz in Raffinerien, keine weitere Förderung. Nicht zur Rohölverfügbarkeit addieren."
+    },
+    {
+      "id": "in_oil_products_2024_production_national_14",
+      "material_id": "oil_products",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "production",
+      "scope": "national",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": null,
+      "quantity": 283.77,
+      "unit": "million_tonnes",
+      "provisional": true,
+      "source_ids": [
+        "mospi_energy_2026"
+      ],
+      "locator": "Tabelle 5.2/5.3, gedruckte Seiten 53/54; Außenhandel Tabelle 4.1, Seite 46",
+      "note": null
+    },
+    {
+      "id": "in_oil_products_2024_import_national_15",
+      "material_id": "oil_products",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "national",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": null,
+      "quantity": 50.9,
+      "unit": "million_tonnes",
+      "provisional": true,
+      "source_ids": [
+        "mospi_energy_2026"
+      ],
+      "locator": "Tabelle 5.2/5.3, gedruckte Seiten 53/54; Außenhandel Tabelle 4.1, Seite 46",
+      "note": null
+    },
+    {
+      "id": "in_oil_products_2024_export_national_16",
+      "material_id": "oil_products",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "export",
+      "scope": "national",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": null,
+      "quantity": 65.08,
+      "unit": "million_tonnes",
+      "provisional": true,
+      "source_ids": [
+        "mospi_energy_2026"
+      ],
+      "locator": "Tabelle 5.2/5.3, gedruckte Seiten 53/54; Außenhandel Tabelle 4.1, Seite 46",
+      "note": null
+    },
+    {
+      "id": "in_oil_products_2024_availability_national_17",
+      "material_id": "oil_products",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "availability",
+      "scope": "national",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": null,
+      "quantity": 269.6,
+      "unit": "million_tonnes",
+      "provisional": true,
+      "source_ids": [
+        "mospi_energy_2026"
+      ],
+      "locator": "Tabelle 5.2/5.3, gedruckte Seiten 53/54; Außenhandel Tabelle 4.1, Seite 46",
+      "note": null
+    },
+    {
+      "id": "in_natural_gas_2024_production_national_18",
+      "material_id": "natural_gas",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "production",
+      "scope": "national",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": null,
+      "quantity": 35.59,
+      "unit": "billion_m3",
+      "provisional": true,
+      "source_ids": [
+        "mospi_energy_2026"
+      ],
+      "locator": "Tabelle 5.2/5.3, gedruckte Seiten 53/54; Außenhandel Tabelle 4.1, Seite 46",
+      "note": "Netto-Inlandsproduktion; nicht mit Bruttoförderung (36,11 Mrd. m³) vermischen."
+    },
+    {
+      "id": "in_natural_gas_2024_import_national_19",
+      "material_id": "natural_gas",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "national",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": null,
+      "quantity": 35.72,
+      "unit": "billion_m3",
+      "provisional": true,
+      "source_ids": [
+        "mospi_energy_2026"
+      ],
+      "locator": "Tabelle 5.2/5.3, gedruckte Seiten 53/54; Außenhandel Tabelle 4.1, Seite 46",
+      "note": null
+    },
+    {
+      "id": "in_natural_gas_2024_export_national_20",
+      "material_id": "natural_gas",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "export",
+      "scope": "national",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": null,
+      "quantity": 0,
+      "unit": "billion_m3",
+      "provisional": true,
+      "source_ids": [
+        "mospi_energy_2026"
+      ],
+      "locator": "Tabelle 5.2/5.3, gedruckte Seiten 53/54; Außenhandel Tabelle 4.1, Seite 46",
+      "note": "Gerundete Quellenangabe 0,00; kein Nachweis absolut fehlenden Handels."
+    },
+    {
+      "id": "in_natural_gas_2024_availability_national_21",
+      "material_id": "natural_gas",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "availability",
+      "scope": "national",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": null,
+      "quantity": 71.31,
+      "unit": "billion_m3",
+      "provisional": true,
+      "source_ids": [
+        "mospi_energy_2026"
+      ],
+      "locator": "Tabelle 5.2/5.3, gedruckte Seiten 53/54; Außenhandel Tabelle 4.1, Seite 46",
+      "note": null
+    },
+    {
+      "id": "in_crude_steel_2025_production_national_22",
+      "material_id": "crude_steel",
+      "period": {
+        "label": "FY 2025/26",
+        "start": "2025-04-01",
+        "end": "2026-03-31"
+      },
+      "metric": "production",
+      "scope": "national",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": null,
+      "quantity": 168.42,
+      "unit": "million_tonnes",
+      "provisional": true,
+      "source_ids": [
+        "steel_march_2026"
+      ],
+      "locator": "Annex I, PDF-Seite 7, FY2025-26(P)",
+      "note": null
+    },
+    {
+      "id": "in_finished_steel_2025_production_national_23",
+      "material_id": "finished_steel",
+      "period": {
+        "label": "FY 2025/26",
+        "start": "2025-04-01",
+        "end": "2026-03-31"
+      },
+      "metric": "production",
+      "scope": "national",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": null,
+      "quantity": 160.94,
+      "unit": "million_tonnes",
+      "provisional": true,
+      "source_ids": [
+        "steel_march_2026"
+      ],
+      "locator": "Annex I, PDF-Seite 7, FY2025-26(P)",
+      "note": null
+    },
+    {
+      "id": "in_finished_steel_2025_import_national_24",
+      "material_id": "finished_steel",
+      "period": {
+        "label": "FY 2025/26",
+        "start": "2025-04-01",
+        "end": "2026-03-31"
+      },
+      "metric": "import",
+      "scope": "national",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": null,
+      "quantity": 6.52,
+      "unit": "million_tonnes",
+      "provisional": true,
+      "source_ids": [
+        "steel_march_2026"
+      ],
+      "locator": "Annex I, PDF-Seite 7, FY2025-26(P)",
+      "note": null
+    },
+    {
+      "id": "in_finished_steel_2025_export_national_25",
+      "material_id": "finished_steel",
+      "period": {
+        "label": "FY 2025/26",
+        "start": "2025-04-01",
+        "end": "2026-03-31"
+      },
+      "metric": "export",
+      "scope": "national",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": null,
+      "quantity": 6.6,
+      "unit": "million_tonnes",
+      "provisional": true,
+      "source_ids": [
+        "steel_march_2026"
+      ],
+      "locator": "Annex I, PDF-Seite 7, FY2025-26(P)",
+      "note": null
+    },
+    {
+      "id": "in_finished_steel_2025_availability_national_26",
+      "material_id": "finished_steel",
+      "period": {
+        "label": "FY 2025/26",
+        "start": "2025-04-01",
+        "end": "2026-03-31"
+      },
+      "metric": "availability",
+      "scope": "national",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": null,
+      "quantity": 160.86,
+      "unit": "million_tonnes",
+      "provisional": true,
+      "source_ids": [
+        "steel_march_2026"
+      ],
+      "locator": "Annex I, PDF-Seite 7, FY2025-26(P)",
+      "note": null
+    },
+    {
+      "id": "in_finished_steel_2025_consumption_national_27",
+      "material_id": "finished_steel",
+      "period": {
+        "label": "FY 2025/26",
+        "start": "2025-04-01",
+        "end": "2026-03-31"
+      },
+      "metric": "consumption",
+      "scope": "national",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": null,
+      "quantity": 163.74,
+      "unit": "million_tonnes",
+      "provisional": true,
+      "source_ids": [
+        "steel_march_2026"
+      ],
+      "locator": "Annex I, PDF-Seite 7, FY2025-26(P)",
+      "note": "Verbrauch einschließlich Bestandsabbau (Bestandsänderung -2,88 Mt); nicht gleich Produktion plus Nettoimport."
+    },
+    {
+      "id": "in_coal_2024_import_au",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "partner",
+      "partner_country": "AU",
+      "partner_name": "Australien",
+      "company_id": null,
+      "name": null,
+      "quantity": 33.035,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.3, Total Coal, Australien",
+      "note": "Handelspartner laut Statistik. Herkunftsmine, Gegenunternehmen und tatsächlicher Transportweg unbekannt."
+    },
+    {
+      "id": "in_coal_2024_import_ca",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "partner",
+      "partner_country": "CA",
+      "partner_name": "Kanada",
+      "company_id": null,
+      "name": null,
+      "quantity": 1.747,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.3, Total Coal, Kanada",
+      "note": "Handelspartner laut Statistik. Herkunftsmine, Gegenunternehmen und tatsächlicher Transportweg unbekannt."
+    },
+    {
+      "id": "in_coal_2024_import_cn",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "partner",
+      "partner_country": "CN",
+      "partner_name": "China",
+      "company_id": null,
+      "name": null,
+      "quantity": 0.271,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.3, Total Coal, China",
+      "note": "Handelspartner laut Statistik. Herkunftsmine, Gegenunternehmen und tatsächlicher Transportweg unbekannt."
+    },
+    {
+      "id": "in_coal_2024_import_co",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "partner",
+      "partner_country": "CO",
+      "partner_name": "Kolumbien",
+      "company_id": null,
+      "name": null,
+      "quantity": 2.399,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.3, Total Coal, Kolumbien",
+      "note": "Handelspartner laut Statistik. Herkunftsmine, Gegenunternehmen und tatsächlicher Transportweg unbekannt."
+    },
+    {
+      "id": "in_coal_2024_import_de",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "partner",
+      "partner_country": "DE",
+      "partner_name": "Deutschland",
+      "company_id": null,
+      "name": null,
+      "quantity": 0.001,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.3, Total Coal, Deutschland",
+      "note": "Handelspartner laut Statistik. Herkunftsmine, Gegenunternehmen und tatsächlicher Transportweg unbekannt."
+    },
+    {
+      "id": "in_coal_2024_import_hk",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "partner",
+      "partner_country": "HK",
+      "partner_name": "Hongkong",
+      "company_id": null,
+      "name": null,
+      "quantity": 0.785,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.3, Total Coal, Hongkong",
+      "note": "Handelspartner laut Statistik. Herkunftsmine, Gegenunternehmen und tatsächlicher Transportweg unbekannt."
+    },
+    {
+      "id": "in_coal_2024_import_id",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "partner",
+      "partner_country": "ID",
+      "partner_name": "Indonesien",
+      "company_id": null,
+      "name": null,
+      "quantity": 104.651,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.3, Total Coal, Indonesien",
+      "note": "Handelspartner laut Statistik. Herkunftsmine, Gegenunternehmen und tatsächlicher Transportweg unbekannt."
+    },
+    {
+      "id": "in_coal_2024_import_kz",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "partner",
+      "partner_country": "KZ",
+      "partner_name": "Kasachstan",
+      "company_id": null,
+      "name": null,
+      "quantity": 0.165,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.3, Total Coal, Kasachstan",
+      "note": "Handelspartner laut Statistik. Herkunftsmine, Gegenunternehmen und tatsächlicher Transportweg unbekannt."
+    },
+    {
+      "id": "in_coal_2024_import_ma",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "partner",
+      "partner_country": "MA",
+      "partner_name": "Marokko",
+      "company_id": null,
+      "name": null,
+      "quantity": 0.017,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.3, Total Coal, Marokko",
+      "note": "Handelspartner laut Statistik. Herkunftsmine, Gegenunternehmen und tatsächlicher Transportweg unbekannt."
+    },
+    {
+      "id": "in_coal_2024_import_mz",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "partner",
+      "partner_country": "MZ",
+      "partner_name": "Mosambik",
+      "company_id": null,
+      "name": null,
+      "quantity": 8.362,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.3, Total Coal, Mosambik",
+      "note": "Handelspartner laut Statistik. Herkunftsmine, Gegenunternehmen und tatsächlicher Transportweg unbekannt."
+    },
+    {
+      "id": "in_coal_2024_import_nl",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "partner",
+      "partner_country": "NL",
+      "partner_name": "Niederlande",
+      "company_id": null,
+      "name": null,
+      "quantity": 0.072,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.3, Total Coal, Niederlande",
+      "note": "Handelspartner laut Statistik. Herkunftsmine, Gegenunternehmen und tatsächlicher Transportweg unbekannt."
+    },
+    {
+      "id": "in_coal_2024_import_nz",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "partner",
+      "partner_country": "NZ",
+      "partner_name": "Neuseeland",
+      "company_id": null,
+      "name": null,
+      "quantity": 0.264,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.3, Total Coal, Neuseeland",
+      "note": "Handelspartner laut Statistik. Herkunftsmine, Gegenunternehmen und tatsächlicher Transportweg unbekannt."
+    },
+    {
+      "id": "in_coal_2024_import_om",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "partner",
+      "partner_country": "OM",
+      "partner_name": "Oman",
+      "company_id": null,
+      "name": null,
+      "quantity": 0.001,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.3, Total Coal, Oman",
+      "note": "Handelspartner laut Statistik. Herkunftsmine, Gegenunternehmen und tatsächlicher Transportweg unbekannt."
+    },
+    {
+      "id": "in_coal_2024_import_ru",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "partner",
+      "partner_country": "RU",
+      "partner_name": "Russland",
+      "company_id": null,
+      "name": null,
+      "quantity": 23.653,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.3, Total Coal, Russland",
+      "note": "Handelspartner laut Statistik. Herkunftsmine, Gegenunternehmen und tatsächlicher Transportweg unbekannt."
+    },
+    {
+      "id": "in_coal_2024_import_sa",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "partner",
+      "partner_country": "SA",
+      "partner_name": "Saudi-Arabien",
+      "company_id": null,
+      "name": null,
+      "quantity": 0.019,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.3, Total Coal, Saudi-Arabien",
+      "note": "Handelspartner laut Statistik. Herkunftsmine, Gegenunternehmen und tatsächlicher Transportweg unbekannt."
+    },
+    {
+      "id": "in_coal_2024_import_sg",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "partner",
+      "partner_country": "SG",
+      "partner_name": "Singapur",
+      "company_id": null,
+      "name": null,
+      "quantity": 10.968,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.3, Total Coal, Singapur",
+      "note": "Handelspartner laut Statistik. Herkunftsmine, Gegenunternehmen und tatsächlicher Transportweg unbekannt."
+    },
+    {
+      "id": "in_coal_2024_import_za",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "partner",
+      "partner_country": "ZA",
+      "partner_name": "Südafrika",
+      "company_id": null,
+      "name": null,
+      "quantity": 31.133,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.3, Total Coal, Südafrika",
+      "note": "Handelspartner laut Statistik. Herkunftsmine, Gegenunternehmen und tatsächlicher Transportweg unbekannt."
+    },
+    {
+      "id": "in_coal_2024_import_ch",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "partner",
+      "partner_country": "CH",
+      "partner_name": "Schweiz",
+      "company_id": null,
+      "name": null,
+      "quantity": 2.094,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.3, Total Coal, Schweiz",
+      "note": "Handelspartner laut Statistik. Herkunftsmine, Gegenunternehmen und tatsächlicher Transportweg unbekannt."
+    },
+    {
+      "id": "in_coal_2024_import_tz",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "partner",
+      "partner_country": "TZ",
+      "partner_name": "Tansania",
+      "company_id": null,
+      "name": null,
+      "quantity": 0.502,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.3, Total Coal, Tansania",
+      "note": "Handelspartner laut Statistik. Herkunftsmine, Gegenunternehmen und tatsächlicher Transportweg unbekannt."
+    },
+    {
+      "id": "in_coal_2024_import_tr",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "partner",
+      "partner_country": "TR",
+      "partner_name": "Türkei",
+      "company_id": null,
+      "name": null,
+      "quantity": 0.003,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.3, Total Coal, Türkei",
+      "note": "Handelspartner laut Statistik. Herkunftsmine, Gegenunternehmen und tatsächlicher Transportweg unbekannt."
+    },
+    {
+      "id": "in_coal_2024_import_ae",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "partner",
+      "partner_country": "AE",
+      "partner_name": "Vereinigte Arabische Emirate",
+      "company_id": null,
+      "name": null,
+      "quantity": 3.213,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.3, Total Coal, Vereinigte Arabische Emirate",
+      "note": "Handelspartner laut Statistik. Herkunftsmine, Gegenunternehmen und tatsächlicher Transportweg unbekannt."
+    },
+    {
+      "id": "in_coal_2024_import_gb",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "partner",
+      "partner_country": "GB",
+      "partner_name": "Vereinigtes Königreich",
+      "company_id": null,
+      "name": null,
+      "quantity": 0.12,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.3, Total Coal, Vereinigtes Königreich",
+      "note": "Handelspartner laut Statistik. Herkunftsmine, Gegenunternehmen und tatsächlicher Transportweg unbekannt."
+    },
+    {
+      "id": "in_coal_2024_import_us",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "partner",
+      "partner_country": "US",
+      "partner_name": "USA",
+      "company_id": null,
+      "name": null,
+      "quantity": 20.141,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.3, Total Coal, USA",
+      "note": "Handelspartner laut Statistik. Herkunftsmine, Gegenunternehmen und tatsächlicher Transportweg unbekannt."
+    },
+    {
+      "id": "in_coal_2024_import_bh",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "partner",
+      "partner_country": "BH",
+      "partner_name": "Bahrain",
+      "company_id": null,
+      "name": null,
+      "quantity": 0.005,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.3, Total Coal, Bahrain",
+      "note": "Handelspartner laut Statistik. Herkunftsmine, Gegenunternehmen und tatsächlicher Transportweg unbekannt."
+    },
+    {
+      "id": "in_coal_2024_export_bd",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "export",
+      "scope": "partner",
+      "partner_country": "BD",
+      "partner_name": "Bangladesch",
+      "company_id": null,
+      "name": null,
+      "quantity": 0.158,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.4, Total Coal, Bangladesch",
+      "note": "Handelspartner laut Statistik. Herkunftsmine, Gegenunternehmen und tatsächlicher Transportweg unbekannt."
+    },
+    {
+      "id": "in_coal_2024_export_bt",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "export",
+      "scope": "partner",
+      "partner_country": "BT",
+      "partner_name": "Bhutan",
+      "company_id": null,
+      "name": null,
+      "quantity": 0.041,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.4, Total Coal, Bhutan",
+      "note": "Handelspartner laut Statistik. Herkunftsmine, Gegenunternehmen und tatsächlicher Transportweg unbekannt."
+    },
+    {
+      "id": "in_coal_2024_export_de",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "export",
+      "scope": "partner",
+      "partner_country": "DE",
+      "partner_name": "Deutschland",
+      "company_id": null,
+      "name": null,
+      "quantity": 0.003,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.4, Total Coal, Deutschland",
+      "note": "Handelspartner laut Statistik. Herkunftsmine, Gegenunternehmen und tatsächlicher Transportweg unbekannt."
+    },
+    {
+      "id": "in_coal_2024_export_id",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "export",
+      "scope": "partner",
+      "partner_country": "ID",
+      "partner_name": "Indonesien",
+      "company_id": null,
+      "name": null,
+      "quantity": 0.001,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.4, Total Coal, Indonesien",
+      "note": "Handelspartner laut Statistik. Herkunftsmine, Gegenunternehmen und tatsächlicher Transportweg unbekannt."
+    },
+    {
+      "id": "in_coal_2024_export_ke",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "export",
+      "scope": "partner",
+      "partner_country": "KE",
+      "partner_name": "Kenia",
+      "company_id": null,
+      "name": null,
+      "quantity": 0.001,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.4, Total Coal, Kenia",
+      "note": "Handelspartner laut Statistik. Herkunftsmine, Gegenunternehmen und tatsächlicher Transportweg unbekannt."
+    },
+    {
+      "id": "in_coal_2024_export_kr",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "export",
+      "scope": "partner",
+      "partner_country": "KR",
+      "partner_name": "Südkorea",
+      "company_id": null,
+      "name": null,
+      "quantity": 0.001,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.4, Total Coal, Südkorea",
+      "note": "Handelspartner laut Statistik. Herkunftsmine, Gegenunternehmen und tatsächlicher Transportweg unbekannt."
+    },
+    {
+      "id": "in_coal_2024_export_my",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "export",
+      "scope": "partner",
+      "partner_country": "MY",
+      "partner_name": "Malaysia",
+      "company_id": null,
+      "name": null,
+      "quantity": 0.001,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.4, Total Coal, Malaysia",
+      "note": "Handelspartner laut Statistik. Herkunftsmine, Gegenunternehmen und tatsächlicher Transportweg unbekannt."
+    },
+    {
+      "id": "in_coal_2024_export_np",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "export",
+      "scope": "partner",
+      "partner_country": "NP",
+      "partner_name": "Nepal",
+      "company_id": null,
+      "name": null,
+      "quantity": 1.495,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.4, Total Coal, Nepal",
+      "note": "Handelspartner laut Statistik. Herkunftsmine, Gegenunternehmen und tatsächlicher Transportweg unbekannt."
+    },
+    {
+      "id": "in_coal_2024_export_om",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "export",
+      "scope": "partner",
+      "partner_country": "OM",
+      "partner_name": "Oman",
+      "company_id": null,
+      "name": null,
+      "quantity": 0.112,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.4, Total Coal, Oman",
+      "note": "Handelspartner laut Statistik. Herkunftsmine, Gegenunternehmen und tatsächlicher Transportweg unbekannt."
+    },
+    {
+      "id": "in_coal_2024_export_sa",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "export",
+      "scope": "partner",
+      "partner_country": "SA",
+      "partner_name": "Saudi-Arabien",
+      "company_id": null,
+      "name": null,
+      "quantity": 0.003,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.4, Total Coal, Saudi-Arabien",
+      "note": "Handelspartner laut Statistik. Herkunftsmine, Gegenunternehmen und tatsächlicher Transportweg unbekannt."
+    },
+    {
+      "id": "in_coal_2024_export_th",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "export",
+      "scope": "partner",
+      "partner_country": "TH",
+      "partner_name": "Thailand",
+      "company_id": null,
+      "name": null,
+      "quantity": 0.002,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.4, Total Coal, Thailand",
+      "note": "Handelspartner laut Statistik. Herkunftsmine, Gegenunternehmen und tatsächlicher Transportweg unbekannt."
+    },
+    {
+      "id": "in_coal_2024_export_ae",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "export",
+      "scope": "partner",
+      "partner_country": "AE",
+      "partner_name": "Vereinigte Arabische Emirate",
+      "company_id": null,
+      "name": null,
+      "quantity": 0.096,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.4, Total Coal, Vereinigte Arabische Emirate",
+      "note": "Handelspartner laut Statistik. Herkunftsmine, Gegenunternehmen und tatsächlicher Transportweg unbekannt."
+    },
+    {
+      "id": "in_coal_2024_import_port_64",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "port",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": "Dhamra",
+      "quantity": 20.135,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.5, Total Coal, Port Wise Import",
+      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen."
+    },
+    {
+      "id": "in_coal_2024_import_port_65",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "port",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": "Paradip",
+      "quantity": 20.818,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.5, Total Coal, Port Wise Import",
+      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen."
+    },
+    {
+      "id": "in_coal_2024_import_port_66",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "port",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": "Krishnapatnam",
+      "quantity": 19.217,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.5, Total Coal, Port Wise Import",
+      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen."
+    },
+    {
+      "id": "in_coal_2024_import_port_67",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "port",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": "SEZ Mundra",
+      "quantity": 16.09,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.5, Total Coal, Port Wise Import",
+      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen."
+    },
+    {
+      "id": "in_coal_2024_import_port_68",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "port",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": "Visakhapatnam",
+      "quantity": 15.14,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.5, Total Coal, Port Wise Import",
+      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen."
+    },
+    {
+      "id": "in_coal_2024_import_port_69",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "port",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": "Mundra",
+      "quantity": 14.109,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.5, Total Coal, Port Wise Import",
+      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen."
+    },
+    {
+      "id": "in_coal_2024_import_port_70",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "port",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": "Kolkata",
+      "quantity": 12.226,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.5, Total Coal, Port Wise Import",
+      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen."
+    },
+    {
+      "id": "in_coal_2024_import_port_71",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "port",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": "Kandla",
+      "quantity": 12.129,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.5, Total Coal, Port Wise Import",
+      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen."
+    },
+    {
+      "id": "in_coal_2024_import_port_72",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "port",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": "Gangavaram",
+      "quantity": 11.037,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.5, Total Coal, Port Wise Import",
+      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen."
+    },
+    {
+      "id": "in_coal_2024_import_port_73",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "port",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": "Jaigad",
+      "quantity": 10.989,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.5, Total Coal, Port Wise Import",
+      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen."
+    },
+    {
+      "id": "in_coal_2024_import_port_74",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "port",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": "Magdalla",
+      "quantity": 10.621,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.5, Total Coal, Port Wise Import",
+      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen."
+    },
+    {
+      "id": "in_coal_2024_import_port_75",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "port",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": "Tuticorin",
+      "quantity": 9.066,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.5, Total Coal, Port Wise Import",
+      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen."
+    },
+    {
+      "id": "in_coal_2024_import_port_76",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "port",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": "Ennore",
+      "quantity": 8.356,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.5, Total Coal, Port Wise Import",
+      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen."
+    },
+    {
+      "id": "in_coal_2024_import_port_77",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "port",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": "Hazira",
+      "quantity": 8.344,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.5, Total Coal, Port Wise Import",
+      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen."
+    },
+    {
+      "id": "in_coal_2024_import_port_78",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "port",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": "New Mangalore",
+      "quantity": 7.907,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.5, Total Coal, Port Wise Import",
+      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen."
+    },
+    {
+      "id": "in_coal_2024_import_port_79",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "port",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": "Dehej",
+      "quantity": 7.772,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.5, Total Coal, Port Wise Import",
+      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen."
+    },
+    {
+      "id": "in_coal_2024_import_port_80",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "port",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": "Marmagoa",
+      "quantity": 7.714,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.5, Total Coal, Port Wise Import",
+      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen."
+    },
+    {
+      "id": "in_coal_2024_import_port_81",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "port",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": "Navlakhi",
+      "quantity": 7.293,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.5, Total Coal, Port Wise Import",
+      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen."
+    },
+    {
+      "id": "in_coal_2024_import_port_82",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "port",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": "Karikal",
+      "quantity": 5.531,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.5, Total Coal, Port Wise Import",
+      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen."
+    },
+    {
+      "id": "in_coal_2024_import_port_83",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "port",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": "Salaya",
+      "quantity": 4.425,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.5, Total Coal, Port Wise Import",
+      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen."
+    },
+    {
+      "id": "in_coal_2024_import_port_84",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "port",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": "Dharmatar",
+      "quantity": 3.143,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.5, Total Coal, Port Wise Import",
+      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen."
+    },
+    {
+      "id": "in_coal_2024_import_port_85",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "port",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": "Mumbai Sea",
+      "quantity": 1.925,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.5, Total Coal, Port Wise Import",
+      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen."
+    },
+    {
+      "id": "in_coal_2024_import_port_86",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "import",
+      "scope": "port",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": "Nhava Sheva",
+      "quantity": 1.368,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_trade_2024_25"
+      ],
+      "locator": "Tabelle 8.5, Total Coal, Port Wise Import",
+      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen."
+    },
+    {
+      "id": "in_coal_2024_production_operator_87",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "production",
+      "scope": "operator",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": "company_coal_india",
+      "name": null,
+      "quantity": 781.06,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_production_2026"
+      ],
+      "locator": "PDF-Seite 2, Tabelle Production, Actual 2024-25",
+      "note": "Teilmenge der nationalen Produktion; CIL-Konzernwert enthält seine Tochterunternehmen."
+    },
+    {
+      "id": "in_coal_2024_production_operator_88",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "production",
+      "scope": "operator",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": "company_singareni_collieries",
+      "name": null,
+      "quantity": 69.01,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_production_2026"
+      ],
+      "locator": "PDF-Seite 2, Tabelle Production, Actual 2024-25",
+      "note": "Teilmenge der nationalen Produktion; CIL-Konzernwert enthält seine Tochterunternehmen."
+    },
+    {
+      "id": "in_coal_2024_consumption_sector_89",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "consumption",
+      "scope": "sector",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": "Versorgerkraftwerke",
+      "quantity": 905.78,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_production_2026"
+      ],
+      "locator": "Kapitel 9, Sector-wise actual demand 2024-25",
+      "note": "Quelle bezeichnet dies als tatsächlichen sektoralen Bedarf; Summe 1.267,13 Mt. Andere Definition als MoSPI-Verfügbarkeit 1.267,09 Mt; nicht zur gemeinsamen Bilanz verrechnen."
+    },
+    {
+      "id": "in_coal_2024_consumption_sector_90",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "consumption",
+      "scope": "sector",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": "Eigenversorgung / Captive Power",
+      "quantity": 62.45,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_production_2026"
+      ],
+      "locator": "Kapitel 9, Sector-wise actual demand 2024-25",
+      "note": "Quelle bezeichnet dies als tatsächlichen sektoralen Bedarf; Summe 1.267,13 Mt. Andere Definition als MoSPI-Verfügbarkeit 1.267,09 Mt; nicht zur gemeinsamen Bilanz verrechnen."
+    },
+    {
+      "id": "in_coal_2024_consumption_sector_91",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "consumption",
+      "scope": "sector",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": "Koks-/Stahlerzeugung",
+      "quantity": 67.91,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_production_2026"
+      ],
+      "locator": "Kapitel 9, Sector-wise actual demand 2024-25",
+      "note": "Quelle bezeichnet dies als tatsächlichen sektoralen Bedarf; Summe 1.267,13 Mt. Andere Definition als MoSPI-Verfügbarkeit 1.267,09 Mt; nicht zur gemeinsamen Bilanz verrechnen."
+    },
+    {
+      "id": "in_coal_2024_consumption_sector_92",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "consumption",
+      "scope": "sector",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": "Zement",
+      "quantity": 7.75,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_production_2026"
+      ],
+      "locator": "Kapitel 9, Sector-wise actual demand 2024-25",
+      "note": "Quelle bezeichnet dies als tatsächlichen sektoralen Bedarf; Summe 1.267,13 Mt. Andere Definition als MoSPI-Verfügbarkeit 1.267,09 Mt; nicht zur gemeinsamen Bilanz verrechnen."
+    },
+    {
+      "id": "in_coal_2024_consumption_sector_93",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "consumption",
+      "scope": "sector",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": "Eisenschwamm",
+      "quantity": 7.37,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_production_2026"
+      ],
+      "locator": "Kapitel 9, Sector-wise actual demand 2024-25",
+      "note": "Quelle bezeichnet dies als tatsächlichen sektoralen Bedarf; Summe 1.267,13 Mt. Andere Definition als MoSPI-Verfügbarkeit 1.267,09 Mt; nicht zur gemeinsamen Bilanz verrechnen."
+    },
+    {
+      "id": "in_coal_2024_consumption_sector_94",
+      "material_id": "coal",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "consumption",
+      "scope": "sector",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": null,
+      "name": "Weitere Verbraucher",
+      "quantity": 217.87,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "coal_production_2026"
+      ],
+      "locator": "Kapitel 9, Sector-wise actual demand 2024-25",
+      "note": "Quelle bezeichnet dies als tatsächlichen sektoralen Bedarf; Summe 1.267,13 Mt. Andere Definition als MoSPI-Verfügbarkeit 1.267,09 Mt; nicht zur gemeinsamen Bilanz verrechnen."
+    },
+    {
+      "id": "in_crude_oil_2024_refinery_input_facility_95",
+      "material_id": "crude_oil",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "refinery_input",
+      "scope": "facility",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": "company_indian_oil",
+      "name": "Guwahati",
+      "quantity": 1.178,
+      "unit": "million_tonnes",
+      "provisional": true,
+      "source_ids": [
+        "mospi_energy_2026"
+      ],
+      "locator": "Tabelle 2.2, Seite 24, Crude Throughput 2024-25(P), Tsd. t / 1.000",
+      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung."
+    },
+    {
+      "id": "in_crude_oil_2024_refinery_input_facility_96",
+      "material_id": "crude_oil",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "refinery_input",
+      "scope": "facility",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": "company_indian_oil",
+      "name": "Barauni",
+      "quantity": 6.513,
+      "unit": "million_tonnes",
+      "provisional": true,
+      "source_ids": [
+        "mospi_energy_2026"
+      ],
+      "locator": "Tabelle 2.2, Seite 24, Crude Throughput 2024-25(P), Tsd. t / 1.000",
+      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung."
+    },
+    {
+      "id": "in_crude_oil_2024_refinery_input_facility_97",
+      "material_id": "crude_oil",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "refinery_input",
+      "scope": "facility",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": "company_indian_oil",
+      "name": "Koyali",
+      "quantity": 15.283,
+      "unit": "million_tonnes",
+      "provisional": true,
+      "source_ids": [
+        "mospi_energy_2026"
+      ],
+      "locator": "Tabelle 2.2, Seite 24, Crude Throughput 2024-25(P), Tsd. t / 1.000",
+      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung."
+    },
+    {
+      "id": "in_crude_oil_2024_refinery_input_facility_98",
+      "material_id": "crude_oil",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "refinery_input",
+      "scope": "facility",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": "company_indian_oil",
+      "name": "Haldia",
+      "quantity": 6.934,
+      "unit": "million_tonnes",
+      "provisional": true,
+      "source_ids": [
+        "mospi_energy_2026"
+      ],
+      "locator": "Tabelle 2.2, Seite 24, Crude Throughput 2024-25(P), Tsd. t / 1.000",
+      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung."
+    },
+    {
+      "id": "in_crude_oil_2024_refinery_input_facility_99",
+      "material_id": "crude_oil",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "refinery_input",
+      "scope": "facility",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": "company_indian_oil",
+      "name": "Mathura",
+      "quantity": 8.054,
+      "unit": "million_tonnes",
+      "provisional": true,
+      "source_ids": [
+        "mospi_energy_2026"
+      ],
+      "locator": "Tabelle 2.2, Seite 24, Crude Throughput 2024-25(P), Tsd. t / 1.000",
+      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung."
+    },
+    {
+      "id": "in_crude_oil_2024_refinery_input_facility_100",
+      "material_id": "crude_oil",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "refinery_input",
+      "scope": "facility",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": "company_indian_oil",
+      "name": "Digboi",
+      "quantity": 0.774,
+      "unit": "million_tonnes",
+      "provisional": true,
+      "source_ids": [
+        "mospi_energy_2026"
+      ],
+      "locator": "Tabelle 2.2, Seite 24, Crude Throughput 2024-25(P), Tsd. t / 1.000",
+      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung."
+    },
+    {
+      "id": "in_crude_oil_2024_refinery_input_facility_101",
+      "material_id": "crude_oil",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "refinery_input",
+      "scope": "facility",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": "company_indian_oil",
+      "name": "Panipat",
+      "quantity": 15.398,
+      "unit": "million_tonnes",
+      "provisional": true,
+      "source_ids": [
+        "mospi_energy_2026"
+      ],
+      "locator": "Tabelle 2.2, Seite 24, Crude Throughput 2024-25(P), Tsd. t / 1.000",
+      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung."
+    },
+    {
+      "id": "in_crude_oil_2024_refinery_input_facility_102",
+      "material_id": "crude_oil",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "refinery_input",
+      "scope": "facility",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": "company_indian_oil",
+      "name": "Bongaigaon",
+      "quantity": 2.772,
+      "unit": "million_tonnes",
+      "provisional": true,
+      "source_ids": [
+        "mospi_energy_2026"
+      ],
+      "locator": "Tabelle 2.2, Seite 24, Crude Throughput 2024-25(P), Tsd. t / 1.000",
+      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung."
+    },
+    {
+      "id": "in_crude_oil_2024_refinery_input_facility_103",
+      "material_id": "crude_oil",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "refinery_input",
+      "scope": "facility",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": "company_indian_oil",
+      "name": "Paradip",
+      "quantity": 14.657,
+      "unit": "million_tonnes",
+      "provisional": true,
+      "source_ids": [
+        "mospi_energy_2026"
+      ],
+      "locator": "Tabelle 2.2, Seite 24, Crude Throughput 2024-25(P), Tsd. t / 1.000",
+      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung."
+    },
+    {
+      "id": "in_crude_oil_2024_refinery_input_facility_104",
+      "material_id": "crude_oil",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "refinery_input",
+      "scope": "facility",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": "company_bharat_petroleum",
+      "name": "Mumbai",
+      "quantity": 15.529,
+      "unit": "million_tonnes",
+      "provisional": true,
+      "source_ids": [
+        "mospi_energy_2026"
+      ],
+      "locator": "Tabelle 2.2, Seite 24, Crude Throughput 2024-25(P), Tsd. t / 1.000",
+      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung."
+    },
+    {
+      "id": "in_crude_oil_2024_refinery_input_facility_105",
+      "material_id": "crude_oil",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "refinery_input",
+      "scope": "facility",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": "company_bharat_petroleum",
+      "name": "Kochi",
+      "quantity": 17.193,
+      "unit": "million_tonnes",
+      "provisional": true,
+      "source_ids": [
+        "mospi_energy_2026"
+      ],
+      "locator": "Tabelle 2.2, Seite 24, Crude Throughput 2024-25(P), Tsd. t / 1.000",
+      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung."
+    },
+    {
+      "id": "in_crude_oil_2024_refinery_input_facility_106",
+      "material_id": "crude_oil",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "refinery_input",
+      "scope": "facility",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": "company_bharat_petroleum",
+      "name": "Bina",
+      "quantity": 7.709,
+      "unit": "million_tonnes",
+      "provisional": true,
+      "source_ids": [
+        "mospi_energy_2026"
+      ],
+      "locator": "Tabelle 2.2, Seite 24, Crude Throughput 2024-25(P), Tsd. t / 1.000",
+      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung."
+    },
+    {
+      "id": "in_crude_oil_2024_refinery_input_facility_107",
+      "material_id": "crude_oil",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "refinery_input",
+      "scope": "facility",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": "company_hindustan_petroleum",
+      "name": "Mumbai",
+      "quantity": 9.958,
+      "unit": "million_tonnes",
+      "provisional": true,
+      "source_ids": [
+        "mospi_energy_2026"
+      ],
+      "locator": "Tabelle 2.2, Seite 24, Crude Throughput 2024-25(P), Tsd. t / 1.000",
+      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung."
+    },
+    {
+      "id": "in_crude_oil_2024_refinery_input_facility_108",
+      "material_id": "crude_oil",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "refinery_input",
+      "scope": "facility",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": "company_hindustan_petroleum",
+      "name": "Visakh",
+      "quantity": 15.31,
+      "unit": "million_tonnes",
+      "provisional": true,
+      "source_ids": [
+        "mospi_energy_2026"
+      ],
+      "locator": "Tabelle 2.2, Seite 24, Crude Throughput 2024-25(P), Tsd. t / 1.000",
+      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung."
+    },
+    {
+      "id": "in_crude_oil_2024_refinery_input_facility_109",
+      "material_id": "crude_oil",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "refinery_input",
+      "scope": "facility",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": "company_chennai_petroleum",
+      "name": "Manali",
+      "quantity": 10.454,
+      "unit": "million_tonnes",
+      "provisional": true,
+      "source_ids": [
+        "mospi_energy_2026"
+      ],
+      "locator": "Tabelle 2.2, Seite 24, Crude Throughput 2024-25(P), Tsd. t / 1.000",
+      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung."
+    },
+    {
+      "id": "in_crude_oil_2024_refinery_input_facility_110",
+      "material_id": "crude_oil",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "refinery_input",
+      "scope": "facility",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": "company_numaligarh_refinery",
+      "name": "Numaligarh",
+      "quantity": 3.066,
+      "unit": "million_tonnes",
+      "provisional": true,
+      "source_ids": [
+        "mospi_energy_2026"
+      ],
+      "locator": "Tabelle 2.2, Seite 24, Crude Throughput 2024-25(P), Tsd. t / 1.000",
+      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung."
+    },
+    {
+      "id": "in_crude_oil_2024_refinery_input_facility_111",
+      "material_id": "crude_oil",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "refinery_input",
+      "scope": "facility",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": "company_mangalore_refinery",
+      "name": "Mangalore",
+      "quantity": 18.044,
+      "unit": "million_tonnes",
+      "provisional": true,
+      "source_ids": [
+        "mospi_energy_2026"
+      ],
+      "locator": "Tabelle 2.2, Seite 24, Crude Throughput 2024-25(P), Tsd. t / 1.000",
+      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung."
+    },
+    {
+      "id": "in_crude_oil_2024_refinery_input_facility_112",
+      "material_id": "crude_oil",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "refinery_input",
+      "scope": "facility",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": "company_ongc",
+      "name": "Tatipaka",
+      "quantity": 0.074,
+      "unit": "million_tonnes",
+      "provisional": true,
+      "source_ids": [
+        "mospi_energy_2026"
+      ],
+      "locator": "Tabelle 2.2, Seite 24, Crude Throughput 2024-25(P), Tsd. t / 1.000",
+      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung."
+    },
+    {
+      "id": "in_crude_oil_2024_refinery_input_facility_113",
+      "material_id": "crude_oil",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "refinery_input",
+      "scope": "facility",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": "company_reliance_industries",
+      "name": "Jamnagar",
+      "quantity": 34.99,
+      "unit": "million_tonnes",
+      "provisional": true,
+      "source_ids": [
+        "mospi_energy_2026"
+      ],
+      "locator": "Tabelle 2.2, Seite 24, Crude Throughput 2024-25(P), Tsd. t / 1.000",
+      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung."
+    },
+    {
+      "id": "in_crude_oil_2024_refinery_input_facility_114",
+      "material_id": "crude_oil",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "refinery_input",
+      "scope": "facility",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": "company_reliance_industries",
+      "name": "SEZ-Jamnagar",
+      "quantity": 31.192,
+      "unit": "million_tonnes",
+      "provisional": true,
+      "source_ids": [
+        "mospi_energy_2026"
+      ],
+      "locator": "Tabelle 2.2, Seite 24, Crude Throughput 2024-25(P), Tsd. t / 1.000",
+      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung."
+    },
+    {
+      "id": "in_crude_oil_2024_refinery_input_facility_115",
+      "material_id": "crude_oil",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "refinery_input",
+      "scope": "facility",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": "company_nayara_energy",
+      "name": "Vadinar",
+      "quantity": 20.487,
+      "unit": "million_tonnes",
+      "provisional": true,
+      "source_ids": [
+        "mospi_energy_2026"
+      ],
+      "locator": "Tabelle 2.2, Seite 24, Crude Throughput 2024-25(P), Tsd. t / 1.000",
+      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung."
+    },
+    {
+      "id": "in_crude_oil_2024_refinery_input_facility_116",
+      "material_id": "crude_oil",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "refinery_input",
+      "scope": "facility",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": "company_hpcl_mittal_energy",
+      "name": "GGS Bathinda",
+      "quantity": 13.045,
+      "unit": "million_tonnes",
+      "provisional": true,
+      "source_ids": [
+        "mospi_energy_2026"
+      ],
+      "locator": "Tabelle 2.2, Seite 24, Crude Throughput 2024-25(P), Tsd. t / 1.000",
+      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung."
+    },
+    {
+      "id": "in_crude_oil_2024_refinery_input_operator_117",
+      "material_id": "crude_oil",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "refinery_input",
+      "scope": "operator",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": "company_indian_oil",
+      "name": null,
+      "quantity": 71.564,
+      "unit": "million_tonnes",
+      "provisional": true,
+      "source_ids": [
+        "mospi_energy_2026"
+      ],
+      "locator": "Tabelle 2.2, Seite 24, Total IOC/BPCL/HPCL, Tsd. t / 1.000",
+      "note": "Betreibersumme. Zugehörige Einzelanlagen nicht zusätzlich dazu addieren."
+    },
+    {
+      "id": "in_crude_oil_2024_refinery_input_operator_118",
+      "material_id": "crude_oil",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "refinery_input",
+      "scope": "operator",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": "company_bharat_petroleum",
+      "name": null,
+      "quantity": 40.431,
+      "unit": "million_tonnes",
+      "provisional": true,
+      "source_ids": [
+        "mospi_energy_2026"
+      ],
+      "locator": "Tabelle 2.2, Seite 24, Total IOC/BPCL/HPCL, Tsd. t / 1.000",
+      "note": "Betreibersumme. Zugehörige Einzelanlagen nicht zusätzlich dazu addieren."
+    },
+    {
+      "id": "in_crude_oil_2024_refinery_input_operator_119",
+      "material_id": "crude_oil",
+      "period": {
+        "label": "FY 2024/25",
+        "start": "2024-04-01",
+        "end": "2025-03-31"
+      },
+      "metric": "refinery_input",
+      "scope": "operator",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": "company_hindustan_petroleum",
+      "name": null,
+      "quantity": 25.268,
+      "unit": "million_tonnes",
+      "provisional": true,
+      "source_ids": [
+        "mospi_energy_2026"
+      ],
+      "locator": "Tabelle 2.2, Seite 24, Total IOC/BPCL/HPCL, Tsd. t / 1.000",
+      "note": "Betreibersumme. Zugehörige Einzelanlagen nicht zusätzlich dazu addieren."
+    },
+    {
+      "id": "brpl_pellets_capacity_2025_12_10",
+      "material_id": "pellets",
+      "period": {
+        "label": "Stand 10.12.2025",
+        "start": "2025-12-10",
+        "end": "2025-12-10"
+      },
+      "metric": "capacity",
+      "scope": "facility",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": "company_brahmani_river_pellets",
+      "name": "BRPL Pelletanlage, Jajpur",
+      "quantity": 4,
+      "unit": "million_tonnes_per_year",
+      "provisional": false,
+      "source_ids": [
+        "tata_plan"
+      ],
+      "locator": "Abschnitt Thriveni Pellets / BRPL",
+      "note": "Nennkapazität; Produktionsmenge unbekannt. TPPL hält BRPL vollständig; Tata seit 30.01.2026 indirekt 50,01%. Die 212-km-Pipeline ist als Asset beschrieben, kein gemessener Lieferstrom."
+    },
+    {
+      "id": "jsw_jfe_crude_steel_capacity_2026_03_31",
+      "material_id": "crude_steel",
+      "period": {
+        "label": "Stand 31.03.2026",
+        "start": "2026-03-31",
+        "end": "2026-03-31"
+      },
+      "metric": "capacity",
+      "scope": "facility",
+      "partner_country": null,
+      "partner_name": null,
+      "company_id": "company_jsw_jfe_steel",
+      "name": "Sambalpur Steelworks (Jharsuguda)",
+      "quantity": 4.5,
+      "unit": "million_tonnes_per_year",
+      "provisional": false,
+      "source_ids": [
+        "jfe_jv"
+      ],
+      "locator": "New Company Overview",
+      "note": "Nennkapazität der operativen JSW JFE Steel, 100%-Tochter von JSW JFE Kalinga. JFE hat 50% an Kalinga erst nach der zweiten Tranche vom 30.06.2026. Keine tatsächliche Produktionsmenge."
+    },
+    {
+      "id": "in_customs_hs3915_nl_2025",
+      "material_id": "waste_plastic_hs3915",
+      "period": {
+        "label": "Kalenderjahr 2025",
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "metric": "import",
+      "scope": "partner",
+      "partner_country": "NL",
+      "partner_name": "Niederlande",
+      "company_id": null,
+      "name": null,
+      "quantity": 0.00298314,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "eurostat_ds045409_hs3915_2025",
+        "uncomtrade_hs3915_nl_in_2025"
+      ],
+      "locator": "Eurostat DS-045409: reporter NL, partner IN, product 3915, flow 2, indicator QUANTITY_IN_100KG, time 2025.",
+      "note": "Eurostat 2983140 kg; UN-Comtrade-Spiegel 2983140 kg; Abweichung 0 %. Zollstatistische Länderbeziehung, kein behaupteter Transportweg oder Firmenvertrag.",
+      "relation_basis": "customs_trade",
+      "classification": "HS",
+      "commodity_code": "3915",
+      "trade_value_eur": 1264665
+    },
+    {
+      "id": "in_customs_hs3915_ro_2025",
+      "material_id": "waste_plastic_hs3915",
+      "period": {
+        "label": "Kalenderjahr 2025",
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "metric": "import",
+      "scope": "partner",
+      "partner_country": "RO",
+      "partner_name": "Rumänien",
+      "company_id": null,
+      "name": null,
+      "quantity": 0.00039929,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "eurostat_ds045409_hs3915_2025",
+        "uncomtrade_hs3915_ro_in_2025"
+      ],
+      "locator": "Eurostat DS-045409: reporter RO, partner IN, product 3915, flow 2, indicator QUANTITY_IN_100KG, time 2025.",
+      "note": "Eurostat 399290 kg; UN-Comtrade-Spiegel 399290 kg; Abweichung 0 %. Zollstatistische Länderbeziehung, kein behaupteter Transportweg oder Firmenvertrag.",
+      "relation_basis": "customs_trade",
+      "classification": "HS",
+      "commodity_code": "3915",
+      "trade_value_eur": 111690
+    },
+    {
+      "id": "in_customs_hs3915_gr_2025",
+      "material_id": "waste_plastic_hs3915",
+      "period": {
+        "label": "Kalenderjahr 2025",
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "metric": "import",
+      "scope": "partner",
+      "partner_country": "GR",
+      "partner_name": "Griechenland",
+      "company_id": null,
+      "name": null,
+      "quantity": 0.00023801999999999997,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "eurostat_ds045409_hs3915_2025",
+        "uncomtrade_hs3915_gr_in_2025"
+      ],
+      "locator": "Eurostat DS-045409: reporter GR, partner IN, product 3915, flow 2, indicator QUANTITY_IN_100KG, time 2025.",
+      "note": "Eurostat 238020 kg; UN-Comtrade-Spiegel 238020 kg; Abweichung 0 %. Zollstatistische Länderbeziehung, kein behaupteter Transportweg oder Firmenvertrag.",
+      "relation_basis": "customs_trade",
+      "classification": "HS",
+      "commodity_code": "3915",
+      "trade_value_eur": 82014
+    },
+    {
+      "id": "in_customs_hs4707_it_2025",
+      "material_id": "waste_paper_hs4707",
+      "period": {
+        "label": "Kalenderjahr 2025",
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "metric": "import",
+      "scope": "partner",
+      "partner_country": "IT",
+      "partner_name": "Italien",
+      "company_id": null,
+      "name": null,
+      "quantity": 0.725494216,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "eurostat_ds045409_hs4707_2025",
+        "uncomtrade_hs4707_it_in_2025"
+      ],
+      "locator": "Eurostat DS-045409: reporter IT, partner IN, product 4707, flow 2, indicator QUANTITY_IN_100KG, time 2025.",
+      "note": "Eurostat 725494216 kg; UN-Comtrade-Spiegel 725494216 kg; Abweichung 0 %. Zollstatistische Länderbeziehung, kein behaupteter Transportweg oder Firmenvertrag.",
+      "relation_basis": "customs_trade",
+      "classification": "HS",
+      "commodity_code": "4707",
+      "trade_value_eur": 91736537
+    },
+    {
+      "id": "in_customs_hs4707_ie_2025",
+      "material_id": "waste_paper_hs4707",
+      "period": {
+        "label": "Kalenderjahr 2025",
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "metric": "import",
+      "scope": "partner",
+      "partner_country": "IE",
+      "partner_name": "Irland",
+      "company_id": null,
+      "name": null,
+      "quantity": 0.341675487,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "eurostat_ds045409_hs4707_2025",
+        "uncomtrade_hs4707_ie_in_2025"
+      ],
+      "locator": "Eurostat DS-045409: reporter IE, partner IN, product 4707, flow 2, indicator QUANTITY_IN_100KG, time 2025.",
+      "note": "Eurostat 341675487 kg; UN-Comtrade-Spiegel 341675398 kg; Abweichung 0 %. Zollstatistische Länderbeziehung, kein behaupteter Transportweg oder Firmenvertrag.",
+      "relation_basis": "customs_trade",
+      "classification": "HS",
+      "commodity_code": "4707",
+      "trade_value_eur": 51553695
+    },
+    {
+      "id": "in_customs_hs4707_gr_2025",
+      "material_id": "waste_paper_hs4707",
+      "period": {
+        "label": "Kalenderjahr 2025",
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "metric": "import",
+      "scope": "partner",
+      "partner_country": "GR",
+      "partner_name": "Griechenland",
+      "company_id": null,
+      "name": null,
+      "quantity": 0.130037225,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "eurostat_ds045409_hs4707_2025",
+        "uncomtrade_hs4707_gr_in_2025"
+      ],
+      "locator": "Eurostat DS-045409: reporter GR, partner IN, product 4707, flow 2, indicator QUANTITY_IN_100KG, time 2025.",
+      "note": "Eurostat 130037225 kg; UN-Comtrade-Spiegel 130037270 kg; Abweichung 0 %. Zollstatistische Länderbeziehung, kein behaupteter Transportweg oder Firmenvertrag.",
+      "relation_basis": "customs_trade",
+      "classification": "HS",
+      "commodity_code": "4707",
+      "trade_value_eur": 16800631
+    },
+    {
+      "id": "in_customs_hs7204_pl_2025",
+      "material_id": "waste_ferrous_hs7204",
+      "period": {
+        "label": "Kalenderjahr 2025",
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "metric": "import",
+      "scope": "partner",
+      "partner_country": "PL",
+      "partner_name": "Polen",
+      "company_id": null,
+      "name": null,
+      "quantity": 0.418595261,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "eurostat_ds045409_hs7204_2025",
+        "uncomtrade_hs7204_pl_in_2025"
+      ],
+      "locator": "Eurostat DS-045409: reporter PL, partner IN, product 7204, flow 2, indicator QUANTITY_IN_100KG, time 2025.",
+      "note": "Eurostat 418595261 kg; UN-Comtrade-Spiegel 418595257 kg; Abweichung 0 %. Zollstatistische Länderbeziehung, kein behaupteter Transportweg oder Firmenvertrag.",
+      "relation_basis": "customs_trade",
+      "classification": "HS",
+      "commodity_code": "7204",
+      "trade_value_eur": 129651717
+    },
+    {
+      "id": "in_customs_hs7204_de_2025",
+      "material_id": "waste_ferrous_hs7204",
+      "period": {
+        "label": "Kalenderjahr 2025",
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "metric": "import",
+      "scope": "partner",
+      "partner_country": "DE",
+      "partner_name": "Deutschland",
+      "company_id": null,
+      "name": null,
+      "quantity": 0.12263311,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "eurostat_ds045409_hs7204_2025",
+        "uncomtrade_hs7204_de_in_2025"
+      ],
+      "locator": "Eurostat DS-045409: reporter DE, partner IN, product 7204, flow 2, indicator QUANTITY_IN_100KG, time 2025.",
+      "note": "Eurostat 122633110 kg; UN-Comtrade-Spiegel 122629058 kg; Abweichung 0.003 %. Zollstatistische Länderbeziehung, kein behaupteter Transportweg oder Firmenvertrag.",
+      "relation_basis": "customs_trade",
+      "classification": "HS",
+      "commodity_code": "7204",
+      "trade_value_eur": 90168431
+    },
+    {
+      "id": "in_customs_hs7204_it_2025",
+      "material_id": "waste_ferrous_hs7204",
+      "period": {
+        "label": "Kalenderjahr 2025",
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "metric": "import",
+      "scope": "partner",
+      "partner_country": "IT",
+      "partner_name": "Italien",
+      "company_id": null,
+      "name": null,
+      "quantity": 0.068059267,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "eurostat_ds045409_hs7204_2025",
+        "uncomtrade_hs7204_it_in_2025"
+      ],
+      "locator": "Eurostat DS-045409: reporter IT, partner IN, product 7204, flow 2, indicator QUANTITY_IN_100KG, time 2025.",
+      "note": "Eurostat 68059267 kg; UN-Comtrade-Spiegel 68059267 kg; Abweichung 0 %. Zollstatistische Länderbeziehung, kein behaupteter Transportweg oder Firmenvertrag.",
+      "relation_basis": "customs_trade",
+      "classification": "HS",
+      "commodity_code": "7204",
+      "trade_value_eur": 47139292
+    },
+    {
+      "id": "in_customs_hs7404_de_2025",
+      "material_id": "waste_copper_hs7404",
+      "period": {
+        "label": "Kalenderjahr 2025",
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "metric": "import",
+      "scope": "partner",
+      "partner_country": "DE",
+      "partner_name": "Deutschland",
+      "company_id": null,
+      "name": null,
+      "quantity": 0.047786753,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "eurostat_ds045409_hs7404_2025",
+        "uncomtrade_hs7404_de_in_2025"
+      ],
+      "locator": "Eurostat DS-045409: reporter DE, partner IN, product 7404, flow 2, indicator QUANTITY_IN_100KG, time 2025.",
+      "note": "Eurostat 47786753 kg; UN-Comtrade-Spiegel 47786756 kg; Abweichung 0 %. Zollstatistische Länderbeziehung, kein behaupteter Transportweg oder Firmenvertrag.",
+      "relation_basis": "customs_trade",
+      "classification": "HS",
+      "commodity_code": "7404",
+      "trade_value_eur": 219931953
+    },
+    {
+      "id": "in_customs_hs7404_it_2025",
+      "material_id": "waste_copper_hs7404",
+      "period": {
+        "label": "Kalenderjahr 2025",
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "metric": "import",
+      "scope": "partner",
+      "partner_country": "IT",
+      "partner_name": "Italien",
+      "company_id": null,
+      "name": null,
+      "quantity": 0.011986811,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "eurostat_ds045409_hs7404_2025",
+        "uncomtrade_hs7404_it_in_2025"
+      ],
+      "locator": "Eurostat DS-045409: reporter IT, partner IN, product 7404, flow 2, indicator QUANTITY_IN_100KG, time 2025.",
+      "note": "Eurostat 11986811 kg; UN-Comtrade-Spiegel 11986811 kg; Abweichung 0 %. Zollstatistische Länderbeziehung, kein behaupteter Transportweg oder Firmenvertrag.",
+      "relation_basis": "customs_trade",
+      "classification": "HS",
+      "commodity_code": "7404",
+      "trade_value_eur": 37292497
+    },
+    {
+      "id": "in_customs_hs7404_nl_2025",
+      "material_id": "waste_copper_hs7404",
+      "period": {
+        "label": "Kalenderjahr 2025",
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "metric": "import",
+      "scope": "partner",
+      "partner_country": "NL",
+      "partner_name": "Niederlande",
+      "company_id": null,
+      "name": null,
+      "quantity": 0.005300693,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "eurostat_ds045409_hs7404_2025",
+        "uncomtrade_hs7404_nl_in_2025"
+      ],
+      "locator": "Eurostat DS-045409: reporter NL, partner IN, product 7404, flow 2, indicator QUANTITY_IN_100KG, time 2025.",
+      "note": "Eurostat 5300693 kg; UN-Comtrade-Spiegel 5300693 kg; Abweichung 0 %. Zollstatistische Länderbeziehung, kein behaupteter Transportweg oder Firmenvertrag.",
+      "relation_basis": "customs_trade",
+      "classification": "HS",
+      "commodity_code": "7404",
+      "trade_value_eur": 28353732
+    },
+    {
+      "id": "in_customs_hs7602_de_2025",
+      "material_id": "waste_aluminium_hs7602",
+      "period": {
+        "label": "Kalenderjahr 2025",
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "metric": "import",
+      "scope": "partner",
+      "partner_country": "DE",
+      "partner_name": "Deutschland",
+      "company_id": null,
+      "name": null,
+      "quantity": 0.068387129,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "eurostat_ds045409_hs7602_2025",
+        "uncomtrade_hs7602_de_in_2025"
+      ],
+      "locator": "Eurostat DS-045409: reporter DE, partner IN, product 7602, flow 2, indicator QUANTITY_IN_100KG, time 2025.",
+      "note": "Eurostat 68387129 kg; UN-Comtrade-Spiegel 68387139 kg; Abweichung 0 %. Zollstatistische Länderbeziehung, kein behaupteter Transportweg oder Firmenvertrag.",
+      "relation_basis": "customs_trade",
+      "classification": "HS",
+      "commodity_code": "7602",
+      "trade_value_eur": 126118465
+    },
+    {
+      "id": "in_customs_hs7602_it_2025",
+      "material_id": "waste_aluminium_hs7602",
+      "period": {
+        "label": "Kalenderjahr 2025",
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "metric": "import",
+      "scope": "partner",
+      "partner_country": "IT",
+      "partner_name": "Italien",
+      "company_id": null,
+      "name": null,
+      "quantity": 0.030162819,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "eurostat_ds045409_hs7602_2025",
+        "uncomtrade_hs7602_it_in_2025"
+      ],
+      "locator": "Eurostat DS-045409: reporter IT, partner IN, product 7602, flow 2, indicator QUANTITY_IN_100KG, time 2025.",
+      "note": "Eurostat 30162819 kg; UN-Comtrade-Spiegel 30162819 kg; Abweichung 0 %. Zollstatistische Länderbeziehung, kein behaupteter Transportweg oder Firmenvertrag.",
+      "relation_basis": "customs_trade",
+      "classification": "HS",
+      "commodity_code": "7602",
+      "trade_value_eur": 53689280
+    },
+    {
+      "id": "in_customs_hs7602_gr_2025",
+      "material_id": "waste_aluminium_hs7602",
+      "period": {
+        "label": "Kalenderjahr 2025",
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "metric": "import",
+      "scope": "partner",
+      "partner_country": "GR",
+      "partner_name": "Griechenland",
+      "company_id": null,
+      "name": null,
+      "quantity": 0.013830704999999999,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "eurostat_ds045409_hs7602_2025",
+        "uncomtrade_hs7602_gr_in_2025"
+      ],
+      "locator": "Eurostat DS-045409: reporter GR, partner IN, product 7602, flow 2, indicator QUANTITY_IN_100KG, time 2025.",
+      "note": "Eurostat 13830705 kg; UN-Comtrade-Spiegel 13830711 kg; Abweichung 0 %. Zollstatistische Länderbeziehung, kein behaupteter Transportweg oder Firmenvertrag.",
+      "relation_basis": "customs_trade",
+      "classification": "HS",
+      "commodity_code": "7602",
+      "trade_value_eur": 25723517
+    },
+    {
+      "id": "in_customs_hs8549_es_2025",
+      "material_id": "waste_electrical_hs8549",
+      "period": {
+        "label": "Kalenderjahr 2025",
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "metric": "import",
+      "scope": "partner",
+      "partner_country": "ES",
+      "partner_name": "Spanien",
+      "company_id": null,
+      "name": null,
+      "quantity": 0.000261212,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "eurostat_ds045409_hs8549_2025",
+        "uncomtrade_hs8549_es_in_2025"
+      ],
+      "locator": "Eurostat DS-045409: reporter ES, partner IN, product 8549, flow 2, indicator QUANTITY_IN_100KG, time 2025.",
+      "note": "Eurostat 261212 kg; UN-Comtrade-Spiegel 261212 kg; Abweichung 0 %. Zollstatistische Länderbeziehung, kein behaupteter Transportweg oder Firmenvertrag.",
+      "relation_basis": "customs_trade",
+      "classification": "HS",
+      "commodity_code": "8549",
+      "trade_value_eur": 212409
+    },
+    {
+      "id": "in_customs_hs8549_dk_2025",
+      "material_id": "waste_electrical_hs8549",
+      "period": {
+        "label": "Kalenderjahr 2025",
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "metric": "import",
+      "scope": "partner",
+      "partner_country": "DK",
+      "partner_name": "Dänemark",
+      "company_id": null,
+      "name": null,
+      "quantity": 0.000138506,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "eurostat_ds045409_hs8549_2025",
+        "uncomtrade_hs8549_dk_in_2025"
+      ],
+      "locator": "Eurostat DS-045409: reporter DK, partner IN, product 8549, flow 2, indicator QUANTITY_IN_100KG, time 2025.",
+      "note": "Eurostat 138506 kg; UN-Comtrade-Spiegel 138506 kg; Abweichung 0 %. Zollstatistische Länderbeziehung, kein behaupteter Transportweg oder Firmenvertrag.",
+      "relation_basis": "customs_trade",
+      "classification": "HS",
+      "commodity_code": "8549",
+      "trade_value_eur": 53873
+    },
+    {
+      "id": "in_customs_hs8549_lv_2025",
+      "material_id": "waste_electrical_hs8549",
+      "period": {
+        "label": "Kalenderjahr 2025",
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      "metric": "import",
+      "scope": "partner",
+      "partner_country": "LV",
+      "partner_name": "Lettland",
+      "company_id": null,
+      "name": null,
+      "quantity": 0.00010285999999999999,
+      "unit": "million_tonnes",
+      "provisional": false,
+      "source_ids": [
+        "eurostat_ds045409_hs8549_2025",
+        "uncomtrade_hs8549_lv_in_2025"
+      ],
+      "locator": "Eurostat DS-045409: reporter LV, partner IN, product 8549, flow 2, indicator QUANTITY_IN_100KG, time 2025.",
+      "note": "Eurostat 102860 kg; UN-Comtrade-Spiegel 102860 kg; Abweichung 0 %. Zollstatistische Länderbeziehung, kein behaupteter Transportweg oder Firmenvertrag.",
+      "relation_basis": "customs_trade",
+      "classification": "HS",
+      "commodity_code": "8549",
+      "trade_value_eur": 99123
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="de">
+<head><script src="/atllendr/__base.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f5f9fd">
+  <title>Marktatlas · Gesamtansicht</title>
+  <meta name="description" content="Gesamtatlas und Rohstoffwelt als zwei unabhängig bedienbare 3D-Globen.">
+  <link rel="icon" href="/atllendr/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/atllendr/assets/dual-globe.css">
+  <script>const p=new URLSearchParams(location.search);if(!p.has('left')&&!p.has('right')&&(location.hash||[...p.keys()].some(k=>['view','id','area','region','year','material','atlas_area','atlas_subtype','atlas_region','atlas_year','atlas_query','market_region','market_sector','market_status','market_query','market_year','company'].includes(k))))location.replace('/atlas/'+location.search+location.hash)</script>
+</head>
+<body>
+  <header class="header"><a class="brand" href="/atllendr/" aria-current="page">◎ marktatlas<span>.</span></a><strong>Zwei Welten</strong><nav aria-label="Weitere Ansichten"><a href="/atllendr/themen/">Fachatlanten</a><a href="/atllendr/daten/">Daten & Quellen</a><a href="/atllendr/audit/">V28.0 Audit</a><a href="/atllendr/foundation/">V28.1 Datenfundament</a></nav><a href="/atllendr/datenluecken/" style="color:#35c8d4">Datenlücken filtern</a></header>
+  <main class="globes" aria-label="Gesamtansicht mit zwei unabhängigen Globen">
+    <section class="globe-panel" aria-labelledby="general-title">
+      <div class="panel-head"><h1 id="general-title">Gesamtatlas</h1><a href="/atllendr/atlas/" target="_top">Allein öffnen</a></div>
+      <iframe data-world="left" title="Interaktiver Gesamtatlas mit eigenen Filtern" loading="eager"></iframe>
+    </section>
+    <section class="globe-panel" aria-labelledby="resource-title">
+      <div class="panel-head"><h2 id="resource-title">Minen · Verarbeitung · Logistik</h2><a href="/atllendr/minen/" target="_top">Allein öffnen</a></div>
+      <iframe data-world="right" title="Interaktive Rohstoffwelt mit eigenen Filtern" loading="eager"></iframe>
+    </section>
+  </main>
+  <script type="module" src="/atllendr/assets/dual-globe.mjs"></script>
+</body>
+</html>

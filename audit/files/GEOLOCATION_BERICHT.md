@@ -1,0 +1,5 @@
+# Atlas V28.0 — 7. Geolocation
+
+In den 9.813 Standortobjekten: `EXACT` 1.888, `APPROXIMATE` 451, `UNKNOWN` 7.377 und ohne Punkt 97. Der numerische Bereichsscan fand **0** ungültige oder (0,0)-Koordinaten. **207** Koordinatenpaare sind jeweils mehrfach belegt; Co-Location kann eine reale gemeinsame Anlage, ein Komplex oder ein generalisierter Punkt sein, kein automatischer Dublettenbeweis. Ein Punkt-in-Länder-Abgleich gegen die **vereinfachte Atlas-Weltgeometrie** prüfte alle 9.716 Standortpunkte und markiert **312 Kandidaten außerhalb des jeweiligen Polygons** in `geolocation-country-candidates.csv`. Inseln, Küsten, Grenzanlagen, Offshore-Standorte und vereinfachte Geometrie können falsche Treffer verursachen; das ist keine Bestätigung eines Koordinatenfehlers. Eine Sichtprüfung jedes `EXACT`-Labels wurde nicht durchgeführt. Die Karte bezeichnet UNKNOWN-Punkte sichtbar als ungenaue Quellenpunkte. Das Zielvokabular `EXACT_FACILITY`, `APPROXIMATE_FACILITY`, `DEPOSIT_CENTROID`, `CITY`, `REGION`, `COUNTRY`, `UNKNOWN` braucht eine nachweisbare Zuordnung pro Quelle.
+
+

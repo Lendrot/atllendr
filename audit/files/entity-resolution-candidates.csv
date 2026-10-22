@@ -1,0 +1,796 @@
+domain,key,country,count,ids,labels,status
+asset,westernclustermanorivermine,Liberia,2,gem-giomt-P100000129440 | gem-western-mano,Western Cluster Mano River Mine | Western Cluster Mano River Mine,POSSIBLE_DUPLICATE_NOT_MERGED
+asset,westernclusterbomihillsmine,Liberia,2,gem-giomt-P100000129439 | gem-western-bomi,Western Cluster Bomi Hills Mine | Western Cluster Bomi Hills Mine,POSSIBLE_DUPLICATE_NOT_MERGED
+asset,barapukuriacoalmine,Bangladesh,2,gem-giomt-P100000129463 | gem-gcmt-M0122,Barapukuria Coal Mine | Barapukuria Coal Mine,POSSIBLE_DUPLICATE_NOT_MERGED
+asset,mine1ky,United States,2,gem-gcmt-M7115 | gem-gcmt-M4599,Mine #1 (KY) | Mine # 1 (KY),POSSIBLE_DUPLICATE_NOT_MERGED
+asset,mine3,United States,2,gem-gcmt-M6245 | gem-gcmt-M6250,Mine #3 | Mine 3,POSSIBLE_DUPLICATE_NOT_MERGED
+asset,mineno2,United States,2,gem-gcmt-M6256 | gem-gcmt-M2645,Mine No 2 | Mine No. 2,POSSIBLE_DUPLICATE_NOT_MERGED
+asset,mineno1wv,United States,2,gem-gcmt-M4632 | gem-gcmt-M3540,Mine No 1 (WV) | Mine No. 1 (WV),POSSIBLE_DUPLICATE_NOT_MERGED
+asset,mineno1va,United States,2,gem-gcmt-M6254 | gem-gcmt-M3541,Mine No 1 (VA) | Mine No. 1 (VA),POSSIBLE_DUPLICATE_NOT_MERGED
+asset,mine1,United States,2,gem-gcmt-M6248 | gem-gcmt-M6235,Mine 1 | Mine #1,POSSIBLE_DUPLICATE_NOT_MERGED
+asset,deepmine16,United States,2,gem-gcmt-M5931 | gem-gcmt-M5933,Deep Mine #16 | Deep Mine 16,POSSIBLE_DUPLICATE_NOT_MERGED
+asset,mineno6,United States,2,gem-gcmt-M7124 | gem-gcmt-M2898,Mine No 6 | Mine No. 6,POSSIBLE_DUPLICATE_NOT_MERGED
+asset,no1surface,United States,2,gem-gcmt-M7136 | gem-gcmt-M6338,No 1 Surface | No. 1 Surface,POSSIBLE_DUPLICATE_NOT_MERGED
+asset,no1strip,United States,2,gem-gcmt-M7135 | gem-gcmt-M6337,No 1 Strip | No. 1 Strip,POSSIBLE_DUPLICATE_NOT_MERGED
+asset,no1,United States,2,gem-gcmt-M7134 | gem-gcmt-M7137,No 1 | No. 1,POSSIBLE_DUPLICATE_NOT_MERGED
+asset,mineno8,United States,2,gem-gcmt-M7130 | gem-gcmt-M6262,Mine No. 8 | Mine No 8,POSSIBLE_DUPLICATE_NOT_MERGED
+asset,no7coalmineky,United States,2,gem-gcmt-M5716 | gem-gcmt-M4666,No.7 Coal Mine (KY) | No. 7 Coal Mine (KY),POSSIBLE_DUPLICATE_NOT_MERGED
+company,adanigroup,,2,name-gctt-82993af5d0df64a1 | name-gcmt-82993af5d0df64a1,Adani Group | Adani Group,POSSIBLE_DUPLICATE_NOT_MERGED
+company,drummondltd,,2,name-gctt-670b28b46edb4859 | name-gcmt-5469c06434a03f5c,Drummond Ltd. | Drummond Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,jswgroup,,2,name-gctt-8b4cf87050a61f0c | name-gcmt-8b4cf87050a61f0c,JSW Group | JSW Group,POSSIBLE_DUPLICATE_NOT_MERGED
+company,shenhuagroup,,2,name-gctt-4e03c12228a1f2eb | name-gcmt-4e03c12228a1f2eb,Shenhua Group | Shenhua Group,POSSIBLE_DUPLICATE_NOT_MERGED
+company,ptkaltimprimacoal,,2,name-gctt-6df601dbe257cb8e | name-gcmt-6df601dbe257cb8e,PT Kaltim Prima Coal | PT Kaltim Prima Coal,POSSIBLE_DUPLICATE_NOT_MERGED
+company,glencore,,2,name-gctt-856ed7b9e6cbde42 | name-gcmt-856ed7b9e6cbde42,Glencore | Glencore,POSSIBLE_DUPLICATE_NOT_MERGED
+company,ptborneoindobara,,2,name-gctt-d0e500571905cb48 | name-gcmt-d0e500571905cb48,PT Borneo Indobara | PT Borneo Indobara,POSSIBLE_DUPLICATE_NOT_MERGED
+company,prodecogroup,,2,name-gctt-66892902d7a0b8b1 | name-gcmt-66892902d7a0b8b1,Prodeco Group | Prodeco Group,POSSIBLE_DUPLICATE_NOT_MERGED
+company,ptbukitasamtbk,,2,name-gctt-515140c0d740ff67 | name-gcmt-515140c0d740ff67,PT Bukit Asam Tbk | PT Bukit Asam Tbk,POSSIBLE_DUPLICATE_NOT_MERGED
+company,governmentofindia,,2,name-gctt-feaaa6739d2d380b | name-gcmt-feaaa6739d2d380b,Government of India | Government of India,POSSIBLE_DUPLICATE_NOT_MERGED
+company,ptindomincomandiri,,2,name-gctt-c3a3e84f3df96ccc | name-gcmt-c3a3e84f3df96ccc,PT Indominco Mandiri | PT Indominco Mandiri,POSSIBLE_DUPLICATE_NOT_MERGED
+company,ptarutminindonesia,,2,name-gctt-8776e7e6d5bbf19a | name-gcmt-8776e7e6d5bbf19a,PT Arutmin Indonesia | PT Arutmin Indonesia,POSSIBLE_DUPLICATE_NOT_MERGED
+company,severnayazvezdallc,,2,name-gctt-bfb895d2c8a19f5b | name-gcmt-bfb895d2c8a19f5b,Severnaya Zvezda LLC | Severnaya Zvezda LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+company,ptbayanresourcestbk,,2,name-gctt-1a03787d6539fd96 | name-gcmt-1a03787d6539fd96,PT Bayan Resources Tbk | PT Bayan Resources Tbk,POSSIBLE_DUPLICATE_NOT_MERGED
+company,ptindotambangrayamegahtbk,,2,name-gctt-b0efae7f91f662a5 | name-gcmt-b0efae7f91f662a5,PT Indo Tambangraya Megah Tbk | PT Indo Tambangraya Megah Tbk,POSSIBLE_DUPLICATE_NOT_MERGED
+company,bhpgroupltd,,2,gem-company-E100000000015 | name-gcmt-643369b3b2890c56,BHP Group Ltd | BHP Group Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,itochucorp,,2,gem-company-E100000001237 | name-gcmt-3bc19f87312d20ec,ITOCHU Corp | ITOCHU Corp,POSSIBLE_DUPLICATE_NOT_MERGED
+company,mitsuicoltd,,2,gem-company-E100000000651 | name-gcmt-a7098db2fd11a895,Mitsui & Co Ltd | Mitsui & Co Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,metinvestbv,,3,gem-company-E100001000605 | name-gcmt-02c1a4104a3181c4 | name-gcmt-0472392e6666692f,Metinvest BV | Metinvest BV | Metinvest B V,POSSIBLE_DUPLICATE_NOT_MERGED
+company,hancockprospectingptyltd,,2,gem-company-E100001000959 | name-gcmt-a7601eef929ec657,Hancock Prospecting Pty Ltd | Hancock Prospecting Pty Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,marubenicorp,,2,gem-company-E100000000649 | name-gcmt-7d7baec5b34b818e,Marubeni Corp | Marubeni Corp,POSSIBLE_DUPLICATE_NOT_MERGED
+company,poscoholdingsinc,,2,gem-company-E100000000953 | name-gcmt-499475b673193014,POSCO Holdings Inc | POSCO Holdings Inc,POSSIBLE_DUPLICATE_NOT_MERGED
+company,naturalpersons,,3,gem-company-E100000123261 | name-gcmt-ba780b28684e512e | name-gcmt-97d56a2b7db54a5d,natural person(s) | natural persons | natural person(s),POSSIBLE_DUPLICATE_NOT_MERGED
+company,angloamericanplc,,2,gem-company-E100001000407 | name-gcmt-5c4c1950ea2604b7,Anglo American PLC | Anglo American PLC,POSSIBLE_DUPLICATE_NOT_MERGED
+company,novolipetsksteelpjsc,,2,gem-company-E100000003676 | name-gcmt-3679eba4d0ce701e,Novolipetsk Steel PJSC | Novolipetsk Steel PJSC,POSSIBLE_DUPLICATE_NOT_MERGED
+company,eurasianresourcesgroupsarl,,2,gem-company-E100000000689 | name-gcmt-d229b734ab8e5a3d,Eurasian Resources Group SARL | Eurasian Resources Group SARL,POSSIBLE_DUPLICATE_NOT_MERGED
+company,nipponsteelcorp,,2,gem-company-E100000000652 | name-gcmt-c2969ea071a06a8a,Nippon Steel Corp | Nippon Steel Corp,POSSIBLE_DUPLICATE_NOT_MERGED
+company,mineralresourcesltd,,2,gem-company-E100002002924 | name-gcmt-0b1fadccfcdc9f29,Mineral Resources Ltd | Mineral Resources Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,exxaroresourcesltd,,2,gem-company-E100001000774 | name-gcmt-d3cf2a063674717c,Exxaro Resources Ltd | Exxaro Resources Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,smallshareholders,,2,gem-company-E100001015587 | name-gcmt-f2fb41ae027a6e0d,small shareholder(s) | small shareholder(s),POSSIBLE_DUPLICATE_NOT_MERGED
+company,chinabaowusteelgroupcoltd,,2,gem-company-E100001000472 | name-gcmt-3a045e940849ad19,China Baowu Steel Group Co Ltd | China Baowu Steel Group Co Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,severstalpjsc,,2,gem-company-E100000002088 | name-gcmt-cd22325f3062e0fe,Severstal PJSC | Severstal PJSC,POSSIBLE_DUPLICATE_NOT_MERGED
+company,mitsubishicorp,,2,gem-company-E100000000650 | name-gcmt-4a266cd3cdfc6bc3,Mitsubishi Corp | Mitsubishi Corp,POSSIBLE_DUPLICATE_NOT_MERGED
+company,tatasteelltd,,2,gem-company-E100001010018 | name-gcmt-50311a2cf79d3ec8,Tata Steel Ltd | Tata Steel Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,serajuddinco,,2,gem-company-E100001016270 | name-gcmt-dc52bf7f9bb62d31,Serajuddin & Co | Serajuddin & Co,POSSIBLE_DUPLICATE_NOT_MERGED
+company,steelauthorityofindialtd,,2,gem-company-E100001000703 | name-gcmt-9640eadfbc30311a,Steel Authority of India Ltd | Steel Authority of India Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,africanrainbowmineralsltd,,2,gem-company-E100001000633 | name-gcmt-aca3c2671d65c954,African Rainbow Minerals Ltd | African Rainbow Minerals Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,jswsteelltd,,2,gem-company-E100001000516 | name-gcmt-8f15c1d933622b6a,JSW Steel Ltd | JSW Steel Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,norilsknickelminingandmetallurgicalcompanypjsc,,2,gem-company-E100000000870 | name-gcmt-17755670356ddebd,Norilsk Nickel Mining and Metallurgical Company PJSC | Norilsk Nickel Mining and Metallurgical Company PJSC,POSSIBLE_DUPLICATE_NOT_MERGED
+company,vedantaltd,,2,gem-company-E100001000479 | name-gcmt-9c4b3101839abb61,Vedanta Ltd | Vedanta Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,rungtasonspvtltd,,2,gem-company-E100001010016 | name-gcmt-41bf0190e1e7c854,Rungta Sons Pvt Ltd | Rungta Sons Pvt Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,nationalmineraldevelopmentcorpltd,,2,gem-company-E100001000686 | name-gcmt-e365e7d2377ebcdb,National Mineral Development Corp Ltd | National Mineral Development Corp Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,clevelandcliffsinc,,3,gem-company-E100001000649 | name-gcmt-b4fdb722f1029d64 | name-gcmt-4b422b653986bc59,Cleveland-Cliffs Inc | Cleveland-Cliffs Inc | Cleveland Cliffs Inc,POSSIBLE_DUPLICATE_NOT_MERGED
+company,jindalsteelltd,,2,gem-company-E100001000439 | name-gcmt-df2e283dce712c15,Jindal Steel Ltd | Jindal Steel Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,vietnamnationalcoalandmineralindustriesholdingcorpltd,,2,gem-company-E100001000537 | name-gcmt-3b757945badfadde,Vietnam National Coal and Mineral Industries Holding Corp Ltd | Vietnam National Coal and Mineral Industries Holding Corp Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,kokspjsc,,2,gem-company-E100000130895 | name-gcmt-16695766d24c02b1,KOKS PJSC | KOKS PJSC,POSSIBLE_DUPLICATE_NOT_MERGED
+company,glencoreplc,,2,gem-company-E100001000400 | name-gcmt-c1b7992f8732cef2,Glencore PLC | Glencore PLC,POSSIBLE_DUPLICATE_NOT_MERGED
+company,adityabirlamanagementcorporationpvtltd,,2,gem-company-E100000120031 | name-gcmt-9d8e2a4e3517abab,Aditya Birla Management Corporation Pvt Ltd | Aditya Birla Management Corporation Pvt Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,farringfordfoundation,,2,gem-company-E100002004739 | name-gcmt-e637c000a196edf4,Farringford Foundation | Farringford Foundation,POSSIBLE_DUPLICATE_NOT_MERGED
+company,gfgallianceltd,,2,gem-company-E100001000556 | name-gcmt-e85a443f46ba11ed,GFG Alliance Ltd | GFG Alliance Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,erdenesmongolllc,,2,gem-company-E100000120428 | name-gcmt-7d9d0df0179f0a68,Erdenes Mongol LLC | Erdenes Mongol LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+company,magnitogorskiymetallurgicheskiykombinatpjsc,,2,gem-company-E100000002080 | name-gcmt-fc51077a5f01d854,Magnitogorskiy Metallurgicheskiy Kombinat PJSC | Magnitogorskiy Metallurgicheskiy Kombinat PJSC,POSSIBLE_DUPLICATE_NOT_MERGED
+company,birlacorporationltd,,2,gem-company-E100000131391 | name-gcmt-75a72f35ea2199fa,Birla Corporation Ltd | Birla Corporation Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,qazaqstansteelgroupllp,,2,gem-company-E100002003233 | name-gcmt-5cfc5a40d682b765,Qazaqstan Steel Group LLP | Qazaqstan Steel Group LLP,POSSIBLE_DUPLICATE_NOT_MERGED
+company,afrimatltd,,2,gem-company-E100000131228 | name-gcmt-66b13923324a5158,Afrimat Ltd | Afrimat Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,sardaenergymineralsltd,,2,gem-company-E100001000694 | name-gcmt-5be7bed00478e4c5,Sarda Energy & Minerals Ltd | Sarda Energy & Minerals Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,prakashindustriesltd,,2,gem-company-E100000121137 | name-gcmt-751c1b9074d95719,Prakash Industries Ltd | Prakash Industries Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,nationaldevelopmentcorp,,2,gem-company-E100000120912 | name-gcmt-c83c1e74f3c2936b,National Development Corp | National Development Corp,POSSIBLE_DUPLICATE_NOT_MERGED
+company,altoshornosdemexicosabdecv,,2,gem-company-E100001010310 | name-gcmt-621278e2eb709666,Altos Hornos de Mexico SAB de CV | Altos Hornos De Mexico SAB de CV,POSSIBLE_DUPLICATE_NOT_MERGED
+company,myanmareconomiccorp,,2,gem-company-E100000131956 | name-gcmt-1d64ecf1b809263e,Myanmar Economic Corp | Myanmar Economic Corp,POSSIBLE_DUPLICATE_NOT_MERGED
+company,koçholdingaş,,2,gem-company-E100000001063 | name-gcmt-99cd1d8afad16e69,Koç Holding AŞ | Koç Holding AŞ,POSSIBLE_DUPLICATE_NOT_MERGED
+company,chowguleandcompanypvtltd,,2,gem-company-E100000131484 | name-gcmt-d9dc16935269ab70,Chowgule and Company Pvt Ltd | Chowgule and Company Pvt Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,sumitomocorp,,2,gem-company-E100000000657 | name-gcmt-b999b9469697cb68,Sumitomo Corp | Sumitomo Corp,POSSIBLE_DUPLICATE_NOT_MERGED
+company,bigdenterprisesinc,,2,name-gcmt-6e4c42a592ff5b0e | name-gcmt-14a6d382c93c42a6,"Big D Enterprises INC | Big D Enterprises, Inc",POSSIBLE_DUPLICATE_NOT_MERGED
+company,civilllc,,2,name-gcmt-e56bf1ed0c363a14 | name-gcmt-0c1295ad1ce01f0e,"Civil LLC | Civil, LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+company,blackmountainenergyllc,,2,name-gcmt-5c65b11753bc8746 | name-gcmt-21b266f2e1031e2f,"Black Mountain Energy LLC | Black Mountain Energy, LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+company,robindaleenergyservicesinc,,2,name-gcmt-fdb094ac2323b0a9 | name-gcmt-e80992133b11d895,"Robindale Energy Services Inc | Robindale Energy Services, Inc.",POSSIBLE_DUPLICATE_NOT_MERGED
+company,ccucoalandconstructionllc,,2,name-gcmt-4d47a7cbd7828c4b | name-gcmt-718fd2cbb1fcbc36,CCU Coal and Construction LLC | CCU Coal and Construction LLC.,POSSIBLE_DUPLICATE_NOT_MERGED
+company,extraenergyinc,,2,name-gcmt-41ebba50a0f669d1 | name-gcmt-3d9ffa0248929e63,"Extra Energy Inc | Extra Energy, Inc.",POSSIBLE_DUPLICATE_NOT_MERGED
+company,clintwoodjodllc,,2,name-gcmt-c445c9f85ec772f7 | name-gcmt-908d1a07a1c966f3,"Clintwood JOD LLC | Clintwood JOD, LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+company,ckjenterprisesinc,,2,name-gcmt-849e7198f6894f1c | name-gcmt-c91a625d5d795f9e,"CKJ Enterprises Inc | CKJ Enterprises, Inc",POSSIBLE_DUPLICATE_NOT_MERGED
+company,barnetteenergyllc,,2,name-gcmt-7b43d980c8b18739 | name-gcmt-7c395ed325a25a3e,"Barnette Energy LLC | Barnette Energy, LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+company,activeresourcesinc,,2,name-gcmt-93ce70d3116265c0 | name-gcmt-0d6c0ef241114cc6,"Active Resources Inc | Active Resources, Inc.",POSSIBLE_DUPLICATE_NOT_MERGED
+company,neiswongerconstructioninc,,3,name-gcmt-a1fb0b63e53923a0 | name-gcmt-c14e4922808b3f47 | name-gcmt-1eae83a85193edfd,"Neiswonger Construction Inc | Neiswonger Construction, Inc. | Neiswonger Construction Inc.",POSSIBLE_DUPLICATE_NOT_MERGED
+company,cahabaresourcesllc,,2,name-gcmt-7b1ae93845fd9f3e | name-gcmt-9d5571fd5cb00423,"Cahaba Resources LLC | Cahaba Resources, LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+company,lexingtoncoalcompanyllc,,2,name-gcmt-92e0e0f778792f02 | name-gcmt-61815956136c6992,"Lexington Coal Company LLC | Lexington Coal Company, LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+company,coalmacllc,,3,name-gcmt-ac974070e54acdd4 | name-gcmt-17adb53a4ef3155b | name-gcmt-9506d3869d47f22c,Coal Mac LLC | Coal Mac LLC. | Coal-Mac LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+company,yellowhammerenergysolutionsllc,,2,name-gcmt-6add5a8916b61625 | name-gcmt-d9856e2ce9a766c0,"Yellowhammer Energy Solutions LLC | Yellowhammer Energy Solutions, LLC.",POSSIBLE_DUPLICATE_NOT_MERGED
+company,agcoalcorporation,,2,name-gcmt-ed5e68d735c35684 | name-gcmt-928b589b49ba0b8b,A & G Coal Corporation | A&G Coal Corporation,POSSIBLE_DUPLICATE_NOT_MERGED
+company,signalresourcesllc,,2,name-gcmt-53b2a646f36ceb71 | name-gcmt-adb65fa6791d6ae8,"Signal Resources LLC | Signal Resources, LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+company,torchlightadvancedfuelsinc,,2,name-gcmt-7d56b7cbc1e991e8 | name-gcmt-f917663f00dff247,Torchlight Advanced Fuels Inc | TORCHLIGHT ADVANCED FUELS INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+company,powerchina,,2,name-gcmt-a2dd645bcad1dc8c | name-gcmt-eed5abd1ba3e2ced,PowerChina | Power China,POSSIBLE_DUPLICATE_NOT_MERGED
+company,roxcoalinc,,4,name-gcmt-078222b67d08abfe | name-gcmt-caa3deb754d7483f | name-gcmt-c7f005b6f6ddbdf5 | name-gcmt-ec4c58c2ef7c6fc7,"RoxCoal Inc | RoxCoal, Inc | ROXCOAL INC. | RoxCoal, Inc.",POSSIBLE_DUPLICATE_NOT_MERGED
+company,bluegrassnaturalresourcesllc,,2,name-gcmt-b2f0f7a8a58efc8a | name-gcmt-94b7730d71bf8f39,"Bluegrass Natural Resources LLC | Bluegrass Natural Resources, LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+company,nufacminingcompanyinc,,2,name-gcmt-22dea24e1fd6db0e | name-gcmt-dd02df68069672c7,"Nufac Mining Company Inc | NuFac Mining Company, Inc.",POSSIBLE_DUPLICATE_NOT_MERGED
+company,gscoalcompanyinc,,2,name-gcmt-180d1768f2df830e | name-gcmt-9f8dc9790e5d29ab,G&S Coal Company Inc | G & S Coal Company Inc,POSSIBLE_DUPLICATE_NOT_MERGED
+company,twinstatemininginc,,2,name-gcmt-4fa6c97158f4be91 | name-gcmt-3f8c26d865b09405,"Twin State Mining Inc | Twin State Mining, Inc.",POSSIBLE_DUPLICATE_NOT_MERGED
+company,mtcarmelcogeninc,,2,name-gcmt-ac5b10004df8ddf1 | name-gcmt-1c6f8865e89561d3,Mt Carmel Co-Gen Inc | Mt Carmel Cogen Inc,POSSIBLE_DUPLICATE_NOT_MERGED
+company,libertymanagementllc,,2,name-gcmt-091ea6a6520a9805 | name-gcmt-de2719cd97ec6268,"Liberty Management LLC | Liberty Management, L.L.C.",POSSIBLE_DUPLICATE_NOT_MERGED
+company,arjconstructioncompanyinc,,2,name-gcmt-08fe7fe63e18bb10 | name-gcmt-cb649a7ce4ff333b,"ARJ Construction Company Inc | ARJ Construction Company, Inc.",POSSIBLE_DUPLICATE_NOT_MERGED
+company,reckoningreclamationllc,,2,name-gcmt-aeb1a6927953e17f | name-gcmt-0e219d7d7524b70d,"Reckoning Reclamation LLC | Reckoning Reclamation, LLC.",POSSIBLE_DUPLICATE_NOT_MERGED
+company,atlanticcarbongroupinc,,2,name-gcmt-d35e6a3ece6f59ad | name-gcmt-d7f834eeccc33079,"Atlantic Carbon Group Inc | Atlantic Carbon Group, Inc.",POSSIBLE_DUPLICATE_NOT_MERGED
+company,solarsourcesminingllc,,2,name-gcmt-47b38edd2447499d | name-gcmt-a7eb211afd5edfd5,"Solar Sources Mining LLC | Solar Sources Mining, LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+company,marforkcoalcompanyllc,,2,name-gcmt-26cc276b62ecba2c | name-gcmt-14f47c2611a7a7d4,"Marfork Coal Company LLC | Marfork Coal Company, LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+company,ravencrestcontractingllc,,2,name-gcmt-54bf0e318d6867f5 | name-gcmt-cf92956fca3a9773,"Raven Crest Contracting LLC | Raven Crest Contracting, LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+company,southforkcoalcollc,,2,name-gcmt-c9d6982d707cc6ea | name-gcmt-cd014ef975448bf0,"South Fork Coal Co., LLC | South Fork Coal Co LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+company,rockwellminingllc,,2,name-gcmt-c96f702b556adadd | name-gcmt-c63e7788de5e46b5,"Rockwell Mining LLC | Rockwell Mining, LLC.",POSSIBLE_DUPLICATE_NOT_MERGED
+company,indenelemestablishment,,2,name-gcmt-fb8f2e7cd1ef3dd7 | gem-company-E100002021919,Indenelem establishment | Indenelem establishment,POSSIBLE_DUPLICATE_NOT_MERGED
+company,guangdonghengjianinvestmentholdingcoltd,,2,name-gcmt-072d500d600ab5bb | gem-company-E100000000194,Guangdong Hengjian Investment Holding Co Ltd | Guangdong Hengjian Investment Holding Co Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,nallyhamiltonenterprisesinc,,3,name-gcmt-0a41f95adac6028d | name-gcmt-f70a353af54d2d29 | name-gcmt-9489563175903251,"Nally & Hamilton Enterprises Inc | Nally & Hamilton Enterprises, Inc. | Nally & Hamilton Enterprises Inc.",POSSIBLE_DUPLICATE_NOT_MERGED
+company,hendricksonequipmentinc,,2,name-gcmt-365f2d351855b0e5 | name-gcmt-720cd4ee63946a2b,"Hendrickson Equipment Inc | Hendrickson Equipment, Inc.",POSSIBLE_DUPLICATE_NOT_MERGED
+company,meijinenergygroupcoltd,,2,name-gcmt-6edfd26687aad1dc | gem-company-E100000123821,Meijin Energy Group Co Ltd | Meijin Energy Group Co Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,jfeholdingsinc,,2,name-gcmt-c9c5ab82898005d3 | gem-company-E100000000643,JFE Holdings Inc | JFE Holdings Inc,POSSIBLE_DUPLICATE_NOT_MERGED
+company,eaglehighwallminingsystemsllc,,2,name-gcmt-e2469e9db9880bbe | name-gcmt-e620a999eadbd0b8,"Eagle Highwall Mining Systems LLC | Eagle Highwall Mining Systems, LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+company,rashtriyaispatnigamltd,,2,name-gcmt-ee5a19e8a10ba631 | gem-company-E100000001935,Rashtriya Ispat Nigam Ltd | Rashtriya Ispat Nigam Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,polatkömüraş,,2,name-gcmt-3d2ab39a2c558653 | name-gcmt-8b66b3a0fa44dcf1,Polat Kömür AŞ | Polat Kömür A.Ş.,POSSIBLE_DUPLICATE_NOT_MERGED
+company,yangquancoalindustrygroup,,2,name-gcmt-74632f76bec44996 | name-gcmt-6538c657dee6f297,Yangquan Coal Industry Group | Yang Quan Coal Industry Group,POSSIBLE_DUPLICATE_NOT_MERGED
+company,jaibalajiindustriesltd,,2,name-gcmt-4c5838894c84d8bc | gem-company-E100000130703,Jai Balaji Industries Ltd | Jai Balaji Industries Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,jswshippinglogisticspvtltd,,2,name-gcmt-c29976c874e81139 | gem-company-E100001016144,JSW Shipping & Logistics Pvt Ltd | JSW Shipping & Logistics Pvt Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,yankuangenergygroupcoltd,,2,name-gcmt-2f06cb6a9817ee44 | name-gcmt-db41bd5bef871511,"Yankuang Energy Group Co., Ltd. | Yankuang Energy Group Co Ltd",POSSIBLE_DUPLICATE_NOT_MERGED
+company,carbonesdelzuliasa,,2,name-gcmt-caec38337833a9b6 | name-gcmt-6116884618a73cee,"Carbones del Zulia, S.A. | Carbones del Zulia SA",POSSIBLE_DUPLICATE_NOT_MERGED
+company,zhalainuoercoalindustrycompany,,2,name-gcmt-4e43f8b53834bf29 | name-gcmt-952195e386f71edf,Zhalainuo'er Coal Industry Company | Zhalai Nuoer Coal Industry Company,POSSIBLE_DUPLICATE_NOT_MERGED
+company,industrialdevelopmentcorporationofsouthafricaltd,,2,name-gcmt-cec6848ff8c2d429 | gem-company-E100001000576,Industrial Development Corporation of South Africa Ltd | Industrial Development Corporation of South Africa Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,akçadağinşaatenerjimadencilikaş,,2,name-gcmt-7e877e332ca23a50 | name-gcmt-4826a16333de6d51,Akçadağ İnşaat Enerji Madencilik A.Ş. | Akçadağ İnşaat Enerji Madencilik AŞ,POSSIBLE_DUPLICATE_NOT_MERGED
+company,ordosbayinmengkeinvestmentgroup,,2,name-gcmt-e55f4c5a519d4b31 | name-gcmt-8b7e5869fe1ec921,Ordos Bayin Mengke Investment Group | Ordos Bayinmengke Investment Group,POSSIBLE_DUPLICATE_NOT_MERGED
+company,mongoliaenergycorporationmoenco,,2,name-gcmt-1cc5c5cde49cf2ef | name-gcmt-d4e24e589524d4d7,Mongolia Energy Corporation (MoEnCo) | Mongolia Energy Corporation (MoEnCo ),POSSIBLE_DUPLICATE_NOT_MERGED
+company,shandongcaixinassetoperationcoltd,,2,name-gcmt-bfbfc447528923bf | gem-company-E100000124453,Shandong Caixin Asset Operation Co Ltd | Shandong Caixin Asset Operation Co Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,shandongguohuiinvestmentcoltd,,2,name-gcmt-48a956d510579a49 | gem-company-E100000124585,Shandong Guohui Investment Co Ltd | Shandong Guohui Investment Co Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,rashmimetaliksltd,,2,name-gcmt-044a298e44fa6816 | gem-company-E100000130890,Rashmi Metaliks Ltd | Rashmi Metaliks Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,rashmicementltd,,2,name-gcmt-80d14e5f48c99eeb | gem-company-E100001012079,Rashmi Cement Ltd | Rashmi Cement Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,orissametalikspvtltd,,2,name-gcmt-7d9f457357f92278 | gem-company-E100001012161,Orissa Metaliks Pvt Ltd | Orissa Metaliks Pvt Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,cimmcovinimaypvtltd,,2,name-gcmt-a22e891834d8ac28 | gem-company-E100001012163,Cimmco Vinimay Pvt Ltd | Cimmco Vinimay Pvt Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,bholebabaconsultantsllp,,2,name-gcmt-06f7ef059520eef3 | gem-company-E100001012164,Bholebaba Consultants LLP | Bholebaba Consultants LLP,POSSIBLE_DUPLICATE_NOT_MERGED
+company,daffodilplazapvtltd,,2,name-gcmt-07f1b77c1709ab5e | gem-company-E100001012165,Daffodil Plaza Pvt Ltd | Daffodil Plaza Pvt Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,rashidhansalespvtltd,,2,name-gcmt-930b69506f234c0f | gem-company-E100001012166,Rashidhan Sales Pvt Ltd | Rashidhan Sales Pvt Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,optimistcommosalepvtltd,,2,name-gcmt-067103a140e64572 | gem-company-E100001012168,Optimist Commosale Pvt Ltd | Optimist Commosale Pvt Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,neweracommotradepvtltd,,2,name-gcmt-a56f1363a2d0c765 | gem-company-E100001012169,Newera Commotrade Pvt Ltd | Newera Commotrade Pvt Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,rashmiinfrastructurepvtltd,,2,name-gcmt-8b0c5d767bac1719 | gem-company-E100001012170,Rashmi Infrastructure Pvt Ltd | Rashmi Infrastructure Pvt Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,rashmiironindustriespvtltd,,2,name-gcmt-cf25683fe0f6cf6e | gem-company-E100001012171,Rashmi Iron Industries Pvt Ltd | Rashmi Iron Industries Pvt Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,zespołelektrownipatnowadamowkoninzepakgroup,,2,name-gcmt-48f6afc413122343 | name-gcmt-5e70b1ee0a581ee6,ZespoŁ Elektrowni Patnow-Adamow-Konin (ZE PAK Group) | ZespoŁ Elektrowni Patnow-Adamow-Konin [ZE PAK Group],POSSIBLE_DUPLICATE_NOT_MERGED
+company,orientalfortunebeijinginvestmentmanagementcompany,,2,name-gcmt-15e8c3ba0f925869 | name-gcmt-e63bf4b5cc3ce207,Oriental Fortune (Beijing) Investment Management Company | Oriental Fortune [Beijing] Investment Management Company,POSSIBLE_DUPLICATE_NOT_MERGED
+company,jinnengholdingcoalindustrygroupxuangangcoalandelectricitycompany,,2,name-gcmt-c35d76f91c6ae396 | name-gcmt-e03ff54d009a56e5,Jinneng Holding Coal Industry Group Xuangang Coal and Electricity Company. | Jinneng Holding Coal Industry Group Xuangang Coal and Electricity Company,POSSIBLE_DUPLICATE_NOT_MERGED
+company,çeliklerorhanelitunçbilekelektriküretimaş,,2,name-gcmt-3651bade8bc0bde4 | name-gcmt-eb96407e81916cd3,Çelikler Orhaneli Tunçbilek Elektrik Üretim A.Ş | Çelikler Orhaneli Tunçbilek Elektrik Üretim A.Ş.,POSSIBLE_DUPLICATE_NOT_MERGED
+company,jinnengholdinggroupcoltd,,2,name-gcmt-703a40719ce5c430 | gem-company-E100000001543,Jinneng Holding Group Co Ltd | Jinneng Holding Group Co Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,srssresourcesminsas,,2,name-gcmt-cbe12a98b4e81cfa | name-gcmt-7ed86797ffda0253,SRSS Resources Min S.A.S. | SRSS Resources Min SAS,POSSIBLE_DUPLICATE_NOT_MERGED
+company,sunflagironandsteelcoltd,,2,name-gcmt-4ee146f1bd7c40ae | gem-company-E100001000589,Sunflag Iron and Steel Co Ltd | Sunflag Iron and Steel Co Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,adhunikmetaliksltd,,2,name-gcmt-080cc43b248090c9 | gem-company-E100001000387,Adhunik Metaliks Ltd | Adhunik Metaliks Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,mahanadasupplierspvtltd,,2,name-gcmt-19c08f7845245220 | gem-company-E100001016502,Mahanada Suppliers Pvt Ltd | Mahanada Suppliers Pvt Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,sunrwothstockspvtltd,,2,name-gcmt-45042043bd8b0ae9 | gem-company-E100001016503,Sunrwoth Stocks Pvt Ltd | Sunrwoth Stocks Pvt Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,carbomassas,,2,name-gcmt-0e2c4bd3ac9e9c51 | name-gcmt-93d16294ffdfd221,Carbomas S.A.S | Carbomas SAS,POSSIBLE_DUPLICATE_NOT_MERGED
+company,lctenergylp,,2,name-gcmt-4166640f44e62520 | name-gcmt-a614ac16f8cef7eb,"LCT Energy LP | LCT Energy, LP",POSSIBLE_DUPLICATE_NOT_MERGED
+company,sociedadcentraldeactivosminerossas,,2,name-gcmt-b5fe41d43e62953c | name-gcmt-255dae32a3c102aa,Sociedad Central de Activos Mineros S.A.S. | Sociedad Central de Activos Mineros SAS,POSSIBLE_DUPLICATE_NOT_MERGED
+company,ramacoresourcesllc,,2,name-gcmt-88f62e70f1391476 | name-gcmt-e380708f639a93d4,"Ramaco Resources LLC | Ramaco Resources, LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+company,knighthawkcoalllc,,2,name-gcmt-ef0b8a18ccca771b | name-gcmt-149097faf3bbd776,"Knight Hawk Coal LLC | Knight Hawk Coal, LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+company,beşleryenidoğuşmadencilikaş,,2,name-gcmt-bf5fd57f0ba3d0cd | name-gcmt-c8ebd2bbb8ae79f3,Beşler Yenidoğuş Madencilik A.Ş. | Beşler Yeni Doğuş Madencilik AŞ,POSSIBLE_DUPLICATE_NOT_MERGED
+company,başkentgölbaşımadencilikaş,,2,name-gcmt-4cdf94269a8bc81f | name-gcmt-751b622b50e0f76a,Başkent Gölbaşı Madencilik A.Ş. | Başkent Gölbaşı Madencilik AŞ,POSSIBLE_DUPLICATE_NOT_MERGED
+company,cardonessas,,2,name-gcmt-194a4e2e7a675f2f | name-gcmt-aa9d438d06338804,Cardones S.A.S | Cardones SAS,POSSIBLE_DUPLICATE_NOT_MERGED
+company,viengphoukhacoalminecoltd,,2,name-gcmt-e15748e5a5ddfb38 | name-gcmt-e5006efda35bd123,Vieng Phoukha Coal Mine Co. Ltd. | Vieng Phoukha Coal Mine Co Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,srsscoaltradingholdingssas,,2,name-gcmt-5df024fac9f4f0a6 | name-gcmt-792a57869950b207,SRSS & Coal Trading Holdings S.A.S. | SRSS & Coal Trading Holdings SAS,POSSIBLE_DUPLICATE_NOT_MERGED
+company,pavgorddoo,,2,name-gcmt-da6e63395024801d | gem-company-E100001013687,Pavgord d.o.o. | Pavgord doo,POSSIBLE_DUPLICATE_NOT_MERGED
+company,stateminingcorporationlimitedsmcl,,2,name-gcmt-5d8f4d0308bdf14f | name-gcmt-6383c20d60a578d1,State Mining Corporation Limited [SMCL] | State Mining Corporation Limited (SMCL),POSSIBLE_DUPLICATE_NOT_MERGED
+company,nicholasconturallc,,2,name-gcmt-e3793780a9bccae6 | name-gcmt-4fdc2ace1973d38c,"Nicholas Contura LLC | Nicholas-Contura, LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+company,greenbriermineralsllc,,3,name-gcmt-f6d1b5875ab7ba50 | name-gcmt-877f2135ae60c484 | name-gcmt-89c0bc0c1b0c0b7f,"Greenbrier Minerals, LLC | Greenbrier Minerals LLC | Greenbrier Minerals, LLC.",POSSIBLE_DUPLICATE_NOT_MERGED
+company,lexingtoncoalholdingsinc,,2,name-gcmt-0c0e6ab44e496bc0 | name-gcmt-5b297a9a92c46bef,"Lexington Coal Holdings, Inc | Lexington Coal Holdings Inc",POSSIBLE_DUPLICATE_NOT_MERGED
+company,pbdirtmoversinc,,4,name-gcmt-14e2ba593365d9d8 | name-gcmt-7c48ba143b47a5d0 | name-gcmt-2651a44997d487a8 | name-gcmt-d4cb209f2666f7e8,"P.B. DIRT MOVERS INC | P B Dirt Movers Inc. | PB Dirt Movers, Inc | PB Dirt Movers Inc",POSSIBLE_DUPLICATE_NOT_MERGED
+company,landfallmininginc,,2,name-gcmt-a70e830592c4f3e9 | name-gcmt-2d8636f9ebb9c2ec,Landfall Mining Inc. | Landfall Mining Inc,POSSIBLE_DUPLICATE_NOT_MERGED
+company,amerikohlmininginc,,3,name-gcmt-8e1ea11a256e4835 | name-gcmt-3d4522e645207bf6 | name-gcmt-cefef265f03f25d6,"Amerikohl Mining Inc | Amerikohl Mining, Inc | Amerikohl Mining Inc.",POSSIBLE_DUPLICATE_NOT_MERGED
+company,dixiefuelcompanyllc,,2,name-gcmt-8d41e1cf3ae16f59 | name-gcmt-5c94be1387b8dedf,"Dixie Fuel Company, LLC | Dixie Fuel Company LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+company,bwresourcesinc,,5,name-gcmt-c14b56e67e02ccc9 | name-gcmt-40e4c7834f53afd2 | name-gcmt-5472a4adaf649c27 | name-gcmt-13f7b3009ec6586f | name-gcmt-0a671d8b7cb8b5ec,"B&W Resources Inc | B & W Resources, Inc. | B&W Resources, Inc. | B & W Resources Inc | B&W Resources Inc.",POSSIBLE_DUPLICATE_NOT_MERGED
+company,sevenglobalinvestmentsas,,3,name-gcmt-692d21da7fa2d508 | name-gcmt-6d2ddcda58c6f6d7 | gem-company-E100001010410,Sev.en Global Investments a.s. | Sev.en Global Investments AS | Sev.en Global Investments AS,POSSIBLE_DUPLICATE_NOT_MERGED
+company,marforkcoalcompanyinc,,2,name-gcmt-53559b86a49f0d47 | name-gcmt-2ef7fc02c050e665,Marfork Coal Company Inc | Marfork Coal Company Inc.,POSSIBLE_DUPLICATE_NOT_MERGED
+company,pinebranchminingllc,,2,name-gcmt-eeb86b8ef344e4b2 | name-gcmt-6e8103fb9e169071,"Pine Branch Mining, LLC | Pine Branch Mining LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+company,peabodymidwestminingllc,,2,name-gcmt-91f1dca24f8ba0e5 | name-gcmt-a0af08da69e8a7de,"Peabody Midwest Mining, LLC | Peabody Midwest Mining LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+company,erpenvironmentalfundinc,,3,name-gcmt-c2b276a57af5a1d4 | name-gcmt-4e2f592dc736703a | name-gcmt-db59fed328949681,"ERP Environmental Fund, Inc. | ERP Environmental Fund Inc | ERP Environmental Fund Inc.",POSSIBLE_DUPLICATE_NOT_MERGED
+company,blackhawkminingllc,,2,name-gcmt-710d71104efe4d67 | name-gcmt-4a1d619adab2e175,Black Hawk Mining LLC | Blackhawk Mining LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+company,lodownenergyinc,,2,name-gcmt-8f6370e1d10ae921 | name-gcmt-5844d06fd9d47a89,"Lo Down Energy, Inc. | Lo Down Energy Inc",POSSIBLE_DUPLICATE_NOT_MERGED
+company,tackettcreekmininginc,,3,name-gcmt-67e89f5fac0ed7d9 | name-gcmt-3271d59660f4d8eb | name-gcmt-0a67370af6bfbbb5,"Tackett Creek Mining, Inc. | TackettCreek Mining, Inc. | Tackett Creek Mining Inc",POSSIBLE_DUPLICATE_NOT_MERGED
+company,revelationenergyllc,,3,name-gcmt-d4b805c6b3215417 | name-gcmt-05a2ef6aa88ed318 | name-gcmt-3ba68419feb43ff4,"Revelation Energy, LLC | Revelation Energy, LLC. | Revelation Energy LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+company,ramacoresourceslandholdingsllc,,2,name-gcmt-1eed8142ef90e665 | name-gcmt-47d8bdc37ad12b4d,"Ramaco Resources Land Holdings, LLC | Ramaco Resources Land Holdings LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+company,benscreekoperationswvllc,,2,name-gcmt-e7654a49cbc5224d | name-gcmt-a6287154e74472c0,"Ben's Creek Operations WV, LLC | Ben's Creek Operations WV LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+company,paramontconturallc,,2,name-gcmt-d8753bb67e34bf06 | name-gcmt-5462e814a5159ca7,"Paramont Contura LLC | Paramont Contura, LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+company,brooksrunminingcompanyllc,,2,name-gcmt-caa31c1e6a47edfb | name-gcmt-98fe52600cb0cd88,"Brooks Run Mining Company LLC | Brooks Run Mining Company, LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+company,southeasternlandllc,,2,name-gcmt-38c57b2d247c5bed | name-gcmt-ed9a78a0e8b4092d,"Southeastern Land LLC | Southeastern Land, LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+company,blackmountainresourcesllc,,2,name-gcmt-4960de81483c958f | name-gcmt-87d84e22f98f2149,"Black Mountain Resources, LLC | Black Mountain Resources LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+company,forceycoalinc,,2,name-gcmt-64ab4696d3bf10cb | name-gcmt-a96d974cfb5960cf,Forcey Coal Inc | Forcey Coal Inc.,POSSIBLE_DUPLICATE_NOT_MERGED
+company,tahitienergyinc,,2,name-gcmt-153dde8880e767bc | name-gcmt-5fa34a06528dcdd5,"Tahiti Energy, Inc. | Tahiti Energy Inc",POSSIBLE_DUPLICATE_NOT_MERGED
+company,rammcoalinc,,2,name-gcmt-4ebc1b676160f36f | name-gcmt-f9cdbee39e05d90c,RAMM Coal Inc | RAMM Coal Inc.,POSSIBLE_DUPLICATE_NOT_MERGED
+company,blackpearlmininginc,,2,name-gcmt-a8050bcf820f0a0c | name-gcmt-7adb2de2fc18b2e8,"Black Pearl Mining Inc | Black Pearl Mining, Inc.",POSSIBLE_DUPLICATE_NOT_MERGED
+company,charpaccoalcollc,,3,name-gcmt-9a6e4323de8ca7dd | name-gcmt-38e896b2bf99de25 | name-gcmt-59b4cff4e46736fd,"Char-Pac Coal Co, LLC | Char-Pac Coal Co LLC | Char-Pac Coal Co., LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+company,hampdencoalllc,,2,name-gcmt-74f62a8770393f96 | name-gcmt-7c12c4b25727e88a,"Hampden Coal LLC | HAMPDEN COAL, LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+company,tenncoinc,,3,name-gcmt-0c74fb51f9f6fd8d | name-gcmt-8875278101d59551 | name-gcmt-2e37c5fbe844d7b5,"TENNCO Inc | Tennco, Inc. | TENNCO INC.",POSSIBLE_DUPLICATE_NOT_MERGED
+company,highlandenergyinc,,2,name-gcmt-5814b981a34aaeb1 | name-gcmt-18d602b6a60d7f63,"Highland Energy, Inc. | Highland Energy Inc",POSSIBLE_DUPLICATE_NOT_MERGED
+company,dlminingcompanyllc,,2,name-gcmt-24eb5b1d6da6cf7f | name-gcmt-149f2f70d4f3a658,"D&L Mining Company,LLC | D&L Mining Company, LLC.",POSSIBLE_DUPLICATE_NOT_MERGED
+company,rjrminingcoinc,,2,name-gcmt-f12e8e596d4e0464 | name-gcmt-f2619e42d554ff93,"RJR Mining Co., Inc. | RJR Mining Co Inc",POSSIBLE_DUPLICATE_NOT_MERGED
+company,burningknobresourcesinc,,2,name-gcmt-b67be3c44f956e73 | name-gcmt-81481fe41316fa8e,"Burning Knob Resources, Inc. | BURNING KNOB RESOURCES INC.",POSSIBLE_DUPLICATE_NOT_MERGED
+company,consolofkentuckyinc,,2,name-gcmt-9560fc43f51e0c64 | name-gcmt-aa9c5f85edf2e222,CONSOL of Kentucky Inc. | Consol of Kentucky Inc,POSSIBLE_DUPLICATE_NOT_MERGED
+company,cheyenneenterprisesinc,,2,name-gcmt-a6e9a8c965a968dc | name-gcmt-177054148b81a5fc,Cheyenne Enterprises Inc | Cheyenne Enterprises Inc.,POSSIBLE_DUPLICATE_NOT_MERGED
+company,bedrockmineslp,,3,name-gcmt-264d1529e0604f7f | name-gcmt-2797c20ec65e7e3f | name-gcmt-26227b2996afd6c0,Bedrock Mines L.P. | Bedrock Mines L P | Bedrock Mines LP,POSSIBLE_DUPLICATE_NOT_MERGED
+company,energytechnologiesinc,,2,name-gcmt-dda965b3492268b4 | name-gcmt-fa7babeeff6db0e0,Energy Technologies Inc | Energy Technologies Inc.,POSSIBLE_DUPLICATE_NOT_MERGED
+company,aracomacoalcompanyllc,,2,name-gcmt-2aea78144f6e16a8 | name-gcmt-9834344e6138fa8e,"Aracoma Coal Company, LLC | Aracoma Coal Company LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+company,mammothcoalco,,2,name-gcmt-c7c28e4f8af7c10e | name-gcmt-fd88a423360446ff,Mammoth Coal Co. | Mammoth Coal Co,POSSIBLE_DUPLICATE_NOT_MERGED
+company,jjwelker,,2,name-gcmt-600cfbb2c22a2750 | name-gcmt-7bac1bc13bcfaee7,J & J Welker | J&J Welker,POSSIBLE_DUPLICATE_NOT_MERGED
+company,aldenresourcesllc,,2,name-gcmt-13900b8fb99d0a70 | name-gcmt-8ff79f475c87c0cf,"Alden Resources, LLC | Alden Resources LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+company,mountainsidecoalcoinc,,2,name-gcmt-89fb90ac2d0e0eea | name-gcmt-c0b925699e7ea8d2,"MOUNTAINSIDE COAL CO., INC | Mountainside Coal Co., Inc.",POSSIBLE_DUPLICATE_NOT_MERGED
+company,paramontcoalcompanyvirginiallc,,3,name-gcmt-15fd79731ca98da8 | name-gcmt-ef13d0f784ca3f48 | name-gcmt-5984fcb6c43c96ca,"Paramont Coal Company Virginia LLC | Paramont Coal Company Virginia, LLC | Paramont Coal Company Virginia, LLC.",POSSIBLE_DUPLICATE_NOT_MERGED
+company,warriormetcoalminingllc,,2,name-gcmt-3cc00fcf995a2f51 | name-gcmt-f72263544d2a796e,"Warrior Met Coal Mining LLC | Warrior Met Coal Mining, LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+company,riogroupinc,,2,name-gcmt-ee48d1353820a7a4 | name-gcmt-facc6004282fcfee,"Rio Group, Inc. | Rio Group Inc",POSSIBLE_DUPLICATE_NOT_MERGED
+company,beechwoodcoalllc,,2,name-gcmt-493c1dd04ba9734b | name-gcmt-447f39fcff990da7,"Beechwood Coal, LLC | Beechwood Coal LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+company,bestcoalinc,,2,name-gcmt-ce3d8bf03ed6b5a1 | name-gcmt-41183e343b1a7a13,Best Coal Inc. | Best Coal Inc,POSSIBLE_DUPLICATE_NOT_MERGED
+company,blackjewelllc,,2,name-gcmt-6b1fd45e1e9495a8 | name-gcmt-e0c9031877174afb,Blackjewel L.L.C. | Blackjewel LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+company,oxfordminingcollc,,2,name-gcmt-8a81edf0b0d246cf | name-gcmt-dc8486791c5d72c9,Oxford Mining Co LLC | Oxford Mining Co. LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+company,blackfireenergyinc,,2,name-gcmt-464fbbe6cd090872 | name-gcmt-e8f58eb966ff7d59,"Black Fire Energy, Inc. | Black Fire Energy Inc",POSSIBLE_DUPLICATE_NOT_MERGED
+company,harlancumberlandcoalcompanyllc,,2,name-gcmt-2c7a8d0cd171b7d9 | name-gcmt-15917f94f05c4ba1,"Harlan Cumberland Coal Company LLC | Harlan Cumberland Coal Company, LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+company,northernsoninc,,2,name-gcmt-1a610dd37a980345 | name-gcmt-945fd990883480dd,"Northern Son Inc | Northern Son, Inc.",POSSIBLE_DUPLICATE_NOT_MERGED
+company,rawcoalminingcompanyinc,,2,name-gcmt-f1fc31a17b047836 | name-gcmt-5cf575898adadb28,"Raw Coal Mining Company Inc | Raw Coal Mining Company, Inc",POSSIBLE_DUPLICATE_NOT_MERGED
+company,jrlcoalinc,,2,name-gcmt-53d0fd9ff1d76e78 | name-gcmt-126754e10b7c4e7d,"JRL Coal, INC. | JRL Coal Inc",POSSIBLE_DUPLICATE_NOT_MERGED
+company,apexenergyinc,,2,name-gcmt-034db138a06142be | name-gcmt-d982e02ea1d9b59b,"Apex Energy, Inc. | Apex Energy Inc",POSSIBLE_DUPLICATE_NOT_MERGED
+company,kdcrainsonsinc,,2,name-gcmt-44e92363aa8e567e | name-gcmt-05e9ad68f2d5ac95,"K.D. Crain & Sons, Inc. | K. D. Crain & Sons, Inc.",POSSIBLE_DUPLICATE_NOT_MERGED
+company,olddominionenergyinc,,2,name-gcmt-e651779aeb5cc8a6 | name-gcmt-1dd274c9f36c1c79,"Old Dominion Energy, Inc. | Old Dominion Energy Inc",POSSIBLE_DUPLICATE_NOT_MERGED
+company,continentalcoalinc,,2,name-gcmt-20d50168473a5002 | name-gcmt-65d206f70c1b8bdb,"Continental Coal, Inc. | Continental Coal Inc",POSSIBLE_DUPLICATE_NOT_MERGED
+company,mountainfuelsinc,,2,name-gcmt-33feea8e5c4c4d3d | name-gcmt-db37524d0cfb6a64,Mountain Fuels Inc. | Mountain Fuels Inc,POSSIBLE_DUPLICATE_NOT_MERGED
+company,kentuckylandresourcesinc,,2,name-gcmt-da5994d62b71ef90 | name-gcmt-8d6b5960e5ef0e8a,"Kentucky Land Resources Inc | Kentucky Land Resources, Inc.",POSSIBLE_DUPLICATE_NOT_MERGED
+company,noblereclamationllc,,2,name-gcmt-b9f3256b9a4eb8a9 | name-gcmt-ea717af11cab80bc,"Noble Reclamation LLC | Noble Reclamation, LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+company,tamsmanagementinc,,2,name-gcmt-821f0549ed5a8c1a | name-gcmt-280ff2e488a153e1,Tams Management Inc. | Tams Management Inc,POSSIBLE_DUPLICATE_NOT_MERGED
+company,sandcontractingllc,,2,name-gcmt-e15da249612e1cea | name-gcmt-f199e45e1edb9d31,"Sand Contracting LLC | Sand Contracting, LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+company,jscoalllc,,2,name-gcmt-4dd81608c3d67264 | name-gcmt-2730f3659fd4d7a7,"J & S Coal, LLC | J & S Coal LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+company,rexcoalcompanyinc,,2,name-gcmt-4ce4924226d8b8af | name-gcmt-738970204cadd586,"Rex Coal Company, Inc. | RexCoal Company, Inc.",POSSIBLE_DUPLICATE_NOT_MERGED
+company,jrcmininginc,,2,name-gcmt-5157f963af3bb7d7 | name-gcmt-fdde4efe8599ed2d,"JRC Mining, Inc. | JRC Mining Inc",POSSIBLE_DUPLICATE_NOT_MERGED
+company,frasurecreekminingllc,,2,name-gcmt-b4c26144a23a6d9e | name-gcmt-4a93052bafc62aa2,"Frasure Creek Mining LLC | Frasure Creek Mining, LLC.",POSSIBLE_DUPLICATE_NOT_MERGED
+company,coalriverminingllc,,2,name-gcmt-193ce92d8c11397b | name-gcmt-239568911e3fe6a1,"Coal River Mining, LLC | Coal River Mining LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+company,spartanminingcompanyllc,,2,name-gcmt-93f88dcbee1890cc | name-gcmt-175e8fcfc112c4ea,"Spartan Mining Company LLC | Spartan Mining Company, LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+company,contracthighwallminingllc,,2,name-gcmt-a9cf55d5afeeb695 | name-gcmt-0ed6904c6c858b6f,"Contract Highwall Mining LLC | Contract Highwall Mining, LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+company,eastruncoalco,,2,name-gcmt-ed484d7320aa066c | name-gcmt-e390762e6912441d,East Run Coal Co. | East Run Coal Co,POSSIBLE_DUPLICATE_NOT_MERGED
+company,sunenergygroupllc,,2,name-gcmt-fef2c438d0c24b99 | name-gcmt-ffcada71f3074d88,"Sun Energy Group, LLC | Sun Energy Group LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+company,quinwoodcoalcompanyllc,,2,name-gcmt-a1e4a368a0cbcc09 | name-gcmt-1e03da24871f5df8,"Quinwood Coal Company, LLC | Quinwood Coal Company LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+company,westernkentuckymineralsinc,,2,name-gcmt-62ac5be593799a18 | name-gcmt-ab8437e8597ac911,"Western Kentucky Minerals Inc | Western Kentucky Minerals, Inc.",POSSIBLE_DUPLICATE_NOT_MERGED
+company,alico,,2,name-gcmt-b7cdad9aa04aee24 | name-gcmt-1142bc0c90f7aadb,Alico | Ali Co.,POSSIBLE_DUPLICATE_NOT_MERGED
+company,7enterprisesllc,,2,name-gcmt-fb83834f884acf6b | name-gcmt-dfbed7c3f8b17845,"7 Enterprises LLC | 7 Enterprises, LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+company,redhawkminingllc,,2,name-gcmt-3ed4308fb10202fd | name-gcmt-07bca053cf2648d3,"Redhawk Mining, LLC | Redhawk Mining LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+company,warriorcoalllc,,2,name-gcmt-4e844e305563b9ed | name-gcmt-9c573a80e3176a7f,Warrior Coal LLC. | Warrior Coal LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+company,nallyandhamiltonenterprisesinc,,2,name-gcmt-078a6a06b2136d62 | name-gcmt-0572d005ab598509,"Nally and Hamilton Enterprises Inc | Nally and Hamilton Enterprises, Inc",POSSIBLE_DUPLICATE_NOT_MERGED
+company,littleseamminingcompanyinc,,2,name-gcmt-9c2f517e9cebd2e4 | name-gcmt-27184eeceb816a4a,"Little Seam Mining Company, Inc. | Little Seam Mining Company Inc",POSSIBLE_DUPLICATE_NOT_MERGED
+company,acpky1llc,,2,name-gcmt-8e206403b08d79eb | name-gcmt-caf6a3549d1109b0,"ACPKY1, LLC | ACPKY1,LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+company,humphreysenterprisesinc,,3,name-gcmt-b0d8a13eb122357b | name-gcmt-1f4e57e28419fc60 | name-gcmt-5b35efe8de37aabe,"Humphreys Enterprises Inc | Humphreys Enterprises, Inc. | Humphreys Enterprises, Inc,",POSSIBLE_DUPLICATE_NOT_MERGED
+company,mrmmininginc,,2,name-gcmt-a9e230612f42e0c6 | name-gcmt-7709667c21acadc6,MRM Mining Inc | MRM Mining Inc.,POSSIBLE_DUPLICATE_NOT_MERGED
+company,rockhousecreekdevelopmentllc,,2,name-gcmt-948338483ef6076c | name-gcmt-33afcc40f8c7956c,"Rockhouse Creek Development LLC | Rockhouse Creek Development, LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+company,samuelcoalcoinc,,2,name-gcmt-138c53c5b0f53d2b | name-gcmt-26afadd5ae5a649d,"Samuel Coal Co., Inc | Samuel Coal Co., Inc.",POSSIBLE_DUPLICATE_NOT_MERGED
+company,blueridgeexcavatingllc,,2,name-gcmt-3ae8ccbda6100625 | name-gcmt-935f00fe5b13f7d6,"Blue Ridge Excavating, LLC | Blue Ridge Excavating LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+company,coalburgenterprisesinc,,2,name-gcmt-00ffa574ab74616c | name-gcmt-02c0b5fcc2fa7b8e,Coalburg Enterprises Inc. | Coalburg Enterprises Inc,POSSIBLE_DUPLICATE_NOT_MERGED
+company,sallyanncoalcompanyinc,,2,name-gcmt-6d869ec1f5f1d174 | name-gcmt-b1b6e2d55e699d60,"Sally Ann Coal Company, Inc. | Sally Ann Coal Company Inc",POSSIBLE_DUPLICATE_NOT_MERGED
+company,bluediamondminingllc,,2,name-gcmt-9b624526f3294876 | name-gcmt-e653787f5cfc4ebf,"Blue Diamond Mining, LLC | Blue Diamond Mining LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+company,readinganthraciteco,,2,name-gcmt-67a0ba2c731e4db5 | name-gcmt-91c0c55e5f60f69a,Reading Anthracite Co. | Reading Anthracite Co,POSSIBLE_DUPLICATE_NOT_MERGED
+company,grupoacererodelnortesadecv,,3,name-gcmt-c192aefac793d823 | name-gcmt-bd4a74d67cb605d9 | gem-company-E100000131250,Grupo Acerero del Norte S.A. de C.V | Grupo Acerero del Norte SA de CV | Grupo Acerero del Norte SA de CV,POSSIBLE_DUPLICATE_NOT_MERGED
+company,carbominesas,,3,name-gcmt-63cf6286a952431a | name-gcmt-436699997a694a5b | name-gcmt-6a4333a954b507d3,Carbomine S.A.S. | Carbomine SAS | Carbomine S.A.S,POSSIBLE_DUPLICATE_NOT_MERGED
+company,lafortunacoalsas,,2,name-gcmt-e10cbb23318707fd | name-gcmt-bb161569dac0e467,La Fortuna Coal S.A.S | La Fortuna Coal SAS,POSSIBLE_DUPLICATE_NOT_MERGED
+company,weglokokssa,,2,name-gcmt-634a9e2e2dd79554 | gem-company-E100000130785,Weglokoks SA | Weglokoks SA,POSSIBLE_DUPLICATE_NOT_MERGED
+company,capitalcoalcorp,,2,name-gcmt-286883baf7a45f74 | name-gcmt-45da21b67711feec,CAPITAL COAL CORP. | Capital Coal Corp,POSSIBLE_DUPLICATE_NOT_MERGED
+company,eaglehorizonresourcesllc,,2,name-gcmt-5a0fb4763b1b54f4 | name-gcmt-9c2e663ba1a78e4c,"Eagle Horizon Resources, LLC | Eagle Horizon Resources LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+company,coalmacmetllc,,2,name-gcmt-d9cd226203fc1c35 | name-gcmt-dd8925db58c5a605,"Coal-Mac MET, LLC | Coal-Mac MET LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+company,catcoalsas,,2,name-gcmt-fb344964793eb8d1 | name-gcmt-dab6d38cba69ef9f,Catcoal S.A.S | Catcoal SAS,POSSIBLE_DUPLICATE_NOT_MERGED
+company,97miningholdingcompanyllc,,2,name-gcmt-e69d704e5898421d | name-gcmt-d8ecc206ffec12bf,"97 Mining Holding Company, LLC | 97 Mining Holding Company LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+company,magdalinikarapatielenikarapati,,2,name-gcmt-10c2415c59d94428 | name-gcmt-9a164dda96a5ebdf,Magdalini Karapati & Eleni Karapati | Magdalini Karapati - Eleni Karapati,POSSIBLE_DUPLICATE_NOT_MERGED
+company,gürminenerjimadencilikaş,,2,name-gcmt-2f2b8dc5aaa08723 | name-gcmt-bb7277664a088f89,Gürmin Enerji Madencilik A.Ş | Gürmin Enerji Madencilik AŞ,POSSIBLE_DUPLICATE_NOT_MERGED
+company,altoshornosdeméxicoahmsagrupoacererodelnortesadecv,,2,name-gcmt-4e4154e6159543ac | name-gcmt-bb277ee02dded14f,Altos Hornos de México [AHMSA] - Grupo Acerero del Norte S.A. de C.V | Altos Hornos de México (AHMSA) - Grupo Acerero del Norte S.A. de C.V.,POSSIBLE_DUPLICATE_NOT_MERGED
+company,pltmadenciliksanayiveticaretaş,,2,name-gcmt-ab2b86625d0f282a | name-gcmt-15803f11e2d5f811,PLT Madencilik Sanayi ve Ticaret A.Ş. | PLT Madencilik Sanayi ve Ticaret AŞ,POSSIBLE_DUPLICATE_NOT_MERGED
+company,bankafinancesecuritiespvtltd,,2,name-gcmt-e06092b1d648c96c | gem-company-E100001012215,Banka Finance & Securities Pvt Ltd | Banka Finance & Securities Pvt Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,atlantasecuritiespvtltd,,2,name-gcmt-3107c96f668e34f8 | gem-company-E100001012216,Atlanta Securities Pvt Ltd | Atlanta Securities Pvt Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,sukanyamerchandisepvtltd,,2,name-gcmt-330c2bbadea7cb09 | gem-company-E100001012218,Sukanya Merchandise Pvt Ltd | Sukanya Merchandise Pvt Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,bonusdealcompvtltd,,2,name-gcmt-a01bf9bdf0dbb88c | gem-company-E100001012219,Bonus Dealcom Pvt Ltd | Bonus Dealcom Pvt Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,tunthwinminingcoltd,,2,name-gcmt-455c6ddea76fb76c | name-gcmt-961023c963a34115,Tun Thwin Mining Co Ltd. | Tun Thwin Mining Co Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,carbonessanfernandosas,,2,name-gcmt-b89bd14bbe427eef | name-gcmt-3f634f845ee6bc08,Carbones San Fernando S.A.S. | Carbones San Fernando SAS,POSSIBLE_DUPLICATE_NOT_MERGED
+company,baoshanironsteelcoltd,,2,gem-company-E100000122571 | gem-company-E100000001358,Baoshan Iron & Steel Co Ltd | Baoshan Iron & Steel Co Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+company,guangdongguangqingmetaltechnologycoltd,,2,gem-company-E100000126182 | gem-company-E100002020966,Guangdong Guangqing METAL Technology Co Ltd | Guangdong Guangqing Metal Technology Co Ltd,POSSIBLE_DUPLICATE_NOT_MERGED
+market_company,11880solutionsag,,2,Q539352 | isin-DE000A41YFQ4,11 88 0 Solutions AG | 11 88 0 SOLUTIONS AG,POSSIBLE_DUPLICATE_NOT_MERGED
+market_company,altech,,2,Q17192193 | Q17192301,Altech | Altech,POSSIBLE_DUPLICATE_NOT_MERGED
+market_company,bp,,2,Q132603755 | Q152057,B&P | BP,POSSIBLE_DUPLICATE_NOT_MERGED
+market_company,bakriebrothers,,2,Q4849540 | Q31204173,Bakrie & Brothers | Bakrie & Brothers,POSSIBLE_DUPLICATE_NOT_MERGED
+market_company,chinatelecom,,2,Q1073540 | Q24834296,China Telecom | China Telecom,POSSIBLE_DUPLICATE_NOT_MERGED
+market_company,daiwa,,2,Q11433415 | Q11433375,Daiwa | Daiwa,POSSIBLE_DUPLICATE_NOT_MERGED
+market_company,elpolloloco,,2,Q2353849 | Q65090628,El Pollo Loco | El Pollo Loco,POSSIBLE_DUPLICATE_NOT_MERGED
+market_company,en,,2,Q11291487 | Q4038038,en | En+,POSSIBLE_DUPLICATE_NOT_MERGED
+market_company,fergusonenterprises,,2,Q624682 | Q5444235,Ferguson Enterprises | Ferguson Enterprises,POSSIBLE_DUPLICATE_NOT_MERGED
+market_company,firstbancorp,,2,Q5452333 | Q5452332,First BanCorp | First Bancorp,POSSIBLE_DUPLICATE_NOT_MERGED
+market_company,garmin,,2,Q30338591 | Q658789,Garmin | Garmin,POSSIBLE_DUPLICATE_NOT_MERGED
+market_company,jsainsbury,,2,Q152096 | Q18043414,J Sainsbury | J Sainsbury,POSSIBLE_DUPLICATE_NOT_MERGED
+market_company,ktk,,2,Q11301023 | Q4244736,KTK | KTK,POSSIBLE_DUPLICATE_NOT_MERGED
+market_company,lixilgroup,,2,Q11229276 | Q11229272,Lixil Group | Lixil Group,POSSIBLE_DUPLICATE_NOT_MERGED
+market_company,lottechemicaltitan,,2,Q7450308 | Q12521671,Lotte Chemical Titan | Lotte Chemical Titan,POSSIBLE_DUPLICATE_NOT_MERGED
+market_company,nextdoor,,2,Q7021239 | Q97486395,Nextdoor | Nextdoor,POSSIBLE_DUPLICATE_NOT_MERGED
+market_company,orrönenergy,,2,Q116950577 | Q253423,Orrön Energy | Orrön Energy,POSSIBLE_DUPLICATE_NOT_MERGED
+market_company,ourpalm,,2,Q111941633 | Q57594467,OURPALM | Ourpalm,POSSIBLE_DUPLICATE_NOT_MERGED
+market_company,sincere,,2,Q11308602 | Q3372957,Sincere | Sincere,POSSIBLE_DUPLICATE_NOT_MERGED
+market_company,suncorenergy,,2,Q1032244 | Q1516410,Suncor Energy | Suncor Energy,POSSIBLE_DUPLICATE_NOT_MERGED
+market_company,whgroup,,2,Q17499655 | Q4049425,WH Group | WH Group,POSSIBLE_DUPLICATE_NOT_MERGED
+market_company,woolworths,,2,Q607272 | Q8033997,Woolworths | Woolworths,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,suizadairycorp,PR,2,0060WSZDRYPR467 | 00936SZDRYAVEDE,SUIZA DAIRY CORP | SUIZA DAIRY CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,eatonintelligentpowerltd,PR,3,00613RSTNDROUTE | 00640WSTNGROADN | 00771CTLRH50JES,EATON INTELLIGENT POWER LTD | EATON INTELLIGENT POWER LTD. | EATON INTELLIGENT POWER LTD,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,baxterhealthcareofpuertoricollc,PR,2,00654NQSTNROAD3 | 00664BXTRHSTROA,BAXTER HEALTHCARE OF PUERTO RICO LLC | BAXTER HEALTHCARE OF PUERTO RICO LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,veranovalp,MA,2,01432PHRMC25PAT | 01845PHRMC70FLA,VERANOVA L.P. | VERANOVA L.P.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,wymangordonco,MA,2,01536WYMNG244WO | 01613WYMNG105MA,WYMAN-GORDON CO | WYMAN-GORDON CO,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,thermofisherscientific,MA,2,01730PPLDB2PRES | 0182WTHRMF22MIL,THERMO FISHER SCIENTIFIC | THERMO FISHER SCIENTIFIC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,holcimnerinc,MA,5,01824GGRGT16OAK | 01906GGRGT1831B | 01960GGRGT55RUS | 02093GGRGT400GR | 02453GGRGT537SS,HOLCIM - NER INC. | HOLCIM - NER INC. | HOLCIM - NER INC. | HOLCIM - NER INC. | HOLCIM - NER INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,chemgenescorp,MA,2,0182WCHMGN9MIDD | 01887CHMGN33IND,CHEMGENES CORP | CHEMGENES CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,monarchmetalfinishingcoinc,RI,2,02905MNRCH189GE | 02919GTNRY100RA,MONARCH METAL FINISHING CO. INC. | MONARCH METAL FINISHING CO INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,protolabsinc,NH,2,0306WRPDMC22CHA | 0306WRPDSH15CHA,PROTO LABS INC. | PROTO LABS INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,vhglabsincdbalgcstandards,NH,2,0310WVHGLB3PERI | 0311WLGCST6BELL,VHG LABS INC. DBA LGC STANDARDS | VHG LABS INC. DBA LGC STANDARDS,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,newhampshireballbearingsinc,NH,2,03246NWHMP155LE | 03458NWHMPROUTE,NEW HAMPSHIRE BALL BEARINGS INC | NEW HAMPSHIRE BALL BEARINGS INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,burndyllc,NH,2,03251BRNDYRT3AC | 03561BRNDYLITTL,BURNDY LLC | BURNDY LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,hypertherminc,NH,4,03755HYPRTETNAR | 03766HYPRT1ETNA | 0376WHYPRT71HEA | 0376WHYPRT88ETN,HYPERTHERM INC | HYPERTHERM INC | HYPERTHERM INC | HYPERTHERM INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,sigsauerinc,NH,2,03801CLSTC72PEA | 03833SGRMS18IND,SIG SAUER INC | SIG SAUER INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,gevernovabangor,ME,2,04401GNRLL534GR | 04401GNRLLFLORI,GE VERNOVA BANGOR | GE VERNOVA BANGOR,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,hanwhaaerospaceusallc,CT,3,0603WDCTCH81NAT | 06111CVLTL275RI | 0641WDCTCH5MCKE,HANWHA AEROSPACE USA LLC | HANWHA AEROSPACE USA LLC | HANWHA AEROSPACE USA LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,paradigmmanchesterinc,CT,3,06040DYNMC255SH | 06040DYNMC967PA | 06040NSNNG186AD,PARADIGM MANCHESTER INC | PARADIGM MANCHESTER INC | PARADIGM MANCHESTER INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,prattwhitney,CT,2,06108PRTTW400MA | 06457PRTTWAIRCR,PRATT & WHITNEY | PRATT & WHITNEY,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,accelinternationalholdingsllc,CT,2,0641WCCLNT35KNT | 06450MRMND508NO,ACCEL INTERNATIONAL HOLDINGS LLC | ACCEL INTERNATIONAL HOLDINGS LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,bykusainc,CT,2,0647WBYKSN33STI | 06492BYKCH524SO,BYK USA INC. | BYK USA INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,unimetalsurfacefinishingllc,CT,2,06770DNHMC15EAS | 06787QLTYR135SO,UNIMETAL SURFACE FINISHING LLC | UNIMETAL SURFACE FINISHING LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,koboproductsinc,NJ,2,07080TYCNC690MO | 0708WKBPRD234ST,KOBO PRODUCTS INC | KOBO PRODUCTS INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,fisherscientificcollc,NJ,2,07410FSHRS1REAG | 08876FSHRS755RT,FISHER SCIENTIFIC CO L.L. C. | FISHER SCIENTIFIC CO. L.L.C.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,givaudanflavorscorp,NJ,2,07606MDSBT375HU | 07936FRTZSMERRY,GIVAUDAN FLAVORS CORP | GIVAUDAN FLAVORS CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,internationalflavorsfragrancesinc,NJ,2,07730FFCMP600ST | 08810NTRNT150DO,INTERNATIONAL FLAVORS & FRAGRANCES INC | INTERNATIONAL FLAVORS & FRAGRANCES INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,lorealusaproductsinc,NJ,2,0885WLRLSP81NEW | 0887WLRLXX1CMME,LOREAL USA PRODUCTS INC | L'OREAL USA PRODUCTS INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,symriseinc,NJ,2,08876HRMNN180IN | 0887WSYMRS17IND,SYMRISE INC | SYMRISE INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,kimbermfginc,NY,2,10705KMBRM1LAWT | 1071WKMBRM112SA,KIMBER MFG INC | KIMBER MFG INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,saintgobainperformanceplastics,NY,2,12090FLRGL1LIBE | 12832NRTNCONESE,SAINT-GOBAIN PERFORMANCE PLASTICS | SAINT-GOBAIN PERFORMANCE PLASTICS,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,amesgoldsmithcorp,NY,2,12801MSGLD21ROG | 12803NBCNC50HAR,AMES GOLDSMITH CORP | AMES GOLDSMITH CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,feldmeierequipmentinc,NY,3,13211FLDMR68TWN | 13365CHRRY575EA | 1336WFLDMR245RI,FELDMEIER EQUIPMENT INC | FELDMEIER EQUIPMENT INC | FELDMEIER EQUIPMENT INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,indiumcorpofamerica,NY,2,13323NDMCR23ROB | 1350WNDMCR111BU,INDIUM CORP OF AMERICA | INDIUM CORP OF AMERICA,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,specialmetalscorp,NY,2,13413SPCLMMIDDL | 14048SPCLMWILLO,SPECIAL METALS CORP | SPECIAL METALS CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,hphoodllc,NY,3,13421DRYLCROUTE | 13476DRYLCWARDS | 13656CRWLYTHERE,H.P.HOOD LLC | H. P. HOOD LLC | HP HOOD LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,saputocheeseusainc,NY,2,13753MRNNGNEWYO | 14739FRNDSCOUNT,SAPUTO CHEESE USA INC. | SAPUTO CHEESE USA INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,amphenolcorp,NY,2,13838MPHNL4060D | 1383WMPHNL191DE,AMPHENOL CORP | AMPHENOL CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,pcbpiezotronics,NY,2,14043PCBPZ3425W | 1408WPCBPZ4355W,PCB PIEZOTRONICS | PCB PIEZOTRONICS,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,upstateniagaracooperativeinc,NY,3,14224PSTTF33NAM | 14225PSTTM1730D | 14608PSTTM45FUL,UPSTATE NIAGARA COOPERATIVE INC. | UPSTATE NIAGARA COOPERATIVE INC. | UPSTATE NIAGARA COOPERATIVE INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,alcomanufacturingcorp,NY,3,1460WLCMNF1425U | 1461WLCMNF255HU | 1462WKDDSM293PA,ALCO MANUFACTURING CORP | ALCO MANUFACTURING CORP | ALCO MANUFACTURING CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,alleghenypetroleumproductsco,PA,2,15003LLGHN231DU | 15148LLGHN999AI,ALLEGHENY PETROLEUM PRODUCTS CO | ALLEGHENY PETROLEUM PRODUCTS CO,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,atiflatrolledproductsholdingsllc,PA,2,15014LLGHNRIVER | 15690SSVND130LI,ATI FLAT ROLLED PRODUCTS HOLDINGS LLC | ATI FLAT ROLLED PRODUCTS HOLDINGS LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,universalstainlessalloyproductsinc,PA,2,15017CYTMPMAYER | 16354NVRSL121CA,UNIVERSAL STAINLESS & ALLOY PRODUCTS INC | UNIVERSAL STAINLESS & ALLOY PRODUCTS INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,unionelectricsteelcorp,PA,2,15021NNLCTPOBOX | 16501NNLCT1712G,UNION ELECTRIC STEEL CORP | UNION ELECTRIC STEEL CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,techmetinc,PA,2,15033PLYCM8THGA | 15045TCHMT15ALL,TECH MET INC | TECH MET INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,whemcosteelcastingsinc,PA,2,15059WSTHMONE12 | 15120WSTHMWESTS,WHEMCO-STEEL CASTINGS INC | WHEMCO-STEEL CASTINGS INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,sherwinwilliamsco,PA,3,15074THVLS372CL | 15233THVLS2000W | 17046NGNRD35HAN,SHERWIN-WILLIAMS CO | SHERWIN-WILLIAMS CO | SHERWIN-WILLIAMS CO,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,kawneercoinc,PA,2,15095TRCTHCRANB | 17815KWNRC500E1,KAWNEER CO INC. | KAWNEER CO INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,superiorforgesteelcorp,PA,2,15203QLTYR1101M | 16101QLTYRRD621,SUPERIOR FORGE & STEEL CORP | SUPERIOR FORGE & STEEL CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,chasecorppittsburgh,PA,2,15238CHSCR128FI | 1523WCHSCR21ZET,CHASE CORP-PITTSBURGH | CHASE CORP - PITTSBURGH,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,johnsonmattheyinc,PA,2,1547WJHNSN65MUN | 19087JHNSN43645,JOHNSON MATTHEY INC | JOHNSON MATTHEY INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,joyglobalundergroundminingllc,PA,2,1574WJYGLB61LUC | 16323JYTCHRTE8N,JOY GLOBAL UNDERGROUND MINING LLC | JOY GLOBAL UNDERGROUND MINING LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,stellajonescorp,PA,2,15801BRKPRGUYAV | 17049HPMCGPARTE,STELLA-JONES CORP | STELLA - JONES CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,millerweldingmachineco,PA,2,15825MLLRWRAILR | 1582WMLLRW147IN,MILLER WELDING & MACHINE CO | MILLER WELDING & MACHINE CO,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,wabtecusrailinc,PA,2,15834MTRCL55PIN | 16127GNRLLINDUS,WABTEC US RAIL INC. | WABTEC US RAIL INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,hoeganaescorp,PA,2,15853RCMTLRIVER | 17777HGNSCYURIS,HOEGANAES CORP | HOEGANAES CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,keystonepowderedmetalco,PA,2,15857KYSTN1935S | 16738KYSTN8HANL,KEYSTONE POWDERED METAL CO | KEYSTONE POWDERED METAL CO,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,amgtitaniumllc,PA,2,1610WNTRNT27FRE | 1610WNTRNT599NR,AMG TITANIUM LLC | AMG TITANIUM LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,dairyfarmersofamericainc,PA,2,16142DRYFRRR1BO | 19605DTRCH100MC,DAIRY FARMERS OF AMERICA INC | DAIRY FARMERS OF AMERICA INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,meadvilleforgingco,PA,2,16335MDVLLBALDW | 16403MDVLL440MC,MEADVILLE FORGING CO | MEADVILLE FORGING CO,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,nestlepurinapetcareco,PA,2,17055RLSTN6509B | 18001LPPTFROUTE,NESTLE PURINA PETCARE CO | NESTLE PURINA PETCARE CO,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,gelestinc,PA,2,17327PMXNC158IN | 19067GLSTN11EST,GELEST INC | GELEST INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,donscoinc,PA,2,17368DNSCNC40NF | 17552DNSCNSOUTH,DONSCO INC | DONSCO INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,greatdanetrailers,PA,2,1782WGRTDN27PRG | 1784WGRTDN891ST,GREAT DANE TRAILERS | GREAT DANE TRAILERS,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,hydroextrusionusallc,PA,2,17929CRSSNPOTTS | 18707MDSTLELMWO,HYDRO EXTRUSION USA LLC | HYDRO EXTRUSION USA LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,dfadairybrandsfluidllcdbalehighvalleydairyfarms,PA,2,17972LHGHVRD1XX | 19446LHGHV880AL,DFA DAIRY BRANDS FLUID LLC DBA LEHIGH VALLEY DAIRY FARMS | DFA DAIRY BRANDS FLUID LLC DBA LEHIGH VALLEY DAIRY FARMS,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,actionmanufacturingco,PA,2,1900WCTNMN19RIT | 19310CTNMF500BA,ACTION MANUFACTURING CO. | ACTION MANUFACTURING CO,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,amunealmanufacturing,PA,2,19124MNLMN4737D | 1912WMNLMN42194,AMUNEAL MANUFACTURING | AMUNEAL MANUFACTURING,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,mpnincdbaactiveradiator,PA,2,19134MPNNC2254E | 19134MPNNC3675A,MPN INC DBA ACTIVE RADIATOR | MPN INC DBA ACTIVE RADIATOR,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,cigasmachineshopinc,PA,3,19320CGSMC1245M | 1932WCGSMC2WAVE | 1946WCGSMC271SK,CIGAS MACHINE SHOP INC | CIGAS MACHINE SHOP INC. | CIGAS MACHINE SHOP INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,elitespiceinc,MD,2,20794LTSPC7151M | 21076LTSPC1415M,ELITE SPICE INC. | ELITE SPICE INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,independentcanco,MD,2,21017NDPND1300B | 21237STLTN1101T,INDEPENDENT CAN CO | INDEPENDENT CAN CO,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,northropgrummansystemscorp,MD,2,21090DVNCDNURSE | 21090LCTRNROUTE,NORTHROP GRUMMAN SYSTEMS CORP | NORTHROP GRUMMAN SYSTEMS CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,carryontrailercorp,VA,2,22435CRRYN617HA | 22520CRRYN159IN,CARRY-ON TRAILER CORP | CARRY-ON TRAILER CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,westrockcpllc,VA,2,23181CHSPK19THM | 23860STNHP910IN,WESTROCK CP LLC | WESTROCK CP LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,solenisllc,VA,2,23434LLDCL2301W | 23851HRCLSROUTE,SOLENIS LLC | SOLENIS LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,preconinc,VA,2,23803PRCNN220SP | 2380WPRCNN321BR,PRE CON INC | PRE CON INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,mooginc,VA,2,24060LTTNP1213N | 24333LCTRT115JA,MOOG INC. | MOOG INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,wolverineadvancedmaterials,VA,2,24060WLVRN201IN | 24060WLVRN3175S,WOLVERINE ADVANCED MATERIALS | WOLVERINE ADVANCED MATERIALS,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,tateinc,VA,2,2428WTTNCX1636B | 2428WTTXXX1636B,TATE INC | TATE INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,utilitytrailermanufacturing,VA,2,24311TLTYTSTATE | 2434WTLTYT1316M,UTILITY TRAILER MANUFACTURING | UTILITY TRAILER MANUFACTURING,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,hitachienergyusainc,VA,2,24315BBPWRSTRTE | 24592WSTNGHIGHW,HITACHI ENERGY USA INC. | HITACHI ENERGY USA INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,modinemanufacturingco,VA,2,24416MDNMN1221M | 2445WMDNMN36CLL,MODINE MANUFACTURING CO | MODINE MANUFACTURING CO,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,bankersteelcollc,VA,2,24502MNTGB1619W | 2450WBNKRS351RA,BANKER STEEL CO LLC | BANKER STEEL CO LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,dfadairybrandsfluidllcdbapetdairy,NC,2,27115DRYFR2221P | 27264SPRBR1350W,DFA DAIRY BRANDS FLUID LLC DBA PET DAIRY | DFA DAIRY BRANDS FLUID LLC DBA PET DAIRY,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,kennametalinc,NC,2,27204CLVLN201YZ | 27536KNNMTSTATE,KENNAMETAL INC | KENNAMETAL INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,saputocheeseusainc,NC,2,2720WCRLND116IN | 2737WCRLNS131WB,SAPUTO CHEESE USA INC | SAPUTO CHEESE USA INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,wwafcosteelllc,NC,2,27235CRLNS935WM | 27856CRLNS341CR,W&W-AFCO STEEL LLC | W&W-AFCO STEEL LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,engineeredcontrolsinternationalllc,NC,2,27244RGCMP100RE | 27377NGNRD1239R,ENGINEERED CONTROLS INTERNATIONAL LLC | ENGINEERED CONTROLS INTERNATIONAL LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,thomasbuiltbusesinc,NC,2,27260THMSB1408C | 27263THMSB715WF,THOMAS BUILT BUSES INC | THOMAS BUILT BUSES INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,innospecactivechemicals,NC,2,27262PRCHM1670E | 28159FNTXNI85AN,INNOSPEC ACTIVE CHEMICALS | INNOSPEC ACTIVE CHEMICALS,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,kurztransferproductslp,NC,2,27292PDMNTRTE14 | 28206KRZTR3200W,KURZ TRANSFER PRODUCTS LP | KURZ TRANSFER PRODUCTS LP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,electricglassfiberamericallc,NC,2,27292PPGNDNEWJE | 28150PPGNDRT4XX,ELECTRIC GLASS FIBER AMERICA LLC | ELECTRIC GLASS FIBER AMERICA LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,sherwinwilliamsco,NC,4,27403DSTNC1025H | 27410SHRWN113ST | 28262NGNRD11300 | 28677THVLS1931S,SHERWIN-WILLIAMS CO | SHERWIN-WILLIAMS CO | SHERWIN-WILLIAMS CO | SHERWIN-WILLIAMS CO,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,altecindustriesinc,NC,2,27522SPLND100AS | 28714LTCND15ALT,ALTEC INDUSTRIES INC. | ALTEC INDUSTRIES INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,oldcastleprecastinc,NC,4,27526NCPRD1431P | 27603LDCST92WIT | 28027LDCST495ST | 28301NCPRD396CE,OLDCASTLE PRECAST INC | OLDCASTLE PRECAST INC | OLDCASTLE PRECAST INC | OLDCASTLE PRECAST INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,brenntagmidsouth,NC,2,27702STHCH2000E | 28273WRTHC11750,BRENNTAG MID-SOUTH | BRENNTAG MID-SOUTH,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,cormetechinc,NC,2,27712CRMTC5000I | 28086NVLKN304LI,CORMETECH INC | CORMETECH INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,firestonefiberstextilesco,NC,2,28052FRSTN37SDA | 28086FRSTN100FI,FIRESTONE FIBERS & TEXTILES CO | FIRESTONE FIBERS & TEXTILES CO,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,robertboschtoolcorp,NC,2,2809WRBRTB198IN | 28150CPLND4401E,ROBERT BOSCH TOOL CORP | ROBERT BOSCH TOOL CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,consolidatedmetcoinc,NC,2,28110CNSLD780PA | 2871WCNSLD171GR,CONSOLIDATED METCO INC | CONSOLIDATED METCO INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,tysonfarmsinc,NC,3,28110HLLYFSECRE | 28634HLLYFSHEFF | 28697HLLYF103FA,TYSON FARMS INC | TYSON FARMS INC. | TYSON FARMS INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,teijinautomotivetechnologiesnorthcarolinacompositesll,NC,2,28144MRDNT6701S | 28645BTLRP601HI,TEIJIN AUTOMOTIVE TECHNOLOGIES NORTH CAROLINA COMPOSITES LL | TEIJIN AUTOMOTIVE TECHNOLOGIES NORTH CAROLINA COMPOSITES LL,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,cargillinc,NC,2,28217CTRFN4918S | 28302CRGLLRIVER,CARGILL INC. | CARGILL INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,meritorheavyvehiclesystemsllc,NC,2,28655DNCRP105WA | 28732RCKWL1000R,MERITOR HEAVY VEHICLE SYSTEMS LLC | MERITOR HEAVY VEHICLE SYSTEMS LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,michelinnainc,SC,4,29072MCHLN2420T | 29304MCHLN1000I | 29602MCHLN1401A | 29605MCHLN1920P,MICHELIN N.A. INC | MICHELIN N.A. INC | MICHELIN NA INC | MICHELIN N.A. INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,basfcorp,SC,2,29302BSFCR3455S | 29678NGLHR554MO,BASF CORP | BASF CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,afltelecommunications,SC,3,29334LCFJKRIDGE | 2933WFLGLB112HI | 2933WFLTLC14HID,AFL TELECOMMUNICATIONS | AFL TELECOMMUNICATIONS | AFL TELECOMMUNICATIONS,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,owenscorning,SC,2,29334WNSCR196RI | 29801WNSCRHWY30,OWENS CORNING | OWENS CORNING,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,southatlanticgalvanizing,SC,2,2936WSTHTL5132M | 29690STHCRHWY27,SOUTH ATLANTIC GALVANIZING | SOUTH ATLANTIC GALVANIZING,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,steelfabinc,SC,3,29502STLFB1220S | 2973WSTLFB42BRY | 2974WCMSTL6371C,STEELFAB INC | STEELFAB INC. | STEELFAB INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,aalbertsintegratedpipingsystemsamericas,SC,3,29526CNBRCHWY50 | 29728CNBRC1509V | 29728CNBRCPOBOX,AALBERTS INTEGRATED PIPING SYSTEMS AMERICAS | AALBERTS INTEGRATED PIPING SYSTEMS AMERICAS | AALBERTS INTEGRATED PIPING SYSTEMS AMERICAS,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,engineeredproductsllc,SC,2,29609NGNRD500FU | 2960WNGNRD24LDP,ENGINEERED PRODUCTS LLC | ENGINEERED PRODUCTS LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,sherwinwilliamsco,GA,3,30014HBFLL13129 | 30245WHTLG725RA | 30260SHRWN6795S,SHERWIN-WILLIAMS CO | SHERWIN-WILLIAMS CO | SHERWIN-WILLIAMS CO,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,univarsolutionsusa,GA,2,30071VNWTR2145S | 30340SHLND4550N,UNIVAR SOLUTIONS USA | UNIVAR SOLUTIONS USA,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,oldcastleprecastinc,GA,2,30083LDCST4478G | 30265NDRWC27AML,OLDCASTLE PRECAST INC | OLDCASTLE PRECAST INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,hbfullerco,GA,2,30084HBFLL233FU | 30209HBFLL12110,H.B. FULLER CO | H.B. FULLER CO,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,universalalloycorp,GA,2,3010WNVRSL199BE | 30114NVRSL180LA,UNIVERSAL ALLOY CORP | UNIVERSAL ALLOY CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,innovativechemicaltechnologiesinc,GA,3,30120CLRKC103WA | 30120RSRCN8RIVE | 30906NTRNT3005I,INNOVATIVE CHEMICAL TECHNOLOGIES INC | INNOVATIVE CHEMICAL TECHNOLOGIES INC. | INNOVATIVE CHEMICAL TECHNOLOGIES INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,atcorubberproductsinc,GA,2,30120TCRBB765SE | 3073WTCRBB185CU,ATCO RUBBER PRODUCTS INC | ATCO RUBBER PRODUCTS INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,hoshizakiamericainc,GA,2,30224HSHZK101GR | 30269HSHZK618HW,HOSHIZAKI AMERICA INC | HOSHIZAKI AMERICA INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,colonialchemicalsolutionsinc,GA,2,3033WCLNLC371AT | 31401SHLND400TE,COLONIAL CHEMICAL SOLUTIONS INC. | COLONIAL CHEMICAL SOLUTIONS INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,thepittsburghpaintsco,GA,2,30344PPGND1377O | 30566THGLD4261W,THE PITTSBURGH PAINTS CO. | THE PITTSBURGH PAINTS CO.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,kubotamanufacturingofamericacorp,GA,2,30501KBTMN2715R | 30549KBTND11MCC,KUBOTA MANUFACTURING OF AMERICA CORP | KUBOTA MANUFACTURING OF AMERICA CORP.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,abbmotorsmechanicalinc,GA,2,30542RLNCL4349A | 30601RLNCLCOLLI,ABB MOTORS & MECHANICAL INC. | ABB MOTORS & MECHANICAL INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,fanelloindustries,GA,2,30553FNLLN5EMAI | 3055WFNLLN4EMAI,FANELLO INDUSTRIES | FANELLO INDUSTRIES,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,stepanco,GA,2,30680STPNCOLDHI | 31907RCPLYONERU,STEPAN CO | STEPAN CO,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,usbatterymanufacturingco,GA,2,30809SBTTR653IN | 30906SBTTR1895T,U.S. BATTERY MANUFACTURING CO | US BATTERY MANUFACTURING CO,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,interforusinc,GA,2,3106WNTRFR93JER | 3182WNTRFR378TL,INTERFOR US INC | INTERFOR US INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,solenisllc,GA,2,31206BTZLB7525N | 31401HRCLSOLDLO,SOLENIS LLC | SOLENIS LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,ykkusaincnationalmanufacturingcenter,GA,2,31297YKKSN4234O | 31297YKKSNCHEST,YKK (USA) INC. NATIONAL MANUFACTURING CENTER | YKK (USA) INC. - NATIONAL MAN UFACTURING CENTER,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,abbinstallationproductsinc,FL,2,32074HMCMF12SOU | 32174HMCMF1SIGN,ABB INSTALLATION PRODUCTS INC | ABB INSTALLATION PRODUCTS INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,wwfoperatingcollc,FL,2,32209LNGLF2198W | 32209WHTWV2262W,WWF OPERATING CO LLC | WWF OPERATING CO LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,goodrichcorp,FL,2,32218THBFG6061B | 33056BFGDR3201N,GOODRICH CORP | GOODRICH CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,oldcastleprecastinc,FL,2,3222WLDCST123PR | 32824LDCST69WTA,OLDCASTLE PRECAST INC | OLDCASTLE PRECAST INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,polyntcompositesusainc,FL,3,32236RCHHLWESTB | 32501RCHHL407SO | 32824MRCNC685RO,POLYNT COMPOSITES USA INC. | POLYNT COMPOSITES USA INC | POLYNT COMPOSITES USA INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,kratonchemicalllc,FL,2,32402RZNCHEVERE | 32501RZNCH411SO,KRATON CHEMICAL LLC | KRATON CHEMICAL LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,dfadairybrandsfluidllcdbatgleedairy,FL,2,32763TGLFD1675S | 32803TGLFD315NO,DFA DAIRY BRANDS FLUID LLC DBA TG LEE DAIRY | DFA DAIRY BRANDS FLUID LLC DBA TG LEE DAIRY,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,coastalanoldcastleco,FL,6,32824PVRSY39WLA | 33407PRSYS7167I | 33542MTTST3749C | 33844HNSNP198MA | 33971HNSNP421LE | 34981MTTST46MAG,COASTAL AN OLDCASTLE CO | COASTAL AN OLDCASTLE CO | COASTAL AN OLDCASTLE CO | COASTAL AN OLDCASTLE CO | COASTAL AN OLDCASTLE CO | COASTAL AN OLDCASTLE CO,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,nautiqueboatcoinc,FL,2,32832CRRCT147AE | 3283WNTQBT75AMS,NAUTIQUE BOAT CO INC. | NAUTIQUE BOAT CO INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,l3harristechnologiesinc,FL,2,32905HRRSC2400P | 32905HRRSC2800J,L3HARRIS TECHNOLOGIES INC. | L3HARRIS TECHNOLOGIES INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,tropicanamanufacturingcoinc,FL,2,33482TRPCN6500G | 34208TRPCN10011,TROPICANA MANUFACTURING CO INC | TROPICANA MANUFACTURING CO INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,maverickboatgroupinc,FL,2,34946MVRCK3054I | 3494WMVRCK4551S,MAVERICK BOAT GROUP INC. | MAVERICK BOAT GROUP INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,consolidatedpipesupplycoinc,AL,3,3502WCNSLD2954T | 3502WCNSLD81LAB | 3520WCNSLD1127B,CONSOLIDATED PIPE & SUPPLY CO INC | CONSOLIDATED PIPE & SUPPLY CO INC | CONSOLIDATED PIPE & SUPPLY CO INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,stellajonescorp,AL,4,35035CHBPRRT1BO | 3504WBTRGH1MCKI | 35115SMNTMPOBOX | 36507BLDWNOLDPE,STELLA-JONES CORP | STELLA-JONES CORP | STELLA-JONES CORP | STELLA-JONES CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,hannasteelcorp,AL,2,35064HNNST3812C | 35476HNNST1701B,HANNA STEEL CORP | HANNA STEEL CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,harrellscoatingssolutionsllc,AL,2,35150PRSLL1413W | 35150PRSLL66THI,HARRELL'S COATINGS SOLUTIONS LLC | HARRELL'S COATINGS SOLUTIONS LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,metalplategalvanizinglp,AL,2,35201MTLPL11203 | 35217MTLPL75744,METALPLATE GALVANIZING LP | METALPLATE GALVANIZING LP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,nucortubularproductsinc,AL,2,35234STHLN3525R | 3560WNDPND2INDE,NUCOR TUBULAR PRODUCTS INC. | NUCOR TUBULAR PRODUCTS INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,michelinnainc,AL,2,35403NRYLG2006E | 36302MCHLNWAYEN,MICHELIN N.A. INC | MICHELIN NA INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,suncoastresourcesllc,AL,2,3550WHGRLC12LDB | 3611WPMPLL2335S,SUN COAST RESOURCES LLC | SUN COAST RESOURCES LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,parkerhannifincorp,AL,2,35957PRKRH301WA | 36265PRKRHHWY21,PARKER HANNIFIN CORP | PARKER HANNIFIN CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,valleyjoist,AL,2,35967VLLYJVALLE | 3596WVLLYJ235JR,VALLEY JOIST | VALLEY JOIST,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,steeltechnologiesllc,TN,2,37130MTCHS210MI | 3716WSTLTC769FL,STEEL TECHNOLOGIES LLC | STEEL TECHNOLOGIES LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,nissannainc,TN,2,37167NSSNMNISSA | 37324NSSNP520WA,NISSAN N.A. INC. | NISSAN N.A. INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,basfcorp,TN,2,37406PLYSR3805A | 37421PLYSR2200P,BASF CORP | BASF CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,oticsusa,TN,2,3776WTCSSX3787S | 3781WTCSSX5555I,OTICS USA | OTICS USA,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,youngtouchstone,TN,2,38301TCHST200SM | 38351YNGRDHWY22,YOUNG TOUCHSTONE | YOUNG TOUCHSTONE,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,monogramrefrigerationllc,TN,2,38375KLPCK789PE | 3837WMNGRM12TEN,MONOGRAM REFRIGERATION LLC | MONOGRAM REFRIGERATION LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,modinemanufacturingco,TN,2,38464MDNMN2009R | 3846WMDNMN24REM,MODINE MANUFACTURING CO | MODINE MANUFACTURING CO,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,thegoodyeartirerubberco,MS,2,38614CPRTR2205F | 38802CPRTR1689S,THE GOODYEAR TIRE & RUBBER CO | THE GOODYEAR TIRE & RUBBER CO,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,caterpillarremandiv,MS,2,38829CTRPL100CA | 38834CTRPL202CA,CATERPILLAR REMAN DIV | CATERPILLAR REMAN DIV,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,milwaukeeelectrictoolcorp,MS,2,38930MLWKL13SYC | 39209MLWKL4355M,MILWAUKEE ELECTRIC TOOL CORP | MILWAUKEE ELECTRIC TOOL CORP.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,towerautomotive,MS,2,39110TWRTM44CHU | 39304DLCRMPOBOX,TOWER AUTOMOTIVE | TOWER AUTOMOTIVE,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,hoodindustriesinc,MS,3,39367HDNDS915IN | 39577HDNDSOLDHW | 39663JNMLSHWY43,HOOD INDUSTRIES INC. | HOOD INDUSTRIES INC. | HOOD INDUSTRIES INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,howardindustriesinc,MS,2,39437HWRDN152HW | 39441HWRDN3225P,HOWARD INDUSTRIES INC | HOWARD INDUSTRIES INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,towerautomotive,KY,2,40004TWRTM850WI | 40004WDRDG900NU,TOWER AUTOMOTIVE | TOWER AUTOMOTIVE,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,steeltechnologiesllc,KY,2,40019STLTC198SH | 41045STLTCRT1BO,STEEL TECHNOLOGIES LLC | STEEL TECHNOLOGIES LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,lakestoneenterprisesdbacamcoat,KY,2,40210KLLYT1445S | 4021WKLLYT141S1,LAKESTONE ENTERPRISES (DBA CAMCOAT) | LAKESTONE ENTERPRISES (DBA CAMCOAT),POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,lubrizoladvancedmaterialsinc,KY,2,40211BFGDR4100B | 42029NVNNC2468I,LUBRIZOL ADVANCED MATERIALS INC | LUBRIZOL ADVANCED MATERIALS INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,onealmanufacturingservices,KY,2,4021WNLSTL48ALL | 41005SKLCR5184L,O'NEAL MANUFACTURING SERVICES | O'NEAL MANUFACTURING SERVICES,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,novelis,KY,2,40403LCNRC302MA | 4223WNVLSX8155L,NOVELIS | NOVELIS,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,sherwinwilliamsco,KY,2,40475THSHRBOGGS | 42101LLLYN347CE,SHERWIN-WILLIAMS CO | SHERWIN-WILLIAMS CO,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,dowsiliconescorp,KY,2,41008DWCRNUSHIG | 42701DWCRN760HO,DOW SILICONES CORP | DOW SILICONES CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,sumitomoelectricwiringsystemsinc,KY,2,42129SMTML687IN | 42164SMTML796SM,SUMITOMO ELECTRIC WIRING SYSTEMS INC | SUMITOMO ELECTRIC WIRING SYSTE MS INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,henkelusoperationscorp,OH,2,43015PNNWL421LO | 44060HSLNT7405P,HENKEL US OPERATIONS CORP | HENKEL US OPERATIONS CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,astemoamericasinc,OH,2,43074SNBRY707WE | 45840FNDLX1901I,ASTEMO AMERICAS INC. | ASTEMO AMERICAS INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,worthingtoncylindercorp,OH,2,43085WRTHN1085D | 44047WRTHN863ST,WORTHINGTON CYLINDER CORP | WORTHINGTON CYLINDER CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,sherwinwilliamsco,OH,4,43123BCKRP3875B | 43207DSTNC2121N | 44646SCHMC600NO | 45216GNRLP145CA,SHERWIN-WILLIAMS CO | SHERWIN-WILLIAMS CO | SHERWIN-WILLIAMS CO | SHERWIN-WILLIAMS CO,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,akzonobelcoatingsinc,OH,2,43211HNNCH1313W | 44839THGLD300SP,AKZO NOBEL COATINGS INC | AKZO NOBEL COATINGS INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,plaskolitellc,OH,2,43219PLSKL1770J | 43701PLSKL11755,PLASKOLITE LLC. | PLASKOLITE LLC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,bostikinc,OH,2,43223CNTRY802HA | 44805SHLND1745C,BOSTIK INC. | BOSTIK INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,sonocometalpackagingllc,OH,2,43228HKNCN2690C | 44707NRTCH2121W,SONOCO METAL PACKAGING LLC | SONOCO METAL PACKAGING LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,marspetcareusinc,OH,2,43228KLKNF5115F | 4585WTHMSC37STA,MARS PETCARE US INC. | MARS PETCARE US INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,arcelormittaltubularproductsusallc,OH,2,43301LTVCP686WF | 44875HSTLT140WE,ARCELORMITTAL TUBULAR PRODUCTS USA LLC | ARCELORMITTAL TUBULAR PRODUCTS USA LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,univarsolutionsusa,OH,3,43465VNWTR30450 | 44087SHLND1610E | 44087SHLND1842E,UNIVAR SOLUTIONS USA | UNIVAR SOLUTIONS USA | UNIVAR SOLUTIONS USA,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,firstsolarinc,OH,2,4346WFRSTS2838T | 43551FRSTS2811C,FIRST SOLAR INC | FIRST SOLAR INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,worthingtonsteel,OH,2,43515WRTHN6303C | 44125GBRLT431E4,WORTHINGTON STEEL | WORTHINGTON STEEL,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,sunchemicalcorp,OH,2,43537SNCHM1380F | 45232SNCHM4625E,SUN CHEMICAL CORP | SUN CHEMICAL CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,crownfoodpackaging,OH,2,43612TLDPL5201E | 44648CNTRL70016,CROWN FOOD PACKAGING | CROWN FOOD PACKAGING,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,amgvanadiumllc,OH,2,4370WMGVND2295I | 43725SHLDLSTATE,AMG VANADIUM LLC | AMG VANADIUM LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,bluescopecoatedproductsllc,OH,2,43725GSMTH530NO | 45044PRFNS2400Y,BLUESCOPE COATED PRODUCTS LLC | BLUESCOPE COATED PRODUCTS LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,vibrantzcolorsolutionsinc,OH,2,44004PLSTC2600M | 45215NDXNC620SH,VIBRANTZ COLOR SOLUTIONS INC. | VIBRANTZ COLOR SOLUTIONS INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,basfcorp,OH,3,44035NGLHR120PI | 45232CGNSC49EST | 45331BSFCRSTATE,BASF CORP | BASF CORP | BASF CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,northamericankitchensolutionsinc,OH,2,4403WMRCNH172RE | 4409WNRTHM3324L,NORTH AMERICAN KITCHEN SOLUTIONS INC. | NORTH AMERICAN KITCHEN SOLUTIONS INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,thelincolnelectricco,OH,2,44060LNCLN6500H | 44117LNCLN22801,THE LINCOLN ELECTRIC CO | THE LINCOLN ELECTRIC CO,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,pvsnolwoodchemicalsinc,OH,2,44077FRSTB477LE | 4524WPVSNL2551C,PVS NOLWOOD CHEMICALS INC. | PVS NOLWOOD CHEMICALS INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,dayglocolorcorp,OH,2,44087DYGLC1570E | 44103DYGLC4515S,DAY-GLO COLOR CORP | DAY-GLO COLOR CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,metallicresourcesinc,OH,2,44087MTLLC2116E | 4408WMTLLC2368E,METALLIC RESOURCES INC. | METALLIC RESOURCES INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,swagelokmanufacturingcollc,OH,7,44092TLNTC26651 | 44136HYLVL15400 | 44139CRWFR29500 | 44139LFRDM29500 | 44139SNWMT6060C | 44143FLNCM348BI | 4428WSCHFF537WE,SWAGELOK MANUFACTURING CO LLC | SWAGELOK MANUFACTURING CO LLC | SWAGELOK MANUFACTURING CO LLC | SWAGELOK MANUFACTURING CO LLC | SWAGELOK MANUFACTURING CO LLC | SWAGELOK MANUFACTURING CO LLC | SWAGELOK MANUFACTURING CO LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,steeltechnologiesllc,OH,2,44094STLTC2220J | 45875CLDMT740WI,STEEL TECHNOLOGIES LLC | STEEL TECHNOLOGIES LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,vibrantzcorp,OH,2,44105FRRCR4150E | 44667FRRCR1560N,VIBRANTZ CORP | VIBRANTZ CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,flowpolymersllc,OH,2,44108FLWPL12819 | 4411WFLWPL17STC,FLOW POLYMERS LLC | FLOW POLYMERS LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,steelwarehouseofohio,OH,2,4410WSTLWR3193I | 4448WSTLWR141PI,STEEL WAREHOUSE OF OHIO | STEEL WAREHOUSE OF OHIO,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,ericointernationalcorp,OH,2,44139RCPRD31700 | 44139RCPRD34600,ERICO INTERNATIONAL CORP | ERICO INTERNATIONAL CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,vwrchemicalsllc,OH,2,4413WVWRCH286FU | 4420WVWRCH22LEN,VWR CHEMICALS LLC | VWR CHEMICALS LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,polymericsinc,OH,2,44221PLYMR2828S | 44240PLYMR1540S,POLYMERICS INC | POLYMERICS INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,chromedepositcorp,OH,2,44301NTGRT1566F | 45050CHRMD341LA,CHROME DEPOSIT CORP | CHROME DEPOSIT CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,thegoodyeartirerubberco,OH,2,44309GDYRT200SM | 45840CPRTRLIMAW,THE GOODYEAR TIRE & RUBBER CO | THE GOODYEAR TIRE & RUBBER CO,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,rmititaniumcollc,OH,2,44446RMCMP1000W | 4470WRMTTN1935W,RMI TITANIUM CO LLC | RMI TITANIUM CO LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,matalcousallc,OH,2,4448WMTLCS512TD | 44705THKRL442LU,MATALCO USA LLC | MATALCO USA LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,vallourecstarlp,OH,2,44510NRTHS2669W | 4451WVMSXX153HI,VALLOUREC STAR LP | VALLOUREC STAR LP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,areaccessoriesllc,OH,2,44646RNCXX400NA | 44659RNCXX17494,ARE ACCESSORIES LLC | ARE ACCESSORIES LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,akronbrass,OH,2,44691KRNBSBOWMA | 44691KRNBSOLDMA,AKRON BRASS | AKRON BRASS,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,towerautomotiveoperationsusa1llc,OH,2,44811SMTHT630SO | 45817MCNTS18717,TOWER AUTOMOTIVE OPERATIONS USA 1 LLC | TOWER AUTOMOTIVE OPERATIONS USA 1 LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,midmarkcorp,OH,2,45036SCHMD360HA | 45380MDMRK60VIS,MIDMARK CORP | MIDMARK CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,silfexinc,OH,2,45320BLLNL950SF | 4550WSLFXN1TITU,SILFEX INC | SILFEX INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,cascadecorp,OH,2,45505CSCDC2501S | 45840CSCDK2000P,CASCADE CORP | CASCADE CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,crownequipmentcorp,OH,2,45869CRWNX4044S | 45871CRWNQ7587S,CROWN EQUIPMENT CORP | CROWN EQUIPMENT CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,countrymarkrefininglogisticsllc,IN,2,46074CNTRY17710 | 47620NDNFR1200R,COUNTRYMARK REFINING & LOGISTICS LLC | COUNTRYMARK REFINING & LOGISTICS LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,precoatmetals,IN,2,46140RLLCT3398E | 46345RLLCT2NDAN,PRECOAT METALS | PRECOAT METALS,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,schlagelockcollc,IN,2,4614WSCHLG7221W | 46219VNDPR2720T,SCHLAGE LOCK CO LLC | SCHLAGE LOCK CO LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,prysmiancablessystemsusallc,IN,2,46214CBLCP7950R | 46953CBLCN440EA,PRYSMIAN CABLES & SYSTEMS USA LLC | PRYSMIAN CABLES & SYSTEMS USA LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,lenexsteelco,IN,2,4621WLNXST292TB | 4780WLNXST2325S,LENEX STEEL CO | LENEX STEEL CO,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,imagineeringenterprisesllc,IN,2,4621WMGNRN2719N | 46619MGNRN1302W,IMAGINEERING ENTERPRISES LLC | IMAGINEERING ENTERPRISES LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,superiorindustrialsolutionsinc,IN,2,46225SPRRL400WR | 46514SPRRF1030A,SUPERIOR INDUSTRIAL SOLUTIONS INC. | SUPERIOR INDUSTRIAL SOLUTIONS INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,clevelandcliffssteelllc,IN,2,46312LTVST3001D | 46312NLNDS3210W,CLEVELAND-CLIFFS STEEL LLC | CLEVELAND-CLIFFS STEEL LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,usgypsumco,IN,2,46312SGYPS3501C | 47581SGYPSHIGHW,US GYPSUM CO | US GYPSUM CO,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,buildingmaterialsmanufacturingllc,IN,2,46360BLDNG505NR | 47620BLDNG901GI,BUILDING MATERIALS MANUFACTURING LLC | BUILDING MATERIALS MANUFACTURING LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,steeltechnologiesllc,IN,4,46368STLTC5830S | 4654WSTRPC56598 | 47240MTCHS1811N | 4793WSTLTC356SU,STEEL TECHNOLOGIES LLC | STEEL TECHNOLOGIES LLC | STEEL TECHNOLOGIES LLC | STEEL TECHNOLOGIES LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,betterwayproducts,IN,2,46506CCFBR3659D | 46553BTTRW70891,BETTER WAY PRODUCTS | BETTER WAY PRODUCTS,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,johnsmanville,IN,2,46506NRGBR1215W | 47374MNVLL814RI,JOHNS MANVILLE | JOHNS MANVILLE,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,accrapacincdbavoyantbeauty,IN,2,46514WHTHL1919S | 46515CCRPC2730M,ACCRA-PAC INC. DBA VOYANT BEAUTY | ACCRA-PAC INC. DBA VOYANT BEAUTY,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,hydroextrusionusallc,IN,3,46515SCLMN23841 | 46554WLLSL400SO | 47331NDLXN512NW,HYDRO EXTRUSION USA LLC | HYDRO EXTRUSION USA LLC | HYDRO EXTRUSION USA LLC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,wabashnationallp,IN,3,46526SPRMC16500 | 47903WBSHN1000S | 47905WBSHN3550E,WABASH NATIONAL L.P. | WABASH NATIONAL L.P. | WABASH NATIONAL L.P.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,kountrywoodproductsllc,IN,2,46550KNTRY5EWAB | 4655WKNTRY352SH,KOUNTRY WOOD PRODUCTS LLC | KOUNTRY WOOD PRODUCTS LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,zimmerbiometinc,IN,2,46580ZMMRNCENTE | 46581BMTMN56EBE,ZIMMER BIOMET INC | ZIMMER BIOMET INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,metalspinnersadivofsamuelsoncousainc,IN,2,4670WMTLSP8GRWT | 4670WMTLSP914WH,METAL SPINNERS - A DIV OF SAMUEL SON & CO. (USA) INC. | METAL SPINNERS - A DIV OF SAMUEL SON & CO. (USA) INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,brcrubberplasticsinc,IN,4,4671WBRCRB81WLA | 4672WBRCRB589SM | 46767FRDNB1497G | 47359SHLLR623WM,BRC RUBBER & PLASTICS INC | BRC RUBBER & PLASTICS INC. | BRC RUBBER & PLASTICS INC. | BRC RUBBER& PLASTICS INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,catoolengineeringinc,IN,2,46723CTLNG41NUS | 4672WCTLNG57SMA,C & A TOOL ENGINEERING INC | C & A TOOL ENGINEERING INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,ashleyindustrialmoldinginc,IN,2,4675WSHLYN14SUT | 47405GLPCH320SW,ASHLEY INDUSTRIAL MOLDING INC | ASHLEY INDUSTRIAL MOLDING INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,tenneco,IN,2,46767WLKRM1490G | 4676WTNNCX1493G,TENNECO | TENNECO,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,novaellc,IN,3,4677WNVCRP1NVAE | 4677WNVCRP6NVAE | 46962DXTRX11870,NOVAE LLC | NOVAE LLC | NOVAE LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,reamagnetwireco,IN,2,46801PHLPS4300N | 47905RMGNT2800C,REA MAGNET WIRE CO | REA MAGNET WIRE CO,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,heidelbergmaterialsuscementllc,IN,2,46947CPLYCSTATE | 47446LHGHP121NO,HEIDELBERG MATERIALS US CEMENT LLC | HEIDELBERG MATERIALS US CEMENT LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,ardaghglassinc,IN,2,47336KRRXX524EC | 47394NCHRG603EN,ARDAGH GLASS INC | ARDAGH GLASS INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,silganwhitecapcorp,IN,2,47374LCCLS1701W | 47710MRCNN2201W,SILGAN WHITE CAP CORP | SILGAN WHITE CAP CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,unisealinc,IN,2,47710NSLNC1014U | 4771WNSLNC1GRVE,UNISEAL INC | UNISEAL INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,greatdanetrailers,IN,2,47807GRTDN4901N | 47834GRTDNUSHIG,GREAT DANE TRAILERS | GREAT DANE TRAILERS,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,raybestospowertrainllc,IN,3,47882LLMTC69ECH | 47882WNSBR110IN | 47933RYBST1204D,RAYBESTOS POWERTRAIN LLC | RAYBESTOS POWERTRAIN LLC | RAYBESTOS POWERTRAIN LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,ndindustriesinc,MI,2,48017NDNDS1NCRK | 48084NDNDS1893B,ND INDUSTRIES INC. | ND INDUSTRIES INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,deporindustries,MI,2,48084DPRND1902N | 48315MRGNC14830,DEPOR INDUSTRIES | DEPOR INDUSTRIES,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,lwinc,MI,2,4811WLWNCX621HA | 4811WLWNCX6771H,L&W INC. | L & W  INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,basfcorp,MI,2,48150BSFCR13000 | 48192BSFCR1609B,BASF CORP | BASF CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,univarsolutionsusa,MI,2,48174CHMCN13395 | 48906SHLND2011T,UNIVAR SOLUTIONS USA | UNIVAR SOLUTIONS USA,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,americanjetwaycorp,MI,2,48184MRCNJ34136 | 4818WMRCNJ3737V,AMERICAN JETWAY CORP | AMERICAN JETWAY CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,orchidorthopedicsolutions,MI,2,4872WRCHDR6688D | 4884WRCHDR1489C,ORCHID ORTHOPEDIC SOLUTIONS | ORCHID ORTHOPEDIC SOLUTIONS,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,parkerhannifin,MI,2,48850PRKRB8790W | 49078PRKRH300PA,PARKER HANNIFIN | PARKER HANNIFIN,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,michiganmilkproducersassoc,MI,2,48866MCHGN431WW | 49042MCHGN125DE,MICHIGAN MILK PRODUCERS ASSOC | MICHIGAN MILK PRODUCERS ASSOC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,tennecoautomotiveoperatingcoinc,MI,3,4890WTNNCT4722N | 49068WLKRM904IN | 49252TNNCT929AN,TENNECO AUTOMOTIVE OPERATING CO INC. | TENNECO AUTOMOTIVE OPERATING CO INC. | TENNECO AUTOMOTIVE OPERATING CO INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,aludynellc,MI,2,4902WLTCHL132PA | 49127CSTMT2800Y,ALUDYNE LLC | ALUDYNE LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,specialliteinc,MI,2,4902WSPCLL1394E | 49045SPCLL88448,SPECIAL-LITE INC. - | SPECIAL-LITE INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,mecinc,MI,2,4931WMCNCX9984T | 4934WMCNCX4714C,MEC INC. | MEC INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,leprinofoodsco,MI,2,49340LPRNF311NS | 49401LPRNF4700R,LEPRINO FOODS CO | LEPRINO FOODS CO,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,johnsontechnologyinc,MI,2,49441JHNSN66NRT | 49442JHNSN2034L,JOHNSON TECHNOLOGY INC | JOHNSON TECHNOLOGY INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,hutchinsonantivibrationsystemsinc,MI,2,49501PLSTR460FU | 49601PLSTR6007T,HUTCHINSON ANTIVIBRATION SYSTEMS INC | HUTCHINSON ANTIVIBRATION SYSTEMS INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,amphenolborischtechnologies,MI,2,49512BRSCH4511E | 4951WMPHNL4489E,AMPHENOL BORISCH TECHNOLOGIES | AMPHENOL BORISCH TECHNOLOGIES,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,cargillinc,IA,4,50126CRGLL602IN | 51102CRGLL980CL | 52402CRGLL4116T | 52404CRGLL11031,CARGILL INC | CARGILL INC | CARGILL INC | CARGILL INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,thombertinc,IA,2,50208THMBR316E7 | 52211THMBR22IND,THOMBERT INC. | THOMBERT INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,precisionpulleyidlerinc,IA,2,50219PRCSN300SE | 50851PRCSN700SW,PRECISION PULLEY & IDLER INC | PRECISION PULLEY & IDLER INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,agprocessinginc,IA,5,50401GPRCS16051 | 50533GPRCS500NO | 50536GPRCS47393 | 51054GPRCSBOX20 | 51201GPRCS8042N,AG PROCESSING INC | AG PROCESSING INC | AG PROCESSING INC | AG PROCESSING INC | AG PROCESSING INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,zinprocorp,IA,2,50438ZNPRC880EA | 5060WZNPRC2181L,ZINPRO CORP | ZINPRO CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,nestlepurinapetcareco,IA,2,50501FRSKS24005 | 52732RLSTN2200M,NESTLE PURINA PETCARE CO | NESTLE PURINA PETCARE CO,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,brandfxllc,IA,2,50574BRNDF21215 | 50590FBRBD4074T,BRANDFX LLC | BRANDFX LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,tysonfreshmeatsinc,IA,2,50588BPNCXFLIND | 51501BPNCX27002,TYSON FRESH MEATS INC | TYSON FRESH MEATS INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,kcngiowallc,IA,2,5061WKCNGL6313P | 5070WKCNGL353MA,KCNG IOWA LLC | KCNG IOWA LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,diamondvogelinc,IA,2,51041DMNDVINDUS | 52601DMNDVBOX24,DIAMOND VOGEL INC. | DIAMOND VOGEL INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,admcornprocessing,IA,2,52404DMCRN1350W | 52732DMCRN1251B,ADM CORN PROCESSING | ADM CORN PROCESSING,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,bradleycorp,WI,2,5302WBRDLYN16W1 | 53051BRDLYW142N,BRADLEY CORP | BRADLEY CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,metalcraftofmayville,WI,2,53050MTLCR1000M | 53095MTLCR26MET,METALCRAFT OF MAYVILLE | METALCRAFT OF MAYVILLE,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,diamondvogelinc,WI,2,53051RBCRPN92W1 | 53081PTRSN710FO,DIAMOND VOGEL INC. | DIAMOND VOGEL INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,silgancontainersmanufacturingcorp,WI,2,53051SLGNCN90W1 | 54467SLGNC1400P,SILGAN CONTAINERS MANUFACTURING CORP | SILGAN CONTAINERS MANUFACTURING CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,veoliaestechnicalsolutionsllc,WI,2,53051TSCNTW124N | 53074SPRRS1275M,VEOLIA ES TECHNICAL SOLUTIONS LLC | VEOLIA ES TECHNICAL SOLUTIONS LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,aceprecision,WI,2,5305WCPRCSW146N | 5306WCPRCS977BL,ACE PRECISION | ACE PRECISION,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,sartorico,WI,2,53073SRCHS2EAST | 54409KRFTN9079T,SARTORI CO | SARTORI CO,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,httinc,WI,2,53081CLPSM1828O | 5308WHTTNC428CL,HTT INC | HTT INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,schreiberfoods,WI,2,53095LVLVL807PL | 5351WSCHRB2924W,SCHREIBER FOODS | SCHREIBER FOODS,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,atiladishllc,WI,2,53110LDSHC5481S | 5462WTLDSH1JACK,ATI LADISH LLC. | ATI LADISH LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,spxflowusllc,WI,2,53115WKSHF611SU | 5311WSPXFL1714H,SPX FLOW US LLC | SPX FLOW US LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,wisconsinprecisioncastingcorp,WI,2,53120WSCNS405HW | 53147NRTHRHWY36,WISCONSIN PRECISION CASTING CORP | WISCONSIN PRECISION CASTING CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,engendrenllc,WI,2,5312WNGNDR4134C | 53144MRTNP96255,ENGENDREN LLC | ENGENDREN LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,rustoleumcorp,WI,2,53148RSTLM8105F | 5396WRSTLM12STR,RUST-OLEUM CORP | RUST-OLEUM CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,cooperpowersystemsllc,WI,3,53172CPRPW2800N | 53186RTSML1319E | 53188CPPRP2300B,COOPER POWER SYSTEMS LLC | COOPER POWER SYSTEMS LLC | COOPER POWER SYSTEMS LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,alloyproductscorp,WI,2,53187LLYPR1045P | 5318WLLYPR945BL,ALLOY PRODUCTS CORP | ALLOY PRODUCTS CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,holcimsolutionsproductsusllc,WI,2,5318WGCWST1245C | 53532FRSTN612NS,HOLCIM SOLUTIONS & PRODUCTS (US) LLC | HOLCIM SOLUTIONS & PRODUCTS (US) LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,vulcanglobalmanufacturingsolutionsinc,WI,3,53204VLCNG1517W | 53204VLCNL1400W | 53209VLCNG315WM,VULCAN GLOBAL MANUFACTURING SOLUTIONS INC | VULCAN GLOBAL MANUFACTURING SOLUTIONS INC | VULCAN GLOBAL MANUFACTURING SOLUTIONS INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,chrhanseninc,WI,2,53214CHRHN9015W | 5359WDRFRM4375D,CHR HANSEN INC | CHR. HANSEN INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,hentzencoatingsinc,WI,2,53218HNTZN6937W | 5322WHNTZN82NFA,"HENTZEN COATINGS,INC | HENTZEN COATINGS INC.",POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,hydritechemicalco,WI,2,53527HYDRT150WD | 54901HYDRT191WE,HYDRITE CHEMICAL CO. | HYDRITE CHEMICAL CO.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,schreiberfoodsinc,WI,2,53581LNDLK920SE | 53581SCHRB211BH,SCHREIBER FOODS INC | SCHREIBER FOODS INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,foremostfarmsusa,WI,7,53581WSCNS684SO | 53813WSCNS932NO | 53959WSCNS501SP | 54004WSCNSMAINA | 54449MPMRN1511E | 54656FRMST427EW | 54914MPMRN1815W,FOREMOST FARMS USA | FOREMOST FARMS USA | FOREMOST FARMS USA | FOREMOST FARMS USA | FOREMOST FARMS USA | FOREMOST FARMS USA | FOREMOST FARMS USA,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,cardinalglass,WI,3,5358WCRDNL111EM | 5358WCRDNL131EH | 5466WCRDNL162TW,CARDINAL GLASS | CARDINAL GLASS | CARDINAL GLASS,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,safcinc,WI,2,5359WSFCNC111KE | 5371WSFCNC645SC,SAFC INC. | SAFC INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,wabashwalkerstainlessequipmentco,WI,2,53929WLKRS902SE | 53950WLKRS625ST,WABASH (WALKER STAINLESS EQUIPMENT CO) | WABASH (WALKER STAINLESS EQUIPMENT CO),POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,saputocheeseusainc,WI,5,5395WWSCNS522GR | 53963LTDRYN3545 | 54106TGMPR307NC | 54139FRGCHHWY14 | 54805TWNTWRT1HW,SAPUTO CHEESE USA INC. | SAPUTO CHEESE USA INC | SAPUTO CHEESE USA INC | SAPUTO CHEESE USA INC | SAPUTO CHEESE USA INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,luvataappletonllc,WI,3,54136VLLYC540EI | 5413WLVTPP8WKEN | 54911VLLYC908NL,LUVATA APPLETON LLC | LUVATA APPLETON LLC | LUVATA APPLETON LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,samuelsoncousainc,WI,2,54143SLVNN2121C | 54487NRTHL11194,SAMUEL SON & CO (USA) INC. | SAMUEL SON & CO (USA) INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,marionbodyworks,WI,2,5416WMRNBD15PLA | 5495WMRNBD211WR,MARION BODY WORKS | MARION BODY WORKS,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,bwconvertinginc,WI,2,54302NTHRN1731C | 54304PPRCN2300S,BW CONVERTING INC | BW CONVERTING INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,nouryon,WI,2,54313GNCRP1701C | 54313KCHMC151BR,NOURYON | NOURYON,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,veritassteel,WI,2,54401HRTWG3526W | 54703PDMBR2800M,VERITAS STEEL | VERITAS STEEL,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,felkerbrotherscorp,WI,2,54449FLKRB1707E | 54467PCHST291AP,FELKER BROTHERS CORP | FELKER BROTHERS CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,hsmanufacturingcoinc,WI,2,54449HSMNF2608S | 54929STNBRN1165,H & S MANUFACTURING CO INC | H & S MANUFACTURING CO INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,steelkingindustriesinc,WI,2,54481STLKN2700C | 54961STLKN325EB,STEEL KING INDUSTRIES INC | STEEL KING INDUSTRIES INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,stellajonescorp,WI,2,54614WBSTRCOUNT | 5482WMCFRL114S1,STELLA-JONES CORP | STELLA-JONES CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,northernengravingcorp,WI,2,54656NRTHR803SO | 54669NRTHR600BR,NORTHERN ENGRAVING CORP | NORTHERN ENGRAVING CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,parkerhannifincorp,WI,2,54728PRKRH1715P | 54840PRKRH533NO,PARKER HANNIFIN CORP | PARKER HANNIFIN CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,ttmtechnologiesnallc,WI,2,54729CRYRS234CA | 5472WTTMTC85TEC,TTM TECHNOLOGIES N.A. LLC | TTM TECHNOLOGIES N.A. LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,oshkoshdefensellc,WI,2,54903LCHCX2737H | 54903SHKSH2307O,OSHKOSH DEFENSE LLC | OSHKOSH DEFENSE LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,btdmanufacturinginc,MN,2,5504WBTDMN2135C | 5656WBTDMN11111,BTD MANUFACTURING INC. | BTD MANUFACTURING INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,allflexsolutionsinc,MN,4,5505WLLFLX175CA | 55431DDDVL9401J | 55431PRNTD1200W | 5543WLLFLX128W9,ALL FLEX SOLUTIONS INC | ALL FLEX SOLUTIONS INC. | ALL FLEX SOLUTIONS INC. | ALL FLEX SOLUTIONS INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,usginteriorsllc,MN,2,55066SGNTR27384 | 55720SGNTR35ARC,USG INTERIORS LLC | USG INTERIORS LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,nventhoffman,MN,2,55303HFFMN1000N | 55303HFFMN900EH,NVENT HOFFMAN | NVENT HOFFMAN,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,scottequipmentco,MN,2,5530WSCTTQ39579 | 5607WSCTTQ654TH,SCOTT EQUIPMENT CO | SCOTT EQUIPMENT CO,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,emersonautomationsolutionsrosemountinc,MN,3,55317RSMNT8200M | 55344RSMNT12001 | 5537WMRSNP621IN,EMERSON AUTOMATION SOLUTIONS ROSEMOUNT INC | EMERSON AUTOMATION SOLUTIONS ROSEMOUNT INC | EMERSON AUTOMATION SOLUTIONS ROSEMOUNT INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,twincitydiecastingsco,MN,2,55362TWNCT520CH | 55414TWNCT10703,TWIN CITY DIE CASTINGS CO | TWIN CITY DIE CASTINGS CO,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,benchmark,MN,2,55901PMSTR3535T | 55987BNCHM4065T,BENCHMARK | BENCHMARK,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,millerwastemillsdbartpco,MN,2,55987MLLRW580EF | 5598WMLLRW152E8,MILLER WASTE MILLS (DBA RTP CO.) | MILLER WASTE MILLS DBA RTP CO,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,associatedmilkproducersinc,MN,2,56073SSCTD312CE | 56362SSCTD200RA,ASSOCIATED MILK PRODUCERS INC. | ASSOCIATED MILK PRODUCERS INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,centralbiproducts,MN,2,56283CNTRLRRCOR | 56347CNTRLHWY71,CENTRAL BI-PRODUCTS | CENTRAL BI-PRODUCTS,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,daktronicsinc,SD,2,57006DKTRN33132 | 57104LTTNM600E5,DAKTRONICS INC | DAKTRONICS INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,wilsontrailerco,SD,2,5703WWLSNT415ER | 57078WLSNTHWY81,WILSON TRAILER CO | WILSON TRAILER CO,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,dakotamfgcoinc,SD,2,57328PRRSTHWY28 | 57369DKTMF8MAIN,DAKOTA MFG CO INC | DAKOTA MFG CO INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,perfectionplatinginc,IL,2,60007CNCHC1501M | 60007PRFCT775MO,PERFECTION PLATING INC. | PERFECTION PLATING INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,bostikinc,IL,3,60007MRTNC2401E | 60072MRTNT5005B | 60409SHLND142ND,BOSTIK INC. | BOSTIK INC. | BOSTIK INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,johncraneinc,IL,2,60014JHNCR2931B | 60053JHNCR6400W,JOHN CRANE INC | JOHN CRANE INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,americanmetalfibersinc,IL,2,6004WMRCNM1342R | 6004WMRCNM28893,AMERICAN METAL FIBERS INC | AMERICAN METAL FIBERS INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,scotforgeco,IL,2,60081SCTFR8001W | 60131SCTFR9384B,SCOT FORGE CO | SCOT FORGE CO,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,sherwinwilliamsco,IL,8,60090NTRPR1991W | 60443CHRDW21901 | 60628SHRWN11541 | 60901THVLS901NO | 61108THVLS200SA | 61109SHRWN4472T | 61265MLNPN54002 | 62839MNWXC14IND,SHERWIN-WILLIAMS CO | SHERWIN-WILLIAMS CO | SHERWIN-WILLIAMS CO | SHERWIN-WILLIAMS CO | SHERWIN-WILLIAMS CO | SHERWIN-WILLIAMS CO | SHERWIN-WILLIAMS CO | SHERWIN-WILLIAMS CO,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,arntzencorp,IL,2,60098RNTZN14600 | 61101RNTZN1025S,ARNTZEN CORP | ARNTZEN CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,camcraftinc,IL,2,60103CMCRF1080M | 6010WCMCRF1361S,CAMCRAFT INC. | CAMCRAFT INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,ficamerica,IL,2,6010WFCMRC31LNG | 60188FTBND485EL,FIC AMERICA | FIC AMERICA,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,henkelusoperationscorp,IL,2,60120HNKLD1345G | 6063WHNKLT65W51,HENKEL US OPERATIONS CORP. | HENKEL US OPERATIONS CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,elgiloyspecialtymetals,IL,3,60123LGLYN1565F | 60140LGLYS1HAUK | 6017WLGLYS356NC,ELGILOY SPECIALTY METALS | ELGILOY SPECIALTY METALS | ELGILOY SPECIALTY METALS,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,americanntnbearingmanufacturingcorp,IL,2,60123MRCNN1500H | 60176MRCNN9515W,AMERICAN NTN BEARING MANUFACTURING CORP. | AMERICAN NTN BEARING MANUFACTURING CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,oldcastleprecastinc,IL,2,6012WLDCST1375G | 6044WLDCST78SMA,OLDCASTLE PRECAST INC | OLDCASTLE PRECAST INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,elkayplumbingproductsco,IL,3,60153LKYMN2700S | 61046MDLLN15NRC | 61074LKYMN64PEN,ELKAY PLUMBING PRODUCTS CO | ELKAY PLUMBING PRODUCTS CO | ELKAY PLUMBING PRODUCTS CO,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,dynamicmanufacturinginc,IL,5,60162DYNMC4211W | 6016WDYNMC181N3 | 6016WDYNMC25NMA | 6016WDYNMC421RA | 6016WDYNMC43WMA,DYNAMIC MANUFACTURING INC | DYNAMIC MANUFACTURING INC. | DYNAMIC MANUFACTURING INC | DYNAMIC MANUFACTURING INC. | DYNAMIC MANUFACTURING INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,sunchemicalcorp,IL,2,60164GNRLP135WL | 60174CTSSC2445P,SUN CHEMICAL CORP | SUN CHEMICAL CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,accuratedispersions,IL,2,60430CCRTD1111M | 60473MCWHR192W1,ACCURATE DISPERSIONS | ACCURATE DISPERSIONS,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,nanophasetechnologiescorp,IL,2,60446NNPHS1319M | 6044WNNPHS4WCRS,NANOPHASE TECHNOLOGIES CORP | NANOPHASE TECHNOLOGIES CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,univarsolutionsusa,IL,2,60480SHLND8500S | 60501VNWTR8500W,UNIVAR SOLUTIONS USA | UNIVAR SOLUTIONS USA,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,grayhillinc,IL,2,60525GRYHL561HI | 6052WGRYHL48VER,GRAYHILL INC | GRAYHILL INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,empirehardchromeinc,IL,2,60608MPRHR1537S | 60623MPRHR1615N,EMPIRE HARD CHROME INC. | EMPIRE HARD CHROME INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,europtecusallc,IL,2,60608MRSCM2857S | 60608NGNRD929WE,EUROPTEC USA LLC | EUROPTEC USA LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,edsalmanufacturingcoinc,IL,2,60609DSLMF4400S | 6060WDSLMN4345S,EDSAL MANUFACTURING CO INC | EDSAL MANUFACTURING CO INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,gcpappliedtechnologiesinc,IL,2,60638WRGRC6050W | 60638WRGRC6051W,GCP APPLIED TECHNOLOGIES INC | GCP APPLIED TECHNOLOGIES INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,nucortubularproductsinc,IL,2,6063WNDPND6226W | 6134WNDPND121EB,NUCOR TUBULAR PRODUCTS INC. | NUCOR TUBULAR PRODUCTS INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,matcormetalfabrication,IL,2,61550MRTNM1021W | 61550MRTNM4DETR,MATCOR METAL FABRICATION | MATCOR METAL FABRICATION,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,prairiefarmsdairyinc,IL,3,62040PRRFR1800A | 62450PRRFR217WE | 62626PRRFR1100N,PRAIRIE FARMS DAIRY INC | PRAIRIE FARMS DAIRY INC | PRAIRIE FARMS DAIRY INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,customsteelprocessinginc,IL,2,6204WCSTMS25CEN | 6206WCSTMS11CLL,CUSTOM STEEL PROCESSING INC. | CUSTOM STEEL PROCESSING INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,championlaboratoriesinc,IL,2,6280WCHMPN2SUTH | 6280WCHMPN31IND,CHAMPION LABORATORIES INC | CHAMPION LABORATORIES INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,superiorindustrialsolutionsinc,MO,2,6301WSPRRS323AR | 65803SPRRF2055E,SUPERIOR INDUSTRIAL SOLUTIONS INC. | SUPERIOR INDUSTRIAL SOLUTIONS INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,plzcorp,MO,3,63077PLZNC105BO | 63077PLZNC113BL | 64735RVLMN1001G,PLZ CORP. | PLZ CORP. | PLZ CORP.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,missourimetalsadivofsamuelsoncousainc,MO,2,63132GGKTR9970P | 6338WMSSRM555EB,MISSOURI METALS A DIV OF SAMUEL SON & CO. (USA) INC. | MISSOURI METALS A DIV OF SAMUEL SON & CO. (USA) INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,leggettplattinc,MO,2,63701RCTCL450NA | 64836LGGTTEASTC,LEGGETT & PLATT INC | LEGGETT & PLATT INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,gatescorp,MO,3,63901GTSRB1650R | 65084GTSRB1001P | 65201DLDVP3015L,GATES CORP | GATES CORP | GATES CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,stahlspecialtyco,MO,2,64061STHLSHIGHW | 64093STHLSHIGHW,STAHL SPECIALTY CO | STAHL SPECIALTY CO,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,henkelusoperationscorp,MO,2,64085RBSLL21HWY | 64116NTNLS1350T,HENKEL US OPERATIONS CORP | HENKEL US OPERATIONS CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,vancebrothersllc,MO,2,64130KCHMT4915C | 64130VNCBR5201B,VANCE BROTHERS LLC | VANCE BROTHERS LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,modinemanufacturingco,MO,3,64683MDNMN822IN | 64801MDNMN3300W | 65109MDNMN1502S,MODINE MANUFACTURING CO | MODINE MANUFACTURING CO | MODINE MANUFACTURING CO,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,delongsinc,MO,2,65101DLNGSDIXAN | 65301DLNGS131SH,DELONG'S INC | DELONG'S INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,copelandscrollcompressorslp,MO,2,65536CPLND701EH | 65608MRSNL1400N,COPELAND SCROLL COMPRESSORS LP | COPELAND SCROLL COMPRESSORS LP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,certainteedllc,KS,2,66115CRTNT103FU | 6746WCRTNT873NH,CERTAINTEED LLC | CERTAINTEED LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,cobaltboatsllc,KS,3,66757FBRGL1101I | 66757FBRGL13291 | 66757FBRGL1705N,COBALT BOATS LLC | COBALT BOATS LLC | COBALT BOATS LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,tysonfreshmeatsinc,KS,2,66801BPNCX2101W | 67851BPNCXWESTH,TYSON FRESH MEATS INC. | TYSON FRESH MEATS INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,nationalbeefpackingcollc,KS,2,67801KYPLN2000E | 67901NTNLB1501E,NATIONAL BEEF PACKING CO LLC | NATIONAL BEEF PACKING CO LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,adm,NE,2,68025RCHRD130NB | 68507RCHRD78THA,ADM | ADM,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,valmontindustriesinc,NE,2,68064VLMNTWESTH | 69001VLMNT75SHW,VALMONT INDUSTRIES INC | VALMONT INDUSTRIES INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,contitechusallc,NE,2,68501GDYRT4021N | 68701GDYRT2701W,CONTITECH USA LLC | CONTITECH USA LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,tysonfreshmeatsinc,NE,2,68731BPNCXHIGHW | 68850BPNCX1500S,TYSON FRESH MEATS INC | TYSON FRESH MEATS INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,a1fiberglass,NE,2,688181FBRG1318W | 68901FBRGLROUTE,A-1 FIBERGLASS | A-1 FIBERGLASS,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,unverferthmanufacturingcoinclexingtondiv,NE,2,68850RTHMNRR2XX | 6885WSTHFR62EAS,UNVERFERTH MANUFACTURING CO INC - LEXINGTON DIV - | UNVERFERTH MANUFACTURING CO INC - LEXINGTON DIV -,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,evonikcorp,LA,2,70084LCLCX430NO | 70508CTLYS100AM,EVONIK CORP | EVONIK CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,cameroninternationalcorp,LA,3,70380CMRNN37HWY | 7038WCMRNN55HIG | 70586CMRNRNO6HO,CAMERON INTERNATIONAL CORP | CAMERON INTERNATIONAL CORP | CAMERON INTERNATIONAL CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,huntingenergyservicesllc,LA,2,7039WHNTNG1717H | 70518HNTNG3817M,HUNTING ENERGY SERVICES LLC | HUNTING ENERGY SERVICES LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,westlakechemicalsvinylsllc,LA,2,70669GRGGL1600V | 70765GRGGLHIGHW,WESTLAKE CHEMICALS & VINYLS LLC | WESTLAKE CHEMICALS & VINYLS LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,stellajonescorp,LA,3,71301DRWDT1KOPP | 71360DRWDTWADLE | 71419KSTCH12HWY,STELLA-JONES CORP | STELLA-JONES CORP | STELLA-JONES CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,stellajonescorp,AR,2,7166WTRTDM64HWY | 72801THMPSRT1BO,STELLA-JONES CORP | STELLA-JONES CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,sigsauerinc,AR,3,7207WSGSRN189SW | 7207WSGSRN23NRE | 7207WSGSRN26TRB,SIG SAUER INC | SIG SAUER INC | SIG SAUER INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,customcraftpoultryllc,AR,2,72204DMSTN4701A | 7250WCSTMCPBX24,CUSTOM CRAFT POULTRY LLC | CUSTOM CRAFT POULTRY LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,hytrolconveyorcoinc,AR,2,72401HYTRL2020H | 7290WHYTRL65JEN,HYTROL CONVEYOR CO INC | HYTROL CONVEYOR CO INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,tysonpoultryinc,AR,4,72616TYSNF110WF | 72834TYSNFSIXTH | 72863RVRVLPOBOX | 72958TYSNFENDOF,TYSON POULTRY INC | TYSON POULTRY INC. | TYSON POULTRY INC. | TYSON POULTRY INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,bekaertcorp,AR,2,72757BKRTXONEBE | 72956BKRTCI40LE,BEKAERT CORP | BEKAERT CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,abbmotorsmechanicalinc,AR,3,72901BLDRL5711S | 72902STHWS4900W | 72949BLDRL1910B,ABB MOTORS & MECHANICAL INC. | ABB MOTORS & MECHANICAL INC. | ABB MOTORS & MECHANICAL INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,hispaintmanufacturingcoinc,OK,2,73106HSPNT1700W | 7310WHSPNT181WR,H-I-S PAINT MANUFACTURING CO INC | H-I-S PAINT MANUFACTURING CO INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,istiplantservices,OK,2,7401WSTPLN5555N | 7411WSTPLN16415,ISTI PLANT SERVICES | ISTI PLANT SERVICES,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,fujifilmelectronicmaterialsusainc,TX,2,75006KTCHM1200W | 7500WFJFLM113WJ,FUJIFILM ELECTRONIC MATERIALS USA INC. | FUJIFILM ELECTRONIC MATERIALS USA INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,thepittsburghpaintsco,TX,2,75006THGLD1900J | 76503THGLD3410L,THE PITTSBURGH PAINTS CO. | THE PITTSBURGH PAINTS CO.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,sherwinwilliamsco,TX,4,75041SHRWN2802W | 75042DSTNC701SH | 75119NTDCT301PL | 76011SHRWN71010,SHERWIN-WILLIAMS CO | SHERWIN-WILLIAMS CO | SHERWIN-WILLIAMS CO | SHERWIN-WILLIAMS CO,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,lockheedmartinmissilesfirecontrol,TX,2,75051LTVRS1701W | 75915LCKHD18NJH,LOCKHEED MARTIN MISSILES & FIRE CONTROL | LOCKHEED MARTIN MISSILES & FIRE CONTROL,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,suncoastresourcesllc,TX,6,7505WSNCST2717E | 7566WSNCST1313E | 7702WSNCST6922C | 7821WSNCST582EI | 7872WSNCST7759J | 7970WSNCST566EC,SUN COAST RESOURCES LLC | SUN COAST RESOURCES LLC | SUN COAST RESOURCES LLC | SUN COAST RESOURCES LLC | SUN COAST RESOURCES LLC | SUN COAST RESOURCES LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,raytheonco,TX,2,75069TXSNS2501W | 75243RYTHN13510,RAYTHEON CO | RAYTHEON CO,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,glecoplatinginc,TX,2,75088GLCPL2220G | 7850WGLCPL38WUR,GLECO PLATING INC. | GLECO PLATING INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,texasinstrumentsinc,TX,2,7508WTXSNS3WEST | 75243TXSNS13500,TEXAS INSTRUMENTS INC | TEXAS INSTRUMENTS INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,tysonfreshmeatsinc,TX,2,75090SCRMY4700H | 79187BPNCXFARMR,TYSON FRESH MEATS INC | TYSON FRESH MEATS INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,towerextrusionsllc,TX,2,7509WXTRDR93HEN | 76374TWRXTHIGHW,TOWER EXTRUSIONS LLC | TOWER EXTRUSIONS LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,holcimsolutionsproductsusllc,TX,2,75109FRSTN421EH | 7706WTWPLY1255C,HOLCIM SOLUTIONS & PRODUCTS (US) LLC | HOLCIM SOLUTIONS & PRODUCTS US LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,pottersindustriesllc,TX,2,75460FLXLT1601N | 76801PTTRSCRSSP,POTTERS INDUSTRIES LLC | POTTERS INDUSTRIES LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,coastalchemicalcollc,TX,7,7566WCSTLC1312I | 7603WCSTLC4725N | 7770WCSTLC6534I | 7780WCSTLC1613G | 7806WCSTLC1819F | 7833WCSTLC611EH | 7976WCSTLC31SLA,COASTAL CHEMICAL CO. LLC | COASTAL CHEMICAL CO. LLC | COASTAL CHEMICAL CO. LLC | COASTAL CHEMICAL CO. LLC | COASTAL CHEMICAL CO. LLC | COASTAL CHEMICAL CO. LLC | COASTAL CHEMICAL CO. LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,stellajonescorp,TX,2,75902LFKNNUSHWY | 75951TXSLCBEVIL,STELLA-JONES CORP | STELLA-JONES CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,sabreindustries,TX,3,7600WSBRLV8653E | 7611WSBRND575EI | 7730WJYTMR3575P,SABRE INDUSTRIES | SABRE INDUSTRIES | SABRE INDUSTRIES,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,polycoatproductsllc,TX,2,7601WPLYCT31EPI | 76021RTCSY2100R,POLYCOAT PRODUCTS LLC | POLYCOAT PRODUCTS LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,johnsmanville,TX,3,76031MNVLL200WI | 7664WJHNSM858JH | 77572TWLPR55IND,JOHNS MANVILLE | JOHNS MANVILLE | JOHNS MANVILLE,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,oldcastleprecastinc,TX,4,76063LDCST11HER | 77048LDCST136WA | 77423LDCST212FM | 7821WLDCST19RIL,OLDCASTLE PRECAST INC | OLDCASTLE PRECAST INC | OLDCASTLE PRECAST INC | OLDCASTLE PRECAST INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,ktgalvanizingco,TX,2,76084KTGLV2500C | 77492KTGLV5105E,K-T GALVANIZING CO | K-T GALVANIZING CO,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,weatherfordaerospacellc,TX,2,76086CHMCL1020E | 76086CHMCL610WT,WEATHERFORD AEROSPACE LLC | WEATHERFORD AEROSPACE LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,ballmetalbeveragecontainercorp,TX,2,76140MLLRB6600W | 77303BLLPC1000N,BALL METAL BEVERAGE CONTAINER CORP | BALL METAL BEVERAGE CONTAINER CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,ercarpenterlp,TX,2,76501RCRPN2611N | 77507CRPNT11002,ER CARPENTER LP | E R CARPENTER LP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,dfadairybrandsfluidllcdbaoakfarms,TX,2,77003KFRMS3417L | 78201KFRMS1314F,DFA DAIRY BRANDS FLUID LLC DBA OAK FARMS | DFA DAIRY BRANDS FLUID LLC DBA OAK FARMS,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,metalplategalvanizinglp,TX,2,77013MTLPL10625 | 77013MTLPL10635,METALPLATE GALVANIZING LP | METALPLATE GALVANIZING LP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,sasolchemicalsusallc,TX,2,77015MRCHM1914H | 77665MRCHMHWY12,SASOL CHEMICALS (USA) LLC | SASOL CHEMICALS (USA) LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,arkemainc,TX,3,77015PNNWL2231H | 77507TFNCH4923B | 77704PNNWL2052G,ARKEMA INC | ARKEMA INC | ARKEMA INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,univarsolutionsusa,TX,6,77034SHLND8901O | 77041HSTNS11235 | 77378SYNRGMEADO | 78408VNWTR402MC | 78409VLLYS8215U | 79762VNWTR311LA,UNIVAR SOLUTIONS USA | UNIVAR SOLUTIONS USA | UNIVAR SOLUTIONS USA | UNIVAR SOLUTIONS USA | UNIVAR SOLUTIONS USA | UNIVAR SOLUTIONS USA,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,maddengalvanizingllc,TX,2,77040MDDNG1342H | 7744WMDDNG17223,MADDEN GALVANIZING LLC | MADDEN GALVANIZING LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,crownbeveragepackaging,TX,2,77303CRWNC2501N | 77478CNTNN12910,CROWN BEVERAGE PACKAGING | CROWN BEVERAGE PACKAGING,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,airproductsllc,TX,2,77506RPRDC1423H | 77640RPRDS1801S,AIR PRODUCTS LLC | AIR PRODUCTS LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,ineosstyrolutionamericallc,TX,2,77507HNTSM12222 | 77592MCCHMFOOTO,INEOS STYROLUTION AMERICA LLC | INEOS STYROLUTION AMERICA LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,nouryonfunctionalchemicalsllc,TX,2,77507KZCHM13000 | 77536TXSLK730BA,NOURYON FUNCTIONAL CHEMICALS LLC | NOURYON FUNCTIONAL CHEMICALS LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,equistarchemicalslp,TX,2,77571QNTMC1515M | 78410CCPCC1501M,EQUISTAR CHEMICALS LP | EQUISTAR CHEMICALS LP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,standardaerosanantonioinc,TX,2,78226STNDR661DU | 7822WSTNDR652CI,STANDARD AERO (SAN ANTONIO) INC. | STANDARDAERO (SAN ANTONIO) INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,icumedicalinc,TX,2,78664BBTTL2820O | 78728BBTTL3900H,ICU MEDICAL INC | ICU MEDICAL INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,westernmarketinginc,TX,2,7910WWSTRN121NE | 7940WWSTRN332EA,WESTERN MARKETING INC. | WESTERN MARKETING INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,mentonegasplant,TX,2,7975WMNTNG2261P | 7975WMNTNG2439C,MENTONE GAS PLANT | MENTONE GAS PLANT,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,champlaincabletexascorp,TX,2,79927MCGLL9560P | 7992WCHMPL96PAN,CHAMPLAIN CABLE TEXAS CORP | CHAMPLAIN CABLE TEXAS CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,oldcastleprecastinc,CO,2,80125LDCST8392R | 8065WLDCST427NF,OLDCASTLE PRECAST INC | OLDCASTLE PRECAST INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,owenscorningroofingasphaltllc,CO,2,80216WNSCR5201B | 80216WNSCR5201F,OWENS CORNING ROOFING & ASPHALT LLC | OWENS CORNING ROOFING & ASPHALT LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,woodwardinc,CO,2,80525WDWRD1000E | 8052WWDWRD141WD,WOODWARD INC | WOODWARD INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,glanbiafoodsinc,ID,2,83221KRFTN295SA | 83303TWNFL236WA,GLANBIA FOODS INC. | GLANBIA FOODS INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,performixnutritionsystemsllc,ID,3,8335WPRFRM235WE | 8361WPRFRM212NW | 8368WPRFRM1811E,PERFORMIX NUTRITION SYSTEMS LLC | PERFORMIX NUTRITION SYSTEMS LLC | PERFORMIX NUTRITION SYSTEMS LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,freedommunitionsllc,ID,2,8350WHWLLM153SU | 8350WHWLLM815DS,FREEDOM MUNITIONS LLC | FREEDOM MUNITIONS LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,bullfroginternationallc,UT,2,84065BLLFR668WE | 8409WBLLFR6899W,BULLFROG INTERNATIONAL L.C. | BULLFROG INTERNATIONAL L.C.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,biomerieux,UT,2,8410WBFRDG515CL | 8410WBMRXX11S48,BIOMERIEUX | BIOMERIEUX,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,schreiberfoodsinc,UT,2,84321SCHRB885N6 | 84335SCHRB218W6,SCHREIBER FOODS INC | SCHREIBER FOODS INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,oldcastleprecastinc,UT,2,84404MCRPR1625W | 84404MCRPR81W12,OLDCASTLE PRECAST INC | OLDCASTLE PRECAST INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,hydroextrusionusallc,AZ,2,85043HHTMK42N44 | 85043SCLMN249SO,HYDRO EXTRUSION USA LLC | HYDRO EXTRUSION USA LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,jensenprecast,AZ,2,8504WJNSNP241WB | 85706JNSNP481EW,JENSEN PRECAST | JENSEN PRECAST,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,coastalchemicalcollc,NM,2,87401CSTLC10COU | 8821WCSTLC6465S,"COASTAL CHEMICAL CO., LLC | COASTAL CHEMICAL CO. LLC",POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,jensenprecast,NV,3,89030JNSNP3853L | 8903WJNSNP384NB | 89431JNSNP625BE,JENSEN PRECAST | JENSEN PRECAST | JENSEN PRECAST,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,elitecomfortsolutions,CA,2,90023HCKRY4542E | 9176WPCFCR1671S,ELITE COMFORT SOLUTIONS | ELITE COMFORT SOLUTIONS,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,associatedreadymixedconcreteinc,CA,5,9002WSSCTD273EW | 9135WSSCTD8946B | 9261WSSCTD2591T | 9270WSSCTD183MT | 9303WSSCTD392SD,ASSOCIATED READY MIXED CONCRETE INC. | ASSOCIATED READY MIXED CONCRETE INC. | ASSOCIATED READY MIXED CONCRETE INC. | ASSOCIATED READY MIXED CONCRETE INC. | ASSOCIATED READY MIXED CONCRETE INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,nationalreadymixconcreteco,CA,10,90039NTNLR4549B | 9005WNTNLR2626E | 90701NTNLR11725 | 91303NTNLR6969D | 91351NTNLR275RU | 91352NTNLR91NRR | 91401NTNLR1523X | 91706NTNLR262BU | 92714NTNLR16282 | 93021NTNLR1395E,NATIONAL READY MIX CONCRETE CO . | NATIONAL READY MIX CONCRETE CO. | NATIONAL READY MIX CONCRETE CO . | NATIONAL READY MIX CONCRETE CO . | NATIONAL READY MIX CONCRETE CO . | NATIONAL READY MIX CONCRETE CO . | NATIONAL READY MIX CONCRETE CO . | NATIONAL READY MIX CONCRETE CO . | NATIONAL READY MIX CONCRETE CO . | NATIONAL READY MIX CONCRETE CO .,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,aareadymixedconcreteinc,CA,3,9024WRDYMX134WR | 9024WRDYMX1ERED | 9075WRDYMX9EPAT,A&A READY MIXED CONCRETE INC. | A&A READY MIXED CONCRETE INC. | A&A READY MIXED CONCRETE INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,northropgrummansystemscorp,CA,2,90278TRWNCONESP | 94088WSTNG401EH,NORTHROP GRUMMAN SYSTEMS CORP | NORTHROP GRUMMAN SYSTEMS CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,saputocheeseusainc,CA,5,90280GRDNF5611E | 93274KRFTG800EP | 93274STLLF901LE | 95322VSTFD2995T | 95360FDRYF691IN,SAPUTO CHEESE USA INC | SAPUTO CHEESE USA INC. | SAPUTO CHEESE USA INC. | SAPUTO CHEESE USA INC | SAPUTO CHEESE USA INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,usgypsumco,CA,2,90501NTDST401VA | 92244NTDST3810W,US GYPSUM CO | US GYPSUM CO,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,howmetglobalfasteningsystemsinc,CA,3,90505RXNRD3000W | 91744LCGLB135NU | 92634KYNRM800SS,HOWMET GLOBAL FASTENING SYSTEMS INC | HOWMET GLOBAL FASTENING SYSTEMS INC. | HOWMET GLOBAL FASTENING SYSTEMS INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,phenomenexinc,CA,2,9050WPHNMN411MA | 9050WPHNMN431AM,PHENOMENEX INC | PHENOMENEX INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,brenntagpacificinc,CA,2,90670BRNNT10747 | 94804GRTWS860WH,BRENNTAG PACIFIC INC | BRENNTAG PACIFIC INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,trojanbatterycollc,CA,2,90670TRJNB12380 | 90670TRJNB9440A,TROJAN BATTERY CO. LLC | TROJAN BATTERY CO LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,airproductschemicalsinc,CA,2,90744RPRDS700HE | 90810RPRDS23300,AIR PRODUCTS & CHEMICALS INC. | AIR PRODUCTS & CHEMICALS INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,sherwinwilliamsco,CA,3,90745LDQKR21243 | 91761SHRWN5526N | 92121FRZPN6625M,SHERWIN-WILLIAMS CO | SHERWIN-WILLIAMS CO | SHERWIN-WILLIAMS CO,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,olympusterminalsllc,CA,2,90802LNGBC1004P | 90810CRSNT2365E,OLYMPUS TERMINALS LLC | OLYMPUS TERMINALS LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,dancoanodizingdbadancometalsurfacing,CA,3,91006NMLDB36LAP | 91761NMLDB1750M | 92707NMLDB401WR,DANCO ANODIZING (DBA DANCO METAL SURFACING) | DANCO ANODIZING (DBA DANCO METAL SURFACING) | DANCO ANODIZING (DBA DANCO METAL SURFACING),POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,dfadairybrandsfluidllcdbaaltadenacertifieddairy,CA,2,91744LTDNC17637 | 91748SNTDR17851,DFA DAIRY BRANDS FLUID LLC DBA ALTA DENA CERTIFIED DAIRY | DFA DAIRY BRANDS FLUID LLC DBA ALTA DENA CERTIFIED DAIRY,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,leprinofoodsco,CA,3,91745LPRNF490FS | 93245LPRNF351NB | 95376LPRNF2401M,LEPRINO FOODS CO | LEPRINO FOODS CO | LEPRINO FOODS CO,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,netshapesinc,CA,2,91761NTSHP1336E | 9176WNTSHP175SB,NET SHAPES INC | NET SHAPES INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,oldcastleprecastinc,CA,6,9204WLDCST1441V | 92335TLTYV10650 | 9361WPRNHP16AVE | 94566TLTYV3786V | 9503WLDCST1LIVE | 95215LDCST296SH,OLDCASTLE PRECAST INC | OLDCASTLE PRECAST INC | OLDCASTLE PRECAST INC | OLDCASTLE PRECAST INC | OLDCASTLE PRECAST INC | OLDCASTLE PRECAST INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,ttmtechnologiesnallc,CA,3,92111RGRSC7447C | 92704PWRCR2645S | 95050SGMCR393MA,TTM TECHNOLOGIES N.A. LLC | TTM TECHNOLOGIES N.A. LLC | TTM TECHNOLOGIES N.A. LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,jensenprecast,CA,2,92335JNSNP14221 | 95237JNSNP1244L,JENSEN PRECAST | JENSEN PRECAST,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,buildingmaterialsmanufacturingllc,CA,2,92337BLDNG11800 | 93263GFMTR6505Z,BUILDING MATERIALS MANUFACTURING LLC | BUILDING MATERIALS MANUFACTURING LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,stremicksheritagefoods,CA,2,92505STRMC11503 | 92703DHRFR4002W,STREMICKS HERITAGE FOODS | STREMICKS HERITAGE FOODS,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,oldcastleinfrastructureinc,CA,2,92567FRNKL1994H | 9363WLDCST81SUT,OLDCASTLE INFRASTRUCTURE INC | OLDCASTLE INFRASTRUCTURE INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,mitsubishichemicalcarbonfibercompositesinc,CA,2,92614NWPRT1822R | 95828CRTLD59008,MITSUBISHI CHEMICAL CARBON FIBER & COMPOSITES INC | MITSUBISHI CHEMICAL CARBON FIBER & COMPOSITES INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,aluminumprecisionproductsinc,CA,2,92704LMNMP2621S | 93033KSRLM1001M,ALUMINUM PRECISION PRODUCTS INC | ALUMINUM PRECISION PRODUCTS INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,expressmanufacturinginc,CA,2,92704XPRSS3115W | 92704XPRSS3519W,EXPRESS MANUFACTURING INC | EXPRESS MANUFACTURING INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,brasstechinc,CA,2,92707BRSST311EA | 9270WBRSST131EW,BRASSTECH INC. | BRASSTECH INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,nusiltechnologyllc,CA,2,93013MCGHN1150M | 93308SLXNS2343P,NUSIL TECHNOLOGY LLC | NUSIL TECHNOLOGY LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,raytheonvisionsystems,CA,2,93117SNTBR75COR | 9343WRYTHN425CM,RAYTHEON VISION SYSTEMS | RAYTHEON VISION SYSTEMS,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,tricalinc,CA,2,93501NKLRC1667P | 95024TRCLN8770H,TRICAL INC. | TRICAL INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,certainteedllc,CA,2,93610CRTNT17775 | 94538THCLT6400S,CERTAINTEED LLC | CERTAINTEED LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,producersdairyfoodsinc,CA,2,93701PRDCR250EB | 94589FRFLD8001R,PRODUCERS DAIRY FOODS INC. | PRODUCERS DAIRY FOODS INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,csbio,CA,2,9402WCSBCX2KELL | 9503WCSBXX81BUC,CSBIO | CSBIO,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,silgancontainersmfgcorp,CA,2,94509WSTRN2200W | 95824SLGNC6200F,SILGAN CONTAINERS MFG CORP | SILGAN CONTAINERS MFG CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,teslainc,CA,3,94538NWNTD45500 | 9453WSLYND477KA | 9533WTSLNC1826H,TESLA INC | TESLA INC. | TESLA INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,fujifilmelectronicmaterialsusainc,CA,2,95012LTRPR11225 | 95023PCFCP2340B,FUJIFILM ELECTRONIC MATERIALS USA INC. | FUJIFILM ELECTRONIC MATERIALS USA INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,agilenttechnologiesinc,CA,2,95052HWLTT5301S | 95630GLNTT91BLU,AGILENT TECHNOLOGIES INC | AGILENT TECHNOLOGIES INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,gorillacircuits,CA,2,95112TLTCC1509B | 9511WTLTCC1445L,GORILLA CIRCUITS | GORILLA CIRCUITS,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,bakelitechemicalsllc,OR,2,97321GRGPC2190O | 97402GRGPC2665H,BAKELITE CHEMICALS LLC | BAKELITE CHEMICALS  LLC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,stellajonescorp,OR,2,97378TYLRLROCKC | 97402LDMCF90049,STELLA-JONES CORP | STELLA-JONES CORP,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,noslerinc,OR,2,97702NSLRN107SW | 9775WNSLRN2115S,NOSLER INC | NOSLER INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,lambwestoninc,OR,2,9781WLMBWS75NEC | 97838LMBWSWESTL,LAMB WESTON INC. | LAMB WESTON INC.,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,emeraldservicesinc,WA,3,9810WMRLDS6851E | 9813WMRLDS15AIR | 98421SLPRN1825A,EMERALD SERVICES INC | EMERALD SERVICES INC. | EMERALD SERVICES INC,POSSIBLE_DUPLICATE_NOT_MERGED
+tri_facility,simplotusfoodgroupholdingsllc,WA,2,98837CRNTN14124 | 99344CRNTN1200N,SIMPLOT U.S. FOOD GROUP HOLDINGS LLC. | SIMPLOT U.S. FOOD GROUP HOLDINGS LLC.,POSSIBLE_DUPLICATE_NOT_MERGED

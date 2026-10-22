@@ -1,0 +1,1708 @@
+{
+  "meta": {
+    "data_as_of": "2026-09-12T18:00:00.000Z",
+    "scope": "Deals mit Zielunternehmen in DE",
+    "deal_count": 23,
+    "located_count": 19,
+    "undated_count": 0,
+    "buyer_side_count": 5,
+    "source_count": 68,
+    "disclaimer": "Kleiner, handverlesener Datensatz zur Pruefung des Datenmodells — keine vollstaendige Erfassung des deutschen M&A-Markts. Jede Angabe traegt ihre Quelle.",
+    "default_year": 2026,
+    "verification_notes": [
+      "Abruf 09.09.2026. Beleg: Porsche agreed to fully divest its 45% Bugatti-Rimac stake and 20.6% Rimac-Group stake to a HOF-Capital-led consortium; agreements signed 24.04.2026.",
+      "Abruf 09.09.2026. Beleg: The transaction has now closed; Rimac Group remains 55% majority shareholder of Bugatti Rimac.",
+      "Abruf 09.09.2026. Beleg: acquisition of Porsche’s shareholdings by the HOF-Capital-led consortium has been completed.",
+      "Abruf 09.09.2026. Beleg: definitive agreements for Centor US Holding and the global PPP business; transactions close independently and remain subject to conditions and approvals. Combined EV approx. EUR 1.5bn.",
+      "Abrufdatum 2026-09-09. Beleg: European Energy Exchange AG; Augustusplatz 9; 04109 Leipzig; Germany.",
+      "Abrufdatum 2026-09-09. Beleg: Mutares hat NEM Energy B.V. sowie die Tochtergesellschaft NEM Balcke-Dürr GmbH an HPS veräußert. Textdateline 08.09.2026, Webseitenpublikation 09.09.2026; kein genauer Vollzugstag genannt.",
+      "Abrufdatum 2026-09-09. Beleg: The transaction is subject to pending closing conditions. Geschäft samt Butter- und Magermilchpulverindizes, Übergang vor Ende 2027 geplant.",
+      "Abrufdatum 2026-09-09. Beleg: signed an agreement to sell its portfolio company NEM Energy B.V. and subsidiary NEM Balcke-Dürr GmbH.",
+      "Abschnitt Financing our shared future",
+      "Abschnitt V, Holding/subsidiary/associate companies, gedruckte Seiten 4–5",
+      "Am 08.09.2026 gelesen. Aktuelle Betreiberliste. Koordinaten und amtliche Handelsumsätze nicht daraus abgeleitet.",
+      "Am 08.09.2026 gelesen. BRPL: 4 Mt/Jahr Pelletkapazität in Jajpur, 212 km Pipeline. Erstabruf gelesen, wiederholter Abruf später 403.",
+      "Am 08.09.2026 gelesen. Registered Office: Kothagudem Collieries.",
+      "Am 08.09.2026 gelesen. Seite 1: completed the acquisition; 50,01%, INR 635,13 crore. Direkte TPPL- und indirekte BRPL-Beteiligung getrennt.",
+      "Am 08.09.2026 gelesen. Seite 7 visuell gelesen: additional 25% stake am 30.06.2026, damit 50:50. Erste 25% am 30.03.2026; gemeinsame Kontrolle ab 27.03.2026 ist eine separate Aussage.",
+      "Am 08.09.2026 gelesen. Standort Sambalpur und operative Anlagen; 4,5 Mt/Jahr Rohstahlkapazität. Frühe 50:50-Beschreibung durch spätere konkrete JSW-Anteilstranchen präzisiert.",
+      "Am 08.09.2026 gelesen. Tabelle auf PDF-Seite 2: tatsächliche FY2024-25-Mengen von CIL und SCCL.",
+      "Annexure II, PDF-Seiten 5–6, Beteiligungstabelle; Source: Company",
+      "Beleg: EVN has signed an agreement to purchase 100% of the shares in BMC. Käufer laut Meldung EVN Energieservices GmbH.",
+      "Beleg: high-quality residential and commercial projects. Branchenzuordnung Immobilien.",
+      "Beleg: mögliche Transaktionsoptionen für die Gruppe als Ganzes oder in Teilen geprüft werden. Kein feststehender Käufer.",
+      "Erster Standortabsatz und Absatz über Exportprodukte",
+      "Legal notice, Address of headquarters",
+      "Originalinhalt am 08.09.2026 gelesen; exakte Abrufuhrzeit nicht protokolliert. Beleg: “Via Luigi Rossi 52, 21040, Sumirago (VA), Italy”. Registeranschrift; Veröffentlichungstag nicht angegeben.",
+      "Originalinhalt am 08.09.2026 gelesen; exakte Abrufuhrzeit nicht protokolliert. Beleg: “the transaction has now been completed on 2 February 2026”. 100% der Anteile; direkter Erwerber Future Snacks Ltd.",
+      "Originalinhalt am 08.09.2026 gelesen; exakte Abrufuhrzeit nicht protokolliert. Beleg: “the transaction has now been completed on 20 May 2026”. Rund 27%; direkter Erwerber Katjes Quiet Luxury, keine ausgeübte Mehrheitsoption.",
+      "Originalinhalt gelesen: Zest Bidco GmbH ist Mehrheitsaktionaer und kuendigt ein neues Delisting-Erwerbsangebot an. Beleg: Warburg Pincus announces public delisting acquisition offer. Kein exakter Angebotspreis genannt.",
+      "PDF-Seite 110: Gründungsland Singapur; historischer Sitzbeleg, kein aktueller Registerauszug",
+      "Projekt PGH1108, Signature date 2 May 2023; Project description",
+      "Prüfung 07.09.2026 (conflicting_secondary): Sekundärmeldung zum Abschluss geöffnet. Maßgebliches Vollzugsdatum im Geschäftsbericht ist 10.12.2025; bisheriger Wert 11.12.2025 korrigiert.",
+      "Prüfung 07.09.2026 (conflicting_secondary): Übersicht geöffnet. Angaben zu Uber und Hugo Boss weichen von den späteren Originalmeldungen ab. Für diese Fälle nicht maßgeblich.",
+      "Prüfung 07.09.2026 (content_checked): 17,60 % angedient, 26,77 % direkt gehalten und 3,22 % Lieferansprüche ergeben 47,59 %. Keine Behauptung, dies seien bereits vollständig übertragene direkte Aktien.",
+      "Prüfung 07.09.2026 (content_checked): Am 28.01.2026 Abschluss gemeldet; regulatorische Freigaben vorhanden. Werkzeugmaschinenbau, Ziel Nürtingen.",
+      "Prüfung 07.09.2026 (content_checked): Artikel berichtet über mögliches Silgan-Interesse. Belegt die Gerüchteberichterstattung, weder formelles Angebot noch Vollzug. Keine unabhängige Bestätigung der Insiderangaben.",
+      "Prüfung 07.09.2026 (content_checked): Emittentenmeldung bestätigt Frasers-Absicht, die Beteiligung über 50 % zu erhöhen; kein formelles Übernahmeangebot belegt.",
+      "Prüfung 07.09.2026 (content_checked): Emittentenmitteilung: bindende Vereinbarung, Hauptsitz Mulfingen und Lufttechnik bestätigt. Vollzug um Jahresende erwartet; Genehmigungen ausstehend.",
+      "Prüfung 07.09.2026 (content_checked): Erfolgreicher Abschluss gemeldet am 07.07.2026. Ein gesonderter exakter Vollzugstag wird im gelesenen Text nicht genannt.",
+      "Prüfung 07.09.2026 (content_checked): Gelesene Sekundärquelle: Prozessstart, Frist 12.06.2026, Bund 99,12 %. Käufer und Form offen. Originalbekanntmachung nicht direkt geprüft.",
+      "Prüfung 07.09.2026 (content_checked): Halbjahresmeldung bezeichnet Stahl-Erwerb ausdrücklich als noch nicht abgeschlossen. Aussage gilt für diesen Meldestand, nicht automatisch für spätere Tage.",
+      "Prüfung 07.09.2026 (content_checked): IR-Seite bestätigt öffentliches Angebot, Ankündigung 26.06.2026, Stellungnahme 14.08.2026 und zunächst laufende Annahmefrist bis 17.09.2026.",
+      "Prüfung 07.09.2026 (content_checked): Kapitalerhöhung gebilligt und Kartellamtsfreigabe bestätigt. Weitere Genehmigungen offen; Abschluss Ende 2026/Anfang 2027 erwartet.",
+      "Prüfung 07.09.2026 (content_checked): Original bestätigt Vollzug am 30.06.2026, ursprüngliche Ankündigung 10.10.2025 und verbleibende BASF-Beteiligung 40 %.",
+      "Prüfung 07.09.2026 (content_checked): Original bestätigt Vollzug am 31.03.2026 und vollständigen Erwerb; Verkäufer Paine Schwartz Partners und weitere Anteilseigner.",
+      "Prüfung 07.09.2026 (content_checked): Rechtlicher Bieter Uber International Technologies II Corporation; Annahmefrist bis 05.11.2026. Kein Vollzug.",
+      "Prüfung 07.09.2026 (content_checked): Rechtsname und Sitz Nürtingen ausdrücklich bestätigt.",
+      "Prüfung 07.09.2026 (content_checked): Sitz Köln, Ottostraße 1. Nur Identität und Sitz geprüft.",
+      "Prüfung 07.09.2026 (content_checked): Sitz Mulfingen und Rechtsname ebm-papst Mulfingen GmbH & Co. KGaA und Co. KG bestätigt.",
+      "Prüfung 07.09.2026 (content_checked): Unternehmensanschrift Peter-Müller-Str. 3, Düsseldorf. Nur Identität und Ort; kein Beleg für Silgan-Übernahme.",
+      "Prüfung 07.09.2026 (content_checked): Vereinbarung über 100 % von FFG für 1,6 Mrd. EUR; FFG-Hauptsitz Flensburg, Vollzug von Bedingungen abhängig.",
+      "Prüfung 07.09.2026 (content_checked): Vereinbarung über 74 % von Caelo in Hilden. Pharmawirk- und Hilfsstoffe. Vollzug für Q4 2026 erwartet, Bedingungen offen.",
+      "Prüfung 07.09.2026 (content_checked): Vereinbarung, Verkäufer James Hardie Industries plc und Sitz Düsseldorf bestätigt. Vollzug nur für H1 2027 erwartet.",
+      "Prüfung 07.09.2026 (content_checked): Vollzug 10.12.2025; gemeldete indirekte Beteiligung 95,10 % am 16.12.2025, nach Kapitalerhöhung.",
+      "Prüfung 07.09.2026 (content_checked): Vollzug mit Wirkung 01.07.2026, Ankündigung 21.05.2026, Ziel Regensburg, Finanzberatung.",
+      "Prüfung 07.09.2026 (content_checked): Vollzugsmeldung und Hauptsitz Duisburg bestätigt. Veröffentlichungsdatum wird als Meldedatum gespeichert; genauer Vollzugstag hier nicht separat genannt.",
+      "Prüfung 07.09.2026 (content_checked): Vollzugsmeldung vom 01.07.2025 erneut geöffnet; genaues Vollzugsdatum bleibt unbekannt. Mehrere Betriebsstandorte, deshalb kein erfundener einzelner Hauptsitz für den Geschäftsbereich.",
+      "Prüfung 07.09.2026 (content_checked): Öffentliche Stellungnahme bestätigt Angebot von VINCI Energies, Ankündigung 16.07.2026 und Annahmefrist bis 15.09.2026; kein Vollzugsbeleg.",
+      "Prüfung 07.09.2026 (historical_context): Historisches Angebotsergebnis 91,3 % aus 2024; ausdrücklich noch kein Vollzug. Nicht als Beteiligungsquote nach Abschluss verwenden.",
+      "Prüfung 07.09.2026 (reference_only): Allgemeiner Verweis auf Alt-Snapshot; keine Einzelprüfung aller Unternehmen. Die sieben ergänzten Ortskoordinaten wurden getrennt per EntityData abgerufen.",
+      "Prüfung 07.09.2026 (reference_only): Interner Bericht aus v004; kein eigenständiger Originalbeleg. Durch konkrete Originalquellen ergänzt.",
+      "Prüfung 07.09.2026 (reference_only): Übernommener interner Datenstand; keine zusätzliche unabhängige Quelle und kein Nachweis neuerer Ereignisse.",
+      "Prüfung 07.09.2026 (unavailable): Abruf mit HTTP 403 gesperrt. Freigabe wird durch DEUTZ-Mitteilung vom 24.08.2026 bestätigt; der genaue Tag 31.07. wird hier nicht unabhängig bestätigt.",
+      "Prüfung 07.09.2026 (unavailable): Direkter Abruf dieser deutschen URL fehlgeschlagen; indexierter Auszug verfügbar. Englische DEUTZ-Originalmeldung separat geöffnet und ergänzt.",
+      "Prüfung 07.09.2026 (unavailable): Nur Überschrift/Index verfügbar, kein lesbarer Originalartikel. Geöffnete Tagesschau-Meldung ergänzt; Originalbekanntmachung des Bundes nicht direkt geprüft.",
+      "Prüfung 07.09.2026 (unavailable): Originalinhalt nicht abrufbar. Direkte UniCredit-Meldung ersetzt diese Quelle für die Anteilsaufteilung.",
+      "Prüfung 07.09.2026 (unavailable): Originalinhalt nicht abrufbar. Für die aktuelle Einordnung wird die neue UniCredit-Originalmeldung vom 08.07.2026 verwendet.",
+      "Standortabsatz nach Beschreibung des Batterierecyclings",
+      "Standortbeschreibung Tchumene-2 / Maputo",
+      "Startseite, Einleitung zur Konzernstruktur"
+    ]
+  },
+  "filters": {
+    "statuses": [
+      {
+        "key": "rumored",
+        "label": "Gerücht",
+        "count": 1
+      },
+      {
+        "key": "sale_process",
+        "label": "Verkaufsprozess",
+        "count": 2
+      },
+      {
+        "key": "intent",
+        "label": "Kaufabsicht",
+        "count": 1
+      },
+      {
+        "key": "announced",
+        "label": "Angekündigt",
+        "count": 4
+      },
+      {
+        "key": "signed",
+        "label": "Unterzeichnet",
+        "count": 7
+      },
+      {
+        "key": "regulatory_review",
+        "label": "Kartellrechtliche Prüfung",
+        "count": 1
+      },
+      {
+        "key": "completed",
+        "label": "Vollzogen",
+        "count": 7
+      }
+    ],
+    "industries": [
+      {
+        "key": "chemicals",
+        "label": "Chemie",
+        "count": 2
+      },
+      {
+        "key": "construction_real_estate",
+        "label": "Bau & Immobilien",
+        "count": 3
+      },
+      {
+        "key": "consumer_retail",
+        "label": "Konsum & Handel",
+        "count": 1
+      },
+      {
+        "key": "defense_aerospace",
+        "label": "Verteidigung & Luftfahrt",
+        "count": 1
+      },
+      {
+        "key": "energy_utilities",
+        "label": "Energie & Versorger",
+        "count": 2
+      },
+      {
+        "key": "financial_services",
+        "label": "Finanzdienstleistungen",
+        "count": 3
+      },
+      {
+        "key": "industrial_manufacturing",
+        "label": "Maschinen- & Anlagenbau",
+        "count": 4
+      },
+      {
+        "key": "pharma_healthcare",
+        "label": "Pharma & Gesundheit",
+        "count": 3
+      },
+      {
+        "key": "technology_software",
+        "label": "Technologie & Software",
+        "count": 4
+      }
+    ],
+    "date_range": {
+      "from": "2025-07-01",
+      "to": "2026-09-09"
+    }
+  },
+  "deals": [
+    {
+      "id": "deal_nem_balcke_duerr__hyundai_heavy_industries_power_systems__2026",
+      "target": {
+        "name": "NEM Balcke-Dürr",
+        "legal_name": "NEM Balcke-Dürr GmbH",
+        "city": null,
+        "region": null,
+        "latitude": null,
+        "longitude": null,
+        "coordinate_accuracy": "unknown",
+        "coordinate_source_url": null,
+        "industry": "industrial_manufacturing",
+        "industry_label": "Maschinen- & Anlagenbau"
+      },
+      "buyers": [
+        "Hyundai Heavy Industries Power Systems"
+      ],
+      "sellers": [
+        "Mutares SE & Co. KGaA"
+      ],
+      "status": "completed",
+      "status_label": "Vollzogen",
+      "unconfirmed": false,
+      "deal_type": "acquisition",
+      "transaction_structure": "share_deal",
+      "date": "2026-09-09",
+      "announcement_date": "2026-06-10",
+      "completion_date": null,
+      "completion_reported_date": "2026-09-09",
+      "deal_value": null,
+      "currency": null,
+      "stake_before_percentage": null,
+      "stake_acquired_percentage": null,
+      "stake_after_percentage": null,
+      "confidence": 90,
+      "evidence": "FACT",
+      "notes": "GRUPPENTRANSAKTION: Verkauf von NEM Energy B.V. und ihrer deutschen Tochter NEM Balcke-Dürr GmbH zusammen als NEM Energy Group an HPS. Dieser Datensatz verwendet die deutsche Tochter als Ziel mit Deutschlandbezug; er ist kein separater zweiter Deal. Vollzug bestätigt, genauer Vollzugstag und Kaufpreis nicht veröffentlicht.",
+      "sources": [
+        {
+          "title": "Mutares has signed an agreement to sell NEM Energy Group to Hyundai Heavy Industries Power Systems (“HPS”)",
+          "publisher": "Mutares SE & Co. KGaA",
+          "url": "https://mutares.com/en/mutares-has-signed-an-agreement-to-sell-nem-energy-group-to-hyundai-heavy-industries-power-systems-hps/",
+          "source_type": "company_primary",
+          "publication_date": "2026-06-10",
+          "reliability_score": 90,
+          "verification_note": "Abrufdatum 2026-09-09. Beleg: signed an agreement to sell its portfolio company NEM Energy B.V. and subsidiary NEM Balcke-Dürr GmbH.",
+          "accessed_at": "2026-09-09T16:10:10.642Z"
+        },
+        {
+          "title": "Mutares schließt den Verkauf der NEM Energy Group an Hyundai Heavy Industries Power Systems („HPS“) ab",
+          "publisher": "Mutares SE & Co. KGaA",
+          "url": "https://mutares.com/mutares-schliest-den-verkauf-der-nem-energy-group-an-hyundai-heavy-industries-power-systems-hps-ab/",
+          "source_type": "company_primary",
+          "publication_date": "2026-09-09",
+          "reliability_score": 90,
+          "verification_note": "Abrufdatum 2026-09-09. Beleg: Mutares hat NEM Energy B.V. sowie die Tochtergesellschaft NEM Balcke-Dürr GmbH an HPS veräußert. Textdateline 08.09.2026, Webseitenpublikation 09.09.2026; kein genauer Vollzugstag genannt.",
+          "accessed_at": "2026-09-09T16:10:10.642Z"
+        }
+      ],
+      "claims": [
+        {
+          "field": "status",
+          "statement": "Mutares bestätigte am 09.09.2026 den abgeschlossenen Verkauf von NEM Energy B.V. und NEM Balcke-Dürr GmbH an HPS.",
+          "source_title": "Mutares schließt den Verkauf der NEM Energy Group an Hyundai Heavy Industries Power Systems („HPS“) ab",
+          "source_url": "https://mutares.com/mutares-schliest-den-verkauf-der-nem-energy-group-an-hyundai-heavy-industries-power-systems-hps-ab/"
+        }
+      ]
+    },
+    {
+      "id": "deal_eex__cme_group__2026",
+      "target": {
+        "name": "EEX",
+        "legal_name": "European Energy Exchange AG",
+        "city": "Leipzig",
+        "region": null,
+        "latitude": 51.3406321,
+        "longitude": 12.3747329,
+        "coordinate_accuracy": "locality",
+        "coordinate_source_url": "https://www.wikidata.org/wiki/Q2079",
+        "industry": "financial_services",
+        "industry_label": "Finanzdienstleistungen"
+      },
+      "buyers": [
+        "CME Group"
+      ],
+      "sellers": [
+        "EEX"
+      ],
+      "status": "signed",
+      "status_label": "Unterzeichnet",
+      "unconfirmed": false,
+      "deal_type": "carve_out",
+      "transaction_structure": "unknown",
+      "date": "2026-09-08",
+      "announcement_date": "2026-09-08",
+      "completion_date": null,
+      "completion_reported_date": null,
+      "deal_value": null,
+      "currency": null,
+      "stake_before_percentage": null,
+      "stake_acquired_percentage": null,
+      "stake_after_percentage": null,
+      "confidence": 90,
+      "evidence": "FACT",
+      "notes": "NUR EEX-MILCHDERIVATEGESCHÄFT, KEINE ÜBERNAHME DER EEX AG: Vereinbarter Übergang europäischer Milchderivate samt Butter- und Magermilchpulverindizes zu CME. Übergang vor Ende 2027 geplant; bestehende EEX-Futures laufen zunächst weiter. Vollzugsbedingungen offen. Keine physische Milchlieferung, kein bekannter Kaufpreis oder Aktienanteil.",
+      "sources": [
+        {
+          "title": "CME Group to Enter European Dairy Market with Transition of EEX Dairy Products",
+          "publisher": "CME Group",
+          "url": "https://www.cmegroup.com/media-room/press-releases/2026/9/08/cme_group_to_entereuropeandairymarketwithtransitionofeexdairypro.html",
+          "source_type": "company_primary",
+          "publication_date": "2026-09-08",
+          "reliability_score": 90,
+          "verification_note": "Abrufdatum 2026-09-09. Beleg: The transaction is subject to pending closing conditions. Geschäft samt Butter- und Magermilchpulverindizes, Übergang vor Ende 2027 geplant.",
+          "accessed_at": null
+        }
+      ],
+      "claims": [
+        {
+          "field": "status",
+          "statement": "EEX und CME melden am 08.09.2026 eine Vereinbarung zur Übertragung des europäischen Milchderivategeschäfts; Abschlussbedingungen stehen aus.",
+          "source_title": "CME Group to Enter European Dairy Market with Transition of EEX Dairy Products",
+          "source_url": "https://www.cmegroup.com/media-room/press-releases/2026/9/08/cme_group_to_entereuropeandairymarketwithtransitionofeexdairypro.html"
+        }
+      ]
+    },
+    {
+      "id": "deal_psi_software__unknown_buyer__2026",
+      "target": {
+        "name": "PSI Software",
+        "legal_name": "PSI Software SE",
+        "city": "Berlin",
+        "region": null,
+        "latitude": 52.516666666,
+        "longitude": 13.383333333,
+        "coordinate_accuracy": "locality",
+        "coordinate_source_url": "https://www.wikidata.org/wiki/Q64",
+        "industry": "technology_software",
+        "industry_label": "Technologie & Software"
+      },
+      "buyers": [
+        "Zest Bidco GmbH (indirekt kontrolliert von Warburg-Pincus-Fonds)"
+      ],
+      "sellers": [],
+      "status": "announced",
+      "status_label": "Angekündigt",
+      "unconfirmed": false,
+      "deal_type": "acquisition",
+      "transaction_structure": "share_deal",
+      "date": "2026-09-08",
+      "announcement_date": "2026-09-08",
+      "completion_date": null,
+      "completion_reported_date": null,
+      "deal_value": null,
+      "currency": null,
+      "stake_before_percentage": null,
+      "stake_acquired_percentage": null,
+      "stake_after_percentage": null,
+      "confidence": 85,
+      "evidence": "FACT",
+      "notes": "Neues Delisting-Erwerbsangebot fuer ausstehende Aktien. Nicht mit der laut Quelle Mitte 2026 abgeschlossenen Erstuebernahme gleichsetzen. Angebotspreis soll dem gesetzlichen Mindestpreis entsprechen; exakter Betrag unbekannt. Bieter namentlich belegt, Standort nicht belegt; daher kein Kaeuferpfeil.",
+      "sources": [
+        {
+          "title": "PSI enters into a Delisting Agreement with Warburg Pincus",
+          "publisher": "PSI Software SE",
+          "url": "https://www.eqs-news.com/news/corporate/psi-enters-into-a-delisting-agreement-with-warburg-pincus-warburg-pincus-announces-public-delisting-acquisition-offer-for-psi-software-se/fa01d26d-b5d3-43ea-acce-5108669d34ce_en",
+          "source_type": "company_primary",
+          "publication_date": "2026-09-08",
+          "reliability_score": 90,
+          "verification_note": "Originalinhalt gelesen: Zest Bidco GmbH ist Mehrheitsaktionaer und kuendigt ein neues Delisting-Erwerbsangebot an. Beleg: Warburg Pincus announces public delisting acquisition offer. Kein exakter Angebotspreis genannt.",
+          "accessed_at": "2026-09-08T10:06:34.000Z"
+        }
+      ],
+      "claims": [
+        {
+          "field": "status",
+          "statement": "PSI und Zest Bidco schlossen am 08.09.2026 eine Delisting-Vereinbarung; ein Delisting-Erwerbsangebot wurde angekuendigt, nicht als vollzogen gemeldet.",
+          "source_title": "PSI enters into a Delisting Agreement with Warburg Pincus",
+          "source_url": "https://www.eqs-news.com/news/corporate/psi-enters-into-a-delisting-agreement-with-warburg-pincus-warburg-pincus-announces-public-delisting-acquisition-offer-for-psi-software-se/fa01d26d-b5d3-43ea-acce-5108669d34ce_en"
+        }
+      ]
+    },
+    {
+      "id": "deal_pandion__unknown_buyer__2026",
+      "target": {
+        "name": "PANDION",
+        "legal_name": "PANDION AG",
+        "city": null,
+        "region": null,
+        "latitude": null,
+        "longitude": null,
+        "coordinate_accuracy": "unknown",
+        "coordinate_source_url": null,
+        "industry": "construction_real_estate",
+        "industry_label": "Bau & Immobilien"
+      },
+      "buyers": [],
+      "sellers": [],
+      "status": "sale_process",
+      "status_label": "Verkaufsprozess",
+      "unconfirmed": true,
+      "deal_type": "unknown",
+      "transaction_structure": "unknown",
+      "date": "2026-09-07",
+      "announcement_date": "2026-09-07",
+      "completion_date": null,
+      "completion_reported_date": null,
+      "deal_value": null,
+      "currency": null,
+      "stake_before_percentage": null,
+      "stake_acquired_percentage": null,
+      "stake_after_percentage": null,
+      "confidence": 90,
+      "evidence": "FACT",
+      "notes": "BESTÄTIGTER INVESTORENPROZESS, KEIN KAUF: Strategische Optionen für die PANDION-Gruppe als Ganzes oder in Teilen. Potenzielle strategische und Finanzinvestoren sollen angesprochen werden. Käufer, Umfang und Struktur offen.",
+      "sources": [
+        {
+          "title": "PANDION AG leitet M&A-Prozess zur Prüfung strategischer Optionen ein",
+          "publisher": "PANDION AG via EQS",
+          "url": "https://www.eqs-news.com/de/news/ad-hoc/pandion-ag-leitet-ma-prozess-zur-prufung-strategischer-optionen-ein/3f209c5e-2d3b-4dbc-b129-67e4d52f4ba6",
+          "source_type": "company_primary",
+          "publication_date": "2026-09-07",
+          "reliability_score": 90,
+          "verification_note": "Beleg: mögliche Transaktionsoptionen für die Gruppe als Ganzes oder in Teilen geprüft werden. Kein feststehender Käufer.",
+          "accessed_at": "2026-09-09T10:15:37.881Z"
+        }
+      ],
+      "claims": [
+        {
+          "field": "status",
+          "statement": "Am 07.09.2026 wurde ein M&A-Prozess zur Prüfung strategischer Optionen bekanntgegeben; kein Käufer steht fest.",
+          "source_title": "PANDION AG leitet M&A-Prozess zur Prüfung strategischer Optionen ein",
+          "source_url": "https://www.eqs-news.com/de/news/ad-hoc/pandion-ag-leitet-ma-prozess-zur-prufung-strategischer-optionen-ein/3f209c5e-2d3b-4dbc-b129-67e4d52f4ba6"
+        }
+      ]
+    },
+    {
+      "id": "deal_baywa_mobility_charging__evn_energieservices__2026",
+      "target": {
+        "name": "BayWa Mobility Charging",
+        "legal_name": "BayWa Mobility Charging GmbH",
+        "city": null,
+        "region": null,
+        "latitude": null,
+        "longitude": null,
+        "coordinate_accuracy": "unknown",
+        "coordinate_source_url": null,
+        "industry": "energy_utilities",
+        "industry_label": "Energie & Versorger"
+      },
+      "buyers": [
+        "EVN Energieservices"
+      ],
+      "sellers": [
+        "BayWa Mobility Solutions GmbH"
+      ],
+      "status": "signed",
+      "status_label": "Unterzeichnet",
+      "unconfirmed": false,
+      "deal_type": "acquisition",
+      "transaction_structure": "share_deal",
+      "date": "2026-09-02",
+      "announcement_date": "2026-09-02",
+      "completion_date": null,
+      "completion_reported_date": null,
+      "deal_value": null,
+      "currency": null,
+      "stake_before_percentage": null,
+      "stake_acquired_percentage": 100,
+      "stake_after_percentage": null,
+      "confidence": 90,
+      "evidence": "FACT",
+      "notes": "Vertrag über 100% der BayWa Mobility Charging GmbH durch EVN Energieservices GmbH, Tochter von EVN AG. Verkäufer BayWa Mobility Solutions GmbH. Keine Übernahme der gesamten BayWa AG. Kein expliziter Vollzugsbeleg.",
+      "sources": [
+        {
+          "title": "EVN expands into the German e-mobility market with the acquisition of BayWa Mobility Charging",
+          "publisher": "EVN AG via EQS",
+          "url": "https://www.eqs-news.com/news/corporate/evn-expands-into-the-german-e-mobility-market-with-the-acquisition-of-baywa-mobility-charging/912ea601-58ca-441d-8232-e72aaa9ec10a_en",
+          "source_type": "company_primary",
+          "publication_date": "2026-09-02",
+          "reliability_score": 90,
+          "verification_note": "Beleg: EVN has signed an agreement to purchase 100% of the shares in BMC. Käufer laut Meldung EVN Energieservices GmbH.",
+          "accessed_at": "2026-09-09T10:15:37.881Z"
+        }
+      ],
+      "claims": [
+        {
+          "field": "status",
+          "statement": "EVN meldet am 02.09.2026 einen unterzeichneten Kaufvertrag über 100% von BMC durch EVN Energieservices; kein Vollzug bestätigt.",
+          "source_title": "EVN expands into the German e-mobility market with the acquisition of BayWa Mobility Charging",
+          "source_url": "https://www.eqs-news.com/news/corporate/evn-expands-into-the-german-e-mobility-market-with-the-acquisition-of-baywa-mobility-charging/912ea601-58ca-441d-8232-e72aaa9ec10a_en"
+        }
+      ]
+    },
+    {
+      "id": "deal_hugo_boss__frasers_group__2026",
+      "target": {
+        "name": "Hugo Boss",
+        "legal_name": "HUGO BOSS AG",
+        "city": "Metzingen",
+        "region": "Baden-Württemberg",
+        "latitude": 48.536666666,
+        "longitude": 9.285833333,
+        "coordinate_accuracy": "locality",
+        "coordinate_source_url": "https://www.wikidata.org/wiki/Q82881",
+        "industry": "consumer_retail",
+        "industry_label": "Konsum & Handel"
+      },
+      "buyers": [
+        "Frasers Group"
+      ],
+      "sellers": [],
+      "status": "intent",
+      "status_label": "Kaufabsicht",
+      "unconfirmed": true,
+      "deal_type": "acquisition",
+      "transaction_structure": "share_deal",
+      "date": "2026-09-01",
+      "announcement_date": "2026-09-01",
+      "completion_date": null,
+      "completion_reported_date": null,
+      "deal_value": null,
+      "currency": null,
+      "stake_before_percentage": null,
+      "stake_acquired_percentage": null,
+      "stake_after_percentage": null,
+      "confidence": 65,
+      "evidence": "FACT",
+      "notes": "Am 01.09.2026 gemeldete Absicht der Frasers Group, ihre Beteiligung an Hugo Boss auf über 50 % zu erhöhen. Kaufabsicht; kein bestätigtes formelles Übernahmeangebot und kein Vollzug.",
+      "sources": [
+        {
+          "title": "HUGO BOSS TERMINATES SHARE BUYBACK PROGRAM",
+          "publisher": "HUGO BOSS AG",
+          "url": "https://www.eqs-news.com/news/ad-hoc/hugo-boss-ag-hugo-boss-terminates-share-buyback-program/c033d690-5851-4d86-9cc8-4a8698f1ff32",
+          "source_type": "company_primary",
+          "publication_date": "2026-09-01",
+          "reliability_score": 90,
+          "verification_note": "Prüfung 07.09.2026 (content_checked): Emittentenmeldung bestätigt Frasers-Absicht, die Beteiligung über 50 % zu erhöhen; kein formelles Übernahmeangebot belegt.",
+          "accessed_at": null
+        },
+        {
+          "title": "Marktatlas v004 Deutschland — Marktdatensatz (market-data.json)",
+          "publisher": "Marktatlas",
+          "url": null,
+          "source_type": "database",
+          "publication_date": "2026-09-06",
+          "reliability_score": 80,
+          "verification_note": "Prüfung 07.09.2026 (reference_only): Übernommener interner Datenstand; keine zusätzliche unabhängige Quelle und kein Nachweis neuerer Ereignisse.",
+          "accessed_at": null
+        },
+        {
+          "title": "Angekündigte und laufende Übernahmeangebote",
+          "publisher": "Spruchverfahren-direkt",
+          "url": "https://www.spruchverfahren-direkt.de/?p=5270",
+          "source_type": "database",
+          "publication_date": "2026-06-11",
+          "reliability_score": 65,
+          "verification_note": "Prüfung 07.09.2026 (conflicting_secondary): Übersicht geöffnet. Angaben zu Uber und Hugo Boss weichen von den späteren Originalmeldungen ab. Für diese Fälle nicht maßgeblich.",
+          "accessed_at": null
+        }
+      ],
+      "claims": []
+    },
+    {
+      "id": "deal_fermacell__holcim__2026",
+      "target": {
+        "name": "Fermacell",
+        "legal_name": "Fermacell",
+        "city": "Düsseldorf",
+        "region": null,
+        "latitude": 51.22555555555556,
+        "longitude": 6.776666666666666,
+        "coordinate_accuracy": "locality",
+        "coordinate_source_url": "https://www.wikidata.org/wiki/Q1718",
+        "industry": "construction_real_estate",
+        "industry_label": "Bau & Immobilien"
+      },
+      "buyers": [
+        "Holcim"
+      ],
+      "sellers": [
+        "James Hardie Industries plc"
+      ],
+      "status": "signed",
+      "status_label": "Unterzeichnet",
+      "unconfirmed": false,
+      "deal_type": "carve_out",
+      "transaction_structure": "unknown",
+      "date": "2026-08-20",
+      "announcement_date": "2026-08-20",
+      "completion_date": null,
+      "completion_reported_date": null,
+      "deal_value": null,
+      "currency": null,
+      "stake_before_percentage": null,
+      "stake_acquired_percentage": null,
+      "stake_after_percentage": null,
+      "confidence": 70,
+      "evidence": "FACT",
+      "notes": "Verbindliche Erwerbsvereinbarung mit James Hardie Industries plc; Zielgeschäft mit Sitz Düsseldorf. Vollzug laut Meldung für H1 2027 erwartet und von Bedingungen abhängig.",
+      "sources": [
+        {
+          "title": "Holcim to acquire Fermacell",
+          "publisher": "Holcim",
+          "url": "https://www.holcim.com/media/media-releases/holcim-to-acquire-fermacell",
+          "source_type": "company_primary",
+          "publication_date": "2026-08-20",
+          "reliability_score": 85,
+          "verification_note": "Prüfung 07.09.2026 (content_checked): Vereinbarung, Verkäufer James Hardie Industries plc und Sitz Düsseldorf bestätigt. Vollzug nur für H1 2027 erwartet.",
+          "accessed_at": null
+        },
+        {
+          "title": "Marktatlas – Link- und Quellenpruefung (Website-Stand v004)",
+          "publisher": "Marktatlas",
+          "url": null,
+          "source_type": "other",
+          "publication_date": "2026-09-07",
+          "reliability_score": 70,
+          "verification_note": "Prüfung 07.09.2026 (reference_only): Interner Bericht aus v004; kein eigenständiger Originalbeleg. Durch konkrete Originalquellen ergänzt.",
+          "accessed_at": null
+        },
+        {
+          "title": "Marktatlas v004 Deutschland — Marktdatensatz (market-data.json)",
+          "publisher": "Marktatlas",
+          "url": null,
+          "source_type": "database",
+          "publication_date": "2026-09-06",
+          "reliability_score": 80,
+          "verification_note": "Prüfung 07.09.2026 (reference_only): Übernommener interner Datenstand; keine zusätzliche unabhängige Quelle und kein Nachweis neuerer Ereignisse.",
+          "accessed_at": null
+        }
+      ],
+      "claims": [
+        {
+          "field": "status",
+          "statement": "Holcim hat eine Vereinbarung mit James Hardie zum Erwerb von Fermacell geschlossen; Vollzug wird für H1 2027 erwartet.",
+          "source_title": "Holcim to acquire Fermacell",
+          "source_url": "https://www.holcim.com/media/media-releases/holcim-to-acquire-fermacell"
+        }
+      ]
+    },
+    {
+      "id": "deal_ebm_papst__madison_air__2026",
+      "target": {
+        "name": "ebm-papst",
+        "legal_name": "ebm-papst Mulfingen GmbH & Co. KGaA und Co. KG",
+        "city": "Mulfingen",
+        "region": "Baden-Württemberg",
+        "latitude": 49.333333333333,
+        "longitude": 9.8,
+        "coordinate_accuracy": "locality",
+        "coordinate_source_url": "https://www.wikidata.org/wiki/Q552108",
+        "industry": "industrial_manufacturing",
+        "industry_label": "Maschinen- & Anlagenbau"
+      },
+      "buyers": [
+        "Madison Air"
+      ],
+      "sellers": [],
+      "status": "signed",
+      "status_label": "Unterzeichnet",
+      "unconfirmed": false,
+      "deal_type": "acquisition",
+      "transaction_structure": "unknown",
+      "date": "2026-08-17",
+      "announcement_date": "2026-08-17",
+      "completion_date": null,
+      "completion_reported_date": null,
+      "deal_value": null,
+      "currency": null,
+      "stake_before_percentage": null,
+      "stake_acquired_percentage": null,
+      "stake_after_percentage": null,
+      "confidence": 85,
+      "evidence": "FACT",
+      "notes": "Madison Air hat eine bindende Vereinbarung zum Erwerb von ebm-papst angekündigt. Vollzug um Jahresende erwartet; regulatorische Genehmigungen stehen aus. Nicht mit dem bereits 2025 an Siemens veräußerten Antriebsgeschäft verwechseln.",
+      "sources": [
+        {
+          "title": "Madison Air to Acquire ebm-papst",
+          "publisher": "Madison Air Solutions Corporation",
+          "url": "https://www.prnewswire.com/news-releases/madison-air-to-acquire-ebm-papst-expanding-return-on-air-capabilities-and-accelerating-durable-growth-in-air-quality-solutions-302852470.html",
+          "source_type": "company_primary",
+          "publication_date": "2026-08-17",
+          "reliability_score": 90,
+          "verification_note": "Prüfung 07.09.2026 (content_checked): Emittentenmitteilung: bindende Vereinbarung, Hauptsitz Mulfingen und Lufttechnik bestätigt. Vollzug um Jahresende erwartet; Genehmigungen ausstehend.",
+          "accessed_at": null
+        }
+      ],
+      "claims": [
+        {
+          "field": "status",
+          "statement": "Madison Air hat eine bindende Vereinbarung zum Erwerb von ebm-papst angekündigt. Vollzug um Jahresende erwartet; regulatorische Genehmigungen stehen aus. Nicht mit dem bereits 2025 an Siemens veräußerten Antriebsgeschäft verwechseln.",
+          "source_title": "Madison Air to Acquire ebm-papst",
+          "source_url": "https://www.prnewswire.com/news-releases/madison-air-to-acquire-ebm-papst-expanding-return-on-air-capabilities-and-accelerating-durable-growth-in-air-quality-solutions-302852470.html"
+        }
+      ]
+    },
+    {
+      "id": "deal_caelo__medios__2026",
+      "target": {
+        "name": "Caelo",
+        "legal_name": "Caesar & Loretz GmbH",
+        "city": "Hilden",
+        "region": null,
+        "latitude": 51.171388888889,
+        "longitude": 6.9394444444444,
+        "coordinate_accuracy": "locality",
+        "coordinate_source_url": "https://www.wikidata.org/wiki/Q4094",
+        "industry": "pharma_healthcare",
+        "industry_label": "Pharma & Gesundheit"
+      },
+      "buyers": [
+        "Medios"
+      ],
+      "sellers": [],
+      "status": "signed",
+      "status_label": "Unterzeichnet",
+      "unconfirmed": false,
+      "deal_type": "majority_stake",
+      "transaction_structure": "share_deal",
+      "date": "2026-08-11",
+      "announcement_date": "2026-08-11",
+      "completion_date": null,
+      "completion_reported_date": null,
+      "deal_value": null,
+      "currency": null,
+      "stake_before_percentage": null,
+      "stake_acquired_percentage": 74,
+      "stake_after_percentage": null,
+      "confidence": 85,
+      "evidence": "FACT",
+      "notes": "Medios hat den Erwerb von 74 % an Caelo vereinbart. Optionen für die übrigen 26 %; Vollzug für Q4 2026 erwartet, Bedingungen offen. Kein exakter Kaufpreis veröffentlicht.",
+      "sources": [
+        {
+          "title": "Acquisition of a Majority Stake in Caesar & Loretz GmbH",
+          "publisher": "Medios AG",
+          "url": "https://www.eqs-news.com/news/ad-hoc/medios-ag-acquisition-of-a-majority-stake-in-caesar-loretz-gmbh-caelo-and-entry-into-the-german-market-for-active-pharmaceutical-ingredients-and/5a5f18a0-f6e0-43a4-a1c0-b73e6aec8b8f_en",
+          "source_type": "company_primary",
+          "publication_date": "2026-08-11",
+          "reliability_score": 90,
+          "verification_note": "Prüfung 07.09.2026 (content_checked): Vereinbarung über 74 % von Caelo in Hilden. Pharmawirk- und Hilfsstoffe. Vollzug für Q4 2026 erwartet, Bedingungen offen.",
+          "accessed_at": null
+        }
+      ],
+      "claims": [
+        {
+          "field": "status",
+          "statement": "Medios hat den Erwerb von 74 % an Caelo vereinbart. Optionen für die übrigen 26 %; Vollzug für Q4 2026 erwartet, Bedingungen offen. Kein exakter Kaufpreis veröffentlicht.",
+          "source_title": "Acquisition of a Majority Stake in Caesar & Loretz GmbH",
+          "source_url": "https://www.eqs-news.com/news/ad-hoc/medios-ag-acquisition-of-a-majority-stake-in-caesar-loretz-gmbh-caelo-and-entry-into-the-german-market-for-active-pharmaceutical-ingredients-and/5a5f18a0-f6e0-43a4-a1c0-b73e6aec8b8f_en"
+        }
+      ]
+    },
+    {
+      "id": "deal_gerresheimer__apax_funds__2026",
+      "target": {
+        "name": "Gerresheimer",
+        "legal_name": "Gerresheimer AG",
+        "city": "Düsseldorf",
+        "region": "Nordrhein-Westfalen",
+        "latitude": 51.22555555555556,
+        "longitude": 6.776666666666666,
+        "coordinate_accuracy": "locality",
+        "coordinate_source_url": "https://www.wikidata.org/wiki/Q1718",
+        "industry": "pharma_healthcare",
+        "industry_label": "Pharma & Gesundheit"
+      },
+      "buyers": [
+        "Apax Funds"
+      ],
+      "sellers": [
+        "Gerresheimer"
+      ],
+      "status": "signed",
+      "status_label": "Unterzeichnet",
+      "unconfirmed": false,
+      "deal_type": "carve_out",
+      "transaction_structure": "unknown",
+      "date": "2026-07-29",
+      "announcement_date": "2026-07-29",
+      "completion_date": null,
+      "completion_reported_date": null,
+      "deal_value": null,
+      "currency": null,
+      "stake_before_percentage": null,
+      "stake_acquired_percentage": null,
+      "stake_after_percentage": null,
+      "confidence": 90,
+      "evidence": "FACT",
+      "notes": "NUR GLOBALES PRIMARY-PACKAGING-PLASTICS-GESCHÄFT, KEINE ÜBERNAHME DER GERRESHEIMER AG: 15 Produktionsstandorte in neun Ländern; separater Vollzug in der ersten Hälfte des Geschäftsjahres 2027 erwartet. Der kombinierte Enterprise Value beider Vorgänge von rund 1,5 Mrd. EUR wird diesem Einzelvorgang nicht zugerechnet.",
+      "sources": [
+        {
+          "title": "Gerresheimer is selling Centor and its global Primary Packaging Plastics business to Apax Funds",
+          "publisher": "Gerresheimer AG",
+          "url": "https://www.gerresheimer.com/en/customer/company/news/detail/gerresheimer-is-selling-centor-and-its-global-primary-packaging-plastics-business-to-apax-funds",
+          "source_type": "company_primary",
+          "publication_date": "2026-07-29",
+          "reliability_score": 90,
+          "verification_note": "Abruf 09.09.2026. Beleg: definitive agreements for Centor US Holding and the global PPP business; transactions close independently and remain subject to conditions and approvals. Combined EV approx. EUR 1.5bn.",
+          "accessed_at": "2026-09-09T22:04:10.000Z"
+        }
+      ],
+      "claims": [
+        {
+          "field": "status",
+          "statement": "Gerresheimer schloss am 29.07.2026 eine definitive Vereinbarung zum Verkauf des globalen PPP-Geschäfts an ein Apax-Funds-Affiliate; Vollzug steht aus.",
+          "source_title": "Gerresheimer is selling Centor and its global Primary Packaging Plastics business to Apax Funds",
+          "source_url": "https://www.gerresheimer.com/en/customer/company/news/detail/gerresheimer-is-selling-centor-and-its-global-primary-packaging-plastics-business-to-apax-funds"
+        }
+      ]
+    },
+    {
+      "id": "deal_all_for_one_group__vinci__2026",
+      "target": {
+        "name": "All for One Group",
+        "legal_name": "All for One Group SE",
+        "city": "Filderstadt",
+        "region": null,
+        "latitude": 48.666666666,
+        "longitude": 9.216666666,
+        "coordinate_accuracy": "locality",
+        "coordinate_source_url": "https://www.wikidata.org/wiki/Q7032",
+        "industry": "technology_software",
+        "industry_label": "Technologie & Software"
+      },
+      "buyers": [
+        "VINCI"
+      ],
+      "sellers": [],
+      "status": "announced",
+      "status_label": "Angekündigt",
+      "unconfirmed": false,
+      "deal_type": "acquisition",
+      "transaction_structure": "share_deal",
+      "date": "2026-07-16",
+      "announcement_date": "2026-07-16",
+      "completion_date": null,
+      "completion_reported_date": null,
+      "deal_value": null,
+      "currency": null,
+      "stake_before_percentage": null,
+      "stake_acquired_percentage": null,
+      "stake_after_percentage": null,
+      "confidence": 70,
+      "evidence": "FACT",
+      "notes": "Gemeinsame begruendete Stellungnahme von Vorstand und Aufsichtsrat zu einem Uebernahmeangebot; VINCI tritt als Kaeufergruppe auf.",
+      "sources": [
+        {
+          "title": "Corporate News: Joint Reasoned Statement",
+          "publisher": "All for One Group SE",
+          "url": "https://www.all-for-one.com/en/company/news-press/detail/corporate-news-joint-reasoned-statement.html",
+          "source_type": "company_primary",
+          "publication_date": null,
+          "reliability_score": 85,
+          "verification_note": "Prüfung 07.09.2026 (content_checked): Öffentliche Stellungnahme bestätigt Angebot von VINCI Energies, Ankündigung 16.07.2026 und Annahmefrist bis 15.09.2026; kein Vollzugsbeleg.",
+          "accessed_at": null
+        },
+        {
+          "title": "Marktatlas – Link- und Quellenpruefung (Website-Stand v004)",
+          "publisher": "Marktatlas",
+          "url": null,
+          "source_type": "other",
+          "publication_date": "2026-09-07",
+          "reliability_score": 70,
+          "verification_note": "Prüfung 07.09.2026 (reference_only): Interner Bericht aus v004; kein eigenständiger Originalbeleg. Durch konkrete Originalquellen ergänzt.",
+          "accessed_at": null
+        },
+        {
+          "title": "Marktatlas v004 Deutschland — Marktdatensatz (market-data.json)",
+          "publisher": "Marktatlas",
+          "url": null,
+          "source_type": "database",
+          "publication_date": "2026-09-06",
+          "reliability_score": 80,
+          "verification_note": "Prüfung 07.09.2026 (reference_only): Übernommener interner Datenstand; keine zusätzliche unabhängige Quelle und kein Nachweis neuerer Ereignisse.",
+          "accessed_at": null
+        }
+      ],
+      "claims": [
+        {
+          "field": "status",
+          "statement": "Die gemeinsame Stellungnahme unterstützt das öffentliche Angebot von VINCI Energies; Annahmefrist bis 15.09.2026.",
+          "source_title": "Corporate News: Joint Reasoned Statement",
+          "source_url": "https://www.all-for-one.com/en/company/news-press/detail/corporate-news-joint-reasoned-statement.html"
+        }
+      ]
+    },
+    {
+      "id": "deal_delivery_hero__uber__2026",
+      "target": {
+        "name": "Delivery Hero",
+        "legal_name": "Delivery Hero SE",
+        "city": "Berlin",
+        "region": "Berlin",
+        "latitude": 52.516666666,
+        "longitude": 13.383333333,
+        "coordinate_accuracy": "locality",
+        "coordinate_source_url": "https://www.wikidata.org/wiki/Q64",
+        "industry": "technology_software",
+        "industry_label": "Technologie & Software"
+      },
+      "buyers": [
+        "Uber"
+      ],
+      "sellers": [],
+      "status": "announced",
+      "status_label": "Angekündigt",
+      "unconfirmed": false,
+      "deal_type": "acquisition",
+      "transaction_structure": "share_deal",
+      "date": "2026-07-16",
+      "announcement_date": "2026-07-16",
+      "completion_date": null,
+      "completion_reported_date": null,
+      "deal_value": null,
+      "currency": null,
+      "stake_before_percentage": null,
+      "stake_acquired_percentage": null,
+      "stake_after_percentage": null,
+      "confidence": 65,
+      "evidence": "FACT",
+      "notes": "Übernahmeangebot angekündigt am 16.07.2026. Rechtlicher Bieter laut Quellenprüfung: Uber International Technologies II Corporation. Vollzug nicht bestätigt.",
+      "sources": [
+        {
+          "title": "Marktatlas – Link- und Quellenpruefung (Website-Stand v004)",
+          "publisher": "Marktatlas",
+          "url": null,
+          "source_type": "other",
+          "publication_date": "2026-09-07",
+          "reliability_score": 70,
+          "verification_note": "Prüfung 07.09.2026 (reference_only): Interner Bericht aus v004; kein eigenständiger Originalbeleg. Durch konkrete Originalquellen ergänzt.",
+          "accessed_at": null
+        },
+        {
+          "title": "Marktatlas v004 Deutschland — Marktdatensatz (market-data.json)",
+          "publisher": "Marktatlas",
+          "url": null,
+          "source_type": "database",
+          "publication_date": "2026-09-06",
+          "reliability_score": 80,
+          "verification_note": "Prüfung 07.09.2026 (reference_only): Übernommener interner Datenstand; keine zusätzliche unabhängige Quelle und kein Nachweis neuerer Ereignisse.",
+          "accessed_at": null
+        },
+        {
+          "title": "Angekündigte und laufende Übernahmeangebote",
+          "publisher": "Spruchverfahren-direkt",
+          "url": "https://www.spruchverfahren-direkt.de/?p=5270",
+          "source_type": "database",
+          "publication_date": "2026-06-11",
+          "reliability_score": 65,
+          "verification_note": "Prüfung 07.09.2026 (conflicting_secondary): Übersicht geöffnet. Angaben zu Uber und Hugo Boss weichen von den späteren Originalmeldungen ab. Für diese Fälle nicht maßgeblich.",
+          "accessed_at": null
+        },
+        {
+          "title": "Uber Publishes Offer Document for its Takeover Offer for Delivery Hero",
+          "publisher": "Uber Technologies",
+          "url": "https://investor.uber.com/news-events/news/press-release-details/2026/Uber-Publishes-Offer-Document-for-its-Takeover-Offer-for-Delivery-Hero/default.aspx",
+          "source_type": "company_primary",
+          "publication_date": "2026-08-27",
+          "reliability_score": 90,
+          "verification_note": "Prüfung 07.09.2026 (content_checked): Rechtlicher Bieter Uber International Technologies II Corporation; Annahmefrist bis 05.11.2026. Kein Vollzug.",
+          "accessed_at": null
+        }
+      ],
+      "claims": [
+        {
+          "field": "buyers",
+          "statement": "Uber nennt Uber International Technologies II Corporation als rechtlichen Bieter; die Angebotsfrist läuft bis 05.11.2026.",
+          "source_title": "Uber Publishes Offer Document for its Takeover Offer for Delivery Hero",
+          "source_url": "https://investor.uber.com/news-events/news/press-release-details/2026/Uber-Publishes-Offer-Document-for-its-Takeover-Offer-for-Delivery-Hero/default.aspx"
+        }
+      ]
+    },
+    {
+      "id": "deal_ffg_flensburger_fahrzeugbau__deutz__2026",
+      "target": {
+        "name": "FFG Flensburger Fahrzeugbau",
+        "legal_name": "FFG Flensburger Fahrzeugbau Gesellschaft mbH",
+        "city": "Flensburg",
+        "region": "Schleswig-Holstein",
+        "latitude": 54.781944444444,
+        "longitude": 9.4366666666667,
+        "coordinate_accuracy": "locality",
+        "coordinate_source_url": "https://www.wikidata.org/wiki/Q3798",
+        "industry": "defense_aerospace",
+        "industry_label": "Verteidigung & Luftfahrt"
+      },
+      "buyers": [
+        "Deutz"
+      ],
+      "sellers": [
+        "Eigentümerfamilie der FFG"
+      ],
+      "status": "signed",
+      "status_label": "Unterzeichnet",
+      "unconfirmed": false,
+      "deal_type": "acquisition",
+      "transaction_structure": "share_deal",
+      "date": "2026-07-09",
+      "announcement_date": "2026-07-09",
+      "completion_date": null,
+      "completion_reported_date": null,
+      "deal_value": 1600000000,
+      "currency": "EUR",
+      "stake_before_percentage": 0,
+      "stake_acquired_percentage": 100,
+      "stake_after_percentage": 100,
+      "confidence": 85,
+      "evidence": "FACT",
+      "notes": "Vereinbarung über 100 % für rund 1,6 Mrd. EUR. DEUTZ bestätigt am 24.08.2026 Kartellamtsfreigabe und Hauptversammlungszustimmung; weitere Genehmigungen ausstehend. Vollzug Ende 2026/Anfang 2027 erwartet. Verkäuferfamilien sollen bis zu 29,9 % an DEUTZ erhalten.",
+      "sources": [
+        {
+          "title": "Übernahme der FFG Flensburger Fahrzeugbau Gesellschaft mbH durch die Deutz AG genehmigt",
+          "publisher": "Bundeskartellamt",
+          "url": "https://www.bundeskartellamt.de/SharedDocs/Meldung/DE/Pressemitteilungen/2026/07_31_2026_Deutz-FFG.html",
+          "source_type": "regulatory_filing",
+          "publication_date": "2026-07-31",
+          "reliability_score": 95,
+          "verification_note": "Prüfung 07.09.2026 (unavailable): Abruf mit HTTP 403 gesperrt. Freigabe wird durch DEUTZ-Mitteilung vom 24.08.2026 bestätigt; der genaue Tag 31.07. wird hier nicht unabhängig bestätigt.",
+          "accessed_at": null
+        },
+        {
+          "title": "DEUTZ beschleunigt Transformation durch Milliarden-Transaktion im Defense-Bereich",
+          "publisher": "DEUTZ AG",
+          "url": "https://www.deutz.com/de/news/pressemitteilungen/news-detail/deutz-beschleunigt-transformation-durch-milliarden-transaktion-im-defense-bereich/",
+          "source_type": "company_primary",
+          "publication_date": "2026-07-09",
+          "reliability_score": 90,
+          "verification_note": "Prüfung 07.09.2026 (unavailable): Direkter Abruf dieser deutschen URL fehlgeschlagen; indexierter Auszug verfügbar. Englische DEUTZ-Originalmeldung separat geöffnet und ergänzt.",
+          "accessed_at": null
+        },
+        {
+          "title": "DEUTZ accelerates transformation with billion-euro transaction in the defense sector",
+          "publisher": "DEUTZ AG",
+          "url": "https://www.deutz.com/en/news/press-releases/news-detail/deutz-accelerates-transformation-with-billion-euro-transaction-in-the-defense-sector/",
+          "source_type": "company_primary",
+          "publication_date": "2026-07-09",
+          "reliability_score": 90,
+          "verification_note": "Prüfung 07.09.2026 (content_checked): Vereinbarung über 100 % von FFG für 1,6 Mrd. EUR; FFG-Hauptsitz Flensburg, Vollzug von Bedingungen abhängig.",
+          "accessed_at": null
+        },
+        {
+          "title": "Extraordinary general meeting approves billion-euro transaction",
+          "publisher": "DEUTZ AG",
+          "url": "https://www.deutz.com/en/news/press-releases/news-detail/extraordinary-general-meeting-approves-billion-euro-with-near-unanimous-vote-acquisition-of-ffg-to-turn-deutz-into-a-major-player-in-the-defense-sector/",
+          "source_type": "company_primary",
+          "publication_date": "2026-08-24",
+          "reliability_score": 90,
+          "verification_note": "Prüfung 07.09.2026 (content_checked): Kapitalerhöhung gebilligt und Kartellamtsfreigabe bestätigt. Weitere Genehmigungen offen; Abschluss Ende 2026/Anfang 2027 erwartet.",
+          "accessed_at": null
+        }
+      ],
+      "claims": [
+        {
+          "field": "status",
+          "statement": "DEUTZ bestätigt am 24.08.2026 die Kartellamtsfreigabe; weitere Genehmigungen für den Vollzug stehen aus.",
+          "source_title": "Extraordinary general meeting approves billion-euro transaction",
+          "source_url": "https://www.deutz.com/en/news/press-releases/news-detail/extraordinary-general-meeting-approves-billion-euro-with-near-unanimous-vote-acquisition-of-ffg-to-turn-deutz-into-a-major-player-in-the-defense-sector/"
+        },
+        {
+          "field": "deal_value",
+          "statement": "DEUTZ nennt rund 1,6 Mrd. EUR Kaufpreis für 100 % der FFG-Anteile.",
+          "source_title": "DEUTZ accelerates transformation with billion-euro transaction in the defense sector",
+          "source_url": "https://www.deutz.com/en/news/press-releases/news-detail/deutz-accelerates-transformation-with-billion-euro-transaction-in-the-defense-sector/"
+        }
+      ]
+    },
+    {
+      "id": "deal_telis_gruppe__swiss_life_deutschland__2026",
+      "target": {
+        "name": "TELIS Gruppe",
+        "legal_name": "TELIS Gruppe",
+        "city": "Regensburg",
+        "region": null,
+        "latitude": 49.016666666666666,
+        "longitude": 12.083333333333334,
+        "coordinate_accuracy": "locality",
+        "coordinate_source_url": "https://www.wikidata.org/wiki/Q2978",
+        "industry": "financial_services",
+        "industry_label": "Finanzdienstleistungen"
+      },
+      "buyers": [
+        "Swiss Life Deutschland"
+      ],
+      "sellers": [],
+      "status": "completed",
+      "status_label": "Vollzogen",
+      "unconfirmed": false,
+      "deal_type": "acquisition",
+      "transaction_structure": "unknown",
+      "date": "2026-07-01",
+      "announcement_date": "2026-05-21",
+      "completion_date": "2026-07-01",
+      "completion_reported_date": null,
+      "deal_value": null,
+      "currency": null,
+      "stake_before_percentage": null,
+      "stake_acquired_percentage": null,
+      "stake_after_percentage": null,
+      "confidence": 85,
+      "evidence": "FACT",
+      "notes": "Swiss Life bestätigt den Erwerb der TELIS Gruppe mit Wirkung zum 01.07.2026. Marken und Vertrieb bleiben eigenständig. Kaufpreis nicht offengelegt.",
+      "sources": [
+        {
+          "title": "Swiss Life Germany successfully completes acquisition of TELIS Group",
+          "publisher": "Swiss Life",
+          "url": "https://www.swisslife.com/en/home/media/media-releases/newsfeed-eqs/corporate/2026/20260701_1545.html",
+          "source_type": "company_primary",
+          "publication_date": "2026-07-01",
+          "reliability_score": 90,
+          "verification_note": "Prüfung 07.09.2026 (content_checked): Vollzug mit Wirkung 01.07.2026, Ankündigung 21.05.2026, Ziel Regensburg, Finanzberatung.",
+          "accessed_at": null
+        }
+      ],
+      "claims": [
+        {
+          "field": "status",
+          "statement": "Swiss Life bestätigt den Erwerb der TELIS Gruppe mit Wirkung zum 01.07.2026. Marken und Vertrieb bleiben eigenständig. Kaufpreis nicht offengelegt.",
+          "source_title": "Swiss Life Germany successfully completes acquisition of TELIS Group",
+          "source_url": "https://www.swisslife.com/en/home/media/media-releases/newsfeed-eqs/corporate/2026/20260701_1545.html"
+        }
+      ]
+    },
+    {
+      "id": "deal_surventis__carlyle__2026",
+      "target": {
+        "name": "Surventis",
+        "legal_name": "Surventis",
+        "city": "Münster",
+        "region": null,
+        "latitude": 51.9625,
+        "longitude": 7.625555555,
+        "coordinate_accuracy": "locality",
+        "coordinate_source_url": "https://www.wikidata.org/wiki/Q2742",
+        "industry": "chemicals",
+        "industry_label": "Chemie"
+      },
+      "buyers": [
+        "Carlyle"
+      ],
+      "sellers": [
+        "BASF"
+      ],
+      "status": "completed",
+      "status_label": "Vollzogen",
+      "unconfirmed": false,
+      "deal_type": "carve_out",
+      "transaction_structure": "unknown",
+      "date": "2026-06-30",
+      "announcement_date": "2025-10-10",
+      "completion_date": "2026-06-30",
+      "completion_reported_date": null,
+      "deal_value": null,
+      "currency": null,
+      "stake_before_percentage": null,
+      "stake_acquired_percentage": null,
+      "stake_after_percentage": null,
+      "confidence": 75,
+      "evidence": "FACT",
+      "notes": "BASF bestätigt Vollzug am 30.06.2026. BASF behält 40 % an Surventis, dem früheren Coatings-Geschäft. Käufergruppe um Carlyle; ursprüngliche Ankündigung 10.10.2025.",
+      "sources": [
+        {
+          "title": "BASF-Pressemitteilung p-26-113 zum Coatings-Geschaeft",
+          "publisher": "BASF SE",
+          "url": "https://www.basf.com/global/en/media/news-releases/2026/07/p-26-113",
+          "source_type": "company_primary",
+          "publication_date": "2026-07-01",
+          "reliability_score": 90,
+          "verification_note": "Prüfung 07.09.2026 (content_checked): Original bestätigt Vollzug am 30.06.2026, ursprüngliche Ankündigung 10.10.2025 und verbleibende BASF-Beteiligung 40 %.",
+          "accessed_at": null
+        },
+        {
+          "title": "Marktatlas – Link- und Quellenpruefung (Website-Stand v004)",
+          "publisher": "Marktatlas",
+          "url": null,
+          "source_type": "other",
+          "publication_date": "2026-09-07",
+          "reliability_score": 70,
+          "verification_note": "Prüfung 07.09.2026 (reference_only): Interner Bericht aus v004; kein eigenständiger Originalbeleg. Durch konkrete Originalquellen ergänzt.",
+          "accessed_at": null
+        },
+        {
+          "title": "Marktatlas v004 Deutschland — Marktdatensatz (market-data.json)",
+          "publisher": "Marktatlas",
+          "url": null,
+          "source_type": "database",
+          "publication_date": "2026-09-06",
+          "reliability_score": 80,
+          "verification_note": "Prüfung 07.09.2026 (reference_only): Übernommener interner Datenstand; keine zusätzliche unabhängige Quelle und kein Nachweis neuerer Ereignisse.",
+          "accessed_at": null
+        }
+      ],
+      "claims": [
+        {
+          "field": "status",
+          "statement": "BASF meldet den Vollzug der Coatings-Transaktion am 30.06.2026 und eine verbleibende Beteiligung von 40 %.",
+          "source_title": "BASF-Pressemitteilung p-26-113 zum Coatings-Geschaeft",
+          "source_url": "https://www.basf.com/global/en/media/news-releases/2026/07/p-26-113"
+        }
+      ]
+    },
+    {
+      "id": "deal_nagarro__persistent_systems__2026",
+      "target": {
+        "name": "Nagarro",
+        "legal_name": "Nagarro SE",
+        "city": "München",
+        "region": null,
+        "latitude": 48.1375,
+        "longitude": 11.575,
+        "coordinate_accuracy": "locality",
+        "coordinate_source_url": "https://www.wikidata.org/wiki/Q1726",
+        "industry": "technology_software",
+        "industry_label": "Technologie & Software"
+      },
+      "buyers": [
+        "Persistent Systems"
+      ],
+      "sellers": [],
+      "status": "announced",
+      "status_label": "Angekündigt",
+      "unconfirmed": false,
+      "deal_type": "acquisition",
+      "transaction_structure": "share_deal",
+      "date": "2026-06-26",
+      "announcement_date": "2026-06-26",
+      "completion_date": null,
+      "completion_reported_date": null,
+      "deal_value": null,
+      "currency": null,
+      "stake_before_percentage": null,
+      "stake_acquired_percentage": null,
+      "stake_after_percentage": null,
+      "confidence": 70,
+      "evidence": "FACT",
+      "notes": "Freiwilliges oeffentliches Uebernahmeangebot.",
+      "sources": [
+        {
+          "title": "Marktatlas – Link- und Quellenpruefung (Website-Stand v004)",
+          "publisher": "Marktatlas",
+          "url": null,
+          "source_type": "other",
+          "publication_date": "2026-09-07",
+          "reliability_score": 70,
+          "verification_note": "Prüfung 07.09.2026 (reference_only): Interner Bericht aus v004; kein eigenständiger Originalbeleg. Durch konkrete Originalquellen ergänzt.",
+          "accessed_at": null
+        },
+        {
+          "title": "Marktatlas v004 Deutschland — Marktdatensatz (market-data.json)",
+          "publisher": "Marktatlas",
+          "url": null,
+          "source_type": "database",
+          "publication_date": "2026-09-06",
+          "reliability_score": 80,
+          "verification_note": "Prüfung 07.09.2026 (reference_only): Übernommener interner Datenstand; keine zusätzliche unabhängige Quelle und kein Nachweis neuerer Ereignisse.",
+          "accessed_at": null
+        },
+        {
+          "title": "Voluntary public takeover offer by Persistent",
+          "publisher": "Nagarro SE",
+          "url": "https://www.nagarro.com/en/investor-relations/voluntary-public-takeover-offer-by-persistent",
+          "source_type": "company_primary",
+          "publication_date": null,
+          "reliability_score": 85,
+          "verification_note": "Prüfung 07.09.2026 (content_checked): IR-Seite bestätigt öffentliches Angebot, Ankündigung 26.06.2026, Stellungnahme 14.08.2026 und zunächst laufende Annahmefrist bis 17.09.2026.",
+          "accessed_at": null
+        }
+      ],
+      "claims": [
+        {
+          "field": "status",
+          "statement": "Nagarro dokumentiert das öffentliche Angebot von Persistent vom 26.06.2026 und die zunächst laufende Annahmefrist bis 17.09.2026.",
+          "source_title": "Voluntary public takeover offer by Persistent",
+          "source_url": "https://www.nagarro.com/en/investor-relations/voluntary-public-takeover-offer-by-persistent"
+        }
+      ]
+    },
+    {
+      "id": "deal_xella__holcim__2026",
+      "target": {
+        "name": "Xella",
+        "legal_name": "Xella International S.A.",
+        "city": "Duisburg",
+        "region": "Nordrhein-Westfalen",
+        "latitude": 51.432222222,
+        "longitude": 6.761111111,
+        "coordinate_accuracy": "locality",
+        "coordinate_source_url": "https://www.wikidata.org/wiki/Q2100",
+        "industry": "construction_real_estate",
+        "industry_label": "Bau & Immobilien"
+      },
+      "buyers": [
+        "Holcim"
+      ],
+      "sellers": [],
+      "status": "completed",
+      "status_label": "Vollzogen",
+      "unconfirmed": false,
+      "deal_type": "acquisition",
+      "transaction_structure": "share_deal",
+      "date": "2026-06-19",
+      "announcement_date": null,
+      "completion_date": null,
+      "completion_reported_date": "2026-06-19",
+      "deal_value": null,
+      "currency": null,
+      "stake_before_percentage": null,
+      "stake_acquired_percentage": null,
+      "stake_after_percentage": null,
+      "confidence": 85,
+      "evidence": "FACT",
+      "notes": "Vollzug in der Originalmeldung vom 2026-06-19 bestätigt. Ein separater genauer Vollzugstag wird im gelesenen Text nicht genannt.",
+      "sources": [
+        {
+          "title": "Holcim completes acquisition of Xella",
+          "publisher": "Holcim",
+          "url": "https://www.holcim.com/media/media-releases/holcim-completes-acquisition-xella",
+          "source_type": "company_primary",
+          "publication_date": "2026-06-19",
+          "reliability_score": 90,
+          "verification_note": "Prüfung 07.09.2026 (content_checked): Vollzugsmeldung und Hauptsitz Duisburg bestätigt. Veröffentlichungsdatum wird als Meldedatum gespeichert; genauer Vollzugstag hier nicht separat genannt.",
+          "accessed_at": null
+        },
+        {
+          "title": "Marktatlas v004 Deutschland — Marktdatensatz (market-data.json)",
+          "publisher": "Marktatlas",
+          "url": null,
+          "source_type": "database",
+          "publication_date": "2026-09-06",
+          "reliability_score": 80,
+          "verification_note": "Prüfung 07.09.2026 (reference_only): Übernommener interner Datenstand; keine zusätzliche unabhängige Quelle und kein Nachweis neuerer Ereignisse.",
+          "accessed_at": null
+        }
+      ],
+      "claims": []
+    },
+    {
+      "id": "deal_uniper__unknown_buyer__undated",
+      "target": {
+        "name": "Uniper",
+        "legal_name": "Uniper SE",
+        "city": "Düsseldorf",
+        "region": "Nordrhein-Westfalen",
+        "latitude": 51.225555555,
+        "longitude": 6.776666666,
+        "coordinate_accuracy": "locality",
+        "coordinate_source_url": "https://www.wikidata.org/wiki/Q1718",
+        "industry": "energy_utilities",
+        "industry_label": "Energie & Versorger"
+      },
+      "buyers": [],
+      "sellers": [
+        "Bundesrepublik Deutschland"
+      ],
+      "status": "sale_process",
+      "status_label": "Verkaufsprozess",
+      "unconfirmed": true,
+      "deal_type": "minority_stake",
+      "transaction_structure": "share_deal",
+      "date": "2026-05-19",
+      "announcement_date": "2026-05-19",
+      "completion_date": null,
+      "completion_reported_date": null,
+      "deal_value": null,
+      "currency": null,
+      "stake_before_percentage": null,
+      "stake_acquired_percentage": null,
+      "stake_after_percentage": null,
+      "confidence": 70,
+      "evidence": "FACT",
+      "notes": "Verkaufsprozess laut Tagesschau-Bericht vom 19.05.2026 gestartet; Interessentenfrist 12.06.2026. Form und Käufer offen. Die Meldung nennt 99,12 % Bundesbeteiligung. Kein Vollzug und keine abgeschlossene Veräußerung belegt; Originalbekanntmachung des Bundes nicht direkt geprüft.",
+      "sources": [
+        {
+          "title": "Bundesregierung startet Reprivatisierung von Uniper",
+          "publisher": "Handelsblatt",
+          "url": "https://www.handelsblatt.com/unternehmen/energie/uniper-bundesregierung-startet-reprivatisierung-von-uniper/100226126.html",
+          "source_type": "news_article",
+          "publication_date": "2026-05-19",
+          "reliability_score": 80,
+          "verification_note": "Prüfung 07.09.2026 (unavailable): Nur Überschrift/Index verfügbar, kein lesbarer Originalartikel. Geöffnete Tagesschau-Meldung ergänzt; Originalbekanntmachung des Bundes nicht direkt geprüft.",
+          "accessed_at": null
+        },
+        {
+          "title": "Bund leitet Wiederverkauf von Uniper ein",
+          "publisher": "Tagesschau",
+          "url": "https://www.tagesschau.de/wirtschaft/unternehmen/uniper-wiederverkauf-bund-100.html",
+          "source_type": "news_article",
+          "publication_date": "2026-05-19",
+          "reliability_score": 80,
+          "verification_note": "Prüfung 07.09.2026 (content_checked): Gelesene Sekundärquelle: Prozessstart, Frist 12.06.2026, Bund 99,12 %. Käufer und Form offen. Originalbekanntmachung nicht direkt geprüft.",
+          "accessed_at": null
+        }
+      ],
+      "claims": [
+        {
+          "field": "status",
+          "statement": "Tagesschau berichtet am 19.05.2026 über den gestarteten Verkaufsprozess und die Interessentenfrist 12.06.2026; Käufer offen.",
+          "source_title": "Bund leitet Wiederverkauf von Uniper ein",
+          "source_url": "https://www.tagesschau.de/wirtschaft/unternehmen/uniper-wiederverkauf-bund-100.html"
+        }
+      ]
+    },
+    {
+      "id": "deal_gerresheimer__silgan_holdings__2026",
+      "target": {
+        "name": "Gerresheimer",
+        "legal_name": "Gerresheimer AG",
+        "city": "Düsseldorf",
+        "region": "Nordrhein-Westfalen",
+        "latitude": 51.22555555555556,
+        "longitude": 6.776666666666666,
+        "coordinate_accuracy": "locality",
+        "coordinate_source_url": "https://www.wikidata.org/wiki/Q1718",
+        "industry": "pharma_healthcare",
+        "industry_label": "Pharma & Gesundheit"
+      },
+      "buyers": [
+        "Silgan Holdings"
+      ],
+      "sellers": [],
+      "status": "rumored",
+      "status_label": "Gerücht",
+      "unconfirmed": true,
+      "deal_type": "acquisition",
+      "transaction_structure": "unknown",
+      "date": "2026-03-20",
+      "announcement_date": "2026-03-20",
+      "completion_date": null,
+      "completion_reported_date": null,
+      "deal_value": null,
+      "currency": null,
+      "stake_before_percentage": null,
+      "stake_acquired_percentage": null,
+      "stake_after_percentage": null,
+      "confidence": 50,
+      "evidence": "FACT",
+      "notes": "GERÜCHT. Belegt ist die Berichterstattung ueber ein geprüftes Übernahmeinteresse, nicht die Transaktion. Das Datum ist das Datum der Meldung. Quelle von geringer Güte.",
+      "sources": [
+        {
+          "title": "Übernahmegerüchte treiben Gerresheimer-Aktie deutlich nach oben",
+          "publisher": "Verbraucherschutzforum Berlin",
+          "url": "https://verbraucherschutzforum.berlin/2026-03-20/uebernahmegeruechte-treiben-gerresheimer-aktie-deutlich-nach-oben-412738/",
+          "source_type": "news_article",
+          "publication_date": "2026-03-20",
+          "reliability_score": 40,
+          "verification_note": "Prüfung 07.09.2026 (content_checked): Artikel berichtet über mögliches Silgan-Interesse. Belegt die Gerüchteberichterstattung, weder formelles Angebot noch Vollzug. Keine unabhängige Bestätigung der Insiderangaben.",
+          "accessed_at": null
+        }
+      ],
+      "claims": [
+        {
+          "field": "status",
+          "statement": "Berichtet wurde, dass Silgan Holdings eine Offerte fuer Gerresheimer prueft. Die Transaktion selbst ist nicht belegt.",
+          "source_title": "Übernahmegerüchte treiben Gerresheimer-Aktie deutlich nach oben",
+          "source_url": "https://verbraucherschutzforum.berlin/2026-03-20/uebernahmegeruechte-treiben-gerresheimer-aktie-deutlich-nach-oben-412738/"
+        }
+      ]
+    },
+    {
+      "id": "deal_commerzbank__unicredit__2026",
+      "target": {
+        "name": "Commerzbank",
+        "legal_name": "Commerzbank AG",
+        "city": "Frankfurt am Main",
+        "region": "Hessen",
+        "latitude": 50.11116,
+        "longitude": 8.67437,
+        "coordinate_accuracy": "locality",
+        "coordinate_source_url": "https://www.wikidata.org/wiki/Q151765",
+        "industry": "financial_services",
+        "industry_label": "Finanzdienstleistungen"
+      },
+      "buyers": [
+        "UniCredit"
+      ],
+      "sellers": [],
+      "status": "regulatory_review",
+      "status_label": "Kartellrechtliche Prüfung",
+      "unconfirmed": false,
+      "deal_type": "minority_stake",
+      "transaction_structure": "share_deal",
+      "date": "2026-03-16",
+      "announcement_date": "2026-03-16",
+      "completion_date": null,
+      "completion_reported_date": null,
+      "deal_value": null,
+      "currency": null,
+      "stake_before_percentage": null,
+      "stake_acquired_percentage": 17.6,
+      "stake_after_percentage": 47.59,
+      "confidence": 70,
+      "evidence": "FACT",
+      "notes": "Stand 08.07.2026: 17,60 % angediente Aktien + 26,77 % direkt gehaltene Anteile + 3,22 % Lieferansprüche = 47,59 %. Diese Summe ist keine vollständig vollzogene direkte Beteiligung. Aufsichtsrechtliche Verfahren laufen weiter.",
+      "sources": [
+        {
+          "title": "UniCredit Says Commerzbank Offer to Push Direct Stake to 34%",
+          "publisher": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-06-02/unicredit-says-commerzbank-offer-set-to-push-direct-stake-to-34",
+          "source_type": "news_article",
+          "publication_date": "2026-06-02",
+          "reliability_score": 80,
+          "verification_note": "Prüfung 07.09.2026 (unavailable): Originalinhalt nicht abrufbar. Für die aktuelle Einordnung wird die neue UniCredit-Originalmeldung vom 08.07.2026 verwendet.",
+          "accessed_at": null
+        },
+        {
+          "title": "UniCredit Nears Commerzbank Control as Stake Set to Reach 47.6%",
+          "publisher": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-07-08/unicredit-nears-commerzbank-control-as-stake-set-to-reach-47-6",
+          "source_type": "news_article",
+          "publication_date": "2026-07-08",
+          "reliability_score": 80,
+          "verification_note": "Prüfung 07.09.2026 (unavailable): Originalinhalt nicht abrufbar. Direkte UniCredit-Meldung ersetzt diese Quelle für die Anteilsaufteilung.",
+          "accessed_at": null
+        },
+        {
+          "title": "Angekündigte und laufende Übernahmeangebote",
+          "publisher": "Spruchverfahren-direkt",
+          "url": "https://www.spruchverfahren-direkt.de/?p=5270",
+          "source_type": "database",
+          "publication_date": "2026-06-11",
+          "reliability_score": 65,
+          "verification_note": "Prüfung 07.09.2026 (conflicting_secondary): Übersicht geöffnet. Angaben zu Uber und Hugo Boss weichen von den späteren Originalmeldungen ab. Für diese Fälle nicht maßgeblich.",
+          "accessed_at": null
+        },
+        {
+          "title": "UniCredit Announces Final Results of Tender Offer",
+          "publisher": "UniCredit",
+          "url": "https://www.unicreditgroup.eu/en/press-media/press-releases/2026/july/unicredit-announces-final-results-of-tender-offer.html",
+          "source_type": "company_primary",
+          "publication_date": "2026-07-08",
+          "reliability_score": 90,
+          "verification_note": "Prüfung 07.09.2026 (content_checked): 17,60 % angedient, 26,77 % direkt gehalten und 3,22 % Lieferansprüche ergeben 47,59 %. Keine Behauptung, dies seien bereits vollständig übertragene direkte Aktien.",
+          "accessed_at": null
+        }
+      ],
+      "claims": [
+        {
+          "field": "status",
+          "statement": "UniCredit führt die notwendigen regulatorischen und aufsichtsrechtlichen Verfahren weiter; die Angebotsfristen sind beendet.",
+          "source_title": "UniCredit Announces Final Results of Tender Offer",
+          "source_url": "https://www.unicreditgroup.eu/en/press-media/press-releases/2026/july/unicredit-announces-final-results-of-tender-offer.html"
+        },
+        {
+          "field": "stake_after_percentage",
+          "statement": "Die Meldung summiert 26,77 % direkt gehaltene Anteile, 17,60 % angediente Aktien und 3,22 % Lieferansprüche auf 47,59 %.",
+          "source_title": "UniCredit Announces Final Results of Tender Offer",
+          "source_url": "https://www.unicreditgroup.eu/en/press-media/press-releases/2026/july/unicredit-announces-final-results-of-tender-offer.html"
+        }
+      ]
+    },
+    {
+      "id": "deal_heller__dn_solutions__2026",
+      "target": {
+        "name": "HELLER",
+        "legal_name": "Gebr. Heller Maschinenfabrik GmbH",
+        "city": "Nürtingen",
+        "region": null,
+        "latitude": 48.626666666667,
+        "longitude": 9.3352777777778,
+        "coordinate_accuracy": "locality",
+        "coordinate_source_url": "https://www.wikidata.org/wiki/Q14853",
+        "industry": "industrial_manufacturing",
+        "industry_label": "Maschinen- & Anlagenbau"
+      },
+      "buyers": [
+        "DN Solutions"
+      ],
+      "sellers": [],
+      "status": "completed",
+      "status_label": "Vollzogen",
+      "unconfirmed": false,
+      "deal_type": "acquisition",
+      "transaction_structure": "unknown",
+      "date": "2026-01-28",
+      "announcement_date": null,
+      "completion_date": null,
+      "completion_reported_date": "2026-01-28",
+      "deal_value": null,
+      "currency": null,
+      "stake_before_percentage": null,
+      "stake_acquired_percentage": null,
+      "stake_after_percentage": null,
+      "confidence": 85,
+      "evidence": "FACT",
+      "notes": "DN Solutions meldet am 28.01.2026 den abgeschlossenen Erwerb von HELLER nach regulatorischen Freigaben. Der genaue Vollzugstag wird vorsorglich vom Meldedatum getrennt.",
+      "sources": [
+        {
+          "title": "DN Solutions Completes Acquisition of German Machine Tool Manufacturer HELLER",
+          "publisher": "DN Solutions",
+          "url": "https://www.dn-solutions.com/global/board/news/newsDetail.do?boardSeq=2265&drvSeq=2&pageNo=1&schKeyword=&schType=",
+          "source_type": "company_primary",
+          "publication_date": "2026-01-28",
+          "reliability_score": 90,
+          "verification_note": "Prüfung 07.09.2026 (content_checked): Am 28.01.2026 Abschluss gemeldet; regulatorische Freigaben vorhanden. Werkzeugmaschinenbau, Ziel Nürtingen.",
+          "accessed_at": null
+        }
+      ],
+      "claims": [
+        {
+          "field": "status",
+          "statement": "DN Solutions meldet am 28.01.2026 den abgeschlossenen Erwerb von HELLER nach regulatorischen Freigaben. Der genaue Vollzugstag wird vorsorglich vom Meldedatum getrennt.",
+          "source_title": "DN Solutions Completes Acquisition of German Machine Tool Manufacturer HELLER",
+          "source_url": "https://www.dn-solutions.com/global/board/news/newsDetail.do?boardSeq=2265&drvSeq=2&pageNo=1&schKeyword=&schType="
+        }
+      ]
+    },
+    {
+      "id": "deal_covestro__adnoc__2025",
+      "target": {
+        "name": "Covestro",
+        "legal_name": "Covestro AG",
+        "city": "Leverkusen",
+        "region": "Nordrhein-Westfalen",
+        "latitude": 51.033333333,
+        "longitude": 6.983333333,
+        "coordinate_accuracy": "locality",
+        "coordinate_source_url": "https://www.wikidata.org/wiki/Q2938",
+        "industry": "chemicals",
+        "industry_label": "Chemie"
+      },
+      "buyers": [
+        "ADNOC"
+      ],
+      "sellers": [],
+      "status": "completed",
+      "status_label": "Vollzogen",
+      "unconfirmed": false,
+      "deal_type": "acquisition",
+      "transaction_structure": "share_deal",
+      "date": "2025-12-10",
+      "announcement_date": null,
+      "completion_date": "2025-12-10",
+      "completion_reported_date": null,
+      "deal_value": null,
+      "currency": null,
+      "stake_before_percentage": null,
+      "stake_acquired_percentage": null,
+      "stake_after_percentage": 95.1,
+      "confidence": 75,
+      "evidence": "FACT",
+      "notes": "Vollzug am 10.12.2025. Der Geschäftsbericht nennt für die Meldung vom 16.12.2025 eine indirekte Beteiligung von rund 95,10 % nach Kapitalerhöhung. Die früheren 91,3 % stammen aus dem Angebotsergebnis 2024. Käufergruppe ADNOC/XRG; rechtlicher Bieter ADNOC International Germany Holding AG.",
+      "sources": [
+        {
+          "title": "Covestro Aktie: Übernahme durch Adnoc vollzogen",
+          "publisher": "Börse Express",
+          "url": "https://www.boerse-express.com/news/articles/covestro-aktie-uebernahme-durch-adnoc-vollzogen-848109",
+          "source_type": "news_article",
+          "publication_date": null,
+          "reliability_score": 60,
+          "verification_note": "Prüfung 07.09.2026 (conflicting_secondary): Sekundärmeldung zum Abschluss geöffnet. Maßgebliches Vollzugsdatum im Geschäftsbericht ist 10.12.2025; bisheriger Wert 11.12.2025 korrigiert.",
+          "accessed_at": null
+        },
+        {
+          "title": "Takeover-Relevant Information — Annual Financial Report 2025",
+          "publisher": "Covestro AG",
+          "url": "https://annualreport.covestro.com/annual-financial-report-2025/en/report/management-report/corporate-governance/takeover-relevant-information/",
+          "source_type": "company_primary",
+          "publication_date": "2026-02-26",
+          "reliability_score": 90,
+          "verification_note": "Prüfung 07.09.2026 (content_checked): Vollzug 10.12.2025; gemeldete indirekte Beteiligung 95,10 % am 16.12.2025, nach Kapitalerhöhung.",
+          "accessed_at": null
+        },
+        {
+          "title": "Übernahmeangebot von ADNOC für Covestro erfolgreich",
+          "publisher": "Covestro AG",
+          "url": "https://www.covestro.com/press/adnoc-takeover-offer-for-covestro-successful/",
+          "source_type": "company_primary",
+          "publication_date": "2024-12-19",
+          "reliability_score": 90,
+          "verification_note": "Prüfung 07.09.2026 (historical_context): Historisches Angebotsergebnis 91,3 % aus 2024; ausdrücklich noch kein Vollzug. Nicht als Beteiligungsquote nach Abschluss verwenden.",
+          "accessed_at": null
+        }
+      ],
+      "claims": [
+        {
+          "field": "stake_after_percentage",
+          "statement": "Nach Kapitalerhöhung wurden am 16.12.2025 rund 95,10 % indirekte Beteiligung gemeldet; der Vollzug erfolgte am 10.12.2025.",
+          "source_title": "Takeover-Relevant Information — Annual Financial Report 2025",
+          "source_url": "https://annualreport.covestro.com/annual-financial-report-2025/en/report/management-report/corporate-governance/takeover-relevant-information/"
+        }
+      ]
+    },
+    {
+      "id": "deal_ebm_papst_industrielle_antriebstechnik__siemens__undated",
+      "target": {
+        "name": "ebm-papst Industrielle Antriebstechnik",
+        "legal_name": "ebm-papst Geschäft für industrielle Antriebstechnik",
+        "city": null,
+        "region": null,
+        "latitude": null,
+        "longitude": null,
+        "coordinate_accuracy": "unknown",
+        "coordinate_source_url": null,
+        "industry": "industrial_manufacturing",
+        "industry_label": "Maschinen- & Anlagenbau"
+      },
+      "buyers": [
+        "Siemens"
+      ],
+      "sellers": [
+        "ebm-papst"
+      ],
+      "status": "completed",
+      "status_label": "Vollzogen",
+      "unconfirmed": false,
+      "deal_type": "carve_out",
+      "transaction_structure": "unknown",
+      "date": "2025-07-01",
+      "announcement_date": null,
+      "completion_date": null,
+      "completion_reported_date": "2025-07-01",
+      "deal_value": null,
+      "currency": null,
+      "stake_before_percentage": null,
+      "stake_acquired_percentage": null,
+      "stake_after_percentage": null,
+      "confidence": 70,
+      "evidence": "FACT",
+      "notes": "Siemens meldete den abgeschlossenen Kauf am 01.07.2025. Der genaue Vollzugstag bleibt unbekannt. Geschäftsbereich Mechatronic Systems mit rund 650 Beschäftigten; Kaufpreis nicht offengelegt. Historischer Vorgang aus 2025.",
+      "sources": [
+        {
+          "title": "Siemens schließt Kauf des Geschäfts für industrielle Antriebstechnik von ebm-papst ab",
+          "publisher": "Siemens AG",
+          "url": "https://press.siemens.com/de/de/pressemitteilung/siemens-schliesst-kauf-des-geschaefts-fuer-industrielle-antriebstechnik-von-ebm",
+          "source_type": "company_primary",
+          "publication_date": "2025-07-01",
+          "reliability_score": 90,
+          "verification_note": "Prüfung 07.09.2026 (content_checked): Vollzugsmeldung vom 01.07.2025 erneut geöffnet; genaues Vollzugsdatum bleibt unbekannt. Mehrere Betriebsstandorte, deshalb kein erfundener einzelner Hauptsitz für den Geschäftsbereich.",
+          "accessed_at": null
+        }
+      ],
+      "claims": []
+    }
+  ]
+}

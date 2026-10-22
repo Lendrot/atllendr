@@ -1,0 +1,110 @@
+kind,id_a,id_b,name_a,name_b,country,status
+legal_suffix_variant,name-gctt-308fc26ca9efcf56,name-gctt-78b983d2599eaea5,Ningbo-Zhoushan Port Group Co.,"Ningbo-Zhoushan Port Co., Ltd.",UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-6cb5d737d282b882,name-gctt-dfeaa605adb7962c,China Huadian Corporation Ltd.,China Huadian Group,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-273cd844d78503f9,name-gctt-dfeaa605adb7962c,China Huadian Corporation Ltd.,China Huadian Group Corporation,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-273cd844d78503f9,name-gcmt-6cb5d737d282b882,China Huadian Group,China Huadian Group Corporation,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-648382f2cd674e9a,name-gctt-5860052d5ae8fcc3,Ultramar LLC,Ultramar Group,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,gem-company-E100002001258,name-gctt-7eb4c5f8fc31f89b,Yantai Port Group Co.,Yantai Port Group Co Ltd,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-d7a29872b1126cc7,name-gctt-9dc46840b0bc9bb5,CLP Group,CLP Holdings Ltd,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,gem-company-E100000000657,name-gctt-9a9e4e5127781b5e,Sumitomo Corporation,Sumitomo Corp,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-b999b9469697cb68,name-gctt-9a9e4e5127781b5e,Sumitomo Corporation,Sumitomo Corp,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,gem-company-E100000001119,gem-company-E100002002847,Rio Tinto Ltd,Rio Tinto PLC,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,gem-company-E100000128516,gem-company-E100002003965,Kunming Iron & Steel Group Co Ltd,Kunming Iron & Steel Holding Co Ltd,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,gem-company-E100002026610,name-gcmt-79451b8468a0e966,Shandong Energy Luxi Mining Co Ltd,Shandong Energy Group Luxi Mining Co Ltd,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,gem-company-E100000131199,gem-company-E100001016207,Lodestone Namibia Pty Ltd,Lodestone Holdings Group (Namibia) Pty Ltd,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,gem-company-E100000131391,name-gcmt-c41b5ac455d43564,Birla Corporation Ltd,Birla Corporation,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,gem-company-E100000131391,name-gcmt-8b8d5b4743829da9,Birla Corporation Ltd,Birla Corp Ltd,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-75a72f35ea2199fa,name-gcmt-c41b5ac455d43564,Birla Corporation,Birla Corporation Ltd,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-8b8d5b4743829da9,name-gcmt-c41b5ac455d43564,Birla Corporation,Birla Corp Ltd,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-75a72f35ea2199fa,name-gcmt-8b8d5b4743829da9,Birla Corporation Ltd,Birla Corp Ltd,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,gem-company-E100000131956,name-gcmt-655090ba21f92101,Myanmar Economic Corp,Myanmar Economic Corporation,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-1d64ecf1b809263e,name-gcmt-655090ba21f92101,Myanmar Economic Corporation,Myanmar Economic Corp,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-07fdf5a4892c2c52,name-gcmt-b73fe82b3e6ebf67,South Eastern Coalfields Ltd,South Eastern Coalfields Limited,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-504106a12ca96e48,name-gcmt-e26bbaa77e528182,Coal India Ltd,Coal India Limited,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-2ee3ca19c9a4abde,name-gcmt-dc39baf465657f36,Blaschak Anthracite Corp,Blaschak Anthracite Corporation,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-1ea8ad19b617f91b,name-gcmt-29f037971f6a4a78,NLC India Limited,NLC India Ltd,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-61f12831d753a491,name-gcmt-873d50206e754cf5,Jinneng Group,Jinneng Holding Group,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-48fc64381162b79a,name-gcmt-6e9bfd065d98ad7d,Damodar Valley Corporation,Damodar Valley Corp,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-54491b99f77500ea,name-gcmt-c346c8f066ae1753,Semirara Mining and Power Corp,Semirara Mining and Power Corporation,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-28796ee1b613dcdb,name-gcmt-afb6edffdd27e239,Marfork Coal Co LLC,Marfork Coal Co Inc,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-ed5e68d735c35684,name-gcmt-f3a87a76f7e0e314,A & G Coal Corporation,A&G Coal Corp,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-928b589b49ba0b8b,name-gcmt-f3a87a76f7e0e314,A&G Coal Corp,A&G Coal Corporation,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-02ad469cc57353a8,name-gcmt-fdba4bf1835559db,Whitehaven Coal Ltd,Whitehaven Coal Limited,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-548a3b81a31aee2f,name-gcmt-c1350173825d388c,Westmoreland Mining Holdings LLC,Westmoreland Mining LLC,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-10eecfa58349de1c,name-gcmt-af5dedaa059905c2,Odisha Power Generation Corp,Odisha Power Generation Corporation Ltd,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-8af66cf94686c0f2,name-gcmt-ccb45694a5485378,China Securities Finance Corporation,China Securities Finance Corp.,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-11d90e2e3ceeb7a7,name-gcmt-675bff422e2e00fc,New Hope Corp Ltd,New Hope Group,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-329c09089abdbde2,name-gcmt-b03f615d0da0856a,West Bengal Power Development Corp Ltd,West Bengal Power Development Corporation,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-70ea72a2960ba3d3,name-gcmt-f8d4a9b8a6b5022b,Mountaineer Mining Corporation,Mountaineer Mining Corp,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-293f8efec5f51cd5,name-gcmt-473f33132dab648e,Mt Owen Pty Ltd,Mt Owen Pty Limited,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-2380f97cb88ef371,name-gcmt-efaea95eca6998f2,Long Flame Coal Corporation,Long Flame Coal Corp,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-26cc276b62ecba2c,name-gcmt-53559b86a49f0d47,Marfork Coal Company LLC,Marfork Coal Company Inc,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-26cc276b62ecba2c,name-gcmt-2ef7fc02c050e665,Marfork Coal Company LLC,Marfork Coal Company Inc.,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-14f47c2611a7a7d4,name-gcmt-53559b86a49f0d47,Marfork Coal Company Inc,"Marfork Coal Company, LLC",UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-14f47c2611a7a7d4,name-gcmt-2ef7fc02c050e665,"Marfork Coal Company, LLC",Marfork Coal Company Inc.,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-5f5bf7b5d0bafbd9,name-gcmt-ea4b4bc03a725a0f,Hindalco Industries Limited,Hindalco Industries Ltd,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-0b2ff32c8ac5bde6,name-gcmt-8885c64ce6b9a430,Western Coalfields Ltd,Western Coalfields Limited,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-65089479d5e256d8,name-gcmt-bbc02748f7672940,Puckree Group,Puckree Group Pty Ltd,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-6d6a7282783019e3,name-gcmt-83c1168e17aa2066,Shougang Group,Shougang Corporation,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-2a7697ab92f8d627,name-gcmt-fc411bd4bb0b0ab1,MC Mining Ltd,MC Mining LLC,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-354bedaf78fcb660,name-gcmt-5cce3750e7b0a8b1,Punjab State Power Corporation,Punjab State Power Corporation Ltd,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-9b3f71090fca045b,name-gcmt-ed5b67098647f470,Andhra Pradesh Mineral Development Ltd,Andhra Pradesh Mineral Development Corp,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-00b6762ed5cbc0cb,name-gcmt-7018d4a81c4fbf43,Universal Coal LLC,Universal Coal PLC,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-560940eb7b6e5ef9,name-gcmt-5bdb813420ed4999,Ndalamo Resources Ltd,Ndalamo Resources Pty Ltd,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-4257e1efcd7cf8ca,name-gcmt-d1134f78f3cd9997,Asia Power Thar Coal (Pvt.) Limited,Asia Power Thar Coal Pvt Ltd,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-8902e4d49214890d,name-gcmt-bf394d72b97c9c40,China Energy Investment Corporation,China Energy Investment Corp,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-746326aa0ebc5169,name-gcmt-83e7a9eb7ec55321,Barmer Lignite Mining Company Ltd,Barmer Lignite Mining Company Limited,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-10720c6b8a5df420,name-gcmt-545e0cb48020ec5d,Inner Mongolia Pingzhuang Coal Group Limited.,Inner Mongolia Pingzhuang Coal Group,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-659e07eeacfb4998,name-gcmt-f0c3bab119cde454,Bodi International Group,Bodi International LLC,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-0ccc83e1229af491,name-gcmt-ac7b57ee3dfd5ef7,New Wilkie Energy Group Limited,New Wilkie Energy Group Ltd,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-46b19fa6d164ba69,name-gcmt-57e0bb9d54ef2928,China National Coal Group,China National Coal Group Corporation,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-69ad4e58312cc459,name-gcmt-831f5c1de57412bd,Karnataka Power Corporation Limited,Karnataka Power Corp Ltd,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-38327839a36aada8,name-gcmt-3a7b65caa2775481,Mountain Coal Company LLC,"Mountain Coal Company, Inc.",UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-98de54e68367533e,name-gcmt-f46582e2c184a002,Ergosat Ltd,Ergosat Pty Ltd,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-2ddc275a577a8e01,name-gcmt-32e393a63ab5234e,Makole Group Pty Ltd,Makole Group,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-66b31c84aafc5d24,name-gcmt-6d33644997a06cc5,Gujarat Power Corporation Ltd,Gujarat Power Corp Ltd,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-2e5abf307f9cba57,name-gcmt-50e9bdd81ad78a20,Gujarat Mineral Development Corporation Limited,Gujarat Mineral Development Corporation Ltd,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-487064e41c11077f,name-gcmt-a8408873b840ce24,Huaibei Mining Group Co Ltd,Huaibei Mining Co Ltd,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-96858c085a25165a,name-gcmt-bed8481045c6c8cf,West Bengal Mineral Development and Trading Corp,West Bengal Mineral Development and Trading Corporation Ltd,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-78eea1f2f647a8f9,name-gcmt-be61f6f6b893108e,Sojitz Corp,Sojitz Corporation,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-3f17d33eadd44ddc,name-gcmt-66c45f72ad50e298,China Baowu Steel Group,China Baowu Steel Group Corporation Limited,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-ccc1232c84b755a9,name-gcmt-eed018578836fb30,Jizhong Energy Co Ltd,Jizhong Energy Group Co Ltd,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-1a809300b24c571c,name-gcmt-a5769ace6beea0b6,North Coal Ltd,North Coal Pty Ltd,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-40d3dcd4b8b74ed8,name-gcmt-da6c926a31aa7c65,Elko Metallurgical Resources Corporation,Elko Metallurgical Resources Corp,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-3285dfa93a018f08,name-gcmt-cde06fc3d07542ed,JSW Cement Limited,JSW Cement Ltd,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,gem-company-E100001000437,name-gcmt-38194cb3f9670272,China Construction Bank Corporation,China Construction Bank Corp,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-1ce62383d7cf79e3,name-gcmt-4592d44b44c27685,Senzile Resources Ltd,Senzile Resources Pty Ltd,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-46997fe45461cae2,name-gcmt-8a1d1e350c912415,Inner Mongolia Yidong Coal Co Ltd,Inner Mongolia Yidong Coal Group Co Ltd,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-115c69db3575dfae,name-gcmt-d531b35245c6d73d,Power Construction Corporation of China,Power Construction Corporation of China Ltd,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-7daa9d424f4309da,name-gcmt-88f62e70f1391476,Ramaco Resources Inc,Ramaco Resources LLC,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-7daa9d424f4309da,name-gcmt-e380708f639a93d4,Ramaco Resources Inc,"Ramaco Resources, LLC",UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-421c67af28cdf829,name-gcmt-c4eee5d6b3607364,China National Heavy Machinery Corporation,China National Heavy Machinery Corp,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-9e812e10f3037490,name-gcmt-c32ef7b21c052329,Guizhou Guangshengyuan Group Mining Co Ltd,Guizhou Guangshengyuan Mining Co Ltd,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-07edcca39845a3c9,name-gcmt-6206932cae7d4408,"LLC ""K.M.T.""",K.M.T. LLC,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-307d32082d9dc1c4,name-gcmt-48b63598477a026f,Jiangxi Coal Group Guizhou Mining Co Ltd,Jiangxi Coal Guizhou Mining Group Co Ltd,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-76ccc5063314844f,name-gcmt-902ed8ce43873544,"LLC ""Kudrat-2010""",Kudrat 2010 LLC,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-0c0e6ab44e496bc0,name-gcmt-946cd5223bf913a9,"Lexington Coal Holdings, Inc",Lexington Coal Holdings LLC,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-5b297a9a92c46bef,name-gcmt-946cd5223bf913a9,Lexington Coal Holdings Inc,Lexington Coal Holdings LLC,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-7ba9cf413478002f,name-gcmt-8552d4079f4fca78,Independence Coal Company LLC,Independence Coal Company Inc,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-24568c86cc1598e9,name-gcmt-706409a0b040ae3e,Selah Corporation,Selah Corp,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-6427b53340f00aeb,name-gcmt-80f86aac9930b113,Coal Loaders Incorporated,Coal Loaders Inc,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-39101abf5c73a13a,name-gcmt-ac616326187215d3,Clay Laurel Mining Inc.,Clay Laurel Mining Incorporated,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-053568379339540e,name-gcmt-273b8d3cf9b4f360,"Sidney Coal Company, LLC",Sidney Coal Company Inc,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-286883baf7a45f74,name-gcmt-749eca4b9749a6cb,Capital Coal Corporation,CAPITAL COAL CORP.,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-45da21b67711feec,name-gcmt-749eca4b9749a6cb,Capital Coal Corporation,Capital Coal Corp,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-5219a7840a47ef1c,name-gcmt-b16be968a8c3bed8,Branch Coal & Land Corp,Branch Coal & Land Corporation,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-49ab5e019fbdd785,name-gcmt-63ed5df2492b42f6,Alfieri Holdings,Alfieri Holdings Pty Ltd,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-2144f9b3f67ba829,name-gcmt-dd0164bb815d204b,Katlego Coal Ltd,Katlego Coal Pty Ltd,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-caaed9586d0a006c,name-gcmt-f7cafc7e06f9003e,Nigerian Coal Corporation,Nigerian Coal Corp,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-8c488b258058f955,name-gcmt-bc0bfd9fcc57a0de,Overlooked Colliery Alpha Pty Ltd,Overlooked Colliery Alpha Ltd,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-9b48e4e8215f0575,name-gcmt-d32bb7609c263d91,Anker Coal and Mineral Holdings,Anker Coal and Mineral Holdings SA Pty Ltd,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-66797bf47da20e74,name-gcmt-f9430520311fb6b1,Mark Energy LLC,Mark Energy Holdings LLC,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-474dfceb2afdfeda,name-gcmt-a851cc7fe1b89683,"LLC ""Vena""",Vena LLC,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,name-gcmt-49cee032c6d754f0,name-gcmt-715135d18d927523,Mbuyelo Group,Mbuyelo Group Pty Ltd,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,gem-company-E100000122410,gem-company-E100000124726,Jiangsu Shagang Group Co Ltd,Jiangsu Shagang Co Ltd,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,gem-company-E100000123542,gem-company-E100000124529,HBIS Co Ltd,HBIS Group Co Ltd,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,gem-company-E100000124598,gem-company-E100000126101,Shandong Iron and Steel Co Ltd,Shandong Iron and Steel Group Co Ltd,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,gem-company-E100000123204,gem-company-E100000124166,Shiheng SPECIAL Steel Group Co Ltd,Shiheng Special Steel Holding Group Co Ltd,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,gem-company-E100000130972,gem-company-E100002007121,SMS Group GmbH,SMS Holding GmbH,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,gem-company-E100000121535,gem-company-E100000130494,Walsin Lihwa Holdings Ltd,Walsin Lihwa Corp,UNKNOWN,INFERENCE_REVIEW_ONLY
+legal_suffix_variant,gem-company-E100001012175,gem-company-E100001016232,Interpipe Ltd,Interpipe Holdings PLC,UNKNOWN,INFERENCE_REVIEW_ONLY

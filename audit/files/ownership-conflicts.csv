@@ -1,0 +1,4 @@
+from_id,to_id,type,source_id,source_row,values,ids
+gem-company-E100002003135,gem-giomt-P100000128382,owner_or_operator,giomt,265,30.0 | 70.0,gem-giomt-P100000128382-owner_or_operator-gem-company-E100002003135-265 | gem-giomt-P100000128382-owner_or_operator-gem-company-E100002003135-265
+gem-company-E100002003135,gem-giomt-P100000128382,ultimate_parent,giomt,265,30.0 | 70.0,gem-giomt-P100000128382-ultimate_parent-gem-company-E100002003135-265 | gem-giomt-P100000128382-ultimate_parent-gem-company-E100002003135-265
+name-gcmt-25d3e3d11dea117f,gem-gcmt-M3796,ultimate_parent,gcmt,1289,49.0 | 51.0,gem-gcmt-M3796-ultimate_parent-name-gcmt-25d3e3d11dea117f-1289 | gem-gcmt-M3796-ultimate_parent-name-gcmt-25d3e3d11dea117f-1289

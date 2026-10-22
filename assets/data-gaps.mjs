@@ -1,0 +1,24 @@
+import {resourceAvailability,renderResourceAvailability,resourceGapSnapshot} from './safe-unknown.mjs';
+import {PUBLIC_AVAILABILITY_STATUSES} from './public-availability-v293.mjs';
+const $=id=>document.getElementById(id);
+const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const params=new URLSearchParams(location.search);$('entity').value=params.get('entity')||'';
+let manifest,queue=[],selection=[];
+async function json(url){return resourceGapSnapshot(url)}
+function bucket(key){let n=0;for(const c of key)n=(n*31+c.charCodeAt(0))%64;return String(n).padStart(2,'0')}
+function title(type){return {UNKNOWN_ROLE:'Eigentümer-, Betreiber- oder Elternrolle ungeklärt',UNKNOWN_PERIOD:'Kapazitätszeitraum ungeklärt',UNKNOWN_MATERIAL_BASIS:'Materialbasis ungeklärt'}[type]||type}
+function item(g){const a=document.createElement('article');const loc=g.original_record_locator;a.dataset.gapId=g.gap_id;a.innerHTML=`<h2>${esc(title(g.gap_type))}</h2><small>ID: <code>${esc(g.gap_id)}</code> · Priorität ${esc(g.priority)} · Fachstatus ${esc(g.fact_status)} · Recherche ${esc(g.research_status)} · Evidence-Vollständigkeit ${esc(g.evidence_completeness||'UNKNOWN')}</small><p>Original-ID: <code>${esc(g.original_record_id)}</code><br>Entity: <code>${esc(g.legacy_asset_id)}</code> · Rohwert bleibt erhalten.</p><p>Es fehlt: ${esc(g.missing_evidence)}. Quelle: ${esc(loc.source_file)} · ${esc(loc.collection)} · Zeile ${esc(loc.ordinal)}. Original-Hash: <code>${esc(g.original_record_hash)}</code></p><p><a href="/minen/?id=${encodeURIComponent(g.legacy_asset_id)}">Standort ansehen</a> · <a href="/foundation/v28.4/${esc(g._page)}" download>Registerseite als JSON (mit Nutzungseinschränkungen und Quellenverfügbarkeit)</a></p>`;const availability=document.createElement('section');renderResourceAvailability(availability,[g]);a.append(availability);return a}
+async function renderMore(){const results=$('results'),want=$('type').value;
+ if(queue.length){const page=queue[0],rows=await json('/foundation/v28.4/'+page);if(!Array.isArray(rows)||rows.length>100)throw Error('Ungültige Registerseite');for(const g of rows)resourceAvailability(g);queue.shift();for(const g of rows){if(want!=='all'&&g.gap_type!==want||selection.length&&!selection.some(x=>x.gap_id===g.gap_id)||$('priority').value!=='all'&&g.priority!==$('priority').value||$('research').value!=='all'&&g.research_status!==$('research').value||$('availability').value!=='all'&&resourceAvailability(g).availability_status!==$('availability').value)continue;results.append(item({...g,_page:page}));}}
+ $('more').hidden=!queue.length;$('selection').textContent=`${results.childElementCount} Einträge angezeigt · ${queue.length} Registerseiten verfügbar. ${selection.length?'Entity-Filter aktiv.':'Die Ergebnisse werden seitenweise geladen.'}`;
+ if(!results.childElementCount&&!queue.length)results.textContent='Keine Datenlücke im gewählten Filter dieses geprüften Bestands.';
+}
+async function filter(e){e?.preventDefault();$('error').textContent='';$('results').replaceChildren();$('more').hidden=true;try{
+ const id=$('entity').value.trim();selection=[];
+ if(id){const lookup=await json('/foundation/v28.4/gap-lookup-'+bucket(id)+'.json');selection=lookup[id]||[];const pages=[...new Set(selection.map(x=>x.page))];queue=pages}
+ else queue=manifest.pages.filter(p=>$('type').value==='all'||p.types.includes($('type').value)).map(p=>p.path);
+ const url=new URL(location.href);if(id)url.searchParams.set('entity',id);else url.searchParams.delete('entity');history.replaceState(null,'',url);await renderMore()
+ }catch(error){$('error').textContent='Datenlücken konnten nicht geladen werden. Bitte erneut versuchen.';console.error(error)}}
+$('availability').replaceChildren(new Option('Alle','all'),...PUBLIC_AVAILABILITY_STATUSES.map(status=>new Option(status,status)));
+$('filters').onsubmit=filter;$('more').onclick=()=>renderMore().catch(e=>{$('error').textContent='Weitere Registerseiten konnten nicht geladen werden.';console.error(e)});
+try{manifest=await json('/foundation/v28.4/manifest.json');const m=manifest.metrics;$('coverage').textContent=`${m.DATA_GAP_OPEN_TOTAL.toLocaleString('de-DE')} Lücken in ${m.RECORDS_AFFECTED_BY_GAPS.toLocaleString('de-DE')} Originalrecords. Davon ${m.DATA_GAP_TOTAL_BY_TYPE.UNKNOWN_ROLE.toLocaleString('de-DE')} Rollen, ${m.DATA_GAP_TOTAL_BY_TYPE.UNKNOWN_PERIOD.toLocaleString('de-DE')} Zeiträume und ${m.DATA_GAP_TOTAL_BY_TYPE.UNKNOWN_MATERIAL_BASIS.toLocaleString('de-DE')} Materialbasen. Feldabdeckung im Kapazitätsregister: Zeitraum ${m.COVERAGE_BY_FIELD['capacity.period'].known}/${m.COVERAGE_BY_FIELD['capacity.period'].total} bekannt; Materialbasis ${m.COVERAGE_BY_FIELD['capacity.material_basis'].known}/${m.COVERAGE_BY_FIELD['capacity.material_basis'].total} bekannt. Weitere Felder: NOT_VERIFIED.`;await filter()}catch(e){$('error').textContent='Register nicht verfügbar.';console.error(e)}

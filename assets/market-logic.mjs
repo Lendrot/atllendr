@@ -1,0 +1,15 @@
+const complete={color:0xd6f391,css:'#d6f391'},pending={color:0xffb65c,css:'#ffb65c'},unconfirmed={color:0xc4a1ff,css:'#c4a1ff'};
+export const statuses={completed:{label:'Abgeschlossen',...complete},pending:{label:'Angebot / vereinbart',...pending},announced:{label:'Angekündigt',...pending},signed:{label:'Vereinbart',...pending},regulatory_review:{label:'Genehmigung offen',...pending},interest:{label:'Kaufabsicht',...unconfirmed},intent:{label:'Kaufabsicht',...unconfirmed},rumored:{label:'Gerücht',...unconfirmed},sale_process:{label:'Verkaufsprozess',...unconfirmed},cancelled:{label:'Abgebrochen',color:0xff8292,css:'#ff8292'}};
+export const regionCountries={Europa:['Deutschland','Schweiz','Frankreich','Niederlande','Italien','Finnland','Schweden','Irland','Vereinigtes Königreich','Österreich','Spanien','Polen','Belgien','Dänemark','Norwegen','Portugal'],Nordamerika:['Vereinigte Staaten','Kanada','Mexiko'],Südamerika:['Brasilien','Kolumbien','Peru','Chile','Argentinien'],Afrika:['Südafrika','Kenia','Ägypten','Nigeria','Marokko'],Asien:['Indien','Japan','Volksrepublik China','China','Singapur','Taiwan','Südkorea','Israel','Hongkong','Vereinigte Arabische Emirate'],Ozeanien:['Australien','Neuseeland']};
+const contains=(s,q)=>String(s||'').toLocaleLowerCase('de').includes(q.toLocaleLowerCase('de'));
+export function companyRegion(c,region){if(region==='all')return true;const country=c.country||c.location?.country;if(region==='Deutschland')return country==='Deutschland'||(!country&&!c.location&&c.deIsin);if(region==='Indien')return country==='Indien';return (regionCountries[region]||[]).includes(country);}
+export function hasPoint(entity){return Number.isFinite(entity?.lat)&&Number.isFinite(entity?.lon)&&Math.abs(entity.lat)<=90&&Math.abs(entity.lon)<=180;}
+export function dealHasArc(deal,entities){return deal.status!=='cancelled'&&hasPoint(entities[deal.targetId])&&(deal.buyerIds||[deal.buyerId]).some(id=>hasPoint(entities[id]));}
+export function filterMarket(data,filter){
+ const {region='Deutschland',sector='all',status='all',query='',year='all'}=filter;
+ const matchStatus=d=>status==='all'||(status==='pending'?['pending','announced','signed','regulatory_review'].includes(d.status):status===d.status);
+ const deals=data.deals.filter(d=>(region==='all'||(region==='Deutschland'?d.countries.includes('Deutschland'):region==='Indien'?d.countries.includes('Indien'):d.regions.includes(region)))&&(year==='all'||d.date?.slice(0,4)===String(year))&&(sector==='all'||(d.coverage==='verified'?data.entities[d.targetId].sectors:d.sectors).includes(sector))&&matchStatus(d)&&(!query||[...(d.buyerIds||[d.buyerId]),d.targetId].some(id=>contains(data.entities[id]?.name,query))));
+ const related=new Set(deals.flatMap(d=>[...(d.buyerIds||[d.buyerId]),d.targetId]));
+ const companies=data.companies.filter(c=>companyRegion(c,region)&&(sector==='all'||c.sectors.includes(sector))&&(!query||contains(c.name,query)||c.isins?.some(i=>contains(i,query)))&&(status==='all'||status==='listed'&&['reference','reported','unverified'].includes(c.listingStatus)||related.has(c.id)));
+ return {deals,companies};
+}

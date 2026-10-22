@@ -1,0 +1,22 @@
+html.embedded body{overflow:hidden}
+html.embedded #app,html.embedded .app{height:100dvh;min-height:0}
+html.embedded .topbar,html.embedded footer,html.embedded #world-switch,html.embedded .world-swipe-edge{display:none!important}
+html.embedded .workspace{position:relative;display:block!important;height:100%;min-height:0;overflow:hidden}
+html.embedded .space{position:absolute;inset:0;width:100%;height:100%;min-height:0!important}
+html.embedded .sidebar{position:absolute;z-index:40;inset:0 auto 0 0;width:min(355px,calc(100% - 35px));height:100%;min-height:0;display:flex;flex-direction:column;transform:translateX(-101%);transition:transform .18s ease;box-shadow:12px 0 36px #11304435;overflow:hidden}
+html.embedded.filters-open .sidebar{transform:translateX(0)}
+html.embedded .sidebar .overview{overflow:auto;max-height:68%;flex-shrink:0;padding-top:54px}
+html.embedded .sidebar .deal-list,html.embedded .sidebar .mine-list{display:block;min-height:80px;overflow:auto;flex:1}
+html.embedded .sidebar .mobile-deals{display:none}
+html.embedded .sidebar .deal-list{overflow-x:hidden}
+html.embedded .sidebar .evidence-chip{width:auto!important;max-width:100%;white-space:normal;overflow-wrap:anywhere}
+html.embedded .space-top{top:53px;left:10px;right:10px}
+html.embedded .mine-identity{top:63px;left:12px;max-width:calc(100% - 70px)}
+html.embedded .legend,html.embedded body[data-world=mines] .legend{top:auto;bottom:47px;left:12px;right:12px;max-width:none}
+html.embedded .controls{top:54px}
+html.embedded .hint{bottom:6px}
+.embed-filter-toggle{display:none}
+html.embedded .embed-filter-toggle{position:fixed;z-index:60;top:8px;left:10px;display:block;min-height:39px;padding:7px 12px;border:1px solid #95b4c7;border-radius:8px;color:#153b53;background:#fff;box-shadow:0 5px 18px #17374d32;font:600 14px/1.2 system-ui,sans-serif;cursor:pointer}
+html.embedded .embed-filter-toggle:focus-visible{outline:3px solid #087fb2;outline-offset:2px}
+@media(max-width:500px){html.embedded .mine-identity{max-width:calc(100% - 70px)}html.embedded .legend{font-size:11px}html.embedded .space-top{top:54px}}
+@media(prefers-reduced-motion:reduce){html.embedded .sidebar{transition:none}}
