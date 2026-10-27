@@ -1,0 +1,4584 @@
+{
+ "schema": "atlas.copper-market/1",
+ "input": {
+  "ledger": "foundation/V29/copper-knowledge.sqlite",
+  "sha256": "f637e8f69749fae1750fd284cbf6aa824c81ba7876c1aca6abb0fcaf6ae88dfe",
+  "review_queue_sha256": "d5ff3c33c35e43f5b61424071498bb304b154135a7ca1335b3f22ed850ae4068",
+  "approval_ledger_sha256": "21e157f65a7ddc433507b55650bd8bf37e84702ff70452c318055005a7132583"
+ },
+ "scope": "Copper chains of the V29 copper ledger (18 selected source-bound chains, not global copper coverage).",
+ "fact_status": "INFERENCE",
+ "usage_restrictions": [
+  "DEV_ANALYSIS_NOT_RELEASE_CERTIFIED",
+  "SHARES_REFER_TO_RECORDED_SCOPE_NOT_WORLD",
+  "DERIVED_VALUES_ARE_INFERENCE",
+  "UNKNOWN_IS_NOT_ZERO",
+  "MIXED_REPORTING_PERIODS_CALENDAR_AND_FISCAL",
+  "SOURCE_SNAPSHOT_NOT_CURRENT_VALIDITY",
+  "NO_EQUITY_ATTRIBUTION",
+  "OFFTAKE_SHARE_IS_SELLER_SIDE"
+ ],
+ "transformation": {
+  "transformation_id": "atlas.copper-market",
+  "transformation_version": "1"
+ },
+ "kpi": {
+  "year": 2025,
+  "chains": 18,
+  "mines_with_value": 10,
+  "mines_unknown": 8,
+  "recorded_mine_supply_kt": 3319.7,
+  "relationships": 133,
+  "review_status_counts": {
+   "APPROVED": 57,
+   "BLOCKED": 2,
+   "REVIEW_READY": 56,
+   "VERIFIED": 18
+  },
+  "approved_share_pct": 42.9,
+  "world_reference": "usgs-mcs-2026-copper",
+  "candidate_mines": 2,
+  "candidate_fact_kt": 453.6,
+  "recorded_incl_fact_candidates_kt": 3773.3,
+  "world_mine_kt": 23013,
+  "world_refinery_kt": 28970,
+  "world_coverage_pct": 14.4,
+  "world_consumption": "UNKNOWN",
+  "supply_hhi_country": 6216,
+  "buyers": 11
+ },
+ "supply": {
+  "rows": [
+   {
+    "chain_id": "escondida",
+    "entity_id": "entity:25855cbf-e719-4bd1-8c15-6be2bffc267b",
+    "name": "Escondida",
+    "country": "Chile",
+    "operator": "BHP — berichtete Unternehmensgruppe",
+    "operator_relationship_ids": [
+     "relationship:03bc292b-116e-50ce-a877-34e09a75d366"
+    ],
+    "operator_review_status": [
+     "VERIFIED"
+    ],
+    "value_kt": 1304.9,
+    "status": "INFERENCE",
+    "unknown_reason": null,
+    "period": {
+     "period_type": "FISCAL_YEAR",
+     "period_start": "2024-07-01",
+     "period_end": "2025-07-01"
+    },
+    "input_claims": [
+     {
+      "claim_id": "claim:2852724e-0cf4-4c4a-a398-c7653fb29b04",
+      "value": 177.7,
+      "unit": "1000 t",
+      "field": "production",
+      "fact_status": "FACT",
+      "evidence_status": "SOURCE_TEXT_REVIEWED",
+      "material_basis": "REFINED_METAL",
+      "material_form": "Copper cathode",
+      "measurement_basis": "100% operation",
+      "period_type": "FISCAL_YEAR",
+      "period_start": "2024-07-01",
+      "period_end": "2025-07-01",
+      "reference_year": 2025,
+      "sources": [
+       {
+        "source_id": "bhp-annual-report-2026-escondida",
+        "publisher": "BHP",
+        "source_url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2026/260818_bhpannualreport2026.pdf",
+        "source_quality": "COMPANY_PRIMARY",
+        "accessed_at": "2026-10-07"
+       }
+      ]
+     },
+     {
+      "claim_id": "claim:c16b940c-9e1f-4fe1-be8d-a85efa9d7201",
+      "value": 1127.2,
+      "unit": "1000 t",
+      "field": "production",
+      "fact_status": "FACT",
+      "evidence_status": "SOURCE_TEXT_REVIEWED",
+      "material_basis": "CONTAINED_METAL",
+      "material_form": "Payable copper in concentrate",
+      "measurement_basis": "100% operation",
+      "period_type": "FISCAL_YEAR",
+      "period_start": "2024-07-01",
+      "period_end": "2025-07-01",
+      "reference_year": 2025,
+      "sources": [
+       {
+        "source_id": "bhp-annual-report-2026-escondida",
+        "publisher": "BHP",
+        "source_url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2026/260818_bhpannualreport2026.pdf",
+        "source_quality": "COMPANY_PRIMARY",
+        "accessed_at": "2026-10-07"
+       }
+      ]
+     }
+    ],
+    "excluded_claims": [],
+    "candidate": null
+   },
+   {
+    "chain_id": "spence",
+    "entity_id": "entity:72c038ce-652a-41ad-822b-8dcf9daf7299",
+    "name": "Spence",
+    "country": "Chile",
+    "operator": "BHP — berichtete Unternehmensgruppe",
+    "operator_relationship_ids": [
+     "relationship:03269aaf-d297-565e-840e-5054db1308cc"
+    ],
+    "operator_review_status": [
+     "REVIEW_READY"
+    ],
+    "value_kt": 267.6,
+    "status": "INFERENCE",
+    "unknown_reason": null,
+    "period": {
+     "period_type": "FISCAL_YEAR",
+     "period_start": "2024-07-01",
+     "period_end": "2025-07-01"
+    },
+    "input_claims": [
+     {
+      "claim_id": "claim:0b711d27-f6a4-5053-9a94-68207ce10c19",
+      "value": 150.6,
+      "unit": "kt",
+      "field": "production",
+      "fact_status": "FACT",
+      "evidence_status": "SOURCE_TEXT_REVIEWED",
+      "material_basis": "CONTAINED_METAL",
+      "material_form": "copper concentrate",
+      "measurement_basis": "PAYABLE_COPPER_100_PERCENT_OPERATION",
+      "period_type": "FISCAL_YEAR",
+      "period_start": "2024-07-01",
+      "period_end": "2025-07-01",
+      "reference_year": 2025,
+      "sources": [
+       {
+        "source_id": "bhp-operational-review-2026",
+        "publisher": "BHP",
+        "source_url": "https://www.bhp.com/-/media/documents/media/reports-and-presentations/2026/260716_bhpoperationalreviewfortheyearended30june2026.pdf",
+        "source_quality": "COMPANY_PRIMARY",
+        "accessed_at": "2026-10-07"
+       }
+      ]
+     },
+     {
+      "claim_id": "claim:eaaba239-fefa-5727-abc1-d0a3b0feb109",
+      "value": 117.0,
+      "unit": "kt",
+      "field": "production",
+      "fact_status": "FACT",
+      "evidence_status": "SOURCE_TEXT_REVIEWED",
+      "material_basis": "REFINED_METAL",
+      "material_form": "copper cathode",
+      "measurement_basis": "EW_CATHODE_100_PERCENT_OPERATION",
+      "period_type": "FISCAL_YEAR",
+      "period_start": "2024-07-01",
+      "period_end": "2025-07-01",
+      "reference_year": 2025,
+      "sources": [
+       {
+        "source_id": "bhp-operational-review-2026",
+        "publisher": "BHP",
+        "source_url": "https://www.bhp.com/-/media/documents/media/reports-and-presentations/2026/260716_bhpoperationalreviewfortheyearended30june2026.pdf",
+        "source_quality": "COMPANY_PRIMARY",
+        "accessed_at": "2026-10-07"
+       }
+      ]
+     }
+    ],
+    "excluded_claims": [],
+    "candidate": null
+   },
+   {
+    "chain_id": "antamina",
+    "entity_id": "entity:ffbab916-f696-4b76-9d2e-ad4c843ff434",
+    "name": "Antamina",
+    "country": "Peru",
+    "operator": "Compañía Minera Antamina S.A.",
+    "operator_relationship_ids": [
+     "relationship:aaf20385-2a19-546e-8354-eff115a2e131"
+    ],
+    "operator_review_status": [
+     "REVIEW_READY"
+    ],
+    "value_kt": null,
+    "status": "UNKNOWN",
+    "unknown_reason": "EQUITY_SHARE_ONLY",
+    "period": null,
+    "input_claims": [],
+    "excluded_claims": [
+     {
+      "claim_id": "claim:cf31a4cd-9c02-46ba-89ad-3cf2cd3b7bf6",
+      "reason": "EQUITY_SHARE_BASIS"
+     }
+    ],
+    "candidate": {
+     "candidate_id": "cpr1:antamina:2025",
+     "chain_id": "antamina",
+     "reference_year": 2025,
+     "period_type": "CALENDAR_YEAR",
+     "period_start": "2025-01-01",
+     "period_end": "2026-01-01",
+     "value": 86,
+     "unit": "kt",
+     "value_kt": 382.2,
+     "material_basis": "CONTAINED_METAL",
+     "measurement_basis": "Derived 100% value = Teck's reported 22.5% share (86 kt, metal contained in concentrate) / 0.225",
+     "fact_status": "INFERENCE",
+     "derivation": {
+      "reported_share_value_kt": 86,
+      "ownership_share": 0.225,
+      "formula": "value_kt = 86 / 0.225"
+     },
+     "source_id": "cpr1-teck-aif-2025",
+     "locator": "Production and guidance table, copper, 2025 column",
+     "quote_fragments": [
+      "Antamina 86 95-105",
+      "Includes 22.5% of production from Antamina",
+      "Metal contained in concentrate."
+     ],
+     "usage_restrictions": [
+      "EQUITY_SHARE_SCALED_TO_100_PERCENT",
+      "NOT_A_REPORTED_100_PERCENT_VALUE",
+      "CANDIDATE_NOT_IN_LEDGER"
+     ],
+     "source": {
+      "source_id": "cpr1-teck-aif-2025",
+      "publisher": "Teck Resources Limited",
+      "source_name": "Annual Information Form 2025",
+      "source_url": "https://www.teck.com/media/Teck-AIF-2025.pdf",
+      "source_published_at": "2026",
+      "accessed_at": "2026-10-27",
+      "source_quality": "COMPANY_PRIMARY",
+      "evidence_completeness": "FULL_ARTIFACT_PINNED"
+     }
+    }
+   },
+   {
+    "chain_id": "kansanshi",
+    "entity_id": "entity:2c1aa724-2bc5-4753-9f32-e7b4a8713fa5",
+    "name": "Kansanshi",
+    "country": "Sambia",
+    "operator": "Kansanshi Mining PLC",
+    "operator_relationship_ids": [
+     "relationship:f69f9380-ee18-5f19-9b35-d332482fba08"
+    ],
+    "operator_review_status": [
+     "APPROVED"
+    ],
+    "value_kt": 181.2,
+    "status": "INFERENCE",
+    "unknown_reason": null,
+    "period": {
+     "period_type": "CALENDAR_YEAR",
+     "period_start": "2025-01-01",
+     "period_end": "2026-01-01"
+    },
+    "input_claims": [
+     {
+      "claim_id": "claim:1afe4f46-0af3-5844-93a7-cf8b7ce6658a",
+      "value": 181183,
+      "unit": "t",
+      "field": "production",
+      "fact_status": "FACT",
+      "evidence_status": "SOURCE_TEXT_REVIEWED",
+      "material_basis": "CONTAINED_METAL",
+      "material_form": "MIXED_CATHODE_AND_CONCENTRATE",
+      "measurement_basis": "Contained copper, mine production before smelting,100%operation basis",
+      "period_type": "CALENDAR_YEAR",
+      "period_start": "2025-01-01",
+      "period_end": "2026-01-01",
+      "reference_year": 2025,
+      "sources": [
+       {
+        "source_id": "fqm-ar-2025",
+        "publisher": "First Quantum Minerals Ltd.",
+        "source_url": "https://www.first-quantum.com/wp-content/uploads/2026/03/First-Quantum-2025-AR-Final-Web.pdf",
+        "source_quality": "COMPANY_PRIMARY",
+        "accessed_at": "2026-10-07"
+       }
+      ]
+     }
+    ],
+    "excluded_claims": [
+     {
+      "claim_id": "claim:bc50a9f9-7e11-57c0-93e6-30cd41bd14be",
+      "reason": "COMPONENT_OF_REPORTED_TOTAL"
+     },
+     {
+      "claim_id": "claim:d817c56d-a84c-54c1-960c-01279f401a9c",
+      "reason": "COMPONENT_OF_REPORTED_TOTAL"
+     }
+    ],
+    "candidate": null
+   },
+   {
+    "chain_id": "kamoa",
+    "entity_id": "entity:4e1ccbb5-a6dd-4fce-9970-bba2d6c8f5e7",
+    "name": "Kamoa-Kakula",
+    "country": "DR Kongo",
+    "operator": "Kamoa Copper SA",
+    "operator_relationship_ids": [
+     "relationship:0607b80b-46da-5580-a7be-32f78a3c5fee"
+    ],
+    "operator_review_status": [
+     "APPROVED"
+    ],
+    "value_kt": null,
+    "status": "UNKNOWN",
+    "unknown_reason": "CONFLICTING_CLAIMS",
+    "period": null,
+    "input_claims": [],
+    "excluded_claims": [
+     {
+      "claim_id": "claim:10ff6612-1e1b-5668-982c-6bcb4b81960f",
+      "reason": "CONFLICT"
+     },
+     {
+      "claim_id": "claim:693c9a09-7bd0-591a-bd09-d79a34df8101",
+      "reason": "CONFLICT"
+     }
+    ],
+    "candidate": null
+   },
+   {
+    "chain_id": "sentinel",
+    "entity_id": "entity:0b5ed61e-0045-4039-8655-a9a62aac482a",
+    "name": "Sentinel",
+    "country": "Sambia",
+    "operator": "UNKNOWN",
+    "operator_relationship_ids": [],
+    "operator_review_status": [],
+    "value_kt": 189.0,
+    "status": "INFERENCE",
+    "unknown_reason": null,
+    "period": {
+     "period_type": "CALENDAR_YEAR",
+     "period_start": "2025-01-01",
+     "period_end": "2026-01-01"
+    },
+    "input_claims": [
+     {
+      "claim_id": "claim:16c63e24-7b9a-5cea-8284-a135c931d3c5",
+      "value": 189040,
+      "unit": "t",
+      "field": "production",
+      "fact_status": "FACT",
+      "evidence_status": "SOURCE_TEXT_REVIEWED",
+      "material_basis": "CONTAINED_METAL",
+      "material_form": "contained copper in concentrate",
+      "measurement_basis": "Contained copper, mine production before Kansanshi smelting",
+      "period_type": "CALENDAR_YEAR",
+      "period_start": "2025-01-01",
+      "period_end": "2026-01-01",
+      "reference_year": 2025,
+      "sources": [
+       {
+        "source_id": "fqm-ar-2025",
+        "publisher": "First Quantum Minerals Ltd.",
+        "source_url": "https://www.first-quantum.com/wp-content/uploads/2026/03/First-Quantum-2025-AR-Final-Web.pdf",
+        "source_quality": "COMPANY_PRIMARY",
+        "accessed_at": "2026-10-07"
+       }
+      ]
+     }
+    ],
+    "excluded_claims": [],
+    "candidate": null
+   },
+   {
+    "chain_id": "caserones",
+    "entity_id": "entity:2808f631-0415-4308-b91d-b65472ada18b",
+    "name": "Caserones",
+    "country": "Chile",
+    "operator": "UNKNOWN",
+    "operator_relationship_ids": [],
+    "operator_review_status": [],
+    "value_kt": 132.9,
+    "status": "INFERENCE",
+    "unknown_reason": null,
+    "period": {
+     "period_type": "CALENDAR_YEAR",
+     "period_start": "2025-01-01",
+     "period_end": "2026-01-01"
+    },
+    "input_claims": [
+     {
+      "claim_id": "claim:af179a7f-6164-5cd0-b309-9e6187350140",
+      "value": 132881,
+      "unit": "t",
+      "field": "production",
+      "fact_status": "FACT",
+      "evidence_status": "SOURCE_TEXT_REVIEWED",
+      "material_basis": "CONTAINED_METAL",
+      "material_form": "mixed copper concentrate and cathode",
+      "measurement_basis": "REPORTED_OPERATION_COPPER_OUTPUT_MIXED_FORMS",
+      "period_type": "CALENDAR_YEAR",
+      "period_start": "2025-01-01",
+      "period_end": "2026-01-01",
+      "reference_year": 2025,
+      "sources": [
+       {
+        "source_id": "v292-caserones-operations",
+        "publisher": "Lundin Mining",
+        "source_url": "https://www.lundinmining.com/our-portfolio/operations/caserones/",
+        "source_quality": "COMPANY_PRIMARY",
+        "accessed_at": "2026-10-07"
+       }
+      ]
+     }
+    ],
+    "excluded_claims": [],
+    "candidate": null
+   },
+   {
+    "chain_id": "los-pelambres",
+    "entity_id": "entity:29678dc4-3a0a-48eb-a86f-457c44e18a4c",
+    "name": "Los Pelambres",
+    "country": "Chile",
+    "operator": "UNKNOWN",
+    "operator_relationship_ids": [],
+    "operator_review_status": [],
+    "value_kt": 295.3,
+    "status": "INFERENCE",
+    "unknown_reason": null,
+    "period": {
+     "period_type": "CALENDAR_YEAR",
+     "period_start": "2025-01-01",
+     "period_end": "2026-01-01"
+    },
+    "input_claims": [
+     {
+      "claim_id": "claim:faea6d4b-0f33-56f9-b450-048c0bd00eec",
+      "value": 295300,
+      "unit": "t",
+      "field": "production",
+      "fact_status": "FACT",
+      "evidence_status": "SOURCE_TEXT_REVIEWED",
+      "material_basis": "CONTAINED_METAL",
+      "material_form": "contained copper in concentrate",
+      "measurement_basis": "100_PERCENT_OPERATION_REPORTED_CONTAINED_COPPER",
+      "period_type": "CALENDAR_YEAR",
+      "period_start": "2025-01-01",
+      "period_end": "2026-01-01",
+      "reference_year": 2025,
+      "sources": [
+       {
+        "source_id": "v292-los-pelambres-operations",
+        "publisher": "Antofagasta plc",
+        "source_url": "https://prod.antofagasta.co.uk/our-business/mining-division/los-pelambres/",
+        "source_quality": "COMPANY_PRIMARY",
+        "accessed_at": "2026-10-07"
+       }
+      ]
+     }
+    ],
+    "excluded_claims": [],
+    "candidate": null
+   },
+   {
+    "chain_id": "toquepala",
+    "entity_id": "entity:2228083c-6e86-4982-8b0a-facab341ddfd",
+    "name": "Toquepala",
+    "country": "Peru",
+    "operator": "UNKNOWN",
+    "operator_relationship_ids": [],
+    "operator_review_status": [],
+    "value_kt": 224.9,
+    "status": "INFERENCE",
+    "unknown_reason": null,
+    "period": {
+     "period_type": "CALENDAR_YEAR",
+     "period_start": "2025-01-01",
+     "period_end": "2026-01-01"
+    },
+    "input_claims": [
+     {
+      "claim_id": "claim:7e4df96a-7f58-5751-bda9-a06eaaffbdc5",
+      "value": 224.9,
+      "unit": "kt",
+      "field": "production",
+      "fact_status": "FACT",
+      "evidence_status": "SOURCE_TEXT_REVIEWED",
+      "material_basis": "CONTAINED_METAL",
+      "material_form": "contained copper in concentrate",
+      "measurement_basis": "CONTAINED_COPPER_OUTPUT",
+      "period_type": "CALENDAR_YEAR",
+      "period_start": "2025-01-01",
+      "period_end": "2026-01-01",
+      "reference_year": 2025,
+      "sources": [
+       {
+        "source_id": "v292-southern-10k-2025",
+        "publisher": "Southern Copper Corporation",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1001838/000110465926021492/scco-20251231x10k.htm",
+        "source_quality": "REGULATORY",
+        "accessed_at": "2026-10-07"
+       }
+      ]
+     }
+    ],
+    "excluded_claims": [],
+    "candidate": null
+   },
+   {
+    "chain_id": "cuajone",
+    "entity_id": "entity:49372a14-1735-49d5-900a-a37be1977c92",
+    "name": "Cuajone",
+    "country": "Peru",
+    "operator": "UNKNOWN",
+    "operator_relationship_ids": [],
+    "operator_review_status": [],
+    "value_kt": 162.8,
+    "status": "INFERENCE",
+    "unknown_reason": null,
+    "period": {
+     "period_type": "CALENDAR_YEAR",
+     "period_start": "2025-01-01",
+     "period_end": "2026-01-01"
+    },
+    "input_claims": [
+     {
+      "claim_id": "claim:5b5842b3-cbbb-5f35-8d16-b5d7d0aa9d1c",
+      "value": 162.8,
+      "unit": "kt",
+      "field": "production",
+      "fact_status": "FACT",
+      "evidence_status": "SOURCE_TEXT_REVIEWED",
+      "material_basis": "CONTAINED_METAL",
+      "material_form": "contained copper in concentrate",
+      "measurement_basis": "CONTAINED_COPPER_OUTPUT",
+      "period_type": "CALENDAR_YEAR",
+      "period_start": "2025-01-01",
+      "period_end": "2026-01-01",
+      "reference_year": 2025,
+      "sources": [
+       {
+        "source_id": "v292-southern-10k-2025",
+        "publisher": "Southern Copper Corporation",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/1001838/000110465926021492/scco-20251231x10k.htm",
+        "source_quality": "REGULATORY",
+        "accessed_at": "2026-10-07"
+       }
+      ]
+     }
+    ],
+    "excluded_claims": [],
+    "candidate": null
+   },
+   {
+    "chain_id": "chuquicamata",
+    "entity_id": "entity:09b8493a-6795-4db7-9b92-5c8f0885e468",
+    "name": "Chuquicamata division mine complex",
+    "country": "Chile",
+    "operator": "UNKNOWN",
+    "operator_relationship_ids": [],
+    "operator_review_status": [],
+    "value_kt": 265.8,
+    "status": "INFERENCE",
+    "unknown_reason": null,
+    "period": {
+     "period_type": "CALENDAR_YEAR",
+     "period_start": "2025-01-01",
+     "period_end": "2026-01-01"
+    },
+    "input_claims": [
+     {
+      "claim_id": "claim:15fc167b-bad3-5d54-a759-906a7d0095af",
+      "value": 265.8,
+      "unit": "kt",
+      "field": "production",
+      "fact_status": "FACT",
+      "evidence_status": "SOURCE_TEXT_REVIEWED",
+      "material_basis": "CONTAINED_METAL",
+      "material_form": null,
+      "measurement_basis": "DIVISION_REPORTED_FINE_COPPER_NO_PRODUCT_SPLIT",
+      "period_type": "CALENDAR_YEAR",
+      "period_start": "2025-01-01",
+      "period_end": "2026-01-01",
+      "reference_year": 2025,
+      "sources": [
+       {
+        "source_id": "v292-codelco-memory-2025",
+        "publisher": "Codelco",
+        "source_url": "https://codelco.com/prontus_codelco/site/docs/20260330/20260330133750/codelco_memoria2025.pdf",
+        "source_quality": "COMPANY_PRIMARY",
+        "accessed_at": "2026-10-07"
+       }
+      ]
+     }
+    ],
+    "excluded_claims": [],
+    "candidate": null
+   },
+   {
+    "chain_id": "radomiro-tomic",
+    "entity_id": "entity:871bd322-3b84-4b87-b4fc-ea08e13e03e9",
+    "name": "Radomiro Tomic",
+    "country": "Chile",
+    "operator": "UNKNOWN",
+    "operator_relationship_ids": [],
+    "operator_review_status": [],
+    "value_kt": 295.3,
+    "status": "INFERENCE",
+    "unknown_reason": null,
+    "period": {
+     "period_type": "CALENDAR_YEAR",
+     "period_start": "2025-01-01",
+     "period_end": "2026-01-01"
+    },
+    "input_claims": [
+     {
+      "claim_id": "claim:aa35e48e-c0aa-55ae-afb0-0bdd8442e6f4",
+      "value": 295.3,
+      "unit": "kt",
+      "field": "production",
+      "fact_status": "FACT",
+      "evidence_status": "SOURCE_TEXT_REVIEWED",
+      "material_basis": "CONTAINED_METAL",
+      "material_form": null,
+      "measurement_basis": "DIVISION_REPORTED_FINE_COPPER_NO_PRODUCT_SPLIT",
+      "period_type": "CALENDAR_YEAR",
+      "period_start": "2025-01-01",
+      "period_end": "2026-01-01",
+      "reference_year": 2025,
+      "sources": [
+       {
+        "source_id": "v292-codelco-memory-2025",
+        "publisher": "Codelco",
+        "source_url": "https://codelco.com/prontus_codelco/site/docs/20260330/20260330133750/codelco_memoria2025.pdf",
+        "source_quality": "COMPANY_PRIMARY",
+        "accessed_at": "2026-10-07"
+       }
+      ]
+     }
+    ],
+    "excluded_claims": [],
+    "candidate": null
+   },
+   {
+    "chain_id": "kennecott",
+    "entity_id": "entity:d82e3a29-a863-41ec-9cfe-8c4c08f28b99",
+    "name": "Kennecott / Bingham Canyon mine",
+    "country": "USA",
+    "operator": "UNKNOWN",
+    "operator_relationship_ids": [],
+    "operator_review_status": [],
+    "value_kt": null,
+    "status": "UNKNOWN",
+    "unknown_reason": "NO_CLAIM_FOR_YEAR",
+    "period": null,
+    "input_claims": [],
+    "excluded_claims": [],
+    "candidate": null
+   },
+   {
+    "chain_id": "grasberg",
+    "entity_id": "entity:8c7e1a13-0374-49ae-b038-721d7ea9f273",
+    "name": "Grasberg minerals district / PTFI integrated mine",
+    "country": "Indonesien",
+    "operator": "UNKNOWN",
+    "operator_relationship_ids": [],
+    "operator_review_status": [],
+    "value_kt": null,
+    "status": "UNKNOWN",
+    "unknown_reason": "NO_CLAIM_FOR_YEAR",
+    "period": null,
+    "input_claims": [],
+    "excluded_claims": [],
+    "candidate": {
+     "candidate_id": "cpr1:grasberg:2025",
+     "chain_id": "grasberg",
+     "reference_year": 2025,
+     "period_type": "CALENDAR_YEAR",
+     "period_start": "2025-01-01",
+     "period_end": "2026-01-01",
+     "value": 1.0,
+     "unit": "billion lb",
+     "value_kt": 453.6,
+     "material_basis": "CONTAINED_METAL",
+     "measurement_basis": "District production as reported by the operator; payable/recoverable basis not stated in the sentence; value rounded to 0.1 billion lb (about +/- 23 kt)",
+     "fact_status": "FACT",
+     "source_id": "cpr1-fcx-sustainability-2025",
+     "locator": "Page 74, section Grasberg Minerals District",
+     "quote_fragments": [
+      "GRASBERG MINERALS DISTRICT",
+      "production totaled 1.0 billion pounds of copper in 2025"
+     ],
+     "usage_restrictions": [
+      "ROUNDED_SOURCE_VALUE",
+      "MEASUREMENT_BASIS_NOT_STATED",
+      "CANDIDATE_NOT_IN_LEDGER"
+     ],
+     "source": {
+      "source_id": "cpr1-fcx-sustainability-2025",
+      "publisher": "Freeport-McMoRan",
+      "source_name": "2025 Annual Report on Sustainability",
+      "source_url": "https://www.fcx.com/sites/fcx/files/documents/sustainability/2025-annual-report-on-sustainability.pdf",
+      "source_published_at": "2026",
+      "accessed_at": "2026-10-27",
+      "source_quality": "COMPANY_PRIMARY",
+      "evidence_completeness": "PDF_HASH_AND_TEXT_PINNED"
+     }
+    }
+   },
+   {
+    "chain_id": "olympic-dam",
+    "entity_id": "entity:4adce303-f4b3-49e3-869d-845d7c491130",
+    "name": "Olympic Dam",
+    "country": "Australien",
+    "operator": "UNKNOWN",
+    "operator_relationship_ids": [],
+    "operator_review_status": [],
+    "value_kt": null,
+    "status": "UNKNOWN",
+    "unknown_reason": "NO_CLAIM_FOR_YEAR",
+    "period": null,
+    "input_claims": [],
+    "excluded_claims": [],
+    "candidate": null
+   },
+   {
+    "chain_id": "prominent-hill",
+    "entity_id": "entity:7e58e0fd-127c-48eb-a75c-936b392f97c0",
+    "name": "Prominent Hill",
+    "country": "Australien",
+    "operator": "UNKNOWN",
+    "operator_relationship_ids": [],
+    "operator_review_status": [],
+    "value_kt": null,
+    "status": "UNKNOWN",
+    "unknown_reason": "NO_CLAIM_FOR_YEAR",
+    "period": null,
+    "input_claims": [],
+    "excluded_claims": [],
+    "candidate": null
+   },
+   {
+    "chain_id": "carrapateena",
+    "entity_id": "entity:ddcce77f-7411-45b4-929a-6d3feb603b2f",
+    "name": "Carrapateena",
+    "country": "Australien",
+    "operator": "UNKNOWN",
+    "operator_relationship_ids": [],
+    "operator_review_status": [],
+    "value_kt": null,
+    "status": "UNKNOWN",
+    "unknown_reason": "NO_CLAIM_FOR_YEAR",
+    "period": null,
+    "input_claims": [],
+    "excluded_claims": [],
+    "candidate": null
+   },
+   {
+    "chain_id": "oyu-tolgoi",
+    "entity_id": "entity:da4524de-ac8e-4ffe-b69d-e5a9bcdf4399",
+    "name": "Oyu Tolgoi",
+    "country": "Mongolei",
+    "operator": "UNKNOWN",
+    "operator_relationship_ids": [],
+    "operator_review_status": [],
+    "value_kt": null,
+    "status": "UNKNOWN",
+    "unknown_reason": "NO_CLAIM_FOR_YEAR",
+    "period": null,
+    "input_claims": [],
+    "excluded_claims": [],
+    "candidate": null
+   }
+  ],
+  "by_country": {
+   "groups": [
+    {
+     "group": "Chile",
+     "value_kt": 2561.8,
+     "share_pct": 77.2,
+     "members": [
+      "Caserones",
+      "Chuquicamata division mine complex",
+      "Escondida",
+      "Los Pelambres",
+      "Radomiro Tomic",
+      "Spence"
+     ]
+    },
+    {
+     "group": "Peru",
+     "value_kt": 387.7,
+     "share_pct": 11.7,
+     "members": [
+      "Cuajone",
+      "Toquepala"
+     ]
+    },
+    {
+     "group": "Sambia",
+     "value_kt": 370.2,
+     "share_pct": 11.2,
+     "members": [
+      "Kansanshi",
+      "Sentinel"
+     ]
+    }
+   ],
+   "known_total_kt": 3319.7,
+   "unknown_members": [
+    "Antamina",
+    "Carrapateena",
+    "Grasberg minerals district / PTFI integrated mine",
+    "Kamoa-Kakula",
+    "Kennecott / Bingham Canyon mine",
+    "Olympic Dam",
+    "Oyu Tolgoi",
+    "Prominent Hill"
+   ],
+   "hhi_known": 6216,
+   "top1_share_pct": 77.2,
+   "top3_share_pct": 100.0
+  },
+  "by_operator": {
+   "groups": [
+    {
+     "group": "BHP — berichtete Unternehmensgruppe",
+     "value_kt": 1572.5,
+     "share_pct": 47.4,
+     "members": [
+      "Escondida",
+      "Spence"
+     ]
+    },
+    {
+     "group": "UNKNOWN",
+     "value_kt": 1566.0,
+     "share_pct": 47.2,
+     "members": [
+      "Caserones",
+      "Chuquicamata division mine complex",
+      "Cuajone",
+      "Los Pelambres",
+      "Radomiro Tomic",
+      "Sentinel",
+      "Toquepala"
+     ]
+    },
+    {
+     "group": "Kansanshi Mining PLC",
+     "value_kt": 181.2,
+     "share_pct": 5.5,
+     "members": [
+      "Kansanshi"
+     ]
+    }
+   ],
+   "known_total_kt": 3319.7,
+   "unknown_members": [
+    "Antamina",
+    "Carrapateena",
+    "Grasberg minerals district / PTFI integrated mine",
+    "Kamoa-Kakula",
+    "Kennecott / Bingham Canyon mine",
+    "Olympic Dam",
+    "Oyu Tolgoi",
+    "Prominent Hill"
+   ],
+   "hhi_known": 4499,
+   "top1_share_pct": 47.4,
+   "top3_share_pct": 100.0
+  }
+ },
+ "supply_history": [
+  {
+   "chain_id": "escondida",
+   "name": "Escondida",
+   "points": [
+    {
+     "year": 2021,
+     "value_kt": 1068.2,
+     "unknown_reason": null,
+     "period_type": "FISCAL_YEAR",
+     "input_claim_ids": [
+      "claim:53de91e4-56e8-4f35-ac0f-d7906508274b",
+      "claim:96cfdec4-e2bb-4f57-8a6c-05ee00c6e8cf"
+     ]
+    },
+    {
+     "year": 2022,
+     "value_kt": 1004.0,
+     "unknown_reason": null,
+     "period_type": "FISCAL_YEAR",
+     "input_claim_ids": [
+      "claim:2a379798-e3f8-4ba0-a28d-e278a46aa02f",
+      "claim:7079bf92-4e80-4011-83ed-7d62aa53dd94"
+     ]
+    },
+    {
+     "year": 2023,
+     "value_kt": 1055.3,
+     "unknown_reason": null,
+     "period_type": "FISCAL_YEAR",
+     "input_claim_ids": [
+      "claim:7aab861e-1228-40db-8699-35aa88651d1a",
+      "claim:8dd2c8a2-92a1-4933-bdb6-3f5702bec1d9"
+     ]
+    },
+    {
+     "year": 2024,
+     "value_kt": 1125.3,
+     "unknown_reason": null,
+     "period_type": "FISCAL_YEAR",
+     "input_claim_ids": [
+      "claim:0b281fbc-edd3-42ad-946c-1be2247bf5a3",
+      "claim:5939463f-1511-4b5f-b736-986b35366fd1"
+     ]
+    },
+    {
+     "year": 2025,
+     "value_kt": 1304.9,
+     "unknown_reason": null,
+     "period_type": "FISCAL_YEAR",
+     "input_claim_ids": [
+      "claim:2852724e-0cf4-4c4a-a398-c7653fb29b04",
+      "claim:c16b940c-9e1f-4fe1-be8d-a85efa9d7201"
+     ]
+    },
+    {
+     "year": 2026,
+     "value_kt": 1261.2,
+     "unknown_reason": null,
+     "period_type": "FISCAL_YEAR",
+     "input_claim_ids": [
+      "claim:01a688e8-8f74-44b9-9344-16576d1f65fa",
+      "claim:0d4e51b0-a848-4bf5-9dcb-8bafe251aed3"
+     ]
+    }
+   ]
+  },
+  {
+   "chain_id": "spence",
+   "name": "Spence",
+   "points": [
+    {
+     "year": 2021,
+     "value_kt": 158.0,
+     "unknown_reason": null,
+     "period_type": "FISCAL_YEAR",
+     "input_claim_ids": [
+      "claim:bc071565-884b-5eb5-a197-d5fcc3a26605",
+      "claim:f9484a4a-9137-5a9b-b636-e5742ccc3763"
+     ]
+    },
+    {
+     "year": 2022,
+     "value_kt": 226.2,
+     "unknown_reason": null,
+     "period_type": "FISCAL_YEAR",
+     "input_claim_ids": [
+      "claim:8203815f-bba3-5feb-b7a7-b53e5faec46d",
+      "claim:ac921058-dcf6-5a7d-8dc0-1492041cc79e"
+     ]
+    },
+    {
+     "year": 2023,
+     "value_kt": 239.6,
+     "unknown_reason": null,
+     "period_type": "FISCAL_YEAR",
+     "input_claim_ids": [
+      "claim:55120c95-df78-5c2e-99ac-c1081f56c00f",
+      "claim:e802068c-187e-5c83-80a7-ff4f8450f290"
+     ]
+    },
+    {
+     "year": 2024,
+     "value_kt": 254.5,
+     "unknown_reason": null,
+     "period_type": "FISCAL_YEAR",
+     "input_claim_ids": [
+      "claim:0750e6cb-4836-5d60-9e50-de7fc5d700d4",
+      "claim:ce26992b-bdb4-50f3-a8bd-05a642de94a5"
+     ]
+    },
+    {
+     "year": 2025,
+     "value_kt": 267.6,
+     "unknown_reason": null,
+     "period_type": "FISCAL_YEAR",
+     "input_claim_ids": [
+      "claim:0b711d27-f6a4-5053-9a94-68207ce10c19",
+      "claim:eaaba239-fefa-5727-abc1-d0a3b0feb109"
+     ]
+    },
+    {
+     "year": 2026,
+     "value_kt": 212.6,
+     "unknown_reason": null,
+     "period_type": "FISCAL_YEAR",
+     "input_claim_ids": [
+      "claim:ad1408fc-ec3c-56c9-9208-c96149edbd8f",
+      "claim:be27c044-19c1-5278-a80a-dddfdb1bcf7a"
+     ]
+    }
+   ]
+  },
+  {
+   "chain_id": "kansanshi",
+   "name": "Kansanshi",
+   "points": [
+    {
+     "year": 2021,
+     "value_kt": 202.2,
+     "unknown_reason": null,
+     "period_type": "CALENDAR_YEAR",
+     "input_claim_ids": [
+      "claim:262d1d7f-916e-546e-93df-dfe724e809f2"
+     ]
+    },
+    {
+     "year": 2022,
+     "value_kt": 146.3,
+     "unknown_reason": null,
+     "period_type": "CALENDAR_YEAR",
+     "input_claim_ids": [
+      "claim:64a387d2-18ad-5058-ad6f-eae2c2863476"
+     ]
+    },
+    {
+     "year": 2023,
+     "value_kt": 134.8,
+     "unknown_reason": null,
+     "period_type": "CALENDAR_YEAR",
+     "input_claim_ids": [
+      "claim:d63b37b2-2ddf-597d-a3bd-859462521430"
+     ]
+    },
+    {
+     "year": 2024,
+     "value_kt": 170.9,
+     "unknown_reason": null,
+     "period_type": "CALENDAR_YEAR",
+     "input_claim_ids": [
+      "claim:f2013c77-c4fc-5f5a-93fa-33b9973654c5"
+     ]
+    },
+    {
+     "year": 2025,
+     "value_kt": 181.2,
+     "unknown_reason": null,
+     "period_type": "CALENDAR_YEAR",
+     "input_claim_ids": [
+      "claim:1afe4f46-0af3-5844-93a7-cf8b7ce6658a"
+     ]
+    }
+   ]
+  },
+  {
+   "chain_id": "kamoa",
+   "name": "Kamoa-Kakula",
+   "points": [
+    {
+     "year": 2021,
+     "value_kt": 105.9,
+     "unknown_reason": null,
+     "period_type": "CALENDAR_YEAR",
+     "input_claim_ids": [
+      "claim:420e47b5-8799-5197-a871-567973122887"
+     ]
+    },
+    {
+     "year": 2022,
+     "value_kt": 333.5,
+     "unknown_reason": null,
+     "period_type": "CALENDAR_YEAR",
+     "input_claim_ids": [
+      "claim:56b64bb6-fa61-5710-a3e6-555655b0fa70"
+     ]
+    },
+    {
+     "year": 2023,
+     "value_kt": 393.6,
+     "unknown_reason": null,
+     "period_type": "CALENDAR_YEAR",
+     "input_claim_ids": [
+      "claim:afdcc142-5f5f-5e5f-b9cb-733f86da46cb"
+     ]
+    },
+    {
+     "year": 2024,
+     "value_kt": null,
+     "unknown_reason": "CONFLICTING_CLAIMS",
+     "period_type": null,
+     "input_claim_ids": []
+    },
+    {
+     "year": 2025,
+     "value_kt": null,
+     "unknown_reason": "CONFLICTING_CLAIMS",
+     "period_type": null,
+     "input_claim_ids": []
+    }
+   ]
+  },
+  {
+   "chain_id": "sentinel",
+   "name": "Sentinel",
+   "points": [
+    {
+     "year": 2021,
+     "value_kt": 232.7,
+     "unknown_reason": null,
+     "period_type": "CALENDAR_YEAR",
+     "input_claim_ids": [
+      "claim:f9ecc4d4-ed71-5cfb-bea2-2e886029b386"
+     ]
+    },
+    {
+     "year": 2022,
+     "value_kt": 242.5,
+     "unknown_reason": null,
+     "period_type": "CALENDAR_YEAR",
+     "input_claim_ids": [
+      "claim:97f7d609-20b4-58e6-af1c-09f62ed002ef"
+     ]
+    },
+    {
+     "year": 2023,
+     "value_kt": 214.0,
+     "unknown_reason": null,
+     "period_type": "CALENDAR_YEAR",
+     "input_claim_ids": [
+      "claim:d6f9dbca-4cdf-56eb-951d-d7b1145e4e39"
+     ]
+    },
+    {
+     "year": 2024,
+     "value_kt": 230.8,
+     "unknown_reason": null,
+     "period_type": "CALENDAR_YEAR",
+     "input_claim_ids": [
+      "claim:31a67095-003d-5e84-a384-81044d635242"
+     ]
+    },
+    {
+     "year": 2025,
+     "value_kt": 189.0,
+     "unknown_reason": null,
+     "period_type": "CALENDAR_YEAR",
+     "input_claim_ids": [
+      "claim:16c63e24-7b9a-5cea-8284-a135c931d3c5"
+     ]
+    }
+   ]
+  }
+ ],
+ "stages": [
+  {
+   "stage": "MINE",
+   "label": "Mine",
+   "facilities": 18,
+   "countries": 8,
+   "chains_covered": 18,
+   "chains_without_stage": 0,
+   "country_share_by_chains": [
+    {
+     "country": "Chile",
+     "chains": 6,
+     "share_pct": 33.3
+    },
+    {
+     "country": "Australien",
+     "chains": 3,
+     "share_pct": 16.7
+    },
+    {
+     "country": "Peru",
+     "chains": 3,
+     "share_pct": 16.7
+    },
+    {
+     "country": "Sambia",
+     "chains": 2,
+     "share_pct": 11.1
+    },
+    {
+     "country": "DR Kongo",
+     "chains": 1,
+     "share_pct": 5.6
+    },
+    {
+     "country": "Indonesien",
+     "chains": 1,
+     "share_pct": 5.6
+    },
+    {
+     "country": "Mongolei",
+     "chains": 1,
+     "share_pct": 5.6
+    },
+    {
+     "country": "USA",
+     "chains": 1,
+     "share_pct": 5.6
+    }
+   ],
+   "hhi_country_by_facility_count": 1914,
+   "hhi_level": "MITTEL",
+   "max_chains_one_facility": 1,
+   "review_status_counts": {},
+   "relationship_ids": [],
+   "capacity_by_country": [],
+   "rows": [
+    {
+     "entity_id": "entity:ffbab916-f696-4b76-9d2e-ad4c843ff434",
+     "name": "Antamina",
+     "country": "Peru",
+     "chains": [
+      "antamina"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:ddcce77f-7411-45b4-929a-6d3feb603b2f",
+     "name": "Carrapateena",
+     "country": "Australien",
+     "chains": [
+      "carrapateena"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:2808f631-0415-4308-b91d-b65472ada18b",
+     "name": "Caserones",
+     "country": "Chile",
+     "chains": [
+      "caserones"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:09b8493a-6795-4db7-9b92-5c8f0885e468",
+     "name": "Chuquicamata division mine complex",
+     "country": "Chile",
+     "chains": [
+      "chuquicamata"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:49372a14-1735-49d5-900a-a37be1977c92",
+     "name": "Cuajone",
+     "country": "Peru",
+     "chains": [
+      "cuajone"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:25855cbf-e719-4bd1-8c15-6be2bffc267b",
+     "name": "Escondida",
+     "country": "Chile",
+     "chains": [
+      "escondida"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:8c7e1a13-0374-49ae-b038-721d7ea9f273",
+     "name": "Grasberg minerals district / PTFI integrated mine",
+     "country": "Indonesien",
+     "chains": [
+      "grasberg"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:4e1ccbb5-a6dd-4fce-9970-bba2d6c8f5e7",
+     "name": "Kamoa-Kakula",
+     "country": "DR Kongo",
+     "chains": [
+      "kamoa"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:2c1aa724-2bc5-4753-9f32-e7b4a8713fa5",
+     "name": "Kansanshi",
+     "country": "Sambia",
+     "chains": [
+      "kansanshi"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:d82e3a29-a863-41ec-9cfe-8c4c08f28b99",
+     "name": "Kennecott / Bingham Canyon mine",
+     "country": "USA",
+     "chains": [
+      "kennecott"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:29678dc4-3a0a-48eb-a86f-457c44e18a4c",
+     "name": "Los Pelambres",
+     "country": "Chile",
+     "chains": [
+      "los-pelambres"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:4adce303-f4b3-49e3-869d-845d7c491130",
+     "name": "Olympic Dam",
+     "country": "Australien",
+     "chains": [
+      "olympic-dam"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:da4524de-ac8e-4ffe-b69d-e5a9bcdf4399",
+     "name": "Oyu Tolgoi",
+     "country": "Mongolei",
+     "chains": [
+      "oyu-tolgoi"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:7e58e0fd-127c-48eb-a75c-936b392f97c0",
+     "name": "Prominent Hill",
+     "country": "Australien",
+     "chains": [
+      "prominent-hill"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:871bd322-3b84-4b87-b4fc-ea08e13e03e9",
+     "name": "Radomiro Tomic",
+     "country": "Chile",
+     "chains": [
+      "radomiro-tomic"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:0b5ed61e-0045-4039-8655-a9a62aac482a",
+     "name": "Sentinel",
+     "country": "Sambia",
+     "chains": [
+      "sentinel"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:72c038ce-652a-41ad-822b-8dcf9daf7299",
+     "name": "Spence",
+     "country": "Chile",
+     "chains": [
+      "spence"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:2228083c-6e86-4982-8b0a-facab341ddfd",
+     "name": "Toquepala",
+     "country": "Peru",
+     "chains": [
+      "toquepala"
+     ],
+     "capacity": null
+    }
+   ]
+  },
+  {
+   "stage": "CONCENTRATOR",
+   "label": "Konzentrator",
+   "facilities": 18,
+   "countries": 8,
+   "chains_covered": 18,
+   "chains_without_stage": 0,
+   "country_share_by_chains": [
+    {
+     "country": "Chile",
+     "chains": 6,
+     "share_pct": 33.3
+    },
+    {
+     "country": "Australien",
+     "chains": 3,
+     "share_pct": 16.7
+    },
+    {
+     "country": "Peru",
+     "chains": 3,
+     "share_pct": 16.7
+    },
+    {
+     "country": "Sambia",
+     "chains": 2,
+     "share_pct": 11.1
+    },
+    {
+     "country": "DR Kongo",
+     "chains": 1,
+     "share_pct": 5.6
+    },
+    {
+     "country": "Indonesien",
+     "chains": 1,
+     "share_pct": 5.6
+    },
+    {
+     "country": "Mongolei",
+     "chains": 1,
+     "share_pct": 5.6
+    },
+    {
+     "country": "USA",
+     "chains": 1,
+     "share_pct": 5.6
+    }
+   ],
+   "hhi_country_by_facility_count": 1667,
+   "hhi_level": "MITTEL",
+   "max_chains_one_facility": 4,
+   "review_status_counts": {
+    "APPROVED": 19,
+    "REVIEW_READY": 16,
+    "VERIFIED": 1
+   },
+   "relationship_ids": [
+    "relationship:08011524-cfb0-5654-ac6b-93a17e469dfd",
+    "relationship:092ec29d-df8c-59f3-8ecd-e3744ddaa102",
+    "relationship:0ccc88ef-9f8a-559d-bcb9-f19672c87449",
+    "relationship:27584d81-dccc-5532-a4cb-346765fcbf5d",
+    "relationship:2b86bc3a-4bde-5f1c-b8ed-24e55f30e126",
+    "relationship:2ca2f4d6-8b64-5f6e-873e-fa9417e1a79c",
+    "relationship:32ab761a-478d-59d6-8594-56213e9caa26",
+    "relationship:41d20eaf-02a1-577d-a82c-c64272abea8d",
+    "relationship:45fd3522-a316-56f9-80ce-8c9bf281b85e",
+    "relationship:46a4307c-ef4f-5335-b365-ada22f7f5242",
+    "relationship:477f561c-2ebf-529d-a842-c73d904a258b",
+    "relationship:568b79c6-ad6b-51ce-b2be-7d94c3b82a55",
+    "relationship:57af3e2b-1e31-5dc5-b331-23251d10aefe",
+    "relationship:5b153ae0-9729-58ca-8535-baacf965a699",
+    "relationship:5f0a9b56-add1-5242-bc70-5016ecd960fd",
+    "relationship:61b92b5f-8d3b-5120-bd36-76f5239f0390",
+    "relationship:6c03049f-cf12-59df-ba00-0bb6fc35a4f3",
+    "relationship:8c27c716-c58a-5f4f-97ef-02978f9a6b03",
+    "relationship:8c6319f5-b4c1-5353-bbbe-73c2ab9e31f8",
+    "relationship:8eaa4876-19e5-54af-a8ff-2fdf3dbcb71a",
+    "relationship:93f868dd-1843-5947-a564-9ae300d81e0b",
+    "relationship:9c4c7852-32c4-50ff-9e62-9227e594efff",
+    "relationship:a2dd1104-bfa0-5d54-b6ab-f419db0b006f",
+    "relationship:a5077348-c20a-5e41-aef9-7ee3a26bb98d",
+    "relationship:a701bb09-85a1-544d-8fd7-8aa96e644ba6",
+    "relationship:bb029810-8191-5bd2-abc7-0ee6e90dea24",
+    "relationship:bbc24e88-8fa7-51ae-a648-2e183f0d9fd3",
+    "relationship:c2f0cb20-3264-5fbb-ac5e-a43b8b4f1a66",
+    "relationship:ca2d063e-797f-5b1b-acce-ba4443f6254f",
+    "relationship:cc0bdbcd-b383-522c-a775-d71f0ef962ab",
+    "relationship:dda1bf0a-981e-53de-be98-0bc2d6d5cf35",
+    "relationship:de82a518-aedd-507a-98cb-d9a772d89e48",
+    "relationship:e7aff5d6-3332-57cc-8fa1-908992c8f783",
+    "relationship:f5b3ae7e-49ba-5e09-b94a-37930bd36136",
+    "relationship:fe26164a-441c-53b7-b882-9c3bca07d7e4",
+    "relationship:ff2c3e0b-208f-54e4-b27e-61fcb419a7b0"
+   ],
+   "capacity_by_country": [],
+   "rows": [
+    {
+     "entity_id": "entity:29358931-1796-4669-a3cf-7021d774ff5a",
+     "name": "Escondida — Gruppe von 3 Konzentratoren",
+     "country": "Chile",
+     "chains": [
+      "caserones",
+      "escondida",
+      "los-pelambres",
+      "spence"
+     ],
+     "capacity": {
+      "status": "FACT",
+      "value": 422,
+      "unit": "kt/day",
+      "value_kt_per_year": null,
+      "material_basis": "ORE",
+      "material_form": "milled ore",
+      "reference_year": null,
+      "period_type": "POINT_IN_TIME",
+      "claim": {
+       "claim_id": "claim:0be03a94-6f5b-593d-a021-6158d80872b1",
+       "value": 422,
+       "unit": "kt/day",
+       "field": "capacity",
+       "fact_status": "FACT",
+       "evidence_status": "SOURCE_TEXT_REVIEWED",
+       "material_basis": "ORE",
+       "material_form": "milled ore",
+       "measurement_basis": "nominal milling capacity",
+       "period_type": "POINT_IN_TIME",
+       "period_start": null,
+       "period_end": null,
+       "reference_year": null,
+       "sources": [
+        {
+         "source_id": "bhp-annual-report-2026-escondida",
+         "publisher": "BHP",
+         "source_url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2026/260818_bhpannualreport2026.pdf",
+         "source_quality": "COMPANY_PRIMARY",
+         "accessed_at": "2026-10-07"
+        }
+       ]
+      },
+      "superseded_or_duplicate_claim_ids": []
+     }
+    },
+    {
+     "entity_id": "entity:a289de24-f860-4dac-ac84-9a7be272e90b",
+     "name": "Carrapateena flotation processing plant",
+     "country": "Australien",
+     "chains": [
+      "carrapateena",
+      "olympic-dam",
+      "prominent-hill"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:d63d9034-bb85-4f5c-b6eb-1fb2e2cce8d8",
+     "name": "Caserones grinding-flotation plant",
+     "country": "Chile",
+     "chains": [
+      "caserones",
+      "escondida",
+      "los-pelambres"
+     ],
+     "capacity": {
+      "status": "FACT",
+      "value": 105000,
+      "unit": "t/day",
+      "value_kt_per_year": null,
+      "material_basis": "ORE",
+      "material_form": "copper ore",
+      "reference_year": null,
+      "period_type": "UNKNOWN",
+      "claim": {
+       "claim_id": "claim:3b64da58-becf-552e-94c6-9af683e37b56",
+       "value": 105000,
+       "unit": "t/day",
+       "field": "capacity",
+       "fact_status": "FACT",
+       "evidence_status": "SOURCE_TEXT_REVIEWED",
+       "material_basis": "ORE",
+       "material_form": "copper ore",
+       "measurement_basis": "NAMEPLATE_OR_DESIGN_CAPACITY",
+       "period_type": "UNKNOWN",
+       "period_start": null,
+       "period_end": null,
+       "reference_year": null,
+       "sources": [
+        {
+         "source_id": "v292-caserones-operations",
+         "publisher": "Lundin Mining",
+         "source_url": "https://www.lundinmining.com/our-portfolio/operations/caserones/",
+         "source_quality": "COMPANY_PRIMARY",
+         "accessed_at": "2026-10-07"
+        }
+       ]
+      },
+      "superseded_or_duplicate_claim_ids": []
+     }
+    },
+    {
+     "entity_id": "entity:8decef74-90b3-4771-8873-16e2e33a2673",
+     "name": "Los Pelambres concentrator",
+     "country": "Chile",
+     "chains": [
+      "caserones",
+      "escondida",
+      "los-pelambres"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:5638b82b-6984-4172-a2a6-e4b178640eb5",
+     "name": "Olympic Dam grinding and concentrating circuits",
+     "country": "Australien",
+     "chains": [
+      "carrapateena",
+      "olympic-dam",
+      "prominent-hill"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:6e219b74-5c06-4288-945a-492e0ee8d75d",
+     "name": "Prominent Hill flotation processing plant",
+     "country": "Australien",
+     "chains": [
+      "carrapateena",
+      "olympic-dam",
+      "prominent-hill"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:e373223f-a6e3-4a3d-8cf6-22d8b7211e09",
+     "name": "Chuquicamata concentrator",
+     "country": "Chile",
+     "chains": [
+      "chuquicamata",
+      "radomiro-tomic"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:9fe877de-c9dc-4f01-bc88-af31e7c6c76c",
+     "name": "Cuajone concentrator",
+     "country": "Peru",
+     "chains": [
+      "cuajone",
+      "toquepala"
+     ],
+     "capacity": {
+      "status": "FACT",
+      "value": 90000,
+      "unit": "t/day",
+      "value_kt_per_year": null,
+      "material_basis": "ORE",
+      "material_form": "copper ore",
+      "reference_year": null,
+      "period_type": "UNKNOWN",
+      "claim": {
+       "claim_id": "claim:c64f8025-d0fb-5c0c-9100-eb35155dbf8f",
+       "value": 90000,
+       "unit": "t/day",
+       "field": "capacity",
+       "fact_status": "FACT",
+       "evidence_status": "SOURCE_TEXT_REVIEWED",
+       "material_basis": "ORE",
+       "material_form": "copper ore",
+       "measurement_basis": "NAMEPLATE_OR_DESIGN_CAPACITY",
+       "period_type": "UNKNOWN",
+       "period_start": null,
+       "period_end": null,
+       "reference_year": null,
+       "sources": [
+        {
+         "source_id": "v292-southern-10k-2025",
+         "publisher": "Southern Copper Corporation",
+         "source_url": "https://www.sec.gov/Archives/edgar/data/1001838/000110465926021492/scco-20251231x10k.htm",
+         "source_quality": "REGULATORY",
+         "accessed_at": "2026-10-07"
+        }
+       ]
+      },
+      "superseded_or_duplicate_claim_ids": []
+     }
+    },
+    {
+     "entity_id": "entity:034b594b-9c7c-4e2c-8748-c2766261db68",
+     "name": "Kansanshi S3 sulphide concentrator",
+     "country": "Sambia",
+     "chains": [
+      "kansanshi",
+      "sentinel"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:e5a8e313-f073-4d40-8d14-15fb988c4d11",
+     "name": "Kansanshi main processing / flotation plant",
+     "country": "Sambia",
+     "chains": [
+      "kansanshi",
+      "sentinel"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:c124eb9f-2596-454d-8da1-ffd5031d7847",
+     "name": "Spence — berichteter Kupferkonzentrator",
+     "country": "Chile",
+     "chains": [
+      "escondida",
+      "spence"
+     ],
+     "capacity": {
+      "status": "FACT",
+      "value": 95,
+      "unit": "kt/day",
+      "value_kt_per_year": null,
+      "material_basis": "ORE",
+      "material_form": null,
+      "reference_year": null,
+      "period_type": "UNKNOWN",
+      "claim": {
+       "claim_id": "claim:ba1bde9e-1f96-5b7b-80d7-9fda0ae762bf",
+       "value": 95,
+       "unit": "kt/day",
+       "field": "capacity",
+       "fact_status": "FACT",
+       "evidence_status": "SOURCE_TEXT_REVIEWED",
+       "material_basis": "ORE",
+       "material_form": null,
+       "measurement_basis": "nominal concentrator capacity",
+       "period_type": "UNKNOWN",
+       "period_start": null,
+       "period_end": null,
+       "reference_year": null,
+       "sources": [
+        {
+         "source_id": "bhp-annual-report-2026-escondida",
+         "publisher": "BHP",
+         "source_url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2026/260818_bhpannualreport2026.pdf",
+         "source_quality": "COMPANY_PRIMARY",
+         "accessed_at": "2026-10-07"
+        }
+       ]
+      },
+      "superseded_or_duplicate_claim_ids": []
+     }
+    },
+    {
+     "entity_id": "entity:5c08f06d-0a8b-417a-a73d-b13d7d6f3b03",
+     "name": "Toquepala concentrators I and II — reported group",
+     "country": "Peru",
+     "chains": [
+      "cuajone",
+      "toquepala"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:53a9c725-f3db-44a6-a3ba-b51469563584",
+     "name": "Antamina — berichteter Konzentrator",
+     "country": "Peru",
+     "chains": [
+      "antamina"
+     ],
+     "capacity": {
+      "status": "FACT",
+      "value": 145,
+      "unit": "kt/day",
+      "value_kt_per_year": null,
+      "material_basis": "ORE",
+      "material_form": null,
+      "reference_year": null,
+      "period_type": "UNKNOWN",
+      "claim": {
+       "claim_id": "claim:888b7e55-fa64-51f1-b841-0493c60ce35b",
+       "value": 145,
+       "unit": "kt/day",
+       "field": "capacity",
+       "fact_status": "FACT",
+       "evidence_status": "SOURCE_TEXT_REVIEWED",
+       "material_basis": "ORE",
+       "material_form": null,
+       "measurement_basis": "nominal milling capacity",
+       "period_type": "UNKNOWN",
+       "period_start": null,
+       "period_end": null,
+       "reference_year": null,
+       "sources": [
+        {
+         "source_id": "bhp-annual-report-2026-escondida",
+         "publisher": "BHP",
+         "source_url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2026/260818_bhpannualreport2026.pdf",
+         "source_quality": "COMPANY_PRIMARY",
+         "accessed_at": "2026-10-07"
+        }
+       ]
+      },
+      "superseded_or_duplicate_claim_ids": []
+     }
+    },
+    {
+     "entity_id": "entity:22a4669e-7fbf-4c8c-9e76-a025098116f8",
+     "name": "Kamoa-Kakula Phase 1 and 2 concentrators",
+     "country": "DR Kongo",
+     "chains": [
+      "kamoa"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:c060c564-1a65-4d08-ac82-c97e0fbc5158",
+     "name": "Kamoa-Kakula Phase 3 concentrator",
+     "country": "DR Kongo",
+     "chains": [
+      "kamoa"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:2cfcda67-0403-4b36-9ba7-e335873a7e5b",
+     "name": "Kennecott concentrator",
+     "country": "USA",
+     "chains": [
+      "kennecott"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:0098bc52-bd0d-4ff6-b927-1fa3edc4b7c1",
+     "name": "Oyu Tolgoi copper concentrator",
+     "country": "Mongolei",
+     "chains": [
+      "oyu-tolgoi"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:0b5f28e9-b04a-4561-a895-776a52fdd439",
+     "name": "PTFI Grasberg ore mill / flotation processing",
+     "country": "Indonesien",
+     "chains": [
+      "grasberg"
+     ],
+     "capacity": null
+    }
+   ]
+  },
+  {
+   "stage": "LEACH_SXEW",
+   "label": "Laugung / SX-EW",
+   "facilities": 7,
+   "countries": 3,
+   "chains_covered": 10,
+   "chains_without_stage": 8,
+   "country_share_by_chains": [
+    {
+     "country": "Chile",
+     "chains": 6,
+     "share_pct": 60.0
+    },
+    {
+     "country": "Peru",
+     "chains": 2,
+     "share_pct": 20.0
+    },
+    {
+     "country": "Sambia",
+     "chains": 2,
+     "share_pct": 20.0
+    }
+   ],
+   "hhi_country_by_facility_count": 4286,
+   "hhi_level": "HOCH",
+   "max_chains_one_facility": 4,
+   "review_status_counts": {
+    "APPROVED": 2,
+    "REVIEW_READY": 6,
+    "VERIFIED": 1
+   },
+   "relationship_ids": [
+    "relationship:0cb0f045-e68d-54e1-93f8-23a386432674",
+    "relationship:1a7080d2-40e0-57ff-b9ef-72364ea6adfb",
+    "relationship:4617f9f9-6410-5930-9d57-ab234850b17b",
+    "relationship:a6218a8a-9292-5669-a032-19ab59ea1e65",
+    "relationship:abdf4be6-11bd-5e39-93f9-868a9f0d529d",
+    "relationship:adabe5ca-17d3-5453-811b-2cd2638a8f39",
+    "relationship:b0e6ee97-a799-51b3-af44-c717f8acd661",
+    "relationship:d3364557-ce91-5092-8fae-77ba630b7101",
+    "relationship:ff2c3e0b-208f-54e4-b27e-61fcb419a7b0"
+   ],
+   "capacity_by_country": [
+    {
+     "material_basis": "CONCENTRATE",
+     "known_total_kt_per_year": 100.0,
+     "facilities_with_capacity": 1,
+     "facilities_without_capacity": 3,
+     "groups": [
+      {
+       "country": "Sambia",
+       "kt_per_year": 100.0,
+       "share_pct": 100.0
+      }
+     ]
+    },
+    {
+     "material_basis": "REFINED_METAL",
+     "known_total_kt_per_year": 584.5,
+     "facilities_with_capacity": 3,
+     "facilities_without_capacity": 3,
+     "groups": [
+      {
+       "country": "Chile",
+       "kt_per_year": 584.5,
+       "share_pct": 100.0
+      }
+     ]
+    }
+   ],
+   "rows": [
+    {
+     "entity_id": "entity:182a2742-e3e0-45a4-b664-58f40a1c155b",
+     "name": "Escondida — Gruppe von 2 SX/EW-Anlagen",
+     "country": "Chile",
+     "chains": [
+      "caserones",
+      "escondida",
+      "los-pelambres",
+      "spence"
+     ],
+     "capacity": {
+      "status": "FACT",
+      "value": 350,
+      "unit": "kt/year",
+      "value_kt_per_year": 350.0,
+      "material_basis": "REFINED_METAL",
+      "material_form": "copper cathode",
+      "reference_year": null,
+      "period_type": "POINT_IN_TIME",
+      "claim": {
+       "claim_id": "claim:16059b09-77ae-523f-914d-1508c71b4457",
+       "value": 350,
+       "unit": "kt/year",
+       "field": "capacity",
+       "fact_status": "FACT",
+       "evidence_status": "SOURCE_TEXT_REVIEWED",
+       "material_basis": "REFINED_METAL",
+       "material_form": "copper cathode",
+       "measurement_basis": "nominal tank house capacity",
+       "period_type": "POINT_IN_TIME",
+       "period_start": null,
+       "period_end": null,
+       "reference_year": null,
+       "sources": [
+        {
+         "source_id": "bhp-annual-report-2026-escondida",
+         "publisher": "BHP",
+         "source_url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2026/260818_bhpannualreport2026.pdf",
+         "source_quality": "COMPANY_PRIMARY",
+         "accessed_at": "2026-10-07"
+        }
+       ]
+      },
+      "superseded_or_duplicate_claim_ids": []
+     }
+    },
+    {
+     "entity_id": "entity:24990d54-f1d5-4e6d-9c72-b394caf656ab",
+     "name": "Caserones SX-EW facility",
+     "country": "Chile",
+     "chains": [
+      "caserones",
+      "escondida",
+      "los-pelambres"
+     ],
+     "capacity": {
+      "status": "FACT",
+      "value": 34500,
+      "unit": "t/year",
+      "value_kt_per_year": 34.5,
+      "material_basis": "REFINED_METAL",
+      "material_form": "copper cathode",
+      "reference_year": null,
+      "period_type": "UNKNOWN",
+      "claim": {
+       "claim_id": "claim:f5507aad-cf1b-5a85-a046-b827d0366281",
+       "value": 34500,
+       "unit": "t/year",
+       "field": "capacity",
+       "fact_status": "FACT",
+       "evidence_status": "SOURCE_TEXT_REVIEWED",
+       "material_basis": "REFINED_METAL",
+       "material_form": "copper cathode",
+       "measurement_basis": "NAMEPLATE_OR_DESIGN_CAPACITY",
+       "period_type": "UNKNOWN",
+       "period_start": null,
+       "period_end": null,
+       "reference_year": null,
+       "sources": [
+        {
+         "source_id": "v292-caserones-operations",
+         "publisher": "Lundin Mining",
+         "source_url": "https://www.lundinmining.com/our-portfolio/operations/caserones/",
+         "source_quality": "COMPANY_PRIMARY",
+         "accessed_at": "2026-10-07"
+        }
+       ]
+      },
+      "superseded_or_duplicate_claim_ids": []
+     }
+    },
+    {
+     "entity_id": "entity:560be1cb-2bb2-4afc-9fe1-0efc36c7d62d",
+     "name": "Kansanshi SX-EW plant",
+     "country": "Sambia",
+     "chains": [
+      "kansanshi",
+      "sentinel"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:be3c251b-870b-4029-b775-b4a718edf468",
+     "name": "Kansanshi high-pressure leach autoclaves",
+     "country": "Sambia",
+     "chains": [
+      "kansanshi",
+      "sentinel"
+     ],
+     "capacity": {
+      "status": "FACT",
+      "value": 100000,
+      "unit": "t/year",
+      "value_kt_per_year": 100.0,
+      "material_basis": "CONCENTRATE",
+      "material_form": "copper concentrate",
+      "reference_year": null,
+      "period_type": "UNKNOWN",
+      "claim": {
+       "claim_id": "claim:81fb1edd-9078-59f6-b5fa-c502afd847f5",
+       "value": 100000,
+       "unit": "t/year",
+       "field": "capacity",
+       "fact_status": "FACT",
+       "evidence_status": "SOURCE_TEXT_REVIEWED",
+       "material_basis": "CONCENTRATE",
+       "material_form": "copper concentrate",
+       "measurement_basis": "Up to100,000tpa flotation concentrate; moisture basis unstated; not copper-content capacity or spare capacity.",
+       "period_type": "UNKNOWN",
+       "period_start": null,
+       "period_end": null,
+       "reference_year": null,
+       "sources": [
+        {
+         "source_id": "fqm-tech-kansanshi-2024",
+         "publisher": "First Quantum Minerals Ltd.",
+         "source_url": "https://www.first-quantum.com/wp-content/uploads/2025/08/240723-Kansanshi-Operations-Technical-Report_FINAL-reduced.pdf",
+         "source_quality": "COMPANY_PRIMARY",
+         "accessed_at": "2026-10-07"
+        }
+       ]
+      },
+      "superseded_or_duplicate_claim_ids": []
+     }
+    },
+    {
+     "entity_id": "entity:385ce183-30f0-4c85-9439-524da7af5d6d",
+     "name": "Radomiro Tomic leaching and SX-EW plant",
+     "country": "Chile",
+     "chains": [
+      "chuquicamata",
+      "radomiro-tomic"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:673967f8-bc06-491d-9dc2-30e1b8163244",
+     "name": "Spence — berichteter SX/EW-Anlagenkomplex",
+     "country": "Chile",
+     "chains": [
+      "escondida",
+      "spence"
+     ],
+     "capacity": {
+      "status": "FACT",
+      "value": 200,
+      "unit": "kt/year",
+      "value_kt_per_year": 200.0,
+      "material_basis": "REFINED_METAL",
+      "material_form": "copper cathode",
+      "reference_year": null,
+      "period_type": "UNKNOWN",
+      "claim": {
+       "claim_id": "claim:086fb513-3330-52bf-81a2-4c75241a0d6e",
+       "value": 200,
+       "unit": "kt/year",
+       "field": "capacity",
+       "fact_status": "FACT",
+       "evidence_status": "SOURCE_TEXT_REVIEWED",
+       "material_basis": "REFINED_METAL",
+       "material_form": "copper cathode",
+       "measurement_basis": "nominal tank-house capacity",
+       "period_type": "UNKNOWN",
+       "period_start": null,
+       "period_end": null,
+       "reference_year": null,
+       "sources": [
+        {
+         "source_id": "bhp-annual-report-2026-escondida",
+         "publisher": "BHP",
+         "source_url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2026/260818_bhpannualreport2026.pdf",
+         "source_quality": "COMPANY_PRIMARY",
+         "accessed_at": "2026-10-07"
+        }
+       ]
+      },
+      "superseded_or_duplicate_claim_ids": []
+     }
+    },
+    {
+     "entity_id": "entity:6c4bdc1a-b787-49ff-b47b-c6b4ec3781d1",
+     "name": "Toquepala SX-EW plant",
+     "country": "Peru",
+     "chains": [
+      "cuajone",
+      "toquepala"
+     ],
+     "capacity": null
+    }
+   ]
+  },
+  {
+   "stage": "SMELTER",
+   "label": "Hütte",
+   "facilities": 9,
+   "countries": 7,
+   "chains_covered": 13,
+   "chains_without_stage": 5,
+   "country_share_by_chains": [
+    {
+     "country": "Australien",
+     "chains": 3,
+     "share_pct": 23.1
+    },
+    {
+     "country": "Japan",
+     "chains": 3,
+     "share_pct": 23.1
+    },
+    {
+     "country": "Peru",
+     "chains": 2,
+     "share_pct": 15.4
+    },
+    {
+     "country": "Sambia",
+     "chains": 2,
+     "share_pct": 15.4
+    },
+    {
+     "country": "DR Kongo",
+     "chains": 1,
+     "share_pct": 7.7
+    },
+    {
+     "country": "Indonesien",
+     "chains": 1,
+     "share_pct": 7.7
+    },
+    {
+     "country": "USA",
+     "chains": 1,
+     "share_pct": 7.7
+    }
+   ],
+   "hhi_country_by_facility_count": 1605,
+   "hhi_level": "MITTEL",
+   "max_chains_one_facility": 3,
+   "review_status_counts": {
+    "APPROVED": 14,
+    "BLOCKED": 1,
+    "REVIEW_READY": 11,
+    "VERIFIED": 2
+   },
+   "relationship_ids": [
+    "relationship:05fe1841-bc4b-53dd-8016-9591d74825c8",
+    "relationship:0a5b28da-accc-55ae-a940-a0ea10b86f57",
+    "relationship:0d55d5a0-9901-5595-9a6e-bb324a0104f5",
+    "relationship:27584d81-dccc-5532-a4cb-346765fcbf5d",
+    "relationship:3a5f64d8-669e-5fff-8951-d1cc93e74fb0",
+    "relationship:477f561c-2ebf-529d-a842-c73d904a258b",
+    "relationship:5b954484-3874-5083-b3a4-3576e93bb1c3",
+    "relationship:5f0a9b56-add1-5242-bc70-5016ecd960fd",
+    "relationship:611478c4-f849-583f-afed-e15cdfa4426c",
+    "relationship:6c327896-66c1-539c-bb0e-aae335ba2a50",
+    "relationship:73dff4a4-9e35-59e7-ab4f-24e15a9f6f11",
+    "relationship:7e2e9728-5166-5ac9-955c-03ad7db062e3",
+    "relationship:8c27c716-c58a-5f4f-97ef-02978f9a6b03",
+    "relationship:8c6319f5-b4c1-5353-bbbe-73c2ab9e31f8",
+    "relationship:9039d692-d391-5e61-a8bc-039896ef6f50",
+    "relationship:9c9d7fb8-4b6a-5ad8-b0d6-5792d5373424",
+    "relationship:a2dd1104-bfa0-5d54-b6ab-f419db0b006f",
+    "relationship:a701bb09-85a1-544d-8fd7-8aa96e644ba6",
+    "relationship:b315d594-3e48-5bfd-bd15-60fbae7a481b",
+    "relationship:b8bb3e2b-e5e8-5a24-8dec-8505c9d5b487",
+    "relationship:bbc24e88-8fa7-51ae-a648-2e183f0d9fd3",
+    "relationship:ca2d063e-797f-5b1b-acce-ba4443f6254f",
+    "relationship:cc0bdbcd-b383-522c-a775-d71f0ef962ab",
+    "relationship:e132e294-fad3-5d62-8d29-b9d96638bc5b",
+    "relationship:e7aff5d6-3332-57cc-8fa1-908992c8f783",
+    "relationship:eaf5da70-0b98-5644-a8ff-0bef9843716f",
+    "relationship:eb84edfe-5ba2-5c19-84e8-db369620f2e6",
+    "relationship:fe26164a-441c-53b7-b882-9c3bca07d7e4"
+   ],
+   "capacity_by_country": [
+    {
+     "material_basis": "CONCENTRATE",
+     "known_total_kt_per_year": 5976.1,
+     "facilities_with_capacity": 4,
+     "facilities_without_capacity": 5,
+     "groups": [
+      {
+       "country": "Indonesien",
+       "kt_per_year": 3000.0,
+       "share_pct": 50.2
+      },
+      {
+       "country": "Sambia",
+       "kt_per_year": 1600.0,
+       "share_pct": 26.8
+      },
+      {
+       "country": "Peru",
+       "kt_per_year": 1376.0,
+       "share_pct": 23.0
+      }
+     ]
+    }
+   ],
+   "rows": [
+    {
+     "entity_id": "entity:ebce9510-a269-444d-97bc-a70b59467fc0",
+     "name": "JXNMM smelting facilities in Japan — unnamed reported group",
+     "country": "Japan",
+     "chains": [
+      "caserones",
+      "escondida",
+      "los-pelambres"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:d609702e-2a4f-43ce-b080-f99140c2f033",
+     "name": "Olympic Dam copper smelter",
+     "country": "Australien",
+     "chains": [
+      "carrapateena",
+      "olympic-dam",
+      "prominent-hill"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:b1167de6-e504-4779-8589-39b470d424a9",
+     "name": "Ilo copper smelter",
+     "country": "Peru",
+     "chains": [
+      "cuajone",
+      "toquepala"
+     ],
+     "capacity": {
+      "status": "FACT",
+      "value": 1376050,
+      "unit": "t/year",
+      "value_kt_per_year": 1376.05,
+      "material_basis": "CONCENTRATE",
+      "material_form": "copper concentrate",
+      "reference_year": null,
+      "period_type": "UNKNOWN",
+      "claim": {
+       "claim_id": "claim:568f8422-d971-5702-a6c4-b89090294f84",
+       "value": 1376050,
+       "unit": "t/year",
+       "field": "capacity",
+       "fact_status": "FACT",
+       "evidence_status": "SOURCE_TEXT_REVIEWED",
+       "material_basis": "CONCENTRATE",
+       "material_form": "copper concentrate",
+       "measurement_basis": "NAMEPLATE_OR_DESIGN_CAPACITY",
+       "period_type": "UNKNOWN",
+       "period_start": null,
+       "period_end": null,
+       "reference_year": null,
+       "sources": [
+        {
+         "source_id": "v292-southern-10k-2025",
+         "publisher": "Southern Copper Corporation",
+         "source_url": "https://www.sec.gov/Archives/edgar/data/1001838/000110465926021492/scco-20251231x10k.htm",
+         "source_quality": "REGULATORY",
+         "accessed_at": "2026-10-07"
+        }
+       ]
+      },
+      "superseded_or_duplicate_claim_ids": []
+     }
+    },
+    {
+     "entity_id": "entity:436387f3-1b53-48a2-8f3d-35722a6bcffd",
+     "name": "Kansanshi Copper Smelter",
+     "country": "Sambia",
+     "chains": [
+      "kansanshi",
+      "sentinel"
+     ],
+     "capacity": {
+      "status": "FACT",
+      "value": 1.6,
+      "unit": "Mt/year",
+      "value_kt_per_year": 1600.0,
+      "material_basis": "CONCENTRATE",
+      "material_form": "copper concentrate",
+      "reference_year": 2025,
+      "period_type": "POINT_IN_TIME",
+      "claim": {
+       "claim_id": "claim:70795eec-180b-5d69-a29a-5664bf56568c",
+       "value": 1.6,
+       "unit": "Mt/year",
+       "field": "capacity",
+       "fact_status": "FACT",
+       "evidence_status": "SOURCE_TEXT_REVIEWED",
+       "material_basis": "CONCENTRATE",
+       "material_form": "copper concentrate",
+       "measurement_basis": "Reported expanded concentrate-treatment capacity; moisture basis unstated; not achieved/available/spare capacity. AIF uses future wording; Q1 MD&A separately confirms expansion completion, no continuous capacity interval.",
+       "period_type": "POINT_IN_TIME",
+       "period_start": null,
+       "period_end": null,
+       "reference_year": 2025,
+       "sources": [
+        {
+         "source_id": "fqm-aif2026-v293-reverification",
+         "publisher": "First Quantum Minerals Ltd.",
+         "source_url": "https://www.first-quantum.com/wp-content/uploads/2026/02/260210-FQM-AIF-2026-FINAL.pdf",
+         "source_quality": "COMPANY_PRIMARY",
+         "accessed_at": "2026-10-08"
+        }
+       ]
+      },
+      "superseded_or_duplicate_claim_ids": [
+       "claim:1a1dd669-2134-595f-a4fe-3bc9f2e8ea02",
+       "claim:6acf046d-8fe0-562d-b597-4a03d786aec9"
+      ]
+     }
+    },
+    {
+     "entity_id": "entity:53656511-5d33-41d3-8784-1f81965cffc8",
+     "name": "Kamoa-Kakula on-site copper smelter",
+     "country": "DR Kongo",
+     "chains": [
+      "kamoa"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:4cb974a3-f687-4b0d-b112-266c1b9e5f14",
+     "name": "Kennecott copper smelter",
+     "country": "USA",
+     "chains": [
+      "kennecott"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:63935625-2b2c-45fb-99a2-2fbbc5765515",
+     "name": "Lualaba Copper Smelter",
+     "country": "DR Kongo",
+     "chains": [
+      "kamoa"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:3d5cd21b-fdf4-477b-ab05-4cc57e876514",
+     "name": "PT Smelting Gresik copper smelter and refinery integrated facility",
+     "country": "Indonesien",
+     "chains": [
+      "grasberg"
+     ],
+     "capacity": {
+      "status": "FACT",
+      "value": 1300000,
+      "unit": "t/year",
+      "value_kt_per_year": 1300.0,
+      "material_basis": "CONCENTRATE",
+      "material_form": "copper concentrate",
+      "reference_year": null,
+      "period_type": "UNKNOWN",
+      "claim": {
+       "claim_id": "claim:14012ed8-7894-5df0-99d1-6916562995ce",
+       "value": 1300000,
+       "unit": "t/year",
+       "field": "capacity",
+       "fact_status": "FACT",
+       "evidence_status": "SOURCE_TEXT_REVIEWED",
+       "material_basis": "CONCENTRATE",
+       "material_form": "copper concentrate",
+       "measurement_basis": "Reported nominal concentrate processingcapacity; moisturebasisnotexplicit; nofreecapacity",
+       "period_type": "UNKNOWN",
+       "period_start": null,
+       "period_end": null,
+       "reference_year": null,
+       "sources": [
+        {
+         "source_id": "v292-global-fcx-indonesia",
+         "publisher": "Freeport-McMoRan",
+         "source_url": "https://www.fcx.com/operations/indonesia",
+         "source_quality": "COMPANY_PRIMARY",
+         "accessed_at": "2026-10-07"
+        }
+       ]
+      },
+      "superseded_or_duplicate_claim_ids": []
+     }
+    },
+    {
+     "entity_id": "entity:8f3aa0c9-be83-4459-8e1e-78f06e623b5d",
+     "name": "PTFI Manyar copper smelter",
+     "country": "Indonesien",
+     "chains": [
+      "grasberg"
+     ],
+     "capacity": {
+      "status": "FACT",
+      "value": 1700000,
+      "unit": "t/year",
+      "value_kt_per_year": 1700.0,
+      "material_basis": "CONCENTRATE",
+      "material_form": "copper concentrate",
+      "reference_year": null,
+      "period_type": "UNKNOWN",
+      "claim": {
+       "claim_id": "claim:9a0c9d7f-394a-5cfe-b75d-e3992b888e3b",
+       "value": 1700000,
+       "unit": "t/year",
+       "field": "capacity",
+       "fact_status": "FACT",
+       "evidence_status": "SOURCE_TEXT_REVIEWED",
+       "material_basis": "CONCENTRATE",
+       "material_form": "copper concentrate",
+       "measurement_basis": "Reported nominal concentrate processingcapacity; moisturebasisnotexplicit; nofreecapacity",
+       "period_type": "UNKNOWN",
+       "period_start": null,
+       "period_end": null,
+       "reference_year": null,
+       "sources": [
+        {
+         "source_id": "v292-global-fcx-indonesia",
+         "publisher": "Freeport-McMoRan",
+         "source_url": "https://www.fcx.com/operations/indonesia",
+         "source_quality": "COMPANY_PRIMARY",
+         "accessed_at": "2026-10-07"
+        }
+       ]
+      },
+      "superseded_or_duplicate_claim_ids": []
+     }
+    }
+   ]
+  },
+  {
+   "stage": "REFINERY",
+   "label": "Raffinerie",
+   "facilities": 4,
+   "countries": 4,
+   "chains_covered": 7,
+   "chains_without_stage": 11,
+   "country_share_by_chains": [
+    {
+     "country": "Australien",
+     "chains": 3,
+     "share_pct": 42.9
+    },
+    {
+     "country": "Peru",
+     "chains": 2,
+     "share_pct": 28.6
+    },
+    {
+     "country": "Indonesien",
+     "chains": 1,
+     "share_pct": 14.3
+    },
+    {
+     "country": "USA",
+     "chains": 1,
+     "share_pct": 14.3
+    }
+   ],
+   "hhi_country_by_facility_count": 2500,
+   "hhi_level": "HOCH",
+   "max_chains_one_facility": 3,
+   "review_status_counts": {
+    "APPROVED": 3,
+    "REVIEW_READY": 1
+   },
+   "relationship_ids": [
+    "relationship:0a5b28da-accc-55ae-a940-a0ea10b86f57",
+    "relationship:73dff4a4-9e35-59e7-ab4f-24e15a9f6f11",
+    "relationship:eaf5da70-0b98-5644-a8ff-0bef9843716f",
+    "relationship:eb84edfe-5ba2-5c19-84e8-db369620f2e6"
+   ],
+   "capacity_by_country": [
+    {
+     "material_basis": "REFINED_METAL",
+     "known_total_kt_per_year": 294.8,
+     "facilities_with_capacity": 1,
+     "facilities_without_capacity": 3,
+     "groups": [
+      {
+       "country": "Peru",
+       "kt_per_year": 294.8,
+       "share_pct": 100.0
+      }
+     ]
+    }
+   ],
+   "rows": [
+    {
+     "entity_id": "entity:a803f62b-e22f-41d7-bef2-af92813d6ade",
+     "name": "Olympic Dam copper electrorefinery",
+     "country": "Australien",
+     "chains": [
+      "carrapateena",
+      "olympic-dam",
+      "prominent-hill"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:59fb2dd1-8f0e-4dd9-a207-03318a398b65",
+     "name": "Ilo copper refinery",
+     "country": "Peru",
+     "chains": [
+      "cuajone",
+      "toquepala"
+     ],
+     "capacity": {
+      "status": "FACT",
+      "value": 294763,
+      "unit": "t/year",
+      "value_kt_per_year": 294.763,
+      "material_basis": "REFINED_METAL",
+      "material_form": "copper cathode",
+      "reference_year": null,
+      "period_type": "UNKNOWN",
+      "claim": {
+       "claim_id": "claim:c9a60183-533e-5d77-a4a2-58afa47ed0f5",
+       "value": 294763,
+       "unit": "t/year",
+       "field": "capacity",
+       "fact_status": "FACT",
+       "evidence_status": "SOURCE_TEXT_REVIEWED",
+       "material_basis": "REFINED_METAL",
+       "material_form": "copper cathode",
+       "measurement_basis": "NAMEPLATE_OR_DESIGN_CAPACITY",
+       "period_type": "UNKNOWN",
+       "period_start": null,
+       "period_end": null,
+       "reference_year": null,
+       "sources": [
+        {
+         "source_id": "v292-southern-10k-2025",
+         "publisher": "Southern Copper Corporation",
+         "source_url": "https://www.sec.gov/Archives/edgar/data/1001838/000110465926021492/scco-20251231x10k.htm",
+         "source_quality": "REGULATORY",
+         "accessed_at": "2026-10-07"
+        }
+       ]
+      },
+      "superseded_or_duplicate_claim_ids": []
+     }
+    },
+    {
+     "entity_id": "entity:0da85694-11d1-489f-a25c-f24b899bbb00",
+     "name": "Kennecott copper refinery",
+     "country": "USA",
+     "chains": [
+      "kennecott"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:4ea70469-a907-429a-bc87-92c9f97369f6",
+     "name": "PTFI Manyar copper electrorefinery",
+     "country": "Indonesien",
+     "chains": [
+      "grasberg"
+     ],
+     "capacity": null
+    }
+   ]
+  },
+  {
+   "stage": "PORT",
+   "label": "Hafen / Terminal",
+   "facilities": 20,
+   "countries": 11,
+   "chains_covered": 7,
+   "chains_without_stage": 11,
+   "country_share_by_chains": [
+    {
+     "country": "Chile",
+     "chains": 4,
+     "share_pct": 57.1
+    },
+    {
+     "country": "Angola",
+     "chains": 1,
+     "share_pct": 14.3
+    },
+    {
+     "country": "China",
+     "chains": 1,
+     "share_pct": 14.3
+    },
+    {
+     "country": "DR Kongo",
+     "chains": 1,
+     "share_pct": 14.3
+    },
+    {
+     "country": "Deutschland",
+     "chains": 1,
+     "share_pct": 14.3
+    },
+    {
+     "country": "Indonesien",
+     "chains": 1,
+     "share_pct": 14.3
+    },
+    {
+     "country": "Mosambik",
+     "chains": 1,
+     "share_pct": 14.3
+    },
+    {
+     "country": "Namibia",
+     "chains": 1,
+     "share_pct": 14.3
+    },
+    {
+     "country": "Peru",
+     "chains": 1,
+     "share_pct": 14.3
+    },
+    {
+     "country": "Südafrika",
+     "chains": 1,
+     "share_pct": 14.3
+    },
+    {
+     "country": "Tansania",
+     "chains": 1,
+     "share_pct": 14.3
+    }
+   ],
+   "hhi_country_by_facility_count": 1550,
+   "hhi_level": "MITTEL",
+   "max_chains_one_facility": 4,
+   "review_status_counts": {
+    "APPROVED": 10,
+    "BLOCKED": 1,
+    "REVIEW_READY": 12,
+    "VERIFIED": 3
+   },
+   "relationship_ids": [
+    "relationship:01e14c2e-ebb3-502f-86aa-21c68772baac",
+    "relationship:278902f2-1384-5e98-96f9-9dc3065fb82b",
+    "relationship:2937f407-b096-5df3-b5aa-f990fee814e3",
+    "relationship:3a5f64d8-669e-5fff-8951-d1cc93e74fb0",
+    "relationship:611478c4-f849-583f-afed-e15cdfa4426c",
+    "relationship:6b1b7468-43c0-59d3-914d-4629a52b39f5",
+    "relationship:878c459d-a8e8-5440-b27b-1be9d36b0278",
+    "relationship:9123af2b-42e0-5ebd-bbf4-061269ec32df",
+    "relationship:9c4c7852-32c4-50ff-9e62-9227e594efff",
+    "relationship:9c9d7fb8-4b6a-5ad8-b0d6-5792d5373424",
+    "relationship:a2f61b24-722c-533c-8146-e762fbdd75a2",
+    "relationship:b138510a-7f98-5581-b0a2-54611fab3c80",
+    "relationship:bb029810-8191-5bd2-abc7-0ee6e90dea24",
+    "relationship:bc09197f-91f2-5401-ba06-d0da645038f6",
+    "relationship:c3a15b79-6e8f-5409-aee6-0b7541d28685",
+    "relationship:c5c70534-54fd-50a7-8d7a-c99211a0f8c3",
+    "relationship:c7bd26fd-a20b-569d-a901-cb1277d5dfbd",
+    "relationship:c86b9ab8-20ae-57f7-bf98-a5c4278bf659",
+    "relationship:cf5d73d8-66ac-536c-90b5-246f51ddef82",
+    "relationship:d5a733f8-beb4-5e4c-b412-d5dc9e85dbd0",
+    "relationship:df504053-0cbb-5a09-a16c-fd61f77297ae",
+    "relationship:e6e4172e-9e52-5246-8055-d71c616953e5",
+    "relationship:eaf36902-45e9-5c08-b17d-8c38bfb2094b",
+    "relationship:f1020a2b-e545-5d99-b8b2-56f7edede741",
+    "relationship:fb379646-7453-5bb2-80a9-e40812e9c3e6",
+    "relationship:fe42dbc2-1d39-539f-9eb2-8581d7628dd1"
+   ],
+   "capacity_by_country": [],
+   "rows": [
+    {
+     "entity_id": "entity:8b434f53-0270-4bc6-b8d3-cc03358c92fb",
+     "name": "Antofagasta — berichteter Hafenbezug",
+     "country": "Chile",
+     "chains": [
+      "caserones",
+      "escondida",
+      "los-pelambres",
+      "spence"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:c4b44aa0-2244-4f1e-a48e-3c4b15905b2d",
+     "name": "Coloso — berichtete Hafenanlagen",
+     "country": "Chile",
+     "chains": [
+      "caserones",
+      "escondida",
+      "los-pelambres",
+      "spence"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:13cde85f-9858-4824-a236-2af1c2a72dc0",
+     "name": "Mejillones — berichteter Hafenbezug",
+     "country": "Chile",
+     "chains": [
+      "caserones",
+      "escondida",
+      "los-pelambres",
+      "spence"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:f451512a-175a-47c6-ad41-994ccd96300f",
+     "name": "Totoralillo — Caserones reported export port",
+     "country": "Chile",
+     "chains": [
+      "caserones",
+      "escondida",
+      "los-pelambres"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:4692fb0e-c6d1-4aa4-b396-1d4f9286ea79",
+     "name": "Amamapare copper concentrate port",
+     "country": "Indonesien",
+     "chains": [
+      "grasberg"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:9ad46d1d-5a21-4b2c-b178-8f098960874c",
+     "name": "Brunsbuttel — Antamina reported destination port",
+     "country": "Deutschland",
+     "chains": [
+      "antamina"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:93674d35-c11e-41a7-8004-de5b3f4f4a13",
+     "name": "Fangcheng — Antamina reported destination port",
+     "country": "China",
+     "chains": [
+      "antamina"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:65f707c6-ce59-4942-9132-8c14fd5f2b73",
+     "name": "Los Vilos — Los Pelambres reported port",
+     "country": "Chile",
+     "chains": [
+      "los-pelambres"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:834b6f36-1ef6-4dd7-aa9e-927194c5b4d0",
+     "name": "Nanjing — Antamina reported destination port",
+     "country": "China",
+     "chains": [
+      "antamina"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:c911b149-b7c4-4f27-929c-da6b2dbe40f5",
+     "name": "PTFI Manyar / JIIPE concentrate receiving port",
+     "country": "Indonesien",
+     "chains": [
+      "grasberg"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:e38fabfa-e130-4eb5-9c1b-adb2bfd3b68d",
+     "name": "Port of Beira",
+     "country": "Mosambik",
+     "chains": [
+      "kamoa"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:c35641ae-3142-49b1-9fc4-fbd2c637aba8",
+     "name": "Port of Dar es Salaam",
+     "country": "Tansania",
+     "chains": [
+      "kamoa"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:80e8c532-265c-4d6e-a7a5-42a62ed6fe59",
+     "name": "Port of Durban",
+     "country": "Südafrika",
+     "chains": [
+      "kamoa"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:4995abfb-914c-4573-b819-fa2fb8b6be06",
+     "name": "Port of Lobito",
+     "country": "Angola",
+     "chains": [
+      "kamoa"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:aa1e0be0-fd2c-4a20-af34-79ea6d95fd46",
+     "name": "Port of Walvis Bay",
+     "country": "Namibia",
+     "chains": [
+      "kamoa"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:37d94b00-8c64-4138-9c60-a097bdb367f5",
+     "name": "Punta Lobitos — berichtete Hafenanlagen",
+     "country": "Peru",
+     "chains": [
+      "antamina"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:7ec06ae9-4e01-47cb-9827-ac17b28fcbf0",
+     "name": "Qingdao — Antamina reported destination port",
+     "country": "China",
+     "chains": [
+      "antamina"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:53f71cf6-5277-492e-b830-8a18a2ca157c",
+     "name": "Trafigura dry port facility in Kolwezi",
+     "country": "DR Kongo",
+     "chains": [
+      "kamoa"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:40cb3120-46d3-4424-91d8-03bd832fb9be",
+     "name": "Xiamen — Antamina reported destination port",
+     "country": "China",
+     "chains": [
+      "antamina"
+     ],
+     "capacity": null
+    },
+    {
+     "entity_id": "entity:6b7a0b71-5802-4366-83c0-7584f81394c6",
+     "name": "Zhapu — Antamina reported destination port",
+     "country": "China",
+     "chains": [
+      "antamina"
+     ],
+     "capacity": null
+    }
+   ]
+  }
+ ],
+ "utilisation": [
+  {
+   "entity_id": "entity:182a2742-e3e0-45a4-b664-58f40a1c155b",
+   "name": "Escondida — Gruppe von 2 SX/EW-Anlagen",
+   "stage": "LEACH_SXEW",
+   "country": "Chile",
+   "capacity": {
+    "status": "FACT",
+    "value": 350,
+    "unit": "kt/year",
+    "value_kt_per_year": 350.0,
+    "material_basis": "REFINED_METAL",
+    "material_form": "copper cathode",
+    "reference_year": null,
+    "period_type": "POINT_IN_TIME",
+    "claim": {
+     "claim_id": "claim:16059b09-77ae-523f-914d-1508c71b4457",
+     "value": 350,
+     "unit": "kt/year",
+     "field": "capacity",
+     "fact_status": "FACT",
+     "evidence_status": "SOURCE_TEXT_REVIEWED",
+     "material_basis": "REFINED_METAL",
+     "material_form": "copper cathode",
+     "measurement_basis": "nominal tank house capacity",
+     "period_type": "POINT_IN_TIME",
+     "period_start": null,
+     "period_end": null,
+     "reference_year": null,
+     "sources": [
+      {
+       "source_id": "bhp-annual-report-2026-escondida",
+       "publisher": "BHP",
+       "source_url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2026/260818_bhpannualreport2026.pdf",
+       "source_quality": "COMPANY_PRIMARY",
+       "accessed_at": "2026-10-07"
+      }
+     ]
+    },
+    "superseded_or_duplicate_claim_ids": []
+   },
+   "output_claim": {
+    "claim_id": "claim:2852724e-0cf4-4c4a-a398-c7653fb29b04",
+    "value": 177.7,
+    "unit": "1000 t",
+    "field": "production",
+    "fact_status": "FACT",
+    "evidence_status": "SOURCE_TEXT_REVIEWED",
+    "material_basis": "REFINED_METAL",
+    "material_form": "Copper cathode",
+    "measurement_basis": "100% operation",
+    "period_type": "FISCAL_YEAR",
+    "period_start": "2024-07-01",
+    "period_end": "2025-07-01",
+    "reference_year": 2025,
+    "sources": [
+     {
+      "source_id": "bhp-annual-report-2026-escondida",
+      "publisher": "BHP",
+      "source_url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2026/260818_bhpannualreport2026.pdf",
+      "source_quality": "COMPANY_PRIMARY",
+      "accessed_at": "2026-10-07"
+     }
+    ]
+   },
+   "output_via": "MINE_CATHODE_OF_ONLY_SXEW",
+   "status": "INFERENCE",
+   "output_kt": 177.7,
+   "utilisation_pct": 50.8,
+   "restrictions": [
+    "CAPACITY_WITHOUT_PERIOD"
+   ]
+  },
+  {
+   "entity_id": "entity:59fb2dd1-8f0e-4dd9-a207-03318a398b65",
+   "name": "Ilo copper refinery",
+   "stage": "REFINERY",
+   "country": "Peru",
+   "capacity": {
+    "status": "FACT",
+    "value": 294763,
+    "unit": "t/year",
+    "value_kt_per_year": 294.763,
+    "material_basis": "REFINED_METAL",
+    "material_form": "copper cathode",
+    "reference_year": null,
+    "period_type": "UNKNOWN",
+    "claim": {
+     "claim_id": "claim:c9a60183-533e-5d77-a4a2-58afa47ed0f5",
+     "value": 294763,
+     "unit": "t/year",
+     "field": "capacity",
+     "fact_status": "FACT",
+     "evidence_status": "SOURCE_TEXT_REVIEWED",
+     "material_basis": "REFINED_METAL",
+     "material_form": "copper cathode",
+     "measurement_basis": "NAMEPLATE_OR_DESIGN_CAPACITY",
+     "period_type": "UNKNOWN",
+     "period_start": null,
+     "period_end": null,
+     "reference_year": null,
+     "sources": [
+      {
+       "source_id": "v292-southern-10k-2025",
+       "publisher": "Southern Copper Corporation",
+       "source_url": "https://www.sec.gov/Archives/edgar/data/1001838/000110465926021492/scco-20251231x10k.htm",
+       "source_quality": "REGULATORY",
+       "accessed_at": "2026-10-07"
+      }
+     ]
+    },
+    "superseded_or_duplicate_claim_ids": []
+   },
+   "output_claim": {
+    "claim_id": "claim:53b115db-939f-5704-b4c7-71ba114bed1c",
+    "value": 244.2,
+    "unit": "kt",
+    "field": "production",
+    "fact_status": "FACT",
+    "evidence_status": "SOURCE_TEXT_REVIEWED",
+    "material_basis": "REFINED_METAL",
+    "material_form": "copper cathode",
+    "measurement_basis": "PLANT_CATHODE_OUTPUT",
+    "period_type": "CALENDAR_YEAR",
+    "period_start": "2025-01-01",
+    "period_end": "2026-01-01",
+    "reference_year": 2025,
+    "sources": [
+     {
+      "source_id": "v292-southern-10k-2025",
+      "publisher": "Southern Copper Corporation",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1001838/000110465926021492/scco-20251231x10k.htm",
+      "source_quality": "REGULATORY",
+      "accessed_at": "2026-10-07"
+     }
+    ]
+   },
+   "output_via": "FACILITY",
+   "status": "INFERENCE",
+   "output_kt": 244.2,
+   "utilisation_pct": 82.8,
+   "restrictions": [
+    "CAPACITY_WITHOUT_PERIOD"
+   ]
+  },
+  {
+   "entity_id": "entity:673967f8-bc06-491d-9dc2-30e1b8163244",
+   "name": "Spence — berichteter SX/EW-Anlagenkomplex",
+   "stage": "LEACH_SXEW",
+   "country": "Chile",
+   "capacity": {
+    "status": "FACT",
+    "value": 200,
+    "unit": "kt/year",
+    "value_kt_per_year": 200.0,
+    "material_basis": "REFINED_METAL",
+    "material_form": "copper cathode",
+    "reference_year": null,
+    "period_type": "UNKNOWN",
+    "claim": {
+     "claim_id": "claim:086fb513-3330-52bf-81a2-4c75241a0d6e",
+     "value": 200,
+     "unit": "kt/year",
+     "field": "capacity",
+     "fact_status": "FACT",
+     "evidence_status": "SOURCE_TEXT_REVIEWED",
+     "material_basis": "REFINED_METAL",
+     "material_form": "copper cathode",
+     "measurement_basis": "nominal tank-house capacity",
+     "period_type": "UNKNOWN",
+     "period_start": null,
+     "period_end": null,
+     "reference_year": null,
+     "sources": [
+      {
+       "source_id": "bhp-annual-report-2026-escondida",
+       "publisher": "BHP",
+       "source_url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2026/260818_bhpannualreport2026.pdf",
+       "source_quality": "COMPANY_PRIMARY",
+       "accessed_at": "2026-10-07"
+      }
+     ]
+    },
+    "superseded_or_duplicate_claim_ids": []
+   },
+   "output_claim": {
+    "claim_id": "claim:eaaba239-fefa-5727-abc1-d0a3b0feb109",
+    "value": 117.0,
+    "unit": "kt",
+    "field": "production",
+    "fact_status": "FACT",
+    "evidence_status": "SOURCE_TEXT_REVIEWED",
+    "material_basis": "REFINED_METAL",
+    "material_form": "copper cathode",
+    "measurement_basis": "EW_CATHODE_100_PERCENT_OPERATION",
+    "period_type": "FISCAL_YEAR",
+    "period_start": "2024-07-01",
+    "period_end": "2025-07-01",
+    "reference_year": 2025,
+    "sources": [
+     {
+      "source_id": "bhp-operational-review-2026",
+      "publisher": "BHP",
+      "source_url": "https://www.bhp.com/-/media/documents/media/reports-and-presentations/2026/260716_bhpoperationalreviewfortheyearended30june2026.pdf",
+      "source_quality": "COMPANY_PRIMARY",
+      "accessed_at": "2026-10-07"
+     }
+    ]
+   },
+   "output_via": "MINE_CATHODE_OF_ONLY_SXEW",
+   "status": "INFERENCE",
+   "output_kt": 117.0,
+   "utilisation_pct": 58.5,
+   "restrictions": [
+    "CAPACITY_WITHOUT_PERIOD"
+   ]
+  },
+  {
+   "entity_id": "entity:24990d54-f1d5-4e6d-9c72-b394caf656ab",
+   "name": "Caserones SX-EW facility",
+   "stage": "LEACH_SXEW",
+   "country": "Chile",
+   "capacity": {
+    "status": "FACT",
+    "value": 34500,
+    "unit": "t/year",
+    "value_kt_per_year": 34.5,
+    "material_basis": "REFINED_METAL",
+    "material_form": "copper cathode",
+    "reference_year": null,
+    "period_type": "UNKNOWN",
+    "claim": {
+     "claim_id": "claim:f5507aad-cf1b-5a85-a046-b827d0366281",
+     "value": 34500,
+     "unit": "t/year",
+     "field": "capacity",
+     "fact_status": "FACT",
+     "evidence_status": "SOURCE_TEXT_REVIEWED",
+     "material_basis": "REFINED_METAL",
+     "material_form": "copper cathode",
+     "measurement_basis": "NAMEPLATE_OR_DESIGN_CAPACITY",
+     "period_type": "UNKNOWN",
+     "period_start": null,
+     "period_end": null,
+     "reference_year": null,
+     "sources": [
+      {
+       "source_id": "v292-caserones-operations",
+       "publisher": "Lundin Mining",
+       "source_url": "https://www.lundinmining.com/our-portfolio/operations/caserones/",
+       "source_quality": "COMPANY_PRIMARY",
+       "accessed_at": "2026-10-07"
+      }
+     ]
+    },
+    "superseded_or_duplicate_claim_ids": []
+   },
+   "output_claim": null,
+   "output_via": null,
+   "status": "UNKNOWN",
+   "unknown_reason": "NO_OUTPUT_FOR_YEAR"
+  },
+  {
+   "entity_id": "entity:b1167de6-e504-4779-8589-39b470d424a9",
+   "name": "Ilo copper smelter",
+   "stage": "SMELTER",
+   "country": "Peru",
+   "capacity": {
+    "status": "FACT",
+    "value": 1376050,
+    "unit": "t/year",
+    "value_kt_per_year": 1376.05,
+    "material_basis": "CONCENTRATE",
+    "material_form": "copper concentrate",
+    "reference_year": null,
+    "period_type": "UNKNOWN",
+    "claim": {
+     "claim_id": "claim:568f8422-d971-5702-a6c4-b89090294f84",
+     "value": 1376050,
+     "unit": "t/year",
+     "field": "capacity",
+     "fact_status": "FACT",
+     "evidence_status": "SOURCE_TEXT_REVIEWED",
+     "material_basis": "CONCENTRATE",
+     "material_form": "copper concentrate",
+     "measurement_basis": "NAMEPLATE_OR_DESIGN_CAPACITY",
+     "period_type": "UNKNOWN",
+     "period_start": null,
+     "period_end": null,
+     "reference_year": null,
+     "sources": [
+      {
+       "source_id": "v292-southern-10k-2025",
+       "publisher": "Southern Copper Corporation",
+       "source_url": "https://www.sec.gov/Archives/edgar/data/1001838/000110465926021492/scco-20251231x10k.htm",
+       "source_quality": "REGULATORY",
+       "accessed_at": "2026-10-07"
+      }
+     ]
+    },
+    "superseded_or_duplicate_claim_ids": []
+   },
+   "output_claim": null,
+   "output_via": null,
+   "status": "UNKNOWN",
+   "unknown_reason": "MATERIAL_BASIS_MISMATCH"
+  },
+  {
+   "entity_id": "entity:436387f3-1b53-48a2-8f3d-35722a6bcffd",
+   "name": "Kansanshi Copper Smelter",
+   "stage": "SMELTER",
+   "country": "Sambia",
+   "capacity": {
+    "status": "FACT",
+    "value": 1.6,
+    "unit": "Mt/year",
+    "value_kt_per_year": 1600.0,
+    "material_basis": "CONCENTRATE",
+    "material_form": "copper concentrate",
+    "reference_year": 2025,
+    "period_type": "POINT_IN_TIME",
+    "claim": {
+     "claim_id": "claim:70795eec-180b-5d69-a29a-5664bf56568c",
+     "value": 1.6,
+     "unit": "Mt/year",
+     "field": "capacity",
+     "fact_status": "FACT",
+     "evidence_status": "SOURCE_TEXT_REVIEWED",
+     "material_basis": "CONCENTRATE",
+     "material_form": "copper concentrate",
+     "measurement_basis": "Reported expanded concentrate-treatment capacity; moisture basis unstated; not achieved/available/spare capacity. AIF uses future wording; Q1 MD&A separately confirms expansion completion, no continuous capacity interval.",
+     "period_type": "POINT_IN_TIME",
+     "period_start": null,
+     "period_end": null,
+     "reference_year": 2025,
+     "sources": [
+      {
+       "source_id": "fqm-aif2026-v293-reverification",
+       "publisher": "First Quantum Minerals Ltd.",
+       "source_url": "https://www.first-quantum.com/wp-content/uploads/2026/02/260210-FQM-AIF-2026-FINAL.pdf",
+       "source_quality": "COMPANY_PRIMARY",
+       "accessed_at": "2026-10-08"
+      }
+     ]
+    },
+    "superseded_or_duplicate_claim_ids": [
+     "claim:1a1dd669-2134-595f-a4fe-3bc9f2e8ea02",
+     "claim:6acf046d-8fe0-562d-b597-4a03d786aec9"
+    ]
+   },
+   "output_claim": null,
+   "output_via": null,
+   "status": "UNKNOWN",
+   "unknown_reason": "MATERIAL_BASIS_MISMATCH"
+  },
+  {
+   "entity_id": "entity:be3c251b-870b-4029-b775-b4a718edf468",
+   "name": "Kansanshi high-pressure leach autoclaves",
+   "stage": "LEACH_SXEW",
+   "country": "Sambia",
+   "capacity": {
+    "status": "FACT",
+    "value": 100000,
+    "unit": "t/year",
+    "value_kt_per_year": 100.0,
+    "material_basis": "CONCENTRATE",
+    "material_form": "copper concentrate",
+    "reference_year": null,
+    "period_type": "UNKNOWN",
+    "claim": {
+     "claim_id": "claim:81fb1edd-9078-59f6-b5fa-c502afd847f5",
+     "value": 100000,
+     "unit": "t/year",
+     "field": "capacity",
+     "fact_status": "FACT",
+     "evidence_status": "SOURCE_TEXT_REVIEWED",
+     "material_basis": "CONCENTRATE",
+     "material_form": "copper concentrate",
+     "measurement_basis": "Up to100,000tpa flotation concentrate; moisture basis unstated; not copper-content capacity or spare capacity.",
+     "period_type": "UNKNOWN",
+     "period_start": null,
+     "period_end": null,
+     "reference_year": null,
+     "sources": [
+      {
+       "source_id": "fqm-tech-kansanshi-2024",
+       "publisher": "First Quantum Minerals Ltd.",
+       "source_url": "https://www.first-quantum.com/wp-content/uploads/2025/08/240723-Kansanshi-Operations-Technical-Report_FINAL-reduced.pdf",
+       "source_quality": "COMPANY_PRIMARY",
+       "accessed_at": "2026-10-07"
+      }
+     ]
+    },
+    "superseded_or_duplicate_claim_ids": []
+   },
+   "output_claim": null,
+   "output_via": null,
+   "status": "UNKNOWN",
+   "unknown_reason": "MATERIAL_BASIS_MISMATCH"
+  },
+  {
+   "entity_id": "entity:3d5cd21b-fdf4-477b-ab05-4cc57e876514",
+   "name": "PT Smelting Gresik copper smelter and refinery integrated facility",
+   "stage": "SMELTER",
+   "country": "Indonesien",
+   "capacity": {
+    "status": "FACT",
+    "value": 1300000,
+    "unit": "t/year",
+    "value_kt_per_year": 1300.0,
+    "material_basis": "CONCENTRATE",
+    "material_form": "copper concentrate",
+    "reference_year": null,
+    "period_type": "UNKNOWN",
+    "claim": {
+     "claim_id": "claim:14012ed8-7894-5df0-99d1-6916562995ce",
+     "value": 1300000,
+     "unit": "t/year",
+     "field": "capacity",
+     "fact_status": "FACT",
+     "evidence_status": "SOURCE_TEXT_REVIEWED",
+     "material_basis": "CONCENTRATE",
+     "material_form": "copper concentrate",
+     "measurement_basis": "Reported nominal concentrate processingcapacity; moisturebasisnotexplicit; nofreecapacity",
+     "period_type": "UNKNOWN",
+     "period_start": null,
+     "period_end": null,
+     "reference_year": null,
+     "sources": [
+      {
+       "source_id": "v292-global-fcx-indonesia",
+       "publisher": "Freeport-McMoRan",
+       "source_url": "https://www.fcx.com/operations/indonesia",
+       "source_quality": "COMPANY_PRIMARY",
+       "accessed_at": "2026-10-07"
+      }
+     ]
+    },
+    "superseded_or_duplicate_claim_ids": []
+   },
+   "output_claim": null,
+   "output_via": null,
+   "status": "UNKNOWN",
+   "unknown_reason": "MATERIAL_BASIS_MISMATCH"
+  },
+  {
+   "entity_id": "entity:8f3aa0c9-be83-4459-8e1e-78f06e623b5d",
+   "name": "PTFI Manyar copper smelter",
+   "stage": "SMELTER",
+   "country": "Indonesien",
+   "capacity": {
+    "status": "FACT",
+    "value": 1700000,
+    "unit": "t/year",
+    "value_kt_per_year": 1700.0,
+    "material_basis": "CONCENTRATE",
+    "material_form": "copper concentrate",
+    "reference_year": null,
+    "period_type": "UNKNOWN",
+    "claim": {
+     "claim_id": "claim:9a0c9d7f-394a-5cfe-b75d-e3992b888e3b",
+     "value": 1700000,
+     "unit": "t/year",
+     "field": "capacity",
+     "fact_status": "FACT",
+     "evidence_status": "SOURCE_TEXT_REVIEWED",
+     "material_basis": "CONCENTRATE",
+     "material_form": "copper concentrate",
+     "measurement_basis": "Reported nominal concentrate processingcapacity; moisturebasisnotexplicit; nofreecapacity",
+     "period_type": "UNKNOWN",
+     "period_start": null,
+     "period_end": null,
+     "reference_year": null,
+     "sources": [
+      {
+       "source_id": "v292-global-fcx-indonesia",
+       "publisher": "Freeport-McMoRan",
+       "source_url": "https://www.fcx.com/operations/indonesia",
+       "source_quality": "COMPANY_PRIMARY",
+       "accessed_at": "2026-10-07"
+      }
+     ]
+    },
+    "superseded_or_duplicate_claim_ids": []
+   },
+   "output_claim": null,
+   "output_via": null,
+   "status": "UNKNOWN",
+   "unknown_reason": "MATERIAL_BASIS_MISMATCH"
+  }
+ ],
+ "balance": [
+  {
+   "entity_id": "entity:436387f3-1b53-48a2-8f3d-35722a6bcffd",
+   "name": "Kansanshi Copper Smelter",
+   "stage": "SMELTER",
+   "country": "Sambia",
+   "output_kt": 275.37,
+   "output_claim": {
+    "claim_id": "claim:8a780df3-7bf6-5df4-8bc8-c9e3590a674a",
+    "value": 275370,
+    "unit": "t",
+    "field": "production",
+    "fact_status": "FACT",
+    "evidence_status": "SOURCE_TEXT_REVIEWED",
+    "material_basis": "INTERMEDIATE_PRODUCT",
+    "material_form": "ANODE",
+    "measurement_basis": "Copper anodes produced;100%smelter basis;includes feed from multiple mines and third parties",
+    "period_type": "CALENDAR_YEAR",
+    "period_start": "2025-01-01",
+    "period_end": "2026-01-01",
+    "reference_year": 2025,
+    "sources": [
+     {
+      "source_id": "fqm-ar-2025",
+      "publisher": "First Quantum Minerals Ltd.",
+      "source_url": "https://www.first-quantum.com/wp-content/uploads/2026/03/First-Quantum-2025-AR-Final-Web.pdf",
+      "source_quality": "COMPANY_PRIMARY",
+      "accessed_at": "2026-10-07"
+     }
+    ]
+   },
+   "linked_mines": [
+    {
+     "name": "Kansanshi",
+     "value_kt": 181.2,
+     "status": "INFERENCE",
+     "unknown_reason": null
+    },
+    {
+     "name": "Sentinel",
+     "value_kt": 189.0,
+     "status": "INFERENCE",
+     "unknown_reason": null
+    }
+   ],
+   "linked_mine_supply_known_kt": 370.2,
+   "linked_mines_unknown": 0,
+   "difference": "NOT_COMPUTED",
+   "reason": "MATERIAL_BASIS_DIFFERS_AND_THIRD_PARTY_FEED_UNKNOWN"
+  },
+  {
+   "entity_id": "entity:8f3aa0c9-be83-4459-8e1e-78f06e623b5d",
+   "name": "PTFI Manyar copper smelter",
+   "stage": "SMELTER",
+   "country": "Indonesien",
+   "output_kt": 54.1,
+   "output_claim": {
+    "claim_id": "claim:338ec86a-aff0-5b3d-acf7-2d5ace7ad5da",
+    "value": 54100,
+    "unit": "t",
+    "field": "production",
+    "fact_status": "FACT",
+    "evidence_status": "SOURCE_TEXT_REVIEWED",
+    "material_basis": "INTERMEDIATE_PRODUCT",
+    "material_form": "anode",
+    "measurement_basis": "Reported Manyar copper anode production; startup/interruption year",
+    "period_type": "CALENDAR_YEAR",
+    "period_start": "2025-01-01",
+    "period_end": "2026-01-01",
+    "reference_year": 2025,
+    "sources": [
+     {
+      "source_id": "v292-global-fcx-indonesia",
+      "publisher": "Freeport-McMoRan",
+      "source_url": "https://www.fcx.com/operations/indonesia",
+      "source_quality": "COMPANY_PRIMARY",
+      "accessed_at": "2026-10-07"
+     }
+    ]
+   },
+   "linked_mines": [
+    {
+     "name": "Grasberg minerals district / PTFI integrated mine",
+     "value_kt": null,
+     "status": "UNKNOWN",
+     "unknown_reason": "NO_CLAIM_FOR_YEAR"
+    }
+   ],
+   "linked_mine_supply_known_kt": null,
+   "linked_mines_unknown": 1,
+   "difference": "NOT_COMPUTED",
+   "reason": "MATERIAL_BASIS_DIFFERS_AND_THIRD_PARTY_FEED_UNKNOWN"
+  },
+  {
+   "entity_id": "entity:59fb2dd1-8f0e-4dd9-a207-03318a398b65",
+   "name": "Ilo copper refinery",
+   "stage": "REFINERY",
+   "country": "Peru",
+   "output_kt": 244.2,
+   "output_claim": {
+    "claim_id": "claim:53b115db-939f-5704-b4c7-71ba114bed1c",
+    "value": 244.2,
+    "unit": "kt",
+    "field": "production",
+    "fact_status": "FACT",
+    "evidence_status": "SOURCE_TEXT_REVIEWED",
+    "material_basis": "REFINED_METAL",
+    "material_form": "copper cathode",
+    "measurement_basis": "PLANT_CATHODE_OUTPUT",
+    "period_type": "CALENDAR_YEAR",
+    "period_start": "2025-01-01",
+    "period_end": "2026-01-01",
+    "reference_year": 2025,
+    "sources": [
+     {
+      "source_id": "v292-southern-10k-2025",
+      "publisher": "Southern Copper Corporation",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1001838/000110465926021492/scco-20251231x10k.htm",
+      "source_quality": "REGULATORY",
+      "accessed_at": "2026-10-07"
+     }
+    ]
+   },
+   "linked_mines": [
+    {
+     "name": "Cuajone",
+     "value_kt": 162.8,
+     "status": "INFERENCE",
+     "unknown_reason": null
+    },
+    {
+     "name": "Toquepala",
+     "value_kt": 224.9,
+     "status": "INFERENCE",
+     "unknown_reason": null
+    }
+   ],
+   "linked_mine_supply_known_kt": 387.7,
+   "linked_mines_unknown": 0,
+   "difference": "NOT_COMPUTED",
+   "reason": "MATERIAL_BASIS_DIFFERS_AND_THIRD_PARTY_FEED_UNKNOWN"
+  },
+  {
+   "entity_id": "entity:4ea70469-a907-429a-bc87-92c9f97369f6",
+   "name": "PTFI Manyar copper electrorefinery",
+   "stage": "REFINERY",
+   "country": "Indonesien",
+   "output_kt": 42.6,
+   "output_claim": {
+    "claim_id": "claim:14d5d118-dc30-5a1f-9a5a-16c194c9cb17",
+    "value": 42600,
+    "unit": "t",
+    "field": "production",
+    "fact_status": "FACT",
+    "evidence_status": "SOURCE_TEXT_REVIEWED",
+    "material_basis": "REFINED_METAL",
+    "material_form": "copper cathode",
+    "measurement_basis": "Reported Manyar copper cathode production",
+    "period_type": "CALENDAR_YEAR",
+    "period_start": "2025-01-01",
+    "period_end": "2026-01-01",
+    "reference_year": 2025,
+    "sources": [
+     {
+      "source_id": "v292-global-fcx-indonesia",
+      "publisher": "Freeport-McMoRan",
+      "source_url": "https://www.fcx.com/operations/indonesia",
+      "source_quality": "COMPANY_PRIMARY",
+      "accessed_at": "2026-10-07"
+     }
+    ]
+   },
+   "linked_mines": [
+    {
+     "name": "Grasberg minerals district / PTFI integrated mine",
+     "value_kt": null,
+     "status": "UNKNOWN",
+     "unknown_reason": "NO_CLAIM_FOR_YEAR"
+    }
+   ],
+   "linked_mine_supply_known_kt": null,
+   "linked_mines_unknown": 1,
+   "difference": "NOT_COMPUTED",
+   "reason": "MATERIAL_BASIS_DIFFERS_AND_THIRD_PARTY_FEED_UNKNOWN"
+  }
+ ],
+ "world_reference": {
+  "status": "FACT",
+  "reference_id": "usgs-mcs-2026-copper",
+  "year": 2025,
+  "estimate": true,
+  "sources": [
+   {
+    "publisher": "U.S. Geological Survey",
+    "title": "Mineral Commodity Summaries 2026, Copper",
+    "published": "2026-02",
+    "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-copper.pdf",
+    "accessed_at": "2026-10-27",
+    "licence": "Public domain (U.S. Government work, 17 U.S.C. 105)",
+    "source_quality": "GOVERNMENT_STATISTICS",
+    "raw_artifact": "mcs2026-copper.pdf",
+    "raw_artifact_sha256": "c4971f7edfa38feefc51952c5f24889c46f468d936c6620d388233313ae8ae85",
+    "transcription": "mcs2026-copper.txt (pdftotext -layout)",
+    "transcription_sha256": "6a34c6588d409c4fbaa6f839e326e532129aaaaac7332132c641be5842e185df"
+   }
+  ],
+  "approval": {
+   "decision": "USGS Mineral Commodity Summaries as world reference for copper (decision point 7)",
+   "decided_by": "Eddie Sablah",
+   "decided_on": "2026-10-27",
+   "note": "Approved in the project chat in reply to the question whether the yes also covers USGS as world reference."
+  },
+  "unit": "kt",
+  "basis_note": "Data in thousand metric tons, copper content. 2025 values are USGS estimates (e).",
+  "locator": "Page 2, table 'World Mine and Refinery Production and Reserves'",
+  "mine": {
+   "total_kt": 23013,
+   "world_total_rounded_kt": 23000,
+   "other_countries_kt": 3000,
+   "groups": [
+    {
+     "country": "Chile",
+     "kt": 5300,
+     "share_pct": 23.0
+    },
+    {
+     "country": "DR Kongo",
+     "kt": 3200,
+     "share_pct": 13.9
+    },
+    {
+     "country": "Peru",
+     "kt": 2700,
+     "share_pct": 11.7
+    },
+    {
+     "country": "China",
+     "kt": 1800,
+     "share_pct": 7.8
+    },
+    {
+     "country": "Russland",
+     "kt": 1300,
+     "share_pct": 5.6
+    },
+    {
+     "country": "USA",
+     "kt": 1000,
+     "share_pct": 4.3
+    },
+    {
+     "country": "Sambia",
+     "kt": 940,
+     "share_pct": 4.1
+    },
+    {
+     "country": "Australien",
+     "kt": 730,
+     "share_pct": 3.2
+    },
+    {
+     "country": "Indonesien",
+     "kt": 710,
+     "share_pct": 3.1
+    },
+    {
+     "country": "Kasachstan",
+     "kt": 710,
+     "share_pct": 3.1
+    },
+    {
+     "country": "Mexiko",
+     "kt": 690,
+     "share_pct": 3.0
+    },
+    {
+     "country": "Kanada",
+     "kt": 500,
+     "share_pct": 2.2
+    },
+    {
+     "country": "Polen",
+     "kt": 410,
+     "share_pct": 1.8
+    },
+    {
+     "country": "Indien",
+     "kt": 23,
+     "share_pct": 0.1
+    }
+   ],
+   "hhi_named_countries": 1033,
+   "hhi_note": "Other countries are an aggregate and not attributed; the HHI over named countries is a lower bound.",
+   "top1_share_pct": 23.0,
+   "top3_share_pct": 48.6,
+   "hhi_level": "NIEDRIG"
+  },
+  "refinery": {
+   "total_kt": 28970,
+   "world_total_rounded_kt": 29000,
+   "other_countries_kt": 2100,
+   "groups": [
+    {
+     "country": "China",
+     "kt": 14000,
+     "share_pct": 48.3
+    },
+    {
+     "country": "DR Kongo",
+     "kt": 2800,
+     "share_pct": 9.7
+    },
+    {
+     "country": "Chile",
+     "kt": 1700,
+     "share_pct": 5.9
+    },
+    {
+     "country": "Japan",
+     "kt": 1400,
+     "share_pct": 4.8
+    },
+    {
+     "country": "Russland",
+     "kt": 950,
+     "share_pct": 3.3
+    },
+    {
+     "country": "USA",
+     "kt": 850,
+     "share_pct": 2.9
+    },
+    {
+     "country": "Indien",
+     "kt": 620,
+     "share_pct": 2.1
+    },
+    {
+     "country": "Deutschland",
+     "kt": 610,
+     "share_pct": 2.1
+    },
+    {
+     "country": "Südkorea",
+     "kt": 610,
+     "share_pct": 2.1
+    },
+    {
+     "country": "Polen",
+     "kt": 560,
+     "share_pct": 1.9
+    },
+    {
+     "country": "Kasachstan",
+     "kt": 500,
+     "share_pct": 1.7
+    },
+    {
+     "country": "Mexiko",
+     "kt": 480,
+     "share_pct": 1.7
+    },
+    {
+     "country": "Australien",
+     "kt": 460,
+     "share_pct": 1.6
+    },
+    {
+     "country": "Indonesien",
+     "kt": 400,
+     "share_pct": 1.4
+    },
+    {
+     "country": "Peru",
+     "kt": 340,
+     "share_pct": 1.2
+    },
+    {
+     "country": "Kanada",
+     "kt": 320,
+     "share_pct": 1.1
+    },
+    {
+     "country": "Sambia",
+     "kt": 270,
+     "share_pct": 0.9
+    }
+   ],
+   "hhi_named_countries": 2535,
+   "hhi_note": "Other countries are an aggregate and not attributed; the HHI over named countries is a lower bound.",
+   "top1_share_pct": 48.3,
+   "top3_share_pct": 63.9,
+   "hhi_level": "HOCH"
+  },
+  "mine_vs_refinery": [
+   {
+    "country": "Chile",
+    "mine_kt": 5300,
+    "refinery_kt": 1700,
+    "mine_minus_refinery_kt": 3600
+   },
+   {
+    "country": "Peru",
+    "mine_kt": 2700,
+    "refinery_kt": 340,
+    "mine_minus_refinery_kt": 2360
+   },
+   {
+    "country": "Sambia",
+    "mine_kt": 940,
+    "refinery_kt": 270,
+    "mine_minus_refinery_kt": 670
+   },
+   {
+    "country": "DR Kongo",
+    "mine_kt": 3200,
+    "refinery_kt": 2800,
+    "mine_minus_refinery_kt": 400
+   },
+   {
+    "country": "Russland",
+    "mine_kt": 1300,
+    "refinery_kt": 950,
+    "mine_minus_refinery_kt": 350
+   },
+   {
+    "country": "Indonesien",
+    "mine_kt": 710,
+    "refinery_kt": 400,
+    "mine_minus_refinery_kt": 310
+   },
+   {
+    "country": "Australien",
+    "mine_kt": 730,
+    "refinery_kt": 460,
+    "mine_minus_refinery_kt": 270
+   },
+   {
+    "country": "Kasachstan",
+    "mine_kt": 710,
+    "refinery_kt": 500,
+    "mine_minus_refinery_kt": 210
+   },
+   {
+    "country": "Mexiko",
+    "mine_kt": 690,
+    "refinery_kt": 480,
+    "mine_minus_refinery_kt": 210
+   },
+   {
+    "country": "Kanada",
+    "mine_kt": 500,
+    "refinery_kt": 320,
+    "mine_minus_refinery_kt": 180
+   },
+   {
+    "country": "USA",
+    "mine_kt": 1000,
+    "refinery_kt": 850,
+    "mine_minus_refinery_kt": 150
+   },
+   {
+    "country": "Polen",
+    "mine_kt": 410,
+    "refinery_kt": 560,
+    "mine_minus_refinery_kt": -150
+   },
+   {
+    "country": "Indien",
+    "mine_kt": 23,
+    "refinery_kt": 620,
+    "mine_minus_refinery_kt": -597
+   },
+   {
+    "country": "Deutschland",
+    "mine_kt": 0,
+    "refinery_kt": 610,
+    "mine_minus_refinery_kt": -610
+   },
+   {
+    "country": "Südkorea",
+    "mine_kt": 0,
+    "refinery_kt": 610,
+    "mine_minus_refinery_kt": -610
+   },
+   {
+    "country": "Japan",
+    "mine_kt": 0,
+    "refinery_kt": 1400,
+    "mine_minus_refinery_kt": -1400
+   },
+   {
+    "country": "China",
+    "mine_kt": 1800,
+    "refinery_kt": 14000,
+    "mine_minus_refinery_kt": -12200
+   }
+  ],
+  "mine_vs_refinery_restrictions": [
+   "REFINERY_INCLUDES_SECONDARY_FROM_SCRAP",
+   "NOT_A_TRADE_FLOW",
+   "USGS_ESTIMATE_FOR_2025"
+  ],
+  "coverage": {
+   "status": "INFERENCE",
+   "recorded_kt": 3319.7,
+   "share_of_world_mine_pct": 14.4,
+   "by_country": [
+    {
+     "country": "Chile",
+     "recorded_kt": 2561.8,
+     "world_kt": 5300,
+     "share_pct": 48.3
+    },
+    {
+     "country": "Peru",
+     "recorded_kt": 387.7,
+     "world_kt": 2700,
+     "share_pct": 14.4
+    },
+    {
+     "country": "Sambia",
+     "recorded_kt": 370.2,
+     "world_kt": 940,
+     "share_pct": 39.4
+    }
+   ],
+   "restrictions": [
+    "LEDGER_MIXES_CALENDAR_AND_FISCAL_YEARS",
+    "LEDGER_PAYABLE_VS_USGS_RECOVERABLE_CONTENT",
+    "USGS_ESTIMATE_FOR_2025"
+   ],
+   "share_incl_fact_candidates_pct": 16.4
+  },
+  "consumption": {
+   "status": "UNKNOWN",
+   "unknown_reason": "NOT_IN_REFERENCE",
+   "note": "MCS 2026 reports no world refined consumption; only United States consumption (reported refined copper 2025e: 1,700 kt).",
+   "united_states_refined_kt": 1700
+  }
+ },
+ "buyers": [
+  {
+   "entity_id": "entity:ebce9510-a269-444d-97bc-a70b59467fc0",
+   "name": "JXNMM smelting facilities in Japan — unnamed reported group",
+   "entity_type": "PROCESSING_FACILITY_GROUP",
+   "country": "Japan",
+   "direct": [
+    {
+     "relationship_id": "relationship:9039d692-d391-5e61-a8bc-039896ef6f50",
+     "type": "TRANSPORTS_TO",
+     "from": "M/V KORYU",
+     "material_form": "copper concentrate",
+     "fact_status": "FACT",
+     "temporal_status": "SOURCE_DATE_ONLY",
+     "seller_side_share_pct": null,
+     "scope": null,
+     "review_status": "REVIEW_READY"
+    }
+   ],
+   "upstream_mines": [
+    {
+     "mine": "Caserones",
+     "country": "Chile"
+    },
+    {
+     "mine": "Escondida",
+     "country": "Chile"
+    },
+    {
+     "mine": "Los Pelambres",
+     "country": "Chile"
+    }
+   ],
+   "upstream_countries": [
+    "Chile"
+   ],
+   "path_review_status": {
+    "REVIEW_READY": 2,
+    "VERIFIED": 2
+   },
+   "path_fact_status": {
+    "FACT": 4
+   },
+   "relationship_ids": [
+    "relationship:33ac137d-1f88-5bcb-b379-a2643dee77d0",
+    "relationship:460a6a99-92a3-51ad-bea3-e1c8c8382514",
+    "relationship:5a216e67-6d41-5d72-a8bf-548c4ca6a338",
+    "relationship:9039d692-d391-5e61-a8bc-039896ef6f50"
+   ]
+  },
+  {
+   "entity_id": "entity:e79bd934-253b-462d-b7d2-c4928fc2bc93",
+   "name": "FQM Trading",
+   "entity_type": "COMPANY",
+   "country": "UNKNOWN",
+   "direct": [
+    {
+     "relationship_id": "relationship:59045b1b-8981-52cb-a0ab-df060073bb89",
+     "type": "MARKETS_VIA",
+     "from": "Kansanshi SX-EW plant",
+     "material_form": "CATHODE",
+     "fact_status": "FACT",
+     "temporal_status": "SOURCE_DATE_ONLY",
+     "seller_side_share_pct": null,
+     "scope": null,
+     "review_status": "REVIEW_READY"
+    },
+    {
+     "relationship_id": "relationship:ea9dc227-d48f-53c7-aaef-9aa48952e5a0",
+     "type": "MARKETS_VIA",
+     "from": "Kansanshi Copper Smelter",
+     "material_form": "anode",
+     "fact_status": "FACT",
+     "temporal_status": "SOURCE_DATE_ONLY",
+     "seller_side_share_pct": null,
+     "scope": null,
+     "review_status": "REVIEW_READY"
+    }
+   ],
+   "upstream_mines": [
+    {
+     "mine": "Kansanshi",
+     "country": "Sambia"
+    },
+    {
+     "mine": "Sentinel",
+     "country": "Sambia"
+    }
+   ],
+   "upstream_countries": [
+    "Sambia"
+   ],
+   "path_review_status": {
+    "APPROVED": 4,
+    "REVIEW_READY": 5
+   },
+   "path_fact_status": {
+    "FACT": 9
+   },
+   "relationship_ids": [
+    "relationship:0d55d5a0-9901-5595-9a6e-bb324a0104f5",
+    "relationship:59045b1b-8981-52cb-a0ab-df060073bb89",
+    "relationship:5b153ae0-9729-58ca-8535-baacf965a699",
+    "relationship:5b954484-3874-5083-b3a4-3576e93bb1c3",
+    "relationship:6c327896-66c1-539c-bb0e-aae335ba2a50",
+    "relationship:a2dd1104-bfa0-5d54-b6ab-f419db0b006f",
+    "relationship:b0e6ee97-a799-51b3-af44-c717f8acd661",
+    "relationship:b8bb3e2b-e5e8-5a24-8dec-8505c9d5b487",
+    "relationship:ea9dc227-d48f-53c7-aaef-9aa48952e5a0"
+   ]
+  },
+  {
+   "entity_id": "entity:128b2a5c-962c-45e9-a69d-92cf6b78dbce",
+   "name": "Aurubis Group",
+   "entity_type": "COMPANY",
+   "country": "UNKNOWN",
+   "direct": [
+    {
+     "relationship_id": "relationship:04d96a54-2fbd-572f-8f7b-bea248f233ca",
+     "type": "OFFTAKE_AGREEMENT",
+     "from": "Trafigura (group reference)",
+     "material_form": "anode",
+     "fact_status": "FACT",
+     "temporal_status": "SOURCE_DATE_ONLY",
+     "seller_side_share_pct": null,
+     "scope": "FIRST_ANODE_SALE_EVENT",
+     "review_status": "APPROVED"
+    },
+    {
+     "relationship_id": "relationship:05fe1841-bc4b-53dd-8016-9591d74825c8",
+     "type": "PROCESSES_AT",
+     "from": "Kamoa-Kakula on-site copper smelter",
+     "material_form": "anode",
+     "fact_status": "INFERENCE",
+     "temporal_status": "SOURCE_DATE_ONLY",
+     "seller_side_share_pct": null,
+     "scope": null,
+     "review_status": "BLOCKED"
+    }
+   ],
+   "upstream_mines": [
+    {
+     "mine": "Kamoa-Kakula",
+     "country": "DR Kongo"
+    }
+   ],
+   "upstream_countries": [
+    "DR Kongo"
+   ],
+   "path_review_status": {
+    "APPROVED": 3,
+    "BLOCKED": 1,
+    "REVIEW_READY": 2
+   },
+   "path_fact_status": {
+    "FACT": 5,
+    "INFERENCE": 1
+   },
+   "relationship_ids": [
+    "relationship:04d96a54-2fbd-572f-8f7b-bea248f233ca",
+    "relationship:05fe1841-bc4b-53dd-8016-9591d74825c8",
+    "relationship:61b92b5f-8d3b-5120-bd36-76f5239f0390",
+    "relationship:8eaa4876-19e5-54af-a8ff-2fdf3dbcb71a",
+    "relationship:cc0bdbcd-b383-522c-a775-d71f0ef962ab",
+    "relationship:fe26164a-441c-53b7-b882-9c3bca07d7e4"
+   ]
+  },
+  {
+   "entity_id": "entity:4e7d10e6-6175-40fc-9306-6eb827672a41",
+   "name": "CITIC Metal",
+   "entity_type": "COMPANY",
+   "country": "UNKNOWN",
+   "direct": [
+    {
+     "relationship_id": "relationship:60e1382f-0189-55f9-a60b-ad2c0f44844f",
+     "type": "OFFTAKE_AGREEMENT",
+     "from": "Kamoa-Kakula on-site copper smelter",
+     "material_form": "anode",
+     "fact_status": "FACT",
+     "temporal_status": "SOURCE_DATE_ONLY",
+     "seller_side_share_pct": null,
+     "scope": "ON_SITE_SMELTER_ANODES",
+     "review_status": "REVIEW_READY"
+    }
+   ],
+   "upstream_mines": [
+    {
+     "mine": "Kamoa-Kakula",
+     "country": "DR Kongo"
+    }
+   ],
+   "upstream_countries": [
+    "DR Kongo"
+   ],
+   "path_review_status": {
+    "APPROVED": 2,
+    "REVIEW_READY": 3
+   },
+   "path_fact_status": {
+    "FACT": 5
+   },
+   "relationship_ids": [
+    "relationship:60e1382f-0189-55f9-a60b-ad2c0f44844f",
+    "relationship:61b92b5f-8d3b-5120-bd36-76f5239f0390",
+    "relationship:8eaa4876-19e5-54af-a8ff-2fdf3dbcb71a",
+    "relationship:cc0bdbcd-b383-522c-a775-d71f0ef962ab",
+    "relationship:fe26164a-441c-53b7-b882-9c3bca07d7e4"
+   ]
+  },
+  {
+   "entity_id": "entity:607891da-fb87-4ecb-9f86-1d7792563aa9",
+   "name": "CITIC Metal (HK) Limited",
+   "entity_type": "COMPANY",
+   "country": "Hongkong",
+   "direct": [
+    {
+     "relationship_id": "relationship:7964e940-95f8-5be8-8ef0-fdf3809ee0f0",
+     "type": "OFFTAKE_AGREEMENT",
+     "from": "Kamoa-Kakula Copper Complex",
+     "material_form": null,
+     "fact_status": "FACT",
+     "temporal_status": "SOURCE_DATE_ONLY",
+     "seller_side_share_pct": 50,
+     "scope": "PHASE1_ONLY",
+     "review_status": "APPROVED"
+    },
+    {
+     "relationship_id": "relationship:9baec753-27eb-5bab-b0db-859ec1c4b74f",
+     "type": "OFFTAKE_AGREEMENT",
+     "from": "Kamoa-Kakula Copper Complex",
+     "material_form": "CONCENTRATE_OR_BLISTER",
+     "fact_status": "FACT",
+     "temporal_status": "SOURCE_DATE_ONLY",
+     "seller_side_share_pct": 50,
+     "scope": "PHASE1_AND_PHASE2_CONCENTRATE_OR_LCS_BLISTER",
+     "review_status": "REVIEW_READY"
+    }
+   ],
+   "upstream_mines": [
+    {
+     "mine": "Kamoa-Kakula",
+     "country": "DR Kongo"
+    }
+   ],
+   "upstream_countries": [
+    "DR Kongo"
+   ],
+   "path_review_status": {
+    "APPROVED": 1,
+    "REVIEW_READY": 1
+   },
+   "path_fact_status": {
+    "FACT": 2
+   },
+   "relationship_ids": [
+    "relationship:7964e940-95f8-5be8-8ef0-fdf3809ee0f0",
+    "relationship:9baec753-27eb-5bab-b0db-859ec1c4b74f"
+   ]
+  },
+  {
+   "entity_id": "entity:39567de9-d39f-4f74-ad86-70dd3d30ec95",
+   "name": "Gold Mountains (H.K.) International Mining Company Limited",
+   "entity_type": "COMPANY",
+   "country": "Hongkong",
+   "direct": [
+    {
+     "relationship_id": "relationship:01545a1d-038a-5c21-81b3-791f7aa11fe2",
+     "type": "OFFTAKE_AGREEMENT",
+     "from": "Kamoa-Kakula on-site copper smelter",
+     "material_form": "anode",
+     "fact_status": "FACT",
+     "temporal_status": "SOURCE_DATE_ONLY",
+     "seller_side_share_pct": null,
+     "scope": "ON_SITE_SMELTER_ANODES",
+     "review_status": "VERIFIED"
+    },
+    {
+     "relationship_id": "relationship:1ee31487-ccf9-5f2c-a7df-8bda6f67be43",
+     "type": "OFFTAKE_AGREEMENT",
+     "from": "Kamoa-Kakula Copper Complex",
+     "material_form": "CONCENTRATE_OR_BLISTER",
+     "fact_status": "FACT",
+     "temporal_status": "SOURCE_DATE_ONLY",
+     "seller_side_share_pct": 50,
+     "scope": "PHASE1_AND_PHASE2_CONCENTRATE_OR_LCS_BLISTER",
+     "review_status": "REVIEW_READY"
+    },
+    {
+     "relationship_id": "relationship:2f235415-66b7-551a-8294-32d6de1df944",
+     "type": "OFFTAKE_AGREEMENT",
+     "from": "Kamoa-Kakula Copper Complex",
+     "material_form": null,
+     "fact_status": "FACT",
+     "temporal_status": "SOURCE_DATE_ONLY",
+     "seller_side_share_pct": 50,
+     "scope": "PHASE1_ONLY",
+     "review_status": "APPROVED"
+    }
+   ],
+   "upstream_mines": [
+    {
+     "mine": "Kamoa-Kakula",
+     "country": "DR Kongo"
+    }
+   ],
+   "upstream_countries": [
+    "DR Kongo"
+   ],
+   "path_review_status": {
+    "APPROVED": 3,
+    "REVIEW_READY": 3,
+    "VERIFIED": 1
+   },
+   "path_fact_status": {
+    "FACT": 7
+   },
+   "relationship_ids": [
+    "relationship:01545a1d-038a-5c21-81b3-791f7aa11fe2",
+    "relationship:1ee31487-ccf9-5f2c-a7df-8bda6f67be43",
+    "relationship:2f235415-66b7-551a-8294-32d6de1df944",
+    "relationship:61b92b5f-8d3b-5120-bd36-76f5239f0390",
+    "relationship:8eaa4876-19e5-54af-a8ff-2fdf3dbcb71a",
+    "relationship:cc0bdbcd-b383-522c-a775-d71f0ef962ab",
+    "relationship:fe26164a-441c-53b7-b882-9c3bca07d7e4"
+   ]
+  },
+  {
+   "entity_id": "entity:fe9a11f7-1ed7-410d-b6f6-fd07bdcbe6bc",
+   "name": "Mitsubishi Materials — berichteter Abnehmer",
+   "entity_type": "DOWNSTREAM_COMPANY_REFERENCE",
+   "country": "UNKNOWN",
+   "direct": [
+    {
+     "relationship_id": "relationship:37d11b18-3b91-5a4a-9414-244c7aa2f88e",
+     "type": "SUPPLIES",
+     "from": "Escondida",
+     "material_form": "copper concentrate",
+     "fact_status": "FACT",
+     "temporal_status": "SOURCE_DATE_ONLY",
+     "seller_side_share_pct": null,
+     "scope": null,
+     "review_status": "REVIEW_READY"
+    }
+   ],
+   "upstream_mines": [
+    {
+     "mine": "Escondida",
+     "country": "Chile"
+    }
+   ],
+   "upstream_countries": [
+    "Chile"
+   ],
+   "path_review_status": {
+    "REVIEW_READY": 1
+   },
+   "path_fact_status": {
+    "FACT": 1
+   },
+   "relationship_ids": [
+    "relationship:37d11b18-3b91-5a4a-9414-244c7aa2f88e"
+   ]
+  },
+  {
+   "entity_id": "entity:b303fd18-cb50-43f6-ab72-53466f5112ec",
+   "name": "Trafigura (group reference)",
+   "entity_type": "COMPANY",
+   "country": "UNKNOWN",
+   "direct": [
+    {
+     "relationship_id": "relationship:370d9263-bd59-5a1e-a9ed-1677b5811e1f",
+     "type": "OFFTAKE_AGREEMENT",
+     "from": "Kamoa-Kakula on-site copper smelter",
+     "material_form": "anode",
+     "fact_status": "FACT",
+     "temporal_status": "SOURCE_DATE_ONLY",
+     "seller_side_share_pct": null,
+     "scope": null,
+     "review_status": "APPROVED"
+    }
+   ],
+   "upstream_mines": [
+    {
+     "mine": "Kamoa-Kakula",
+     "country": "DR Kongo"
+    }
+   ],
+   "upstream_countries": [
+    "DR Kongo"
+   ],
+   "path_review_status": {
+    "APPROVED": 3,
+    "REVIEW_READY": 2
+   },
+   "path_fact_status": {
+    "FACT": 5
+   },
+   "relationship_ids": [
+    "relationship:370d9263-bd59-5a1e-a9ed-1677b5811e1f",
+    "relationship:61b92b5f-8d3b-5120-bd36-76f5239f0390",
+    "relationship:8eaa4876-19e5-54af-a8ff-2fdf3dbcb71a",
+    "relationship:cc0bdbcd-b383-522c-a775-d71f0ef962ab",
+    "relationship:fe26164a-441c-53b7-b882-9c3bca07d7e4"
+   ]
+  },
+  {
+   "entity_id": "entity:8915a80c-023a-434b-bc37-ed13e1819f61",
+   "name": "Trafigura Asia Trading Pte Ltd",
+   "entity_type": "COMPANY",
+   "country": "Singapur",
+   "direct": [
+    {
+     "relationship_id": "relationship:9a334e27-9ff8-5e58-924d-53024f649504",
+     "type": "OFFTAKE_AGREEMENT",
+     "from": "Kamoa-Kakula on-site copper smelter",
+     "material_form": "anode",
+     "fact_status": "FACT",
+     "temporal_status": "SOURCE_DATE_ONLY",
+     "seller_side_share_pct": 20,
+     "scope": "ON_SITE_SMELTER_ANODES",
+     "review_status": "REVIEW_READY"
+    }
+   ],
+   "upstream_mines": [
+    {
+     "mine": "Kamoa-Kakula",
+     "country": "DR Kongo"
+    }
+   ],
+   "upstream_countries": [
+    "DR Kongo"
+   ],
+   "path_review_status": {
+    "APPROVED": 2,
+    "REVIEW_READY": 3
+   },
+   "path_fact_status": {
+    "FACT": 5
+   },
+   "relationship_ids": [
+    "relationship:61b92b5f-8d3b-5120-bd36-76f5239f0390",
+    "relationship:8eaa4876-19e5-54af-a8ff-2fdf3dbcb71a",
+    "relationship:9a334e27-9ff8-5e58-924d-53024f649504",
+    "relationship:cc0bdbcd-b383-522c-a775-d71f0ef962ab",
+    "relationship:fe26164a-441c-53b7-b882-9c3bca07d7e4"
+   ]
+  },
+  {
+   "entity_id": "entity:b62bde3f-2f94-41c6-869c-30fcb8a92734",
+   "name": "Trafigura Pte. Ltd.",
+   "entity_type": "COMPANY",
+   "country": "UNKNOWN",
+   "direct": [
+    {
+     "relationship_id": "relationship:9274239d-0ae7-58fb-8c04-5dfab7a72819",
+     "type": "OFFTAKE_AGREEMENT",
+     "from": "Kamoa-Kakula Copper Complex",
+     "material_form": "copper concentrate",
+     "fact_status": "FACT",
+     "temporal_status": "SOURCE_DATE_ONLY",
+     "seller_side_share_pct": null,
+     "scope": "HISTORICAL_2022_TO_2024_CONCENTRATE_CONTRACT",
+     "review_status": "REVIEW_READY"
+    }
+   ],
+   "upstream_mines": [
+    {
+     "mine": "Kamoa-Kakula",
+     "country": "DR Kongo"
+    }
+   ],
+   "upstream_countries": [
+    "DR Kongo"
+   ],
+   "path_review_status": {
+    "REVIEW_READY": 1
+   },
+   "path_fact_status": {
+    "FACT": 1
+   },
+   "relationship_ids": [
+    "relationship:9274239d-0ae7-58fb-8c04-5dfab7a72819"
+   ]
+  },
+  {
+   "entity_id": "entity:de79b038-f961-444a-b997-7e5405f64aaf",
+   "name": "Jiangxi Copper Company Limited",
+   "entity_type": "COMPANY",
+   "country": "UNKNOWN",
+   "direct": [
+    {
+     "relationship_id": "relationship:3ef23e52-5e4e-56ca-a16e-9d0ef4ea3b14",
+     "type": "OFFTAKE_AGREEMENT",
+     "from": "First Quantum Minerals Ltd.",
+     "material_form": "anode",
+     "fact_status": "FACT",
+     "temporal_status": "SOURCE_DATE_ONLY",
+     "seller_side_share_pct": null,
+     "scope": null,
+     "review_status": "REVIEW_READY"
+    },
+    {
+     "relationship_id": "relationship:61533688-b701-5931-8dca-51b047fdcaa2",
+     "type": "OFFTAKE_AGREEMENT",
+     "from": "First Quantum Minerals Ltd.",
+     "material_form": "anode",
+     "fact_status": "FACT",
+     "temporal_status": "SOURCE_DATE_ONLY",
+     "seller_side_share_pct": null,
+     "scope": null,
+     "review_status": "APPROVED"
+    }
+   ],
+   "upstream_mines": [],
+   "upstream_countries": [],
+   "path_review_status": {
+    "APPROVED": 1,
+    "REVIEW_READY": 1
+   },
+   "path_fact_status": {
+    "FACT": 2
+   },
+   "relationship_ids": [
+    "relationship:3ef23e52-5e4e-56ca-a16e-9d0ef4ea3b14",
+    "relationship:61533688-b701-5931-8dca-51b047fdcaa2"
+   ]
+  }
+ ],
+ "candidates": {
+  "package": "CPR-1-2026-10-27",
+  "status": "CANDIDATES_NOT_IN_LEDGER",
+  "source_sha256": "6b927983c7f3944deb3dacefbf8e09ad06881dfd574870fea0a6cd84df332d57",
+  "rows": [
+   {
+    "candidate_id": "cpr1:grasberg:2025",
+    "chain_id": "grasberg",
+    "reference_year": 2025,
+    "period_type": "CALENDAR_YEAR",
+    "period_start": "2025-01-01",
+    "period_end": "2026-01-01",
+    "value": 1.0,
+    "unit": "billion lb",
+    "value_kt": 453.6,
+    "material_basis": "CONTAINED_METAL",
+    "measurement_basis": "District production as reported by the operator; payable/recoverable basis not stated in the sentence; value rounded to 0.1 billion lb (about +/- 23 kt)",
+    "fact_status": "FACT",
+    "source_id": "cpr1-fcx-sustainability-2025",
+    "locator": "Page 74, section Grasberg Minerals District",
+    "quote_fragments": [
+     "GRASBERG MINERALS DISTRICT",
+     "production totaled 1.0 billion pounds of copper in 2025"
+    ],
+    "usage_restrictions": [
+     "ROUNDED_SOURCE_VALUE",
+     "MEASUREMENT_BASIS_NOT_STATED",
+     "CANDIDATE_NOT_IN_LEDGER"
+    ],
+    "source": {
+     "source_id": "cpr1-fcx-sustainability-2025",
+     "publisher": "Freeport-McMoRan",
+     "source_name": "2025 Annual Report on Sustainability",
+     "source_url": "https://www.fcx.com/sites/fcx/files/documents/sustainability/2025-annual-report-on-sustainability.pdf",
+     "source_published_at": "2026",
+     "accessed_at": "2026-10-27",
+     "source_quality": "COMPANY_PRIMARY",
+     "evidence_completeness": "PDF_HASH_AND_TEXT_PINNED"
+    }
+   },
+   {
+    "candidate_id": "cpr1:antamina:2024",
+    "chain_id": "antamina",
+    "reference_year": 2024,
+    "period_type": "CALENDAR_YEAR",
+    "period_start": "2024-01-01",
+    "period_end": "2025-01-01",
+    "value": 429,
+    "unit": "kt",
+    "value_kt": 429.0,
+    "material_basis": "CONTAINED_METAL",
+    "measurement_basis": "100% operation, reported by the operator (Compañía Minera Antamina)",
+    "fact_status": "FACT",
+    "source_id": "cpr1-antamina-sustainability-2024",
+    "locator": "Letter from management, page 3",
+    "quote_fragments": [
+     "we delivered strong results. We exceeded our production targets, achieving",
+     "429 thousand tonnes of copper, 273 thousand tonnes of zinc"
+    ],
+    "usage_restrictions": [
+     "CANDIDATE_NOT_IN_LEDGER"
+    ],
+    "source": {
+     "source_id": "cpr1-antamina-sustainability-2024",
+     "publisher": "Compañía Minera Antamina S.A.",
+     "source_name": "Sustainability Report 2024",
+     "source_url": "https://www.antamina.com/wp-content/uploads/2025/11/sustainability-report-antamina-2024.pdf",
+     "source_published_at": "2025-11",
+     "accessed_at": "2026-10-27",
+     "source_quality": "COMPANY_PRIMARY",
+     "evidence_completeness": "PDF_HASH_AND_TEXT_PINNED"
+    }
+   },
+   {
+    "candidate_id": "cpr1:antamina:2025",
+    "chain_id": "antamina",
+    "reference_year": 2025,
+    "period_type": "CALENDAR_YEAR",
+    "period_start": "2025-01-01",
+    "period_end": "2026-01-01",
+    "value": 86,
+    "unit": "kt",
+    "value_kt": 382.2,
+    "material_basis": "CONTAINED_METAL",
+    "measurement_basis": "Derived 100% value = Teck's reported 22.5% share (86 kt, metal contained in concentrate) / 0.225",
+    "fact_status": "INFERENCE",
+    "derivation": {
+     "reported_share_value_kt": 86,
+     "ownership_share": 0.225,
+     "formula": "value_kt = 86 / 0.225"
+    },
+    "source_id": "cpr1-teck-aif-2025",
+    "locator": "Production and guidance table, copper, 2025 column",
+    "quote_fragments": [
+     "Antamina 86 95-105",
+     "Includes 22.5% of production from Antamina",
+     "Metal contained in concentrate."
+    ],
+    "usage_restrictions": [
+     "EQUITY_SHARE_SCALED_TO_100_PERCENT",
+     "NOT_A_REPORTED_100_PERCENT_VALUE",
+     "CANDIDATE_NOT_IN_LEDGER"
+    ],
+    "source": {
+     "source_id": "cpr1-teck-aif-2025",
+     "publisher": "Teck Resources Limited",
+     "source_name": "Annual Information Form 2025",
+     "source_url": "https://www.teck.com/media/Teck-AIF-2025.pdf",
+     "source_published_at": "2026",
+     "accessed_at": "2026-10-27",
+     "source_quality": "COMPANY_PRIMARY",
+     "evidence_completeness": "FULL_ARTIFACT_PINNED"
+    }
+   }
+  ],
+  "not_covered": {
+   "olympic-dam": "bhp.com returns 403",
+   "prominent-hill": "bhp.com returns 403",
+   "carrapateena": "bhp.com returns 403",
+   "kennecott": "riotinto.com returns 403",
+   "oyu-tolgoi": "riotinto.com returns 403; ot.mn not reachable",
+   "kamoa": "ledger has two conflicting Ivanhoe values per year; resolution is a user decision, not a new source"
+  }
+ },
+ "output_sha256": "970a0ba3fe3954eb4cb8699c2170e816f1be2f76661913311a2dd8c80a49cf67"
+}

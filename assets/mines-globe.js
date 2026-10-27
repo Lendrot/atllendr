@@ -66,6 +66,8 @@ function showDetail(a){
   const intelligence=document.createElement('a');intelligence.className='related-link';
   intelligence.href='/kupfer/?chain='+copperRoute[0]+'&entity='+encodeURIComponent(copperRoute[1]);
   intelligence.textContent=a.name+': belegte Kupferkette und Ausfallanalyse →';$('detail').append(intelligence);
+  const risk=document.createElement('div');risk.textContent='Risikosignale werden geladen …';$('detail').append(risk);const riskSelection=selectionRevision;
+  import('./risk-signals.mjs').then(async m=>{const v=await m.loadRiskView();if(riskSelection===selectionRevision)risk.innerHTML=m.renderChainRisk(v,copperRoute[0])}).catch(e=>{risk.textContent='Risikosignale nicht geladen. Ohne Daten gilt kein Standort als unkritisch.';console.error(e)});
  }
  const availability=document.createElement('section');availability.id='public-availability';availability.setAttribute('aria-live','polite');availability.textContent='Öffentliche Quellenverfügbarkeit wird geladen …';$('detail').append(availability);
  const gapSelection=selectionRevision;resourceGapRefs(a.id).then(gaps=>{if(gapSelection!==selectionRevision||selected!==a.id)return;renderResourceAvailability(availability,gaps);const excluded=document.createElement('details'),summary=document.createElement('summary'),payload=document.createElement('pre');summary.textContent='Analyse-Ausschlüsse für diesen Standort';payload.textContent=JSON.stringify(resourceAnalysisExclusions(a,gaps),null,2);payload.dataset.analysisExclusions=a.id;excluded.append(summary,payload);availability.append(excluded)}).catch(error=>{if(gapSelection===selectionRevision)availability.textContent='Quellenverfügbarkeit nicht geladen. Fachliche Lücken und Nutzungssperren bleiben erhalten.';console.error(error)});
@@ -155,6 +157,11 @@ async function select(a){
  for(const r of rs){const from=byId(r.from_id),to=byId(r.to_id);if(!from?.coordinates||!to?.coordinates)continue;for(const x of [from,to])entities[x.id]={id:x.id,name:x.name,lat:x.coordinates.lat,lon:x.coordinates.lon};edges.push({id:r.id,buyerId:from.id,targetId:to.id,flowKind:r.type,flowColor:r.type==='transport_to'?0xda7028:0x7454cf,staticRelation:true})}
  engine?.setDeals(edges,entities);
 }
+async function openRiskOverview(){
+ closeDetail();const d=$('detail');d.innerHTML='<button class="close" id="detail-close">Schließen</button><p class="eyebrow">Kupfer · Risikosignale</p><h2>Engpässe und Abhängigkeiten</h2><p id="risk-status" role="status">Risikosignale werden geladen …</p><div id="risk-result"></div><button class="action" id="risk-export" disabled>Risikosignale als JSON</button>';d.hidden=false;d.scrollTop=0;$('detail-close').onclick=closeDetail;
+ try{const m=await import('./risk-signals.mjs'),v=await m.loadRiskView();$('risk-result').innerHTML='<p class="muted">Die betroffenen Anlagen haben keine belegte Koordinate. Sie werden deshalb nicht als Punkt auf dem Globus gezeigt. <a href="/minen/?id=legacy-row-19">Kansanshi in der Rohstoffwelt öffnen</a></p>'+m.renderRiskOverview(v);$('risk-status').textContent=v.kpi.signals_evidence_complete+' belegt, '+v.kpi.signals_candidate+' vorläufig.';m.bindRiskExport($('risk-export'),v,$('risk-status'))}
+ catch(e){$('risk-status').textContent='Risikosignale nicht geladen. Ohne Daten gilt kein Standort als unkritisch.';console.error(e)}
+}
 function download(content,name,type){const url=URL.createObjectURL(new Blob([content],{type})),a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}
 function bindFilterOptions(){
  for(const id of ['country','commodity','status']){const previous=$(id).value;const vals=[...new Set([...(manifest?.facets[id]||[]),...assets.flatMap(a=>id==='status'?(a.statuses||[a.status]):[a[id]])])].sort();$(id).innerHTML='<option value="all">Alle</option>'+vals.map(v=>`<option value="${esc(v)}">${esc(id==='status'?(statusLabel[v]||v):v)}</option>`).join('');if(vals.includes(previous))$(id).value=previous}
@@ -176,6 +183,7 @@ async function start(){
   try{const {createGlobe}=await import('./globe-scene.js');engine=createGlobe($('globe'),{markerScale:world==='mines'?1.7:1.3,onCompanyClick:records=>{if(records.length===1)select(byId(records[0].mineId));else{clusterIds=new Set(records.map(r=>r.mineId));limit=100;$('cluster').innerHTML=`<strong>${records.length} Standorte im Cluster</strong><button id="cluster-clear">Cluster auflösen</button>`;$('cluster').hidden=false;$('cluster-clear').onclick=()=>{clusterIds=null;$('cluster').hidden=true;render()};render()}},onNotice:notice,onError:notice,onRotation:active=>$('rotation').setAttribute('aria-pressed',String(active))});render();$('loading').hidden=true;}
   catch(e){$('loading').innerHTML='3D nicht verfügbar. Liste und Datendetails bleiben nutzbar.';console.error(e);for(const id of ['zoom-in','zoom-out','home','rotation'])$(id).disabled=true}
   hydrateLegacy().catch(e=>{notice('Zusatzdaten konnten nicht geladen werden.');console.error(e)});
+  $('risk-open').onclick=()=>openRiskOverview();
   $('zoom-in').onclick=()=>engine?.zoom(.84);$('zoom-out').onclick=()=>engine?.zoom(1.19);$('home').onclick=()=>engine?.home();$('rotation').onclick=()=>engine?.toggleRotation();
   const target=new URLSearchParams(location.search).get('id');if(target){const a=await findAsset(target);if(a){if(!visible().some(x=>x.id===a.id)){for(const id of ['status','country','commodity','quality'])$(id).value='all';$('kind').value=a.kind==='operation_group'?'mine':a.kind}$('search').value=a.name;persistFilters();render();select(a)}}
  }catch(e){$('coverage').textContent='Daten nicht geladen';$('loading').innerHTML='Daten konnten nicht geladen werden. <button id="retry">Erneut versuchen</button>';$('retry').onclick=start;console.error(e)}
