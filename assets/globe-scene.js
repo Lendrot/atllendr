@@ -32,7 +32,8 @@ export function createGlobe(host,callbacks={}){
   const earthMaterial=new THREE.MeshPhongMaterial({color:0xc5dcff,shininess:12,specular:0x1d354b});
   const earth=new THREE.Mesh(new THREE.SphereGeometry(100,96,64),earthMaterial);
   scene.add(earth);
-  new GLTFLoader().load('/assets/earth-nasa.glb',gltf=>{
+  // Two embedded globes (/) fetch the 12 MB model at once; the browser may abort one download, so retry before falling back.
+  const loadEarth=attempt=>new GLTFLoader().load('/assets/earth-nasa.glb',gltf=>{
     const model=gltf.scene;
     // NASA asset: equatorial radius 500, Y north. Its -Z axis is Greenwich;
     // our geographic layer uses +X for Greenwich and -Z for 90 degrees east.
@@ -43,7 +44,8 @@ export function createGlobe(host,callbacks={}){
     }});
     scene.add(model);earth.visible=false;
     callbacks.onEarth?.('NASA Earth 3D');
-  },undefined,()=>callbacks.onNotice?.('Das NASA-3D-Modell konnte nicht geladen werden. Als Ersatz wird das bisherige NASA-Satellitenmosaik angezeigt.'));
+  },undefined,()=>attempt<2?setTimeout(()=>loadEarth(attempt+1),500*(attempt+1)):callbacks.onNotice?.('Das NASA-3D-Modell konnte nicht geladen werden. Als Ersatz wird das bisherige NASA-Satellitenmosaik angezeigt.'));
+  loadEarth(0);
   new THREE.TextureLoader().load('/assets/earth-blue-marble.jpg',texture=>{
     texture.colorSpace=THREE.SRGBColorSpace;
     texture.anisotropy=Math.min(8,renderer.capabilities.getMaxAnisotropy());

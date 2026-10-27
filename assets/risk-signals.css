@@ -1,0 +1,7 @@
+.risk-kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.6rem;margin:.6rem 0}.risk-kpis p{margin:0;padding:.6rem .8rem;border:1px solid #8aa3b055;border-radius:9px}.risk-kpis strong{display:block;font-size:1.5rem}
+.risk-basis{border-left:4px solid #8aa3b0;padding:.2rem 0 .2rem 1rem;margin:1rem 0}.risk-basis-approved{border-color:#d9443b}.risk-basis-candidate{border-color:#e0a030;border-left-style:dashed}.risk-basis-unknown{border-color:#8aa3b0;border-left-style:dotted}
+.risk-card{border:1px solid #8aa3b055;border-radius:10px;padding:.7rem .9rem;margin:.6rem 0}.risk-card h4{margin:.1rem 0 .4rem}.risk-rels{margin:.3rem 0;padding-left:1.1rem}.risk-rels li{margin:.35rem 0}
+.risk-chip{display:inline-block;border:1px solid currentColor;border-radius:5px;padding:.15rem .45rem;font-size:.72rem;font-weight:650;margin:.1rem .25rem .1rem 0}.risk-chip.risk-candidate{border-style:dashed}
+.risk-chip.risk-signal.risk-approved{color:#d9443b}.risk-chip.risk-signal.risk-candidate{color:#c98a12}.risk-chip.risk-unknown{color:#7f96a3}.risk-chip.risk-no_signal{color:#5f8fa6}
+.risk-empty{font-weight:600}.risk-table td,.risk-table th{vertical-align:top}.risk-box{border-top:1px solid #8aa3b055;margin-top:1rem;padding-top:.6rem}.mono{font-family:ui-monospace,monospace;font-size:.7rem;overflow-wrap:anywhere}
+.risk-open{pointer-events:auto;margin-top:6px;min-height:32px;padding:4px 8px;border:1px dashed #c98a12;border-radius:7px;background:#fffaf0;color:#6b4a0f;font:inherit;font-size:11px;font-weight:650;cursor:pointer}
