@@ -13,7 +13,8 @@ export const CATEGORY_COLOR={DEPONIE:'#8a5a2b',VERBRENNUNG:'#d6452f',MITVERBRENN
 const STATUS={functional:'in Betrieb',disused:'außer Betrieb',decommissioned:'stillgelegt',notRegulated:'nicht mehr IED-reguliert'};
 export const statusLabel=s=>STATUS[s]||'Status UNKNOWN';
 
-export function rows(v){const c=v.facility_columns;return v.facilities.map(r=>Object.fromEntries(c.map((k,i)=>[k,r[i]])))}
+export function rows(v){const c=v.facility_columns,ob=v.operators_by_facility||{};return v.facilities.map(r=>{const o=Object.fromEntries(c.map((k,i)=>[k,r[i]]));const op=ob[o.facility_id];o.operator=op?op[0]:null;o.operator_year=op?op[1]:null;return o})}
+export const operatorReason=(v,id)=>v.operators?.reason_labels?.[id]||'Grund UNKNOWN';
 
 export function validateView(v){
  const bad=[];
@@ -24,7 +25,10 @@ export function validateView(v){
  if(col<0)bad.push('Spalten');
  const per={};for(const r of v?.facilities||[]){if(!cats.has(r[col]))bad.push('Kategorie '+r[col]);per[r[col]]=(per[r[col]]||0)+1}
  for(const c of v?.categories||[])if((per[c.id]||0)!==c.installations)bad.push('Kategoriesumme '+c.id);
- if(v?.kpi?.operator_known!==0&&!(v?.sources?.eea?.operator_note))bad.push('Betreiber ohne Quelle');
+ if(v?.kpi?.operator_known>0&&!v?.sources?.eea_operators?.endpoint)bad.push('Betreiber ohne Quelle');
+ const nOps=new Set(Object.keys(v?.operators_by_facility||{})),fcol=(v?.facility_columns||[]).indexOf('facility_id');
+ if((v?.facilities||[]).filter(r=>nOps.has(r[fcol])).length!==v?.kpi?.operator_known)bad.push('Betreiberzahl');
+ for(const o of Object.values(v?.operators_by_facility||{}))if(!o[0]||!(o[1]>2000))bad.push('Betreiber ohne Namen oder Meldejahr');
  for(const c of v?.copper?.candidates||[])if(c.approval_status!=='NEEDS_REVIEW'||c.fact_status!=='INFERENCE')bad.push('Kupferkandidat freigegeben');
  // Eine gemeldete 0 ist ein Quellenwert; nicht gemeldet ist null (UNKNOWN). Andere Werte sind ungültig.
  for(const t of Object.values(v?.transfers||{}))if(t.length!==6||t.slice(2).some(x=>x!==null&&!(typeof x==='number'&&x>=0)))bad.push('Verbringung ungültig');
@@ -36,7 +40,7 @@ export function filterRows(all,{category='all',status='all',country='all',query=
  const q=query.trim().toLocaleLowerCase('de');
  return all.filter(r=>(category==='all'||r.category===category)&&(country==='all'||r.country===country)
   &&(status==='all'||(status==='unknown'?r.status==null:r.status===status))
-  &&(!q||[r.name,r.city,r.country].some(s=>s&&s.toLocaleLowerCase('de').includes(q))));
+  &&(!q||[r.name,r.city,r.country,r.operator].some(s=>s&&s.toLocaleLowerCase('de').includes(q))));
 }
 
 export function renderKpis(v){
@@ -44,7 +48,7 @@ export function renderKpis(v){
  const tile=(n,l,t)=>`<div class="we-kpi"${t?` data-kpi="${t}"`:''}><strong>${n}</strong><span>${l}</span></div>`;
  return `<div class="we-kpis">${tile(int(k.installations),'Anlagen (IED-Tätigkeiten)','installations')}${tile(int(k.countries),'Länder','countries')}`
   +`${tile(int(k.functional),'gemeldet in Betrieb','functional')}${tile(int(k.stale),'letzte Meldung vor '+k.latest_year,'stale')}`
-  +`${tile('UNKNOWN','Betreiber ('+int(k.operator_unknown)+' Anlagen)','operator')}</div>`;
+  +`${tile(int(k.operator_known),'mit gemeldetem Betreiber · '+int(k.operator_unknown)+' UNKNOWN','operator')}</div>`;
 }
 
 export function renderLegend(v){
@@ -64,7 +68,7 @@ export function popupHtml(v,r){
  const act=r.ied_activity?`IED ${esc(r.ied_activity)}: ${esc((v.activity_labels[r.ied_activity]||'').slice(0,160))}`:'Haupttätigkeit UNKNOWN';
  return `<strong>${esc(r.name)}</strong><br>${esc([r.city,r.country].filter(Boolean).join(', '))}<div>${esc(cat?.label)}</div><div class="we-small">${act}</div>`
   +`<div>${esc(statusLabel(r.status))} · gemeldet ${r.reporting_year}${r.reporting_year<v.kpi.latest_year?' (veraltet)':''}</div>`
-  +`<div class="we-small">${esc(transferText(v,r.facility_id))}</div><div class="we-small">Betreiber UNKNOWN · Prüfstatus NEEDS_REVIEW · Quelle EEA v16 (${esc(r.source_table)})</div>`;
+  +`<div class="we-small">${esc(transferText(v,r.facility_id))}</div><div>Betreiber: ${r.operator?esc(r.operator)+` <small>(Meldung ${r.operator_year})</small>`:'UNKNOWN'}</div><div class="we-small">Prüfstatus NEEDS_REVIEW · Quelle EEA v16 (${esc(r.source_table)}), Betreiber EEA ProductionFacility</div>`;
 }
 
 export function renderCountries(v){
@@ -82,9 +86,18 @@ export function renderCountries(v){
 
 export function renderCopper(v){
  const c=v.copper;
- const list=c.candidates.map(x=>`<li data-installation="${esc(x.installation_id)}"><strong>${esc(x.installation_name)}</strong> · ${esc([x.city,x.country].filter(Boolean).join(', '))} · IED ${esc(x.ied_activity)}<br><small>Namenskandidat für „${esc(x.ledger_name)}“ im Kupfer-Ledger · INFERENCE · NEEDS_REVIEW, keine Eigentumsangabe</small></li>`).join('');
+ const on={installation_name:'Anlagenname',operator_name:'Betreibername'};
+ const list=c.candidates.map(x=>`<li data-installation="${esc(x.installation_id)}"><strong>${esc(x.installation_name)}</strong> · ${esc([x.city,x.country].filter(Boolean).join(', '))} · IED ${esc(x.ied_activity)}${x.operator?` · Betreiber ${esc(x.operator)}`:''}<br><small>Namenskandidat für „${esc(x.ledger_name)}“ im Kupfer-Ledger (Treffer im ${esc(x.matched_on.map(m=>on[m]).join(' und '))}) · INFERENCE · NEEDS_REVIEW, keine Eigentumsangabe</small></li>`).join('');
  return `<p>${int(c.ne_metal_installations)} NE-Metallhütten und -Schmelzen (IED 2.5) in Europa. ${esc(c.note)}</p>`
   +(list?`<ol class="we-list">${list}</ol>`:`<p>Keine Namensübereinstimmung mit Unternehmen des Kupfer-Ledgers.</p>`);
+}
+
+export function renderOperators(v){
+ const o=v.operators,lab=Object.fromEntries(v.categories.map(c=>[c.id,c.label]));
+ const unk=Object.entries(o.unknown_by_reason).map(([k,n])=>`${esc(operatorReason(v,k))}: ${int(n)}`).join(' · ');
+ const rowsH=o.top.map((t,i)=>`<tr data-operator="${esc(t.operator)}"><td>${i+1}</td><td class="l">${esc(t.operator)}${t.spellings>1?` <small>${t.spellings} Schreibweisen</small>`:''}</td><td>${int(t.installations)}</td><td>${int(t.facilities)}</td><td class="l">${esc(t.countries.join(', '))}</td><td class="l">${esc(Object.entries(t.by_category).sort((a,b)=>b[1]-a[1]).map(([k,n])=>lab[k].split(' (')[0]+' '+n).join(', '))}</td></tr>`).join('');
+ return `<p>${int(v.kpi.operator_known)} von ${int(v.kpi.installations)} Anlagen haben einen gemeldeten Betreiber (${int(v.kpi.operators_distinct)} verschiedene Namen). UNKNOWN: ${unk}.</p><p class="we-small">${esc(o.note)}</p>`
+  +`<div class="we-table"><table><tr><th>#</th><th class="l">Betreiber (Meldung)</th><th>Anlagen</th><th>Betriebseinrichtungen</th><th class="l">Länder</th><th class="l">Anlagenarten</th></tr>${rowsH}</table></div>`;
 }
 
 export function renderGaps(v){
@@ -94,10 +107,10 @@ export function renderGaps(v){
 }
 
 export function exportCsv(v,list){
- const cols=['Anlage','Land','Ort','Längengrad','Breitengrad','Kategorie','IED-Tätigkeit','Status','Meldejahr','Betreiber','Prüfstatus','Quelle','EEA-ID'];
+ const cols=['Anlage','Land','Ort','Längengrad','Breitengrad','Kategorie','IED-Tätigkeit','Status','Meldejahr','Betreiber','Betreiber-Meldejahr','Prüfstatus','Quelle','EEA-ID'];
  const q=x=>{const s=String(x??'');return /[",;\n]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s};
  const lab=Object.fromEntries(v.categories.map(c=>[c.id,c.label]));
- const lines=list.map(r=>[r.name,r.country,r.city??'UNKNOWN',r.lon??'UNKNOWN',r.lat??'UNKNOWN',lab[r.category],r.ied_activity??'UNKNOWN',r.status??'UNKNOWN',r.reporting_year,'UNKNOWN','NEEDS_REVIEW','EEA Industrial Reporting v16 (CC BY 4.0)',r.id].map(q).join(';'));
+ const lines=list.map(r=>[r.name,r.country,r.city??'UNKNOWN',r.lon??'UNKNOWN',r.lat??'UNKNOWN',lab[r.category],r.ied_activity??'UNKNOWN',r.status??'UNKNOWN',r.reporting_year,r.operator??'UNKNOWN',r.operator_year??'UNKNOWN','NEEDS_REVIEW','EEA Industrial Reporting v16 (CC BY 4.0)',r.id].map(q).join(';'));
  return [cols.join(';'),...lines].join('\n')+'\n';
 }
 
@@ -108,7 +121,7 @@ export async function mount(){
  catch(e){$('we-status').textContent='Abfalldaten konnten nicht geladen werden: '+e.message;return}
  const all=rows(v);
  $('we-kpis').innerHTML=renderKpis(v);$('we-legend').innerHTML=renderLegend(v);$('we-countries').innerHTML=renderCountries(v);
- $('we-copper').innerHTML=renderCopper(v);$('we-gaps').innerHTML=renderGaps(v);
+ $('we-copper').innerHTML=renderCopper(v);$('we-operators').innerHTML=renderOperators(v);$('we-gaps').innerHTML=renderGaps(v);
  const catSel=$('we-category');for(const c of v.categories)catSel.add(new Option(c.label+' ('+int(c.installations)+')',c.id));
  const cSel=$('we-country');for(const c of [...v.countries].sort((a,b)=>a.label.localeCompare(b.label,'de')))cSel.add(new Option(c.label,c.country));
  const map=L.map('we-map',{minZoom:3,maxZoom:13}).setView([51,10],4);
@@ -117,7 +130,7 @@ export async function mount(){
  const icon={};for(const [k,c] of Object.entries(CATEGORY_COLOR))icon[k]=L.divIcon({className:'',html:`<span class="we-pin" style="background:${c}"></span>`,iconSize:[10,10],iconAnchor:[5,5]});
  let shown=[],visible=40;
  const marker=r=>{const m=L.marker([r.lat,r.lon],{icon:icon[r.category]});m.bindPopup(()=>popupHtml(v,r));return m};
- const drawList=()=>{const ol=$('we-list');ol.innerHTML=shown.slice(0,visible).map((r,i)=>`<li><button type="button" data-i="${i}">${esc(r.name)}</button><small>${esc([r.city,r.country].filter(Boolean).join(', '))} · ${esc(statusLabel(r.status))}${r.lon==null?' · Lage UNKNOWN':''}</small></li>`).join('');$('we-more').hidden=visible>=shown.length};
+ const drawList=()=>{const ol=$('we-list');ol.innerHTML=shown.slice(0,visible).map((r,i)=>`<li><button type="button" data-i="${i}">${esc(r.name)}</button><small>${esc([r.city,r.country].filter(Boolean).join(', '))}${r.operator?' · '+esc(r.operator):''} · ${esc(statusLabel(r.status))}${r.lon==null?' · Lage UNKNOWN':''}</small></li>`).join('');$('we-more').hidden=visible>=shown.length};
  const render=()=>{shown=filterRows(all,{category:catSel.value,status:$('we-status-filter').value,country:cSel.value,query:$('we-query').value});visible=40;
   $('we-status').textContent=int(shown.length)+' von '+int(all.length)+' Anlagen';drawList();clusters.clearLayers();
   const ms=shown.filter(r=>r.lon!=null).map(r=>(r._m||=marker(r)));clusters.addLayers(ms)};

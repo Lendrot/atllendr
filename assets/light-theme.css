@@ -23,3 +23,5 @@ dialog{background:#fff;color:#14314e;border-color:#b9d2e2;box-shadow:0 24px 90px
 .status-badge,.deal-route>.status-badge,.complete-badge{color:#234968}.status-row .deal-arrow{filter:brightness(.72) saturate(1.2)}.atlas-dashboard small{font-size:12px;line-height:1.3}.atlas-modes button{font-size:13px}.atlas-map-level{font-size:13px}.atlas-timeline button{font-size:13px}.flow-pair small{color:#4b6078}.india-card small,.india-kpi small{color:#526b80}
 @media(max-width:760px){.atlas-dashboard small{font-size:12px}.atlas-map-level{font-size:12px}.direction-key{font-size:13px}}
 :root{--lime:#087685;--blue:#075caa}.key-dot.buyer{background:#087685;box-shadow:0 0 9px #08768544}.status-key.complete{color:#087685}.status-key.pending{color:#88520a}.status-key.interest{color:#704297}.status-key.listed{color:#075caa}.flow-import{color:#075f96}.flow-export{color:#9b590b}
+.sites-toggle{background:#fffffff0;border-color:#cbdde9;color:#24465f}.sites-toggle input:checked+.checkbox-ui{background:#0b74ba;border-color:#0b74ba}
+.sites-toggle input:checked+.checkbox-ui:after{border-color:#fff}
