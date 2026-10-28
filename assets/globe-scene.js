@@ -22,7 +22,7 @@ export function createGlobe(host,callbacks={}){
   const controls=new GlobeNavigation(camera,renderer.domElement,{
     onStart:()=>{flight=null;stopRotation();callbacks.onHover?.(null);},
     onHover:event=>{if(!event){callbacks.onHover?.(null);return;}const hit=pick(event,false);renderer.domElement.style.cursor=hit?'pointer':'grab';callbacks.onHover?.(hit?.deal||null,event.clientX,event.clientY);},
-    onTap:event=>{const hit=pick(event,true);if(hit?.deal)callbacks.onDealClick?.(hit.deal.id);else if(hit?.companies)callbacks.onCompanyClick?.(hit.companies);else if(hit?.sites)callbacks.onSiteClick?.(hit.sites);}
+    onTap:event=>{const hit=pick(event,true);if(hit?.deal)callbacks.onDealClick?.(hit.deal.id);else if(hit?.companies)callbacks.onCompanyClick?.(hit.companies);else if(hit?.sites)callbacks.onSiteClick?.(hit.sites);else if(hit?.links)callbacks.onSiteLinkClick?.(hit.links);}
   });
   controls.autoRotate=false;
   scene.add(new THREE.AmbientLight(0xabc5ef,1.45));
@@ -183,6 +183,24 @@ export function createGlobe(host,callbacks={}){
     siteMaterial.size=markerPixels(camera.position.length()-100)*.85;
     invalidate();
   }
+  // Fachatlas connections between two placed sites (schematic great-circle arcs): one LineSegments batch, one draw call.
+  const linkMaterial=new THREE.LineBasicMaterial({vertexColors:true,transparent:true,opacity:.8,depthWrite:false});
+  const LINK_STEPS=32;
+  let siteLinks=null,siteLinkRecords=[];
+  function setSiteLinks(records){
+    if(siteLinks){scene.remove(siteLinks);siteLinks.geometry.dispose();siteLinks=null;}
+    siteLinkRecords=records;if(!records.length){invalidate();return;}
+    const pos=new Float32Array(records.length*LINK_STEPS*6),color=new Float32Array(records.length*LINK_STEPS*6),c=new THREE.Color();
+    records.forEach((r,k)=>{
+      c.set(r.color??0x85caff);
+      for(let i=0;i<LINK_STEPS;i++){
+        const o=(k*LINK_STEPS+i)*6;pos.set(arcSample(r.from,r.to,i/LINK_STEPS,0,.55),o);pos.set(arcSample(r.from,r.to,(i+1)/LINK_STEPS,0,.55),o+3);
+        c.toArray(color,o);c.toArray(color,o+3);
+      }
+    });
+    const geometry=new THREE.BufferGeometry();geometry.setAttribute('position',new THREE.BufferAttribute(pos,3));geometry.setAttribute('color',new THREE.BufferAttribute(color,3));
+    siteLinks=new THREE.LineSegments(geometry,linkMaterial);siteLinks.visible=sitesVisible;scene.add(siteLinks);invalidate();
+  }
   function filterDeals(ids){const allowed=new Set(ids);dealEntries.forEach(e=>{e.visible=allowed.has(e.deal.id);e.line.visible=e.visible;});markersDirty=true;invalidate();}
   function setDeals(records,entities){
     for(const entry of dealEntries){entry.line.geometry.dispose();entry.line.material.dispose();}
@@ -259,6 +277,8 @@ export function createGlobe(host,callbacks={}){
     if(company)return {companies:pointGroups[company.index]};
     const site=sitePoints?.visible&&siteGroups.length?nearest(sitePoints):null;
     if(site)return {sites:siteGroups[site.index].map(i=>siteData.records[i])};
+    const link=siteLinks?.visible?raycaster.intersectObject(siteLinks).find(h=>!ground||h.distance<ground.distance+1):null;
+    if(link)return {links:[siteLinkRecords[Math.floor(link.index/2/LINK_STEPS)]]};
     return null;
   }
   canvas.addEventListener('keydown',event=>{
@@ -301,5 +321,5 @@ export function createGlobe(host,callbacks={}){
     renderer.render(scene,camera);
   }
   frame=requestAnimationFrame(animate);
-  return {setCompanies,setSites,showSites:visible=>{sitesVisible=visible;if(sitePoints)sitePoints.visible=visible&&siteData?.n>0;invalidate();},setDeals,germany,filterDeals,selectDeal,focusLocation,home,zoom,toggleRotation,showCompanies:visible=>{companiesVisible=visible;if(companyPoints)companyPoints.visible=visible;invalidate();},isRotating:()=>controls.autoRotate,dispose:()=>{cancelAnimationFrame(frame);pointMaterial.dispose();siteMaterial.dispose();resizeObserver.disconnect();controls.dispose();scene.traverse(o=>{o.geometry?.dispose();if(Array.isArray(o.material))o.material.forEach(m=>m.dispose());else o.material?.dispose();});renderer.dispose();}};
+  return {setCompanies,setSites,setSiteLinks,showSites:visible=>{sitesVisible=visible;if(sitePoints)sitePoints.visible=visible&&siteData?.n>0;if(siteLinks)siteLinks.visible=visible;invalidate();},setDeals,germany,filterDeals,selectDeal,focusLocation,home,zoom,toggleRotation,showCompanies:visible=>{companiesVisible=visible;if(companyPoints)companyPoints.visible=visible;invalidate();},isRotating:()=>controls.autoRotate,dispose:()=>{cancelAnimationFrame(frame);pointMaterial.dispose();siteMaterial.dispose();linkMaterial.dispose();resizeObserver.disconnect();controls.dispose();scene.traverse(o=>{o.geometry?.dispose();if(Array.isArray(o.material))o.material.forEach(m=>m.dispose());else o.material?.dispose();});renderer.dispose();}};
 }
