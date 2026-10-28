@@ -6069,6 +6069,76 @@
         "coordinate_source_url": "https://www.wikidata.org/wiki/Q1297",
         "location_source_url": "https://investors.madisonair.com/investor-faqs",
         "location_note": "Belegter Unternehmensstandort Chicago. Die FAQ nennt ihn Corporate Headquarters; die Kontaktseite bezeichnet Minneapolis als Headquarters und listet Chicago separat. Deshalb hier Standort, keine eindeutige Hauptsitzzuordnung."
+      },
+      {
+        "company_id": "company_rethmann_gruppe",
+        "city": "Selm",
+        "country": "DE",
+        "latitude": 51.683333333,
+        "longitude": 7.483333333,
+        "coordinate_source_url": "https://www.wikidata.org/wiki/Q10935",
+        "location_source_url": "https://www.wikidata.org/wiki/Q2146152",
+        "location_note": "Hauptsitz laut Wikidata (P159 Selm) für Rethmann. Am 28.10.2026 geprüft. Darstellung nur Ortsmittelpunkt, keine Gebäudekoordinate."
+      },
+      {
+        "company_id": "company_remondis",
+        "city": "Lünen",
+        "country": "DE",
+        "latitude": 51.616666666,
+        "longitude": 7.516666666,
+        "coordinate_source_url": "https://www.wikidata.org/wiki/Q3822",
+        "location_source_url": "https://www.wikidata.org/wiki/Q884975",
+        "location_note": "Hauptsitz laut Wikidata (P159 Lünen) für Remondis. Am 28.10.2026 geprüft. Darstellung nur Ortsmittelpunkt, keine Gebäudekoordinate."
+      },
+      {
+        "company_id": "company_rhenus",
+        "city": "Holzwickede",
+        "country": "DE",
+        "latitude": 51.5,
+        "longitude": 7.616666666,
+        "coordinate_source_url": "https://www.wikidata.org/wiki/Q10941",
+        "location_source_url": "https://www.wikidata.org/wiki/Q699628",
+        "location_note": "Hauptsitz laut Wikidata (P159 Holzwickede) für Rhenus SE & Co. KG. Am 28.10.2026 geprüft. Darstellung nur Ortsmittelpunkt, keine Gebäudekoordinate."
+      },
+      {
+        "company_id": "company_saria",
+        "city": "Selm",
+        "country": "DE",
+        "latitude": 51.683333333,
+        "longitude": 7.483333333,
+        "coordinate_source_url": "https://www.wikidata.org/wiki/Q10935",
+        "location_source_url": "https://www.wikidata.org/wiki/Q553021",
+        "location_note": "Hauptsitz laut Wikidata (P159 Selm) für Saria. Am 28.10.2026 geprüft. Darstellung nur Ortsmittelpunkt, keine Gebäudekoordinate."
+      },
+      {
+        "company_id": "company_proparco",
+        "city": "Paris",
+        "country": "FR",
+        "latitude": 48.859947,
+        "longitude": 2.342059,
+        "coordinate_source_url": "https://www.wikidata.org/wiki/Q161741",
+        "location_source_url": "https://www.proparco.fr/en/legal-notice-and-general-conditions-use-proparcos-website",
+        "location_note": "Sitzadresse laut Proparco-Impressum: 151 rue Saint-Honoré, 75001 Paris; Koordinate des 1. Arrondissements (Wikidata). Am 28.10.2026 geprüft. Darstellung nur Ortsmittelpunkt, keine Gebäudekoordinate."
+      },
+      {
+        "company_id": "company_bugatti_rimac",
+        "city": "Sveta Nedelja",
+        "country": "HR",
+        "latitude": 45.8,
+        "longitude": 15.783333333,
+        "coordinate_source_url": "https://www.wikidata.org/wiki/Q856385",
+        "location_source_url": "https://www.wikidata.org/wiki/Q107424384",
+        "location_note": "Hauptsitz laut Wikidata (P159 Sveta Nedelja) für Bugatti Rimac. Am 28.10.2026 geprüft. Darstellung nur Ortsmittelpunkt, keine Gebäudekoordinate."
+      },
+      {
+        "company_id": "company_cme_group",
+        "city": "Chicago",
+        "country": "US",
+        "latitude": 41.881944444,
+        "longitude": -87.627777777,
+        "coordinate_source_url": "https://www.wikidata.org/wiki/Q1297",
+        "location_source_url": "https://www.wikidata.org/wiki/Q1023876",
+        "location_note": "Hauptsitz laut Wikidata (P159 Chicago; London als weiterer Sitz eingetragen) für CME Group; derselbe Ort wie im Wikidata-Altbestand des Atlas. Am 28.10.2026 geprüft. Darstellung nur Ortsmittelpunkt, keine Gebäudekoordinate."
       }
     ]
   },

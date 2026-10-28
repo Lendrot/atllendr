@@ -2116,7 +2116,15 @@
         "coal_trade_2024_25"
       ],
       "locator": "Tabelle 8.5, Total Coal, Port Wise Import",
-      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen."
+      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen.",
+      "location": {
+        "place": "Dhamra",
+        "wikidata_id": "Q5268871",
+        "latitude": 20.795555555,
+        "longitude": 86.900833333,
+        "precision": "locality",
+        "source_url": "https://www.wikidata.org/wiki/Q5268871"
+      }
     },
     {
       "id": "in_coal_2024_import_port_65",
@@ -2139,7 +2147,15 @@
         "coal_trade_2024_25"
       ],
       "locator": "Tabelle 8.5, Total Coal, Port Wise Import",
-      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen."
+      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen.",
+      "location": {
+        "place": "Paradip Port",
+        "wikidata_id": "Q7134171",
+        "latitude": 20.2654,
+        "longitude": 86.67628333,
+        "precision": "facility",
+        "source_url": "https://www.wikidata.org/wiki/Q7134171"
+      }
     },
     {
       "id": "in_coal_2024_import_port_66",
@@ -2162,7 +2178,15 @@
         "coal_trade_2024_25"
       ],
       "locator": "Tabelle 8.5, Total Coal, Port Wise Import",
-      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen."
+      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen.",
+      "location": {
+        "place": "Krishnapatnam Port",
+        "wikidata_id": "Q6437585",
+        "latitude": 14.25635,
+        "longitude": 80.11629,
+        "precision": "facility",
+        "source_url": "https://www.wikidata.org/wiki/Q6437585"
+      }
     },
     {
       "id": "in_coal_2024_import_port_67",
@@ -2185,7 +2209,15 @@
         "coal_trade_2024_25"
       ],
       "locator": "Tabelle 8.5, Total Coal, Port Wise Import",
-      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen."
+      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen.",
+      "location": {
+        "place": "Mundra Port",
+        "wikidata_id": "Q20650238",
+        "latitude": 22.774722222,
+        "longitude": 69.683055555,
+        "precision": "facility",
+        "source_url": "https://www.wikidata.org/wiki/Q20650238"
+      }
     },
     {
       "id": "in_coal_2024_import_port_68",
@@ -2208,7 +2240,15 @@
         "coal_trade_2024_25"
       ],
       "locator": "Tabelle 8.5, Total Coal, Port Wise Import",
-      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen."
+      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen.",
+      "location": {
+        "place": "Visakhapatnam Port",
+        "wikidata_id": "Q7935583",
+        "latitude": 17.6983,
+        "longitude": 83.2786,
+        "precision": "facility",
+        "source_url": "https://www.wikidata.org/wiki/Q7935583"
+      }
     },
     {
       "id": "in_coal_2024_import_port_69",
@@ -2231,7 +2271,15 @@
         "coal_trade_2024_25"
       ],
       "locator": "Tabelle 8.5, Total Coal, Port Wise Import",
-      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen."
+      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen.",
+      "location": {
+        "place": "Mundra Port",
+        "wikidata_id": "Q20650238",
+        "latitude": 22.774722222,
+        "longitude": 69.683055555,
+        "precision": "facility",
+        "source_url": "https://www.wikidata.org/wiki/Q20650238"
+      }
     },
     {
       "id": "in_coal_2024_import_port_70",
@@ -2254,7 +2302,15 @@
         "coal_trade_2024_25"
       ],
       "locator": "Tabelle 8.5, Total Coal, Port Wise Import",
-      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen."
+      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen.",
+      "location": {
+        "place": "Port of Kolkata",
+        "wikidata_id": "Q7231171",
+        "latitude": 22.5481,
+        "longitude": 88.3014,
+        "precision": "facility",
+        "source_url": "https://www.wikidata.org/wiki/Q7231171"
+      }
     },
     {
       "id": "in_coal_2024_import_port_71",
@@ -2277,7 +2333,15 @@
         "coal_trade_2024_25"
       ],
       "locator": "Tabelle 8.5, Total Coal, Port Wise Import",
-      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen."
+      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen.",
+      "location": {
+        "place": "Port of Kandla",
+        "wikidata_id": "Q64859173",
+        "latitude": 23.0051,
+        "longitude": 70.2229,
+        "precision": "facility",
+        "source_url": "https://www.wikidata.org/wiki/Q64859173"
+      }
     },
     {
       "id": "in_coal_2024_import_port_72",
@@ -2300,7 +2364,15 @@
         "coal_trade_2024_25"
       ],
       "locator": "Tabelle 8.5, Total Coal, Port Wise Import",
-      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen."
+      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen.",
+      "location": {
+        "place": "Gangavaram Port",
+        "wikidata_id": "Q5521085",
+        "latitude": 17.61666667,
+        "longitude": 83.23333333,
+        "precision": "facility",
+        "source_url": "https://www.wikidata.org/wiki/Q5521085"
+      }
     },
     {
       "id": "in_coal_2024_import_port_73",
@@ -2323,7 +2395,15 @@
         "coal_trade_2024_25"
       ],
       "locator": "Tabelle 8.5, Total Coal, Port Wise Import",
-      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen."
+      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen.",
+      "location": {
+        "place": "Jaigad Port",
+        "wikidata_id": "Q114649340",
+        "latitude": 17.3037609,
+        "longitude": 73.2063366,
+        "precision": "facility",
+        "source_url": "https://www.wikidata.org/wiki/Q114649340"
+      }
     },
     {
       "id": "in_coal_2024_import_port_74",
@@ -2346,7 +2426,15 @@
         "coal_trade_2024_25"
       ],
       "locator": "Tabelle 8.5, Total Coal, Port Wise Import",
-      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen."
+      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen.",
+      "location": {
+        "place": "Port of Magdalla",
+        "wikidata_id": "Q7231186",
+        "latitude": 21.08,
+        "longitude": 72.65,
+        "precision": "facility",
+        "source_url": "https://www.wikidata.org/wiki/Q7231186"
+      }
     },
     {
       "id": "in_coal_2024_import_port_75",
@@ -2369,7 +2457,15 @@
         "coal_trade_2024_25"
       ],
       "locator": "Tabelle 8.5, Total Coal, Port Wise Import",
-      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen."
+      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen.",
+      "location": {
+        "place": "V.O. Chidambaranar Port",
+        "wikidata_id": "Q12988613",
+        "latitude": 8.473,
+        "longitude": 78.1215,
+        "precision": "facility",
+        "source_url": "https://www.wikidata.org/wiki/Q12988613"
+      }
     },
     {
       "id": "in_coal_2024_import_port_76",
@@ -2392,7 +2488,15 @@
         "coal_trade_2024_25"
       ],
       "locator": "Tabelle 8.5, Total Coal, Port Wise Import",
-      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen."
+      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen.",
+      "location": {
+        "place": "Ennore Port",
+        "wikidata_id": "Q10986919",
+        "latitude": 13.25164,
+        "longitude": 80.32683,
+        "precision": "facility",
+        "source_url": "https://www.wikidata.org/wiki/Q10986919"
+      }
     },
     {
       "id": "in_coal_2024_import_port_77",
@@ -2415,7 +2519,15 @@
         "coal_trade_2024_25"
       ],
       "locator": "Tabelle 8.5, Total Coal, Port Wise Import",
-      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen."
+      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen.",
+      "location": {
+        "place": "Hazira Port",
+        "wikidata_id": "Q5688293",
+        "latitude": 21.083333333,
+        "longitude": 72.633333333,
+        "precision": "facility",
+        "source_url": "https://www.wikidata.org/wiki/Q5688293"
+      }
     },
     {
       "id": "in_coal_2024_import_port_78",
@@ -2438,7 +2550,15 @@
         "coal_trade_2024_25"
       ],
       "locator": "Tabelle 8.5, Total Coal, Port Wise Import",
-      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen."
+      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen.",
+      "location": {
+        "place": "New Mangalore Port",
+        "wikidata_id": "Q26780951",
+        "latitude": 12.927777777,
+        "longitude": 74.820833333,
+        "precision": "facility",
+        "source_url": "https://www.wikidata.org/wiki/Q26780951"
+      }
     },
     {
       "id": "in_coal_2024_import_port_79",
@@ -2461,7 +2581,15 @@
         "coal_trade_2024_25"
       ],
       "locator": "Tabelle 8.5, Total Coal, Port Wise Import",
-      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen."
+      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen.",
+      "location": {
+        "place": "Dahej Port",
+        "wikidata_id": "Q7231119",
+        "latitude": 21.7,
+        "longitude": 72.53333333,
+        "precision": "facility",
+        "source_url": "https://www.wikidata.org/wiki/Q7231119"
+      }
     },
     {
       "id": "in_coal_2024_import_port_80",
@@ -2484,7 +2612,15 @@
         "coal_trade_2024_25"
       ],
       "locator": "Tabelle 8.5, Total Coal, Port Wise Import",
-      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen."
+      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen.",
+      "location": {
+        "place": "Port of Mormugao",
+        "wikidata_id": "Q60296757",
+        "latitude": 15.4089,
+        "longitude": 73.8012,
+        "precision": "facility",
+        "source_url": "https://www.wikidata.org/wiki/Q60296757"
+      }
     },
     {
       "id": "in_coal_2024_import_port_81",
@@ -2507,7 +2643,15 @@
         "coal_trade_2024_25"
       ],
       "locator": "Tabelle 8.5, Total Coal, Port Wise Import",
-      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen."
+      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen.",
+      "location": {
+        "place": "Port of Navlakhi",
+        "wikidata_id": "Q7231212",
+        "latitude": 22.96666667,
+        "longitude": 70.45,
+        "precision": "facility",
+        "source_url": "https://www.wikidata.org/wiki/Q7231212"
+      }
     },
     {
       "id": "in_coal_2024_import_port_82",
@@ -2530,7 +2674,15 @@
         "coal_trade_2024_25"
       ],
       "locator": "Tabelle 8.5, Total Coal, Port Wise Import",
-      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen."
+      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen.",
+      "location": {
+        "place": "Karaikal Port",
+        "wikidata_id": "Q6367985",
+        "latitude": 10.833333333,
+        "longitude": 79.866666666,
+        "precision": "facility",
+        "source_url": "https://www.wikidata.org/wiki/Q6367985"
+      }
     },
     {
       "id": "in_coal_2024_import_port_83",
@@ -2553,7 +2705,15 @@
         "coal_trade_2024_25"
       ],
       "locator": "Tabelle 8.5, Total Coal, Port Wise Import",
-      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen."
+      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen.",
+      "location": {
+        "place": "Salaya Harbor",
+        "wikidata_id": "Q124636094",
+        "latitude": 22.433333333,
+        "longitude": 69.55,
+        "precision": "facility",
+        "source_url": "https://www.wikidata.org/wiki/Q124636094"
+      }
     },
     {
       "id": "in_coal_2024_import_port_84",
@@ -2576,7 +2736,15 @@
         "coal_trade_2024_25"
       ],
       "locator": "Tabelle 8.5, Total Coal, Port Wise Import",
-      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen."
+      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen.",
+      "location": {
+        "place": "Dharamtar",
+        "wikidata_id": "Q5269138",
+        "latitude": 18.7054,
+        "longitude": 73.0245,
+        "precision": "facility",
+        "source_url": "https://www.wikidata.org/wiki/Q5269138"
+      }
     },
     {
       "id": "in_coal_2024_import_port_85",
@@ -2599,7 +2767,15 @@
         "coal_trade_2024_25"
       ],
       "locator": "Tabelle 8.5, Total Coal, Port Wise Import",
-      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen."
+      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen.",
+      "location": {
+        "place": "Mumbai Port",
+        "wikidata_id": "Q15260223",
+        "latitude": 18.939427,
+        "longitude": 72.842156,
+        "precision": "facility",
+        "source_url": "https://www.wikidata.org/wiki/Q15260223"
+      }
     },
     {
       "id": "in_coal_2024_import_port_86",
@@ -2622,7 +2798,15 @@
         "coal_trade_2024_25"
       ],
       "locator": "Tabelle 8.5, Total Coal, Port Wise Import",
-      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen."
+      "note": "Auswahl statistischer Hafen-/Zollpositionen. Keine Zuordnung zu einem bestimmten Lieferland oder Unternehmen; nicht zusätzlich zum Landesimport zählen.",
+      "location": {
+        "place": "Nhava Sheva",
+        "wikidata_id": "Q1984452",
+        "latitude": 18.95,
+        "longitude": 72.95,
+        "precision": "facility",
+        "source_url": "https://www.wikidata.org/wiki/Q1984452"
+      }
     },
     {
       "id": "in_coal_2024_production_operator_87",
@@ -2829,7 +3013,15 @@
         "mospi_energy_2026"
       ],
       "locator": "Tabelle 2.2, Seite 24, Crude Throughput 2024-25(P), Tsd. t / 1.000",
-      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung."
+      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung.",
+      "location": {
+        "place": "Guwahati",
+        "wikidata_id": "Q199605",
+        "latitude": 26.1805876,
+        "longitude": 91.750238,
+        "precision": "locality",
+        "source_url": "https://www.wikidata.org/wiki/Q199605"
+      }
     },
     {
       "id": "in_crude_oil_2024_refinery_input_facility_96",
@@ -2852,7 +3044,15 @@
         "mospi_energy_2026"
       ],
       "locator": "Tabelle 2.2, Seite 24, Crude Throughput 2024-25(P), Tsd. t / 1.000",
-      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung."
+      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung.",
+      "location": {
+        "place": "Barauni Refinery",
+        "wikidata_id": "Q4858511",
+        "latitude": 25.466,
+        "longitude": 85.987,
+        "precision": "facility",
+        "source_url": "https://www.wikidata.org/wiki/Q4858511"
+      }
     },
     {
       "id": "in_crude_oil_2024_refinery_input_facility_97",
@@ -2875,7 +3075,15 @@
         "mospi_energy_2026"
       ],
       "locator": "Tabelle 2.2, Seite 24, Crude Throughput 2024-25(P), Tsd. t / 1.000",
-      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung."
+      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung.",
+      "location": {
+        "place": "Gujarat Refinery (Koyali)",
+        "wikidata_id": "Q5617005",
+        "latitude": 22.3705,
+        "longitude": 73.1255,
+        "precision": "facility",
+        "source_url": "https://www.wikidata.org/wiki/Q5617005"
+      }
     },
     {
       "id": "in_crude_oil_2024_refinery_input_facility_98",
@@ -2898,7 +3106,15 @@
         "mospi_energy_2026"
       ],
       "locator": "Tabelle 2.2, Seite 24, Crude Throughput 2024-25(P), Tsd. t / 1.000",
-      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung."
+      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung.",
+      "location": {
+        "place": "Haldia Refinery",
+        "wikidata_id": "Q5641276",
+        "latitude": 22.03333333,
+        "longitude": 88.13333333,
+        "precision": "facility",
+        "source_url": "https://www.wikidata.org/wiki/Q5641276"
+      }
     },
     {
       "id": "in_crude_oil_2024_refinery_input_facility_99",
@@ -2921,7 +3137,15 @@
         "mospi_energy_2026"
       ],
       "locator": "Tabelle 2.2, Seite 24, Crude Throughput 2024-25(P), Tsd. t / 1.000",
-      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung."
+      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung.",
+      "location": {
+        "place": "Mathura Refinery",
+        "wikidata_id": "Q15982506",
+        "latitude": 27.378305555,
+        "longitude": 77.686444444,
+        "precision": "facility",
+        "source_url": "https://www.wikidata.org/wiki/Q15982506"
+      }
     },
     {
       "id": "in_crude_oil_2024_refinery_input_facility_100",
@@ -2944,7 +3168,15 @@
         "mospi_energy_2026"
       ],
       "locator": "Tabelle 2.2, Seite 24, Crude Throughput 2024-25(P), Tsd. t / 1.000",
-      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung."
+      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung.",
+      "location": {
+        "place": "Digboi Refinery",
+        "wikidata_id": "Q5275564",
+        "latitude": 27.39083333,
+        "longitude": 95.61861111,
+        "precision": "facility",
+        "source_url": "https://www.wikidata.org/wiki/Q5275564"
+      }
     },
     {
       "id": "in_crude_oil_2024_refinery_input_facility_101",
@@ -2967,7 +3199,15 @@
         "mospi_energy_2026"
       ],
       "locator": "Tabelle 2.2, Seite 24, Crude Throughput 2024-25(P), Tsd. t / 1.000",
-      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung."
+      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung.",
+      "location": {
+        "place": "Panipat Refinery",
+        "wikidata_id": "Q7131186",
+        "latitude": 29.470944444,
+        "longitude": 76.87225,
+        "precision": "facility",
+        "source_url": "https://www.wikidata.org/wiki/Q7131186"
+      }
     },
     {
       "id": "in_crude_oil_2024_refinery_input_facility_102",
@@ -2990,7 +3230,15 @@
         "mospi_energy_2026"
       ],
       "locator": "Tabelle 2.2, Seite 24, Crude Throughput 2024-25(P), Tsd. t / 1.000",
-      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung."
+      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung.",
+      "location": {
+        "place": "Bongaigaon Refinery",
+        "wikidata_id": "Q4941822",
+        "latitude": 26.51583333,
+        "longitude": 90.53166667,
+        "precision": "facility",
+        "source_url": "https://www.wikidata.org/wiki/Q4941822"
+      }
     },
     {
       "id": "in_crude_oil_2024_refinery_input_facility_103",
@@ -3013,7 +3261,15 @@
         "mospi_energy_2026"
       ],
       "locator": "Tabelle 2.2, Seite 24, Crude Throughput 2024-25(P), Tsd. t / 1.000",
-      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung."
+      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung.",
+      "location": {
+        "place": "Paradip Refinery",
+        "wikidata_id": "Q7134170",
+        "latitude": 20.247638888,
+        "longitude": 86.598194444,
+        "precision": "facility",
+        "source_url": "https://www.wikidata.org/wiki/Q7134170"
+      }
     },
     {
       "id": "in_crude_oil_2024_refinery_input_facility_104",
@@ -3036,7 +3292,15 @@
         "mospi_energy_2026"
       ],
       "locator": "Tabelle 2.2, Seite 24, Crude Throughput 2024-25(P), Tsd. t / 1.000",
-      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung."
+      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung.",
+      "location": {
+        "place": "Mumbai Refinery Mahul",
+        "wikidata_id": "Q6935320",
+        "latitude": 19.011939,
+        "longitude": 72.860086,
+        "precision": "facility",
+        "source_url": "https://www.wikidata.org/wiki/Q6935320"
+      }
     },
     {
       "id": "in_crude_oil_2024_refinery_input_facility_105",
@@ -3059,7 +3323,15 @@
         "mospi_energy_2026"
       ],
       "locator": "Tabelle 2.2, Seite 24, Crude Throughput 2024-25(P), Tsd. t / 1.000",
-      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung."
+      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung.",
+      "location": {
+        "place": "Kochi",
+        "wikidata_id": "Q1800",
+        "latitude": 9.966666666,
+        "longitude": 76.283333333,
+        "precision": "locality",
+        "source_url": "https://www.wikidata.org/wiki/Q1800"
+      }
     },
     {
       "id": "in_crude_oil_2024_refinery_input_facility_106",
@@ -3082,7 +3354,15 @@
         "mospi_energy_2026"
       ],
       "locator": "Tabelle 2.2, Seite 24, Crude Throughput 2024-25(P), Tsd. t / 1.000",
-      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung."
+      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung.",
+      "location": {
+        "place": "Bina Refinery",
+        "wikidata_id": "Q17018647",
+        "latitude": 24.2515,
+        "longitude": 78.1587,
+        "precision": "facility",
+        "source_url": "https://www.wikidata.org/wiki/Q17018647"
+      }
     },
     {
       "id": "in_crude_oil_2024_refinery_input_facility_107",
@@ -3105,7 +3385,15 @@
         "mospi_energy_2026"
       ],
       "locator": "Tabelle 2.2, Seite 24, Crude Throughput 2024-25(P), Tsd. t / 1.000",
-      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung."
+      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung.",
+      "location": {
+        "place": "Mumbai",
+        "wikidata_id": "Q1156",
+        "latitude": 19.075833333,
+        "longitude": 72.8775,
+        "precision": "locality",
+        "source_url": "https://www.wikidata.org/wiki/Q1156"
+      }
     },
     {
       "id": "in_crude_oil_2024_refinery_input_facility_108",
@@ -3128,7 +3416,15 @@
         "mospi_energy_2026"
       ],
       "locator": "Tabelle 2.2, Seite 24, Crude Throughput 2024-25(P), Tsd. t / 1.000",
-      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung."
+      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung.",
+      "location": {
+        "place": "Visakhapatnam",
+        "wikidata_id": "Q200016",
+        "latitude": 17.693888888,
+        "longitude": 83.292222222,
+        "precision": "locality",
+        "source_url": "https://www.wikidata.org/wiki/Q200016"
+      }
     },
     {
       "id": "in_crude_oil_2024_refinery_input_facility_109",
@@ -3151,7 +3447,15 @@
         "mospi_energy_2026"
       ],
       "locator": "Tabelle 2.2, Seite 24, Crude Throughput 2024-25(P), Tsd. t / 1.000",
-      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung."
+      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung.",
+      "location": {
+        "place": "Manali Refinery",
+        "wikidata_id": "Q113987261",
+        "latitude": 13.160444444,
+        "longitude": 80.277527777,
+        "precision": "facility",
+        "source_url": "https://www.wikidata.org/wiki/Q113987261"
+      }
     },
     {
       "id": "in_crude_oil_2024_refinery_input_facility_110",
@@ -3174,7 +3478,15 @@
         "mospi_energy_2026"
       ],
       "locator": "Tabelle 2.2, Seite 24, Crude Throughput 2024-25(P), Tsd. t / 1.000",
-      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung."
+      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung.",
+      "location": {
+        "place": "Numaligarh",
+        "wikidata_id": "Q7069044",
+        "latitude": 26.63333333,
+        "longitude": 93.75,
+        "precision": "locality",
+        "source_url": "https://www.wikidata.org/wiki/Q7069044"
+      }
     },
     {
       "id": "in_crude_oil_2024_refinery_input_facility_111",
@@ -3197,7 +3509,15 @@
         "mospi_energy_2026"
       ],
       "locator": "Tabelle 2.2, Seite 24, Crude Throughput 2024-25(P), Tsd. t / 1.000",
-      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung."
+      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung.",
+      "location": {
+        "place": "Mangaluru",
+        "wikidata_id": "Q127041",
+        "latitude": 12.871666666,
+        "longitude": 74.8425,
+        "precision": "locality",
+        "source_url": "https://www.wikidata.org/wiki/Q127041"
+      }
     },
     {
       "id": "in_crude_oil_2024_refinery_input_facility_112",
@@ -3243,7 +3563,15 @@
         "mospi_energy_2026"
       ],
       "locator": "Tabelle 2.2, Seite 24, Crude Throughput 2024-25(P), Tsd. t / 1.000",
-      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung."
+      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung.",
+      "location": {
+        "place": "Jamnagar Refinery",
+        "wikidata_id": "Q3417395",
+        "latitude": 22.34805556,
+        "longitude": 69.86888889,
+        "precision": "facility",
+        "source_url": "https://www.wikidata.org/wiki/Q3417395"
+      }
     },
     {
       "id": "in_crude_oil_2024_refinery_input_facility_114",
@@ -3266,7 +3594,15 @@
         "mospi_energy_2026"
       ],
       "locator": "Tabelle 2.2, Seite 24, Crude Throughput 2024-25(P), Tsd. t / 1.000",
-      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung."
+      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung.",
+      "location": {
+        "place": "Jamnagar Refinery",
+        "wikidata_id": "Q3417395",
+        "latitude": 22.34805556,
+        "longitude": 69.86888889,
+        "precision": "facility",
+        "source_url": "https://www.wikidata.org/wiki/Q3417395"
+      }
     },
     {
       "id": "in_crude_oil_2024_refinery_input_facility_115",
@@ -3289,7 +3625,15 @@
         "mospi_energy_2026"
       ],
       "locator": "Tabelle 2.2, Seite 24, Crude Throughput 2024-25(P), Tsd. t / 1.000",
-      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung."
+      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung.",
+      "location": {
+        "place": "Essar Refinery (Vadinar)",
+        "wikidata_id": "Q12417189",
+        "latitude": 22.33166667,
+        "longitude": 69.74722222,
+        "precision": "facility",
+        "source_url": "https://www.wikidata.org/wiki/Q12417189"
+      }
     },
     {
       "id": "in_crude_oil_2024_refinery_input_facility_116",
@@ -3312,7 +3656,15 @@
         "mospi_energy_2026"
       ],
       "locator": "Tabelle 2.2, Seite 24, Crude Throughput 2024-25(P), Tsd. t / 1.000",
-      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung."
+      "note": "Verarbeitete Rohölmenge, keine Anlagenkapazität; Teilmenge der nationalen Raffinerieverarbeitung.",
+      "location": {
+        "place": "Guru Gobind Singh Refinery",
+        "wikidata_id": "Q5620369",
+        "latitude": 30.23,
+        "longitude": 74.951944444,
+        "precision": "facility",
+        "source_url": "https://www.wikidata.org/wiki/Q5620369"
+      }
     },
     {
       "id": "in_crude_oil_2024_refinery_input_operator_117",
