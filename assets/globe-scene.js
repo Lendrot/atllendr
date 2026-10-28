@@ -22,7 +22,7 @@ export function createGlobe(host,callbacks={}){
   const controls=new GlobeNavigation(camera,renderer.domElement,{
     onStart:()=>{flight=null;stopRotation();callbacks.onHover?.(null);},
     onHover:event=>{if(!event){callbacks.onHover?.(null);return;}const hit=pick(event,false);renderer.domElement.style.cursor=hit?'pointer':'grab';callbacks.onHover?.(hit?.deal||null,event.clientX,event.clientY);},
-    onTap:event=>{const hit=pick(event,true);if(hit?.deal)callbacks.onDealClick?.(hit.deal.id);else if(hit?.companies)callbacks.onCompanyClick?.(hit.companies);}
+    onTap:event=>{const hit=pick(event,true);if(hit?.deal)callbacks.onDealClick?.(hit.deal.id);else if(hit?.companies)callbacks.onCompanyClick?.(hit.companies);else if(hit?.sites)callbacks.onSiteClick?.(hit.sites);}
   });
   controls.autoRotate=false;
   scene.add(new THREE.AmbientLight(0xabc5ef,1.45));
@@ -42,14 +42,14 @@ export function createGlobe(host,callbacks={}){
       if(object.material.map)object.material.map.anisotropy=Math.min(8,renderer.capabilities.getMaxAnisotropy());
       object.material.needsUpdate=true;
     }});
-    scene.add(model);earth.visible=false;
+    scene.add(model);earth.visible=false;invalidate();
     callbacks.onEarth?.('NASA Earth 3D');
   },undefined,()=>attempt<2?setTimeout(()=>loadEarth(attempt+1),500*(attempt+1)):callbacks.onNotice?.('Das NASA-3D-Modell konnte nicht geladen werden. Als Ersatz wird das bisherige NASA-Satellitenmosaik angezeigt.'));
   loadEarth(0);
   new THREE.TextureLoader().load('/assets/earth-blue-marble.jpg',texture=>{
     texture.colorSpace=THREE.SRGBColorSpace;
     texture.anisotropy=Math.min(8,renderer.capabilities.getMaxAnisotropy());
-    earthMaterial.map=texture;earthMaterial.needsUpdate=true;
+    earthMaterial.map=texture;earthMaterial.needsUpdate=true;invalidate();
   },undefined,()=>callbacks.onNotice?.('Das Satellitenmosaik ist nicht verfügbar. Die Länderumrisse bleiben sichtbar.'));
   const atmosphereMaterial=new THREE.ShaderMaterial({
     uniforms:{glow:{value:new THREE.Color(0x65b9ff)}},
@@ -70,15 +70,18 @@ export function createGlobe(host,callbacks={}){
     function addRing(ring){for(let i=1;i<ring.length;i++){positions.push(...geoVector(ring[i-1][1],ring[i-1][0],100.08),...geoVector(ring[i][1],ring[i][0],100.08));}}
     features.forEach(f=>{const polygons=f.geometry.type==='Polygon'?[f.geometry.coordinates]:f.geometry.coordinates;polygons.forEach(p=>p.forEach(addRing));});
     const geometry=new THREE.BufferGeometry();geometry.setAttribute('position',new THREE.Float32BufferAttribute(positions,3));
-    scene.add(new THREE.LineSegments(geometry,new THREE.LineBasicMaterial({color:0x8cb2c1,transparent:true,opacity:.18,depthWrite:false})));
+    scene.add(new THREE.LineSegments(geometry,new THREE.LineBasicMaterial({color:0x8cb2c1,transparent:true,opacity:.18,depthWrite:false})));invalidate();
   }).catch(()=>{});
-  let companies=[],pointGroups=[],companyPoints=null,companiesVisible=true,lastClusterKey='',lastClusterTime=0,dealEntries=[],selected=null,flight=null,lastRender=0,lastFrame=0,paused=false;
+  const pointMaterial=new THREE.PointsMaterial({vertexColors:true,size:1,sizeAttenuation:false,transparent:true,opacity:.95,depthWrite:false});
+  // Render on demand: a frame is drawn only when the camera moved, a flow marker animates or the scene changed (invalidate()).
+  let dirty=true;const invalidate=()=>{dirty=true;};
+  let companies=[],pointGroups=[],companyPoints=null,companiesVisible=true,lastClusterKey='',lastClusterTime=0,dealEntries=[],selected=null,flight=null,lastRender=0,lastFrame=0,paused=false,lastRenderKey='',lastScaleDistance=-1,markersDirty=false;
   const dealGroup=new THREE.Group();scene.add(dealGroup);
   const raycaster=new THREE.Raycaster(),pointer=new THREE.Vector2();
   const size={width:1,height:1};
   let firstSize=true;
   function homeDistance(){const halfFov=Math.min(camera.fov*Math.PI/360,Math.atan(Math.tan(camera.fov*Math.PI/360)*camera.aspect));return Math.min(580,Math.max(310,110/Math.sin(halfFov)));}
-  function resize(){size.width=host.clientWidth;size.height=host.clientHeight;if(!size.width||!size.height)return;camera.aspect=size.width/size.height;camera.updateProjectionMatrix();renderer.setSize(size.width,size.height,false);if(firstSize){camera.position.copy(vec(geoVector(25,-35,homeDistance())));firstSize=false;}}
+  function resize(){size.width=host.clientWidth;size.height=host.clientHeight;if(!size.width||!size.height)return;camera.aspect=size.width/size.height;camera.updateProjectionMatrix();renderer.setSize(size.width,size.height,false);invalidate();if(firstSize){camera.position.copy(vec(geoVector(25,-35,homeDistance())));firstSize=false;}}
   const resizeObserver=new ResizeObserver(resize);resizeObserver.observe(host);resize();
 
   function stopRotation(){controls.autoRotate=false;callbacks.onRotation?.(false);}
@@ -88,23 +91,109 @@ export function createGlobe(host,callbacks={}){
       const world=geoVector(c.location.lat,c.location.lon,100.28),p=vec(world).project(camera);
       return {x:(p.x+1)*size.width/2,y:(1-p.y)*size.height/2,visible:frontVisible(world,camera.position.toArray())&&p.z<1&&Math.abs(p.x)<1&&Math.abs(p.y)<1};
     },camera.position.length()<120?10:18,c=>c.markerCategory||null);
-    if(companyPoints){scene.remove(companyPoints);companyPoints.geometry.dispose();companyPoints.material.dispose();}
+    if(companyPoints){scene.remove(companyPoints);companyPoints.geometry.dispose();}
     const positions=pointGroups.flatMap(group=>geoVector(group[0].location.lat,group[0].location.lon,100.28));
     const colors=pointGroups.flatMap(group=>new THREE.Color(group[0].pointColor||0x85caff).toArray());
     const geometry=new THREE.BufferGeometry();geometry.setAttribute('position',new THREE.Float32BufferAttribute(positions,3));geometry.setAttribute('color',new THREE.Float32BufferAttribute(colors,3));
-    companyPoints=new THREE.Points(geometry,new THREE.PointsMaterial({vertexColors:true,size:markerPixels(camera.position.length()-100)*(callbacks.markerScale||1),sizeAttenuation:false,transparent:true,opacity:.95,depthWrite:false}));
-    companyPoints.visible=companiesVisible;scene.add(companyPoints);
+    // One shared material: disposing it per update released the shader program and recompiled it on every cluster pass.
+    pointMaterial.size=markerPixels(camera.position.length()-100)*(callbacks.markerScale||1);
+    companyPoints=new THREE.Points(geometry,pointMaterial);
+    companyPoints.visible=companiesVisible;scene.add(companyPoints);invalidate();
   }
-  function filterDeals(ids){const allowed=new Set(ids);dealEntries.forEach(e=>e.group.visible=allowed.has(e.deal.id));}
+  // Relation markers (arrow heads, flow markers, end points, rings) share one InstancedMesh per geometry and opacity:
+  // one draw call per marker kind instead of one per object (before: seven objects per relation, ~1,265 draw calls).
+  const markerGeometry={
+    cone:new THREE.ConeGeometry(1.05,3.35,10),octa:new THREE.OctahedronGeometry(1.45,0),
+    flowSphere:new THREE.SphereGeometry(.43,8,6),flowBox:new THREE.BoxGeometry(.85,.85,.85),
+    dotSphere:new THREE.SphereGeometry(.85,12,8),dotBox:new THREE.BoxGeometry(1.25,1.25,1.25),
+    ring:new THREE.RingGeometry(1.35,1.65,28),ring4:new THREE.RingGeometry(1.35,1.65,4),wide:new THREE.RingGeometry(3.2,3.55,48)};
+  const markerLayers=new Map();let markers=[],markerCapacity=new Map(),selectionApplied=false,visualScale=1;
+  const markerMatrix=new THREE.Matrix4(),markerScale=new THREE.Vector3(),markerColor=new THREE.Color();
+  function markerLayer(geometry,wireframe,opacity){
+    const key=geometry+'|'+wireframe+'|'+opacity;let layer=markerLayers.get(key);
+    const capacity=markerCapacity.get(geometry)||1;
+    if(layer&&layer.capacity<capacity){dealGroup.remove(layer.mesh);layer.mesh.dispose();layer.mesh.material.dispose();layer=null;}
+    if(!layer){
+      const ring=geometry==='ring'||geometry==='ring4'||geometry==='wide',transparent=opacity<1||selectionApplied;
+      const material=new THREE.MeshBasicMaterial({wireframe,transparent,opacity,side:ring?THREE.DoubleSide:THREE.FrontSide,depthWrite:!ring});
+      const mesh=new THREE.InstancedMesh(markerGeometry[geometry],material,Math.max(1,capacity));mesh.frustumCulled=false;
+      layer={mesh,capacity:Math.max(1,capacity),items:[]};markerLayers.set(key,layer);dealGroup.add(mesh);
+    }
+    return layer;
+  }
+  // Writes every visible marker into its layer; cheap enough to run on each frame that animates flow markers.
+  function layoutMarkers(time){
+    for(const layer of markerLayers.values())layer.items=[];
+    for(const m of markers){
+      const e=m.entry;if(!e.visible)continue;
+      const active=e.deal.id===selected?.deal.id,dimmed=selected&&!active;
+      if(m.role==='flow'&&(e.deal.staticRelation||dimmed))continue;
+      if(m.role==='head'&&e.deal.staticRelation)continue;
+      const opacity=m.role==='flow'?1:selectionApplied?(dimmed?.22:1):m.opacity;
+      markerLayer(m.geometry,m.wireframe,opacity).items.push(m);
+    }
+    for(const layer of markerLayers.values()){
+      layer.items.forEach((m,i)=>{
+        if(m.role==='flow')m.position.copy(m.entry.curve.getPoint(reduced ? .6 : (time/8500+m.entry.index*.173)%1));
+        markerMatrix.compose(m.position,m.quaternion,markerScale.setScalar(visualScale));
+        layer.mesh.setMatrixAt(i,markerMatrix);layer.mesh.setColorAt(i,markerColor.set(m.color));
+      });
+      layer.mesh.count=layer.items.length;layer.mesh.visible=layer.items.length>0;
+      layer.mesh.instanceMatrix.needsUpdate=true;if(layer.mesh.instanceColor)layer.mesh.instanceColor.needsUpdate=true;
+      layer.mesh.boundingSphere=null;
+    }
+  }
+  // Site layer (assets/globe-sites.json, analysis/FACHATLANTEN.md): every site of every Fachatlas, ~40,000 points.
+  // Positions are computed once into typed arrays; the cluster pass projects them with one matrix and reuses the buffers.
+  // Display grouping only: every drawn point sits at an actual member's coordinate.
+  const siteMaterial=new THREE.PointsMaterial({vertexColors:true,size:1,sizeAttenuation:false,transparent:true,opacity:.9,depthWrite:false});
+  const siteMatrix=new THREE.Matrix4();
+  let siteData=null,siteGroups=[],sitePoints=null,sitesVisible=true,lastSiteKey='',lastSiteTime=0;
+  function setSites(records){
+    const n=records.length,pos=new Float32Array(n*3),color=new Float32Array(n*3),group=new Int32Array(n),groupIds=new Map(),c=new THREE.Color();
+    records.forEach((r,i)=>{pos.set(geoVector(r.lat,r.lon,100.22),i*3);c.set(r.color??0x85caff).toArray(color,i*3);if(!groupIds.has(r.group))groupIds.set(r.group,groupIds.size);group[i]=groupIds.get(r.group);});
+    if(sitePoints){scene.remove(sitePoints);sitePoints.geometry.dispose();sitePoints=null;}
+    const geometry=new THREE.BufferGeometry();
+    geometry.setAttribute('position',new THREE.BufferAttribute(new Float32Array(Math.max(3,n*3)),3).setUsage(THREE.DynamicDrawUsage));
+    geometry.setAttribute('color',new THREE.BufferAttribute(new Float32Array(Math.max(3,n*3)),3).setUsage(THREE.DynamicDrawUsage));
+    geometry.setDrawRange(0,0);
+    sitePoints=new THREE.Points(geometry,siteMaterial);sitePoints.frustumCulled=false;sitePoints.renderOrder=-1;sitePoints.visible=sitesVisible&&n>0;scene.add(sitePoints);
+    siteData={records,pos,color,group,n};lastSiteKey='';updateSiteClusters();
+  }
+  function updateSiteClusters(){
+    if(!siteData)return;
+    camera.updateMatrixWorld();siteMatrix.multiplyMatrices(camera.projectionMatrix,camera.matrixWorldInverse);
+    const m=siteMatrix.elements,{pos,color,group,n}=siteData,cx=camera.position.x,cy=camera.position.y,cz=camera.position.z;
+    const cell=camera.position.length()<120?8:14,cells=new Map(),w=size.width,h=size.height;
+    for(let i=0;i<n;i++){
+      const x=pos[i*3],y=pos[i*3+1],z=pos[i*3+2];
+      if(x*(cx-x)+y*(cy-y)+z*(cz-z)<=0)continue;
+      const cw=m[3]*x+m[7]*y+m[11]*z+m[15];if(cw<=0)continue;
+      const px=(m[0]*x+m[4]*y+m[8]*z+m[12])/cw,py=(m[1]*x+m[5]*y+m[9]*z+m[13])/cw;
+      if(px<-1||px>1||py<-1||py>1)continue;
+      const key=group[i]*1e8+Math.floor((px+1)*w/2/cell)*1e4+Math.floor((1-py)*h/2/cell);
+      const members=cells.get(key);if(members)members.push(i);else cells.set(key,[i]);
+    }
+    siteGroups=[...cells.values()];
+    const geometry=sitePoints.geometry,outPos=geometry.attributes.position.array,outColor=geometry.attributes.color.array;
+    siteGroups.forEach((members,k)=>{const i=members[0];outPos[k*3]=pos[i*3];outPos[k*3+1]=pos[i*3+1];outPos[k*3+2]=pos[i*3+2];outColor[k*3]=color[i*3];outColor[k*3+1]=color[i*3+1];outColor[k*3+2]=color[i*3+2];});
+    geometry.setDrawRange(0,siteGroups.length);
+    geometry.attributes.position.addUpdateRange(0,siteGroups.length*3);geometry.attributes.color.addUpdateRange(0,siteGroups.length*3);
+    geometry.attributes.position.needsUpdate=true;geometry.attributes.color.needsUpdate=true;geometry.boundingSphere=null;
+    siteMaterial.size=markerPixels(camera.position.length()-100)*.85;
+    invalidate();
+  }
+  function filterDeals(ids){const allowed=new Set(ids);dealEntries.forEach(e=>{e.visible=allowed.has(e.deal.id);e.line.visible=e.visible;});markersDirty=true;invalidate();}
   function setDeals(records,entities){
-    for(const entry of dealEntries)entry.group.traverse(object=>{object.geometry?.dispose();object.material?.dispose();});
-    dealGroup.clear();dealEntries=[];
+    for(const entry of dealEntries){entry.line.geometry.dispose();entry.line.material.dispose();}
+    for(const layer of markerLayers.values()){layer.mesh.dispose();layer.mesh.material.dispose();}
+    markerLayers.clear();dealGroup.clear();dealEntries=[];markers=[];selected=null;
     const corridors=new Map();
+    const facing=position=>new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0,0,1),position.clone().normalize());
     records.flatMap(deal=>(deal.buyerIds||[deal.buyerId]).map(buyerId=>({...deal,buyerId}))).forEach((deal,index)=>{
       const buyer=entities[deal.buyerId],target=entities[deal.targetId];
       if(!hasPoint(buyer)||!hasPoint(target))return;
       const monetary=deal.area==='money';
-      const group=new THREE.Group();
       const key=[deal.buyerId,deal.targetId].join('|'),parallel=corridors.get(key)||0;corridors.set(key,parallel+1);
       const lift=(parallel%10)*1.35;
       const statusColor=deal.flowColor??statuses[deal.status]?.color??0xd6f391;
@@ -117,21 +206,22 @@ export function createGlobe(host,callbacks={}){
           : new THREE.LineDashedMaterial({color:statusColor,transparent:true,opacity:.85,depthWrite:false,dashSize:['interest','intent','rumored','sale_process'].includes(deal.status)?.6:1.8,gapSize:1.0});
       const line=new THREE.Line(new THREE.BufferGeometry().setFromPoints(points),lineMaterial);
       line.computeLineDistances();line.userData.dealId=deal.id;
-      group.add(line);
-      const head=new THREE.Mesh(deal.flowKind?new THREE.OctahedronGeometry(1.45,0):new THREE.ConeGeometry(1.05,3.35,10),new THREE.MeshBasicMaterial({color:statusColor,wireframe:monetary}));
-      head.position.copy(curve.getPoint(.84));head.quaternion.setFromUnitVectors(up,curve.getTangent(.84).normalize());head.userData.dealId=deal.id;head.visible=!deal.staticRelation;group.add(head);
-      const flow=new THREE.Mesh(deal.flowKind?new THREE.BoxGeometry(.85,.85,.85):new THREE.SphereGeometry(.43,8,6),new THREE.MeshBasicMaterial({color:statusColor}));flow.visible=!deal.staticRelation;group.add(flow);
-      const dots=[];
-      for(const [entity,role,color] of [[buyer,'buyer',statusColor],[target,'target',statusColor]]){
+      dealGroup.add(line);
+      const entry={deal,buyer,target,curve,line,index,lift,visible:true};
+      const add=(role,geometry,position,quaternion,opacity=1,pickable=true,wireframe=false)=>markers.push({entry,role,geometry,position,quaternion,opacity,pickable,wireframe,color:statusColor});
+      add('head',deal.flowKind?'octa':'cone',curve.getPoint(.84),new THREE.Quaternion().setFromUnitVectors(up,curve.getTangent(.84).normalize()),1,true,monetary);
+      add('flow',deal.flowKind?'flowBox':'flowSphere',new THREE.Vector3(),new THREE.Quaternion(),1,false);
+      for(const entity of [buyer,target]){
+        const ringPosition=vec(geoVector(entity.lat,entity.lon,100.7));
         // A national total has no site: a wide faint ring instead of a point marker.
-        if(entity.schematic){const ring=new THREE.Mesh(new THREE.RingGeometry(3.2,3.55,48),new THREE.MeshBasicMaterial({color,transparent:true,opacity:.35,side:THREE.DoubleSide,depthWrite:false}));ring.position.copy(vec(geoVector(entity.lat,entity.lon,100.7)));ring.quaternion.setFromUnitVectors(new THREE.Vector3(0,0,1),ring.position.clone().normalize());ring.userData.dealId=deal.id;group.add(ring);dots.push(ring);continue;}
-        const dot=new THREE.Mesh(deal.flowKind?new THREE.BoxGeometry(1.25,1.25,1.25):new THREE.SphereGeometry(.85,12,8),new THREE.MeshBasicMaterial({color}));
-        dot.position.copy(vec(geoVector(entity.lat,entity.lon,100.65)));dot.userData.dealId=deal.id;group.add(dot);dots.push(dot);
-        const ring=new THREE.Mesh(new THREE.RingGeometry(1.35,1.65,deal.flowKind?4:28),new THREE.MeshBasicMaterial({color,transparent:true,opacity:.65,side:THREE.DoubleSide,depthWrite:false}));
-        ring.position.copy(vec(geoVector(entity.lat,entity.lon,100.7)));ring.quaternion.setFromUnitVectors(new THREE.Vector3(0,0,1),ring.position.clone().normalize());group.add(ring);dots.push(ring);
+        if(entity.schematic){add('dot','wide',ringPosition,facing(ringPosition),.35);continue;}
+        add('dot',deal.flowKind?'dotBox':'dotSphere',vec(geoVector(entity.lat,entity.lon,100.65)),new THREE.Quaternion());
+        add('dot',deal.flowKind?'ring4':'ring',ringPosition,facing(ringPosition),.65,false);
       }
-      dealEntries.push({deal,buyer,target,group,curve,line,head,flow,dots,index,lift});dealGroup.add(group);
+      dealEntries.push(entry);
     });
+    markerCapacity=new Map();for(const m of markers)markerCapacity.set(m.geometry,(markerCapacity.get(m.geometry)||0)+1);
+    markersDirty=true;lastScaleDistance=-1;invalidate();
   }
   function focusLocation(lat,lon,distance=250){
     stopRotation();const from=camera.position.clone();const to=vec(geoVector(lat,lon,Math.min(controls.maxDistance,Math.max(controls.minDistance,distance))));
@@ -139,7 +229,10 @@ export function createGlobe(host,callbacks={}){
   }
   function selectDeal(id,focus=true){
     selected=dealEntries.find(e=>e.deal.id===id)||null;
-    dealEntries.forEach(e=>{const active=e.deal.id===selected?.deal.id;e.line.material.opacity=selected?(active?1:.15):.7;e.head.material.color.set(e.deal.flowColor??statuses[e.deal.status]?.color??0xd6f391);e.head.material.transparent=true;e.head.material.opacity=selected&&!active ? .22 : 1;e.flow.visible=!e.deal.staticRelation&&(!selected||active);e.dots.forEach(dot=>{dot.material.transparent=true;dot.material.opacity=selected&&!active ? .22 : 1;});});
+    dealEntries.forEach(e=>{const active=e.deal.id===selected?.deal.id;e.line.material.opacity=selected?(active?1:.15):.7;});
+    // First selection call switches markers from their resting opacity to the selection scheme (1 or .22), as before.
+    if(!selectionApplied){selectionApplied=true;for(const layer of markerLayers.values()){dealGroup.remove(layer.mesh);layer.mesh.dispose();layer.mesh.material.dispose();}markerLayers.clear();}
+    markersDirty=true;invalidate();
     if(selected&&focus){const center=vectorGeo(arcSample(selected.buyer,selected.target,.5));const angle=greatCircleAngle(selected.buyer,selected.target);focusLocation(center.lat,center.lon,Math.max(145,Math.min(325,155+angle*120))*Math.max(1,.9/camera.aspect));}
   }
   function germany(){camera.up.set(0,1,0);controls.update();selectDeal(null,false);focusLocation(51,10,130);}
@@ -154,14 +247,19 @@ export function createGlobe(host,callbacks={}){
     const ground=groundPoint?{distance:camera.position.distanceTo(groundPoint)}:null;
     const threshold=(camera.position.length()-100)*Math.tan(camera.fov*Math.PI/360)*2/size.height*(event.pointerType==='touch'?13:8);
     raycaster.params.Line.threshold=Math.max(.025,threshold);
-    const candidates=dealEntries.filter(e=>e.group.visible).flatMap(e=>[e.line,e.head,...e.dots]);
-    const found=raycaster.intersectObjects(candidates).find(h=>h.object.userData.dealId&&(!ground||h.distance<ground.distance+1));
-    if(found)return {deal:dealEntries.find(e=>e.deal.id===found.object.userData.dealId).deal};
-    if(!includeCompanies||!companyPoints?.visible)return null;
+    const layers=[...markerLayers.values()].filter(l=>l.mesh.visible&&l.items.some(m=>m.pickable));
+    const candidates=[...dealEntries.filter(e=>e.visible).map(e=>e.line),...layers.map(l=>l.mesh)];
+    const dealOf=hit=>{if(hit.object.isInstancedMesh){const m=layers.find(l=>l.mesh===hit.object)?.items[hit.instanceId];return m?.pickable?m.entry.deal:null;}return hit.object.userData.dealId?dealEntries.find(e=>e.line===hit.object)?.deal:null;};
+    const found=raycaster.intersectObjects(candidates,false).find(h=>dealOf(h)&&(!ground||h.distance<ground.distance+1));
+    if(found)return {deal:dealOf(found)};
+    if(!includeCompanies)return null;
     raycaster.params.Points.threshold=Math.max(.02,threshold);
-    const hits=raycaster.intersectObject(companyPoints).filter(h=>!ground||h.distance<ground.distance+1).sort((a,b)=>(a.distanceToRay??0)-(b.distanceToRay??0));
-    if(!hits.length)return null;
-    return {companies:pointGroups[hits[0].index]};
+    const nearest=object=>raycaster.intersectObject(object).filter(h=>!ground||h.distance<ground.distance+1).sort((a,b)=>(a.distanceToRay??0)-(b.distanceToRay??0))[0];
+    const company=companyPoints?.visible?nearest(companyPoints):null;
+    if(company)return {companies:pointGroups[company.index]};
+    const site=sitePoints?.visible&&siteGroups.length?nearest(sitePoints):null;
+    if(site)return {sites:siteGroups[site.index].map(i=>siteData.records[i])};
+    return null;
   }
   canvas.addEventListener('keydown',event=>{
     const step=Math.max(.12,Math.min(8,(camera.position.length()-100)*.035));
@@ -170,6 +268,7 @@ export function createGlobe(host,callbacks={}){
     if(['+','='].includes(event.key)){event.preventDefault();zoom(.85);}
     if(event.key==='-'){event.preventDefault();zoom(1.18);}
   });
+  canvas.addEventListener('webglcontextrestored',()=>{paused=false;invalidate();});
   canvas.addEventListener('webglcontextlost',event=>{event.preventDefault();paused=true;callbacks.onError?.('Die 3D-Darstellung wurde vom Gerät unterbrochen. Lade die Seite neu oder nutze die 2D-Karte.');});
   let frame;
   function animate(time){
@@ -181,13 +280,19 @@ export function createGlobe(host,callbacks={}){
     if(time-lastRender<1000/30)return;
     lastRender=time;
     const distance=camera.position.length();
-    const visualScale=Math.max(.008,Math.min(1.5,Math.pow((distance-100)/210,1.1)));
+    visualScale=Math.max(.008,Math.min(1.5,Math.pow((distance-100)/210,1.1)));
     const clusterKey=[...camera.position.toArray(),...camera.up.toArray(),size.width,size.height].map(v=>v.toFixed(4)).join(',');
+    const moved=clusterKey!==lastRenderKey;lastRenderKey=clusterKey;
     if(clusterKey!==lastClusterKey&&time-lastClusterTime>120){updateCompanyClusters();lastClusterKey=clusterKey;lastClusterTime=time;}
-    for(const entry of dealEntries){
-      entry.head.scale.setScalar(visualScale);entry.flow.scale.setScalar(visualScale);entry.dots.forEach(dot=>dot.scale.setScalar(visualScale));
-      entry.flow.position.copy(entry.curve.getPoint(reduced ? .6 : (time/8500+entry.index*.173)%1));
-    }
+    if(siteData&&clusterKey!==lastSiteKey&&time-lastSiteTime>150){updateSiteClusters();lastSiteKey=clusterKey;lastSiteTime=time;}
+    if(siteData&&clusterKey!==lastSiteKey)dirty=true;
+    // Cluster pass pending after the camera stopped: keep the loop awake until it ran.
+    if(clusterKey!==lastClusterKey)dirty=true;
+    const rescale=distance!==lastScaleDistance;lastScaleDistance=distance;
+    const animating=!reduced&&dealEntries.some(e=>e.visible&&!e.deal.staticRelation&&(!selected||e===selected));
+    if(rescale||animating||markersDirty){layoutMarkers(time);markersDirty=false;}
+    if(!moved&&!animating&&!dirty&&!selected)return;
+    dirty=false;
     if(selected){
       const projected=[['buyer',selected.buyer],['target',selected.target]].map(([role,entity])=>{const position=geoVector(entity.lat,entity.lon,100.8);const p=vec(position).project(camera);return {role,entity,x:(p.x+1)*size.width/2,y:(1-p.y)*size.height/2,visible:frontVisible(position,camera.position.toArray())&&p.z<1&&Math.abs(p.x)<1&&Math.abs(p.y)<1};});
       callbacks.onLabels?.(projected);
@@ -196,5 +301,5 @@ export function createGlobe(host,callbacks={}){
     renderer.render(scene,camera);
   }
   frame=requestAnimationFrame(animate);
-  return {setCompanies,setDeals,germany,filterDeals,selectDeal,focusLocation,home,zoom,toggleRotation,showCompanies:visible=>{companiesVisible=visible;if(companyPoints)companyPoints.visible=visible;},isRotating:()=>controls.autoRotate,dispose:()=>{cancelAnimationFrame(frame);resizeObserver.disconnect();controls.dispose();scene.traverse(o=>{o.geometry?.dispose();if(Array.isArray(o.material))o.material.forEach(m=>m.dispose());else o.material?.dispose();});renderer.dispose();}};
+  return {setCompanies,setSites,showSites:visible=>{sitesVisible=visible;if(sitePoints)sitePoints.visible=visible&&siteData?.n>0;invalidate();},setDeals,germany,filterDeals,selectDeal,focusLocation,home,zoom,toggleRotation,showCompanies:visible=>{companiesVisible=visible;if(companyPoints)companyPoints.visible=visible;invalidate();},isRotating:()=>controls.autoRotate,dispose:()=>{cancelAnimationFrame(frame);pointMaterial.dispose();siteMaterial.dispose();resizeObserver.disconnect();controls.dispose();scene.traverse(o=>{o.geometry?.dispose();if(Array.isArray(o.material))o.material.forEach(m=>m.dispose());else o.material?.dispose();});renderer.dispose();}};
 }
