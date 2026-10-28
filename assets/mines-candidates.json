@@ -5918,12 +5918,7 @@
       "status": "unverified",
       "status_note": "Aktiv",
       "method": "Hartgestein / Spodumen",
-      "coordinates": {
-        "lat": -11.6,
-        "lon": -7.96,
-        "precision": "APPROXIMATE",
-        "source_url": "https://www.ganfenglithium.com/about3.html"
-      },
+      "coordinates": null,
       "owner": {
         "name": "Ganfeng Lithium",
         "shares": "UNKNOWN",

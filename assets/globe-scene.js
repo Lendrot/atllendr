@@ -123,6 +123,8 @@ export function createGlobe(host,callbacks={}){
       const flow=new THREE.Mesh(deal.flowKind?new THREE.BoxGeometry(.85,.85,.85):new THREE.SphereGeometry(.43,8,6),new THREE.MeshBasicMaterial({color:statusColor}));flow.visible=!deal.staticRelation;group.add(flow);
       const dots=[];
       for(const [entity,role,color] of [[buyer,'buyer',statusColor],[target,'target',statusColor]]){
+        // A national total has no site: a wide faint ring instead of a point marker.
+        if(entity.schematic){const ring=new THREE.Mesh(new THREE.RingGeometry(3.2,3.55,48),new THREE.MeshBasicMaterial({color,transparent:true,opacity:.35,side:THREE.DoubleSide,depthWrite:false}));ring.position.copy(vec(geoVector(entity.lat,entity.lon,100.7)));ring.quaternion.setFromUnitVectors(new THREE.Vector3(0,0,1),ring.position.clone().normalize());ring.userData.dealId=deal.id;group.add(ring);dots.push(ring);continue;}
         const dot=new THREE.Mesh(deal.flowKind?new THREE.BoxGeometry(1.25,1.25,1.25):new THREE.SphereGeometry(.85,12,8),new THREE.MeshBasicMaterial({color}));
         dot.position.copy(vec(geoVector(entity.lat,entity.lon,100.65)));dot.userData.dealId=deal.id;group.add(dot);dots.push(dot);
         const ring=new THREE.Mesh(new THREE.RingGeometry(1.35,1.65,deal.flowKind?4:28),new THREE.MeshBasicMaterial({color,transparent:true,opacity:.65,side:THREE.DoubleSide,depthWrite:false}));
