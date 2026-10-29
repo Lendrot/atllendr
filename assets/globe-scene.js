@@ -23,7 +23,8 @@ export function createGlobe(host,callbacks={}){
     onStart:()=>{flight=null;stopRotation();callbacks.onHover?.(null);},
     onHover:event=>{if(!event){callbacks.onHover?.(null);return;}const hit=pick(event,false);renderer.domElement.style.cursor=hit?'pointer':'grab';callbacks.onHover?.(hit?.deal||null,event.clientX,event.clientY);},
     onTap:event=>{const hit=pick(event,true);if(hit?.deal)callbacks.onDealClick?.(hit.deal.id);else if(hit?.companies)callbacks.onCompanyClick?.(hit.companies);else if(hit?.sites)callbacks.onSiteClick?.(hit.sites);else if(hit?.links)callbacks.onSiteLinkClick?.(hit.links);}
-  });
+ 
+  },host.parentElement);
   controls.autoRotate=false;
   scene.add(new THREE.AmbientLight(0xabc5ef,1.45));
   const sun=new THREE.DirectionalLight(0xfff8e9,2.0);

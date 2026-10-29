@@ -9,8 +9,8 @@ export function zoomDistance(distance,factor){return THREE.MathUtils.clamp(100+(
 // Rotate the camera around the fixed Earth. Rays intersect its surface, so
 // a finger moves a local place by the same screen distance at every altitude.
 export class GlobeNavigation {
-  constructor(camera,canvas,events={}){
-    this.camera=camera;this.canvas=canvas;this.events=events;
+  constructor(camera,canvas,events={},surface=null){
+    this.camera=camera;this.canvas=canvas;this.events=events;this.surface=surface;
     this.minDistance=MIN_DISTANCE;this.maxDistance=MAX_DISTANCE;
     this.autoRotate=false;this.points=new Map();this.tap=null;this.multi=false;
     this.ray=new THREE.Raycaster();this.listeners=[];
@@ -20,8 +20,28 @@ export class GlobeNavigation {
     this.listen('pointercancel',e=>this.end(e,true));
     this.listen('lostpointercapture',e=>this.end(e,true));
     this.listen('pointerleave',()=>events.onHover?.(null));
-    this.listen('wheel',e=>{e.preventDefault();events.onStart?.();const unit=e.deltaMode===1?16:e.deltaMode===2?canvas.clientHeight:1;this.zoom(Math.exp(THREE.MathUtils.clamp(e.deltaY*unit,-180,180)*.002),{x:e.clientX,y:e.clientY});},{passive:false});
+    this.listen('wheel',e=>this.wheel(e),{passive:false});
+    // Cards, legends and buttons lie on top of the canvas. The wheel over them zooms the globe too,
+    // unless the panel under the cursor can still scroll that way (before, an open card swallowed it).
+    this.surfaceWheel=e=>{if(e.target!==canvas&&!e.defaultPrevented&&!this.panelScrolls(e.target,e))this.wheel(e);};
+    surface?.addEventListener('wheel',this.surfaceWheel,{passive:false});
     this.update();
+  }
+  wheel(e){
+    e.preventDefault();this.events.onStart?.();
+    const unit=e.deltaMode===1?16:e.deltaMode===2?this.canvas.clientHeight:1;
+    this.zoom(Math.exp(THREE.MathUtils.clamp(e.deltaY*unit,-180,180)*.002),{x:e.clientX,y:e.clientY});
+  }
+  panelScrolls(el,e){
+    if(e.ctrlKey)return false; // trackpad pinch always zooms the globe
+    for(;el&&el!==this.surface;el=el.parentElement){
+      if(el.tagName==='DIALOG')return true;
+      const style=getComputedStyle(el);
+      if(!/(auto|scroll)/.test(style.overflowY))continue;
+      if(e.deltaY<0&&el.scrollTop>0)return true;
+      if(e.deltaY>0&&el.scrollTop+el.clientHeight<el.scrollHeight-1)return true;
+    }
+    return false;
   }
   listen(type,fn,options){this.canvas.addEventListener(type,fn,options);this.listeners.push([type,fn,options]);}
   update(dt=0){
@@ -89,5 +109,5 @@ export class GlobeNavigation {
     if(!this.points.size){this.tap=null;this.multi=false;this.canvas.style.cursor='grab';}
     if(tap)this.events.onTap?.(e);
   }
-  dispose(){for(const [t,f,o] of this.listeners)this.canvas.removeEventListener(t,f,o);this.points.clear();}
+  dispose(){for(const [t,f,o] of this.listeners)this.canvas.removeEventListener(t,f,o);this.surface?.removeEventListener('wheel',this.surfaceWheel);this.points.clear();}
 }
