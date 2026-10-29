@@ -8,8 +8,8 @@
   <meta name="description" content="Hauptglobus mit allen Standorten und Verbindungen; Fachatlanten als eigene Seiten.">
   <link rel="icon" href="/atllendr/assets/favicon.svg" type="image/svg+xml">
   <!-- Eddie 2026-10-28: Die Startseite zeigt nur den Hauptglobus. Fachatlanten (Rohstoffwelt, Kupfer, Abfall, Anlagen ...) sind Nebenseiten unter /themen/. -->
-  <noscript><meta http-equiv="refresh" content="0; url=/atlas/"></noscript>
-  <script>const p=new URLSearchParams(location.search);const left=p.get('left');const q=left!==null?left:(p.delete('right'),p.toString());location.replace('/atlas/'+(q?'?'+q:'')+location.hash)</script>
+  <noscript><meta http-equiv="refresh" content="0; url=atlas/"></noscript>
+  <script>const p=new URLSearchParams(location.search);const left=p.get('left');const q=left!==null?left:(p.delete('right'),p.toString());location.replace('atlas/'+(q?'?'+q:'')+location.hash)</script>
 </head>
 <body>
   <p><a href="/atllendr/atlas/">Zum Hauptglobus</a> · <a href="/atllendr/themen/">Fachatlanten</a></p>
