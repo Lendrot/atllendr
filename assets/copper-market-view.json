@@ -25,9 +25,9 @@
  "kpi": {
   "year": 2025,
   "chains": 18,
-  "mines_with_value": 10,
-  "mines_unknown": 8,
-  "recorded_mine_supply_kt": 3319.7,
+  "mines_with_value": 11,
+  "mines_unknown": 7,
+  "recorded_mine_supply_kt": 3708.5,
   "relationships": 133,
   "review_status_counts": {
    "APPROVED": 109,
@@ -41,16 +41,16 @@
   "candidate_groups": 1,
   "candidate_group_mines": 3,
   "candidate_fact_kt": 1239.5,
-  "recorded_incl_fact_candidates_kt": 4559.2,
+  "recorded_incl_fact_candidates_kt": 4948.0,
   "world_mine_kt": 23013,
   "world_refinery_kt": 28970,
-  "world_coverage_pct": 14.4,
+  "world_coverage_pct": 16.1,
   "world_consumption": "UNKNOWN",
-  "supply_hhi_country": 6216,
+  "supply_hhi_country": 5091,
   "buyers": 11,
   "cost_mines": 7,
-  "cost_covered_kt": 2370.9,
-  "cost_covered_share_pct": 71.4
+  "cost_covered_kt": 2759.7,
+  "cost_covered_share_pct": 74.4
  },
  "supply": {
   "rows": [
@@ -339,19 +339,54 @@
     "operator_review_status": [
      "APPROVED"
     ],
-    "value_kt": null,
-    "status": "UNKNOWN",
-    "unknown_reason": "CONFLICTING_CLAIMS",
-    "period": null,
-    "input_claims": [],
-    "excluded_claims": [
+    "value_kt": 388.8,
+    "status": "INFERENCE",
+    "unknown_reason": null,
+    "period": {
+     "period_type": "CALENDAR_YEAR",
+     "period_start": "2025-01-01",
+     "period_end": "2026-01-01"
+    },
+    "input_claims": [
      {
       "claim_id": "claim:10ff6612-1e1b-5668-982c-6bcb4b81960f",
-      "reason": "CONFLICT"
-     },
+      "value": 388841,
+      "unit": "t",
+      "field": "production",
+      "fact_status": "CONFLICT",
+      "resolved_by_rule": "LATER_FINAL_REPORT_SAME_PUBLISHER",
+      "evidence_status": "SOURCE_TEXT_REVIEWED",
+      "material_basis": "CONTAINED_METAL",
+      "material_form": "contained copper in concentrate",
+      "measurement_basis": "100% project; annual results",
+      "period_type": "CALENDAR_YEAR",
+      "period_start": "2025-01-01",
+      "period_end": "2026-01-01",
+      "reference_year": 2025,
+      "sources": [
+       {
+        "source_id": "ivn_fy2025",
+        "publisher": "Ivanhoe Mines",
+        "source_url": "https://www.ivanhoemines.com/news-stories/news-release/ivanhoe-mines-issues-2025-fourth-quarter-and-annual-financial-results/",
+        "source_quality": "COMPANY_PRIMARY",
+        "accessed_at": "2026-10-07"
+       }
+      ]
+     }
+    ],
+    "excluded_claims": [
      {
       "claim_id": "claim:693c9a09-7bd0-591a-bd09-d79a34df8101",
-      "reason": "CONFLICT"
+      "reason": "SUPERSEDED_BY_LATER_FINAL_REPORT",
+      "value": 388838,
+      "unit": "t",
+      "source_id": "ivn_preliminary2025",
+      "source_published_at": "2026-01-15",
+      "replaced_by": "claim:10ff6612-1e1b-5668-982c-6bcb4b81960f",
+      "replaced_by_value": 388841,
+      "replaced_by_published_at": "2026-02-18",
+      "rule": "LATER_FINAL_REPORT_SAME_PUBLISHER",
+      "decision": "Eddie Sablah, 2026-10-29 (Entscheidungskarte: späterer Jahresbericht ersetzt vorläufigen Wert desselben Betreibers)"
      }
     ],
     "candidate": null,
@@ -887,7 +922,7 @@
     {
      "group": "Chile",
      "value_kt": 2561.8,
-     "share_pct": 77.2,
+     "share_pct": 69.1,
      "members": [
       "Caserones",
       "Chuquicamata division mine complex",
@@ -898,9 +933,17 @@
      ]
     },
     {
+     "group": "DR Kongo",
+     "value_kt": 388.8,
+     "share_pct": 10.5,
+     "members": [
+      "Kamoa-Kakula"
+     ]
+    },
+    {
      "group": "Peru",
      "value_kt": 387.7,
-     "share_pct": 11.7,
+     "share_pct": 10.5,
      "members": [
       "Cuajone",
       "Toquepala"
@@ -909,34 +952,33 @@
     {
      "group": "Sambia",
      "value_kt": 370.2,
-     "share_pct": 11.2,
+     "share_pct": 10.0,
      "members": [
       "Kansanshi",
       "Sentinel"
      ]
     }
    ],
-   "known_total_kt": 3319.7,
+   "known_total_kt": 3708.5,
    "unknown_members": [
     "Antamina",
     "Carrapateena",
     "Grasberg minerals district / PTFI integrated mine",
-    "Kamoa-Kakula",
     "Kennecott / Bingham Canyon mine",
     "Olympic Dam",
     "Oyu Tolgoi",
     "Prominent Hill"
    ],
-   "hhi_known": 6216,
-   "top1_share_pct": 77.2,
-   "top3_share_pct": 100.0
+   "hhi_known": 5091,
+   "top1_share_pct": 69.1,
+   "top3_share_pct": 90.0
   },
   "by_operator": {
    "groups": [
     {
      "group": "BHP — berichtete Unternehmensgruppe",
      "value_kt": 1572.5,
-     "share_pct": 47.4,
+     "share_pct": 42.4,
      "members": [
       "Escondida",
       "Spence"
@@ -945,7 +987,7 @@
     {
      "group": "UNKNOWN",
      "value_kt": 1566.0,
-     "share_pct": 47.2,
+     "share_pct": 42.2,
      "members": [
       "Caserones",
       "Chuquicamata division mine complex",
@@ -957,28 +999,35 @@
      ]
     },
     {
+     "group": "Kamoa Copper SA",
+     "value_kt": 388.8,
+     "share_pct": 10.5,
+     "members": [
+      "Kamoa-Kakula"
+     ]
+    },
+    {
      "group": "Kansanshi Mining PLC",
      "value_kt": 181.2,
-     "share_pct": 5.5,
+     "share_pct": 4.9,
      "members": [
       "Kansanshi"
      ]
     }
    ],
-   "known_total_kt": 3319.7,
+   "known_total_kt": 3708.5,
    "unknown_members": [
     "Antamina",
     "Carrapateena",
     "Grasberg minerals district / PTFI integrated mine",
-    "Kamoa-Kakula",
     "Kennecott / Bingham Canyon mine",
     "Olympic Dam",
     "Oyu Tolgoi",
     "Prominent Hill"
    ],
-   "hhi_known": 4499,
-   "top1_share_pct": 47.4,
-   "top3_share_pct": 100.0
+   "hhi_known": 3715,
+   "top1_share_pct": 42.4,
+   "top3_share_pct": 95.1
   }
  },
  "supply_history": [
@@ -1205,10 +1254,12 @@
     },
     {
      "year": 2025,
-     "value_kt": null,
-     "unknown_reason": "CONFLICTING_CLAIMS",
-     "period_type": null,
-     "input_claim_ids": []
+     "value_kt": 388.8,
+     "unknown_reason": null,
+     "period_type": "CALENDAR_YEAR",
+     "input_claim_ids": [
+      "claim:10ff6612-1e1b-5668-982c-6bcb4b81960f"
+     ]
     }
    ]
   },
@@ -3976,14 +4027,20 @@
   ],
   "coverage": {
    "status": "INFERENCE",
-   "recorded_kt": 3319.7,
-   "share_of_world_mine_pct": 14.4,
+   "recorded_kt": 3708.5,
+   "share_of_world_mine_pct": 16.1,
    "by_country": [
     {
      "country": "Chile",
      "recorded_kt": 2561.8,
      "world_kt": 5300,
      "share_pct": 48.3
+    },
+    {
+     "country": "DR Kongo",
+     "recorded_kt": 388.8,
+     "world_kt": 3200,
+     "share_pct": 12.2
     },
     {
      "country": "Peru",
@@ -4003,7 +4060,7 @@
     "LEDGER_PAYABLE_VS_USGS_RECOVERABLE_CONTENT",
     "USGS_ESTIMATE_FOR_2025"
    ],
-   "share_incl_fact_candidates_pct": 19.8
+   "share_incl_fact_candidates_pct": 21.5
   },
   "consumption": {
    "status": "UNKNOWN",
@@ -12912,11 +12969,11 @@
     "cost_definition": "C1_CASH_COST",
     "definition_note": "Cash cost (C1) per pound of payable copper produced, as defined by Ivanhoe Mines; by-product treatment not stated in the cited paragraph",
     "fact_status": "FACT",
-    "width_kt": null,
-    "width_status": "UNKNOWN",
-    "width_unknown_reason": "CONFLICTING_CLAIMS",
+    "width_kt": 388.8,
+    "width_status": "LEDGER_MINE_SUPPLY",
+    "width_unknown_reason": null,
     "cumulative_start_kt": 2049.0,
-    "cumulative_end_kt": null,
+    "cumulative_end_kt": 2437.8,
     "cost_id": "ccs1:kamoa:2025",
     "locator": "Kamoa-Kakula section, cost paragraph",
     "quote_fragments": [
@@ -12949,8 +13006,8 @@
     "width_kt": 132.9,
     "width_status": "LEDGER_MINE_SUPPLY",
     "width_unknown_reason": null,
-    "cumulative_start_kt": 2049.0,
-    "cumulative_end_kt": 2181.9,
+    "cumulative_start_kt": 2437.8,
+    "cumulative_end_kt": 2570.7,
     "cost_id": "ccs1:caserones:2025",
     "locator": "2025 Production, Cash Cost and Capital Expenditure Summary; Operational Performance, Caserones",
     "quote_fragments": [
@@ -12983,8 +13040,8 @@
     "width_kt": 189.0,
     "width_status": "LEDGER_MINE_SUPPLY",
     "width_unknown_reason": null,
-    "cumulative_start_kt": 2181.9,
-    "cumulative_end_kt": 2370.9,
+    "cumulative_start_kt": 2570.7,
+    "cumulative_end_kt": 2759.7,
     "cost_id": "ccs1:sentinel:2025",
     "locator": "MD&A, Operations Review, Sentinel, Full Year",
     "quote_fragments": [
@@ -13070,8 +13127,8 @@
    "NET_CASH_COST": 1,
    "NET_UNIT_COST": 2
   },
-  "covered_kt": 2370.9,
+  "covered_kt": 2759.7,
   "comparability": "DEFINITIONS_DIFFER_NO_CROSS_DEFINITION_AGGREGATE"
  },
- "output_sha256": "33cecca5e82f2eee1fb18806cf6139c46b52d639f9be281e89dee1921d7992aa"
+ "output_sha256": "d4e0546f475619a9e8fb8811be4917a52085074feefbce37e07923c457dad6b4"
 }
