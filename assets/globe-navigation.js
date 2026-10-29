@@ -14,7 +14,7 @@ export class GlobeNavigation {
     this.minDistance=MIN_DISTANCE;this.maxDistance=MAX_DISTANCE;
     this.autoRotate=false;this.points=new Map();this.tap=null;this.multi=false;
     this.ray=new THREE.Raycaster();this.listeners=[];
-    this.listen('pointerdown',e=>this.down(e));
+    this.listen('pointerdown',e=>{this.down(e);if(this.pending.size)this.adopt();});
     this.listen('pointermove',e=>this.move(e));
     this.listen('pointerup',e=>this.end(e,false));
     this.listen('pointercancel',e=>this.end(e,true));
@@ -24,9 +24,23 @@ export class GlobeNavigation {
     // Cards, legends and buttons lie on top of the canvas. The wheel over them zooms the globe too,
     // unless the panel under the cursor can still scroll that way (before, an open card swallowed it).
     this.surfaceWheel=e=>{if(e.target!==canvas&&!e.defaultPrevented&&!this.panelScrolls(e.target,e))this.wheel(e);};
-    surface?.addEventListener('wheel',this.surfaceWheel,{passive:false});
+    this.surfaceListeners=[['wheel',this.surfaceWheel,{passive:false}]];
+    // Pinch with a finger on such an overlay: a touch there waits until a second finger joins,
+    // then both are handed to the globe. Overlays keep panning; only the browser's own pinch is off.
+    this.pending=new Map();
+    if(surface){
+      if(!document.getElementById('globe-surface-touch')){const style=document.createElement('style');style.id='globe-surface-touch';style.textContent='.globe-surface,.globe-surface *{touch-action:pan-x pan-y}';document.head.append(style);}
+      surface.classList.add('globe-surface');canvas.style.touchAction='none';
+      const drop=e=>this.pending.delete(e.pointerId);
+      this.surfaceListeners.push(
+        ['pointerdown',e=>{if(e.pointerType!=='touch'||e.target===canvas||e.target.closest?.('dialog'))return;this.pending.set(e.pointerId,e);if(this.pending.size+this.points.size>1)this.adopt();}],
+        ['pointermove',e=>{if(this.pending.has(e.pointerId))this.pending.set(e.pointerId,e);}],
+        ['pointerup',drop],['pointercancel',drop]);
+      for(const [t,f,o] of this.surfaceListeners)surface.addEventListener(t,f,o);
+    }
     this.update();
   }
+  adopt(){const waiting=[...this.pending.values()];this.pending.clear();for(const e of waiting)this.down(e);}
   wheel(e){
     e.preventDefault();this.events.onStart?.();
     const unit=e.deltaMode===1?16:e.deltaMode===2?this.canvas.clientHeight:1;
@@ -109,5 +123,5 @@ export class GlobeNavigation {
     if(!this.points.size){this.tap=null;this.multi=false;this.canvas.style.cursor='grab';}
     if(tap)this.events.onTap?.(e);
   }
-  dispose(){for(const [t,f,o] of this.listeners)this.canvas.removeEventListener(t,f,o);this.surface?.removeEventListener('wheel',this.surfaceWheel);this.points.clear();}
+  dispose(){for(const [t,f,o] of this.listeners)this.canvas.removeEventListener(t,f,o);for(const [t,f,o] of this.surfaceListeners)this.surface?.removeEventListener(t,f,o);this.pending.clear();this.points.clear();}
 }
