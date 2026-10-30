@@ -11,7 +11,8 @@ export async function attachSites(engine,host){
  const data=await fetch('/assets/globe-sites.json').then(r=>{if(!r.ok)throw Error('Standortindex '+r.status);return r.json();});
  if(data.schema!=='atlas.globe-sites/1')throw Error('Standortindex: unbekanntes Schema');
  // Fachatlas mode: only that Fachatlas' sites and connections, no switches for the others.
- const fach=currentFach(),datasets=fach?data.datasets.filter(d=>d.id===fach.sites):data.datasets,params=new URLSearchParams(location.search);
+ // Without fach, subset datasets (generated commodities, their sites are Rohstoffwelt rows) are skipped: no double points.
+ const fach=currentFach(),datasets=fach?data.datasets.filter(d=>d.id===fach.sites):data.datasets.filter(d=>!d.subset_of),params=new URLSearchParams(location.search);
  const chosen=!fach&&params.has('sites')?new Set(params.get('sites').split(',')):null;
  const state=Object.fromEntries(datasets.map(d=>[d.id,chosen?chosen.has(d.id):true]));
  const byIndex=data.datasets.map(d=>datasets.includes(d)?d:null);

@@ -2,6 +2,7 @@
  *  globe with every feature, limited to one area. Relations come from the same atlas data (area/subtype filter), sites from
  *  assets/globe-sites.json (one dataset). The Fachatlas page keeps its own tools; nothing here is a separate truth. */
 import {escapeHtml as esc} from './map-logic.mjs';
+import {GENERATED} from './fachatlas-rohstoffe.mjs';  // scripts/rohstoffe/neuer_rohstoff.py
 
 export const FACHATLANTEN={
  rohstoffwelt:{label:'Rohstoffwelt',area:'resources',subtype:null,sites:'rohstoffwelt',tools:[['/minen/','Rohstoffwelt-Werkzeuge']]},
@@ -9,6 +10,8 @@ export const FACHATLANTEN={
  abfall:{label:'Abfallwirtschaft Europa',area:'waste',subtype:null,sites:'abfall',focus:[50,10,190],tools:[['/abfall/','Abfall-Kennzahlen']]},
  // EPA TRI: no evidenced recipient routes (themen card), so the main globe shows no relations in this Fachatlas.
  anlagen:{label:'EPA-Anlagen',area:null,subtype:null,sites:'anlagen',focus:[39,-97,230],tools:[['/anlagen/','EPA-Anlagen-Recherche']]},
+ // Generated commodities (analysis/ROHSTOFF_GENERATOR.md); the generator refuses ids of the built-in entries above.
+ ...GENERATED,
 };
 export function currentFach(search=location.search){
  const id=new URLSearchParams(search).get('fach');
