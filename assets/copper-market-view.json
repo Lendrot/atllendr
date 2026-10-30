@@ -3,8 +3,8 @@
  "input": {
   "ledger": "foundation/V29/copper-knowledge.sqlite",
   "sha256": "f637e8f69749fae1750fd284cbf6aa824c81ba7876c1aca6abb0fcaf6ae88dfe",
-  "review_queue_sha256": "3069cbd41eca754c9995f14067d46939178a58c8784c36fecc0820088ce114c1",
-  "approval_ledger_sha256": "628ebf661be7f5b4a7eb6c9d83f0df0c41a8ed543846cad898944313cd8fc824"
+  "review_queue_sha256": "8899791eb00163ee072ce3cbfc9d5bc86ab10931d6fcf540be46d285cb209807",
+  "approval_ledger_sha256": "ba7b9d903e1fcd9da09e6baa71cfbdc4d21e8a2009720862fdfe715e6ea14439"
  },
  "scope": "Copper chains of the V29 copper ledger (18 selected source-bound chains, not global copper coverage).",
  "fact_status": "INFERENCE",
@@ -30,12 +30,11 @@
   "recorded_mine_supply_kt": 3708.5,
   "relationships": 133,
   "review_status_counts": {
-   "APPROVED": 109,
+   "APPROVED": 120,
    "BLOCKED": 2,
-   "REVIEW_READY": 21,
-   "VERIFIED": 1
+   "REVIEW_READY": 11
   },
-  "approved_share_pct": 82.0,
+  "approved_share_pct": 90.2,
   "world_reference": "usgs-mcs-2026-copper",
   "candidate_mines": 4,
   "candidate_groups": 1,
@@ -1589,8 +1588,8 @@
    "hhi_level": "MITTEL",
    "max_chains_one_facility": 4,
    "review_status_counts": {
-    "APPROVED": 31,
-    "REVIEW_READY": 5
+    "APPROVED": 34,
+    "REVIEW_READY": 2
    },
    "relationship_ids": [
     "relationship:08011524-cfb0-5654-ac6b-93a17e469dfd",
@@ -2315,9 +2314,9 @@
    "hhi_level": "MITTEL",
    "max_chains_one_facility": 3,
    "review_status_counts": {
-    "APPROVED": 21,
+    "APPROVED": 26,
     "BLOCKED": 1,
-    "REVIEW_READY": 6
+    "REVIEW_READY": 1
    },
    "relationship_ids": [
     "relationship:05fe1841-bc4b-53dd-8016-9591d74825c8",
@@ -2803,9 +2802,9 @@
    "hhi_level": "MITTEL",
    "max_chains_one_facility": 4,
    "review_status_counts": {
-    "APPROVED": 18,
+    "APPROVED": 19,
     "BLOCKED": 1,
-    "REVIEW_READY": 7
+    "REVIEW_READY": 6
    },
    "relationship_ids": [
     "relationship:01e14c2e-ebb3-502f-86aa-21c68772baac",
@@ -4085,7 +4084,7 @@
      "temporal_status": "SOURCE_DATE_ONLY",
      "seller_side_share_pct": null,
      "scope": null,
-     "review_status": "REVIEW_READY"
+     "review_status": "APPROVED"
     }
    ],
    "upstream_mines": [
@@ -4106,8 +4105,8 @@
     "Chile"
    ],
    "path_review_status": {
-    "APPROVED": 2,
-    "REVIEW_READY": 2
+    "APPROVED": 3,
+    "REVIEW_READY": 1
    },
    "path_fact_status": {
     "FACT": 4
@@ -4134,7 +4133,7 @@
      "temporal_status": "SOURCE_DATE_ONLY",
      "seller_side_share_pct": null,
      "scope": null,
-     "review_status": "REVIEW_READY"
+     "review_status": "APPROVED"
     },
     {
      "relationship_id": "relationship:ea9dc227-d48f-53c7-aaef-9aa48952e5a0",
@@ -4145,7 +4144,7 @@
      "temporal_status": "SOURCE_DATE_ONLY",
      "seller_side_share_pct": null,
      "scope": null,
-     "review_status": "REVIEW_READY"
+     "review_status": "APPROVED"
     }
    ],
    "upstream_mines": [
@@ -4162,8 +4161,8 @@
     "Sambia"
    ],
    "path_review_status": {
-    "APPROVED": 6,
-    "REVIEW_READY": 3
+    "APPROVED": 8,
+    "REVIEW_READY": 1
    },
    "path_fact_status": {
     "FACT": 9
@@ -4405,7 +4404,7 @@
      "temporal_status": "SOURCE_DATE_ONLY",
      "seller_side_share_pct": null,
      "scope": null,
-     "review_status": "REVIEW_READY"
+     "review_status": "APPROVED"
     }
    ],
    "upstream_mines": [
@@ -4418,7 +4417,7 @@
     "Chile"
    ],
    "path_review_status": {
-    "REVIEW_READY": 1
+    "APPROVED": 1
    },
    "path_fact_status": {
     "FACT": 1
@@ -5290,7 +5289,7 @@
      "fact_status": "FACT",
      "temporal_status": "SOURCE_DATE_ONLY",
      "material_form": "copper concentrate",
-     "review_status": "REVIEW_READY",
+     "review_status": "APPROVED",
      "blockers": [
       "SOURCE_DATE_ONLY",
       "IDENTITY_SOURCE_SCOPED",
@@ -5530,7 +5529,7 @@
      "fact_status": "FACT",
      "temporal_status": "SOURCE_DATE_ONLY",
      "material_form": "copper concentrate",
-     "review_status": "REVIEW_READY",
+     "review_status": "APPROVED",
      "blockers": [
       "SOURCE_DATE_ONLY",
       "IDENTITY_SOURCE_SCOPED",
@@ -5642,8 +5641,8 @@
     }
    ],
    "review_status_counts": {
-    "APPROVED": 22,
-    "REVIEW_READY": 4
+    "APPROVED": 24,
+    "REVIEW_READY": 2
    }
   },
   {
@@ -5990,7 +5989,7 @@
      "fact_status": "FACT",
      "temporal_status": "SOURCE_DATE_ONLY",
      "material_form": "copper concentrate",
-     "review_status": "REVIEW_READY",
+     "review_status": "APPROVED",
      "blockers": [
       "SOURCE_DATE_ONLY",
       "IDENTITY_SOURCE_SCOPED",
@@ -6222,8 +6221,7 @@
     }
    ],
    "review_status_counts": {
-    "APPROVED": 18,
-    "REVIEW_READY": 1
+    "APPROVED": 19
    }
   },
   {
@@ -6692,7 +6690,7 @@
      "fact_status": "FACT",
      "temporal_status": "SOURCE_DATE_ONLY",
      "material_form": "anode",
-     "review_status": "REVIEW_READY",
+     "review_status": "APPROVED",
      "blockers": [
       "SOURCE_DATE_ONLY",
       "IDENTITY_SOURCE_SCOPED",
@@ -6729,7 +6727,7 @@
      "fact_status": "FACT",
      "temporal_status": "SOURCE_DATE_ONLY",
      "material_form": "CATHODE",
-     "review_status": "REVIEW_READY",
+     "review_status": "APPROVED",
      "blockers": [
       "SOURCE_DATE_ONLY",
       "IDENTITY_SOURCE_SCOPED",
@@ -7258,8 +7256,8 @@
     }
    ],
    "review_status_counts": {
-    "APPROVED": 11,
-    "REVIEW_READY": 5
+    "APPROVED": 13,
+    "REVIEW_READY": 3
    }
   },
   {
@@ -7705,7 +7703,7 @@
      "fact_status": "FACT",
      "temporal_status": "SOURCE_DATE_ONLY",
      "material_form": null,
-     "review_status": "REVIEW_READY",
+     "review_status": "APPROVED",
      "blockers": [
       "SOURCE_DATE_ONLY",
       "IDENTITY_SOURCE_SCOPED",
@@ -8476,7 +8474,7 @@
      "fact_status": "FACT",
      "temporal_status": "SOURCE_DATE_ONLY",
      "material_form": "anode",
-     "review_status": "REVIEW_READY",
+     "review_status": "APPROVED",
      "blockers": [
       "SOURCE_DATE_ONLY",
       "IDENTITY_SOURCE_SCOPED",
@@ -8546,7 +8544,7 @@
      "fact_status": "FACT",
      "temporal_status": "SOURCE_DATE_ONLY",
      "material_form": null,
-     "review_status": "REVIEW_READY",
+     "review_status": "APPROVED",
      "blockers": [
       "SOURCE_DATE_ONLY",
       "IDENTITY_SOURCE_SCOPED",
@@ -8610,9 +8608,8 @@
     }
    ],
    "review_status_counts": {
-    "APPROVED": 32,
-    "BLOCKED": 2,
-    "REVIEW_READY": 3
+    "APPROVED": 35,
+    "BLOCKED": 2
    }
   },
   {
@@ -8630,7 +8627,7 @@
      "fact_status": "FACT",
      "temporal_status": "SOURCE_DATE_ONLY",
      "material_form": "anode",
-     "review_status": "REVIEW_READY",
+     "review_status": "APPROVED",
      "blockers": [
       "SOURCE_DATE_ONLY",
       "IDENTITY_SOURCE_SCOPED",
@@ -8667,7 +8664,7 @@
      "fact_status": "FACT",
      "temporal_status": "SOURCE_DATE_ONLY",
      "material_form": "CATHODE",
-     "review_status": "REVIEW_READY",
+     "review_status": "APPROVED",
      "blockers": [
       "SOURCE_DATE_ONLY",
       "IDENTITY_SOURCE_SCOPED",
@@ -9196,8 +9193,8 @@
     }
    ],
    "review_status_counts": {
-    "APPROVED": 11,
-    "REVIEW_READY": 5
+    "APPROVED": 13,
+    "REVIEW_READY": 3
    }
   },
   {
@@ -9524,7 +9521,7 @@
      "fact_status": "FACT",
      "temporal_status": "SOURCE_DATE_ONLY",
      "material_form": "copper concentrate",
-     "review_status": "REVIEW_READY",
+     "review_status": "APPROVED",
      "blockers": [
       "SOURCE_DATE_ONLY",
       "IDENTITY_SOURCE_SCOPED",
@@ -9764,7 +9761,7 @@
      "fact_status": "FACT",
      "temporal_status": "SOURCE_DATE_ONLY",
      "material_form": "copper concentrate",
-     "review_status": "REVIEW_READY",
+     "review_status": "APPROVED",
      "blockers": [
       "SOURCE_DATE_ONLY",
       "IDENTITY_SOURCE_SCOPED",
@@ -9786,8 +9783,8 @@
     }
    ],
    "review_status_counts": {
-    "APPROVED": 15,
-    "REVIEW_READY": 4
+    "APPROVED": 17,
+    "REVIEW_READY": 2
    }
   },
   {
@@ -10114,7 +10111,7 @@
      "fact_status": "FACT",
      "temporal_status": "SOURCE_DATE_ONLY",
      "material_form": "copper concentrate",
-     "review_status": "REVIEW_READY",
+     "review_status": "APPROVED",
      "blockers": [
       "SOURCE_DATE_ONLY",
       "IDENTITY_SOURCE_SCOPED",
@@ -10384,7 +10381,7 @@
      "fact_status": "FACT",
      "temporal_status": "SOURCE_DATE_ONLY",
      "material_form": "copper concentrate",
-     "review_status": "REVIEW_READY",
+     "review_status": "APPROVED",
      "blockers": [
       "SOURCE_DATE_ONLY",
       "IDENTITY_SOURCE_SCOPED",
@@ -10406,8 +10403,8 @@
     }
    ],
    "review_status_counts": {
-    "APPROVED": 16,
-    "REVIEW_READY": 4
+    "APPROVED": 18,
+    "REVIEW_READY": 2
    }
   },
   {
@@ -11245,7 +11242,7 @@
      "fact_status": "FACT",
      "temporal_status": "UNKNOWN_PERIOD",
      "material_form": "anode",
-     "review_status": "REVIEW_READY",
+     "review_status": "APPROVED",
      "blockers": [
       "PERIOD_UNKNOWN",
       "IDENTITY_SOURCE_SCOPED",
@@ -11413,8 +11410,7 @@
     }
    ],
    "review_status_counts": {
-    "APPROVED": 6,
-    "REVIEW_READY": 1
+    "APPROVED": 7
    }
   },
   {
@@ -11504,7 +11500,7 @@
      "fact_status": "FACT",
      "temporal_status": "UNKNOWN_PERIOD",
      "material_form": null,
-     "review_status": "VERIFIED",
+     "review_status": "APPROVED",
      "blockers": [
       "PERIOD_UNKNOWN",
       "IDENTITY_SOURCE_SCOPED",
@@ -11609,7 +11605,7 @@
      "fact_status": "FACT",
      "temporal_status": "KNOWN_INTERVAL",
      "material_form": "anode",
-     "review_status": "REVIEW_READY",
+     "review_status": "APPROVED",
      "blockers": [
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
@@ -11821,7 +11817,7 @@
      "fact_status": "FACT",
      "temporal_status": "KNOWN_INTERVAL",
      "material_form": "anode",
-     "review_status": "REVIEW_READY",
+     "review_status": "APPROVED",
      "blockers": [
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
@@ -11848,9 +11844,7 @@
     }
    ],
    "review_status_counts": {
-    "APPROVED": 9,
-    "REVIEW_READY": 2,
-    "VERIFIED": 1
+    "APPROVED": 12
    }
   },
   {
@@ -11940,7 +11934,7 @@
      "fact_status": "FACT",
      "temporal_status": "UNKNOWN_PERIOD",
      "material_form": null,
-     "review_status": "VERIFIED",
+     "review_status": "APPROVED",
      "blockers": [
       "PERIOD_UNKNOWN",
       "IDENTITY_SOURCE_SCOPED",
@@ -12045,7 +12039,7 @@
      "fact_status": "FACT",
      "temporal_status": "KNOWN_INTERVAL",
      "material_form": "anode",
-     "review_status": "REVIEW_READY",
+     "review_status": "APPROVED",
      "blockers": [
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
@@ -12257,7 +12251,7 @@
      "fact_status": "FACT",
      "temporal_status": "KNOWN_INTERVAL",
      "material_form": "anode",
-     "review_status": "REVIEW_READY",
+     "review_status": "APPROVED",
      "blockers": [
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
@@ -12284,9 +12278,7 @@
     }
    ],
    "review_status_counts": {
-    "APPROVED": 9,
-    "REVIEW_READY": 2,
-    "VERIFIED": 1
+    "APPROVED": 12
    }
   },
   {
@@ -12376,7 +12368,7 @@
      "fact_status": "FACT",
      "temporal_status": "UNKNOWN_PERIOD",
      "material_form": null,
-     "review_status": "VERIFIED",
+     "review_status": "APPROVED",
      "blockers": [
       "PERIOD_UNKNOWN",
       "IDENTITY_SOURCE_SCOPED",
@@ -12481,7 +12473,7 @@
      "fact_status": "FACT",
      "temporal_status": "KNOWN_INTERVAL",
      "material_form": "anode",
-     "review_status": "REVIEW_READY",
+     "review_status": "APPROVED",
      "blockers": [
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
@@ -12693,7 +12685,7 @@
      "fact_status": "FACT",
      "temporal_status": "KNOWN_INTERVAL",
      "material_form": "anode",
-     "review_status": "REVIEW_READY",
+     "review_status": "APPROVED",
      "blockers": [
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
@@ -12720,9 +12712,7 @@
     }
    ],
    "review_status_counts": {
-    "APPROVED": 9,
-    "REVIEW_READY": 2,
-    "VERIFIED": 1
+    "APPROVED": 12
    }
   },
   {
@@ -13130,5 +13120,5 @@
   "covered_kt": 2759.7,
   "comparability": "DEFINITIONS_DIFFER_NO_CROSS_DEFINITION_AGGREGATE"
  },
- "output_sha256": "d4e0546f475619a9e8fb8811be4917a52085074feefbce37e07923c457dad6b4"
+ "output_sha256": "6b57cc426005a223239660e79eac684fe70dc5e0dac99ff7430b02274cc740cc"
 }
