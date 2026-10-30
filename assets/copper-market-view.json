@@ -3,8 +3,8 @@
  "input": {
   "ledger": "foundation/V29/copper-knowledge.sqlite",
   "sha256": "f637e8f69749fae1750fd284cbf6aa824c81ba7876c1aca6abb0fcaf6ae88dfe",
-  "review_queue_sha256": "8899791eb00163ee072ce3cbfc9d5bc86ab10931d6fcf540be46d285cb209807",
-  "approval_ledger_sha256": "ba7b9d903e1fcd9da09e6baa71cfbdc4d21e8a2009720862fdfe715e6ea14439"
+  "review_queue_sha256": "45e9571ef50369f726747054558ee3db0b9dc7c2c387f94def5e89bdbd32dd8d",
+  "approval_ledger_sha256": "477b6fc9e170a0458cba6b2b227b4588ed3bcc6dd8f552c83163f2e4d45badcf"
  },
  "scope": "Copper chains of the V29 copper ledger (18 selected source-bound chains, not global copper coverage).",
  "fact_status": "INFERENCE",
@@ -30,11 +30,10 @@
   "recorded_mine_supply_kt": 3708.5,
   "relationships": 133,
   "review_status_counts": {
-   "APPROVED": 120,
-   "BLOCKED": 2,
-   "REVIEW_READY": 11
+   "APPROVED": 132,
+   "BLOCKED": 1
   },
-  "approved_share_pct": 90.2,
+  "approved_share_pct": 99.2,
   "world_reference": "usgs-mcs-2026-copper",
   "candidate_mines": 4,
   "candidate_groups": 1,
@@ -1588,8 +1587,7 @@
    "hhi_level": "MITTEL",
    "max_chains_one_facility": 4,
    "review_status_counts": {
-    "APPROVED": 34,
-    "REVIEW_READY": 2
+    "APPROVED": 36
    },
    "relationship_ids": [
     "relationship:08011524-cfb0-5654-ac6b-93a17e469dfd",
@@ -2012,8 +2010,7 @@
    "hhi_level": "HOCH",
    "max_chains_one_facility": 4,
    "review_status_counts": {
-    "APPROVED": 7,
-    "REVIEW_READY": 2
+    "APPROVED": 9
    },
    "relationship_ids": [
     "relationship:0cb0f045-e68d-54e1-93f8-23a386432674",
@@ -2314,9 +2311,7 @@
    "hhi_level": "MITTEL",
    "max_chains_one_facility": 3,
    "review_status_counts": {
-    "APPROVED": 26,
-    "BLOCKED": 1,
-    "REVIEW_READY": 1
+    "APPROVED": 28
    },
    "relationship_ids": [
     "relationship:05fe1841-bc4b-53dd-8016-9591d74825c8",
@@ -2802,9 +2797,8 @@
    "hhi_level": "MITTEL",
    "max_chains_one_facility": 4,
    "review_status_counts": {
-    "APPROVED": 19,
-    "BLOCKED": 1,
-    "REVIEW_READY": 6
+    "APPROVED": 25,
+    "BLOCKED": 1
    },
    "relationship_ids": [
     "relationship:01e14c2e-ebb3-502f-86aa-21c68772baac",
@@ -4105,8 +4099,7 @@
     "Chile"
    ],
    "path_review_status": {
-    "APPROVED": 3,
-    "REVIEW_READY": 1
+    "APPROVED": 4
    },
    "path_fact_status": {
     "FACT": 4
@@ -4161,8 +4154,7 @@
     "Sambia"
    ],
    "path_review_status": {
-    "APPROVED": 8,
-    "REVIEW_READY": 1
+    "APPROVED": 9
    },
    "path_fact_status": {
     "FACT": 9
@@ -4205,7 +4197,7 @@
      "temporal_status": "SOURCE_DATE_ONLY",
      "seller_side_share_pct": null,
      "scope": null,
-     "review_status": "BLOCKED"
+     "review_status": "APPROVED"
     }
    ],
    "upstream_mines": [
@@ -4218,8 +4210,7 @@
     "DR Kongo"
    ],
    "path_review_status": {
-    "APPROVED": 5,
-    "BLOCKED": 1
+    "APPROVED": 6
    },
    "path_fact_status": {
     "FACT": 5,
@@ -5349,7 +5340,7 @@
      "fact_status": "FACT",
      "temporal_status": "UNKNOWN_PERIOD",
      "material_form": "copper concentrate",
-     "review_status": "REVIEW_READY",
+     "review_status": "APPROVED",
      "blockers": [
       "PERIOD_UNKNOWN",
       "IDENTITY_SOURCE_SCOPED",
@@ -5499,7 +5490,7 @@
      "fact_status": "FACT",
      "temporal_status": "UNKNOWN_PERIOD",
      "material_form": "copper concentrate",
-     "review_status": "REVIEW_READY",
+     "review_status": "APPROVED",
      "blockers": [
       "PERIOD_UNKNOWN",
       "IDENTITY_SOURCE_SCOPED",
@@ -5641,8 +5632,7 @@
     }
    ],
    "review_status_counts": {
-    "APPROVED": 24,
-    "REVIEW_READY": 2
+    "APPROVED": 26
    }
   },
   {
@@ -6418,7 +6408,7 @@
      "fact_status": "FACT",
      "temporal_status": "KNOWN_INTERVAL",
      "material_form": "COPPER_AND_ZINC_CONCENTRATES",
-     "review_status": "REVIEW_READY",
+     "review_status": "APPROVED",
      "blockers": [
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
@@ -6476,7 +6466,7 @@
      "fact_status": "FACT",
      "temporal_status": "KNOWN_INTERVAL",
      "material_form": "COPPER_AND_ZINC_CONCENTRATES",
-     "review_status": "REVIEW_READY",
+     "review_status": "APPROVED",
      "blockers": [
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
@@ -6534,7 +6524,7 @@
      "fact_status": "FACT",
      "temporal_status": "KNOWN_INTERVAL",
      "material_form": "COPPER_AND_ZINC_CONCENTRATES",
-     "review_status": "REVIEW_READY",
+     "review_status": "APPROVED",
      "blockers": [
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
@@ -6563,7 +6553,7 @@
      "fact_status": "FACT",
      "temporal_status": "KNOWN_INTERVAL",
      "material_form": "COPPER_AND_ZINC_CONCENTRATES",
-     "review_status": "REVIEW_READY",
+     "review_status": "APPROVED",
      "blockers": [
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
@@ -6592,7 +6582,7 @@
      "fact_status": "FACT",
      "temporal_status": "KNOWN_INTERVAL",
      "material_form": "COPPER_AND_ZINC_CONCENTRATES",
-     "review_status": "REVIEW_READY",
+     "review_status": "APPROVED",
      "blockers": [
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
@@ -6650,7 +6640,7 @@
      "fact_status": "FACT",
      "temporal_status": "KNOWN_INTERVAL",
      "material_form": "COPPER_AND_ZINC_CONCENTRATES",
-     "review_status": "REVIEW_READY",
+     "review_status": "APPROVED",
      "blockers": [
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
@@ -6671,8 +6661,7 @@
     }
    ],
    "review_status_counts": {
-    "APPROVED": 9,
-    "REVIEW_READY": 6
+    "APPROVED": 15
    }
   },
   {
@@ -6970,7 +6959,7 @@
      "fact_status": "FACT",
      "temporal_status": "SOURCE_DATE_ONLY",
      "material_form": "LEACH_SOLUTION",
-     "review_status": "REVIEW_READY",
+     "review_status": "APPROVED",
      "blockers": [
       "SOURCE_DATE_ONLY",
       "IDENTITY_SOURCE_SCOPED",
@@ -7044,7 +7033,7 @@
      "fact_status": "FACT",
      "temporal_status": "SOURCE_DATE_ONLY",
      "material_form": "copper concentrate",
-     "review_status": "REVIEW_READY",
+     "review_status": "APPROVED",
      "blockers": [
       "SOURCE_DATE_ONLY",
       "IDENTITY_SOURCE_SCOPED",
@@ -7190,7 +7179,7 @@
      "fact_status": "FACT",
      "temporal_status": "SOURCE_DATE_ONLY",
      "material_form": "copper concentrate",
-     "review_status": "REVIEW_READY",
+     "review_status": "APPROVED",
      "blockers": [
       "SOURCE_DATE_ONLY",
       "IDENTITY_SOURCE_SCOPED",
@@ -7256,8 +7245,7 @@
     }
    ],
    "review_status_counts": {
-    "APPROVED": 13,
-    "REVIEW_READY": 3
+    "APPROVED": 16
    }
   },
   {
@@ -8222,9 +8210,8 @@
      "fact_status": "INFERENCE",
      "temporal_status": "SOURCE_DATE_ONLY",
      "material_form": "anode",
-     "review_status": "BLOCKED",
+     "review_status": "APPROVED",
      "blockers": [
-      "FACT_STATUS_NOT_FACT",
       "SOURCE_DATE_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
@@ -8608,8 +8595,8 @@
     }
    ],
    "review_status_counts": {
-    "APPROVED": 35,
-    "BLOCKED": 2
+    "APPROVED": 36,
+    "BLOCKED": 1
    }
   },
   {
@@ -8907,7 +8894,7 @@
      "fact_status": "FACT",
      "temporal_status": "SOURCE_DATE_ONLY",
      "material_form": "LEACH_SOLUTION",
-     "review_status": "REVIEW_READY",
+     "review_status": "APPROVED",
      "blockers": [
       "SOURCE_DATE_ONLY",
       "IDENTITY_SOURCE_SCOPED",
@@ -8981,7 +8968,7 @@
      "fact_status": "FACT",
      "temporal_status": "SOURCE_DATE_ONLY",
      "material_form": "copper concentrate",
-     "review_status": "REVIEW_READY",
+     "review_status": "APPROVED",
      "blockers": [
       "SOURCE_DATE_ONLY",
       "IDENTITY_SOURCE_SCOPED",
@@ -9127,7 +9114,7 @@
      "fact_status": "FACT",
      "temporal_status": "SOURCE_DATE_ONLY",
      "material_form": "copper concentrate",
-     "review_status": "REVIEW_READY",
+     "review_status": "APPROVED",
      "blockers": [
       "SOURCE_DATE_ONLY",
       "IDENTITY_SOURCE_SCOPED",
@@ -9193,8 +9180,7 @@
     }
    ],
    "review_status_counts": {
-    "APPROVED": 13,
-    "REVIEW_READY": 3
+    "APPROVED": 16
    }
   },
   {
@@ -9581,7 +9567,7 @@
      "fact_status": "FACT",
      "temporal_status": "UNKNOWN_PERIOD",
      "material_form": "copper concentrate",
-     "review_status": "REVIEW_READY",
+     "review_status": "APPROVED",
      "blockers": [
       "PERIOD_UNKNOWN",
       "IDENTITY_SOURCE_SCOPED",
@@ -9731,7 +9717,7 @@
      "fact_status": "FACT",
      "temporal_status": "UNKNOWN_PERIOD",
      "material_form": "copper concentrate",
-     "review_status": "REVIEW_READY",
+     "review_status": "APPROVED",
      "blockers": [
       "PERIOD_UNKNOWN",
       "IDENTITY_SOURCE_SCOPED",
@@ -9783,8 +9769,7 @@
     }
    ],
    "review_status_counts": {
-    "APPROVED": 17,
-    "REVIEW_READY": 2
+    "APPROVED": 19
    }
   },
   {
@@ -10171,7 +10156,7 @@
      "fact_status": "FACT",
      "temporal_status": "UNKNOWN_PERIOD",
      "material_form": "copper concentrate",
-     "review_status": "REVIEW_READY",
+     "review_status": "APPROVED",
      "blockers": [
       "PERIOD_UNKNOWN",
       "IDENTITY_SOURCE_SCOPED",
@@ -10321,7 +10306,7 @@
      "fact_status": "FACT",
      "temporal_status": "UNKNOWN_PERIOD",
      "material_form": "copper concentrate",
-     "review_status": "REVIEW_READY",
+     "review_status": "APPROVED",
      "blockers": [
       "PERIOD_UNKNOWN",
       "IDENTITY_SOURCE_SCOPED",
@@ -10403,8 +10388,7 @@
     }
    ],
    "review_status_counts": {
-    "APPROVED": 18,
-    "REVIEW_READY": 2
+    "APPROVED": 20
    }
   },
   {
@@ -13120,5 +13104,5 @@
   "covered_kt": 2759.7,
   "comparability": "DEFINITIONS_DIFFER_NO_CROSS_DEFINITION_AGGREGATE"
  },
- "output_sha256": "6b57cc426005a223239660e79eac684fe70dc5e0dac99ff7430b02274cc740cc"
+ "output_sha256": "dc52894e4879922a74082928906f3486c38f4e12a7163a43d6c9fba6839d0486"
 }
