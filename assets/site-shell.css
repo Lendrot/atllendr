@@ -1,0 +1,49 @@
+/* Gemeinsamer Seitenkopf für alle Seiten (Nutzbarkeit, Eddie 2026-10-30). Ändert keine Daten. */
+@font-face{font-family:'DM Sans';src:url(/assets/dm-sans-regular.woff2) format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'DM Sans';src:url(/assets/dm-sans-semibold.woff2) format('woff2');font-weight:600;font-display:swap}
+header.ss-kopf[data-site-shell]{all:initial;box-sizing:border-box;display:flex;align-items:center;gap:18px;width:100%;height:56px;min-height:56px;max-height:56px;padding:0 20px;margin:0;background:#fff;border-bottom:1px solid #d8e5ef;box-shadow:0 3px 16px #2748690a;font:500 14px/1.2 'DM Sans',Arial,sans-serif;color:#112a44;position:relative;z-index:1000;flex:none;grid-column:1/-1}
+header.ss-kopf[data-site-shell] *{box-sizing:border-box;font-family:inherit;letter-spacing:normal;text-transform:none}
+header.ss-kopf .ss-marke{display:flex;align-items:center;gap:9px;color:#112d48;font-weight:600;font-size:19px;text-decoration:none;white-space:nowrap;flex:none;min-height:40px}
+header.ss-kopf .ss-marke i{display:grid;place-items:center;width:30px;height:30px;border-radius:9px;background:linear-gradient(145deg,#36bdd8,#1168d0);box-shadow:0 3px 11px #187dbb35}
+header.ss-kopf .ss-marke i svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:1.7}
+header.ss-kopf .ss-marke b{color:#1378ba;font-weight:600}
+header.ss-kopf nav.ss-menue{display:flex;align-items:center;gap:2px;flex:1;min-width:0;height:100%;margin:0;padding:0;background:none;border:0}
+header.ss-kopf nav.ss-menue a{display:flex;align-items:center;height:100%;padding:0 11px;color:#50677d;text-decoration:none;font-size:14px;white-space:nowrap;border:0;background:none;position:relative}
+header.ss-kopf nav.ss-menue a:hover{color:#0b5cab}
+header.ss-kopf nav.ss-menue a[aria-current]{color:#12395e;font-weight:600}
+header.ss-kopf nav.ss-menue a[aria-current]:after{content:'';position:absolute;left:11px;right:11px;bottom:0;height:3px;border-radius:3px 3px 0 0;background:#168cbb}
+header.ss-kopf nav.ss-menue a.ss-rechts{margin-left:auto}
+header.ss-kopf .ss-aktionen{display:flex;align-items:center;gap:8px;flex:none}
+header.ss-kopf .ss-aktionen>*{margin:0}
+header.ss-kopf button.ss-knopf{display:none;align-items:center;justify-content:center;width:44px;height:44px;margin-left:auto;border:1px solid #d8e5ef;border-radius:10px;background:#fff;color:#112a44;cursor:pointer;flex:none}
+header.ss-kopf button.ss-knopf svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8}
+header.ss-kopf a:focus-visible,header.ss-kopf button:focus-visible,nav.ss-unter a:focus-visible{outline:2px solid #1260bf;outline-offset:2px}
+nav.ss-unter[data-site-shell]{all:initial;box-sizing:border-box;display:flex;gap:4px;align-items:center;width:100%;height:40px;padding:0 20px;background:#f5f9fd;border-bottom:1px solid #e3edf5;overflow-x:auto;scrollbar-width:none;font:500 13px/1 'DM Sans',Arial,sans-serif;position:relative;z-index:999;flex:none;grid-column:1/-1}
+nav.ss-unter a{display:flex;align-items:center;height:32px;padding:0 12px;border-radius:16px;color:#3e5a74;text-decoration:none;white-space:nowrap;font:inherit}
+nav.ss-unter a[aria-current]{background:#e2eefa;color:#0b4f92;font-weight:600}
+nav.ss-unter a:hover{color:#0b5cab}
+/* Begriffe: Klartext mit Erklärung */
+[data-begriff]{text-decoration:underline dotted #7c93a8;text-underline-offset:3px;cursor:help;font:inherit;color:inherit;border:0}
+/* Entwicklerspuren ausblenden */
+.ss-intern{display:none!important}
+@media (max-width:900px){
+ header.ss-kopf[data-site-shell]{padding:0 10px 0 14px;gap:8px}
+ header.ss-kopf button.ss-knopf{display:flex}
+ header.ss-kopf nav.ss-menue{display:none;position:absolute;top:56px;left:0;right:0;height:auto;flex-direction:column;align-items:stretch;padding:6px 10px 12px;background:#fff;border-bottom:1px solid #d8e5ef;box-shadow:0 12px 24px #17456d22;max-height:calc(100dvh - 56px);overflow:auto}
+ header.ss-kopf[data-offen] nav.ss-menue{display:flex}
+ header.ss-kopf nav.ss-menue a{height:46px;padding:0 12px;font-size:16px;border-radius:8px}
+ header.ss-kopf nav.ss-menue a[aria-current]{background:#eef5fc}
+ header.ss-kopf nav.ss-menue a[aria-current]:after{display:none}
+ header.ss-kopf nav.ss-menue a.ss-rechts{margin-left:0}
+ header.ss-kopf nav.ss-menue .ss-menue-unter{display:flex;flex-direction:column;padding-left:14px;border-left:2px solid #e2eefa;margin:0 0 6px 12px}
+ header.ss-kopf nav.ss-menue .ss-menue-unter a{height:42px;font-size:15px}
+ header.ss-kopf .ss-aktionen{order:2}
+ nav.ss-unter[data-site-shell]{padding:0 10px}
+ body[data-ss-globus] nav.ss-unter[data-site-shell]{display:none}
+}
+@media (min-width:901px){header.ss-kopf nav.ss-menue .ss-menue-unter{display:none}}
+code.ss-kennung{display:inline-block;padding:0 6px;border:1px solid #d8e5ef;border-radius:6px;background:#f2f7fb;color:#51677f;font:500 .82em/1.6 ui-monospace,monospace;cursor:help;vertical-align:baseline}
+/* Handy: lange Kennungen und Fachwörter dürfen umbrechen, damit nichts seitlich übersteht */
+@media (max-width:900px){main h1,main h2,main h3,main p,main li,main dd,main dt,main td,main th,article,.card,section p{overflow-wrap:anywhere}main pre{white-space:pre-wrap;overflow-wrap:anywhere}}
+.atlas-freigabe-hinweis{margin:6px 0 2px;font:400 12px/1.45 'DM Sans',Arial,sans-serif;color:#51677f}
+.atlas-freigabe-hinweis a{color:#0b5cab}

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="de">
+<head><script src="/atllendr/__base.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f5f9fd">
+<title>Begriffe und Bedienung · Marktatlas</title>
+<meta name="description" content="Was die Prüfstufen im Marktatlas bedeuten und wie Globus und Karten bedient werden.">
+<link rel="icon" href="/atllendr/assets/favicon.svg" type="image/svg+xml">
+<style>
+:root{--bg:#f5f9fd;--panel:#fff;--line:#d8e5ef;--text:#112a44;--muted:#51677f;--akzent:#0b5cab}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 'DM Sans',Arial,sans-serif}
+main{max-width:920px;margin:0 auto;padding:28px 20px 60px}
+.eyebrow{margin:0 0 6px;color:#47728f;font-size:12px;font-weight:600;letter-spacing:1.6px;text-transform:uppercase}
+h1{margin:0 0 10px;font-size:34px;line-height:1.15;letter-spacing:-1px}
+h2{margin:36px 0 10px;font-size:22px}
+p.lead{margin:0 0 8px;color:var(--muted);max-width:720px}
+nav.inhalt{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0}
+nav.inhalt a{display:inline-flex;align-items:center;min-height:36px;padding:0 14px;border:1px solid var(--line);border-radius:18px;background:#fff;color:var(--akzent);text-decoration:none;font-size:14px}
+.stufen{display:grid;gap:10px}
+.stufe{display:grid;grid-template-columns:190px 1fr;gap:14px;align-items:start;padding:14px 16px;background:var(--panel);border:1px solid var(--line);border-radius:12px}
+.stufe strong{display:flex;align-items:center;gap:8px;font-size:16px}
+.stufe strong i{width:12px;height:12px;border-radius:50%;flex:none}
+.stufe small{display:block;color:var(--muted);font-size:12px;margin-top:2px;font-family:ui-monospace,monospace}
+.stufe p{margin:0}
+dl{margin:0;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:6px 16px}
+dl div{display:grid;grid-template-columns:190px 1fr;gap:14px;padding:10px 0;border-bottom:1px solid #edf3f8}
+dl div:last-child{border-bottom:0}
+dt{font-weight:600}dd{margin:0}
+ul.schritte{margin:0;padding:0;list-style:none;display:grid;gap:8px}
+ul.schritte li{padding:12px 16px;background:var(--panel);border:1px solid var(--line);border-radius:12px}
+.hinweis{margin-top:14px;padding:12px 16px;border-left:3px solid #e39a3b;background:#fff8ee;border-radius:0 10px 10px 0;font-size:15px}
+@media (max-width:640px){h1{font-size:28px}.stufe,dl div{grid-template-columns:1fr;gap:4px}}
+</style>
+<link rel="stylesheet" href="/atllendr/assets/site-shell.css"><script src="/atllendr/assets/site-shell.js" defer></script></head>
+<body>
+<main>
+<p class="eyebrow">Hilfe</p>
+<h1>Begriffe und Bedienung</h1>
+<p class="lead">Jede Verbindung im Marktatlas trägt eine Prüfstufe. Sie sagt, wie gut eine Angabe belegt ist. Hier steht, was die Stufen bedeuten und wie Sie Globus und Karten bedienen.</p>
+<nav class="inhalt" data-sprungmarken aria-label="Inhalt dieser Seite"><a href="#pruefstufen">Prüfstufen</a><a href="#herkunft">Art der Angabe</a><a href="#woerter">Fachwörter</a><a href="#globus">Globus bedienen</a><a href="#zahlen">Warum Zahlen abweichen</a></nav>
+
+<h2 id="pruefstufen">Prüfstufen einer Verbindung</h2>
+<div class="stufen" data-roh>
+ <div class="stufe"><strong><i style="background:#1f9d55"></i>freigegeben</strong><p>Die Quelle wurde gelesen, ein Auszug ist gespeichert, und die Verbindung wurde ausdrücklich freigegeben. Nur freigegebene Verbindungen zählen für belegte Risikosignale.<small>Code: APPROVED</small></p></div>
+ <div class="stufe"><strong><i style="background:#2b7bd6"></i>quellengeprüft</strong><p>Die Quelle wurde gelesen und stützt die Angabe. Eine Freigabe fehlt noch.<small>Code: VERIFIED</small></p></div>
+ <div class="stufe"><strong><i style="background:#7a8ea3"></i>historisch geprüft</strong><p>Für einen früheren Zeitpunkt geprüft. Ob die Angabe heute noch gilt, ist offen.<small>Code: reviewed_historical</small></p></div>
+ <div class="stufe"><strong><i style="background:#e39a3b"></i>vorläufig</strong><p>Ein Risikosignal, das gelten würde, sobald die zugehörigen Verbindungen freigegeben sind. Kein Beleg.<small>Code: CANDIDATE</small></p></div>
+ <div class="stufe"><strong><i style="background:#c9d6e2"></i>Recherche offen</strong><p>Noch nicht formal geprüft. Die Angabe stammt aus einem Datensatz, die Quelle muss noch gelesen werden.<small>Code: NEEDS_RESEARCH</small></p></div>
+ <div class="stufe"><strong><i style="background:#fff;border:2px dashed #8aa0b4"></i>unbekannt</strong><p>Nicht belegt. Unbekannt heißt ausdrücklich nicht „kein Risiko“, sondern: Es lässt sich nicht bewerten.<small>Code: UNKNOWN</small></p></div>
+</div>
+<p class="hinweis">„Nur Eigenquelle“ bedeutet: Die Verbindung ist nur durch eine Angabe des Unternehmens selbst belegt, etwa im Geschäftsbericht. Sie ist freigegeben, aber nicht von einer unabhängigen Quelle bestätigt.</p>
+
+<h2 id="herkunft">Art der Angabe</h2>
+<dl data-roh>
+ <div><dt>laut Quelle</dt><dd>Die Angabe steht so in einer Quelle. Wie gut sie geprüft ist, zeigt die Prüfstufe. <small>(FACT)</small></dd></div>
+ <div><dt>abgeleitet</dt><dd>Aus belegten Angaben geschlossen, zum Beispiel ein Risikosignal aus mehreren Verbindungen. Nicht direkt belegt. <small>(INFERENCE)</small></dd></div>
+ <div><dt>Annahme</dt><dd>Arbeitsannahme ohne Beleg, etwa ein Schwellenwert. „Vorgeschlagen“ heißt: noch nicht abgenommen. <small>(ASSUMPTION, PROPOSED_ASSUMPTION)</small></dd></div>
+ <div><dt>unbekannt</dt><dd>Keine belegte Angabe. Lücken werden gezeigt, nicht aufgefüllt. <small>(UNKNOWN)</small></dd></div>
+</dl>
+
+<h2 id="woerter">Fachwörter</h2>
+<dl data-roh>
+ <div><dt>Einträge</dt><dd>Unternehmen, Standorte und andere erfasste Akteure (englisch Entities).</dd></div>
+ <div><dt>Aussagen</dt><dd>Einzelne Angaben mit Quelle (Claims).</dd></div>
+ <div><dt>Herkunftskette</dt><dd>Der Weg einer Angabe bis zur Quelle (Lineage).</dd></div>
+ <div><dt>Kupferkette</dt><dd>Der Weg von der Mine über Konzentrator und Hütte bis zur Raffinerie, mit belegten Transportwegen.</dd></div>
+ <div><dt>Risikosignal</dt><dd>Ein Engpass, den Regeln aus den Verbindungen erkennen, etwa eine Hütte, über die mehrere Minen laufen. Immer abgeleitet, nie eine Tatsache.</dd></div>
+ <div><dt>Datenlücke</dt><dd>Eine fehlende Angabe, etwa Betreiber, Zeitraum oder Rolle. Lücken bleiben sichtbar, bis eine Quelle sie schließt.</dd></div>
+ <div><dt>Fachatlas</dt><dd>Eine Ansicht für ein Thema (Kupfer, Lithium, Abfall …). Alle Fachatlanten nutzen dieselben Daten wie der Globus.</dd></div>
+</dl>
+
+<h2 id="globus">Globus und Karten bedienen</h2>
+<ul class="schritte">
+ <li><strong>Drehen:</strong> mit der Maus ziehen, am Handy mit einem Finger wischen.</li>
+ <li><strong>Zoomen:</strong> Mausrad oder die Knöpfe ＋ und −, am Handy mit zwei Fingern.</li>
+ <li><strong>Details:</strong> einen Punkt oder eine Linie antippen. Die Karte zeigt Quelle und Prüfstufe.</li>
+ <li><strong>Ebenen:</strong> unten links Standortgruppen ein- und ausschalten.</li>
+ <li><strong>Zurück zur Weltansicht:</strong> der Knopf mit der Weltkugel.</li>
+</ul>
+
+<h2 id="zahlen">Warum Zahlen zwischen Seiten abweichen</h2>
+<p>Jede Seite zählt nur ihren Ausschnitt. Der Globus zählt zum Beispiel Unternehmensbeziehungen, die Kupferseite die geprüfte Kupferkette. Eine Zahl auf einer Seite ist deshalb keine Gesamtzahl des Atlas. Die Zahlen nennen immer, worauf sie sich beziehen.</p>
+</main>
+</body>
+</html>

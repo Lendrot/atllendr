@@ -3,7 +3,7 @@
 <head><script src="/atllendr/__base.js"></script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Atlas · Aktuelle Routenbelege V29.5</title>
+  <title>Aktuelle Routenbelege Kupfer · Marktatlas</title>
   <link rel="stylesheet" href="/atllendr/assets/copper-v29.css">
   <style>
     body{max-width:76rem;margin:0 auto;padding:1.25rem;font-family:system-ui,sans-serif;background:#07111d;color:#eef5ff}
@@ -12,10 +12,10 @@
     dl{display:grid;grid-template-columns:minmax(12rem,1fr) 2fr;gap:.5rem 1rem} dt{font-weight:700} dd{margin:0}
     [data-unknown="true"]{color:#fbbf24;font-weight:700}.notice{border-left:.3rem solid #fbbf24;padding:.75rem;background:#152131}
   </style>
-</head>
+<link rel="stylesheet" href="/atllendr/assets/site-shell.css"><script src="/atllendr/assets/site-shell.js" defer></script></head>
 <body>
-  <header><h1>Aktuelle Routenbelege · V29.5</h1><a href="/atllendr/kupfer/">Zur Kupferanalyse</a></header>
-  <p class="notice">DEV-Arbeitsstand, keine Release-Freigabe. Für H1 2026 ist nach Herkunft zugeordnetes Downstream-Produkt belegt; routenspezifische Feed-Mengen und verfügbare Alternativkapazität bleiben UNKNOWN.</p>
+  <header><h1>Aktuelle Routenbelege Kupfer</h1><a href="/atllendr/kupfer/">Zur Kupferanalyse</a></header>
+  <p class="notice">Arbeitsstand, noch nicht freigegeben. Für H1 2026 ist nach Herkunft zugeordnetes Downstream-Produkt belegt; routenspezifische Feed-Mengen und verfügbare Alternativkapazität bleiben UNKNOWN.</p>
   <main id="route-evidence" aria-live="polite">Lade beleggebundene Routen…</main>
   <script type="module">
     import {fetchCurrentRouteEvidence,renderCurrentRouteEvidence} from '/assets/current-route-evidence-ui-v295.mjs';

@@ -4,7 +4,7 @@
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const safe=url=>/^https?:\/\//.test(url||'')?esc(url):'#';
 export const BASES=['APPROVED','CANDIDATE'];
-export const BASIS_LABEL={APPROVED:'Belegt (APPROVED)',CANDIDATE:'Vorläufig (CANDIDATE)'};
+export const BASIS_LABEL={APPROVED:'Belegt',CANDIDATE:'Vorläufig'};
 const STATUSES=['SIGNAL','NO_SIGNAL','UNKNOWN'];
 export const NOT_CLEARED='keine Entwarnung';
 export function statusLabel(basis,status){
@@ -66,15 +66,15 @@ export function renderRiskOverview(v){
  const unknownBn=bn.filter(x=>x.bases.APPROVED.status==='UNKNOWN'&&x.bases.CANDIDATE.status==='UNKNOWN');
  const ss=v.single_supplier,ssBy=b=>count(ss,x=>x.bases[b].status),ssReasons=b=>reasonsHtml(v,ss.flatMap(x=>x.bases[b].missing_inputs||[]));
  const rows=v.chains.map(c=>`<tr data-chain="${esc(c.chain_id)}"><th>${esc(c.name)}</th>${BASES.map(b=>`<td>${chip(b,c.bases[b].status)}<br><small>${Object.entries(c.bases[b].rules).map(([r,s])=>`${esc(RULE_LABEL[r]||r)}: ${s==='UNKNOWN'?'UNKNOWN':s==='SIGNAL'?'Signal':'nicht erfüllt'}`).join(' · ')}</small></td>`).join('')}</tr>`).join('');
- return `<div class="risk-kpis"><p><strong>${v.kpi.signals_evidence_complete}</strong> belegte Signale (APPROVED)</p><p><strong>${v.kpi.signals_candidate}</strong> vorläufige Kandidaten (CANDIDATE)</p><p><strong>${v.approved_relationships}</strong> freigegebene Kupferbeziehungen</p><p><strong>${v.kpi.chains}</strong> Ketten im Scope</p></div>
- <p class="small">Regeln und Schwellen: ${esc(v.rules_status)} (noch nicht vom Nutzer abgenommen). Jedes Signal ist eine INFERENCE mit Lineage, kein FACT. ${esc(v.scope)}</p>
- <section class="risk-basis risk-basis-approved" data-basis="APPROVED"><h3>Belegt (APPROVED)</h3>${v.kpi.signals_evidence_complete?approved.map(x=>bottleneckCard(v,x,'APPROVED')).join('')+otherSignals(v,'APPROVED'):`<p class="risk-empty">0 belegte Signale. Grund: ${v.approved_relationships?'keine Regel auf freigegebener Grundlage erfüllt':'noch keine Kupferbeziehung freigegeben'}. Das ist ${NOT_CLEARED}: belegte Bewertungen stehen aus.</p>`}</section>
- <section class="risk-basis risk-basis-candidate" data-basis="CANDIDATE"><h3>Vorläufig (CANDIDATE)</h3><p class="small">Grundlage sind prüfbare, noch nicht freigegebene Beziehungen. Nicht für Beratung oder Entscheidungen verwenden, bevor sie belegt sind.</p>${(candidate.map(x=>bottleneckCard(v,x,'CANDIDATE')).join('')+otherSignals(v,'CANDIDATE',true))||'<p class="risk-empty">Keine vorläufigen Kandidaten außerhalb der belegten Signale.</p>'}</section>
+ return `<div class="risk-kpis"><p><strong>${v.kpi.signals_evidence_complete}</strong> belegte Signale</p><p><strong>${v.kpi.signals_candidate}</strong> vorläufige Kandidaten</p><p><strong>${v.approved_relationships}</strong> freigegebene Kupferbeziehungen</p><p><strong>${v.kpi.chains}</strong> Ketten im Scope</p></div>
+ <p class="small">Regeln und Schwellen: ${esc(v.rules_status)} (noch nicht vom Nutzer abgenommen). Jedes Signal ist abgeleitet (mit nachvollziehbarer Herkunft), keine belegte Tatsache. ${esc(v.scope)}</p>
+ <section class="risk-basis risk-basis-approved" data-basis="APPROVED"><h3>Belegt</h3>${v.kpi.signals_evidence_complete?approved.map(x=>bottleneckCard(v,x,'APPROVED')).join('')+otherSignals(v,'APPROVED'):`<p class="risk-empty">0 belegte Signale. Grund: ${v.approved_relationships?'keine Regel auf freigegebener Grundlage erfüllt':'noch keine Kupferbeziehung freigegeben'}. Das ist ${NOT_CLEARED}: belegte Bewertungen stehen aus.</p>`}</section>
+ <section class="risk-basis risk-basis-candidate" data-basis="CANDIDATE"><h3>Vorläufig</h3><p class="small">Grundlage sind prüfbare, noch nicht freigegebene Beziehungen. Nicht für Beratung oder Entscheidungen verwenden, bevor sie belegt sind.</p>${(candidate.map(x=>bottleneckCard(v,x,'CANDIDATE')).join('')+otherSignals(v,'CANDIDATE',true))||'<p class="risk-empty">Keine vorläufigen Kandidaten außerhalb der belegten Signale.</p>'}</section>
  <section class="risk-basis risk-basis-unknown" data-basis="UNKNOWN"><h3>Nicht bewertbar (UNKNOWN)</h3><p class="small">UNKNOWN heißt: Eingaben fehlen oder sind unzulässig. Es ist ${NOT_CLEARED} und kein Nachweis, dass kein Risiko besteht.</p>
  <details><summary>Engpass-Anlagen ohne bewertbare Eingaben (${unknownBn.length})</summary>${unknownBn.map(x=>`<p class="small" data-entity="${esc(x.subject.entity_id)}">${chip('APPROVED','UNKNOWN')}${chip('CANDIDATE','UNKNOWN')} <strong>${esc(x.subject.name)}</strong> · ${esc(x.subject.country||'')} · strukturell in ${x.structural_chains.map(id=>esc(chainName(v,id))).join(', ')} · ${reasonsHtml(v,x.bases.CANDIDATE.excluded_inputs)}</p>`).join('')}</details>
  <details><summary>Einzellieferant: ${ss.length} Anlagen</summary>${BASES.map(b=>`<p class="small">${esc(BASIS_LABEL[b])}: ${Object.entries(ssBy(b)).map(([s,n])=>`${n} × ${esc(statusLabel(b,s))}`).join(' · ')}<br>Gründe: ${ssReasons(b)}</p>`).join('')}</details>
  <details><summary>Länderkonzentration: ${v.country_concentration.length} Stufen</summary>${v.country_concentration.map(c=>`<p class="small">${esc(c.stage)} · ${BASES.map(b=>chip(b,c.bases[b].status)+' '+esc(reasonLabel(c.bases[b].reason))).join(' · ')}</p>`).join('')}</details></section>
- <details><summary>Alle ${v.chains.length} Ketten nach Grundlage</summary><div class="table-scroll"><table class="risk-table"><thead><tr><th>Kette</th><th>Belegt (APPROVED)</th><th>Vorläufig (CANDIDATE)</th></tr></thead><tbody>${rows}</tbody></table></div></details>
+ <details><summary>Alle ${v.chains.length} Ketten nach Grundlage</summary><div class="table-scroll"><table class="risk-table"><thead><tr><th>Kette</th><th>Belegt</th><th>Vorläufig</th></tr></thead><tbody>${rows}</tbody></table></div></details>
  <p class="small">Nutzungseinschränkungen: ${v.usage_restrictions.map(esc).join(' · ')}</p>`;
 }
 
