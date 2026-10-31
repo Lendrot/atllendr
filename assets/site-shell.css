@@ -47,3 +47,21 @@ code.ss-kennung{display:inline-block;padding:0 6px;border:1px solid #d8e5ef;bord
 @media (max-width:900px){main h1,main h2,main h3,main p,main li,main dd,main dt,main td,main th,article,.card,section p{overflow-wrap:anywhere}main pre{white-space:pre-wrap;overflow-wrap:anywhere}}
 .atlas-freigabe-hinweis{margin:6px 0 2px;font:400 12px/1.45 'DM Sans',Arial,sans-serif;color:#51677f}
 .atlas-freigabe-hinweis a{color:#0b5cab}
+/* Sprungmarken langer Seiten */
+nav.ss-sprung{max-width:100%;display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:14px 0 18px;padding:0;font:500 13px/1.2 'DM Sans',Arial,sans-serif}
+nav.ss-sprung span{color:#6b8196;margin-right:4px}
+nav.ss-sprung a{display:inline-flex;align-items:center;min-height:32px;padding:0 12px;border:1px solid #c9dbea;border-radius:16px;background:#fff;color:#0b5cab;text-decoration:none}
+nav.ss-sprung a:hover{background:#eef5fc}
+a.ss-oben{position:fixed;right:16px;bottom:16px;z-index:999;display:none;place-items:center;width:44px;height:44px;border-radius:22px;background:#0b5cab;color:#fff;font:600 20px/1 'DM Sans',Arial,sans-serif;text-decoration:none;box-shadow:0 6px 16px #0b3a6a40}
+a.ss-oben[data-sichtbar]{display:grid}
+@media (max-width:900px){nav.ss-sprung{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:10px 0 14px;padding:0;max-width:100%;min-width:0;box-sizing:border-box}nav.ss-sprung a{white-space:nowrap;flex:none;min-height:36px}}
+/* Startseite: Einstieg */
+nav.atlas-einstieg{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 12px}
+nav.atlas-einstieg p{flex-basis:100%;margin:0 0 2px;font:600 12px/1.3 'DM Sans',Arial,sans-serif;letter-spacing:.4px;color:#47728f}
+nav.atlas-einstieg a{display:inline-flex;align-items:center;min-height:34px;padding:0 12px;border-radius:17px;background:#0b5cab;color:#fff;text-decoration:none;font:500 13px/1.2 'DM Sans',Arial,sans-serif}
+nav.atlas-einstieg a:nth-child(n+3){background:#e2eefa;color:#0b4f92}
+nav.atlas-einstieg a:hover{filter:brightness(1.08)}
+details.atlas-werkzeuge{margin:6px 0}
+details.atlas-werkzeuge>summary{cursor:pointer;font:500 13px/1.4 'DM Sans',Arial,sans-serif;color:#3e5a74;min-height:28px;display:flex;align-items:center}
+@media (max-width:760px){nav.atlas-einstieg{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:6px 0 8px}nav.atlas-einstieg p{display:none}nav.atlas-einstieg a{flex:none;white-space:nowrap}}
+h2.ss-unsichtbar{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);margin:0;padding:0}

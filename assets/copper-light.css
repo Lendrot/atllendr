@@ -1,0 +1,47 @@
+/* Helles Design für Kupferseiten, passend zu Startseite und Fachatlanten (Nutzbarkeit, Eddie 2026-10-30).
+   Wird nach copper-v29.css und copper-market.css geladen; ändert nur Farben. */
+:root{color:#112a44;background:#f5f9fd;--panel:#fff;--border:#d8e5ef;--muted:#51677f;--accent:#0b5cab;--copper:#a5571c}
+body{background:#f5f9fd;color:#112a44}
+a{color:#0b5cab}a:hover{color:#08447f}
+h1,h2,h3,strong{color:#112a44}
+button{background:#0b5cab;border-color:#0b5cab;color:#fff}
+button.secondary{background:#fff;color:#0b5cab;border-color:#c9dbea}
+select,input{color:#112a44;background:#fff;border-color:#c9dbea}
+.panel{background:#fff;border-color:#d8e5ef;box-shadow:0 2px 10px #17456d0a}
+.chip.fact{color:#0b6b5f;border-color:#8fcfc4}
+.chip.inference,.chip.historical_path,.chip.historical_verified_path{color:#2556a8}
+.chip.unknown,.chip.assumption,.chip.conflict{color:#a5571c;border-color:#e2b48c}
+.entity-card{background:#f7fbfe;color:#112a44;border-color:#d8e5ef}
+.entity-card strong{color:#112a44}
+.relationship{background:#f7fbfe;border-left-color:#9fb4c4}
+.result-summary{background:#fff8ee}
+pre{background:#f2f7fb;color:#3e5a74}
+.caution{border-color:#e2b48c}
+.error{color:#a3261c;border-left-color:#d9443b}
+.dependency-graph{background:#f7fbfe}
+.dependency-edge{stroke:#7f97aa}
+.dependency-node{fill:#e9f2f9;stroke:#7f97aa}
+.dependency-graph text{fill:#112a44}
+.dependency-panel [data-readiness-dimension]{background:#f7fbfe}
+.dependency-edge.conditional{stroke:#c47a2c}
+.mk-kpis strong{color:#112a44}
+.mk-lbl,.mk-val{fill:#112a44}
+.mk-axis{fill:#51677f}
+.mk-grid{stroke:#dde8f1}
+.mk-unk-bar{stroke:#c98a5a}
+.mk-pt{stroke:#fff}
+.mk-seg[data-status=UNKNOWN]{background:repeating-linear-gradient(135deg,#d8a77d 0 3px,transparent 3px 7px)!important}
+.mk-bar-op .mk-seg:not([data-status]){background:#9fb4c4!important}
+.mk-bar-op .mk-seg:first-child:not([data-status]){background:#1f6fd1!important}
+.mk-stage{background:#fff}
+.mk-hhi-hoch{color:#b3261e}
+.mk-st-approved{color:#0b6b5f;border-color:#8fcfc4}
+.mk-st-verified,.mk-inf{color:#2556a8}
+.mk-inf{border-color:#a9c2e6}
+.mk-cap{background:#eef4f9;border-color:#9fb4c4}
+.mk-world{border-color:#d8a77d}
+.mk-cand-txt{fill:#8a5a00}
+.mk-in{fill:#fff}
+.mk-cost-unk{stroke:#b07a10}
+.risk-kpis p,.risk-card{border-color:#d8e5ef;background:#fff}
+.risk-box{border-top-color:#d8e5ef}

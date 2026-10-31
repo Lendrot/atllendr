@@ -1,3 +1,8 @@
 :root{font:16px/1.5 system-ui;color:#102b38;background:#f4f9fb}body{margin:0}header{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;background:#102b38;color:#fff;padding:1rem 3vw}header a{color:#d6f5ff}main{max-width:1120px;margin:auto;padding:1.5rem}a{color:#075d83}form{display:flex;flex-wrap:wrap;gap:1rem;background:#fff;padding:1rem;border:1px solid #cbdce5;border-radius:10px}label{display:grid;gap:.2rem;flex:1;min-width:170px}select,input,button{font:inherit;padding:.55rem;border:1px solid #8baabb;border-radius:6px}button{cursor:pointer;background:#086282;color:#fff}article{background:#fff;border:1px solid #cbdce5;border-left:4px solid #bb7416;border-radius:6px;padding:1rem;margin:.7rem 0;overflow-wrap:anywhere}article h2{font-size:1.08rem;margin:.2rem 0}code{background:#edf3f6;padding:.15rem}small{display:block;color:#406070}#error{color:#a22}@media(max-width:600px){header,main{padding:1rem}form{display:grid}label{min-width:0}}
 
 .tx-wrap{overflow-x:auto;max-width:100%}.tx-table{border-collapse:collapse;font-size:13px;min-width:720px}.tx-table th,.tx-table td{border-bottom:1px solid #ddd;padding:6px 8px;text-align:left;vertical-align:top}
+/* Nutzbarkeit 2026-10-30: technische Angaben eingeklappt, Karte kompakt */
+details.gap-technik{margin:8px 0 0;font-size:.92em}
+details.gap-technik>summary{cursor:pointer;color:#3e5a74;min-height:32px;display:flex;align-items:center}
+details.gap-technik code{overflow-wrap:anywhere}
+.gap-kurz{margin:.3em 0}
