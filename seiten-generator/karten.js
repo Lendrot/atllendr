@@ -1,3 +1,3 @@
 // seiten-generator: Karten fuer /themen/ (erzeugt von scripts/analysis/seiten/neue_seite.py, nicht von Hand aendern)
-// Seiten: ["/uebernahmen/"]
-(function(){var s=document.currentScript;if(s)s.insertAdjacentHTML("beforebegin","<a class=\"card\" href=\"/uebernahmen/\"><strong>⇢ Übernahmen 2026</strong><p>Abgeschlossene Übernahmen 2026 als Liste, jede mit Quelle. Erster automatisch erzeugter Fachseiten-Eintrag.</p></a>");})();
+// Seiten: ["/uebernahmen/","/verbindungen/"]
+(function(){var s=document.currentScript;if(s)s.insertAdjacentHTML("beforebegin","<a class=\"card\" href=\"/uebernahmen/\"><strong>⇢ Übernahmen 2026</strong><p>Abgeschlossene Übernahmen 2026 als Liste, jede mit Quelle. Erster automatisch erzeugter Fachseiten-Eintrag.</p></a><a class=\"card\" href=\"/verbindungen/\"><strong>⇄ Verbindungen zwischen Unternehmen</strong><p>Belegte Verbindungen zwischen Unternehmen als Netz und Liste, je Verbindung die Art und die Quelle.</p></a>");})();
