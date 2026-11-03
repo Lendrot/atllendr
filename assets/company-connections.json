@@ -2,7 +2,7 @@
  "schema": "atlas.company-connections/1",
  "meta": {
   "asOf": "2026-11-02",
-  "scope": "145 belegte Verbindungen zwischen 127 Unternehmen aus drei Atlas-Datensätzen und neu belegten Kandidaten. Nur FACT mit Quelle; „neu belegt“ sind gelesene Kandidaten außerhalb des Ledgers. „Über Anlage“ heißt: beide Unternehmen sind über eine belegte Beziehung mit derselben Anlage verbunden; daraus folgt kein Vertrag, keine Menge und keine Kontrolle. Gleichnamige Einträge (z. B. Konzern und Gesellschaft) werden nicht zusammengeführt. Keine vollständige Liste: 20307 Einträge anderer Datensätze ohne Beleg oder ohne Unternehmen auf beiden Seiten sind nicht aufgenommen.",
+  "scope": "146 belegte Verbindungen zwischen 128 Unternehmen aus drei Atlas-Datensätzen und neu belegten Kandidaten. Nur FACT mit Quelle; „neu belegt“ sind gelesene Kandidaten außerhalb des Ledgers. „Über Anlage“ heißt: beide Unternehmen sind über eine belegte Beziehung mit derselben Anlage verbunden; daraus folgt kein Vertrag, keine Menge und keine Kontrolle. Gleichnamige Einträge (z. B. Konzern und Gesellschaft) werden nicht zusammengeführt. Keine vollständige Liste: 20307 Einträge anderer Datensätze ohne Beleg oder ohne Unternehmen auf beiden Seiten sind nicht aufgenommen.",
   "fact_status": "Projektion vorhandener FACT-Beziehungen plus neu belegte Kandidaten (Herleitung NEU_BELEGT); keine neue Freigabe",
   "usage_restrictions": [
    "NEU_BELEGT_IS_CANDIDATE_NOT_LEDGER",
@@ -20,7 +20,8 @@
    "analysis/transactions-v30.json": "b818e27f943d7ee6638ebdd3ec8957adcd7a63d3f2bb5388437ef492079392e1",
    "ma-intelligence/data/intelligence/verified/atlas-connections.json": "0f0199a27dc73578afeac1ae7d0423a5c9ce949699012043a93260e3de71da9d",
    "analysis/research/company-connections-v1/research.json": "e0a65ef5ce5a2eadad6774f9cdca05a3e31171df381e8362e8cc47c3a8b40adb",
-   "analysis/research/company-connections-v2/research.json": "51afb35cf7f272c4e50d34b3b9cbde9839d443a459b2c1da33db7d4c869a4990"
+   "analysis/research/company-connections-v2/research.json": "51afb35cf7f272c4e50d34b3b9cbde9839d443a459b2c1da33db7d4c869a4990",
+   "analysis/research/company-connections-v3/research.json": "0326d31cf0a37e7332e8e36020e1fdbdaa2c5c15f59034d45e8a44be0d01be88"
   },
   "excluded_inputs": {
    "ma-intelligence/site/dist/assets/intelligence-graph.json": "GEM-Eigentumsgraph: Rolle (Eigentum/Betrieb/Mutter) laut Quelle unklar, semantic_fact_status UNKNOWN oder CONFLICT (ON-01)",
@@ -29,11 +30,11 @@
   }
  },
  "kpi": {
-  "verbindungen": 145,
-  "unternehmen": 127,
+  "verbindungen": 146,
+  "unternehmen": 128,
   "nach_herleitung": {
    "DIREKT": 42,
-   "NEU_BELEGT": 47,
+   "NEU_BELEGT": 48,
    "UEBER_ANLAGE": 56
   },
   "nach_art": {
@@ -53,18 +54,18 @@
    "PARENT_OF": 9,
    "PARTIALLY_OWNS": 12,
    "SOLD_TO": 1,
-   "SUPPLIES": 7
+   "SUPPLIES": 8
   },
   "nach_bereich": {
    "Entsorgung & Logistik": 5,
    "Finanzierung": 3,
-   "Kupfer": 86,
+   "Kupfer": 87,
    "Recycling": 7,
    "Übernahmen": 44
   },
   "nach_freigabe": {
    "APPROVED": 61,
-   "KANDIDAT": 47,
+   "KANDIDAT": 48,
    "NICHT_GEPRUEFT": 37
   }
  },
@@ -621,7 +622,7 @@
    "bereiche": [
     "Kupfer"
    ],
-   "verbindungen": 2
+   "verbindungen": 3
   },
   "entity:1868f1ee-14fb-4811-982a-2dcf841c66a7": {
    "id": "entity:1868f1ee-14fb-4811-982a-2dcf841c66a7",
@@ -1406,6 +1407,15 @@
    ],
    "verbindungen": 2
   },
+  "wd:Q1964784": {
+   "id": "wd:Q1964784",
+   "name": "Prysmian",
+   "art": "Börsennotiert (Wikidata)",
+   "bereiche": [
+    "Kupfer"
+   ],
+   "verbindungen": 1
+  },
   "wd:Q212322": {
    "id": "wd:Q212322",
    "name": "GSK",
@@ -2009,6 +2019,42 @@
    "ereignis": null,
    "herleitung_text": "direkt belegt",
    "freigabe_text": "freigegeben"
+  },
+  {
+   "id": "cc-n-cc3-rel-001",
+   "herleitung": "NEU_BELEGT",
+   "bereich": "Kupfer",
+   "von_id": "entity:128b2a5c-962c-45e9-a69d-92cf6b78dbce",
+   "von": "Aurubis Group",
+   "art": "beliefert",
+   "art_code": "SUPPLIES",
+   "menge": null,
+   "ereignis": "REPORTED",
+   "nach_id": "wd:Q1964784",
+   "nach": "Prysmian",
+   "ueber": null,
+   "anteil_pct": null,
+   "stand": "2026-09-23",
+   "beleg": "FACT",
+   "freigabe": "KANDIDAT",
+   "quelle_url": "https://www.aurubis.com/en/media/press-releases/press-releases-2026/prysmian-and-aurubis-deepen-strategic-partnership-with-landmark-long-term-copper-agreement",
+   "quelle_titel": "Prysmian and Aurubis deepen strategic partnership with landmark long-term copper agreement",
+   "belegstelle": [
+    {
+     "fundstelle": "Pressemitteilung, Absätze 1 und 4",
+     "zitat": [
+      "Prysmian and Aurubis have signed a landmark long-term agreement for the supply of copper wire rod",
+      "Its four copper rod plants across Europe also provide Prysmian with flexibility and proximity to key markets."
+     ]
+    }
+   ],
+   "weitere_quellen": [],
+   "input_record_ids": [
+    "analysis/research/company-connections-v3/research.json#cc3:rel:001"
+   ],
+   "ueber_text": "direkte Verbindung",
+   "herleitung_text": "neu belegt (Kandidat)",
+   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben"
   },
   {
    "id": "cc-n-cc2-rel-008",
