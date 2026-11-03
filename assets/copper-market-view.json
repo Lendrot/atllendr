@@ -3,7 +3,7 @@
  "input": {
   "ledger": "foundation/V29/copper-knowledge.sqlite",
   "sha256": "f637e8f69749fae1750fd284cbf6aa824c81ba7876c1aca6abb0fcaf6ae88dfe",
-  "review_queue_sha256": "45e9571ef50369f726747054558ee3db0b9dc7c2c387f94def5e89bdbd32dd8d",
+  "review_queue_sha256": "6aac7061895245f989e2e83ec7b3d1e2f74e9a4f9b3d19fbf79217892bb01bb2",
   "approval_ledger_sha256": "477b6fc9e170a0458cba6b2b227b4588ed3bcc6dd8f552c83163f2e4d45badcf"
  },
  "scope": "Copper chains of the V29 copper ledger (18 selected source-bound chains, not global copper coverage).",
@@ -10404,11 +10404,11 @@
      "target_entity_id": "entity:9fe877de-c9dc-4f01-bc88-af31e7c6c76c",
      "target_name": "Cuajone concentrator",
      "fact_status": "FACT",
-     "temporal_status": "UNKNOWN_PERIOD",
+     "temporal_status": "REPORTING_PERIOD",
      "material_form": "copper concentrate",
      "review_status": "APPROVED",
      "blockers": [
-      "PERIOD_UNKNOWN",
+      "REPORTING_PERIOD_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
       "NOT_INDEPENDENTLY_AUDITED"
@@ -10434,11 +10434,11 @@
      "target_entity_id": "entity:b1167de6-e504-4779-8589-39b470d424a9",
      "target_name": "Ilo copper smelter",
      "fact_status": "FACT",
-     "temporal_status": "UNKNOWN_PERIOD",
+     "temporal_status": "REPORTING_PERIOD",
      "material_form": "copper concentrate",
      "review_status": "APPROVED",
      "blockers": [
-      "PERIOD_UNKNOWN",
+      "REPORTING_PERIOD_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
       "NOT_INDEPENDENTLY_AUDITED"
@@ -10464,11 +10464,11 @@
      "target_entity_id": "entity:59fb2dd1-8f0e-4dd9-a207-03318a398b65",
      "target_name": "Ilo copper refinery",
      "fact_status": "FACT",
-     "temporal_status": "UNKNOWN_PERIOD",
+     "temporal_status": "REPORTING_PERIOD",
      "material_form": "anode",
      "review_status": "APPROVED",
      "blockers": [
-      "PERIOD_UNKNOWN",
+      "REPORTING_PERIOD_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
       "NOT_INDEPENDENTLY_AUDITED"
@@ -10494,11 +10494,11 @@
      "target_entity_id": "entity:6c4bdc1a-b787-49ff-b47b-c6b4ec3781d1",
      "target_name": "Toquepala SX-EW plant",
      "fact_status": "FACT",
-     "temporal_status": "UNKNOWN_PERIOD",
+     "temporal_status": "REPORTING_PERIOD",
      "material_form": "copper cathode",
      "review_status": "APPROVED",
      "blockers": [
-      "PERIOD_UNKNOWN",
+      "REPORTING_PERIOD_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
       "NOT_INDEPENDENTLY_AUDITED"
@@ -10524,11 +10524,11 @@
      "target_entity_id": "entity:5c08f06d-0a8b-417a-a73d-b13d7d6f3b03",
      "target_name": "Toquepala concentrators I and II — reported group",
      "fact_status": "FACT",
-     "temporal_status": "UNKNOWN_PERIOD",
+     "temporal_status": "REPORTING_PERIOD",
      "material_form": "copper concentrate",
      "review_status": "APPROVED",
      "blockers": [
-      "PERIOD_UNKNOWN",
+      "REPORTING_PERIOD_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
       "NOT_INDEPENDENTLY_AUDITED"
@@ -10554,11 +10554,11 @@
      "target_entity_id": "entity:b1167de6-e504-4779-8589-39b470d424a9",
      "target_name": "Ilo copper smelter",
      "fact_status": "FACT",
-     "temporal_status": "UNKNOWN_PERIOD",
+     "temporal_status": "REPORTING_PERIOD",
      "material_form": "copper concentrate",
      "review_status": "APPROVED",
      "blockers": [
-      "PERIOD_UNKNOWN",
+      "REPORTING_PERIOD_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
       "NOT_INDEPENDENTLY_AUDITED"
@@ -10584,11 +10584,11 @@
      "target_entity_id": "entity:6c4bdc1a-b787-49ff-b47b-c6b4ec3781d1",
      "target_name": "Toquepala SX-EW plant",
      "fact_status": "FACT",
-     "temporal_status": "UNKNOWN_PERIOD",
+     "temporal_status": "REPORTING_PERIOD",
      "material_form": "copper-bearing leach solution",
      "review_status": "APPROVED",
      "blockers": [
-      "PERIOD_UNKNOWN",
+      "REPORTING_PERIOD_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
       "NOT_INDEPENDENTLY_AUDITED"
@@ -10624,11 +10624,11 @@
      "target_entity_id": "entity:9fe877de-c9dc-4f01-bc88-af31e7c6c76c",
      "target_name": "Cuajone concentrator",
      "fact_status": "FACT",
-     "temporal_status": "UNKNOWN_PERIOD",
+     "temporal_status": "REPORTING_PERIOD",
      "material_form": "copper concentrate",
      "review_status": "APPROVED",
      "blockers": [
-      "PERIOD_UNKNOWN",
+      "REPORTING_PERIOD_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
       "NOT_INDEPENDENTLY_AUDITED"
@@ -10654,11 +10654,11 @@
      "target_entity_id": "entity:b1167de6-e504-4779-8589-39b470d424a9",
      "target_name": "Ilo copper smelter",
      "fact_status": "FACT",
-     "temporal_status": "UNKNOWN_PERIOD",
+     "temporal_status": "REPORTING_PERIOD",
      "material_form": "copper concentrate",
      "review_status": "APPROVED",
      "blockers": [
-      "PERIOD_UNKNOWN",
+      "REPORTING_PERIOD_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
       "NOT_INDEPENDENTLY_AUDITED"
@@ -10684,11 +10684,11 @@
      "target_entity_id": "entity:59fb2dd1-8f0e-4dd9-a207-03318a398b65",
      "target_name": "Ilo copper refinery",
      "fact_status": "FACT",
-     "temporal_status": "UNKNOWN_PERIOD",
+     "temporal_status": "REPORTING_PERIOD",
      "material_form": "anode",
      "review_status": "APPROVED",
      "blockers": [
-      "PERIOD_UNKNOWN",
+      "REPORTING_PERIOD_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
       "NOT_INDEPENDENTLY_AUDITED"
@@ -10714,11 +10714,11 @@
      "target_entity_id": "entity:6c4bdc1a-b787-49ff-b47b-c6b4ec3781d1",
      "target_name": "Toquepala SX-EW plant",
      "fact_status": "FACT",
-     "temporal_status": "UNKNOWN_PERIOD",
+     "temporal_status": "REPORTING_PERIOD",
      "material_form": "copper cathode",
      "review_status": "APPROVED",
      "blockers": [
-      "PERIOD_UNKNOWN",
+      "REPORTING_PERIOD_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
       "NOT_INDEPENDENTLY_AUDITED"
@@ -10744,11 +10744,11 @@
      "target_entity_id": "entity:5c08f06d-0a8b-417a-a73d-b13d7d6f3b03",
      "target_name": "Toquepala concentrators I and II — reported group",
      "fact_status": "FACT",
-     "temporal_status": "UNKNOWN_PERIOD",
+     "temporal_status": "REPORTING_PERIOD",
      "material_form": "copper concentrate",
      "review_status": "APPROVED",
      "blockers": [
-      "PERIOD_UNKNOWN",
+      "REPORTING_PERIOD_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
       "NOT_INDEPENDENTLY_AUDITED"
@@ -10774,11 +10774,11 @@
      "target_entity_id": "entity:b1167de6-e504-4779-8589-39b470d424a9",
      "target_name": "Ilo copper smelter",
      "fact_status": "FACT",
-     "temporal_status": "UNKNOWN_PERIOD",
+     "temporal_status": "REPORTING_PERIOD",
      "material_form": "copper concentrate",
      "review_status": "APPROVED",
      "blockers": [
-      "PERIOD_UNKNOWN",
+      "REPORTING_PERIOD_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
       "NOT_INDEPENDENTLY_AUDITED"
@@ -10804,11 +10804,11 @@
      "target_entity_id": "entity:6c4bdc1a-b787-49ff-b47b-c6b4ec3781d1",
      "target_name": "Toquepala SX-EW plant",
      "fact_status": "FACT",
-     "temporal_status": "UNKNOWN_PERIOD",
+     "temporal_status": "REPORTING_PERIOD",
      "material_form": "copper-bearing leach solution",
      "review_status": "APPROVED",
      "blockers": [
-      "PERIOD_UNKNOWN",
+      "REPORTING_PERIOD_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
       "NOT_INDEPENDENTLY_AUDITED"
@@ -10902,11 +10902,11 @@
      "target_entity_id": "entity:385ce183-30f0-4c85-9439-524da7af5d6d",
      "target_name": "Radomiro Tomic leaching and SX-EW plant",
      "fact_status": "FACT",
-     "temporal_status": "UNKNOWN_PERIOD",
+     "temporal_status": "REPORTING_PERIOD",
      "material_form": "copper cathode",
      "review_status": "APPROVED",
      "blockers": [
-      "PERIOD_UNKNOWN",
+      "REPORTING_PERIOD_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
       "NOT_INDEPENDENTLY_AUDITED"
@@ -11000,11 +11000,11 @@
      "target_entity_id": "entity:385ce183-30f0-4c85-9439-524da7af5d6d",
      "target_name": "Radomiro Tomic leaching and SX-EW plant",
      "fact_status": "FACT",
-     "temporal_status": "UNKNOWN_PERIOD",
+     "temporal_status": "REPORTING_PERIOD",
      "material_form": "copper cathode",
      "review_status": "APPROVED",
      "blockers": [
-      "PERIOD_UNKNOWN",
+      "REPORTING_PERIOD_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
       "NOT_INDEPENDENTLY_AUDITED"
@@ -11518,11 +11518,11 @@
      "target_entity_id": "entity:a289de24-f860-4dac-ac84-9a7be272e90b",
      "target_name": "Carrapateena flotation processing plant",
      "fact_status": "FACT",
-     "temporal_status": "UNKNOWN_PERIOD",
+     "temporal_status": "REPORTING_PERIOD",
      "material_form": "copper concentrate",
      "review_status": "APPROVED",
      "blockers": [
-      "PERIOD_UNKNOWN",
+      "REPORTING_PERIOD_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
       "NOT_INDEPENDENTLY_AUDITED"
@@ -11622,11 +11622,11 @@
      "target_entity_id": "entity:5638b82b-6984-4172-a2a6-e4b178640eb5",
      "target_name": "Olympic Dam grinding and concentrating circuits",
      "fact_status": "FACT",
-     "temporal_status": "UNKNOWN_PERIOD",
+     "temporal_status": "REPORTING_PERIOD",
      "material_form": "copper concentrate",
      "review_status": "APPROVED",
      "blockers": [
-      "PERIOD_UNKNOWN",
+      "REPORTING_PERIOD_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
       "NOT_INDEPENDENTLY_AUDITED"
@@ -11658,11 +11658,11 @@
      "target_entity_id": "entity:a803f62b-e22f-41d7-bef2-af92813d6ade",
      "target_name": "Olympic Dam copper electrorefinery",
      "fact_status": "FACT",
-     "temporal_status": "UNKNOWN_PERIOD",
+     "temporal_status": "REPORTING_PERIOD",
      "material_form": "copper cathode",
      "review_status": "APPROVED",
      "blockers": [
-      "PERIOD_UNKNOWN",
+      "REPORTING_PERIOD_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
       "NOT_INDEPENDENTLY_AUDITED"
@@ -11694,11 +11694,11 @@
      "target_entity_id": "entity:d609702e-2a4f-43ce-b080-f99140c2f033",
      "target_name": "Olympic Dam copper smelter",
      "fact_status": "FACT",
-     "temporal_status": "UNKNOWN_PERIOD",
+     "temporal_status": "REPORTING_PERIOD",
      "material_form": "anode",
      "review_status": "APPROVED",
      "blockers": [
-      "PERIOD_UNKNOWN",
+      "REPORTING_PERIOD_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
       "NOT_INDEPENDENTLY_AUDITED"
@@ -11763,11 +11763,11 @@
      "target_entity_id": "entity:6e219b74-5c06-4288-945a-492e0ee8d75d",
      "target_name": "Prominent Hill flotation processing plant",
      "fact_status": "FACT",
-     "temporal_status": "UNKNOWN_PERIOD",
+     "temporal_status": "REPORTING_PERIOD",
      "material_form": "copper concentrate",
      "review_status": "APPROVED",
      "blockers": [
-      "PERIOD_UNKNOWN",
+      "REPORTING_PERIOD_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
       "NOT_INDEPENDENTLY_AUDITED"
@@ -11952,11 +11952,11 @@
      "target_entity_id": "entity:a289de24-f860-4dac-ac84-9a7be272e90b",
      "target_name": "Carrapateena flotation processing plant",
      "fact_status": "FACT",
-     "temporal_status": "UNKNOWN_PERIOD",
+     "temporal_status": "REPORTING_PERIOD",
      "material_form": "copper concentrate",
      "review_status": "APPROVED",
      "blockers": [
-      "PERIOD_UNKNOWN",
+      "REPORTING_PERIOD_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
       "NOT_INDEPENDENTLY_AUDITED"
@@ -12056,11 +12056,11 @@
      "target_entity_id": "entity:5638b82b-6984-4172-a2a6-e4b178640eb5",
      "target_name": "Olympic Dam grinding and concentrating circuits",
      "fact_status": "FACT",
-     "temporal_status": "UNKNOWN_PERIOD",
+     "temporal_status": "REPORTING_PERIOD",
      "material_form": "copper concentrate",
      "review_status": "APPROVED",
      "blockers": [
-      "PERIOD_UNKNOWN",
+      "REPORTING_PERIOD_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
       "NOT_INDEPENDENTLY_AUDITED"
@@ -12092,11 +12092,11 @@
      "target_entity_id": "entity:a803f62b-e22f-41d7-bef2-af92813d6ade",
      "target_name": "Olympic Dam copper electrorefinery",
      "fact_status": "FACT",
-     "temporal_status": "UNKNOWN_PERIOD",
+     "temporal_status": "REPORTING_PERIOD",
      "material_form": "copper cathode",
      "review_status": "APPROVED",
      "blockers": [
-      "PERIOD_UNKNOWN",
+      "REPORTING_PERIOD_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
       "NOT_INDEPENDENTLY_AUDITED"
@@ -12128,11 +12128,11 @@
      "target_entity_id": "entity:d609702e-2a4f-43ce-b080-f99140c2f033",
      "target_name": "Olympic Dam copper smelter",
      "fact_status": "FACT",
-     "temporal_status": "UNKNOWN_PERIOD",
+     "temporal_status": "REPORTING_PERIOD",
      "material_form": "anode",
      "review_status": "APPROVED",
      "blockers": [
-      "PERIOD_UNKNOWN",
+      "REPORTING_PERIOD_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
       "NOT_INDEPENDENTLY_AUDITED"
@@ -12197,11 +12197,11 @@
      "target_entity_id": "entity:6e219b74-5c06-4288-945a-492e0ee8d75d",
      "target_name": "Prominent Hill flotation processing plant",
      "fact_status": "FACT",
-     "temporal_status": "UNKNOWN_PERIOD",
+     "temporal_status": "REPORTING_PERIOD",
      "material_form": "copper concentrate",
      "review_status": "APPROVED",
      "blockers": [
-      "PERIOD_UNKNOWN",
+      "REPORTING_PERIOD_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
       "NOT_INDEPENDENTLY_AUDITED"
@@ -12386,11 +12386,11 @@
      "target_entity_id": "entity:a289de24-f860-4dac-ac84-9a7be272e90b",
      "target_name": "Carrapateena flotation processing plant",
      "fact_status": "FACT",
-     "temporal_status": "UNKNOWN_PERIOD",
+     "temporal_status": "REPORTING_PERIOD",
      "material_form": "copper concentrate",
      "review_status": "APPROVED",
      "blockers": [
-      "PERIOD_UNKNOWN",
+      "REPORTING_PERIOD_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
       "NOT_INDEPENDENTLY_AUDITED"
@@ -12490,11 +12490,11 @@
      "target_entity_id": "entity:5638b82b-6984-4172-a2a6-e4b178640eb5",
      "target_name": "Olympic Dam grinding and concentrating circuits",
      "fact_status": "FACT",
-     "temporal_status": "UNKNOWN_PERIOD",
+     "temporal_status": "REPORTING_PERIOD",
      "material_form": "copper concentrate",
      "review_status": "APPROVED",
      "blockers": [
-      "PERIOD_UNKNOWN",
+      "REPORTING_PERIOD_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
       "NOT_INDEPENDENTLY_AUDITED"
@@ -12526,11 +12526,11 @@
      "target_entity_id": "entity:a803f62b-e22f-41d7-bef2-af92813d6ade",
      "target_name": "Olympic Dam copper electrorefinery",
      "fact_status": "FACT",
-     "temporal_status": "UNKNOWN_PERIOD",
+     "temporal_status": "REPORTING_PERIOD",
      "material_form": "copper cathode",
      "review_status": "APPROVED",
      "blockers": [
-      "PERIOD_UNKNOWN",
+      "REPORTING_PERIOD_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
       "NOT_INDEPENDENTLY_AUDITED"
@@ -12562,11 +12562,11 @@
      "target_entity_id": "entity:d609702e-2a4f-43ce-b080-f99140c2f033",
      "target_name": "Olympic Dam copper smelter",
      "fact_status": "FACT",
-     "temporal_status": "UNKNOWN_PERIOD",
+     "temporal_status": "REPORTING_PERIOD",
      "material_form": "anode",
      "review_status": "APPROVED",
      "blockers": [
-      "PERIOD_UNKNOWN",
+      "REPORTING_PERIOD_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
       "NOT_INDEPENDENTLY_AUDITED"
@@ -12631,11 +12631,11 @@
      "target_entity_id": "entity:6e219b74-5c06-4288-945a-492e0ee8d75d",
      "target_name": "Prominent Hill flotation processing plant",
      "fact_status": "FACT",
-     "temporal_status": "UNKNOWN_PERIOD",
+     "temporal_status": "REPORTING_PERIOD",
      "material_form": "copper concentrate",
      "review_status": "APPROVED",
      "blockers": [
-      "PERIOD_UNKNOWN",
+      "REPORTING_PERIOD_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
       "NOT_INDEPENDENTLY_AUDITED"
@@ -13104,5 +13104,5 @@
   "covered_kt": 2759.7,
   "comparability": "DEFINITIONS_DIFFER_NO_CROSS_DEFINITION_AGGREGATE"
  },
- "output_sha256": "dc52894e4879922a74082928906f3486c38f4e12a7163a43d6c9fba6839d0486"
+ "output_sha256": "d2fe40d562496533e802c2b2e002c1f5d2d8d1f18ca4fa27a43849a56e932b67"
 }
