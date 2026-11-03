@@ -7,13 +7,25 @@ import {geoVector,vectorGeo,arcSample,frontVisible,greatCircleAngle} from './glo
 
 const vec=coordinates=>new THREE.Vector3(...coordinates);
 const up=new THREE.Vector3(0,1,0);
+// Adaptive Qualität (analysis/LEISTUNG.md): schwache Geräte (Datensparmodus, wenig Speicher/Kerne, Handy mit <=4 GB
+// oder <=4 Kernen) laden die 2K-Erde, zeichnen mit höchstens 1,25-facher Pixeldichte ohne Kantenglättung und animieren
+// mit 20 statt 30 Bildern/s. ?qualitaet=hoch|niedrig erzwingt eine Stufe. Daten, Bögen und Klickziele sind gleich.
+export function performanceProfile(){
+  const forced=new URLSearchParams(location.search).get('qualitaet');
+  const mem=navigator.deviceMemory||8,cores=navigator.hardwareConcurrency||8,save=navigator.connection?.saveData===true;
+  const touch=matchMedia('(pointer: coarse)').matches;
+  const weak=forced==='niedrig'||(forced!=='hoch'&&(save||mem<=2||cores<=2||(touch&&(mem<=4||cores<=4))));
+  return {weak,maxPixelRatio:weak?1.25:1.75,antialias:!weak,fps:weak?20:30};
+}
 export function createGlobe(host,callbacks={}){
   const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const quality=performanceProfile();
   const scene=new THREE.Scene();
   const camera=new THREE.PerspectiveCamera(42,1,.1,2200);
   camera.position.copy(vec(geoVector(25,-35,310)));
-  const renderer=new THREE.WebGLRenderer({antialias:true,alpha:true,powerPreference:'default'});
-  renderer.setPixelRatio(Math.min(devicePixelRatio,1.75));
+  const renderer=new THREE.WebGLRenderer({antialias:quality.antialias,alpha:true,powerPreference:'default'});
+  let pixelRatio=Math.min(devicePixelRatio,quality.maxPixelRatio);
+  renderer.setPixelRatio(pixelRatio);
   renderer.outputColorSpace=THREE.SRGBColorSpace;
   renderer.setClearColor(0x050914,0);
   host.appendChild(renderer.domElement);
@@ -33,8 +45,11 @@ export function createGlobe(host,callbacks={}){
   const earthMaterial=new THREE.MeshPhongMaterial({color:0xc5dcff,shininess:12,specular:0x1d354b});
   const earth=new THREE.Mesh(new THREE.SphereGeometry(100,96,64),earthMaterial);
   scene.add(earth);
-  // Two embedded globes (/) fetch the 12 MB model at once; the browser may abort one download, so retry before falling back.
-  const loadEarth=attempt=>new GLTFLoader().load('/assets/earth-nasa.glb',gltf=>{
+  // NASA-Erdmodell mit JPEG-Texturen (scripts/analysis/leistung/erdmodell_komprimieren.py): 4K 1,7 MB statt 12,6 MB,
+  // 2K 0,6 MB für schwache Geräte oder GPUs ohne 4096er-Texturen. Geometrie und Material sind unverändert.
+  const earthModel=quality.weak||renderer.capabilities.maxTextureSize<4096?'/assets/earth-nasa-2k.glb':'/assets/earth-nasa-4k.glb';
+  // The browser may abort a large download, so retry before falling back.
+  const loadEarth=attempt=>new GLTFLoader().load(earthModel,gltf=>{
     const model=gltf.scene;
     // NASA asset: equatorial radius 500, Y north. Its -Z axis is Greenwich;
     // our geographic layer uses +X for Greenwich and -Z for 90 degrees east.
@@ -75,7 +90,11 @@ export function createGlobe(host,callbacks={}){
   }).catch(()=>{});
   const pointMaterial=new THREE.PointsMaterial({vertexColors:true,size:1,sizeAttenuation:false,transparent:true,opacity:.95,depthWrite:false});
   // Render on demand: a frame is drawn only when the camera moved, a flow marker animates or the scene changed (invalidate()).
-  let dirty=true;const invalidate=()=>{dirty=true;};
+  // The loop sleeps when nothing changes (no rAF at all) and wakes on input, invalidate(), flights or rotation.
+  // It also stops while the tab is hidden or the globe is scrolled/covered out of view (IntersectionObserver).
+  let dirty=true,frame=0,onScreen=true,disposed=false;
+  const wake=()=>{if(!frame&&!disposed)frame=requestAnimationFrame(animate);};
+  const invalidate=()=>{dirty=true;wake();};
   let companies=[],pointGroups=[],companyPoints=null,companiesVisible=true,lastClusterKey='',lastClusterTime=0,dealEntries=[],selected=null,flight=null,lastRender=0,lastFrame=0,paused=false,lastRenderKey='',lastScaleDistance=-1,markersDirty=false;
   const dealGroup=new THREE.Group();scene.add(dealGroup);
   const raycaster=new THREE.Raycaster(),pointer=new THREE.Vector2();
@@ -84,6 +103,10 @@ export function createGlobe(host,callbacks={}){
   function homeDistance(){const halfFov=Math.min(camera.fov*Math.PI/360,Math.atan(Math.tan(camera.fov*Math.PI/360)*camera.aspect));return Math.min(580,Math.max(310,110/Math.sin(halfFov)));}
   function resize(){size.width=host.clientWidth;size.height=host.clientHeight;if(!size.width||!size.height)return;camera.aspect=size.width/size.height;camera.updateProjectionMatrix();renderer.setSize(size.width,size.height,false);invalidate();if(firstSize){camera.position.copy(vec(geoVector(25,-35,homeDistance())));firstSize=false;}}
   const resizeObserver=new ResizeObserver(resize);resizeObserver.observe(host);resize();
+  const visibility=new IntersectionObserver(entries=>{onScreen=entries[entries.length-1].isIntersecting;host.dataset.render=onScreen?'aktiv':'pausiert';if(onScreen)invalidate();});visibility.observe(host);
+  const onVisibility=()=>{if(!document.hidden)invalidate();};document.addEventListener('visibilitychange',onVisibility);
+  const inputHost=host.parentElement||host,inputs=['pointerdown','pointermove','wheel','keydown','touchstart','touchmove'];
+  for(const type of inputs)inputHost.addEventListener(type,wake,{passive:true,capture:true});
 
   function stopRotation(){controls.autoRotate=false;callbacks.onRotation?.(false);}
   function setCompanies(records){companies=records.filter(c=>c.location);lastClusterKey='';updateCompanyClusters();}
@@ -139,9 +162,21 @@ export function createGlobe(host,callbacks={}){
         markerMatrix.compose(m.position,m.quaternion,markerScale.setScalar(visualScale));
         layer.mesh.setMatrixAt(i,markerMatrix);layer.mesh.setColorAt(i,markerColor.set(m.color));
       });
+      layer.flow=layer.items.some(m=>m.role==='flow');
       layer.mesh.count=layer.items.length;layer.mesh.visible=layer.items.length>0;
       layer.mesh.instanceMatrix.needsUpdate=true;if(layer.mesh.instanceColor)layer.mesh.instanceColor.needsUpdate=true;
       layer.mesh.boundingSphere=null;
+    }
+  }
+  function animateFlows(time){
+    for(const layer of markerLayers.values()){
+      if(!layer.flow)continue;
+      layer.items.forEach((m,i)=>{
+        if(m.role!=='flow')return;
+        m.position.copy(m.entry.curve.getPoint(reduced ? .6 : (time/8500+m.entry.index*.173)%1));
+        markerMatrix.compose(m.position,m.quaternion,markerScale.setScalar(visualScale));layer.mesh.setMatrixAt(i,markerMatrix);
+      });
+      layer.mesh.instanceMatrix.needsUpdate=true;layer.mesh.boundingSphere=null;
     }
   }
   // Site layer (assets/globe-sites.json, analysis/FACHATLANTEN.md): every site of every Fachatlas, ~40,000 points.
@@ -244,7 +279,7 @@ export function createGlobe(host,callbacks={}){
   }
   function focusLocation(lat,lon,distance=250){
     stopRotation();const from=camera.position.clone();const to=vec(geoVector(lat,lon,Math.min(controls.maxDistance,Math.max(controls.minDistance,distance))));
-    flight={from,to,started:performance.now(),duration:reduced?0:1050};
+    flight={from,to,started:performance.now(),duration:reduced?0:1050};wake();
   }
   function selectDeal(id,focus=true){
     selected=dealEntries.find(e=>e.deal.id===id)||null;
@@ -256,8 +291,8 @@ export function createGlobe(host,callbacks={}){
   }
   function germany(){camera.up.set(0,1,0);controls.update();selectDeal(null,false);focusLocation(51,10,130);}
   function home(){camera.up.set(0,1,0);controls.update();selectDeal(null,false);focusLocation(25,-35,homeDistance());}
-  function zoom(factor){stopRotation();flight=null;controls.zoom(factor);}
-  function toggleRotation(){flight=null;controls.autoRotate=!controls.autoRotate;callbacks.onRotation?.(controls.autoRotate);return controls.autoRotate;}
+  function zoom(factor){stopRotation();flight=null;controls.zoom(factor);invalidate();}
+  function toggleRotation(){flight=null;controls.autoRotate=!controls.autoRotate;callbacks.onRotation?.(controls.autoRotate);wake();return controls.autoRotate;}
   const canvas=renderer.domElement;
   function pick(event,includeCompanies){
     const rect=canvas.getBoundingClientRect();pointer.x=(event.clientX-rect.left)/rect.width*2-1;pointer.y=-(event.clientY-rect.top)/rect.height*2+1;
@@ -291,15 +326,26 @@ export function createGlobe(host,callbacks={}){
   });
   canvas.addEventListener('webglcontextrestored',()=>{paused=false;invalidate();});
   canvas.addEventListener('webglcontextlost',event=>{event.preventDefault();paused=true;callbacks.onError?.('Die 3D-Darstellung wurde vom Gerät unterbrochen. Lade die Seite neu oder nutze die 2D-Karte.');});
-  let frame;
+  // Adaptive Bildrate: läuft das Zeichnen dauerhaft unter ~60 % der Zielrate, sinkt die Pixeldichte in 0,25-Schritten
+  // bis 1, danach die Animationsrate auf 20 Bilder/s. Nur abwärts, damit das Bild nicht pendelt.
+  let fps=quality.fps,lastMove=0,slowSamples=[];
+  function adapt(interval){
+    if(interval>250){slowSamples=[];return;}
+    slowSamples.push(interval);if(slowSamples.length<24)return;
+    const mean=slowSamples.reduce((a,b)=>a+b,0)/slowSamples.length;slowSamples=[];
+    if(mean<1000/fps/.6)return;
+    if(pixelRatio>1){pixelRatio=Math.max(1,pixelRatio-.25);renderer.setPixelRatio(pixelRatio);resize();}
+    else if(fps>20)fps=20;
+  }
   function animate(time){
+    frame=0;
+    if(document.hidden||paused||!onScreen||disposed)return;
     frame=requestAnimationFrame(animate);
-    if(document.hidden||paused)return;
     const dt=Math.min(.05,(time-lastFrame)/1000||.016);lastFrame=time;
     if(flight){const t=flight.duration?Math.min(1,(time-flight.started)/flight.duration):1;const ease=1-Math.pow(1-t,3);const fromDirection=flight.from.clone().normalize(),toDirection=flight.to.clone().normalize();const quaternion=new THREE.Quaternion().setFromUnitVectors(fromDirection,toDirection);const rotation=new THREE.Quaternion().slerp(quaternion,ease);camera.position.copy(fromDirection.applyQuaternion(rotation)).multiplyScalar(THREE.MathUtils.lerp(flight.from.length(),flight.to.length(),ease));if(t===1)flight=null;}
     controls.update(dt);
-    if(time-lastRender<1000/30)return;
-    lastRender=time;
+    if(time-lastRender<1000/fps)return;
+    const interval=time-lastRender;lastRender=time;
     const distance=camera.position.length();
     visualScale=Math.max(.008,Math.min(1.5,Math.pow((distance-100)/210,1.1)));
     const clusterKey=[...camera.position.toArray(),...camera.up.toArray(),size.width,size.height].map(v=>v.toFixed(4)).join(',');
@@ -311,9 +357,17 @@ export function createGlobe(host,callbacks={}){
     if(clusterKey!==lastClusterKey)dirty=true;
     const rescale=distance!==lastScaleDistance;lastScaleDistance=distance;
     const animating=!reduced&&dealEntries.some(e=>e.visible&&!e.deal.staticRelation&&(!selected||e===selected));
-    if(rescale||animating||markersDirty){layoutMarkers(time);markersDirty=false;}
-    if(!moved&&!animating&&!dirty&&!selected)return;
+    // Only flow markers move between frames; the other marker layers are rewritten when zoom, filter or selection change.
+    if(rescale||markersDirty){layoutMarkers(time);markersDirty=false;}else if(animating)animateFlows(time);
+    if(moved)lastMove=time;
+    if(!moved&&!animating&&!dirty){
+      // Nothing to draw: keep looping only while a camera move may still follow (rotation, flight, pending cluster pass).
+      if(!flight&&!controls.autoRotate&&!controls.points.size&&time-lastMove>400){cancelAnimationFrame(frame);frame=0;}
+      return;
+    }
     dirty=false;
+    // Measure only while frames are requested back to back (flows, rotation, flight), not during slow manual drags.
+    if((animating||flight||controls.autoRotate)&&!controls.points.size)adapt(interval);else slowSamples=[];
     if(selected){
       const projected=[['buyer',selected.buyer],['target',selected.target]].map(([role,entity])=>{const position=geoVector(entity.lat,entity.lon,100.8);const p=vec(position).project(camera);return {role,entity,x:(p.x+1)*size.width/2,y:(1-p.y)*size.height/2,visible:frontVisible(position,camera.position.toArray())&&p.z<1&&Math.abs(p.x)<1&&Math.abs(p.y)<1};});
       callbacks.onLabels?.(projected);
@@ -321,6 +375,6 @@ export function createGlobe(host,callbacks={}){
     callbacks.onView?.(distance,vectorGeo(camera.position.toArray()));
     renderer.render(scene,camera);
   }
-  frame=requestAnimationFrame(animate);
-  return {setCompanies,setSites,setSiteLinks,showSites:visible=>{sitesVisible=visible;if(sitePoints)sitePoints.visible=visible&&siteData?.n>0;if(siteLinks)siteLinks.visible=visible;invalidate();},setDeals,germany,filterDeals,selectDeal,focusLocation,home,zoom,toggleRotation,showCompanies:visible=>{companiesVisible=visible;if(companyPoints)companyPoints.visible=visible;invalidate();},isRotating:()=>controls.autoRotate,dispose:()=>{cancelAnimationFrame(frame);pointMaterial.dispose();siteMaterial.dispose();linkMaterial.dispose();resizeObserver.disconnect();controls.dispose();scene.traverse(o=>{o.geometry?.dispose();if(Array.isArray(o.material))o.material.forEach(m=>m.dispose());else o.material?.dispose();});renderer.dispose();}};
+  wake();
+  return {setCompanies,setSites,setSiteLinks,showSites:visible=>{sitesVisible=visible;if(sitePoints)sitePoints.visible=visible&&siteData?.n>0;if(siteLinks)siteLinks.visible=visible;invalidate();},setDeals,germany,filterDeals,selectDeal,focusLocation,home,zoom,toggleRotation,showCompanies:visible=>{companiesVisible=visible;if(companyPoints)companyPoints.visible=visible;invalidate();},isRotating:()=>controls.autoRotate,dispose:()=>{disposed=true;cancelAnimationFrame(frame);frame=0;visibility.disconnect();document.removeEventListener('visibilitychange',onVisibility);for(const type of inputs)inputHost.removeEventListener(type,wake,{capture:true});pointMaterial.dispose();siteMaterial.dispose();linkMaterial.dispose();resizeObserver.disconnect();controls.dispose();scene.traverse(o=>{o.geometry?.dispose();if(Array.isArray(o.material))o.material.forEach(m=>m.dispose());else o.material?.dispose();});renderer.dispose();}};
 }

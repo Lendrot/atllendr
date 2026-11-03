@@ -13,6 +13,36 @@
   <link rel="stylesheet" href="/atllendr/assets/world-switch.css">
   <link rel="stylesheet" href="/atllendr/assets/embed.css">
   <script type="importmap">{"imports":{"three":"/assets/three/three.module.min.js"}}</script>
+  <!-- Ladekaskade abkürzen (analysis/LEISTUNG.md): alle Module des Hauptglobus parallel anfordern statt Stufe für Stufe. Daten-Preloads wurden gemessen und verworfen (verzögern den ersten Bildaufbau). -->
+  <link rel="modulepreload" href="/atllendr/assets/globe-app.js">
+  <link rel="modulepreload" href="/atllendr/assets/map-logic.mjs">
+  <link rel="modulepreload" href="/atllendr/assets/globe-math.mjs">
+  <link rel="modulepreload" href="/atllendr/assets/intelligence-adapter.mjs">
+  <link rel="modulepreload" href="/atllendr/assets/market-logic.mjs">
+  <link rel="modulepreload" href="/atllendr/assets/material-logic.mjs">
+  <link rel="modulepreload" href="/atllendr/assets/safe-unknown.mjs">
+  <link rel="modulepreload" href="/atllendr/assets/public-availability-v293.mjs">
+  <link rel="modulepreload" href="/atllendr/assets/public-availability-default-v293.mjs">
+  <link rel="modulepreload" href="/atllendr/assets/safe-unknown-pin.mjs">
+  <link rel="modulepreload" href="/atllendr/assets/atlas-ui.mjs">
+  <link rel="modulepreload" href="/atllendr/assets/atlas-audit.mjs">
+  <link rel="modulepreload" href="/atllendr/assets/claim-model.mjs">
+  <link rel="modulepreload" href="/atllendr/assets/claim-context.mjs">
+  <link rel="modulepreload" href="/atllendr/assets/atlas-experience.mjs">
+  <link rel="modulepreload" href="/atllendr/assets/fachatlas.mjs">
+  <link rel="modulepreload" href="/atllendr/assets/fachatlas-rohstoffe.mjs">
+  <link rel="modulepreload" href="/atllendr/assets/atlas-logic.mjs">
+  <link rel="modulepreload" href="/atllendr/assets/economic-analysis.mjs">
+  <link rel="modulepreload" href="/atllendr/assets/world-switch.mjs">
+  <link rel="modulepreload" href="/atllendr/assets/embed-controls.mjs">
+  <link rel="modulepreload" href="/atllendr/assets/globe-sites.mjs">
+  <link rel="modulepreload" href="/atllendr/assets/globe-scene.js">
+  <link rel="modulepreload" href="/atllendr/assets/globe-detail.mjs">
+  <link rel="modulepreload" href="/atllendr/assets/three/three.module.min.js">
+  <link rel="modulepreload" href="/atllendr/assets/three/three.core.min.js">
+  <link rel="modulepreload" href="/atllendr/assets/globe-navigation.js">
+  <link rel="modulepreload" href="/atllendr/assets/three/GLTFLoader.js">
+  <link rel="modulepreload" href="/atllendr/assets/three/BufferGeometryUtils.js">
 <link rel="stylesheet" href="/atllendr/assets/site-shell.css"><script src="/atllendr/assets/site-shell.js" defer></script></head>
 <body>
   <main id="app" aria-label="Interaktiver 3D-Globus mit Unternehmensbeziehungen und Indien-Stoffströmen"></main>
