@@ -10,6 +10,7 @@ export function connectionColor(row,area='all'){
 }
 const hex=s=>Number.parseInt(s.slice(1),16);
 const names=new Intl.DisplayNames(['de'],{type:'region'});
+const nameCache=new Map(),countryNameOf=code=>{let n=nameCache.get(code);if(n===undefined){n=names.of(code);nameCache.set(code,n);}return n;},dealCodes=new WeakMap();
 export function buildAtlasLayer(market,materials,atlas,features,locationData={relations:[]}){
  const entities={...market.entities},deals=[];
  const nation=code=>{const id='country_'+code.toLowerCase();if(!entities[id]){const f=features.find(x=>String(x.id).padStart(3,'0')===numeric[code]),p=countryAnchor(f);entities[id]={id,name:names.of(code),country:names.of(code),countryCode:code,lat:p?.lat??null,lon:p?.lon??null,place:names.of(code)+' gesamt (Landeswert) · kein Standort',schematic:true};}return id;};
@@ -46,7 +47,8 @@ export function buildAtlasLayer(market,materials,atlas,features,locationData={re
  return {entities,deals};
 }
 export function filterAtlas(layer,{area='all',subtype='all',region='all',year='all',query=''}={}){
- const codes=d=>[...new Set([layer.entities[d.buyerId]?.countryCode,layer.entities[d.targetId]?.countryCode,...Object.keys(numeric).filter(code=>(d.originalDeal?.countries||[]).includes(names.of(code)))])];
+ // Country codes per deal are computed once and kept (before: ~250 Intl name lookups per deal on every filter run, ~1 s at page start on a phone).
+ const codes=d=>{let c=dealCodes.get(d);if(!c){const listed=d.originalDeal?.countries||[];c=[...new Set([layer.entities[d.buyerId]?.countryCode,layer.entities[d.targetId]?.countryCode,...Object.keys(numeric).filter(code=>listed.includes(countryNameOf(code)))])];dealCodes.set(d,c);}return c;};
  return layer.deals.filter(d=>{
   if(area!=='all'&&d.area!==area)return false;
   if(subtype!=='all'&&d.subtype!==subtype)return false;

@@ -27,4 +27,6 @@ export function arcSample(a,b,t,lift=0,detail=1){
   return p.map(n=>n/length*r);
 }
 export function frontVisible(position,camera){const delta=position.map((n,i)=>camera[i]-n);return position.reduce((s,n,i)=>s+n*delta[i],0)>0;}
-export const displayDate=date=>!date?'Unbekannt':new Intl.DateTimeFormat('de-DE',{day:'2-digit',month:'2-digit',year:'numeric',timeZone:'UTC'}).format(new Date(date+'T12:00:00Z'));
+// One formatter for all dates: creating Intl.DateTimeFormat per call cost ~150 ms at page start on a phone (analysis/LEISTUNG.md).
+const dateFormat=new Intl.DateTimeFormat('de-DE',{day:'2-digit',month:'2-digit',year:'numeric',timeZone:'UTC'});
+export const displayDate=date=>!date?'Unbekannt':dateFormat.format(new Date(date+'T12:00:00Z'));

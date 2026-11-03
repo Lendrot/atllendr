@@ -2,7 +2,7 @@ import {clusterProjected,markerPixels} from './globe-detail.mjs';
 import {statuses,hasPoint} from './market-logic.mjs';
 import * as THREE from 'three';
 import {GlobeNavigation} from './globe-navigation.js';
-import {GLTFLoader} from './three/GLTFLoader.js';
+import {borderPositions} from './globe-borders.mjs';
 import {geoVector,vectorGeo,arcSample,frontVisible,greatCircleAngle} from './globe-math.mjs';
 
 const vec=coordinates=>new THREE.Vector3(...coordinates);
@@ -49,7 +49,8 @@ export function createGlobe(host,callbacks={}){
   // 2K 0,6 MB für schwache Geräte oder GPUs ohne 4096er-Texturen. Geometrie und Material sind unverändert.
   const earthModel=quality.weak||renderer.capabilities.maxTextureSize<4096?'/assets/earth-nasa-2k.glb':'/assets/earth-nasa-4k.glb';
   // The browser may abort a large download, so retry before falling back.
-  const loadEarth=attempt=>new GLTFLoader().load(earthModel,gltf=>{
+  // GLTFLoader (+BufferGeometryUtils, 150 KB) is split off and loaded only for the model, after the globe is drawn.
+  const loadEarth=attempt=>import('./three/GLTFLoader.js').then(({GLTFLoader})=>new GLTFLoader().load(earthModel,gltf=>{
     const model=gltf.scene;
     // NASA asset: equatorial radius 500, Y north. Its -Z axis is Greenwich;
     // our geographic layer uses +X for Greenwich and -Z for 90 degrees east.
@@ -60,9 +61,13 @@ export function createGlobe(host,callbacks={}){
     }});
     scene.add(model);earth.visible=false;invalidate();
     callbacks.onEarth?.('NASA Earth 3D');
-  },undefined,()=>attempt<2?setTimeout(()=>loadEarth(attempt+1),500*(attempt+1)):callbacks.onNotice?.('Das NASA-3D-Modell konnte nicht geladen werden. Als Ersatz wird das bisherige NASA-Satellitenmosaik angezeigt.'));
+  },undefined,()=>attempt<2?setTimeout(()=>loadEarth(attempt+1),500*(attempt+1)):callbacks.onNotice?.('Das NASA-3D-Modell konnte nicht geladen werden. Als Ersatz wird das bisherige NASA-Satellitenmosaik angezeigt.'))).catch(()=>attempt<2?setTimeout(()=>loadEarth(attempt+1),500*(attempt+1)):callbacks.onNotice?.('Das NASA-3D-Modell konnte nicht geladen werden. Als Ersatz wird das bisherige NASA-Satellitenmosaik angezeigt.'));
   loadEarth(0);
-  new THREE.TextureLoader().load('/assets/earth-blue-marble.jpg',texture=>{
+  // Satellite mosaic decoded off the main thread (ImageBitmap) where supported: an <img> upload blocked ~0.9 s on a phone.
+  const mosaicLoader=typeof createImageBitmap==='function'&&!/^((?!chrome|android).)*safari/i.test(navigator.userAgent)&&!/firefox/i.test(navigator.userAgent)
+    ?{load:(url,done,_,fail)=>new THREE.ImageBitmapLoader().setOptions({imageOrientation:'flipY',premultiplyAlpha:'none'}).load(url,bitmap=>{const texture=new THREE.Texture(bitmap);texture.flipY=false;texture.needsUpdate=true;done(texture);},undefined,fail)}
+    :new THREE.TextureLoader();
+  mosaicLoader.load('/assets/earth-blue-marble.jpg',texture=>{
     texture.colorSpace=THREE.SRGBColorSpace;
     texture.anisotropy=Math.min(8,renderer.capabilities.getMaxAnisotropy());
     earthMaterial.map=texture;earthMaterial.needsUpdate=true;invalidate();
@@ -80,12 +85,16 @@ export function createGlobe(host,callbacks={}){
   const starGeometry=new THREE.BufferGeometry();starGeometry.setAttribute('position',new THREE.Float32BufferAttribute(stars,3));
   const starMaterial=new THREE.PointsMaterial({color:0xd5e0fa,size:1.15,sizeAttenuation:false,transparent:true,opacity:.53,depthWrite:false});
   scene.add(new THREE.Points(starGeometry,starMaterial));
-  fetch('/assets/world.json').then(r=>{if(!r.ok)throw new Error('world');return r.json();}).then(world=>{
-    const features=globalThis.topojson.feature(world,world.objects.countries).features;
-    const positions=[];
-    function addRing(ring){for(let i=1;i<ring.length;i++){positions.push(...geoVector(ring[i-1][1],ring[i-1][0],100.08),...geoVector(ring[i][1],ring[i][0],100.08));}}
-    features.forEach(f=>{const polygons=f.geometry.type==='Polygon'?[f.geometry.coordinates]:f.geometry.coordinates;polygons.forEach(p=>p.forEach(addRing));});
-    const geometry=new THREE.BufferGeometry();geometry.setAttribute('position',new THREE.Float32BufferAttribute(positions,3));
+  // Country borders are parsed and built in a Web Worker (globe-borders.mjs); main thread only if workers fail.
+  fetch('/assets/world.json').then(r=>{if(!r.ok)throw new Error('world');return r.text();}).then(text=>new Promise(resolve=>{
+    const main=()=>resolve(borderPositions(JSON.parse(text),100.08));
+    try{
+      const url=URL.createObjectURL(new Blob([`const borderPositions=${borderPositions};onmessage=e=>{const p=borderPositions(JSON.parse(e.data),100.08);postMessage(p,[p.buffer]);close();};`],{type:'text/javascript'}));
+      const worker=new Worker(url);
+      worker.onmessage=e=>{URL.revokeObjectURL(url);resolve(e.data);};worker.onerror=e=>{e.preventDefault?.();URL.revokeObjectURL(url);worker.terminate();main();};worker.postMessage(text);
+    }catch{main();}
+  })).then(positions=>{
+    const geometry=new THREE.BufferGeometry();geometry.setAttribute('position',new THREE.BufferAttribute(positions,3));
     scene.add(new THREE.LineSegments(geometry,new THREE.LineBasicMaterial({color:0x8cb2c1,transparent:true,opacity:.18,depthWrite:false})));invalidate();
   }).catch(()=>{});
   const pointMaterial=new THREE.PointsMaterial({vertexColors:true,size:1,sizeAttenuation:false,transparent:true,opacity:.95,depthWrite:false});
