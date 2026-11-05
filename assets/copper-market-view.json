@@ -3,7 +3,7 @@
  "input": {
   "ledger": "foundation/V29/copper-knowledge.sqlite",
   "sha256": "f637e8f69749fae1750fd284cbf6aa824c81ba7876c1aca6abb0fcaf6ae88dfe",
-  "review_queue_sha256": "6aac7061895245f989e2e83ec7b3d1e2f74e9a4f9b3d19fbf79217892bb01bb2",
+  "review_queue_sha256": "c240b5d17989caa2a395dca253ef5db4f1d1f3701fc8370cb47360ea8e0eef65",
   "approval_ledger_sha256": "477b6fc9e170a0458cba6b2b227b4588ed3bcc6dd8f552c83163f2e4d45badcf"
  },
  "scope": "Copper chains of the V29 copper ledger (18 selected source-bound chains, not global copper coverage).",
@@ -5060,11 +5060,11 @@
      "target_entity_id": "entity:24990d54-f1d5-4e6d-9c72-b394caf656ab",
      "target_name": "Caserones SX-EW facility",
      "fact_status": "FACT",
-     "temporal_status": "UNKNOWN_PERIOD",
+     "temporal_status": "REPORTING_PERIOD",
      "material_form": "copper cathode",
      "review_status": "APPROVED",
      "blockers": [
-      "PERIOD_UNKNOWN",
+      "REPORTING_PERIOD_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
       "NOT_INDEPENDENTLY_AUDITED"
@@ -5090,11 +5090,11 @@
      "target_entity_id": "entity:d63d9034-bb85-4f5c-b6eb-1fb2e2cce8d8",
      "target_name": "Caserones grinding-flotation plant",
      "fact_status": "FACT",
-     "temporal_status": "UNKNOWN_PERIOD",
+     "temporal_status": "REPORTING_PERIOD",
      "material_form": "copper concentrate",
      "review_status": "APPROVED",
      "blockers": [
-      "PERIOD_UNKNOWN",
+      "REPORTING_PERIOD_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
       "NOT_INDEPENDENTLY_AUDITED"
@@ -5180,11 +5180,11 @@
      "target_entity_id": "entity:8decef74-90b3-4771-8873-16e2e33a2673",
      "target_name": "Los Pelambres concentrator",
      "fact_status": "FACT",
-     "temporal_status": "UNKNOWN_PERIOD",
+     "temporal_status": "REPORTING_PERIOD",
      "material_form": "copper concentrate",
      "review_status": "APPROVED",
      "blockers": [
-      "PERIOD_UNKNOWN",
+      "REPORTING_PERIOD_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "NOT_INDEPENDENTLY_AUDITED"
      ],
@@ -5338,11 +5338,11 @@
      "target_entity_id": "entity:f451512a-175a-47c6-ad41-994ccd96300f",
      "target_name": "Totoralillo — Caserones reported export port",
      "fact_status": "FACT",
-     "temporal_status": "UNKNOWN_PERIOD",
+     "temporal_status": "REPORTING_PERIOD",
      "material_form": "copper concentrate",
      "review_status": "APPROVED",
      "blockers": [
-      "PERIOD_UNKNOWN",
+      "REPORTING_PERIOD_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
       "NOT_INDEPENDENTLY_AUDITED"
@@ -9346,11 +9346,11 @@
      "target_entity_id": "entity:24990d54-f1d5-4e6d-9c72-b394caf656ab",
      "target_name": "Caserones SX-EW facility",
      "fact_status": "FACT",
-     "temporal_status": "UNKNOWN_PERIOD",
+     "temporal_status": "REPORTING_PERIOD",
      "material_form": "copper cathode",
      "review_status": "APPROVED",
      "blockers": [
-      "PERIOD_UNKNOWN",
+      "REPORTING_PERIOD_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
       "NOT_INDEPENDENTLY_AUDITED"
@@ -9376,11 +9376,11 @@
      "target_entity_id": "entity:d63d9034-bb85-4f5c-b6eb-1fb2e2cce8d8",
      "target_name": "Caserones grinding-flotation plant",
      "fact_status": "FACT",
-     "temporal_status": "UNKNOWN_PERIOD",
+     "temporal_status": "REPORTING_PERIOD",
      "material_form": "copper concentrate",
      "review_status": "APPROVED",
      "blockers": [
-      "PERIOD_UNKNOWN",
+      "REPORTING_PERIOD_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
       "NOT_INDEPENDENTLY_AUDITED"
@@ -9466,11 +9466,11 @@
      "target_entity_id": "entity:8decef74-90b3-4771-8873-16e2e33a2673",
      "target_name": "Los Pelambres concentrator",
      "fact_status": "FACT",
-     "temporal_status": "UNKNOWN_PERIOD",
+     "temporal_status": "REPORTING_PERIOD",
      "material_form": "copper concentrate",
      "review_status": "APPROVED",
      "blockers": [
-      "PERIOD_UNKNOWN",
+      "REPORTING_PERIOD_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "NOT_INDEPENDENTLY_AUDITED"
      ],
@@ -9565,11 +9565,11 @@
      "target_entity_id": "entity:f451512a-175a-47c6-ad41-994ccd96300f",
      "target_name": "Totoralillo — Caserones reported export port",
      "fact_status": "FACT",
-     "temporal_status": "UNKNOWN_PERIOD",
+     "temporal_status": "REPORTING_PERIOD",
      "material_form": "copper concentrate",
      "review_status": "APPROVED",
      "blockers": [
-      "PERIOD_UNKNOWN",
+      "REPORTING_PERIOD_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
       "NOT_INDEPENDENTLY_AUDITED"
@@ -9935,11 +9935,11 @@
      "target_entity_id": "entity:24990d54-f1d5-4e6d-9c72-b394caf656ab",
      "target_name": "Caserones SX-EW facility",
      "fact_status": "FACT",
-     "temporal_status": "UNKNOWN_PERIOD",
+     "temporal_status": "REPORTING_PERIOD",
      "material_form": "copper cathode",
      "review_status": "APPROVED",
      "blockers": [
-      "PERIOD_UNKNOWN",
+      "REPORTING_PERIOD_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
       "NOT_INDEPENDENTLY_AUDITED"
@@ -9965,11 +9965,11 @@
      "target_entity_id": "entity:d63d9034-bb85-4f5c-b6eb-1fb2e2cce8d8",
      "target_name": "Caserones grinding-flotation plant",
      "fact_status": "FACT",
-     "temporal_status": "UNKNOWN_PERIOD",
+     "temporal_status": "REPORTING_PERIOD",
      "material_form": "copper concentrate",
      "review_status": "APPROVED",
      "blockers": [
-      "PERIOD_UNKNOWN",
+      "REPORTING_PERIOD_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
       "NOT_INDEPENDENTLY_AUDITED"
@@ -10055,11 +10055,11 @@
      "target_entity_id": "entity:8decef74-90b3-4771-8873-16e2e33a2673",
      "target_name": "Los Pelambres concentrator",
      "fact_status": "FACT",
-     "temporal_status": "UNKNOWN_PERIOD",
+     "temporal_status": "REPORTING_PERIOD",
      "material_form": "copper concentrate",
      "review_status": "APPROVED",
      "blockers": [
-      "PERIOD_UNKNOWN",
+      "REPORTING_PERIOD_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "NOT_INDEPENDENTLY_AUDITED"
      ],
@@ -10154,11 +10154,11 @@
      "target_entity_id": "entity:f451512a-175a-47c6-ad41-994ccd96300f",
      "target_name": "Totoralillo — Caserones reported export port",
      "fact_status": "FACT",
-     "temporal_status": "UNKNOWN_PERIOD",
+     "temporal_status": "REPORTING_PERIOD",
      "material_form": "copper concentrate",
      "review_status": "APPROVED",
      "blockers": [
-      "PERIOD_UNKNOWN",
+      "REPORTING_PERIOD_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
       "NOT_INDEPENDENTLY_AUDITED"
@@ -11040,11 +11040,11 @@
      "target_entity_id": "entity:2cfcda67-0403-4b36-9ba7-e335873a7e5b",
      "target_name": "Kennecott concentrator",
      "fact_status": "FACT",
-     "temporal_status": "UNKNOWN_PERIOD",
+     "temporal_status": "REPORTING_PERIOD",
      "material_form": "copper concentrate",
      "review_status": "APPROVED",
      "blockers": [
-      "PERIOD_UNKNOWN",
+      "REPORTING_PERIOD_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
       "NOT_INDEPENDENTLY_AUDITED"
@@ -11158,11 +11158,11 @@
      "target_entity_id": "entity:0b5f28e9-b04a-4561-a895-776a52fdd439",
      "target_name": "PTFI Grasberg ore mill / flotation processing",
      "fact_status": "FACT",
-     "temporal_status": "UNKNOWN_PERIOD",
+     "temporal_status": "REPORTING_PERIOD",
      "material_form": "copper concentrate",
      "review_status": "APPROVED",
      "blockers": [
-      "PERIOD_UNKNOWN",
+      "REPORTING_PERIOD_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
       "NOT_INDEPENDENTLY_AUDITED"
@@ -11191,11 +11191,11 @@
      "target_entity_id": "entity:3d5cd21b-fdf4-477b-ab05-4cc57e876514",
      "target_name": "PT Smelting Gresik copper smelter and refinery integrated facility",
      "fact_status": "FACT",
-     "temporal_status": "UNKNOWN_PERIOD",
+     "temporal_status": "REPORTING_PERIOD",
      "material_form": "copper concentrate",
      "review_status": "APPROVED",
      "blockers": [
-      "PERIOD_UNKNOWN",
+      "REPORTING_PERIOD_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
       "NOT_INDEPENDENTLY_AUDITED"
@@ -11224,11 +11224,11 @@
      "target_entity_id": "entity:8f3aa0c9-be83-4459-8e1e-78f06e623b5d",
      "target_name": "PTFI Manyar copper smelter",
      "fact_status": "FACT",
-     "temporal_status": "UNKNOWN_PERIOD",
+     "temporal_status": "REPORTING_PERIOD",
      "material_form": "anode",
      "review_status": "APPROVED",
      "blockers": [
-      "PERIOD_UNKNOWN",
+      "REPORTING_PERIOD_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
       "NOT_INDEPENDENTLY_AUDITED"
@@ -12745,11 +12745,11 @@
      "target_entity_id": "entity:0098bc52-bd0d-4ff6-b927-1fa3edc4b7c1",
      "target_name": "Oyu Tolgoi copper concentrator",
      "fact_status": "FACT",
-     "temporal_status": "UNKNOWN_PERIOD",
+     "temporal_status": "REPORTING_PERIOD",
      "material_form": "copper concentrate",
      "review_status": "APPROVED",
      "blockers": [
-      "PERIOD_UNKNOWN",
+      "REPORTING_PERIOD_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
       "NOT_INDEPENDENTLY_AUDITED"
@@ -13104,5 +13104,5 @@
   "covered_kt": 2759.7,
   "comparability": "DEFINITIONS_DIFFER_NO_CROSS_DEFINITION_AGGREGATE"
  },
- "output_sha256": "d2fe40d562496533e802c2b2e002c1f5d2d8d1f18ca4fa27a43849a56e932b67"
+ "output_sha256": "3d40ab0d05d99da0ef28b4780b641a5bb4f3b565f68fb0bbd6c59a20896cd206"
 }
