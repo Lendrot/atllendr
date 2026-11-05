@@ -2,7 +2,7 @@
  "schema": "atlas.company-connections/1",
  "meta": {
   "asOf": "2026-11-02",
-  "scope": "146 belegte Verbindungen zwischen 128 Unternehmen aus drei Atlas-Datensätzen und neu belegten Kandidaten. Nur FACT mit Quelle; „neu belegt“ sind gelesene Kandidaten außerhalb des Ledgers. „Über Anlage“ heißt: beide Unternehmen sind über eine belegte Beziehung mit derselben Anlage verbunden; daraus folgt kein Vertrag, keine Menge und keine Kontrolle. Gleichnamige Einträge (z. B. Konzern und Gesellschaft) werden nicht zusammengeführt. Keine vollständige Liste: 20307 Einträge anderer Datensätze ohne Beleg oder ohne Unternehmen auf beiden Seiten sind nicht aufgenommen.",
+  "scope": "168 belegte Verbindungen zwischen 152 Unternehmen aus drei Atlas-Datensätzen und neu belegten Kandidaten. Nur FACT mit Quelle; „neu belegt“ sind gelesene Kandidaten außerhalb des Ledgers. „Über Anlage“ heißt: beide Unternehmen sind über eine belegte Beziehung mit derselben Anlage verbunden; daraus folgt kein Vertrag, keine Menge und keine Kontrolle. Gleichnamige Einträge (z. B. Konzern und Gesellschaft) werden nicht zusammengeführt. Keine vollständige Liste: 20300 Einträge anderer Datensätze ohne Beleg oder ohne Unternehmen auf beiden Seiten sind nicht aufgenommen.",
   "fact_status": "Projektion vorhandener FACT-Beziehungen plus neu belegte Kandidaten (Herleitung NEU_BELEGT); keine neue Freigabe",
   "usage_restrictions": [
    "NEU_BELEGT_IS_CANDIDATE_NOT_LEDGER",
@@ -17,7 +17,7 @@
   "inputs_sha256": {
    "analysis/copper-review-queue.json": "c240b5d17989caa2a395dca253ef5db4f1d1f3701fc8370cb47360ea8e0eef65",
    "analysis/approval-ledger.jsonl": "477b6fc9e170a0458cba6b2b227b4588ed3bcc6dd8f552c83163f2e4d45badcf",
-   "analysis/transactions-v30.json": "b818e27f943d7ee6638ebdd3ec8957adcd7a63d3f2bb5388437ef492079392e1",
+   "analysis/transactions-v30.json": "c5fab0e5b010841dca90275ca61d9b6224a512dd942382a5f1c938fb0af45d55",
    "ma-intelligence/data/intelligence/verified/atlas-connections.json": "0f0199a27dc73578afeac1ae7d0423a5c9ce949699012043a93260e3de71da9d",
    "analysis/research/company-connections-v1/research.json": "e0a65ef5ce5a2eadad6774f9cdca05a3e31171df381e8362e8cc47c3a8b40adb",
    "analysis/research/company-connections-v2/research.json": "51afb35cf7f272c4e50d34b3b9cbde9839d443a459b2c1da33db7d4c869a4990",
@@ -30,15 +30,15 @@
   }
  },
  "kpi": {
-  "verbindungen": 146,
-  "unternehmen": 128,
+  "verbindungen": 168,
+  "unternehmen": 152,
   "nach_herleitung": {
-   "DIREKT": 42,
+   "DIREKT": 64,
    "NEU_BELEGT": 48,
    "UEBER_ANLAGE": 56
   },
   "nach_art": {
-   "ACQUIRED": 35,
+   "ACQUIRED": 48,
    "CONTROLS": 5,
    "CO_OWNERS_VIA_ASSET": 19,
    "FINANCES": 6,
@@ -53,7 +53,7 @@
    "OWNS": 1,
    "PARENT_OF": 9,
    "PARTIALLY_OWNS": 12,
-   "SOLD_TO": 1,
+   "SOLD_TO": 10,
    "SUPPLIES": 8
   },
   "nach_bereich": {
@@ -61,12 +61,12 @@
    "Finanzierung": 3,
    "Kupfer": 87,
    "Recycling": 7,
-   "Übernahmen": 44
+   "Übernahmen": 66
   },
   "nach_freigabe": {
    "APPROVED": 61,
    "KANDIDAT": 48,
-   "NICHT_GEPRUEFT": 37
+   "NICHT_GEPRUEFT": 59
   }
  },
  "ausgeschlossen": {
@@ -81,9 +81,9 @@
   "Übernahme: Ereignis ANNOUNCED (nicht vollzogen)": 7,
   "Übernahme: Ereignis INTENT (nicht vollzogen)": 4,
   "Übernahme: Ereignis SIGNED (nicht vollzogen)": 9,
+  "Übernahme: Käufer ist Namensliste oder ohne Namen": 2,
   "Übernahme: Verkäufer ist Namensliste oder kein Unternehmen": 1,
-  "Übernahme: Verkäufer nicht FACT (nur Käufer–Ziel aufgenommen)": 10,
-  "Übernahme: ohne http(s)-Quelle": 11
+  "Übernahme: Verkäufer nicht FACT (nur Käufer–Ziel aufgenommen)": 12
  },
  "suche": [
   {
@@ -894,6 +894,15 @@
    ],
    "verbindungen": 1
   },
+  "ma:ADNOC": {
+   "id": "ma:ADNOC",
+   "name": "ADNOC",
+   "art": "Unternehmen",
+   "bereiche": [
+    "Übernahmen"
+   ],
+   "verbindungen": 1
+  },
   "ma:BASF": {
    "id": "ma:BASF",
    "name": "BASF",
@@ -902,6 +911,87 @@
     "Übernahmen"
    ],
    "verbindungen": 2
+  },
+  "ma:BlueFive Capital": {
+   "id": "ma:BlueFive Capital",
+   "name": "BlueFive Capital",
+   "art": "Unternehmen",
+   "bereiche": [
+    "Übernahmen"
+   ],
+   "verbindungen": 4
+  },
+  "ma:DN Solutions": {
+   "id": "ma:DN Solutions",
+   "name": "DN Solutions",
+   "art": "Unternehmen",
+   "bereiche": [
+    "Übernahmen"
+   ],
+   "verbindungen": 1
+  },
+  "ma:FSI (nach vorherigem Erwerb der Familienanteile)": {
+   "id": "ma:FSI (nach vorherigem Erwerb der Familienanteile)",
+   "name": "FSI (nach vorherigem Erwerb der Familienanteile)",
+   "art": "Unternehmen",
+   "bereiche": [
+    "Übernahmen"
+   ],
+   "verbindungen": 1
+  },
+  "ma:Hyundai Heavy Industries Power Systems": {
+   "id": "ma:Hyundai Heavy Industries Power Systems",
+   "name": "Hyundai Heavy Industries Power Systems",
+   "art": "Unternehmen",
+   "bereiche": [
+    "Übernahmen"
+   ],
+   "verbindungen": 2
+  },
+  "ma:Mutares SE & Co. KGaA": {
+   "id": "ma:Mutares SE & Co. KGaA",
+   "name": "Mutares SE & Co. KGaA",
+   "art": "Unternehmen",
+   "bereiche": [
+    "Übernahmen"
+   ],
+   "verbindungen": 1
+  },
+  "ma:None": {
+   "id": "ma:None",
+   "name": "NEM Balcke-Dürr GmbH",
+   "art": "Unternehmen",
+   "bereiche": [
+    "Übernahmen"
+   ],
+   "verbindungen": 4
+  },
+  "ma:Swiss Life Deutschland": {
+   "id": "ma:Swiss Life Deutschland",
+   "name": "Swiss Life Deutschland",
+   "art": "Unternehmen",
+   "bereiche": [
+    "Übernahmen"
+   ],
+   "verbindungen": 1
+  },
+  "ma:Thriveni Earthmovers Private Limited": {
+   "id": "ma:Thriveni Earthmovers Private Limited",
+   "name": "Thriveni Earthmovers Private Limited",
+   "art": "Unternehmen",
+   "bereiche": [
+    "Übernahmen"
+   ],
+   "verbindungen": 1
+  },
+  "ma:Unilever": {
+   "id": "ma:Unilever",
+   "name": "Unilever",
+   "art": "Unternehmen",
+   "bereiche": [
+    "Übernahmen"
+   ],
+   "verbindungen": 1
   },
   "ma:agbitech": {
    "id": "ma:agbitech",
@@ -957,6 +1047,123 @@
    ],
    "verbindungen": 2
   },
+  "ma:company_bugatti_rimac": {
+   "id": "ma:company_bugatti_rimac",
+   "name": "Bugatti Rimac",
+   "art": "Unternehmen",
+   "bereiche": [
+    "Übernahmen"
+   ],
+   "verbindungen": 2
+  },
+  "ma:company_covestro": {
+   "id": "ma:company_covestro",
+   "name": "Covestro",
+   "art": "Unternehmen",
+   "bereiche": [
+    "Übernahmen"
+   ],
+   "verbindungen": 1
+  },
+  "ma:company_graze_nature_delivered": {
+   "id": "ma:company_graze_nature_delivered",
+   "name": "Graze (Nature Delivered)",
+   "art": "Unternehmen",
+   "bereiche": [
+    "Übernahmen"
+   ],
+   "verbindungen": 1
+  },
+  "ma:company_hof_capital": {
+   "id": "ma:company_hof_capital",
+   "name": "HOF Capital",
+   "art": "Unternehmen",
+   "bereiche": [
+    "Übernahmen"
+   ],
+   "verbindungen": 4
+  },
+  "ma:company_jfe_steel": {
+   "id": "ma:company_jfe_steel",
+   "name": "JFE Steel",
+   "art": "Unternehmen",
+   "bereiche": [
+    "Übernahmen"
+   ],
+   "verbindungen": 1
+  },
+  "ma:company_jsw_jfe_kalinga_steel": {
+   "id": "ma:company_jsw_jfe_kalinga_steel",
+   "name": "JSW JFE Kalinga Steel",
+   "art": "Unternehmen",
+   "bereiche": [
+    "Übernahmen"
+   ],
+   "verbindungen": 1
+  },
+  "ma:company_katjes_international": {
+   "id": "ma:company_katjes_international",
+   "name": "Katjes International über Future Snacks Ltd.",
+   "art": "Unternehmen",
+   "bereiche": [
+    "Übernahmen"
+   ],
+   "verbindungen": 4
+  },
+  "ma:company_missoni": {
+   "id": "ma:company_missoni",
+   "name": "Missoni",
+   "art": "Unternehmen",
+   "bereiche": [
+    "Übernahmen"
+   ],
+   "verbindungen": 1
+  },
+  "ma:company_porsche": {
+   "id": "ma:company_porsche",
+   "name": "Porsche",
+   "art": "Unternehmen",
+   "bereiche": [
+    "Übernahmen"
+   ],
+   "verbindungen": 4
+  },
+  "ma:company_rimac_group": {
+   "id": "ma:company_rimac_group",
+   "name": "Rimac Group",
+   "art": "Unternehmen",
+   "bereiche": [
+    "Übernahmen"
+   ],
+   "verbindungen": 2
+  },
+  "ma:company_siemens": {
+   "id": "ma:company_siemens",
+   "name": "Siemens",
+   "art": "Unternehmen",
+   "bereiche": [
+    "Übernahmen"
+   ],
+   "verbindungen": 2
+  },
+  "ma:company_tata_steel": {
+   "id": "ma:company_tata_steel",
+   "name": "Tata Steel",
+   "art": "Unternehmen",
+   "bereiche": [
+    "Übernahmen"
+   ],
+   "verbindungen": 2
+  },
+  "ma:company_thriveni_pellets": {
+   "id": "ma:company_thriveni_pellets",
+   "name": "Thriveni Pellets",
+   "art": "Unternehmen",
+   "bereiche": [
+    "Übernahmen"
+   ],
+   "verbindungen": 1
+  },
   "ma:comware": {
    "id": "ma:comware",
    "name": "COMWARE",
@@ -969,6 +1176,15 @@
   "ma:cybrid": {
    "id": "ma:cybrid",
    "name": "Cybrid Technologies",
+   "art": "Unternehmen",
+   "bereiche": [
+    "Übernahmen"
+   ],
+   "verbindungen": 1
+  },
+  "ma:ebm-papst": {
+   "id": "ma:ebm-papst",
+   "name": "ebm-papst",
    "art": "Unternehmen",
    "bereiche": [
     "Übernahmen"
@@ -5065,6 +5281,32 @@
    "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
   },
   {
+   "id": "cc-ma-deal_covestro__adnoc__2025-ADNOC",
+   "herleitung": "DIREKT",
+   "bereich": "Übernahmen",
+   "von_id": "ma:ADNOC",
+   "von": "ADNOC",
+   "art": "hat übernommen",
+   "art_code": "ACQUIRED",
+   "nach_id": "ma:company_covestro",
+   "nach": "Covestro",
+   "ueber": null,
+   "anteil_pct": null,
+   "stand": 2025,
+   "beleg": "FACT",
+   "freigabe": "NICHT_GEPRUEFT",
+   "quelle_url": "https://www.boerse-express.com/news/articles/covestro-aktie-uebernahme-durch-adnoc-vollzogen-848109",
+   "quelle_titel": "Meldung zum Abschluss",
+   "input_record_ids": [
+    "deal_covestro__adnoc__2025"
+   ],
+   "ueber_text": "direkte Verbindung",
+   "menge": null,
+   "ereignis": null,
+   "herleitung_text": "direkt belegt",
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+  },
+  {
    "id": "cc-ms-carlyle-surventis-BASF-Q926806",
    "herleitung": "DIREKT",
    "bereich": "Übernahmen",
@@ -5109,6 +5351,58 @@
    "quelle_titel": "Meldung zum Abschluss",
    "input_record_ids": [
     "basf-agbitech"
+   ],
+   "ueber_text": "direkte Verbindung",
+   "menge": null,
+   "ereignis": null,
+   "herleitung_text": "direkt belegt",
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+  },
+  {
+   "id": "cc-ma-deal_bugatti_rimac__hof_capital__2026-BlueFive Capital",
+   "herleitung": "DIREKT",
+   "bereich": "Übernahmen",
+   "von_id": "ma:BlueFive Capital",
+   "von": "BlueFive Capital",
+   "art": "hat übernommen",
+   "art_code": "ACQUIRED",
+   "nach_id": "ma:company_bugatti_rimac",
+   "nach": "Bugatti Rimac",
+   "ueber": null,
+   "anteil_pct": 45,
+   "stand": 2026,
+   "beleg": "FACT",
+   "freigabe": "NICHT_GEPRUEFT",
+   "quelle_url": "https://newsroom.bugatti.com/press-releases/bugatti-rimac-ownership-transition-new-leadership",
+   "quelle_titel": "Meldung zum Abschluss",
+   "input_record_ids": [
+    "deal_bugatti_rimac__hof_capital__2026"
+   ],
+   "ueber_text": "direkte Verbindung",
+   "menge": null,
+   "ereignis": null,
+   "herleitung_text": "direkt belegt",
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+  },
+  {
+   "id": "cc-ma-deal_rimac_group__hof_capital__2026-BlueFive Capital",
+   "herleitung": "DIREKT",
+   "bereich": "Übernahmen",
+   "von_id": "ma:BlueFive Capital",
+   "von": "BlueFive Capital",
+   "art": "hat übernommen",
+   "art_code": "ACQUIRED",
+   "nach_id": "ma:company_rimac_group",
+   "nach": "Rimac Group",
+   "ueber": null,
+   "anteil_pct": 20.6,
+   "stand": 2026,
+   "beleg": "FACT",
+   "freigabe": "NICHT_GEPRUEFT",
+   "quelle_url": "https://newsroom.bugatti.com/press-releases/bugatti-rimac-ownership-transition-new-leadership",
+   "quelle_titel": "Meldung zum Abschluss",
+   "input_record_ids": [
+    "deal_rimac_group__hof_capital__2026"
    ],
    "ueber_text": "direkte Verbindung",
    "menge": null,
@@ -5195,6 +5489,58 @@
    "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
   },
   {
+   "id": "cc-ma-deal_heller__dn_solutions__2026-DN Solutions",
+   "herleitung": "DIREKT",
+   "bereich": "Übernahmen",
+   "von_id": "ma:DN Solutions",
+   "von": "DN Solutions",
+   "art": "hat übernommen",
+   "art_code": "ACQUIRED",
+   "nach_id": "ma:None",
+   "nach": "Gebr. Heller Maschinenfabrik GmbH",
+   "ueber": null,
+   "anteil_pct": null,
+   "stand": 2026,
+   "beleg": "FACT",
+   "freigabe": "NICHT_GEPRUEFT",
+   "quelle_url": "https://www.dn-solutions.com/global/board/news/newsDetail.do?boardSeq=2265&drvSeq=2&pageNo=1&schKeyword=&schType=",
+   "quelle_titel": "Meldung zum Abschluss",
+   "input_record_ids": [
+    "deal_heller__dn_solutions__2026"
+   ],
+   "ueber_text": "direkte Verbindung",
+   "menge": null,
+   "ereignis": null,
+   "herleitung_text": "direkt belegt",
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+  },
+  {
+   "id": "cc-ms-deal_ebm_papst_industrielle_antriebstechnik__siemens__undated-ebm-papst-company_siemens",
+   "herleitung": "DIREKT",
+   "bereich": "Übernahmen",
+   "von_id": "ma:ebm-papst",
+   "von": "ebm-papst",
+   "art": "hat ebm-papst Geschäft für industrielle Antriebstechnik verkauft an",
+   "art_code": "SOLD_TO",
+   "nach_id": "ma:company_siemens",
+   "nach": "Siemens",
+   "ueber": "ebm-papst Geschäft für industrielle Antriebstechnik",
+   "anteil_pct": null,
+   "stand": 2025,
+   "beleg": "FACT",
+   "freigabe": "NICHT_GEPRUEFT",
+   "quelle_url": "https://press.siemens.com/de/de/pressemitteilung/siemens-schliesst-kauf-des-geschaefts-fuer-industrielle-antriebstechnik-von-ebm",
+   "quelle_titel": "Meldung zum Abschluss",
+   "input_record_ids": [
+    "deal_ebm_papst_industrielle_antriebstechnik__siemens__undated"
+   ],
+   "ueber_text": "ebm-papst Geschäft für industrielle Antriebstechnik",
+   "menge": null,
+   "ereignis": null,
+   "herleitung_text": "direkt belegt",
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+  },
+  {
    "id": "cc-ma-ecopetrol-brava-Q1282130",
    "herleitung": "DIREKT",
    "bereich": "Übernahmen",
@@ -5267,6 +5613,32 @@
     "epiroc-eventspec"
    ],
    "ueber_text": "direkte Verbindung",
+   "menge": null,
+   "ereignis": null,
+   "herleitung_text": "direkt belegt",
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+  },
+  {
+   "id": "cc-ms-deal_missoni__katjes_international__2026-FSI (nach vorherigem Erw-company_katjes_internati",
+   "herleitung": "DIREKT",
+   "bereich": "Übernahmen",
+   "von_id": "ma:FSI (nach vorherigem Erwerb der Familienanteile)",
+   "von": "FSI (nach vorherigem Erwerb der Familienanteile)",
+   "art": "hat Missoni verkauft an",
+   "art_code": "SOLD_TO",
+   "nach_id": "ma:company_katjes_international",
+   "nach": "Katjes International über Katjes Quiet Luxury",
+   "ueber": "Missoni",
+   "anteil_pct": 27,
+   "stand": 2026,
+   "beleg": "FACT",
+   "freigabe": "NICHT_GEPRUEFT",
+   "quelle_url": "https://www.eqs-news.com/de/news/corporate/katjes-international-closes-investment-in-global-brand-missoni/7d9538ea-49fd-496e-b68c-512c020b232b_en",
+   "quelle_titel": "Meldung zum Abschluss",
+   "input_record_ids": [
+    "deal_missoni__katjes_international__2026"
+   ],
+   "ueber_text": "Missoni",
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
@@ -5351,6 +5723,58 @@
    "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
   },
   {
+   "id": "cc-ma-deal_bugatti_rimac__hof_capital__2026-company_hof_capital",
+   "herleitung": "DIREKT",
+   "bereich": "Übernahmen",
+   "von_id": "ma:company_hof_capital",
+   "von": "HOF Capital",
+   "art": "hat übernommen",
+   "art_code": "ACQUIRED",
+   "nach_id": "ma:company_bugatti_rimac",
+   "nach": "Bugatti Rimac",
+   "ueber": null,
+   "anteil_pct": 45,
+   "stand": 2026,
+   "beleg": "FACT",
+   "freigabe": "NICHT_GEPRUEFT",
+   "quelle_url": "https://newsroom.bugatti.com/press-releases/bugatti-rimac-ownership-transition-new-leadership",
+   "quelle_titel": "Meldung zum Abschluss",
+   "input_record_ids": [
+    "deal_bugatti_rimac__hof_capital__2026"
+   ],
+   "ueber_text": "direkte Verbindung",
+   "menge": null,
+   "ereignis": null,
+   "herleitung_text": "direkt belegt",
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+  },
+  {
+   "id": "cc-ma-deal_rimac_group__hof_capital__2026-company_hof_capital",
+   "herleitung": "DIREKT",
+   "bereich": "Übernahmen",
+   "von_id": "ma:company_hof_capital",
+   "von": "HOF Capital",
+   "art": "hat übernommen",
+   "art_code": "ACQUIRED",
+   "nach_id": "ma:company_rimac_group",
+   "nach": "Rimac Group",
+   "ueber": null,
+   "anteil_pct": 20.6,
+   "stand": 2026,
+   "beleg": "FACT",
+   "freigabe": "NICHT_GEPRUEFT",
+   "quelle_url": "https://newsroom.bugatti.com/press-releases/bugatti-rimac-ownership-transition-new-leadership",
+   "quelle_titel": "Meldung zum Abschluss",
+   "input_record_ids": [
+    "deal_rimac_group__hof_capital__2026"
+   ],
+   "ueber_text": "direkte Verbindung",
+   "menge": null,
+   "ereignis": null,
+   "herleitung_text": "direkt belegt",
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+  },
+  {
    "id": "cc-ma-holcim-pacasmayo-Q16466481",
    "herleitung": "DIREKT",
    "bereich": "Übernahmen",
@@ -5403,6 +5827,110 @@
    "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
   },
   {
+   "id": "cc-ma-deal_nem_balcke_duerr__hyundai_heavy_industries_power_systems__2026-Hyundai Heavy Industries",
+   "herleitung": "DIREKT",
+   "bereich": "Übernahmen",
+   "von_id": "ma:Hyundai Heavy Industries Power Systems",
+   "von": "Hyundai Heavy Industries Power Systems",
+   "art": "hat übernommen",
+   "art_code": "ACQUIRED",
+   "nach_id": "ma:None",
+   "nach": "NEM Balcke-Dürr GmbH",
+   "ueber": null,
+   "anteil_pct": null,
+   "stand": 2026,
+   "beleg": "FACT",
+   "freigabe": "NICHT_GEPRUEFT",
+   "quelle_url": "https://mutares.com/en/mutares-has-signed-an-agreement-to-sell-nem-energy-group-to-hyundai-heavy-industries-power-systems-hps/",
+   "quelle_titel": "Meldung zum Abschluss",
+   "input_record_ids": [
+    "deal_nem_balcke_duerr__hyundai_heavy_industries_power_systems__2026"
+   ],
+   "ueber_text": "direkte Verbindung",
+   "menge": null,
+   "ereignis": null,
+   "herleitung_text": "direkt belegt",
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+  },
+  {
+   "id": "cc-ma-deal_jsw_jfe_kalinga_steel__jfe_steel__2026-company_jfe_steel",
+   "herleitung": "DIREKT",
+   "bereich": "Übernahmen",
+   "von_id": "ma:company_jfe_steel",
+   "von": "JFE Steel",
+   "art": "hat übernommen",
+   "art_code": "ACQUIRED",
+   "nach_id": "ma:company_jsw_jfe_kalinga_steel",
+   "nach": "JSW JFE Kalinga Steel",
+   "ueber": null,
+   "anteil_pct": 50,
+   "stand": 2026,
+   "beleg": "FACT",
+   "freigabe": "NICHT_GEPRUEFT",
+   "quelle_url": "https://www.jfe-steel.co.jp/en/release/2026/03/260331.html",
+   "quelle_titel": "Meldung zum Abschluss",
+   "input_record_ids": [
+    "deal_jsw_jfe_kalinga_steel__jfe_steel__2026"
+   ],
+   "ueber_text": "direkte Verbindung",
+   "menge": null,
+   "ereignis": null,
+   "herleitung_text": "direkt belegt",
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+  },
+  {
+   "id": "cc-ma-deal_graze_nature_delivered__katjes_international__2026-company_katjes_internati",
+   "herleitung": "DIREKT",
+   "bereich": "Übernahmen",
+   "von_id": "ma:company_katjes_international",
+   "von": "Katjes International über Future Snacks Ltd.",
+   "art": "hat übernommen",
+   "art_code": "ACQUIRED",
+   "nach_id": "ma:company_graze_nature_delivered",
+   "nach": "Graze (Nature Delivered)",
+   "ueber": null,
+   "anteil_pct": 100,
+   "stand": 2026,
+   "beleg": "FACT",
+   "freigabe": "NICHT_GEPRUEFT",
+   "quelle_url": "https://www.eqs-news.com/news/corporate/katjes-international-acquires-graze-brand-from-unilever/7b89e50e-93ea-4ce9-bb93-a4d342c842c2_en",
+   "quelle_titel": "Meldung zum Abschluss",
+   "input_record_ids": [
+    "deal_graze_nature_delivered__katjes_international__2026"
+   ],
+   "ueber_text": "direkte Verbindung",
+   "menge": null,
+   "ereignis": null,
+   "herleitung_text": "direkt belegt",
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+  },
+  {
+   "id": "cc-ma-deal_missoni__katjes_international__2026-company_katjes_internati",
+   "herleitung": "DIREKT",
+   "bereich": "Übernahmen",
+   "von_id": "ma:company_katjes_international",
+   "von": "Katjes International über Katjes Quiet Luxury",
+   "art": "hat übernommen",
+   "art_code": "ACQUIRED",
+   "nach_id": "ma:company_missoni",
+   "nach": "Missoni",
+   "ueber": null,
+   "anteil_pct": 27,
+   "stand": 2026,
+   "beleg": "FACT",
+   "freigabe": "NICHT_GEPRUEFT",
+   "quelle_url": "https://www.eqs-news.com/de/news/corporate/katjes-international-closes-investment-in-global-brand-missoni/7d9538ea-49fd-496e-b68c-512c020b232b_en",
+   "quelle_titel": "Meldung zum Abschluss",
+   "input_record_ids": [
+    "deal_missoni__katjes_international__2026"
+   ],
+   "ueber_text": "direkte Verbindung",
+   "menge": null,
+   "ereignis": null,
+   "herleitung_text": "direkt belegt",
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+  },
+  {
    "id": "cc-ma-marvell-celestial-Q1347782",
    "herleitung": "DIREKT",
    "bereich": "Übernahmen",
@@ -5423,6 +5951,32 @@
     "marvell-celestial"
    ],
    "ueber_text": "direkte Verbindung",
+   "menge": null,
+   "ereignis": null,
+   "herleitung_text": "direkt belegt",
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+  },
+  {
+   "id": "cc-ms-deal_nem_balcke_duerr__hyundai_heavy_industries_power_systems__2026-Mutares SE & Co. KGaA-Hyundai Heavy Industries",
+   "herleitung": "DIREKT",
+   "bereich": "Übernahmen",
+   "von_id": "ma:Mutares SE & Co. KGaA",
+   "von": "Mutares SE & Co. KGaA",
+   "art": "hat NEM Balcke-Dürr GmbH verkauft an",
+   "art_code": "SOLD_TO",
+   "nach_id": "ma:Hyundai Heavy Industries Power Systems",
+   "nach": "Hyundai Heavy Industries Power Systems",
+   "ueber": "NEM Balcke-Dürr GmbH",
+   "anteil_pct": null,
+   "stand": 2026,
+   "beleg": "FACT",
+   "freigabe": "NICHT_GEPRUEFT",
+   "quelle_url": "https://mutares.com/en/mutares-has-signed-an-agreement-to-sell-nem-energy-group-to-hyundai-heavy-industries-power-systems-hps/",
+   "quelle_titel": "Meldung zum Abschluss",
+   "input_record_ids": [
+    "deal_nem_balcke_duerr__hyundai_heavy_industries_power_systems__2026"
+   ],
+   "ueber_text": "NEM Balcke-Dürr GmbH",
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
@@ -5507,6 +6061,110 @@
    "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
   },
   {
+   "id": "cc-ms-deal_bugatti_rimac__hof_capital__2026-company_porsche-BlueFive Capital",
+   "herleitung": "DIREKT",
+   "bereich": "Übernahmen",
+   "von_id": "ma:company_porsche",
+   "von": "Porsche",
+   "art": "hat Bugatti Rimac verkauft an",
+   "art_code": "SOLD_TO",
+   "nach_id": "ma:BlueFive Capital",
+   "nach": "BlueFive Capital",
+   "ueber": "Bugatti Rimac",
+   "anteil_pct": 45,
+   "stand": 2026,
+   "beleg": "FACT",
+   "freigabe": "NICHT_GEPRUEFT",
+   "quelle_url": "https://newsroom.bugatti.com/press-releases/bugatti-rimac-ownership-transition-new-leadership",
+   "quelle_titel": "Meldung zum Abschluss",
+   "input_record_ids": [
+    "deal_bugatti_rimac__hof_capital__2026"
+   ],
+   "ueber_text": "Bugatti Rimac",
+   "menge": null,
+   "ereignis": null,
+   "herleitung_text": "direkt belegt",
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+  },
+  {
+   "id": "cc-ms-deal_bugatti_rimac__hof_capital__2026-company_porsche-company_hof_capital",
+   "herleitung": "DIREKT",
+   "bereich": "Übernahmen",
+   "von_id": "ma:company_porsche",
+   "von": "Porsche",
+   "art": "hat Bugatti Rimac verkauft an",
+   "art_code": "SOLD_TO",
+   "nach_id": "ma:company_hof_capital",
+   "nach": "HOF Capital",
+   "ueber": "Bugatti Rimac",
+   "anteil_pct": 45,
+   "stand": 2026,
+   "beleg": "FACT",
+   "freigabe": "NICHT_GEPRUEFT",
+   "quelle_url": "https://newsroom.bugatti.com/press-releases/bugatti-rimac-ownership-transition-new-leadership",
+   "quelle_titel": "Meldung zum Abschluss",
+   "input_record_ids": [
+    "deal_bugatti_rimac__hof_capital__2026"
+   ],
+   "ueber_text": "Bugatti Rimac",
+   "menge": null,
+   "ereignis": null,
+   "herleitung_text": "direkt belegt",
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+  },
+  {
+   "id": "cc-ms-deal_rimac_group__hof_capital__2026-company_porsche-BlueFive Capital",
+   "herleitung": "DIREKT",
+   "bereich": "Übernahmen",
+   "von_id": "ma:company_porsche",
+   "von": "Porsche",
+   "art": "hat Rimac Group verkauft an",
+   "art_code": "SOLD_TO",
+   "nach_id": "ma:BlueFive Capital",
+   "nach": "BlueFive Capital",
+   "ueber": "Rimac Group",
+   "anteil_pct": 20.6,
+   "stand": 2026,
+   "beleg": "FACT",
+   "freigabe": "NICHT_GEPRUEFT",
+   "quelle_url": "https://newsroom.bugatti.com/press-releases/bugatti-rimac-ownership-transition-new-leadership",
+   "quelle_titel": "Meldung zum Abschluss",
+   "input_record_ids": [
+    "deal_rimac_group__hof_capital__2026"
+   ],
+   "ueber_text": "Rimac Group",
+   "menge": null,
+   "ereignis": null,
+   "herleitung_text": "direkt belegt",
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+  },
+  {
+   "id": "cc-ms-deal_rimac_group__hof_capital__2026-company_porsche-company_hof_capital",
+   "herleitung": "DIREKT",
+   "bereich": "Übernahmen",
+   "von_id": "ma:company_porsche",
+   "von": "Porsche",
+   "art": "hat Rimac Group verkauft an",
+   "art_code": "SOLD_TO",
+   "nach_id": "ma:company_hof_capital",
+   "nach": "HOF Capital",
+   "ueber": "Rimac Group",
+   "anteil_pct": 20.6,
+   "stand": 2026,
+   "beleg": "FACT",
+   "freigabe": "NICHT_GEPRUEFT",
+   "quelle_url": "https://newsroom.bugatti.com/press-releases/bugatti-rimac-ownership-transition-new-leadership",
+   "quelle_titel": "Meldung zum Abschluss",
+   "input_record_ids": [
+    "deal_rimac_group__hof_capital__2026"
+   ],
+   "ueber_text": "Rimac Group",
+   "menge": null,
+   "ereignis": null,
+   "herleitung_text": "direkt belegt",
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+  },
+  {
    "id": "cc-ma-servicenow-armis-Q7455653",
    "herleitung": "DIREKT",
    "bereich": "Übernahmen",
@@ -5527,6 +6185,110 @@
     "servicenow-armis"
    ],
    "ueber_text": "direkte Verbindung",
+   "menge": null,
+   "ereignis": null,
+   "herleitung_text": "direkt belegt",
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+  },
+  {
+   "id": "cc-ma-deal_ebm_papst_industrielle_antriebstechnik__siemens__undated-company_siemens",
+   "herleitung": "DIREKT",
+   "bereich": "Übernahmen",
+   "von_id": "ma:company_siemens",
+   "von": "Siemens",
+   "art": "hat übernommen",
+   "art_code": "ACQUIRED",
+   "nach_id": "ma:None",
+   "nach": "ebm-papst Geschäft für industrielle Antriebstechnik",
+   "ueber": null,
+   "anteil_pct": null,
+   "stand": 2025,
+   "beleg": "FACT",
+   "freigabe": "NICHT_GEPRUEFT",
+   "quelle_url": "https://press.siemens.com/de/de/pressemitteilung/siemens-schliesst-kauf-des-geschaefts-fuer-industrielle-antriebstechnik-von-ebm",
+   "quelle_titel": "Meldung zum Abschluss",
+   "input_record_ids": [
+    "deal_ebm_papst_industrielle_antriebstechnik__siemens__undated"
+   ],
+   "ueber_text": "direkte Verbindung",
+   "menge": null,
+   "ereignis": null,
+   "herleitung_text": "direkt belegt",
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+  },
+  {
+   "id": "cc-ma-deal_telis_gruppe__swiss_life_deutschland__2026-Swiss Life Deutschland",
+   "herleitung": "DIREKT",
+   "bereich": "Übernahmen",
+   "von_id": "ma:Swiss Life Deutschland",
+   "von": "Swiss Life Deutschland",
+   "art": "hat übernommen",
+   "art_code": "ACQUIRED",
+   "nach_id": "ma:None",
+   "nach": "TELIS Gruppe",
+   "ueber": null,
+   "anteil_pct": null,
+   "stand": 2026,
+   "beleg": "FACT",
+   "freigabe": "NICHT_GEPRUEFT",
+   "quelle_url": "https://www.swisslife.com/en/home/media/media-releases/newsfeed-eqs/corporate/2026/20260701_1545.html",
+   "quelle_titel": "Meldung zum Abschluss",
+   "input_record_ids": [
+    "deal_telis_gruppe__swiss_life_deutschland__2026"
+   ],
+   "ueber_text": "direkte Verbindung",
+   "menge": null,
+   "ereignis": null,
+   "herleitung_text": "direkt belegt",
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+  },
+  {
+   "id": "cc-ma-deal_thriveni_pellets__tata_steel__2026-company_tata_steel",
+   "herleitung": "DIREKT",
+   "bereich": "Übernahmen",
+   "von_id": "ma:company_tata_steel",
+   "von": "Tata Steel",
+   "art": "hat übernommen",
+   "art_code": "ACQUIRED",
+   "nach_id": "ma:company_thriveni_pellets",
+   "nach": "Thriveni Pellets",
+   "ueber": null,
+   "anteil_pct": 50.01,
+   "stand": 2026,
+   "beleg": "FACT",
+   "freigabe": "NICHT_GEPRUEFT",
+   "quelle_url": "https://www.tatasteel.com/media/25351/tata-steel-announcement.pdf",
+   "quelle_titel": "Meldung zum Abschluss",
+   "input_record_ids": [
+    "deal_thriveni_pellets__tata_steel__2026"
+   ],
+   "ueber_text": "direkte Verbindung",
+   "menge": null,
+   "ereignis": null,
+   "herleitung_text": "direkt belegt",
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+  },
+  {
+   "id": "cc-ms-deal_thriveni_pellets__tata_steel__2026-Thriveni Earthmovers Pri-company_tata_steel",
+   "herleitung": "DIREKT",
+   "bereich": "Übernahmen",
+   "von_id": "ma:Thriveni Earthmovers Private Limited",
+   "von": "Thriveni Earthmovers Private Limited",
+   "art": "hat Thriveni Pellets verkauft an",
+   "art_code": "SOLD_TO",
+   "nach_id": "ma:company_tata_steel",
+   "nach": "Tata Steel",
+   "ueber": "Thriveni Pellets",
+   "anteil_pct": 50.01,
+   "stand": 2026,
+   "beleg": "FACT",
+   "freigabe": "NICHT_GEPRUEFT",
+   "quelle_url": "https://www.tatasteel.com/media/25351/tata-steel-announcement.pdf",
+   "quelle_titel": "Meldung zum Abschluss",
+   "input_record_ids": [
+    "deal_thriveni_pellets__tata_steel__2026"
+   ],
+   "ueber_text": "Thriveni Pellets",
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
@@ -5579,6 +6341,32 @@
     "torishima-shin"
    ],
    "ueber_text": "direkte Verbindung",
+   "menge": null,
+   "ereignis": null,
+   "herleitung_text": "direkt belegt",
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+  },
+  {
+   "id": "cc-ms-deal_graze_nature_delivered__katjes_international__2026-Unilever-company_katjes_internati",
+   "herleitung": "DIREKT",
+   "bereich": "Übernahmen",
+   "von_id": "ma:Unilever",
+   "von": "Unilever",
+   "art": "hat Graze (Nature Delivered) verkauft an",
+   "art_code": "SOLD_TO",
+   "nach_id": "ma:company_katjes_international",
+   "nach": "Katjes International über Future Snacks Ltd.",
+   "ueber": "Graze (Nature Delivered)",
+   "anteil_pct": 100,
+   "stand": 2026,
+   "beleg": "FACT",
+   "freigabe": "NICHT_GEPRUEFT",
+   "quelle_url": "https://www.eqs-news.com/news/corporate/katjes-international-acquires-graze-brand-from-unilever/7b89e50e-93ea-4ce9-bb93-a4d342c842c2_en",
+   "quelle_titel": "Meldung zum Abschluss",
+   "input_record_ids": [
+    "deal_graze_nature_delivered__katjes_international__2026"
+   ],
+   "ueber_text": "Graze (Nature Delivered)",
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
