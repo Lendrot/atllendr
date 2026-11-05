@@ -1,7 +1,7 @@
 # Marktatlas (öffentliche Website)
 
 Veröffentlichte Build-Ausgabe des Marktatlas (`dist/` aus `Lendrot/Atlas-Lendrot`, Branch `main`).
-Quelle: Commit `270978cc7e4ce2075f7808221be662686a7a56af`. Diese Kopie ist nur zum Ansehen; Änderungen erfolgen im Quell-Repository.
+Quelle: Commit `da034a8bf4a19f1ac8588a36ab528f8fbbebe439`. Diese Kopie ist nur zum Ansehen; Änderungen erfolgen im Quell-Repository.
 Erzeugt mit `scripts/publish/build_pages_copy.py`; bitte hier nichts von Hand ändern.
 
 Hinweise: Auswahl, keine vollständige Marktabdeckung. Nicht freigegebene Verbindungen bleiben als solche markiert (z. B. NEEDS_RESEARCH, „Kandidat, ungeprüft"). Für die Auslieferung unter /atllendr/ leitet ein Service Worker Root-Pfade um; die Daten sind byte-identisch mit der Quelle.
