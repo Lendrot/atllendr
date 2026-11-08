@@ -21,7 +21,7 @@ export function createGlobe(host,callbacks={}){
   const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
   const quality=performanceProfile();
   const scene=new THREE.Scene();
-  const camera=new THREE.PerspectiveCamera(42,1,.1,2200);
+  const camera=new THREE.PerspectiveCamera(42,1,.1,4600);
   camera.position.copy(vec(geoVector(25,-35,310)));
   const renderer=new THREE.WebGLRenderer({antialias:quality.antialias,alpha:true,powerPreference:'default'});
   let pixelRatio=Math.min(devicePixelRatio,quality.maxPixelRatio);
@@ -33,8 +33,8 @@ export function createGlobe(host,callbacks={}){
   renderer.domElement.setAttribute('aria-label','3D-Erde: Ziehen zum Drehen, Mausrad oder zwei Finger zum Zoomen. Pfeiltasten drehen; Plus und Minus zoomen. Alle Einträge sind auch in der Liste erreichbar.');
   const controls=new GlobeNavigation(camera,renderer.domElement,{
     onStart:()=>{flight=null;stopRotation();callbacks.onHover?.(null);},
-    onHover:event=>{if(!event){callbacks.onHover?.(null);return;}const hit=pick(event,false);renderer.domElement.style.cursor=hit?'pointer':'grab';callbacks.onHover?.(hit?.deal||null,event.clientX,event.clientY);},
-    onTap:event=>{const hit=pick(event,true);if(hit?.deal)callbacks.onDealClick?.(hit.deal.id);else if(hit?.companies)callbacks.onCompanyClick?.(hit.companies);else if(hit?.sites)callbacks.onSiteClick?.(hit.sites);else if(hit?.links)callbacks.onSiteLinkClick?.(hit.links);}
+    onHover:event=>{if(introHidden)return;if(!event){callbacks.onHover?.(null);return;}const hit=pick(event,false);renderer.domElement.style.cursor=hit?'pointer':'grab';callbacks.onHover?.(hit?.deal||null,event.clientX,event.clientY);},
+    onTap:event=>{if(introHidden)return;const hit=pick(event,true);if(hit?.deal)callbacks.onDealClick?.(hit.deal.id);else if(hit?.companies)callbacks.onCompanyClick?.(hit.companies);else if(hit?.sites)callbacks.onSiteClick?.(hit.sites);else if(hit?.links)callbacks.onSiteLinkClick?.(hit.links);}
  
   },host.parentElement);
   controls.autoRotate=false;
@@ -81,10 +81,10 @@ export function createGlobe(host,callbacks={}){
   scene.add(new THREE.Mesh(new THREE.SphereGeometry(102,80,56),atmosphereMaterial));
   const stars=[];let seed=731;
   const rand=()=>{seed=(seed*1664525+1013904223)>>>0;return seed/4294967296;};
-  for(let i=0;i<1300;i++){const a=rand()*Math.PI*2,y=rand()*2-1,s=Math.sqrt(1-y*y),r=850+rand()*150;stars.push(r*s*Math.cos(a),r*y,r*s*Math.sin(a));}
+  for(let i=0;i<1300;i++){const a=rand()*Math.PI*2,y=rand()*2-1,s=Math.sqrt(1-y*y),r=2600+rand()*450;stars.push(r*s*Math.cos(a),r*y,r*s*Math.sin(a));}
   const starGeometry=new THREE.BufferGeometry();starGeometry.setAttribute('position',new THREE.Float32BufferAttribute(stars,3));
   const starMaterial=new THREE.PointsMaterial({color:0xd5e0fa,size:1.15,sizeAttenuation:false,transparent:true,opacity:.53,depthWrite:false});
-  scene.add(new THREE.Points(starGeometry,starMaterial));
+  const starPoints=new THREE.Points(starGeometry,starMaterial);starPoints.matrixAutoUpdate=false;scene.add(starPoints);
   // Country borders are parsed and built in a Web Worker (globe-borders.mjs); main thread only if workers fail.
   fetch('/assets/world.json').then(r=>{if(!r.ok)throw new Error('world');return r.text();}).then(text=>new Promise(resolve=>{
     const main=()=>resolve(borderPositions(JSON.parse(text),100.08));
@@ -327,6 +327,7 @@ export function createGlobe(host,callbacks={}){
     return null;
   }
   canvas.addEventListener('keydown',event=>{
+    if(introHidden)return;
     const step=Math.max(.12,Math.min(8,(camera.position.length()-100)*.035));
     const direction={ArrowLeft:[0,-step],ArrowRight:[0,step],ArrowUp:[step,0],ArrowDown:[-step,0]}[event.key];
     if(direction){event.preventDefault();const p=vectorGeo(camera.position.toArray());focusLocation(Math.max(-85,Math.min(85,p.lat+direction[0])),p.lon+direction[1],camera.position.length());}
@@ -346,13 +347,80 @@ export function createGlobe(host,callbacks={}){
     if(pixelRatio>1){pixelRatio=Math.max(1,pixelRatio-.25);renderer.setPixelRatio(pixelRatio);resize();}
     else if(fps>20)fps=20;
   }
+  // Weltraum-Anflug (globe-intro.mjs, Eddie 2026-11-08): the Earth circles on an orbit through space, a click flies
+  // the camera in. The scene (Earth, borders, data) is moved and spun as one; the stars get the inverse transform, so
+  // they stay put. When the approach starts, the spin is handed to the camera, so after the intro the scene is at the
+  // origin again and every geographic calculation (picking, navigation, focusLocation) is unchanged.
+  const viewListeners=[],starWorld=new THREE.Matrix4(),introOffset=new THREE.Vector3(),sceneInverse=new THREE.Matrix4();
+  let intro=null,introHidden=false;
+  function orbitDepth(){const h=Math.atan(Math.tan(camera.fov*Math.PI/360)*camera.aspect);return THREE.MathUtils.clamp(330/Math.tan(h),1000,1500);}
+  function placeScene(offset,spin){
+    scene.position.copy(offset);scene.rotation.set(0,spin,0);scene.updateMatrix();
+    sceneInverse.copy(scene.matrix).invert();
+    starPoints.matrix.copy(sceneInverse).multiply(starWorld);starPoints.matrixWorldNeedsUpdate=true;
+  }
+  // While the intro runs, the sun stands behind the viewer (upper right), so the side facing the screen is in daylight.
+  function sunFromCamera(){
+    const right=new THREE.Vector3(1,0,0).applyQuaternion(camera.quaternion),upward=new THREE.Vector3(0,1,0).applyQuaternion(camera.quaternion);
+    sun.position.copy(camera.position).setLength(400).addScaledVector(right,170).addScaledVector(upward,140).applyMatrix4(sceneInverse);
+  }
+  function stepIntro(time){
+    const s=(time-intro.started)/1000;
+    if(intro.mode==='orbit'){
+      const depth=orbitDepth(),half=depth*Math.tan(Math.atan(Math.tan(camera.fov*Math.PI/360)*camera.aspect));
+      const radius=Math.max(60,Math.min(300,half-135)),angle=intro.angle+s*.3;
+      camera.position.setLength(depth);
+      introOffset.copy(intro.right).multiplyScalar(radius*Math.cos(angle)).addScaledVector(intro.toward,radius*.75*Math.sin(angle)).addScaledVector(intro.up,radius*.2*Math.sin(angle));
+      intro.spin=s*.22;placeScene(introOffset,intro.spin);
+    }else{
+      const t=reduced?1:Math.min(1,(time-intro.started)/intro.duration),ease=t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
+      camera.position.copy(intro.fromDirection).applyQuaternion(new THREE.Quaternion().slerp(intro.turn,ease)).setLength(THREE.MathUtils.lerp(intro.fromDepth,homeDistance(),ease));
+      placeScene(introOffset.copy(intro.from).multiplyScalar(1-ease),0);
+      if(t===1){const done=intro.done;intro=null;controls.locked=false;done?.();}
+    }
+  }
+  function introOrbit(){
+    flight=null;stopRotation();introHidden=true;controls.locked=true;
+    controls.update();
+    const right=new THREE.Vector3(1,0,0).applyQuaternion(camera.quaternion),upward=new THREE.Vector3(0,1,0).applyQuaternion(camera.quaternion);
+    intro={mode:'orbit',started:performance.now(),angle:-.6,spin:0,right,up:upward,toward:camera.position.clone().normalize()};
+    camera.position.setLength(orbitDepth());invalidate();
+  }
+  function handOverSpin(){
+    // Turn the camera instead of the Earth: same picture, scene rotation back to zero.
+    const q=new THREE.Quaternion().setFromAxisAngle(up,-(intro?.spin||0));
+    camera.position.applyQuaternion(q);camera.up.applyQuaternion(q);introOffset.applyQuaternion(q);
+    starWorld.premultiply(new THREE.Matrix4().makeRotationFromQuaternion(q));
+  }
+  function introApproach(done){
+    if(!intro||intro.mode!=='orbit'){done?.();return;}
+    handOverSpin();
+    const fromDirection=camera.position.clone().normalize(),toDirection=vec(geoVector(28,30,1)).normalize();camera.up.set(0,1,0);
+    intro={mode:'approach',started:performance.now(),duration:2200,from:introOffset.clone(),fromDepth:camera.position.length(),fromDirection,turn:new THREE.Quaternion().setFromUnitVectors(fromDirection,toDirection),done};invalidate();
+  }
+  function introEnd(){
+    if(intro){handOverSpin();intro=null;placeScene(introOffset.set(0,0,0),0);camera.position.setLength(homeDistance());}
+    controls.locked=false;introHidden=false;markersDirty=true;invalidate();
+  }
+  function introHit(x,y){
+    const rect=canvas.getBoundingClientRect();
+    raycaster.setFromCamera(new THREE.Vector2((x-rect.left)/rect.width*2-1,-(y-rect.top)/rect.height*2+1),camera);
+    return !!raycaster.ray.intersectSphere(new THREE.Sphere(scene.position,118),new THREE.Vector3());
+  }
+  function project(lat,lon){
+    const position=geoVector(lat,lon,101),p=vec(position).project(camera);
+    return {x:(p.x+1)*size.width/2,y:(1-p.y)*size.height/2,visible:frontVisible(position,camera.position.toArray())&&p.z<1&&Math.abs(p.x)<1&&Math.abs(p.y)<1};
+  }
+  function startRotation(){flight=null;controls.autoRotate=true;callbacks.onRotation?.(true);wake();}
   function animate(time){
     frame=0;
     if(document.hidden||paused||!onScreen||disposed)return;
     frame=requestAnimationFrame(animate);
     const dt=Math.min(.05,(time-lastFrame)/1000||.016);lastFrame=time;
+    if(intro){stepIntro(time);dirty=true;}
     if(flight){const t=flight.duration?Math.min(1,(time-flight.started)/flight.duration):1;const ease=1-Math.pow(1-t,3);const fromDirection=flight.from.clone().normalize(),toDirection=flight.to.clone().normalize();const quaternion=new THREE.Quaternion().setFromUnitVectors(fromDirection,toDirection);const rotation=new THREE.Quaternion().slerp(quaternion,ease);camera.position.copy(fromDirection.applyQuaternion(rotation)).multiplyScalar(THREE.MathUtils.lerp(flight.from.length(),flight.to.length(),ease));if(t===1)flight=null;}
     controls.update(dt);
+    if(introHidden)sunFromCamera();
     if(time-lastRender<1000/fps)return;
     const interval=time-lastRender;lastRender=time;
     const distance=camera.position.length();
@@ -371,7 +439,7 @@ export function createGlobe(host,callbacks={}){
     if(moved)lastMove=time;
     if(!moved&&!animating&&!dirty){
       // Nothing to draw: keep looping only while a camera move may still follow (rotation, flight, pending cluster pass).
-      if(!flight&&!controls.autoRotate&&!controls.points.size&&time-lastMove>400){cancelAnimationFrame(frame);frame=0;}
+      if(!intro&&!flight&&!controls.autoRotate&&!controls.points.size&&time-lastMove>400){cancelAnimationFrame(frame);frame=0;}
       return;
     }
     dirty=false;
@@ -382,8 +450,13 @@ export function createGlobe(host,callbacks={}){
       callbacks.onLabels?.(projected);
     }else callbacks.onLabels?.([]);
     callbacks.onView?.(distance,vectorGeo(camera.position.toArray()));
+    for(const listener of viewListeners)listener(distance);
+    // Weltraum-Anflug: only the Earth, its atmosphere and the stars; data layers return when the intro ends.
+    const hidden=introHidden?[dealGroup,companyPoints,sitePoints,siteLinks].filter(o=>o?.visible):[];
+    for(const o of hidden)o.visible=false;
     renderer.render(scene,camera);
+    for(const o of hidden)o.visible=true;
   }
   wake();
-  return {setCompanies,setSites,setSiteLinks,showSites:visible=>{sitesVisible=visible;if(sitePoints)sitePoints.visible=visible&&siteData?.n>0;if(siteLinks)siteLinks.visible=visible;invalidate();},setDeals,germany,filterDeals,selectDeal,focusLocation,home,zoom,toggleRotation,showCompanies:visible=>{companiesVisible=visible;if(companyPoints)companyPoints.visible=visible;invalidate();},isRotating:()=>controls.autoRotate,dispose:()=>{disposed=true;cancelAnimationFrame(frame);frame=0;visibility.disconnect();document.removeEventListener('visibilitychange',onVisibility);for(const type of inputs)inputHost.removeEventListener(type,wake,{capture:true});pointMaterial.dispose();siteMaterial.dispose();linkMaterial.dispose();resizeObserver.disconnect();controls.dispose();scene.traverse(o=>{o.geometry?.dispose();if(Array.isArray(o.material))o.material.forEach(m=>m.dispose());else o.material?.dispose();});renderer.dispose();}};
+  return {introOrbit,introApproach,introEnd,introHit,project,startRotation,distance:()=>camera.position.length(),homeDistance,onCameraView:fn=>{viewListeners.push(fn);invalidate();},setCompanies,setSites,setSiteLinks,showSites:visible=>{sitesVisible=visible;if(sitePoints)sitePoints.visible=visible&&siteData?.n>0;if(siteLinks)siteLinks.visible=visible;invalidate();},setDeals,germany,filterDeals,selectDeal,focusLocation,home,zoom,toggleRotation,showCompanies:visible=>{companiesVisible=visible;if(companyPoints)companyPoints.visible=visible;invalidate();},isRotating:()=>controls.autoRotate,dispose:()=>{disposed=true;cancelAnimationFrame(frame);frame=0;visibility.disconnect();document.removeEventListener('visibilitychange',onVisibility);for(const type of inputs)inputHost.removeEventListener(type,wake,{capture:true});pointMaterial.dispose();siteMaterial.dispose();linkMaterial.dispose();resizeObserver.disconnect();controls.dispose();scene.traverse(o=>{o.geometry?.dispose();if(Array.isArray(o.material))o.material.forEach(m=>m.dispose());else o.material?.dispose();});renderer.dispose();}};
 }

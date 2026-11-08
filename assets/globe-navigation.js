@@ -12,7 +12,7 @@ export class GlobeNavigation {
   constructor(camera,canvas,events={},surface=null){
     this.camera=camera;this.canvas=canvas;this.events=events;this.surface=surface;
     this.minDistance=MIN_DISTANCE;this.maxDistance=MAX_DISTANCE;
-    this.autoRotate=false;this.points=new Map();this.tap=null;this.multi=false;
+    this.autoRotate=false;this.locked=false;this.points=new Map();this.tap=null;this.multi=false;
     this.ray=new THREE.Raycaster();this.listeners=[];
     this.listen('pointerdown',e=>{this.down(e);if(this.pending.size)this.adopt();});
     this.listen('pointermove',e=>this.move(e));
@@ -23,7 +23,7 @@ export class GlobeNavigation {
     this.listen('wheel',e=>this.wheel(e),{passive:false});
     // Cards, legends and buttons lie on top of the canvas. The wheel over them zooms the globe too,
     // unless the panel under the cursor can still scroll that way (before, an open card swallowed it).
-    this.surfaceWheel=e=>{if(e.target!==canvas&&!e.defaultPrevented&&!this.panelScrolls(e.target,e))this.wheel(e);};
+    this.surfaceWheel=e=>{if(this.locked)return;if(e.target!==canvas&&!e.defaultPrevented&&!this.panelScrolls(e.target,e))this.wheel(e);};
     this.surfaceListeners=[['wheel',this.surfaceWheel,{passive:false}]];
     // Pinch with a finger on such an overlay: a touch there waits until a second finger joins,
     // then both are handed to the globe. Overlays keep panning; only the browser's own pinch is off.
@@ -42,7 +42,7 @@ export class GlobeNavigation {
   }
   adopt(){const waiting=[...this.pending.values()];this.pending.clear();for(const e of waiting)this.down(e);}
   wheel(e){
-    e.preventDefault();this.events.onStart?.();
+    e.preventDefault();if(this.locked)return;this.events.onStart?.();
     const unit=e.deltaMode===1?16:e.deltaMode===2?this.canvas.clientHeight:1;
     this.zoom(Math.exp(THREE.MathUtils.clamp(e.deltaY*unit,-180,180)*.002),{x:e.clientX,y:e.clientY});
   }
@@ -95,6 +95,7 @@ export class GlobeNavigation {
     return {center:{x:p.reduce((n,v)=>n+v.x,0)/p.length,y:p.reduce((n,v)=>n+v.y,0)/p.length},span:p.length===2?Math.hypot(p[1].x-p[0].x,p[1].y-p[0].y):0};
   }
   down(e){
+    if(this.locked)return; // Weltraum-Anflug (globe-intro.mjs): the camera is animated, input waits.
     if(e.pointerType==='mouse'&&e.button!==0)return;
     this.events.onStart?.();
     const point={x:e.clientX,y:e.clientY};
