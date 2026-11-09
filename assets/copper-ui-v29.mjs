@@ -183,6 +183,7 @@ const selectedName = entityName(entityId);
 $('analysis-title').textContent = `Angenommener Ausfall: ${selectedName}`;
 const summary = el('div', undefined, 'result-summary');
 summary.append(chip('ASSUMPTION'), paragraph(`Szenario: ${selectedName} nicht verfügbar. Die Analyse prüft belegte Verbindungen im gespeicherten Datenstrang.`), paragraph(`Ergebnisgrenze: ${printable(result.confidence?.status)} · Zeitgültigkeit: ${printable(result.confidence?.temporal_validity)} · Quantitativer Ausfall: ${printable(result.confidence?.quantitative_impact || 'NOT_ESTIMABLE')}. Historische Werte sind keine berechneten Verlustmengen.`, 'small'));
+{const an=el('a','Im Annahmen-Atlas nachsehen ↗');an.href='https://lendrot.github.io/atlaslendrot/schnittstelle/?id='+encodeURIComponent(entityId);an.target='_blank';an.rel='noopener';const ap=el('p',undefined,'small');ap.append(an,' (Annahmen, nicht belegt)');summary.append(ap);}
 target.append(summary);
 const admission = legacyScenarioAdmission();
 const admissionNote=paragraph(`${admission.admission_status} · Ausfallannahme; Zeitraum/Mengen UNKNOWN. Prüfung offen.`, 'small');admissionNote.dataset.scenarioAdmission=admission.admission_status;target.append(admissionNote);

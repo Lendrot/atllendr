@@ -44,7 +44,9 @@ export async function attachSites(engine,host){
  panel.querySelectorAll('[data-site-dataset]').forEach(input=>input.onchange=()=>{state[input.dataset.siteDataset]=input.checked;apply();});
  function row(r){
   const link=r.dataset.detail?`<a href="${esc(r.dataset.detail+encodeURIComponent(r.id))}">Im Fachatlas öffnen</a>`:`<a href="${esc(r.dataset.fachatlas)}">Fachatlas ${esc(r.dataset.label)}</a>`;
-  return `<div><dt>${esc(r.name||'Name UNKNOWN')}</dt><dd>${esc(r.kind)} · ${esc(r.country)} · Status ${esc(r.status)}<br>Koordinate wie gemeldet: ${coord(r.lat)}, ${coord(r.lon)} · Datensatz ${esc(r.id)}<br>Quelle: ${r.source?source(r.source):esc(r.dataset.source)+' · '+esc(r.dataset.evidence)} · ${link}</dd></div>`;
+  const an='https://lendrot.github.io/atlaslendrot/schnittstelle/'+(/^(gem-|entity:|legacy-row-|[a-z-]+-(site|node|owner)-)/.test(r.id)?'?id='+encodeURIComponent(r.id):'?suche='+encodeURIComponent(r.name||''));
+  const ann=r.name||/^(gem-|entity:|legacy-row-|[a-z-]+-(site|node|owner)-)/.test(r.id)?` · <a href="${esc(an)}" target="_blank" rel="noopener">Im Annahmen-Atlas nachsehen ↗</a> (Annahmen, nicht belegt)`:'';
+  return `<div><dt>${esc(r.name||'Name UNKNOWN')}</dt><dd>${esc(r.kind)} · ${esc(r.country)} · Status ${esc(r.status)}<br>Koordinate wie gemeldet: ${coord(r.lat)}, ${coord(r.lon)} · Datensatz ${esc(r.id)}<br>Quelle: ${r.source?source(r.source):esc(r.dataset.source)+' · '+esc(r.dataset.evidence)} · ${link}${ann}</dd></div>`;
  }
  function source(s){return s.url&&/^https:\/\//.test(s.url)?`<a href="${esc(s.url)}" rel="noopener" target="_blank">${esc(s.label)}</a>`:esc(s.label);}
  function openLinks(list){
