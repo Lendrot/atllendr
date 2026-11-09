@@ -159,7 +159,7 @@ async function select(a){
 }
 async function openRiskOverview(){
  closeDetail();const d=$('detail');d.innerHTML='<button class="close" id="detail-close">Schließen</button><p class="eyebrow">Kupfer · Risikosignale</p><h2>Engpässe und Abhängigkeiten</h2><p id="risk-status" role="status">Risikosignale werden geladen …</p><div id="risk-result"></div><button class="action" id="risk-export" disabled>Risikosignale als JSON</button>';d.hidden=false;d.scrollTop=0;$('detail-close').onclick=closeDetail;
- try{const m=await import('./risk-signals.mjs'),v=await m.loadRiskView();$('risk-result').innerHTML='<p class="muted">Die betroffenen Anlagen haben keine belegte Koordinate. Sie werden deshalb nicht als Punkt auf dem Globus gezeigt. <a href="/minen/?id=legacy-row-19">Kansanshi in der Rohstoffwelt öffnen</a></p>'+m.renderRiskOverview(v);$('risk-status').textContent=v.kpi.signals_evidence_complete+' belegt, '+v.kpi.signals_candidate+' vorläufig.';m.bindRiskExport($('risk-export'),v,$('risk-status'))}
+ try{const m=await import('./risk-signals.mjs'),v=await m.loadRiskView();$('risk-result').innerHTML='<p class="muted">'+m.mapPointSummary(v)+' <a href="/minen/?id=legacy-row-19">Kansanshi in der Rohstoffwelt öffnen</a></p>'+m.renderRiskOverview(v);$('risk-status').textContent=v.kpi.signals_evidence_complete+' belegt, '+v.kpi.signals_candidate+' vorläufig.';m.bindRiskExport($('risk-export'),v,$('risk-status'))}
  catch(e){$('risk-status').textContent='Risikosignale nicht geladen. Ohne Daten gilt kein Standort als unkritisch.';console.error(e)}
 }
 function download(content,name,type){const url=URL.createObjectURL(new Blob([content],{type})),a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}

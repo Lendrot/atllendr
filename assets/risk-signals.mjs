@@ -49,11 +49,24 @@ function otherSignals(v,basis,only){
  const cc=v.country_concentration.flatMap(c=>(c.bases[basis].signals||[]).map(sig=>`<article class="risk-card" data-basis="${esc(basis)}"><h4>${esc(RULE_LABEL.COUNTRY_CONCENTRATION)}: ${esc(sig.country)} · ${esc(c.stage)}</h4><p>${chip(basis,'SIGNAL')}</p><p class="small">${esc(JSON.stringify(sig))}</p></article>`));
  return ss.concat(cc).join('');
 }
+const PRECISION={FACILITY:'Koordinate der Anlage selbst',OPERATION_SITE:'Koordinate des Betriebsgeländes, nicht der einzelnen Anlage'};
+// Map point text from the view: only an APPROVED ledger coordinate counts, everything else stays UNKNOWN.
+function mapPointText(s){
+ const c=s.map_point==='APPROVED_COORDINATE'?s.map_coordinate:null;
+ if(!c)return 'UNKNOWN · keine belegte Koordinate, daher kein Punkt auf dem Globus';
+ return `freigegebene Koordinate ${Number(c.lat).toFixed(3)}, ${Number(c.lon).toFixed(3)} (${esc(PRECISION[c.precision]||c.precision)}; <a href="${esc(c.source_url)}" target="_blank" rel="noopener">Quelle</a>), als Kupferpunkt auf dem Globus`;
+}
+export function mapPointSummary(v){
+ const all=v?.bottleneck_facility||[],missing=all.filter(x=>!(x.subject.map_point==='APPROVED_COORDINATE'&&x.subject.map_coordinate));
+ if(!all.length)return '';
+ if(!missing.length)return `Alle ${all.length} betroffenen Anlagen haben eine freigegebene Koordinate und sind als Kupferpunkt auf dem Globus zu sehen.`;
+ return `${missing.length} von ${all.length} betroffenen Anlagen haben keine belegte Koordinate (${missing.map(x=>esc(x.subject.name)).join(', ')}). Sie werden deshalb nicht als Punkt auf dem Globus gezeigt.`;
+}
 function bottleneckCard(v,x,basis){
  const b=x.bases[basis],other=basis==='APPROVED'?'CANDIDATE':'APPROVED';
  const chains=(b.chains.length?b.chains.map(c=>c.chain_id):x.structural_chains).map(id=>esc(chainName(v,id))).join(', ');
  return `<article class="risk-card" data-entity="${esc(x.subject.entity_id)}" data-basis="${esc(basis)}"><h4>${esc(x.subject.name)}</h4><p>${chip(basis,b.status)} ${chip(other,x.bases[other].status)}</p>
- <p class="small">${esc(x.subject.entity_type)} · ${esc(x.subject.country||'Land UNKNOWN')} · Ketten: ${chains}<br>Kartenpunkt: ${x.subject.map_point==='UNKNOWN'?'UNKNOWN · keine belegte Koordinate, daher kein Punkt auf dem Globus':'Quellenkoordinate vorhanden'} · Belegte Alternative: ${x.documented_alternatives?esc(x.documented_alternatives):'keine (Ersatzkapazität UNKNOWN)'}</p>
+ <p class="small">${esc(x.subject.entity_type)} · ${esc(x.subject.country||'Land UNKNOWN')} · Ketten: ${chains}<br>Kartenpunkt: ${mapPointText(x.subject)} · Belegte Alternative: ${x.documented_alternatives?esc(x.documented_alternatives):'keine (Ersatzkapazität UNKNOWN)'}</p>
  ${basis==='CANDIDATE'&&x.unlock_relationship_ids.length?`<p class="small">Belegt erst nach Freigabe von ${x.unlock_relationship_ids.length} Beziehungen:</p><ul class="risk-rels">${x.unlock_relationship_ids.map(r=>relLine(v,r)).join('')}</ul>`:''}
  ${b.excluded_inputs?.length?`<p class="small">Nicht verwendete Eingaben: ${reasonsHtml(v,b.excluded_inputs)}</p>`:''}
  <p class="small mono">${esc(b.derived_record_id)}</p></article>`;
