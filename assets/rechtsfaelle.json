@@ -1,0 +1,323 @@
+{
+ "schema": "atlas.rechtsfaelle/1",
+ "stand": "2026-11-09",
+ "atlas": "Hauptatlas",
+ "scope": "Rechtliche Fälle an Verbindungen des Hauptatlas. Alle sind Prüfpunkte: eine Regel berührt den Warenstrom, ein Verstoß ist nicht belegt. Versender und Empfänger sind UNKNOWN.",
+ "status": [
+  "Prüfpunkt",
+  "belegt",
+  "widerlegt"
+ ],
+ "arten": [
+  "Regel-Kollision",
+  "Genehmigungspflicht",
+  "Sorgfaltspflicht",
+  "Verfahrenspflicht",
+  "Sanktionsumfeld"
+ ],
+ "doku": "analysis/RECHTSFAELLE.md",
+ "faelle": [
+  {
+   "id": "RF-H001",
+   "verbindung": "in_customs_hs8549_es_2025",
+   "titel": "Blei-Akku-Schrott Spanien → Indien 2025",
+   "thema": "Abfallrecht",
+   "art": "Regel-Kollision",
+   "norm": "VO (EG) 1013/2006 Art. 36 Abs. 1 Buchst. a (Ausfuhrverbot gefährlicher Abfälle zur Verwertung in Nicht-OECD-Staaten), Anhang V A1160; Fassung 2024/1157 noch nicht gelesen",
+   "status": "Prüfpunkt",
+   "beleg_hs6": {
+    "hs6": "854911",
+    "kg": 261212
+   },
+   "befund": "Ausfuhr Spanien → Indien 2025 laut EU-Zollstatistik: 261,2 t Elektro- und Elektronikschrott (HS 8549); davon 261,2 t unter HS 8549.11, also Abfälle und Schrott von Blei-Akkus. Verbrauchte Blei-Akkus sind nach dem Basler Übereinkommen gefährlicher Abfall (A1160). Die EU verbietet grundsätzlich, gefährliche Abfälle zur Verwertung in Staaten auszuführen, für die der OECD-Beschluss nicht gilt; Indien gehört dazu. Der Warenstrom widerspricht damit der Regel (Regel-Kollision). Gelesen: VO 1013/2006 Art. 36 Abs. 1 Buchst. a verbietet die Ausfuhr der in Anhang V als gefährlich gelisteten Abfälle zur Verwertung in Nicht-OECD-Staaten; Anhang V führt „A1160 Waste lead-acid batteries, whole or crushed“.",
+   "offen": "Versender, Empfänger, Hafen und Verträge: UNKNOWN. Ob eine Basel- oder EU-Notifizierung vorliegt: UNKNOWN. Mögliche Erklärungen: andere Einstufung der Ware (z. B. als Nicht-Abfall), falscher Zollcode oder unzulässige Ausfuhr. Ein Vorwurf lässt sich daraus nicht ableiten. Ob die Fassung 2024/1157 (gilt seit 21.05.2026) etwas ändert: nicht gelesen.",
+   "quellen": [
+    {
+     "titel": "Eurostat Comext DS-045409, Ausfuhr nach Indien 2025 nach 6-Steller (eurostat-hs6.json)",
+     "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409",
+     "gelesen": true,
+     "rolle": "Sachverhalt"
+    },
+    {
+     "titel": "Verordnung (EG) Nr. 1013/2006, Fassung 2006, Art. 36 Abs. 1 (Ausfuhrverbot) und Anhang V (EU-Wiedergabe Basel A1160)",
+     "url": "https://eur-lex.europa.eu/eli/reg/2006/1013/oj",
+     "gelesen": true,
+     "rolle": "Norm",
+     "abruf": "2026-11-09T22:17Z",
+     "sha256": "0c130e96c20daf1525f257760d9f8e974e9908a3806f24d7e38d3251d1a15af3",
+     "gelesen_durch": "Research Engine (Eddies PC), Abruf 2026-11-09",
+     "zitat": "Art. 36(1): \"Exports from the Community of the following wastes destined for recovery in countries to which the OECD Decision does not apply are prohibited: (a) wastes listed as hazardous in Annex V; … (f) wastes the import of which has been prohibited by the country of destination\". Anhang V: \"A1160 Waste lead-acid batteries, whole or crushed\"."
+    },
+    {
+     "titel": "Basler Übereinkommen, Anlage VIII Eintrag A1160 (Altbleibatterien) (Originaltext nicht gelesen; EU-Wiedergabe in VO 1013/2006 Anhang V gelesen)",
+     "url": "https://www.basel.int/TheConvention/Overview/TextoftheConvention/tabid/1275/Default.aspx",
+     "gelesen": false,
+     "rolle": "Norm"
+    },
+    {
+     "titel": "Verordnung (EU) 2024/1157 über die Verbringung von Abfällen (gilt seit 21.05.2026)",
+     "url": "https://eur-lex.europa.eu/eli/reg/2024/1157/oj",
+     "gelesen": false,
+     "rolle": "Norm"
+    },
+    {
+     "titel": "Indien: Einfuhr von Altbleibatterien nur mit MoEFCC-Genehmigung an registrierte Recycler (Sekundärquelle)",
+     "url": "https://enterclimate.com/blog/how-to-apply-for-moef-permission-for-the-import-of-used-lead-acid-batteries/",
+     "gelesen": true,
+     "rolle": "Kontext"
+    }
+   ],
+   "von_land": "Spanien",
+   "nach_land": "Indien",
+   "material": "waste_electrical_hs8549",
+   "hs": "8549",
+   "menge_kg": 261212,
+   "zeitraum": "Kalenderjahr 2025",
+   "weg_evidenz": "FACT (Zollstatistik), Prüfstatus NEEDS_RESEARCH"
+  },
+  {
+   "id": "RF-H002",
+   "verbindung": "in_customs_hs8549_dk_2025",
+   "titel": "Blei-Akku-Schrott Dänemark → Indien 2025",
+   "thema": "Abfallrecht",
+   "art": "Regel-Kollision",
+   "norm": "VO (EG) 1013/2006 Art. 36 Abs. 1 Buchst. a (Ausfuhrverbot gefährlicher Abfälle zur Verwertung in Nicht-OECD-Staaten), Anhang V A1160; Fassung 2024/1157 noch nicht gelesen",
+   "status": "Prüfpunkt",
+   "beleg_hs6": {
+    "hs6": "854911",
+    "kg": 138500
+   },
+   "befund": "Ausfuhr Dänemark → Indien 2025 laut EU-Zollstatistik: 138,5 t Elektro- und Elektronikschrott (HS 8549); davon 138,5 t unter HS 8549.11, also Abfälle und Schrott von Blei-Akkus. Verbrauchte Blei-Akkus sind nach dem Basler Übereinkommen gefährlicher Abfall (A1160). Die EU verbietet grundsätzlich, gefährliche Abfälle zur Verwertung in Staaten auszuführen, für die der OECD-Beschluss nicht gilt; Indien gehört dazu. Der Warenstrom widerspricht damit der Regel (Regel-Kollision). Gelesen: VO 1013/2006 Art. 36 Abs. 1 Buchst. a verbietet die Ausfuhr der in Anhang V als gefährlich gelisteten Abfälle zur Verwertung in Nicht-OECD-Staaten; Anhang V führt „A1160 Waste lead-acid batteries, whole or crushed“.",
+   "offen": "Versender, Empfänger, Hafen und Verträge: UNKNOWN. Ob eine Basel- oder EU-Notifizierung vorliegt: UNKNOWN. Mögliche Erklärungen: andere Einstufung der Ware (z. B. als Nicht-Abfall), falscher Zollcode oder unzulässige Ausfuhr. Ein Vorwurf lässt sich daraus nicht ableiten. Ob die Fassung 2024/1157 (gilt seit 21.05.2026) etwas ändert: nicht gelesen.",
+   "quellen": [
+    {
+     "titel": "Eurostat Comext DS-045409, Ausfuhr nach Indien 2025 nach 6-Steller (eurostat-hs6.json)",
+     "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409",
+     "gelesen": true,
+     "rolle": "Sachverhalt"
+    },
+    {
+     "titel": "Verordnung (EG) Nr. 1013/2006, Fassung 2006, Art. 36 Abs. 1 (Ausfuhrverbot) und Anhang V (EU-Wiedergabe Basel A1160)",
+     "url": "https://eur-lex.europa.eu/eli/reg/2006/1013/oj",
+     "gelesen": true,
+     "rolle": "Norm",
+     "abruf": "2026-11-09T22:17Z",
+     "sha256": "0c130e96c20daf1525f257760d9f8e974e9908a3806f24d7e38d3251d1a15af3",
+     "gelesen_durch": "Research Engine (Eddies PC), Abruf 2026-11-09",
+     "zitat": "Art. 36(1): \"Exports from the Community of the following wastes destined for recovery in countries to which the OECD Decision does not apply are prohibited: (a) wastes listed as hazardous in Annex V; … (f) wastes the import of which has been prohibited by the country of destination\". Anhang V: \"A1160 Waste lead-acid batteries, whole or crushed\"."
+    },
+    {
+     "titel": "Basler Übereinkommen, Anlage VIII Eintrag A1160 (Altbleibatterien) (Originaltext nicht gelesen; EU-Wiedergabe in VO 1013/2006 Anhang V gelesen)",
+     "url": "https://www.basel.int/TheConvention/Overview/TextoftheConvention/tabid/1275/Default.aspx",
+     "gelesen": false,
+     "rolle": "Norm"
+    },
+    {
+     "titel": "Verordnung (EU) 2024/1157 über die Verbringung von Abfällen (gilt seit 21.05.2026)",
+     "url": "https://eur-lex.europa.eu/eli/reg/2024/1157/oj",
+     "gelesen": false,
+     "rolle": "Norm"
+    },
+    {
+     "titel": "Indien: Einfuhr von Altbleibatterien nur mit MoEFCC-Genehmigung an registrierte Recycler (Sekundärquelle)",
+     "url": "https://enterclimate.com/blog/how-to-apply-for-moef-permission-for-the-import-of-used-lead-acid-batteries/",
+     "gelesen": true,
+     "rolle": "Kontext"
+    }
+   ],
+   "von_land": "Dänemark",
+   "nach_land": "Indien",
+   "material": "waste_electrical_hs8549",
+   "hs": "8549",
+   "menge_kg": 138506,
+   "zeitraum": "Kalenderjahr 2025",
+   "weg_evidenz": "FACT (Zollstatistik), Prüfstatus NEEDS_RESEARCH"
+  },
+  {
+   "id": "RF-H003",
+   "verbindung": "in_customs_hs3915_nl_2025",
+   "titel": "Kunststoffabfall Niederlande → Indien 2025",
+   "thema": "Abfallrecht",
+   "art": "Regel-Kollision",
+   "norm": "Indien: Einfuhrverbot für festen Kunststoffabfall (2019, Normtext nicht gelesen); falls es gilt: VO (EG) 1013/2006 Art. 36 Abs. 1 Buchst. f; EU: Ausfuhrverbot für Kunststoffabfälle in Nicht-OECD-Staaten ab 21.11.2026",
+   "status": "Prüfpunkt",
+   "beleg_hs6": {
+    "hs6": "391510",
+    "kg": 2983140
+   },
+   "befund": "Ausfuhr Niederlande → Indien 2025 laut EU-Zollstatistik: 2.983,1 t Abfälle, Schnitzel und Bruch von Kunststoffen (HS 3915), davon 2.983,1 t unter HS 3915.10 (Polymere des Ethylens). Indien hat 2019 die Einfuhr von festem Kunststoffabfall verboten (Sekundärquellen, Normtext nicht gelesen). Der Warenstrom widerspricht damit der indischen Regel (Regel-Kollision). Ab 21.11.2026 verbietet zusätzlich die EU die Ausfuhr von Kunststoffabfällen in Nicht-OECD-Staaten.",
+   "offen": "Versender und Empfänger: UNKNOWN. Ob die Ware unter eine indische Ausnahme fällt oder anders eingestuft wurde: UNKNOWN (Normtext nicht gelesen). Ein Vorwurf lässt sich daraus nicht ableiten. In der gelesenen Indien-Zeile von VO 1418/2007 (Stand 02.04.2022) steht Kunststoffabfall (B3011) weder unter Verbot (a) noch unter (d); wie Indien ihn behandelt, bleibt offen.",
+   "quellen": [
+    {
+     "titel": "Eurostat Comext DS-045409, Ausfuhr nach Indien 2025 nach 6-Steller (eurostat-hs6.json)",
+     "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409",
+     "gelesen": true,
+     "rolle": "Sachverhalt"
+    },
+    {
+     "titel": "Verordnung (EG) Nr. 1418/2007, konsolidiert 02.04.2022, Zeile Indien",
+     "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:02007R1418-20220402",
+     "gelesen": true,
+     "rolle": "Norm",
+     "abruf": "2026-11-09T22:19:33Z",
+     "sha256": "351286230b871476003ff6a4034d8326e754d8ddae4ddf06816bf5c4c0adf9d7",
+     "gelesen_durch": "Research Engine (Eddies PC), Abruf 2026-11-09",
+     "zitat": "Indien, Spalte (d) \"other control procedures will be followed in the country of destination under applicable national law\": Metallschrotte aus B1010 und B1090; Spalte (a) \"prohibition\": B1115, B1250, B2110–B2130, B3026, B3065; Spalten (b) und (c) leer. Änderungen nach 02.04.2022 nicht geprüft."
+    },
+    {
+     "titel": "Verordnung (EG) Nr. 1013/2006, Fassung 2006, Art. 36 Abs. 1 Buchst. f (Einfuhrverbot des Ziellands)",
+     "url": "https://eur-lex.europa.eu/eli/reg/2006/1013/oj",
+     "gelesen": true,
+     "rolle": "Norm",
+     "abruf": "2026-11-09T22:17Z",
+     "sha256": "0c130e96c20daf1525f257760d9f8e974e9908a3806f24d7e38d3251d1a15af3",
+     "gelesen_durch": "Research Engine (Eddies PC), Abruf 2026-11-09",
+     "zitat": "Art. 36(1): \"Exports from the Community of the following wastes destined for recovery in countries to which the OECD Decision does not apply are prohibited: (a) wastes listed as hazardous in Annex V; … (f) wastes the import of which has been prohibited by the country of destination\". Anhang V: \"A1160 Waste lead-acid batteries, whole or crushed\"."
+    },
+    {
+     "titel": "Indien, MoEFCC: Änderung der Hazardous and Other Wastes Rules 2016, Einfuhrverbot für festen Kunststoffabfall (PIB, 06.03.2019)",
+     "url": "https://pib.gov.in/PressReleasePage.aspx?PRID=1567682",
+     "gelesen": false,
+     "rolle": "Norm"
+    },
+    {
+     "titel": "EU-Kommission: Ausfuhrverbot für Kunststoffabfälle in Nicht-OECD-Staaten ab 21.11.2026",
+     "url": "https://environment.ec.europa.eu/topics/waste-and-recycling/waste-shipments/plastic-waste-shipments_en",
+     "gelesen": false,
+     "rolle": "Norm"
+    }
+   ],
+   "von_land": "Niederlande",
+   "nach_land": "Indien",
+   "material": "waste_plastic_hs3915",
+   "hs": "3915",
+   "menge_kg": 2983140,
+   "zeitraum": "Kalenderjahr 2025",
+   "weg_evidenz": "FACT (Zollstatistik), Prüfstatus NEEDS_RESEARCH"
+  },
+  {
+   "id": "RF-H004",
+   "verbindung": "in_customs_hs3915_ro_2025",
+   "titel": "Kunststoffabfall Rumänien → Indien 2025",
+   "thema": "Abfallrecht",
+   "art": "Regel-Kollision",
+   "norm": "Indien: Einfuhrverbot für festen Kunststoffabfall (2019, Normtext nicht gelesen); falls es gilt: VO (EG) 1013/2006 Art. 36 Abs. 1 Buchst. f; EU: Ausfuhrverbot für Kunststoffabfälle in Nicht-OECD-Staaten ab 21.11.2026",
+   "status": "Prüfpunkt",
+   "beleg_hs6": {
+    "hs6": "391590",
+    "kg": 399290
+   },
+   "befund": "Ausfuhr Rumänien → Indien 2025 laut EU-Zollstatistik: 399,3 t Abfälle, Schnitzel und Bruch von Kunststoffen (HS 3915), davon 399,3 t unter HS 3915.90 (andere Kunststoffe). Indien hat 2019 die Einfuhr von festem Kunststoffabfall verboten (Sekundärquellen, Normtext nicht gelesen). Der Warenstrom widerspricht damit der indischen Regel (Regel-Kollision). Ab 21.11.2026 verbietet zusätzlich die EU die Ausfuhr von Kunststoffabfällen in Nicht-OECD-Staaten.",
+   "offen": "Versender und Empfänger: UNKNOWN. Ob die Ware unter eine indische Ausnahme fällt oder anders eingestuft wurde: UNKNOWN (Normtext nicht gelesen). Ein Vorwurf lässt sich daraus nicht ableiten. In der gelesenen Indien-Zeile von VO 1418/2007 (Stand 02.04.2022) steht Kunststoffabfall (B3011) weder unter Verbot (a) noch unter (d); wie Indien ihn behandelt, bleibt offen.",
+   "quellen": [
+    {
+     "titel": "Eurostat Comext DS-045409, Ausfuhr nach Indien 2025 nach 6-Steller (eurostat-hs6.json)",
+     "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409",
+     "gelesen": true,
+     "rolle": "Sachverhalt"
+    },
+    {
+     "titel": "Verordnung (EG) Nr. 1418/2007, konsolidiert 02.04.2022, Zeile Indien",
+     "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:02007R1418-20220402",
+     "gelesen": true,
+     "rolle": "Norm",
+     "abruf": "2026-11-09T22:19:33Z",
+     "sha256": "351286230b871476003ff6a4034d8326e754d8ddae4ddf06816bf5c4c0adf9d7",
+     "gelesen_durch": "Research Engine (Eddies PC), Abruf 2026-11-09",
+     "zitat": "Indien, Spalte (d) \"other control procedures will be followed in the country of destination under applicable national law\": Metallschrotte aus B1010 und B1090; Spalte (a) \"prohibition\": B1115, B1250, B2110–B2130, B3026, B3065; Spalten (b) und (c) leer. Änderungen nach 02.04.2022 nicht geprüft."
+    },
+    {
+     "titel": "Verordnung (EG) Nr. 1013/2006, Fassung 2006, Art. 36 Abs. 1 Buchst. f (Einfuhrverbot des Ziellands)",
+     "url": "https://eur-lex.europa.eu/eli/reg/2006/1013/oj",
+     "gelesen": true,
+     "rolle": "Norm",
+     "abruf": "2026-11-09T22:17Z",
+     "sha256": "0c130e96c20daf1525f257760d9f8e974e9908a3806f24d7e38d3251d1a15af3",
+     "gelesen_durch": "Research Engine (Eddies PC), Abruf 2026-11-09",
+     "zitat": "Art. 36(1): \"Exports from the Community of the following wastes destined for recovery in countries to which the OECD Decision does not apply are prohibited: (a) wastes listed as hazardous in Annex V; … (f) wastes the import of which has been prohibited by the country of destination\". Anhang V: \"A1160 Waste lead-acid batteries, whole or crushed\"."
+    },
+    {
+     "titel": "Indien, MoEFCC: Änderung der Hazardous and Other Wastes Rules 2016, Einfuhrverbot für festen Kunststoffabfall (PIB, 06.03.2019)",
+     "url": "https://pib.gov.in/PressReleasePage.aspx?PRID=1567682",
+     "gelesen": false,
+     "rolle": "Norm"
+    },
+    {
+     "titel": "EU-Kommission: Ausfuhrverbot für Kunststoffabfälle in Nicht-OECD-Staaten ab 21.11.2026",
+     "url": "https://environment.ec.europa.eu/topics/waste-and-recycling/waste-shipments/plastic-waste-shipments_en",
+     "gelesen": false,
+     "rolle": "Norm"
+    }
+   ],
+   "von_land": "Rumänien",
+   "nach_land": "Indien",
+   "material": "waste_plastic_hs3915",
+   "hs": "3915",
+   "menge_kg": 399290,
+   "zeitraum": "Kalenderjahr 2025",
+   "weg_evidenz": "FACT (Zollstatistik), Prüfstatus NEEDS_RESEARCH"
+  },
+  {
+   "id": "RF-H005",
+   "verbindung": "in_customs_hs3915_gr_2025",
+   "titel": "Kunststoffabfall Griechenland → Indien 2025",
+   "thema": "Abfallrecht",
+   "art": "Regel-Kollision",
+   "norm": "Indien: Einfuhrverbot für festen Kunststoffabfall (2019, Normtext nicht gelesen); falls es gilt: VO (EG) 1013/2006 Art. 36 Abs. 1 Buchst. f; EU: Ausfuhrverbot für Kunststoffabfälle in Nicht-OECD-Staaten ab 21.11.2026",
+   "status": "Prüfpunkt",
+   "beleg_hs6": {
+    "hs6": "391590",
+    "kg": 238020
+   },
+   "befund": "Ausfuhr Griechenland → Indien 2025 laut EU-Zollstatistik: 238,0 t Abfälle, Schnitzel und Bruch von Kunststoffen (HS 3915), davon 238,0 t unter HS 3915.90 (andere Kunststoffe). Indien hat 2019 die Einfuhr von festem Kunststoffabfall verboten (Sekundärquellen, Normtext nicht gelesen). Der Warenstrom widerspricht damit der indischen Regel (Regel-Kollision). Ab 21.11.2026 verbietet zusätzlich die EU die Ausfuhr von Kunststoffabfällen in Nicht-OECD-Staaten.",
+   "offen": "Versender und Empfänger: UNKNOWN. Ob die Ware unter eine indische Ausnahme fällt oder anders eingestuft wurde: UNKNOWN (Normtext nicht gelesen). Ein Vorwurf lässt sich daraus nicht ableiten. In der gelesenen Indien-Zeile von VO 1418/2007 (Stand 02.04.2022) steht Kunststoffabfall (B3011) weder unter Verbot (a) noch unter (d); wie Indien ihn behandelt, bleibt offen.",
+   "quellen": [
+    {
+     "titel": "Eurostat Comext DS-045409, Ausfuhr nach Indien 2025 nach 6-Steller (eurostat-hs6.json)",
+     "url": "https://ec.europa.eu/eurostat/api/comext/dissemination/statistics/1.0/data/DS-045409",
+     "gelesen": true,
+     "rolle": "Sachverhalt"
+    },
+    {
+     "titel": "Verordnung (EG) Nr. 1418/2007, konsolidiert 02.04.2022, Zeile Indien",
+     "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:02007R1418-20220402",
+     "gelesen": true,
+     "rolle": "Norm",
+     "abruf": "2026-11-09T22:19:33Z",
+     "sha256": "351286230b871476003ff6a4034d8326e754d8ddae4ddf06816bf5c4c0adf9d7",
+     "gelesen_durch": "Research Engine (Eddies PC), Abruf 2026-11-09",
+     "zitat": "Indien, Spalte (d) \"other control procedures will be followed in the country of destination under applicable national law\": Metallschrotte aus B1010 und B1090; Spalte (a) \"prohibition\": B1115, B1250, B2110–B2130, B3026, B3065; Spalten (b) und (c) leer. Änderungen nach 02.04.2022 nicht geprüft."
+    },
+    {
+     "titel": "Verordnung (EG) Nr. 1013/2006, Fassung 2006, Art. 36 Abs. 1 Buchst. f (Einfuhrverbot des Ziellands)",
+     "url": "https://eur-lex.europa.eu/eli/reg/2006/1013/oj",
+     "gelesen": true,
+     "rolle": "Norm",
+     "abruf": "2026-11-09T22:17Z",
+     "sha256": "0c130e96c20daf1525f257760d9f8e974e9908a3806f24d7e38d3251d1a15af3",
+     "gelesen_durch": "Research Engine (Eddies PC), Abruf 2026-11-09",
+     "zitat": "Art. 36(1): \"Exports from the Community of the following wastes destined for recovery in countries to which the OECD Decision does not apply are prohibited: (a) wastes listed as hazardous in Annex V; … (f) wastes the import of which has been prohibited by the country of destination\". Anhang V: \"A1160 Waste lead-acid batteries, whole or crushed\"."
+    },
+    {
+     "titel": "Indien, MoEFCC: Änderung der Hazardous and Other Wastes Rules 2016, Einfuhrverbot für festen Kunststoffabfall (PIB, 06.03.2019)",
+     "url": "https://pib.gov.in/PressReleasePage.aspx?PRID=1567682",
+     "gelesen": false,
+     "rolle": "Norm"
+    },
+    {
+     "titel": "EU-Kommission: Ausfuhrverbot für Kunststoffabfälle in Nicht-OECD-Staaten ab 21.11.2026",
+     "url": "https://environment.ec.europa.eu/topics/waste-and-recycling/waste-shipments/plastic-waste-shipments_en",
+     "gelesen": false,
+     "rolle": "Norm"
+    }
+   ],
+   "von_land": "Griechenland",
+   "nach_land": "Indien",
+   "material": "waste_plastic_hs3915",
+   "hs": "3915",
+   "menge_kg": 238020,
+   "zeitraum": "Kalenderjahr 2025",
+   "weg_evidenz": "FACT (Zollstatistik), Prüfstatus NEEDS_RESEARCH"
+  }
+ ]
+}

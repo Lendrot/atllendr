@@ -58,6 +58,8 @@ body.globe-intro .continent-hub{background:#0b1730cc;color:#eef4ff;border-color:
 .gesamt-panel label{display:flex;align-items:center;gap:6px;min-height:24px;cursor:pointer}.gesamt-panel label span{flex:1;min-width:0}.gesamt-panel label small{color:#51677f;font-variant-numeric:tabular-nums;white-space:nowrap}
 .gesamt-panel label i{width:12px;height:4px;border-radius:2px;flex:none}.gesamt-panel input{margin:0;accent-color:#0b74ba}
 .gesamt-hinweis{margin:6px 0 0;color:#51677f;font-size:11px}
+/* Rechtliche Fälle (Eddie 2026-11-09, analysis/RECHTSFAELLE.md): Befund des gewählten Falls unter der VF-Legende. */
+.gesamt-fall{margin:8px 0 4px;padding:8px 10px;border:1px solid #e9b8b8;border-left:4px solid #e0393e;border-radius:8px;background:#fdf5f5;color:#24465f;font-size:11.5px}.gesamt-fall[hidden]{display:none}.gesamt-fall strong{display:block;color:#7a1b1e;font-size:12.5px;margin-bottom:2px}.gesamt-fall p{margin:4px 0}.gesamt-fall ul{margin:4px 0;padding-left:16px}.gesamt-fall a{color:#0b5cad}
 body.gesamt-aktiv .space-top .direction-key{display:none}
 @media(max-width:760px){#app .gesamt-panel{left:8px;right:76px;top:auto;bottom:48px;width:auto;max-height:42%}}
 @media(max-width:760px){#app .gesamt-panel:has(.vf-zu){right:auto;padding:4px 6px 4px 10px;max-width:calc(100% - 84px)}}

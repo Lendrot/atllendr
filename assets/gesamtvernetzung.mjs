@@ -93,6 +93,13 @@ export function attachGesamt({engine,sites,getAtlas,toAtlas,host}){
  const off=Object.fromEntries(GRUPPEN.map(([g])=>[g,new Set()]));
  let kanten=[],aktiv=false,vf=null;
  const an=f=>GRUPPEN.every(([g])=>!off[g].has(f[g]));
+ // Rechtliche Fälle (Eddie 2026-11-09, scripts/analysis/build_rechtsfaelle.py, analysis/RECHTSFAELLE.md): eigene Ebene; der Knopf
+ // "§ Rechtliche Fälle" in der VF-Legende zeigt in der offenen VF nur Verbindungen mit Fall (rot) und listet die Fälle durchsuchbar.
+ let RF=null,rfMap=new Map(),rechtAn=false;const ROT=0xe0393e;
+ const rfKey=k=>k.art==='beziehung'?'b:'+k.id:'l:'+(k.link.relationship_id||k.link.id);
+ const rfLink=l=>rfMap.has('l:'+(l.relationship_id||l.id));
+ const zeigtK=k=>an(k.f)&&(!rechtAn||rfMap.has(rfKey(k)));
+ fetch('/assets/rechtsfaelle.json').then(r=>r.ok?r.json():null).then(d=>{if(!d)return;RF=d;for(const f of d.faelle){const key=(f.verbindung_art==='link'?'l:':'b:')+f.verbindung;if(!rfMap.has(key))rfMap.set(key,[]);rfMap.get(key).push(f);}vf?.zeichne();}).catch(()=>{});
  const farbe=f=>ROH.get(f.rohstoff)?.c??0xd9e5ed;
  function sammeln(){
   const atlas=getAtlas(),layer=atlas?.layer;
@@ -101,16 +108,16 @@ export function attachGesamt({engine,sites,getAtlas,toAtlas,host}){
   kanten=[...beziehungen,...links];
  }
  function zeichnen(){
-  const sicht=kanten.filter(k=>an(k.f));
+  const sicht=kanten.filter(zeigtK);
   const atlas=aktiv?getAtlas():null;
-  if(atlas){const erlaubt=new Map(kanten.filter(k=>k.art==='beziehung').map(k=>[k.id,k.f]));atlas.setGesamt({zeigt:id=>{const f=erlaubt.get(id);return !f||an(f);},farbe:id=>{const f=erlaubt.get(id);return f?farbe(f):null;}});}
-  if(aktiv)sites.setLinkFilter(l=>{const f=fraktionLink(l);return an(f)?farbe(f):null;});
+  if(atlas){const erlaubt=new Map(kanten.filter(k=>k.art==='beziehung').map(k=>[k.id,k.f]));atlas.setGesamt({zeigt:id=>{if(rechtAn&&!rfMap.has('b:'+id))return false;const f=erlaubt.get(id);return !f||an(f);},farbe:id=>{if(rechtAn&&rfMap.has('b:'+id))return ROT;const f=erlaubt.get(id);return f?farbe(f):null;}});}
+  if(aktiv)sites.setLinkFilter(l=>{if(rechtAn&&!rfLink(l))return null;const f=fraktionLink(l);return an(f)?(rechtAn?ROT:farbe(f)):null;});
   panel.querySelector('#gesamt-zahl').textContent=aktiv?`${num(sicht.length)} von ${num(kanten.length)} Verbindungen sichtbar`:'Gesamtvernetzung aus: Klick auf eine VF schaltet sie ein.';
-  panel.dataset.sichtbar=String(sicht.length);panel.dataset.gesamt=String(kanten.length);
+  panel.dataset.sichtbar=String(sicht.length);panel.dataset.gesamt=String(kanten.length);panel.dataset.recht=rechtAn?'an':'aus';
  }
  function tafel(){
   if(vf)return vf.zeichne();
-  panel.innerHTML='<div id="vf-legende"></div><p class="gesamt-zahl" id="gesamt-zahl"></p>'+
+  panel.innerHTML='<div id="vf-legende"></div><div class="gesamt-fall" id="gesamt-fall" aria-live="polite" hidden></div><p class="gesamt-zahl" id="gesamt-zahl"></p>'+
    '<p class="gesamt-hinweis">Alle Verbindungen, die der Hauptatlas zeichnet: Atlas-Beziehungen und Fachatlas-Verbindungen. Nur belegte Einträge, keine Annahmen. Farbe = Rohstoff; Evidenz und Prüfstatus wie in der Quelle geführt. Kettenstufe nach Art und Endpunkten, Region = Kontinent des Startpunkts (Regeln in analysis/GESAMTVERNETZUNG.md).</p>';
   vf=vfLegende(panel.querySelector('#vf-legende'),{
    zu:matchMedia('(max-width: 760px)').matches,
@@ -119,13 +126,22 @@ export function attachGesamt({engine,sites,getAtlas,toAtlas,host}){
     return GRUPPEN.map(([g,titel])=>({id:g,titel,items:ordnung[g].filter(w=>z[g].get(w)).map(w=>({id:w,name:w,zahl:z[g].get(w),farbe:g==='rohstoff'?'#'+farbe({rohstoff:w}).toString(16).padStart(6,'0'):'#7f93a8'}))}));},
    istAn:(g,w)=>!aktiv||!off[g].has(w),
    schalte:ae=>{if(!aktiv)setze(true);for(const [g,w,on] of ae){if(on)off[g].delete(w);else off[g].add(w);}zeichnen();},
-   fokus:()=>engine.home?.()});
+   fokus:()=>engine.home?.(),
+   recht:{faelle:()=>{if(!aktiv)return [];const out=[];for(const k of kanten)if(an(k.f))for(const f of rfMap.get(rfKey(k))||[])out.push({id:f.id,titel:f.titel,status:f.status,art:f.art,norm:f.norm,such:[f.thema,f.von_land,f.nach_land,f.material,f.hs,f.id].join(' ')});return out;},
+    gesamt:()=>RF?RF.faelle.length:0,an:()=>rechtAn,
+    setze:on=>{if(on&&!aktiv)setze(true);rechtAn=on;if(!on)fallZeigen(null);zeichnen();},
+    waehle:id=>{const f=RF?.faelle.find(x=>x.id===id);if(!f)return;fallZeigen(f);fallBox()?.scrollIntoView?.({block:'nearest'});if(f.verbindung_art!=='link'&&!matchMedia('(max-width: 760px)').matches)getAtlas()?.select(f.verbindung);}}});
+ }
+ const fallBox=()=>panel.querySelector('#gesamt-fall');
+ function fallZeigen(f){const b=fallBox();if(!b)return;if(!f){b.hidden=true;b.innerHTML='';return;}const e=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  b.hidden=false;b.dataset.fall=f.id;b.innerHTML='<strong>§ '+e(f.titel)+'</strong><p><b>'+e(f.status)+'</b> · '+e(f.art)+' · '+e(f.thema)+'</p><p><b>Rechtsnorm:</b> '+e(f.norm)+'</p><p>'+e(f.befund)+'</p><p><b>Offen:</b> '+e(f.offen)+'</p><ul>'+
+   f.quellen.map(q=>'<li><a href="'+e(q.url)+'" target="_blank" rel="noopener">'+e(q.titel)+'</a> ('+(q.gelesen?'gelesen':'Normtext nicht gelesen')+')'+(q.zitat?'<br><q>'+e(q.zitat)+'</q>':'')+'</li>').join('')+'</ul><p>Prüfpunkt heißt: eine Regel berührt diese Verbindung. Ein Verstoß ist nicht belegt. Fall '+e(f.id)+', Stand '+e(RF.stand)+'.</p>';
  }
  function setze(on){
   aktiv=on;button.setAttribute('aria-pressed',String(on));panel.dataset.aktiv=String(on);document.body.classList.toggle('gesamt-aktiv',on);
   const url=new URL(location.href);if(on)url.searchParams.set('vernetzung','gesamt');else url.searchParams.delete('vernetzung');if(url.href!==location.href)history.replaceState(history.state,'',url);
   if(on){if(!getAtlas())toAtlas();getAtlas()?.showAll();sammeln();tafel();zeichnen();vf.zeichne();engine.setLayers?.({lines:true});sw.querySelector('[data-layer="lines"]')?.setAttribute('aria-pressed','true');}
-  else{getAtlas()?.setGesamt(null);sites.setLinkFilter(null);zeichnen();vf.zeichne();}
+  else{rechtAn=false;fallZeigen(null);getAtlas()?.setGesamt(null);sites.setLinkFilter(null);zeichnen();vf.zeichne();}
  }
  button.onclick=()=>setze(!aktiv);
  tafel();if(new URLSearchParams(location.search).get('vernetzung')==='gesamt')setze(true);else zeichnen();

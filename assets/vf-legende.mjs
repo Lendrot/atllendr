@@ -9,6 +9,10 @@
 //   fokus() fährt die Kamera auf die Gesamtansicht
 //   extra: optionales HTML unter den VF (z. B. Standort-Arten), rein beschreibend
 //   zu: true startet zugeklappt (nur Kopfzeile)
+//   recht: optional, Ebene "Rechtliche Fälle" (Eddie 2026-11-09): Knopf "§ Rechtliche Fälle" zeigt in der offenen VF nur die
+//     Verbindungen mit einem rechtlichen Fall und darunter eine durchsuchbare Liste dieser Fälle.
+//     {faelle() -> [{id, titel, status, art, norm, such}] (nur Fälle der gerade sichtbaren VF), gesamt() -> Zahl aller Fälle,
+//      an() -> bool, setze(bool), waehle(id)}. Status: Prüfpunkt, belegt, widerlegt (nie "Verstoß" ohne gelesene fremde Quelle).
 const STIL = `.vf{display:flex;flex-direction:column;gap:6px;pointer-events:auto;font-size:12.5px;line-height:1.3;color:#1d3247}
 .vf-kopf{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
 .vf-kopf b{font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:#3e5a74;margin-right:auto}
@@ -40,7 +44,23 @@ const STIL = `.vf{display:flex;flex-direction:column;gap:6px;pointer-events:auto
 .vf-extra{display:flex;flex-wrap:wrap;gap:4px 12px;color:#3e5a74}
 .vf-extra:empty{display:none}
 .vf-zu .vf-kopf{flex-wrap:nowrap}.vf-zu .vf-kopf b{margin-right:4px}
-.vf-zu .vf-liste,.vf-zu .vf-menue,.vf-zu .vf-extra,.vf-zu [data-vf=menue],.vf-zu [data-vf=alle]{display:none}`;
+.vf-zu .vf-liste,.vf-zu .vf-menue,.vf-zu .vf-extra,.vf-zu [data-vf=menue],.vf-zu [data-vf=alle]{display:none}
+.vf-recht{display:flex;flex-direction:column;gap:4px;border-top:1px solid #dbe5ee;padding-top:6px}
+.vf-recht-kopf{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.vf-recht [data-vf=recht][aria-pressed=true]{background:#8a1c1c;color:#fff;border-color:#8a1c1c}
+.vf-recht [data-vf=recht]:disabled{opacity:.5;cursor:default}
+.vf-recht [data-vf=recht] small{font-weight:400;margin-left:4px}
+.vf-recht input{font:inherit;border:1px solid #c9d8e6;border-radius:8px;padding:4px 8px;min-height:30px;width:100%;box-sizing:border-box;color:#1d3247;background:#fff}
+.vf-recht input:focus-visible{outline:2px solid #1378ba;outline-offset:1px}
+.vf-recht ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:3px;max-height:var(--vf-hoehe,30vh);overflow:auto;overscroll-behavior:contain}
+.vf-fall{display:flex;flex-direction:column;align-items:flex-start;gap:1px;width:100%;border:1px solid #c9d8e6;background:#fff;border-radius:8px;padding:4px 8px;color:#1d3247;text-align:left}
+.vf-fall:hover,.vf-fall[aria-current=true]{border-color:#8a1c1c;background:#fdf3f3}
+.vf-fall:focus-visible{outline:2px solid #1378ba;outline-offset:1px}
+.vf-fall small{color:#5b7690}
+.vf-st{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;border-radius:4px;padding:0 5px;margin-right:4px;background:#fff3cd;color:#7a5200}
+.vf-st[data-st=belegt]{background:#f8d7da;color:#8a1c1c}.vf-st[data-st=widerlegt]{background:#e2e8ee;color:#3e5a74}
+.vf-recht p{margin:0;color:#5b7690;font-size:11.5px}
+.vf-zu .vf-recht{display:none}`;
 
 const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
 const zahl = n => n == null ? '' : '<small>' + Number(n).toLocaleString('de-DE') + '</small>';
@@ -52,8 +72,25 @@ export function vfLegende(el, opt) {
   // Offen, außer der Atlas wünscht zugeklappt (opt.zu, z. B. auf dem Handy über dem Globus); zuklappen per Knopf.
   let zu = !!opt.zu;
   const alle = () => opt.gruppen().filter(g => g.items.length);
+  const R = opt.recht || null;
+  let suche = '', gewaehlt = null;
+  function fallListe() {
+    const fs = R.faelle(), q = suche.trim().toLowerCase().split(/\s+/).filter(Boolean);
+    const treffer = fs.filter(f => { const t = (f.titel + ' ' + f.status + ' ' + f.art + ' ' + f.norm + ' ' + (f.such || '')).toLowerCase(); return q.every(w => t.includes(w)); });
+    return '<p data-vf-recht-zahl="' + treffer.length + '">' + treffer.length + ' von ' + fs.length + ' Fällen in der offenen VF' + (q.length ? ' (Suche)' : '') +
+      '. Prüfpunkt = Regel berührt, kein Verstoß belegt.</p><ul aria-label="Rechtliche Fälle">' + treffer.slice(0, 300).map(f => '<li><button type="button" class="vf-fall" data-fall="' + esc(f.id) + '"' +
+        (f.id === gewaehlt ? ' aria-current="true"' : '') + '><span><b class="vf-st" data-st="' + esc(f.status) + '">' + esc(f.status) + '</b>' + esc(f.titel) + '</span><small>' + esc(f.art) + ' · ' + esc(f.norm) + '</small></button></li>').join('') +
+      (treffer.length > 300 ? '<li><small>… und ' + (treffer.length - 300) + ' weitere, Suche verfeinern.</small></li>' : '') + '</ul>';
+  }
+  function rechtHtml() {
+    if (!R) return '';
+    const an = R.an(), n = an ? R.faelle().length : R.gesamt();
+    return '<div class="vf-recht"><div class="vf-recht-kopf"><button type="button" class="vf-knopf" data-vf="recht" aria-pressed="' + an + '"' + (!an && !n ? ' disabled' : '') + ' title="In der offenen VF nur Verbindungen mit einem rechtlichen Fall zeigen">§ Rechtliche Fälle<small>' + n.toLocaleString('de-DE') + '</small></button></div>' +
+      (an ? '<input type="search" data-vf="recht-suche" placeholder="Fälle durchsuchen: Land, Rechtsnorm, Stoff …" aria-label="Rechtliche Fälle durchsuchen" value="' + esc(suche) + '"><div data-vf="recht-liste">' + fallListe() + '</div>' : '') + '</div>';
+  }
   function zeichne() {
-    const gs = alle(), rollen = [...el.querySelectorAll('.vf-liste,.vf-menue')].map(x => x.scrollTop);
+    const gs = alle(), rollen = [...el.querySelectorAll('.vf-liste,.vf-menue,.vf-recht ul')].map(x => x.scrollTop);
+    const fokusSuche = document.activeElement && document.activeElement.dataset && document.activeElement.dataset.vf === 'recht-suche';
     if (!gs.length) { el.innerHTML = ''; el.hidden = true; return; }
     el.hidden = false;
     let n = 0, an = 0;
@@ -71,8 +108,9 @@ export function vfLegende(el, opt) {
       '<div class="vf-menue" id="vf-menue"' + (menueOffen ? '' : ' hidden') + '><p>Weitere Vernetzungen hinzuschalten:</p>' +
       gs.map(g => '<fieldset data-gruppe="' + esc(g.id) + '"><legend>' + esc(g.titel) + '</legend>' + g.items.map(x => '<label><input type="checkbox" data-g="' + esc(g.id) + '" data-i="' + esc(x.id) + '"' +
         (opt.istAn(g.id, x.id) ? ' checked' : '') + '><i style="' + strich(x) + '"></i>' + esc(x.name) + zahl(x.zahl) + '</label>').join('') + '</fieldset>').join('') + '</div>' +
-      '<div class="vf-extra">' + (opt.extra ? opt.extra() : '') + '</div>';
-    el.querySelectorAll('.vf-liste,.vf-menue').forEach((x, i) => { x.scrollTop = rollen[i] || 0; });
+      rechtHtml() + '<div class="vf-extra">' + (opt.extra ? opt.extra() : '') + '</div>';
+    el.querySelectorAll('.vf-liste,.vf-menue,.vf-recht ul').forEach((x, i) => { x.scrollTop = rollen[i] || 0; });
+    if (fokusSuche) { const i = el.querySelector('[data-vf=recht-suche]'); if (i) { i.focus(); i.setSelectionRange(i.value.length, i.value.length); } }
   }
   // Klick auf eine VF: in ihrer Gruppe nur sie, alle anderen Gruppen ganz an (damit die ganze Fraktion sichtbar ist), dann Gesamtansicht.
   function nur(gid, iid) {
@@ -86,12 +124,18 @@ export function vfLegende(el, opt) {
     else if (b.dataset.vf === 'menue') { menueOffen = !menueOffen; zeichne(); }
     else if (b.dataset.vf === 'zu') { zu = !zu; if (zu) menueOffen = false; zeichne(); }
     else if (b.classList.contains('vf-item')) nur(b.dataset.g, b.dataset.i);
+    else if (b.dataset.vf === 'recht') { const on = !R.an(); if (!on) gewaehlt = null; R.setze(on); opt.fokus(); zeichne(); }
+    else if (b.classList.contains('vf-fall')) { gewaehlt = b.dataset.fall; R.waehle(gewaehlt); el.querySelectorAll('.vf-fall').forEach(x => x.toggleAttribute('aria-current', x === b)); if (b.isConnected) b.setAttribute('aria-current', 'true'); }
+  });
+  el.addEventListener('input', e => {
+    if (!R || e.target.dataset.vf !== 'recht-suche') return;
+    suche = e.target.value; const l = el.querySelector('[data-vf=recht-liste]'); if (l) l.innerHTML = fallListe();
   });
   el.addEventListener('change', e => {
-    const c = e.target; if (!c.matches('.vf-menue input')) return;
+    const c = e.target; if (!c.matches('.vf-menue input[type=checkbox]')) return;
     opt.schalte([[c.dataset.g, c.dataset.i, c.checked]]); opt.fokus(); zeichne();
     const neu = el.querySelector('.vf-menue input[data-g="' + CSS.escape(c.dataset.g) + '"][data-i="' + CSS.escape(c.dataset.i) + '"]'); if (neu) neu.focus();
   });
   zeichne();
-  return {zeichne, nur};
+  return {zeichne, nur, recht: id => { gewaehlt = id; zeichne(); }};
 }
