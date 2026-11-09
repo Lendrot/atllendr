@@ -46,3 +46,15 @@ body.globe-intro .continent-hub{background:#0b1730cc;color:#eef4ff;border-color:
 #app .space .touch-hint{color:#a9bbd6}
 .layer-switch{display:flex;gap:6px;margin-bottom:4px}.layer-switch button{display:flex;align-items:center;gap:6px;min-height:28px;padding:2px 10px;border-radius:999px;border:1px solid #c6d7e8;background:#fff;color:#112a44;font-size:12px;font-weight:600;white-space:nowrap}.layer-switch button[aria-pressed="false"]{background:transparent;color:#51677f;border-style:dashed;opacity:.8}.layer-switch .layer-dot{width:9px;height:9px;border-radius:50%;background:#155fc2}.layer-switch .layer-line{width:16px;height:4px;border-radius:2px;background:linear-gradient(90deg,#155fc233,#155fc2,#155fc233)}.layer-switch button[aria-pressed="false"] i{opacity:.35}
 @media(max-width:760px){#app .sites-toggle{max-width:calc(100% - 96px)}#app .sites-toggle .layer-switch{margin:0 4px 0 0;flex:none}#app .sites-toggle .layer-switch button{min-height:26px;padding:1px 8px}}
+/* Gesamtvernetzung (gesamtvernetzung.mjs, Eddie 2026-11-09): Fraktionstafel rechts, auf dem Handy als Blatt über der Ebenenleiste. */
+.layer-switch .layer-net{width:14px;height:10px;background:radial-gradient(circle at 2px 8px,#155fc2 2px,transparent 2.5px),radial-gradient(circle at 12px 2px,#155fc2 2px,transparent 2.5px),linear-gradient(150deg,transparent 42%,#155fc2 44%,#155fc2 56%,transparent 58%)}
+.gesamt-panel{position:absolute;right:44px;top:118px;z-index:6;width:290px;max-height:calc(100% - 240px);overflow:auto;overscroll-behavior:contain;background:#fffffff2;color:#24465f;border:1px solid #cbdde9;border-radius:10px;padding:10px 12px;font-size:12px;line-height:1.35;box-shadow:0 10px 30px #0b2a4a22;backdrop-filter:blur(10px)}
+.gesamt-panel[hidden]{display:none}
+.gesamt-kopf{display:flex;align-items:center;justify-content:space-between;gap:8px}.gesamt-kopf strong{font-size:13px;color:#112a44}.gesamt-kopf .icon-button{width:28px;height:28px;min-height:0}
+.gesamt-zahl{margin:2px 0 6px;font-weight:600;color:#155fc2}
+.gesamt-panel fieldset{border:0;border-top:1px solid #dbe7f1;margin:0;padding:6px 0 4px}.gesamt-panel legend{font-weight:600;color:#112a44;padding:0 4px 0 0}
+.gesamt-panel label{display:flex;align-items:center;gap:6px;min-height:24px;cursor:pointer}.gesamt-panel label span{flex:1;min-width:0}.gesamt-panel label small{color:#51677f;font-variant-numeric:tabular-nums;white-space:nowrap}
+.gesamt-panel label i{width:12px;height:4px;border-radius:2px;flex:none}.gesamt-panel input{margin:0;accent-color:#0b74ba}
+.gesamt-hinweis{margin:6px 0 0;color:#51677f;font-size:11px}
+body.gesamt-aktiv .space-top .direction-key{display:none}
+@media(max-width:760px){#app .gesamt-panel{left:8px;right:76px;top:auto;bottom:48px;width:auto;max-height:42%}}

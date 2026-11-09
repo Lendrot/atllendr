@@ -18,6 +18,11 @@ export async function attachSites(engine,host){
  const byIndex=data.datasets.map(d=>datasets.includes(d)?d:null);
  const records=data.rows.map(r=>{const dataset=byIndex[r[0]];if(!dataset)return null;const own=r.length>8?data.sources[r[8]]:null;return {dataset,kind:data.kinds[r[1]],lat:r[2],lon:r[3],name:r[4],id:r[5],country:r[6],status:data.statuses[r[7]],source:own?{label:own[0],url:own[1]}:null,color:Number.parseInt(dataset.color.slice(1),16),group:dataset.id};});
  const links=(data.links||[]).filter(l=>byIndex[l[0]]).map(l=>{const from=records[l[2]],to=records[l[3]];return {dataset:byIndex[l[0]],type:data.link_types[l[1]],from,to,id:l[4],evidence:data.evidences[l[5]],audit:data.audits[l[6]],source:l.length>7?{label:data.sources[l[7]][0],url:data.sources[l[7]][1]}:null,color:from.color};});
+ // Gesamtvernetzung (gesamtvernetzung.mjs): alle Verbindungen aller Fachatlanten, auch der Teilmengen (Lithium, Uran …),
+ // deren Punkte hier nicht doppelt gezeichnet werden; Endpunkte dafür aus den Zeilen gebaut.
+ const rowRecord=i=>{const r=data.rows[i],dataset=data.datasets[r[0]];return records[i]||{dataset,kind:data.kinds[r[1]],lat:r[2],lon:r[3],name:r[4],id:r[5],country:r[6],status:data.statuses[r[7]],source:r.length>8?{label:data.sources[r[8]][0],url:data.sources[r[8]][1]}:null,color:Number.parseInt(dataset.color.slice(1),16),group:dataset.id};};
+ const allLinks=fach?links:(data.links||[]).map(l=>{const dataset=data.datasets[l[0]],from=rowRecord(l[2]),to=rowRecord(l[3]);return {dataset,type:data.link_types[l[1]],from,to,id:l[4],evidence:data.evidences[l[5]],audit:data.audits[l[6]],source:l.length>7?{label:data.sources[l[7]][0],url:data.sources[l[7]][1]}:null,color:from.color};});
+ let linkFilter=null;
  const notDrawn=id=>Object.values(data.counts.links_not_placed?.[id]||{}).reduce((a,b)=>a+b,0);
  const panel=document.createElement('div');panel.className='sites-toggle';panel.setAttribute('role','group');panel.setAttribute('aria-label','Standorte der Fachatlanten');
  // Zwei Ebenen (Eddie 2026-11-08): Standorte (Punkte) und Verbindungen (Bänder), jede einzeln schaltbar.
@@ -30,7 +35,7 @@ export async function attachSites(engine,host){
  document.body.append(dialog);dialog.querySelector('#sites-dialog-close').onclick=()=>dialog.close();
  function apply(){
   engine.setSites(records.filter(r=>r&&state[r.dataset.id]));
-  engine.setSiteLinks?.(links.filter(l=>state[l.dataset.id]));
+  engine.setSiteLinks?.(linkFilter?allLinks.flatMap(l=>{const c=linkFilter(l);return c==null?[]:[{...l,color:c}];}):links.filter(l=>state[l.dataset.id]));
   const url=new URL(location.href),on=datasets.filter(d=>state[d.id]).map(d=>d.id);
   if(on.length===datasets.length)url.searchParams.delete('sites');else url.searchParams.set('sites',on.join(','));
   if(url.href!==location.href)history.replaceState(history.state,'',url);
@@ -54,5 +59,5 @@ export async function attachSites(engine,host){
   if(!dialog.open)dialog.showModal();
  }
  apply();
- return {open,openLinks,counts:data.counts};
+ return {open,openLinks,counts:data.counts,allLinks,setLinkFilter:fn=>{linkFilter=fn;apply();}};
 }
