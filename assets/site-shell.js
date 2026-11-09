@@ -241,6 +241,82 @@
     }).observe(document.body, {childList: true, subtree: true, characterData: true});
     window.addEventListener('load', function () { einbauen(); });
   }
+  // Bewegung (Eddie 2026-11-08, Grundsätze aus Lendrot/ClaudeAnimationBase): Karten blenden versetzt ein, sobald sie ins Bild
+  // kommen, klickbare Karten heben sich beim Überfahren, Ladebalken beim Seitenwechsel. Nur Anzeige, keine Daten.
+  // Aus bei reduzierter Bewegung, in automatisierten Tests (navigator.webdriver) und mit ?bewegung=0; ?bewegung=1 erzwingt.
+  var KARTEN = '.card,.kpi,.we-kpi,.metric,.stufe,.panel,.risk-card,.entity-card,.india-card,.india-company,.finding,.mk-stage,.deal-item,.continent-hub-card';
+  var HEBEN = 'a.card,button.entity-card,button.deal-item,button.india-card,a.kpi,a.panel';
+  function bewegungAn() {
+    var q = /[?&]bewegung=([01])/.exec(location.search);
+    if (q) return q[1] === '1';
+    if (navigator.webdriver) return false;
+    return !(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
+  }
+  function bewegung() {
+    var an = bewegungAn();
+    var html = document.documentElement;
+    // Seitenwechsel per View Transition: in Tests und bei ?bewegung=0 überspringen, damit Bildschirmfotos stabil bleiben
+    ['pageswap', 'pagereveal'].forEach(function (t) {
+      window.addEventListener(t, function (e) { var v = e.viewTransition; if (!v || an) return;
+        // skipTransition() verwirft die Versprechen; abfangen, sonst meldet die Seite einen Fehler
+        [v.ready, v.finished, v.updateCallbackDone].forEach(function (p) { if (p) p.catch(function () {}); });
+        v.skipTransition(); });
+    });
+    if (!an) return;
+    html.classList.add('ss-bewegt');
+    // Ladebalken: vom Klick bis die nächste Seite steht
+    document.addEventListener('click', function (e) {
+      if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      var a = e.target.closest && e.target.closest('a[href]');
+      if (!a || (a.target && a.target !== '_self') || a.hasAttribute('download')) return;
+      var u = new URL(a.href, location.href);
+      if (u.origin !== location.origin || (u.pathname === location.pathname && u.search === location.search)) return;
+      if (/\.(json|csv|xlsx|pdf|zip|sqlite)$/i.test(u.pathname)) return;
+      html.classList.add('ss-laedt');
+    });
+    window.addEventListener('pageshow', function () { html.classList.remove('ss-laedt'); });
+    if (!('IntersectionObserver' in window)) return;
+    var welle = [], welleTimer = null;
+    var io = new IntersectionObserver(function (eintraege) {
+      eintraege.forEach(function (x) { if (x.isIntersecting) { io.unobserve(x.target); welle.push(x.target); } });
+      if (welleTimer || !welle.length) return;
+      welleTimer = requestAnimationFrame(function () {
+        welleTimer = null;
+        var liste = welle; welle = [];
+        // Lesereihenfolge: oben vor unten, links vor rechts; versetzt, nie alles gleichzeitig
+        liste.sort(function (a, b) { var ra = a.getBoundingClientRect(), rb = b.getBoundingClientRect(); return (ra.top - rb.top) || (ra.left - rb.left); });
+        liste.forEach(function (n, i) { n.style.setProperty('--ss-verzug', Math.min(i, 8) * 55 + 'ms'); n.classList.add('ss-da'); });
+        setTimeout(function () { liste.forEach(function (n) { n.classList.remove('ss-einblenden', 'ss-da'); n.style.removeProperty('--ss-verzug'); }); }, 1300);
+      });
+    }, {rootMargin: '0px 0px -24px 0px'});
+    function geeignet(n) {
+      if (n.closest('[data-site-shell],dialog,[role=dialog]') || n.querySelector('canvas')) return false;
+      var s = getComputedStyle(n);
+      return s.position !== 'fixed' && s.position !== 'absolute' && s.display !== 'none';
+    }
+    var hoehe = window.innerHeight;
+    function anmelden(wurzel, neu) {
+      if (wurzel.nodeType !== 1) return;
+      var liste = wurzel.matches(KARTEN) ? [wurzel] : [];
+      Array.prototype.push.apply(liste, wurzel.querySelectorAll(KARTEN));
+      liste.forEach(function (n) {
+        if (n.hasAttribute('data-ss-gesehen')) return;
+        n.setAttribute('data-ss-gesehen', '');
+        if (n.matches(HEBEN)) n.classList.add('ss-hebt');
+        if (!geeignet(n)) return;
+        if (n.parentElement && n.parentElement.closest('.ss-einblenden')) return; // verschachtelt: die äußere Karte trägt die Bewegung
+        // Schon sichtbare, bereits gezeichnete Inhalte nicht erneut verstecken (kein Flackern)
+        if (!neu && n.getBoundingClientRect().top < hoehe) return;
+        n.classList.add('ss-einblenden');
+        io.observe(n);
+      });
+    }
+    anmelden(document.body, false);
+    new MutationObserver(function (mut) {
+      mut.forEach(function (m) { Array.prototype.forEach.call(m.addedNodes, function (n) { if (n.nodeType === 1 && n.isConnected) anmelden(n, true); }); });
+    }).observe(document.body, {childList: true, subtree: true});
+  }
+  try { bewegung(); } catch { /* Bewegung ist Zierde, darf nie die Seite stören */ }
   window.SiteShell = {begriffe: BEGRIFFE};
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
 })();

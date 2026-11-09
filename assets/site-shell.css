@@ -47,3 +47,34 @@ code.ss-kennung{display:inline-block;padding:0 6px;border:1px solid #d8e5ef;bord
 @media (max-width:900px){main h1,main h2,main h3,main p,main li,main dd,main dt,main td,main th,article,.card,section p{overflow-wrap:anywhere}main pre{white-space:pre-wrap;overflow-wrap:anywhere}}
 .atlas-freigabe-hinweis{margin:6px 0 2px;font:400 12px/1.45 'DM Sans',Arial,sans-serif;color:#51677f}
 .atlas-freigabe-hinweis a{color:#0b5cab}
+/* Bewegung (Eddie 2026-11-08, Grundsätze aus Lendrot/ClaudeAnimationBase: Slow-in/Slow-out, Überschwingen beim Ankommen,
+   Antizipation beim Drücken, versetzt statt gleichzeitig, jeder Seitenwechsel bekommt einen Übergang). Nur Anzeige, keine Daten.
+   html.ss-bewegt setzt site-shell.js, nicht bei reduzierter Bewegung und nicht in automatisierten Tests. */
+:root{--ss-ease:cubic-bezier(.45,0,.55,1);--ss-ease-out:cubic-bezier(.33,1,.68,1);--ss-back-out:cubic-bezier(.34,1.56,.64,1);--ss-ease-in:cubic-bezier(.32,0,.67,0)}
+html.ss-bewegt header.ss-kopf nav.ss-menue a:before{content:'';position:absolute;left:11px;right:11px;bottom:0;height:3px;border-radius:3px 3px 0 0;background:#9fd3ea;transform:scaleX(0);transition:transform .28s var(--ss-ease-out)}
+html.ss-bewegt header.ss-kopf nav.ss-menue a:hover:before{transform:scaleX(1)}
+html.ss-bewegt header.ss-kopf nav.ss-menue a{transition:color .2s var(--ss-ease)}
+html.ss-bewegt header.ss-kopf .ss-marke i{transition:transform .45s var(--ss-back-out)}
+html.ss-bewegt header.ss-kopf .ss-marke:hover i{transform:rotate(-12deg) scale(1.06)}
+html.ss-bewegt nav.ss-unter a{transition:background-color .2s var(--ss-ease),color .2s var(--ss-ease)}
+html.ss-bewegt .ss-einblenden{opacity:0;transform:translateY(16px)}
+html.ss-bewegt .ss-einblenden.ss-da{opacity:1;transform:none;transition:opacity .5s var(--ss-ease-out),transform .6s var(--ss-back-out);transition-delay:var(--ss-verzug,0ms)}
+@media (hover:hover){
+html.ss-bewegt .ss-hebt{transition:transform .32s var(--ss-back-out),box-shadow .32s var(--ss-ease-out),border-color .2s var(--ss-ease)}
+html.ss-bewegt .ss-hebt:hover{transform:translateY(-3px);box-shadow:0 10px 26px #1c3b5a1f}
+html.ss-bewegt .ss-hebt:active{transform:translateY(0) scale(.985);transition-duration:.08s}
+}
+html.ss-laedt:before{content:'';position:fixed;left:0;top:0;height:3px;width:100%;z-index:2147483647;pointer-events:none;transform-origin:0 50%;
+  background:linear-gradient(90deg,#36bdd8,#1168d0,#36bdd8) 0 0/200% 100%;box-shadow:0 0 8px #1a8fd080;animation:ss-ladebalken 2.4s var(--ss-ease-out) forwards,ss-schimmer 1.1s linear infinite}
+@keyframes ss-ladebalken{0%{transform:scaleX(0)}12%{transform:scaleX(.28)}100%{transform:scaleX(.88)}}
+@keyframes ss-schimmer{to{background-position:-200% 0}}
+@media (prefers-reduced-motion:no-preference){
+@view-transition{navigation:auto}
+header.ss-kopf[data-site-shell]{view-transition-name:ss-kopf}
+::view-transition-group(ss-kopf){animation-duration:0s}
+::view-transition-old(root){animation:ss-raus .16s var(--ss-ease-in) both}
+::view-transition-new(root){animation:ss-rein .38s var(--ss-ease-out) .04s both}
+}
+@keyframes ss-raus{to{opacity:0;transform:translateY(-6px)}}
+@keyframes ss-rein{from{opacity:0;transform:translateY(10px)}}
+@media (prefers-reduced-motion:reduce){html.ss-laedt:before{animation:none;transform:scaleX(.6)}}
