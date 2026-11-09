@@ -9,7 +9,7 @@ import {currentFach,installFachSwitch} from './fachatlas.mjs';
 import {installEmbedControls} from './embed-controls.mjs';
 import {styleMaterialLayer} from './atlas-logic.mjs';
 import {attachSites} from './globe-sites.mjs';
-import {introWanted,prepareIntro,startIntro,installContinentHubs} from './globe-intro.mjs';
+import {introWanted,prepareIntro,startIntro,installContinentHubs,installEarthSpin} from './globe-intro.mjs';
 // Weltraum-Anflug beim Öffnen (Eddie 2026-11-08, globe-intro.mjs); Links mit Parametern starten direkt im Atlas.
 const spaceIntro=!currentFach()&&introWanted();if(spaceIntro)prepareIntro();
 let sitesView=null;
@@ -126,8 +126,8 @@ async function load(){const jobs=await Promise.allSettled([Promise.all(['/founda
  for(const [id,key] of [['region-filter','region'],['industry-filter','sector'],['status-filter','status'],['year-filter','year']]){const select=$(id);if([...select.options].some(o=>o.value===filter[key]))select.value=filter[key];else filter[key]=select.value;}$('company-search').value=filter.query;
  atlasView=createAtlasView({market:data,materials:materialData,atlas:atlasData,features:worldFeatures,locationData:jobs[0].value.locations,claimsData:jobs[0].value.claims,getEngine:()=>engine,clearSelection,revealCard});
  if(view==='companies')await loadCompanyPage();$('deal-sources').innerHTML=data.deals.map(d=>`<a href="${esc(d.sourceUrl)}" target="_blank" rel="noopener noreferrer"><span>${esc(data.entities[d.buyerId].name)} → ${esc(data.entities[d.targetId].name)}<small>${statusLabel(d)} · ${displayDate(d.date)}</small></span>${icon('external')}</a>`).join('');render(false);
- try{if(jobs[1].status!=='fulfilled')throw jobs[1].reason;engine=jobs[1].value.createGlobe($('globe'),{onDealClick:selectGlobeItem,onCompanyClick:companyClick,onSiteClick:records=>sitesView?.open(records),onSiteLinkClick:links=>sitesView?.openLinks(links),onNotice:notice,onError:notice,onRotation:rotationState,onLabels:labels,onHover:hover,onView:(d,center)=>{$('zoom-in').disabled=d<=101.51;$('zoom-out').disabled=d>=589.9;if(view==='atlas')atlasView?.onView(d,center);}});engine.setDeals(data.deals,data.entities);renderedLayer='deals';render();navigate();$('loading').hidden=true;
-  try{const space=document.querySelector('.space'),hubs=installContinentHubs(engine,space);if(spaceIntro)startIntro(engine,space,hubs);}catch(e){document.body.classList.remove('globe-intro');console.error(e);}
+ try{if(jobs[1].status!=='fulfilled')throw jobs[1].reason;engine=jobs[1].value.createGlobe($('globe'),{space:true,onDealClick:selectGlobeItem,onCompanyClick:companyClick,onSiteClick:records=>sitesView?.open(records),onSiteLinkClick:links=>sitesView?.openLinks(links),onNotice:notice,onError:notice,onRotation:rotationState,onLabels:labels,onHover:hover,onView:(d,center)=>{$('zoom-in').disabled=d<=101.51;$('zoom-out').disabled=d>=589.9;if(view==='atlas')atlasView?.onView(d,center);}});engine.setDeals(data.deals,data.entities);renderedLayer='deals';render();navigate();$('loading').hidden=true;
+  try{const space=document.querySelector('.space'),hubs=installContinentHubs(engine,space);installEarthSpin(engine,space);if(spaceIntro)startIntro(engine,space,hubs);}catch(e){document.body.classList.remove('globe-intro');console.error(e);}
   // Main globe shows every Fachatlas site (Eddie 2026-10-28); loaded after the globe so the first view is not delayed.
   attachSites(engine,document.querySelector('.space')).then(v=>{sitesView=v;}).catch(e=>{notice('Standorte der Fachatlanten konnten nicht geladen werden.');console.error(e);});}catch(e){document.body.classList.remove('globe-intro');$('loading').innerHTML='<strong>3D ist auf diesem Gerät nicht verfügbar.</strong><span>Alle Einträge bleiben über die Liste erreichbar.</span><a href="/deutschland/">Deutschlandkarte öffnen</a>';document.querySelectorAll('.globe-controls button').forEach(b=>b.disabled=true);}}
 await load();

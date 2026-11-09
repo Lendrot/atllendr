@@ -47,6 +47,25 @@ export function installContinentHubs(engine,space,{onPick}={}){
   return {layer,enable(on,intro=false){enabled=on;always=intro;place(engine.distance());}};
 }
 
+/** Die ganze Erde dreht sich von selbst wie die Erde (West nach Ost, Eddie 2026-11-08): nach 7 s ohne Eingabe, solange
+ *  die ganze Erde zu sehen ist (Startansicht oder weiter draußen) und nichts ausgewählt oder geöffnet ist. Jede Eingabe hält
+ *  sie an. Nicht bei reduzierter Bewegung und nicht in automatisierten Browsern (außer ?intro=1 / ?drehen=1). */
+export function installEarthSpin(engine,host){
+  const params=new URLSearchParams(location.search);
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  if(navigator.webdriver&&params.get('intro')!=='1'&&params.get('drehen')!=='1')return;
+  let timer=0;
+  const idle=()=>{
+    const whole=engine.distance()>=engine.homeDistance()*.97,busy=document.querySelector('dialog[open]')||document.querySelector('.has-selection')||document.hidden;
+    if(whole&&!busy&&!engine.isRotating())engine.startRotation();
+    arm();
+  };
+  const arm=()=>{clearTimeout(timer);timer=setTimeout(idle,7000);};
+  for(const type of ['pointerdown','wheel','keydown','touchstart'])host.addEventListener(type,arm,{passive:true,capture:true});
+  document.addEventListener('keydown',arm,{passive:true});
+  arm();
+}
+
 /** Call before the globe exists: the space goes full screen at once, so the atlas never flashes up first. */
 export function prepareIntro(){document.body.classList.add('globe-intro');}
 

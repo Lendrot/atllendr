@@ -59,9 +59,12 @@ export class GlobeNavigation {
   }
   listen(type,fn,options){this.canvas.addEventListener(type,fn,options);this.listeners.push([type,fn,options]);}
   update(dt=0){
-    if(this.autoRotate&&!this.points.size){const q=new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0,1,0),dt*.012);this.camera.position.applyQuaternion(q);this.camera.up.applyQuaternion(q);}
+    // Turns like the Earth (Eddie 2026-11-08): west to east, so continents move from left to right; the camera
+    // circles westward. About one turn in 2 min at the whole-Earth view, slower close to the ground.
+    if(this.autoRotate&&!this.points.size){const q=new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0,1,0),-dt*this.spinRate());this.camera.position.applyQuaternion(q);this.camera.up.applyQuaternion(q);}
     this.camera.lookAt(origin);this.camera.updateMatrixWorld();
   }
+  spinRate(){return .05*THREE.MathUtils.clamp((this.camera.position.length()-100)/250,.3,1.6);}
   hit(point){
     const r=this.canvas.getBoundingClientRect();
     if(!r.width||!r.height)return null;

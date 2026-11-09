@@ -20,7 +20,8 @@ export async function attachSites(engine,host){
  const links=(data.links||[]).filter(l=>byIndex[l[0]]).map(l=>{const from=records[l[2]],to=records[l[3]];return {dataset:byIndex[l[0]],type:data.link_types[l[1]],from,to,id:l[4],evidence:data.evidences[l[5]],audit:data.audits[l[6]],source:l.length>7?{label:data.sources[l[7]][0],url:data.sources[l[7]][1]}:null,color:from.color};});
  const notDrawn=id=>Object.values(data.counts.links_not_placed?.[id]||{}).reduce((a,b)=>a+b,0);
  const panel=document.createElement('div');panel.className='sites-toggle';panel.setAttribute('role','group');panel.setAttribute('aria-label','Standorte der Fachatlanten');
- panel.innerHTML=`<strong>${fach?'Standorte im Fachatlas '+esc(fach.label):'Standorte der Fachatlanten'}</strong>`+datasets.map(d=>{const placed=data.counts.placed[d.id],missing=Object.values(data.counts.not_placed[d.id]).reduce((a,b)=>a+b,0);
+ // Zwei Ebenen (Eddie 2026-11-08): Standorte (Punkte) und Verbindungen (Bänder), jede einzeln schaltbar.
+ panel.innerHTML=`<div class="layer-switch" role="group" aria-label="Ebenen"><button type="button" data-layer="points" aria-pressed="true"><i class="layer-dot"></i>Standorte</button><button type="button" data-layer="lines" aria-pressed="true"><i class="layer-line"></i>Verbindungen</button></div>`+`<strong>${fach?'Standorte im Fachatlas '+esc(fach.label):'Standorte der Fachatlanten'}</strong>`+datasets.map(d=>{const placed=data.counts.placed[d.id],missing=Object.values(data.counts.not_placed[d.id]).reduce((a,b)=>a+b,0);
   const drawn=data.counts.links_placed?.[d.id]||0,open=notDrawn(d.id);
   return `<label title="${esc(d.source)} · ${esc(d.evidence)}${missing?` · ${num(missing)} ohne Koordinate (nur im Fachatlas)`:''}${drawn||open?` · ${num(drawn)} Verbindungen gezeichnet${open?`, ${num(open)} ohne Koordinate eines Endpunkts (nur im Fachatlas)`:''}`:''}"><input type="checkbox" data-site-dataset="${esc(d.id)}"${state[d.id]?' checked':''}><span class="checkbox-ui"></span><i style="background:${esc(d.color)}"></i><span class="site-long">${esc(d.label)}</span><span class="site-short">${esc(d.short||d.label)}</span> <b>${num(placed)}</b></label>`;}).join('');
  host.append(panel);
@@ -34,6 +35,7 @@ export async function attachSites(engine,host){
   if(on.length===datasets.length)url.searchParams.delete('sites');else url.searchParams.set('sites',on.join(','));
   if(url.href!==location.href)history.replaceState(history.state,'',url);
  }
+ panel.querySelectorAll('[data-layer]').forEach(button=>button.onclick=()=>{const on=button.getAttribute('aria-pressed')!=='true';button.setAttribute('aria-pressed',String(on));engine.setLayers?.({[button.dataset.layer]:on});});
  panel.querySelectorAll('[data-site-dataset]').forEach(input=>input.onchange=()=>{state[input.dataset.siteDataset]=input.checked;apply();});
  function row(r){
   const link=r.dataset.detail?`<a href="${esc(r.dataset.detail+encodeURIComponent(r.id))}">Im Fachatlas öffnen</a>`:`<a href="${esc(r.dataset.fachatlas)}">Fachatlas ${esc(r.dataset.label)}</a>`;

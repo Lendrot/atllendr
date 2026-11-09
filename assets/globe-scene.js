@@ -21,7 +21,7 @@ export function createGlobe(host,callbacks={}){
   const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
   const quality=performanceProfile();
   const scene=new THREE.Scene();
-  const camera=new THREE.PerspectiveCamera(42,1,.1,4600);
+  const camera=new THREE.PerspectiveCamera(42,1,.1,5200);
   camera.position.copy(vec(geoVector(25,-35,310)));
   const renderer=new THREE.WebGLRenderer({antialias:quality.antialias,alpha:true,powerPreference:'default'});
   let pixelRatio=Math.min(devicePixelRatio,quality.maxPixelRatio);
@@ -79,12 +79,57 @@ export function createGlobe(host,callbacks={}){
     transparent:true,depthWrite:false,blending:THREE.AdditiveBlending
   });
   scene.add(new THREE.Mesh(new THREE.SphereGeometry(102,80,56),atmosphereMaterial));
-  const stars=[];let seed=731;
+  // Weltraum: the sky is one group (stars, with callbacks.space also Milky Way and nebulae) that turns against the
+  // Earth's rotation while the Earth spins (Eddie 2026-11-08). Without callbacks.space the plain star dots as before.
+  const sky=new THREE.Group();sky.matrixAutoUpdate=false;scene.add(sky);
+  let seed=731;
   const rand=()=>{seed=(seed*1664525+1013904223)>>>0;return seed/4294967296;};
-  for(let i=0;i<1300;i++){const a=rand()*Math.PI*2,y=rand()*2-1,s=Math.sqrt(1-y*y),r=2600+rand()*450;stars.push(r*s*Math.cos(a),r*y,r*s*Math.sin(a));}
-  const starGeometry=new THREE.BufferGeometry();starGeometry.setAttribute('position',new THREE.Float32BufferAttribute(stars,3));
-  const starMaterial=new THREE.PointsMaterial({color:0xd5e0fa,size:1.15,sizeAttenuation:false,transparent:true,opacity:.53,depthWrite:false});
-  const starPoints=new THREE.Points(starGeometry,starMaterial);starPoints.matrixAutoUpdate=false;scene.add(starPoints);
+  const skyMaterials=[];
+  if(callbacks.space){
+    // Milky Way plane (tilted like seen from the Earth) and ~5,000 stars: half evenly spread, half gathered in the band.
+    const normal=new THREE.Vector3(.36,.86,.36).normalize(),e1=new THREE.Vector3(1,0,0).cross(normal).normalize(),e2=normal.clone().cross(e1);
+    const gauss=()=>{let s=0;for(let k=0;k<4;k++)s+=rand();return (s-2)/.58;};
+    const band=(spread,out)=>{const a=rand()*Math.PI*2,e=gauss()*spread;return out.copy(e1).multiplyScalar(Math.cos(a)*Math.cos(e)).addScaledVector(e2,Math.sin(a)*Math.cos(e)).addScaledVector(normal,Math.sin(e));};
+    const n=5200,pos=new Float32Array(n*3),col=new Float32Array(n*3),size=new Float32Array(n),v=new THREE.Vector3();
+    const tints=[[.82,.89,1],[.82,.89,1],[.82,.89,1],[1,.9,.76],[.66,.78,1],[1,.97,.9]];
+    for(let i=0;i<n;i++){
+      if(i<2500){const y=rand()*2-1,a=rand()*Math.PI*2,s=Math.sqrt(1-y*y);v.set(s*Math.cos(a),y,s*Math.sin(a));}else band(.11,v);
+      v.multiplyScalar(2600+rand()*450).toArray(pos,i*3);
+      const t=tints[Math.floor(rand()*tints.length)],b=.55+.45*Math.pow(rand(),1.4);
+      col.set([t[0]*b,t[1]*b,t[2]*b],i*3);
+      size[i]=i<2500?2+5.5*Math.pow(rand(),6):1.6+2.4*Math.pow(rand(),4);
+    }
+    const geometry=new THREE.BufferGeometry();geometry.setAttribute('position',new THREE.BufferAttribute(pos,3));geometry.setAttribute('aColor',new THREE.BufferAttribute(col,3));geometry.setAttribute('aSize',new THREE.BufferAttribute(size,1));
+    const material=new THREE.ShaderMaterial({uniforms:{uPixel:{value:1},uTime:{value:0}},transparent:true,depthWrite:false,blending:THREE.AdditiveBlending,
+      vertexShader:'attribute float aSize;attribute vec3 aColor;uniform float uPixel;uniform float uTime;varying vec3 vColor;void main(){vec4 mv=modelViewMatrix*vec4(position,1.0);gl_Position=projectionMatrix*mv;float tw=.78+.22*sin(uTime*1.7+position.x*.31+position.z*.17);vColor=aColor*tw;gl_PointSize=aSize*uPixel;}',
+      fragmentShader:'varying vec3 vColor;void main(){float d=length(gl_PointCoord-.5);float core=smoothstep(.5,.12,d);float glow=exp(-d*d*14.0)*.45;gl_FragColor=vec4(vColor,max(core,glow));}'});
+    skyMaterials.push(material);sky.add(new THREE.Points(geometry,material));
+    // Nebulae and the glow of the Milky Way: soft blobs painted once into a texture on a far sphere (after first paint).
+    const paint=()=>{
+      if(disposed)return;
+      const W=1024,H=512,canvas=document.createElement('canvas');canvas.width=W;canvas.height=H;const g=canvas.getContext('2d');
+      const blob=(dir,radius,color,alpha)=>{
+        const theta=Math.acos(THREE.MathUtils.clamp(dir.y,-1,1)),phi=(Math.atan2(dir.z,-dir.x)+Math.PI*2)%(Math.PI*2);
+        const x=phi/(Math.PI*2)*W,y=theta/Math.PI*H,stretch=1/Math.max(.25,Math.sin(theta));
+        for(const dx of [-W,0,W]){g.save();g.translate(x+dx,y);g.scale(stretch,1);const grad=g.createRadialGradient(0,0,0,0,0,radius);
+          grad.addColorStop(0,`rgba(${color},${alpha})`);grad.addColorStop(1,`rgba(${color},0)`);g.fillStyle=grad;g.fillRect(-radius,-radius,radius*2,radius*2);g.restore();}
+      };
+      const glow=['120,140,220','150,120,210','90,150,200','200,170,150'];
+      for(let i=0;i<320;i++)blob(band(.08,v),14+rand()*40,glow[Math.floor(rand()*glow.length)],.06+rand()*.08);
+      const clouds=[['150,70,190',.24],['50,130,210',.22],['190,80,120',.18],['70,170,180',.18],['120,90,220',.2]];
+      for(const [color,alpha] of clouds){const y=rand()*1.6-.8,a=rand()*Math.PI*2,s=Math.sqrt(1-y*y),dir=new THREE.Vector3(s*Math.cos(a),y,s*Math.sin(a));
+        for(let k=0;k<9;k++)blob(dir.clone().addScaledVector(new THREE.Vector3(rand()-.5,rand()-.5,rand()-.5),.12).normalize(),18+rand()*42,color,alpha*(.4+rand()*.6));}
+      const texture=new THREE.CanvasTexture(canvas);texture.colorSpace=THREE.SRGBColorSpace;
+      const nebula=new THREE.Mesh(new THREE.SphereGeometry(3400,48,24),new THREE.MeshBasicMaterial({map:texture,side:THREE.BackSide,transparent:true,depthWrite:false,blending:THREE.AdditiveBlending}));
+      nebula.renderOrder=-2;sky.add(nebula);invalidate();
+    };
+    (window.requestIdleCallback||(f=>setTimeout(f,200)))(paint,{timeout:2500});
+  }else{
+    const stars=[];
+    for(let i=0;i<1300;i++){const a=rand()*Math.PI*2,y=rand()*2-1,s=Math.sqrt(1-y*y),r=2600+rand()*450;stars.push(r*s*Math.cos(a),r*y,r*s*Math.sin(a));}
+    const starGeometry=new THREE.BufferGeometry();starGeometry.setAttribute('position',new THREE.Float32BufferAttribute(stars,3));
+    sky.add(new THREE.Points(starGeometry,new THREE.PointsMaterial({color:0xd5e0fa,size:1.15,sizeAttenuation:false,transparent:true,opacity:.53,depthWrite:false})));
+  }
   // Country borders are parsed and built in a Web Worker (globe-borders.mjs); main thread only if workers fail.
   fetch('/assets/world.json').then(r=>{if(!r.ok)throw new Error('world');return r.text();}).then(text=>new Promise(resolve=>{
     const main=()=>resolve(borderPositions(JSON.parse(text),100.08));
@@ -104,7 +149,7 @@ export function createGlobe(host,callbacks={}){
   let dirty=true,frame=0,onScreen=true,disposed=false;
   const wake=()=>{if(!frame&&!disposed)frame=requestAnimationFrame(animate);};
   const invalidate=()=>{dirty=true;wake();};
-  let companies=[],pointGroups=[],companyPoints=null,companiesVisible=true,lastClusterKey='',lastClusterTime=0,dealEntries=[],selected=null,flight=null,lastRender=0,lastFrame=0,paused=false,lastRenderKey='',lastScaleDistance=-1,markersDirty=false;
+  let companies=[],pointGroups=[],companyPoints=null,companiesVisible=true,lastClusterKey='',lastClusterTime=0,dealEntries=[],selected=null,flight=null,lastRender=0,lastFrame=0,paused=false,lastRenderKey='',lastScaleDistance=-1,layers={points:true,lines:true};
   const dealGroup=new THREE.Group();scene.add(dealGroup);
   const raycaster=new THREE.Raycaster(),pointer=new THREE.Vector2();
   const size={width:1,height:1};
@@ -133,61 +178,50 @@ export function createGlobe(host,callbacks={}){
     companyPoints=new THREE.Points(geometry,pointMaterial);
     companyPoints.visible=companiesVisible;scene.add(companyPoints);invalidate();
   }
-  // Relation markers (arrow heads, flow markers, end points, rings) share one InstancedMesh per geometry and opacity:
-  // one draw call per marker kind instead of one per object (before: seven objects per relation, ~1,265 draw calls).
-  const markerGeometry={
-    cone:new THREE.ConeGeometry(1.05,3.35,10),octa:new THREE.OctahedronGeometry(1.45,0),
-    flowSphere:new THREE.SphereGeometry(.43,8,6),flowBox:new THREE.BoxGeometry(.85,.85,.85),
-    dotSphere:new THREE.SphereGeometry(.85,12,8),dotBox:new THREE.BoxGeometry(1.25,1.25,1.25),
-    ring:new THREE.RingGeometry(1.35,1.65,28),ring4:new THREE.RingGeometry(1.35,1.65,4),wide:new THREE.RingGeometry(3.2,3.55,48)};
-  const markerLayers=new Map();let markers=[],markerCapacity=new Map(),selectionApplied=false,visualScale=1;
-  const markerMatrix=new THREE.Matrix4(),markerScale=new THREE.Vector3(),markerColor=new THREE.Color();
-  function markerLayer(geometry,wireframe,opacity){
-    const key=geometry+'|'+wireframe+'|'+opacity;let layer=markerLayers.get(key);
-    const capacity=markerCapacity.get(geometry)||1;
-    if(layer&&layer.capacity<capacity){dealGroup.remove(layer.mesh);layer.mesh.dispose();layer.mesh.material.dispose();layer=null;}
-    if(!layer){
-      const ring=geometry==='ring'||geometry==='ring4'||geometry==='wide',transparent=opacity<1||selectionApplied;
-      const material=new THREE.MeshBasicMaterial({wireframe,transparent,opacity,side:ring?THREE.DoubleSide:THREE.FrontSide,depthWrite:!ring});
-      const mesh=new THREE.InstancedMesh(markerGeometry[geometry],material,Math.max(1,capacity));mesh.frustumCulled=false;
-      layer={mesh,capacity:Math.max(1,capacity),items:[]};markerLayers.set(key,layer);dealGroup.add(mesh);
-    }
-    return layer;
+  // Verbindungen als Band (Eddie 2026-11-08: "nicht zwei Punkte verbinden, sondern die Verbindung sein"): every
+  // relation is one tapered band along its arc, without end-point markers; light pulses run along it in its direction
+  // (buyer -> target, origin -> destination). All bands of a set are one mesh and one draw call; the shader does the
+  // width (follows the zoom), dashes (open/pending, money), dimming on selection, filter visibility and the pulses.
+  // Picking still uses an invisible thin line per relation, so clicks and tooltips work as before.
+  const RIBBON_STEPS=48,pickMaterial=new THREE.LineBasicMaterial({visible:false}),ribbonUniforms={uTime:{value:0},uScale:{value:1}};
+  const ribbonVertex='attribute vec3 aSide;attribute float aT;attribute float aAcross;attribute vec3 aColor;attribute float aEntry;attribute float aStyle;attribute float aFlow;attribute float aVisible;attribute float aLen;'+
+    'uniform float uScale;uniform float uSelected;varying float vT;varying float vAcross;varying vec3 vColor;varying float vStyle;varying float vFlow;varying float vAlpha;varying float vLen;varying float vPhase;'+
+    'void main(){float sel=uSelected<0.0?0.0:(abs(aEntry-uSelected)<0.5?1.0:-1.0);float w=(.3+.7*sin(3.14159*aT))*uScale*(sel>.5?1.8:1.0);'+
+    'vT=aT;vAcross=aAcross;vColor=aColor;vStyle=aStyle;vFlow=aFlow;vLen=aLen;vPhase=fract(aEntry*.173);vAlpha=aVisible*(sel<-.5?.13:1.0);'+
+    'gl_Position=projectionMatrix*modelViewMatrix*vec4(position+aSide*aAcross*w,1.0);}';
+  const ribbonFragment='uniform float uTime;uniform float uFlowOn;uniform float uBase;varying float vT;varying float vAcross;varying vec3 vColor;varying float vStyle;varying float vFlow;varying float vAlpha;varying float vLen;varying float vPhase;'+
+    'void main(){if(vAlpha<.01)discard;float along=vT*vLen;'+
+    'if(vStyle>.5){float period=vStyle>2.5?.9:vStyle>1.5?2.6:2.2;if(mod(along,period)>period*(vStyle>2.5?.55:vStyle>1.5?.65:.55))discard;}'+
+    'float head=fract(vT*max(1.0,vLen/70.0)-uTime*.16+vPhase);float pulse=vFlow*uFlowOn*pow(head,10.0);'+
+    'float edge=1.0-smoothstep(.45,1.0,abs(vAcross));'+
+    'gl_FragColor=vec4(mix(vColor,vec3(1.0),pulse*.6),vAlpha*edge*(uBase+(1.0-uBase)*pulse));}';
+  function ribbonMesh(items){
+    // items: {points (RIBBON_STEPS+1 Vector3), color, style 0 solid | 1 dashed | 2 money, flow 0|1}
+    const n=items.length*(RIBBON_STEPS+1)*2,f3=()=>new Float32Array(n*3),f1=()=>new Float32Array(n);
+    const pos=f3(),side=f3(),color=f3(),t=f1(),across=f1(),entry=f1(),style=f1(),flow=f1(),visible=f1().fill(1),len=f1();
+    const index=new Uint32Array(items.length*RIBBON_STEPS*6),c=new THREE.Color(),tangent=new THREE.Vector3(),normal=new THREE.Vector3(),s=new THREE.Vector3();
+    let v=0,k=0;
+    items.forEach((item,e)=>{
+      const p=item.points;let length=0;for(let i=1;i<p.length;i++)length+=p[i].distanceTo(p[i-1]);
+      c.setHex(item.color,THREE.LinearSRGBColorSpace);item.start=v;item.count=p.length*2;
+      for(let i=0;i<p.length;i++){
+        tangent.subVectors(p[Math.min(i+1,p.length-1)],p[Math.max(i-1,0)]);normal.copy(p[i]).normalize();s.crossVectors(tangent,normal).normalize();
+        for(const a of [-1,1]){pos.set(p[i].toArray(),v*3);side.set(s.toArray(),v*3);c.toArray(color,v*3);t[v]=i/(p.length-1);across[v]=a;entry[v]=e;style[v]=item.style;flow[v]=item.flow;len[v]=length;v++;}
+        if(i)index.set([v-4,v-3,v-2,v-3,v-1,v-2],(k++)*6);
+      }
+    });
+    const geometry=new THREE.BufferGeometry();
+    for(const [name,array,size] of [['position',pos,3],['aSide',side,3],['aColor',color,3],['aT',t,1],['aAcross',across,1],['aEntry',entry,1],['aStyle',style,1],['aFlow',flow,1],['aVisible',visible,1],['aLen',len,1]])geometry.setAttribute(name,new THREE.BufferAttribute(array,size));
+    geometry.setIndex(new THREE.BufferAttribute(index,1));
+    const material=new THREE.ShaderMaterial({uniforms:{...ribbonUniforms,uSelected:{value:-1},uFlowOn:{value:reduced?0:1},uBase:{value:.62}},vertexShader:ribbonVertex,fragmentShader:ribbonFragment,transparent:true,depthWrite:false,side:THREE.DoubleSide});
+    const mesh=new THREE.Mesh(geometry,material);mesh.frustumCulled=false;mesh.raycast=()=>{};return mesh;
   }
-  // Writes every visible marker into its layer; cheap enough to run on each frame that animates flow markers.
-  function layoutMarkers(time){
-    for(const layer of markerLayers.values())layer.items=[];
-    for(const m of markers){
-      const e=m.entry;if(!e.visible)continue;
-      const active=e.deal.id===selected?.deal.id,dimmed=selected&&!active;
-      if(m.role==='flow'&&(e.deal.staticRelation||dimmed))continue;
-      if(m.role==='head'&&e.deal.staticRelation)continue;
-      const opacity=m.role==='flow'?1:selectionApplied?(dimmed?.22:1):m.opacity;
-      markerLayer(m.geometry,m.wireframe,opacity).items.push(m);
-    }
-    for(const layer of markerLayers.values()){
-      layer.items.forEach((m,i)=>{
-        if(m.role==='flow')m.position.copy(m.entry.curve.getPoint(reduced ? .6 : (time/8500+m.entry.index*.173)%1));
-        markerMatrix.compose(m.position,m.quaternion,markerScale.setScalar(visualScale));
-        layer.mesh.setMatrixAt(i,markerMatrix);layer.mesh.setColorAt(i,markerColor.set(m.color));
-      });
-      layer.flow=layer.items.some(m=>m.role==='flow');
-      layer.mesh.count=layer.items.length;layer.mesh.visible=layer.items.length>0;
-      layer.mesh.instanceMatrix.needsUpdate=true;if(layer.mesh.instanceColor)layer.mesh.instanceColor.needsUpdate=true;
-      layer.mesh.boundingSphere=null;
-    }
+  function ribbonVisibility(mesh,items,isVisible){
+    const attribute=mesh.geometry.attributes.aVisible;
+    for(const item of items)attribute.array.fill(isVisible(item)?1:0,item.start,item.start+item.count);
+    attribute.needsUpdate=true;
   }
-  function animateFlows(time){
-    for(const layer of markerLayers.values()){
-      if(!layer.flow)continue;
-      layer.items.forEach((m,i)=>{
-        if(m.role!=='flow')return;
-        m.position.copy(m.entry.curve.getPoint(reduced ? .6 : (time/8500+m.entry.index*.173)%1));
-        markerMatrix.compose(m.position,m.quaternion,markerScale.setScalar(visualScale));layer.mesh.setMatrixAt(i,markerMatrix);
-      });
-      layer.mesh.instanceMatrix.needsUpdate=true;layer.mesh.boundingSphere=null;
-    }
-  }
+  let dealRibbon=null,visualScale=1;
   // Site layer (assets/globe-sites.json, analysis/FACHATLANTEN.md): every site of every Fachatlas, ~40,000 points.
   // Positions are computed once into typed arrays; the cluster pass projects them with one matrix and reuses the buffers.
   // Display grouping only: every drawn point sits at an actual member's coordinate.
@@ -229,62 +263,45 @@ export function createGlobe(host,callbacks={}){
     invalidate();
   }
   // Fachatlas connections between two placed sites (schematic great-circle arcs): one LineSegments batch, one draw call.
-  const linkMaterial=new THREE.LineBasicMaterial({vertexColors:true,transparent:true,opacity:.8,depthWrite:false});
+  // Fachatlas connections between two placed sites: bands like the relations (ribbonMesh, one draw call); an invisible
+  // LineSegments batch of the same arcs stays for picking.
   const LINK_STEPS=32;
-  let siteLinks=null,siteLinkRecords=[];
+  let siteLinks=null,siteLinkRecords=[],siteRibbon=null;
   function setSiteLinks(records){
-    if(siteLinks){scene.remove(siteLinks);siteLinks.geometry.dispose();siteLinks=null;}
+    if(siteLinks){scene.remove(siteLinks);siteLinks.geometry.dispose();siteRibbon.geometry.dispose();siteRibbon.material.dispose();siteLinks=null;siteRibbon=null;}
     siteLinkRecords=records;if(!records.length){invalidate();return;}
-    const pos=new Float32Array(records.length*LINK_STEPS*6),color=new Float32Array(records.length*LINK_STEPS*6),c=new THREE.Color();
-    records.forEach((r,k)=>{
-      c.set(r.color??0x85caff);
-      for(let i=0;i<LINK_STEPS;i++){
-        const o=(k*LINK_STEPS+i)*6;pos.set(arcSample(r.from,r.to,i/LINK_STEPS,0,.55),o);pos.set(arcSample(r.from,r.to,(i+1)/LINK_STEPS,0,.55),o+3);
-        c.toArray(color,o);c.toArray(color,o+3);
-      }
+    const pos=new Float32Array(records.length*LINK_STEPS*6);
+    const items=records.map((r,k)=>{
+      const points=Array.from({length:RIBBON_STEPS+1},(_,i)=>vec(arcSample(r.from,r.to,i/RIBBON_STEPS,0,.55)));
+      for(let i=0;i<LINK_STEPS;i++){const o=(k*LINK_STEPS+i)*6;pos.set(arcSample(r.from,r.to,i/LINK_STEPS,0,.55),o);pos.set(arcSample(r.from,r.to,(i+1)/LINK_STEPS,0,.55),o+3);}
+      return {points,color:r.color??0x85caff,style:0,flow:1};
     });
-    const geometry=new THREE.BufferGeometry();geometry.setAttribute('position',new THREE.BufferAttribute(pos,3));geometry.setAttribute('color',new THREE.BufferAttribute(color,3));
-    siteLinks=new THREE.LineSegments(geometry,linkMaterial);siteLinks.visible=sitesVisible;scene.add(siteLinks);invalidate();
+    const geometry=new THREE.BufferGeometry();geometry.setAttribute('position',new THREE.BufferAttribute(pos,3));
+    siteLinks=new THREE.LineSegments(geometry,pickMaterial);siteLinks.visible=sitesVisible;
+    siteRibbon=ribbonMesh(items);siteLinks.add(siteRibbon);scene.add(siteLinks);invalidate();
   }
-  function filterDeals(ids){const allowed=new Set(ids);dealEntries.forEach(e=>{e.visible=allowed.has(e.deal.id);e.line.visible=e.visible;});markersDirty=true;invalidate();}
+  function filterDeals(ids){const allowed=new Set(ids);dealEntries.forEach(e=>{e.visible=allowed.has(e.deal.id);e.line.visible=e.visible;});if(dealRibbon)ribbonVisibility(dealRibbon,dealEntries,e=>e.visible);invalidate();}
   function setDeals(records,entities){
-    for(const entry of dealEntries){entry.line.geometry.dispose();entry.line.material.dispose();}
-    for(const layer of markerLayers.values()){layer.mesh.dispose();layer.mesh.material.dispose();}
-    markerLayers.clear();dealGroup.clear();dealEntries=[];markers=[];selected=null;
+    for(const entry of dealEntries)entry.line.geometry.dispose();
+    if(dealRibbon){dealRibbon.geometry.dispose();dealRibbon.material.dispose();dealRibbon=null;}
+    dealGroup.clear();dealEntries=[];selected=null;
     const corridors=new Map();
-    const facing=position=>new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0,0,1),position.clone().normalize());
     records.flatMap(deal=>(deal.buyerIds||[deal.buyerId]).map(buyerId=>({...deal,buyerId}))).forEach((deal,index)=>{
       const buyer=entities[deal.buyerId],target=entities[deal.targetId];
       if(!hasPoint(buyer)||!hasPoint(target))return;
-      const monetary=deal.area==='money';
       const key=[deal.buyerId,deal.targetId].join('|'),parallel=corridors.get(key)||0;corridors.set(key,parallel+1);
       const lift=(parallel%10)*1.35;
       const statusColor=deal.flowColor??statuses[deal.status]?.color??0xd6f391;
-      const points=Array.from({length:101},(_,i)=>vec(arcSample(buyer,target,i/100,lift,.55)));
-      const curve=new THREE.CatmullRomCurve3(points);
-      const lineMaterial=deal.flowKind
-        ? new THREE.LineDashedMaterial({color:statusColor,transparent:true,opacity:.9,depthWrite:false,dashSize:monetary?1.8:.5,gapSize:monetary?.9:.42})
-        : deal.status==='completed'
-          ? new THREE.LineBasicMaterial({color:statusColor,transparent:true,opacity:.7,depthWrite:false})
-          : new THREE.LineDashedMaterial({color:statusColor,transparent:true,opacity:.85,depthWrite:false,dashSize:['interest','intent','rumored','sale_process'].includes(deal.status)?.6:1.8,gapSize:1.0});
-      const line=new THREE.Line(new THREE.BufferGeometry().setFromPoints(points),lineMaterial);
-      line.computeLineDistances();line.userData.dealId=deal.id;
+      const points=Array.from({length:RIBBON_STEPS+1},(_,i)=>vec(arcSample(buyer,target,i/RIBBON_STEPS,lift,.55)));
+      const line=new THREE.Line(new THREE.BufferGeometry().setFromPoints(points),pickMaterial);line.userData.dealId=deal.id;
       dealGroup.add(line);
-      const entry={deal,buyer,target,curve,line,index,lift,visible:true};
-      const add=(role,geometry,position,quaternion,opacity=1,pickable=true,wireframe=false)=>markers.push({entry,role,geometry,position,quaternion,opacity,pickable,wireframe,color:statusColor});
-      add('head',deal.flowKind?'octa':'cone',curve.getPoint(.84),new THREE.Quaternion().setFromUnitVectors(up,curve.getTangent(.84).normalize()),1,true,monetary);
-      add('flow',deal.flowKind?'flowBox':'flowSphere',new THREE.Vector3(),new THREE.Quaternion(),1,false);
-      for(const entity of [buyer,target]){
-        const ringPosition=vec(geoVector(entity.lat,entity.lon,100.7));
-        // A national total has no site: a wide faint ring instead of a point marker.
-        if(entity.schematic){add('dot','wide',ringPosition,facing(ringPosition),.35);continue;}
-        add('dot',deal.flowKind?'dotBox':'dotSphere',vec(geoVector(entity.lat,entity.lon,100.65)),new THREE.Quaternion());
-        add('dot',deal.flowKind?'ring4':'ring',ringPosition,facing(ringPosition),.65,false);
-      }
-      dealEntries.push(entry);
+      // Line style as in the legend: company relation solid when completed, dashed while open; material flow dotted; money long dashes.
+      const style=deal.area==='money'?2:deal.flowKind?3:deal.status==='completed'?0:1;
+      dealEntries.push({deal,buyer,target,line,index,lift,visible:true,points,color:statusColor,style,flow:deal.staticRelation?0:1});
     });
-    markerCapacity=new Map();for(const m of markers)markerCapacity.set(m.geometry,(markerCapacity.get(m.geometry)||0)+1);
-    markersDirty=true;lastScaleDistance=-1;invalidate();
+    if(dealEntries.length){dealRibbon=ribbonMesh(dealEntries);dealGroup.add(dealRibbon);}
+    for(const e of dealEntries)e.points=null;
+    lastScaleDistance=-1;invalidate();
   }
   function focusLocation(lat,lon,distance=250){
     stopRotation();const from=camera.position.clone();const to=vec(geoVector(lat,lon,Math.min(controls.maxDistance,Math.max(controls.minDistance,distance))));
@@ -292,10 +309,8 @@ export function createGlobe(host,callbacks={}){
   }
   function selectDeal(id,focus=true){
     selected=dealEntries.find(e=>e.deal.id===id)||null;
-    dealEntries.forEach(e=>{const active=e.deal.id===selected?.deal.id;e.line.material.opacity=selected?(active?1:.15):.7;});
-    // First selection call switches markers from their resting opacity to the selection scheme (1 or .22), as before.
-    if(!selectionApplied){selectionApplied=true;for(const layer of markerLayers.values()){dealGroup.remove(layer.mesh);layer.mesh.dispose();layer.mesh.material.dispose();}markerLayers.clear();}
-    markersDirty=true;invalidate();
+    if(dealRibbon)dealRibbon.material.uniforms.uSelected.value=selected?dealEntries.indexOf(selected):-1;
+    invalidate();
     if(selected&&focus){const center=vectorGeo(arcSample(selected.buyer,selected.target,.5));const angle=greatCircleAngle(selected.buyer,selected.target);focusLocation(center.lat,center.lon,Math.max(145,Math.min(325,155+angle*120))*Math.max(1,.9/camera.aspect));}
   }
   function germany(){camera.up.set(0,1,0);controls.update();selectDeal(null,false);focusLocation(51,10,130);}
@@ -310,19 +325,19 @@ export function createGlobe(host,callbacks={}){
     const ground=groundPoint?{distance:camera.position.distanceTo(groundPoint)}:null;
     const threshold=(camera.position.length()-100)*Math.tan(camera.fov*Math.PI/360)*2/size.height*(event.pointerType==='touch'?13:8);
     raycaster.params.Line.threshold=Math.max(.025,threshold);
-    const layers=[...markerLayers.values()].filter(l=>l.mesh.visible&&l.items.some(m=>m.pickable));
-    const candidates=[...dealEntries.filter(e=>e.visible).map(e=>e.line),...layers.map(l=>l.mesh)];
-    const dealOf=hit=>{if(hit.object.isInstancedMesh){const m=layers.find(l=>l.mesh===hit.object)?.items[hit.instanceId];return m?.pickable?m.entry.deal:null;}return hit.object.userData.dealId?dealEntries.find(e=>e.line===hit.object)?.deal:null;};
+    // Layers (Standorte / Verbindungen): a switched-off layer is not drawn and cannot be hit.
+    const candidates=layers.lines?dealEntries.filter(e=>e.visible).map(e=>e.line):[];
+    const dealOf=hit=>hit.object.userData.dealId?dealEntries.find(e=>e.line===hit.object)?.deal:null;
     const found=raycaster.intersectObjects(candidates,false).find(h=>dealOf(h)&&(!ground||h.distance<ground.distance+1));
     if(found)return {deal:dealOf(found)};
     if(!includeCompanies)return null;
     raycaster.params.Points.threshold=Math.max(.02,threshold);
     const nearest=object=>raycaster.intersectObject(object).filter(h=>!ground||h.distance<ground.distance+1).sort((a,b)=>(a.distanceToRay??0)-(b.distanceToRay??0))[0];
-    const company=companyPoints?.visible?nearest(companyPoints):null;
+    const company=layers.points&&companyPoints?.visible?nearest(companyPoints):null;
     if(company)return {companies:pointGroups[company.index]};
-    const site=sitePoints?.visible&&siteGroups.length?nearest(sitePoints):null;
+    const site=layers.points&&sitePoints?.visible&&siteGroups.length?nearest(sitePoints):null;
     if(site)return {sites:siteGroups[site.index].map(i=>siteData.records[i])};
-    const link=siteLinks?.visible?raycaster.intersectObject(siteLinks).find(h=>!ground||h.distance<ground.distance+1):null;
+    const link=layers.lines&&siteLinks?.visible?raycaster.intersectObject(siteLinks).find(h=>!ground||h.distance<ground.distance+1):null;
     if(link)return {links:[siteLinkRecords[Math.floor(link.index/2/LINK_STEPS)]]};
     return null;
   }
@@ -351,13 +366,14 @@ export function createGlobe(host,callbacks={}){
   // the camera in. The scene (Earth, borders, data) is moved and spun as one; the stars get the inverse transform, so
   // they stay put. When the approach starts, the spin is handed to the camera, so after the intro the scene is at the
   // origin again and every geographic calculation (picking, navigation, focusLocation) is unchanged.
-  const viewListeners=[],starWorld=new THREE.Matrix4(),introOffset=new THREE.Vector3(),sceneInverse=new THREE.Matrix4();
-  let intro=null,introHidden=false;
+  const viewListeners=[],starWorld=new THREE.Matrix4(),skyBase=new THREE.Matrix4(),introOffset=new THREE.Vector3(),sceneInverse=new THREE.Matrix4();
+  let intro=null,introHidden=false,skySpin=0;
+  function updateSky(){starWorld.makeRotationY(skySpin).multiply(skyBase);sky.matrix.copy(sceneInverse).multiply(starWorld);sky.matrixWorldNeedsUpdate=true;}
   function orbitDepth(){const h=Math.atan(Math.tan(camera.fov*Math.PI/360)*camera.aspect);return THREE.MathUtils.clamp(330/Math.tan(h),1000,1500);}
   function placeScene(offset,spin){
     scene.position.copy(offset);scene.rotation.set(0,spin,0);scene.updateMatrix();
     sceneInverse.copy(scene.matrix).invert();
-    starPoints.matrix.copy(sceneInverse).multiply(starWorld);starPoints.matrixWorldNeedsUpdate=true;
+    updateSky();
   }
   // While the intro runs, the sun stands behind the viewer (upper right), so the side facing the screen is in daylight.
   function sunFromCamera(){
@@ -371,7 +387,7 @@ export function createGlobe(host,callbacks={}){
       const radius=Math.max(60,Math.min(300,half-135)),angle=intro.angle+s*.3;
       camera.position.setLength(depth);
       introOffset.copy(intro.right).multiplyScalar(radius*Math.cos(angle)).addScaledVector(intro.toward,radius*.75*Math.sin(angle)).addScaledVector(intro.up,radius*.2*Math.sin(angle));
-      intro.spin=s*.22;placeScene(introOffset,intro.spin);
+      intro.spin=s*.22;skySpin=-s*.05;placeScene(introOffset,intro.spin);
     }else{
       const t=reduced?1:Math.min(1,(time-intro.started)/intro.duration),ease=t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
       camera.position.copy(intro.fromDirection).applyQuaternion(new THREE.Quaternion().slerp(intro.turn,ease)).setLength(THREE.MathUtils.lerp(intro.fromDepth,homeDistance(),ease));
@@ -390,7 +406,7 @@ export function createGlobe(host,callbacks={}){
     // Turn the camera instead of the Earth: same picture, scene rotation back to zero.
     const q=new THREE.Quaternion().setFromAxisAngle(up,-(intro?.spin||0));
     camera.position.applyQuaternion(q);camera.up.applyQuaternion(q);introOffset.applyQuaternion(q);
-    starWorld.premultiply(new THREE.Matrix4().makeRotationFromQuaternion(q));
+    skyBase.premultiply(new THREE.Matrix4().makeRotationFromQuaternion(q));
   }
   function introApproach(done){
     if(!intro||intro.mode!=='orbit'){done?.();return;}
@@ -400,7 +416,7 @@ export function createGlobe(host,callbacks={}){
   }
   function introEnd(){
     if(intro){handOverSpin();intro=null;placeScene(introOffset.set(0,0,0),0);camera.position.setLength(homeDistance());}
-    controls.locked=false;introHidden=false;markersDirty=true;invalidate();
+    controls.locked=false;introHidden=false;invalidate();
   }
   function introHit(x,y){
     const rect=canvas.getBoundingClientRect();
@@ -419,6 +435,7 @@ export function createGlobe(host,callbacks={}){
     const dt=Math.min(.05,(time-lastFrame)/1000||.016);lastFrame=time;
     if(intro){stepIntro(time);dirty=true;}
     if(flight){const t=flight.duration?Math.min(1,(time-flight.started)/flight.duration):1;const ease=1-Math.pow(1-t,3);const fromDirection=flight.from.clone().normalize(),toDirection=flight.to.clone().normalize();const quaternion=new THREE.Quaternion().setFromUnitVectors(fromDirection,toDirection);const rotation=new THREE.Quaternion().slerp(quaternion,ease);camera.position.copy(fromDirection.applyQuaternion(rotation)).multiplyScalar(THREE.MathUtils.lerp(flight.from.length(),flight.to.length(),ease));if(t===1)flight=null;}
+    if(controls.autoRotate&&!controls.points.size&&!intro){skySpin-=dt*controls.spinRate()*1.6;updateSky();}
     controls.update(dt);
     if(introHidden)sunFromCamera();
     if(time-lastRender<1000/fps)return;
@@ -433,9 +450,10 @@ export function createGlobe(host,callbacks={}){
     // Cluster pass pending after the camera stopped: keep the loop awake until it ran.
     if(clusterKey!==lastClusterKey)dirty=true;
     const rescale=distance!==lastScaleDistance;lastScaleDistance=distance;
-    const animating=!reduced&&dealEntries.some(e=>e.visible&&!e.deal.staticRelation&&(!selected||e===selected));
-    // Only flow markers move between frames; the other marker layers are rewritten when zoom, filter or selection change.
-    if(rescale||markersDirty){layoutMarkers(time);markersDirty=false;}else if(animating)animateFlows(time);
+    // Pulses along the bands move every frame (shader time); without visible moving bands the loop may sleep.
+    const animating=!reduced&&!introHidden&&layers.lines&&(dealEntries.some(e=>e.visible&&!e.deal.staticRelation&&(!selected||e===selected))||!!(siteLinks?.visible&&siteRibbon));
+    ribbonUniforms.uTime.value=time/1000;ribbonUniforms.uScale.value=.38*visualScale;
+    if(rescale)dirty=true;
     if(moved)lastMove=time;
     if(!moved&&!animating&&!dirty){
       // Nothing to draw: keep looping only while a camera move may still follow (rotation, flight, pending cluster pass).
@@ -451,12 +469,13 @@ export function createGlobe(host,callbacks={}){
     }else callbacks.onLabels?.([]);
     callbacks.onView?.(distance,vectorGeo(camera.position.toArray()));
     for(const listener of viewListeners)listener(distance);
+    for(const m of skyMaterials){m.uniforms.uTime.value=time/1000;m.uniforms.uPixel.value=pixelRatio;}
     // Weltraum-Anflug: only the Earth, its atmosphere and the stars; data layers return when the intro ends.
-    const hidden=introHidden?[dealGroup,companyPoints,sitePoints,siteLinks].filter(o=>o?.visible):[];
+    const hidden=(introHidden?[dealGroup,companyPoints,sitePoints,siteLinks]:[...(layers.points?[]:[companyPoints,sitePoints]),...(layers.lines?[]:[dealGroup,siteLinks])]).filter(o=>o?.visible);
     for(const o of hidden)o.visible=false;
     renderer.render(scene,camera);
     for(const o of hidden)o.visible=true;
   }
   wake();
-  return {introOrbit,introApproach,introEnd,introHit,project,startRotation,distance:()=>camera.position.length(),homeDistance,onCameraView:fn=>{viewListeners.push(fn);invalidate();},setCompanies,setSites,setSiteLinks,showSites:visible=>{sitesVisible=visible;if(sitePoints)sitePoints.visible=visible&&siteData?.n>0;if(siteLinks)siteLinks.visible=visible;invalidate();},setDeals,germany,filterDeals,selectDeal,focusLocation,home,zoom,toggleRotation,showCompanies:visible=>{companiesVisible=visible;if(companyPoints)companyPoints.visible=visible;invalidate();},isRotating:()=>controls.autoRotate,dispose:()=>{disposed=true;cancelAnimationFrame(frame);frame=0;visibility.disconnect();document.removeEventListener('visibilitychange',onVisibility);for(const type of inputs)inputHost.removeEventListener(type,wake,{capture:true});pointMaterial.dispose();siteMaterial.dispose();linkMaterial.dispose();resizeObserver.disconnect();controls.dispose();scene.traverse(o=>{o.geometry?.dispose();if(Array.isArray(o.material))o.material.forEach(m=>m.dispose());else o.material?.dispose();});renderer.dispose();}};
+  return {introOrbit,introApproach,introEnd,introHit,project,startRotation,distance:()=>camera.position.length(),homeDistance,onCameraView:fn=>{viewListeners.push(fn);invalidate();},setLayers:next=>{Object.assign(layers,next);invalidate();},getLayers:()=>({...layers}),setCompanies,setSites,setSiteLinks,showSites:visible=>{sitesVisible=visible;if(sitePoints)sitePoints.visible=visible&&siteData?.n>0;if(siteLinks)siteLinks.visible=visible;invalidate();},setDeals,germany,filterDeals,selectDeal,focusLocation,home,zoom,toggleRotation,showCompanies:visible=>{companiesVisible=visible;if(companyPoints)companyPoints.visible=visible;invalidate();},isRotating:()=>controls.autoRotate,dispose:()=>{disposed=true;cancelAnimationFrame(frame);frame=0;visibility.disconnect();document.removeEventListener('visibilitychange',onVisibility);for(const type of inputs)inputHost.removeEventListener(type,wake,{capture:true});pointMaterial.dispose();siteMaterial.dispose();pickMaterial.dispose();resizeObserver.disconnect();controls.dispose();scene.traverse(o=>{o.geometry?.dispose();if(Array.isArray(o.material))o.material.forEach(m=>m.dispose());else o.material?.dispose();});renderer.dispose();}};
 }
