@@ -2,14 +2,16 @@
  *  (Rohstoff, Kettenstufe, Evidenz, Region) und jede Fraktion einzeln schaltbar, wie im Annahmen-Atlas (/globus/#gesamt).
  *  Nur was der Hauptatlas schon zeichnet: Atlas-Beziehungen (atlas-ui) und Fachatlas-Verbindungen (globe-sites.json).
  *  Keine Annahme kommt hinzu; Evidenz und Prüfstatus stehen so da, wie die Quelle sie führt. Doku analysis/GESAMTVERNETZUNG.md. */
-import {escapeHtml as esc} from './map-logic.mjs';
+import {vfLegende} from './vf-legende.mjs';
 
 export const STUFEN=['Förderung','Verarbeitung','Handel','Abnehmer','Eigentum & Kapital'];
 export const REGIONEN=['Europa','Asien','Afrika','Nordamerika','Südamerika','Ozeanien','ohne Land'];
 // Farben wie im Annahmen-Atlas, wo derselbe Rohstoff vorkommt.
 export const ROHSTOFFE=[['Kupfer',0xe07a3f],['Kohle',0x9aa5b1],['Erdöl',0x8d6e63],['Bauxit/Aluminium',0x5dade2],['Gold',0xf2c14e],['Lithium',0x2ecc71],
  ['Uran',0xd4e157],['Seltene Erden',0xc79bff],['Graphit',0x6c8ebf],['Schrott',0xff6fa8],['Altpapier',0xa3c46c],['Kunststoffabfälle',0xff9f43],
- ['Sekundärblei/Batterien',0xb07ad8],['Arzneimittel',0xe89cab],['Unternehmen (kein Stoff)',0x69b5ff],['Geld (kein Stoff)',0xc4a1ff],['anderer Stoff',0xd9e5ed]];
+ ['Sekundärblei/Batterien',0xb07ad8],['Arzneimittel',0xe89cab],['Unternehmen (kein Stoff)',0x69b5ff],['Geld (kein Stoff)',0xc4a1ff],
+ // Standort-Vernetzung (Eddie 2026-11-09): Datensatz "standorte" in globe-sites.json (Konzern -> eigene Standorte, OWNS/OPERATES/Tochter) ist eine eigene VF.
+ ['Standort-Vernetzung',0x00c2a8],['anderer Stoff',0xd9e5ed]];
 const ROH=new Map(ROHSTOFFE.map(([n,c],i)=>[n,{i,c}]));
 
 const K={Europa:'Albanien Belgien Bulgarien Deutschland Dänemark Estland Finnland Frankreich Griechenland Irland Island Italien Kosovo Kroatien Lettland Liechtenstein Litauen Luxemburg Malta Moldau Montenegro Niederlande Nordmazedonien Norwegen Polen Portugal Rumänien Russland Schweden Schweiz Serbien Slowakei Slowenien Spanien Tschechien Ukraine Ungarn Vereinigtes_Königreich Zypern Österreich Germany Belgium France Netherlands Poland Spain Sweden Finland Norway Italy United_Kingdom Austria Switzerland Russia DE BE FR NL PL ES SE FI NO IT GB AT CH RU BG RO',
@@ -46,7 +48,7 @@ export function rohstoffAusName(text){
  if(/Gold/i.test(t))return 'Gold';if(/Lithium/i.test(t))return 'Lithium';if(/Uran/i.test(t))return 'Uran';if(/Seltene Erden/i.test(t))return 'Seltene Erden';if(/Graphit/i.test(t))return 'Graphit';
  return 'anderer Stoff';
 }
-const EIGENTUM=/^(OWNS|PARTIALLY_OWNS|OPERATES|CONTROLS)$/;
+const EIGENTUM=/^(OWNS|PARTIALLY_OWNS|OPERATES|CONTROLS|Tochter|SUBSIDIARY_OF)$/;
 const FOERDERUNG=/MINE|Mine|CONCENTRATOR/;
 const HANDEL=/PORT|TERMINAL|Hafen|Terminal|Logistik/;
 const ABNEHMER=/COMPANY|DOWNSTREAM|Unternehmen/;
@@ -74,21 +76,22 @@ export function fraktionBeziehung(d,entities){
  return {rohstoff:roh,stufe:stufeBeziehung(d),evidenz:evidenz(d.evidenceStatus),region:region(from.country,from.region)};
 }
 export function fraktionLink(l){
- const roh=l.dataset.id==='rohstoffwelt'?rohstoffAusName(l.from.name+' '+l.to.name):rohstoffAusName(l.dataset.label);
+ const roh=l.dataset.id==='standorte'?'Standort-Vernetzung':l.dataset.id==='rohstoffwelt'?rohstoffAusName(l.from.name+' '+l.to.name):rohstoffAusName(l.dataset.label);
  return {rohstoff:roh,stufe:stufeLink(l.type,l.from.kind,l.to.kind,l.from.country,l.to.country),evidenz:evidenz(l.evidence,l.audit),region:region(l.from.country)};
 }
 
 const GRUPPEN=[['rohstoff','Rohstoff'],['stufe','Kettenstufe'],['evidenz','Evidenz'],['region','Region (Start)']];
 const num=n=>new Intl.NumberFormat('de-DE').format(n);
-const pct=(a,n)=>new Intl.NumberFormat('de-DE',{minimumFractionDigits:1,maximumFractionDigits:1}).format(n?100*a/n:0)+' %';
 
-/** Knopf "Gesamtvernetzung" neben Standorte/Verbindungen; schaltet die Fraktionstafel und den Filter auf beiden Bandmengen. */
+/** Knopf "Gesamtvernetzung" neben Standorte/Verbindungen und die dauerhaft sichtbare VF-Legende (vf-legende.mjs, dieselbe Datei wie im
+ *  Annahmen-Atlas): Klick auf eine Vernetzungsfraktion schaltet die Gesamtvernetzung ein, zeigt nur diese VF und fährt auf die
+ *  Gesamtansicht (engine.home); Menü "+ VF" schaltet weitere hinzu, "Alle" stellt zurück. */
 export function attachGesamt({engine,sites,getAtlas,toAtlas,host}){
  const sw=host.querySelector('.sites-toggle .layer-switch');if(!sw||!sites?.allLinks)return null;
  const button=document.createElement('button');button.type='button';button.dataset.gesamt='';button.setAttribute('aria-pressed','false');button.innerHTML='<i class="layer-net"></i>Gesamtvernetzung';sw.append(button);
- const panel=document.createElement('section');panel.className='gesamt-panel';panel.id='gesamt-panel';panel.hidden=true;panel.setAttribute('aria-label','Gesamtvernetzung');host.append(panel);
+ const panel=document.createElement('section');panel.className='gesamt-panel';panel.id='gesamt-panel';panel.setAttribute('aria-label','Gesamtvernetzung');host.append(panel);
  const off=Object.fromEntries(GRUPPEN.map(([g])=>[g,new Set()]));
- let kanten=[],aktiv=false;
+ let kanten=[],aktiv=false,vf=null;
  const an=f=>GRUPPEN.every(([g])=>!off[g].has(f[g]));
  const farbe=f=>ROH.get(f.rohstoff)?.c??0xd9e5ed;
  function sammeln(){
@@ -99,28 +102,32 @@ export function attachGesamt({engine,sites,getAtlas,toAtlas,host}){
  }
  function zeichnen(){
   const sicht=kanten.filter(k=>an(k.f));
-  const atlas=getAtlas();
+  const atlas=aktiv?getAtlas():null;
   if(atlas){const erlaubt=new Map(kanten.filter(k=>k.art==='beziehung').map(k=>[k.id,k.f]));atlas.setGesamt({zeigt:id=>{const f=erlaubt.get(id);return !f||an(f);},farbe:id=>{const f=erlaubt.get(id);return f?farbe(f):null;}});}
-  sites.setLinkFilter(l=>{const f=fraktionLink(l);return an(f)?farbe(f):null;});
-  panel.querySelector('#gesamt-zahl').textContent=`${num(sicht.length)} von ${num(kanten.length)} Verbindungen sichtbar`;
+  if(aktiv)sites.setLinkFilter(l=>{const f=fraktionLink(l);return an(f)?farbe(f):null;});
+  panel.querySelector('#gesamt-zahl').textContent=aktiv?`${num(sicht.length)} von ${num(kanten.length)} Verbindungen sichtbar`:'Gesamtvernetzung aus: Klick auf eine VF schaltet sie ein.';
   panel.dataset.sichtbar=String(sicht.length);panel.dataset.gesamt=String(kanten.length);
  }
  function tafel(){
-  const n=kanten.length,z={};for(const [g] of GRUPPEN){z[g]=new Map();for(const k of kanten)z[g].set(k.f[g],(z[g].get(k.f[g])||0)+1);}
-  const ordnung={rohstoff:ROHSTOFFE.map(r=>r[0]),stufe:STUFEN,region:REGIONEN,evidenz:[...z.evidenz.keys()].sort()};
-  panel.innerHTML=`<div class="gesamt-kopf"><strong>Gesamtvernetzung</strong><button type="button" class="icon-button" data-gesamt-zu aria-label="Gesamtvernetzung schließen">×</button></div><p class="gesamt-zahl" id="gesamt-zahl"></p>`+
-   GRUPPEN.map(([g,titel])=>`<fieldset data-gruppe="${g}"><legend>${titel}</legend>${ordnung[g].filter(w=>z[g].get(w)).map(w=>`<label><input type="checkbox" data-wert="${esc(w)}"${off[g].has(w)?'':' checked'}>${g==='rohstoff'?`<i style="background:#${farbe({rohstoff:w}).toString(16).padStart(6,'0')}"></i>`:''}<span>${esc(w)}</span><small>${num(z[g].get(w))} · ${pct(z[g].get(w),n)}</small></label>`).join('')}</fieldset>`).join('')+
+  if(vf)return vf.zeichne();
+  panel.innerHTML='<div id="vf-legende"></div><p class="gesamt-zahl" id="gesamt-zahl"></p>'+
    '<p class="gesamt-hinweis">Alle Verbindungen, die der Hauptatlas zeichnet: Atlas-Beziehungen und Fachatlas-Verbindungen. Nur belegte Einträge, keine Annahmen. Farbe = Rohstoff; Evidenz und Prüfstatus wie in der Quelle geführt. Kettenstufe nach Art und Endpunkten, Region = Kontinent des Startpunkts (Regeln in analysis/GESAMTVERNETZUNG.md).</p>';
-  panel.querySelectorAll('fieldset input').forEach(input=>input.onchange=()=>{const g=input.closest('fieldset').dataset.gruppe;if(input.checked)off[g].delete(input.dataset.wert);else off[g].add(input.dataset.wert);zeichnen();});
-  panel.querySelector('[data-gesamt-zu]').onclick=()=>setze(false);
+  vf=vfLegende(panel.querySelector('#vf-legende'),{
+   zu:matchMedia('(max-width: 760px)').matches,
+   gruppen:()=>{if(!kanten.length)sammeln();const z={};for(const [g] of GRUPPEN){z[g]=new Map();for(const k of kanten)z[g].set(k.f[g],(z[g].get(k.f[g])||0)+1);}
+    const ordnung={rohstoff:ROHSTOFFE.map(r=>r[0]),stufe:STUFEN,region:REGIONEN,evidenz:[...z.evidenz.keys()].sort()};
+    return GRUPPEN.map(([g,titel])=>({id:g,titel,items:ordnung[g].filter(w=>z[g].get(w)).map(w=>({id:w,name:w,zahl:z[g].get(w),farbe:g==='rohstoff'?'#'+farbe({rohstoff:w}).toString(16).padStart(6,'0'):'#7f93a8'}))}));},
+   istAn:(g,w)=>!aktiv||!off[g].has(w),
+   schalte:ae=>{if(!aktiv)setze(true);for(const [g,w,on] of ae){if(on)off[g].delete(w);else off[g].add(w);}zeichnen();},
+   fokus:()=>engine.home?.()});
  }
  function setze(on){
-  aktiv=on;button.setAttribute('aria-pressed',String(on));panel.hidden=!on;document.body.classList.toggle('gesamt-aktiv',on);
+  aktiv=on;button.setAttribute('aria-pressed',String(on));panel.dataset.aktiv=String(on);document.body.classList.toggle('gesamt-aktiv',on);
   const url=new URL(location.href);if(on)url.searchParams.set('vernetzung','gesamt');else url.searchParams.delete('vernetzung');if(url.href!==location.href)history.replaceState(history.state,'',url);
-  if(on){if(!getAtlas())toAtlas();getAtlas()?.showAll();sammeln();tafel();zeichnen();engine.setLayers?.({lines:true});sw.querySelector('[data-layer="lines"]')?.setAttribute('aria-pressed','true');}
-  else{getAtlas()?.setGesamt(null);sites.setLinkFilter(null);}
+  if(on){if(!getAtlas())toAtlas();getAtlas()?.showAll();sammeln();tafel();zeichnen();vf.zeichne();engine.setLayers?.({lines:true});sw.querySelector('[data-layer="lines"]')?.setAttribute('aria-pressed','true');}
+  else{getAtlas()?.setGesamt(null);sites.setLinkFilter(null);zeichnen();vf.zeichne();}
  }
  button.onclick=()=>setze(!aktiv);
- if(new URLSearchParams(location.search).get('vernetzung')==='gesamt')setze(true);
+ tafel();if(new URLSearchParams(location.search).get('vernetzung')==='gesamt')setze(true);else zeichnen();
  return {setze,kanten:()=>kanten};
 }

@@ -50,6 +50,8 @@ body.globe-intro .continent-hub{background:#0b1730cc;color:#eef4ff;border-color:
 .layer-switch .layer-net{width:14px;height:10px;background:radial-gradient(circle at 2px 8px,#155fc2 2px,transparent 2.5px),radial-gradient(circle at 12px 2px,#155fc2 2px,transparent 2.5px),linear-gradient(150deg,transparent 42%,#155fc2 44%,#155fc2 56%,transparent 58%)}
 .gesamt-panel{position:absolute;right:44px;top:118px;z-index:6;width:290px;max-height:calc(100% - 240px);overflow:auto;overscroll-behavior:contain;background:#fffffff2;color:#24465f;border:1px solid #cbdde9;border-radius:10px;padding:10px 12px;font-size:12px;line-height:1.35;box-shadow:0 10px 30px #0b2a4a22;backdrop-filter:blur(10px)}
 .gesamt-panel[hidden]{display:none}
+/* VF-Legende (vf-legende.mjs) in der Tafel: dauerhaft sichtbar; zugeklappt nur Kopfzeile. */
+.gesamt-panel:has(.vf-zu) .gesamt-hinweis,.gesamt-panel:has(.vf-zu) .gesamt-zahl{display:none}.gesamt-panel .vf-menue label i{width:16px;height:0;border-radius:0;background:none}.gesamt-panel .vf-menue fieldset{border-top:0;padding:0 0 4px}
 .gesamt-kopf{display:flex;align-items:center;justify-content:space-between;gap:8px}.gesamt-kopf strong{font-size:13px;color:#112a44}.gesamt-kopf .icon-button{width:28px;height:28px;min-height:0}
 .gesamt-zahl{margin:2px 0 6px;font-weight:600;color:#155fc2}
 .gesamt-panel fieldset{border:0;border-top:1px solid #dbe7f1;margin:0;padding:6px 0 4px}.gesamt-panel legend{font-weight:600;color:#112a44;padding:0 4px 0 0}
@@ -58,3 +60,4 @@ body.globe-intro .continent-hub{background:#0b1730cc;color:#eef4ff;border-color:
 .gesamt-hinweis{margin:6px 0 0;color:#51677f;font-size:11px}
 body.gesamt-aktiv .space-top .direction-key{display:none}
 @media(max-width:760px){#app .gesamt-panel{left:8px;right:76px;top:auto;bottom:48px;width:auto;max-height:42%}}
+@media(max-width:760px){#app .gesamt-panel:has(.vf-zu){right:auto;padding:4px 6px 4px 10px;max-width:calc(100% - 84px)}}
