@@ -15,7 +15,15 @@ export function statusLabel(basis,status){
 const RULE_LABEL={BOTTLENECK_FACILITY:'Engpass-Anlage',SINGLE_SUPPLIER:'Einzellieferant',COUNTRY_CONCENTRATION:'Länderkonzentration'};
 const REASON={NOT_APPROVED:'Beziehung noch nicht freigegeben',PERIOD_UNKNOWN:'Zeitraum der Beziehung unbekannt (UNKNOWN_PERIOD)',BUYER_SHARE_MISSING:'Anteil am Einsatz des Abnehmers fehlt',
  FACT_STATUS_NOT_FACT:'Beziehung ist kein FACT',HARD_BLOCKER:'Beziehung hat einen harten Prüfblocker',REJECTED:'Beziehung abgelehnt',REFERENCE_TOTAL_MISSING:'Referenzgesamtmenge (z. B. Weltproduktion) fehlt',
- CONFLICTING_CLAIMS:'widersprüchliche Mengenangaben'};
+ CONFLICTING_CLAIMS:'widersprüchliche Mengenangaben',WORLD_SHARE_BELOW_THRESHOLD:'kein Land erreicht die Schwelle am Weltwert (USGS)',
+ WORLD_REMAINDER_NOT_SPLIT:'USGS-Rest „übrige Länder“ zu groß für eine Aussage',BELOW_THRESHOLD_LOWER_BOUND_ONLY:'Atlas-Summe nur Untergrenze, unter der Schwelle'};
+const fmt=n=>typeof n==='number'?n.toLocaleString('de-DE'):esc(n);
+function worldLine(c){
+ const w=c.world_reference;if(!w)return '';
+ const top=(w.country_shares||[]).slice(0,3).map(x=>`${esc(x.country)} ${fmt(x.share_percent)} %`).join(', ');
+ const atl=(w.atlas_countries||[]).map(x=>`${esc(x.country)} ${x.share_percent==='UNKNOWN'?'UNKNOWN (bei USGS nicht einzeln)':fmt(x.share_percent)+' %'}`).join(', ');
+ return `<p class="small" data-world-stage="${esc(c.stage)}">Weltwert ${esc(w.reference_year)}${w.estimate?' (Schätzung)':''}: ${fmt(w.world_total)} ${esc(w.unit)} · größte Länder ${top} · Schwelle ${fmt(w.threshold_percent)} % (Annahme) · Quelle <a href="${safe(w.source_url)}" target="_blank" rel="noopener noreferrer">USGS Mineral Commodity Summaries</a> (${esc(w.locator)}) · Länder der Atlas-Anlagen: ${atl} · ${esc(w.fact_status)}</p>`;
+}
 export const reasonLabel=r=>REASON[r]||r||'Grund UNKNOWN';
 const chip=(basis,status)=>`<span class="risk-chip risk-${esc(status.toLowerCase())} risk-${esc(basis.toLowerCase())}" data-basis="${esc(basis)}" data-status="${esc(status)}">${basis==='APPROVED'?'Belegt':'Vorläufig'}: ${esc(statusLabel(basis,status))}</span>`;
 const count=(xs,f)=>xs.reduce((m,x)=>{const k=f(x);m[k]=(m[k]||0)+1;return m},{});
@@ -86,7 +94,7 @@ export function renderRiskOverview(v){
  <section class="risk-basis risk-basis-unknown" data-basis="UNKNOWN"><h3>Nicht bewertbar (UNKNOWN)</h3><p class="small">UNKNOWN heißt: Eingaben fehlen oder sind unzulässig. Es ist ${NOT_CLEARED} und kein Nachweis, dass kein Risiko besteht.</p>
  <details><summary>Engpass-Anlagen ohne bewertbare Eingaben (${unknownBn.length})</summary>${unknownBn.map(x=>`<p class="small" data-entity="${esc(x.subject.entity_id)}">${chip('APPROVED','UNKNOWN')}${chip('CANDIDATE','UNKNOWN')} <strong>${esc(x.subject.name)}</strong> · ${esc(x.subject.country||'')} · strukturell in ${x.structural_chains.map(id=>esc(chainName(v,id))).join(', ')} · ${reasonsHtml(v,x.bases.CANDIDATE.excluded_inputs)}</p>`).join('')}</details>
  <details><summary>Einzellieferant: ${ss.length} Anlagen</summary>${BASES.map(b=>`<p class="small">${esc(BASIS_LABEL[b])}: ${Object.entries(ssBy(b)).map(([s,n])=>`${n} × ${esc(statusLabel(b,s))}`).join(' · ')}<br>Gründe: ${ssReasons(b)}</p>`).join('')}</details>
- <details><summary>Länderkonzentration: ${v.country_concentration.length} Stufen</summary>${v.country_concentration.map(c=>`<p class="small">${esc(c.stage)} · ${BASES.map(b=>chip(b,c.bases[b].status)+' '+esc(reasonLabel(c.bases[b].reason))).join(' · ')}</p>`).join('')}</details></section>
+ <details><summary>Länderkonzentration: ${v.country_concentration.length} Stufen</summary>${v.country_concentration.map(c=>`<p class="small">${esc(c.stage)} · ${BASES.map(b=>chip(b,c.bases[b].status)+' '+esc(reasonLabel(c.bases[b].reason))).join(' · ')}</p>${worldLine(c)}`).join('')}</details></section>
  <details><summary>Alle ${v.chains.length} Ketten nach Grundlage</summary><div class="table-scroll"><table class="risk-table"><thead><tr><th>Kette</th><th>Belegt</th><th>Vorläufig</th></tr></thead><tbody>${rows}</tbody></table></div></details>
  <p class="small">Nutzungseinschränkungen: ${v.usage_restrictions.map(esc).join(' · ')}</p>`;
 }
