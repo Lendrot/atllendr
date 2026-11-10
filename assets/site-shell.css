@@ -13,6 +13,11 @@ header.ss-kopf nav.ss-menue a:hover{color:#0b5cab}
 header.ss-kopf nav.ss-menue a[aria-current]{color:#12395e;font-weight:600}
 header.ss-kopf nav.ss-menue a[aria-current]:after{content:'';position:absolute;left:11px;right:11px;bottom:0;height:3px;border-radius:3px 3px 0 0;background:#168cbb}
 header.ss-kopf nav.ss-menue a.ss-rechts{margin-left:auto}
+/* Umschalter Belegt ⇄ Annahmen (Neuordnung 2026-11-10), gleich im Annahmen-Atlas */
+header.ss-kopf a.ss-umschalter{flex:none;display:flex;padding:3px;border-radius:10px;background:#eef5fb;border:1px solid #d6e6f2;text-decoration:none;font-size:13px}
+header.ss-kopf a.ss-umschalter span{padding:5px 10px;border-radius:7px;color:#3e5a74;white-space:nowrap}
+header.ss-kopf a.ss-umschalter span.an{background:#fff;color:#0b5cab;font-weight:600;box-shadow:0 2px 8px #2748691a}
+header.ss-kopf a.ss-umschalter:hover span:not(.an){color:#b86a12}
 header.ss-kopf .ss-aktionen{display:flex;align-items:center;gap:8px;flex:none}
 header.ss-kopf .ss-aktionen>*{margin:0}
 header.ss-kopf button.ss-knopf{display:none;align-items:center;justify-content:center;width:44px;height:44px;margin-left:auto;border:1px solid #d8e5ef;border-radius:10px;background:#fff;color:#112a44;cursor:pointer;flex:none}
@@ -38,6 +43,7 @@ nav.ss-unter a:hover{color:#0b5cab}
  header.ss-kopf nav.ss-menue .ss-menue-unter{display:flex;flex-direction:column;padding-left:14px;border-left:2px solid #e2eefa;margin:0 0 6px 12px}
  header.ss-kopf nav.ss-menue .ss-menue-unter a{height:42px;font-size:15px}
  header.ss-kopf .ss-aktionen{order:2}
+ header.ss-kopf a.ss-umschalter{margin-left:auto;font-size:12px}header.ss-kopf a.ss-umschalter span{padding:4px 8px}header.ss-kopf button.ss-knopf{margin-left:0;order:3}
  nav.ss-unter[data-site-shell]{padding:0 10px}
  body[data-ss-globus] nav.ss-unter[data-site-shell]{display:none}
 }

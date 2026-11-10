@@ -99,7 +99,9 @@ export function attachGesamt({engine,sites,getAtlas,toAtlas,host}){
  const rfKey=k=>k.art==='beziehung'?'b:'+k.id:'l:'+(k.link.relationship_id||k.link.id);
  const rfLink=l=>rfMap.has('l:'+(l.relationship_id||l.id));
  const zeigtK=k=>an(k.f)&&(!rechtAn||rfMap.has(rfKey(k)));
- fetch('/assets/rechtsfaelle.json').then(r=>r.ok?r.json():null).then(d=>{if(!d)return;RF=d;for(const f of d.faelle){const key=(f.verbindung_art==='link'?'l:':'b:')+f.verbindung;if(!rfMap.has(key))rfMap.set(key,[]);rfMap.get(key).push(f);}vf?.zeichne();}).catch(()=>{});
+ fetch('/assets/rechtsfaelle.json').then(r=>r.ok?r.json():null).then(d=>{if(!d)return;RF=d;for(const f of d.faelle){const key=(f.verbindung_art==='link'?'l:':'b:')+f.verbindung;if(!rfMap.has(key))rfMap.set(key,[]);rfMap.get(key).push(f);}vf?.zeichne();
+  // ?recht=1 (Seite Analysen, Neuordnung 2026-11-10): Gesamtvernetzung und Ebene "Rechtliche Fälle" gleich einschalten.
+  if(new URLSearchParams(location.search).get('recht')==='1'){if(!aktiv)setze(true);rechtAn=true;zeichnen();vf?.zeichne();}}).catch(()=>{});
  const farbe=f=>ROH.get(f.rohstoff)?.c??0xd9e5ed;
  function sammeln(){
   const atlas=getAtlas(),layer=atlas?.layer;

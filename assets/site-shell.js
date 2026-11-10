@@ -2,23 +2,34 @@
 // Ersetzt nur den Seitenkopf und die sichtbare Beschriftung von Statuscodes; Daten und Evidenzstatus bleiben unverändert.
 (function () {
   'use strict';
+  // Neuordnung (Eddie 2026-11-10, "Ganzer Vorschlag"): fünf Menüpunkte wie im Annahmen-Atlas, dazu der Umschalter Belegt ⇄ Annahmen.
   var MENUE = [
     ['/atlas/', 'Globus', ['/atlas/', '/minen/', '/logistik/', '/verarbeitung/', '/indien/', '/karte/', '/deutschland/']],
-    ['/kupfer/', 'Kupfer', ['/kupfer/']],
-    ['/lithium/', 'Lithium', ['/lithium/']],
-    ['/abfall/', 'Abfall', ['/abfall/', '/anlagen/', '/quellen/', '/recherche/']],
-    ['/uebernahmen/', 'Übernahmen', ['/uebernahmen/']],
-    ['/themen/', 'Fachatlanten', ['/themen/']],
-    ['/daten/', 'Daten & Quellen', ['/daten/', '/datenluecken/', '/produktion/', '/audit/', '/foundation/']],
-    ['/begriffe/', 'Begriffe', ['/begriffe/']]
+    ['/themen/', 'Rohstoffe', ['/themen/', '/kupfer/', '/lithium/', '/gold/', '/uran/', '/seltene-erden/', '/graphit/', '/wolfram/', '/antimon/', '/abfall/', '/anlagen/', '/quellen/', '/recherche/']],
+    ['/unternehmen/', 'Unternehmen', ['/unternehmen/', '/uebernahmen/', '/verbindungen/']],
+    ['/analysen/', 'Analysen', ['/analysen/', '/datenluecken/']],
+    ['/daten/', 'Quellen', ['/daten/', '/produktion/', '/audit/', '/foundation/', '/schnittstelle/', '/begriffe/']]
   ];
+  var ANNAHMEN_ATLAS = 'https://lendrot.github.io/atlaslendrot/';
+  // Bereichsleiste: der längste passende Pfad gewinnt (Rohstoffseiten zeigen ihre eigenen Seiten), sonst die Leiste des Menüpunkts.
   var UNTER = {
     '/atlas/': [['/atlas/', 'Gesamtglobus'], ['/minen/', 'Rohstoffwelt'], ['/indien/', 'Indien'], ['/deutschland/', 'Deutschland'], ['/karte/', '2D-Karte'], ['/minen/karte/', 'Minenkarte']],
+    '/themen/': [['/themen/', 'Alle Rohstoffe'], ['/kupfer/', 'Kupfer'], ['/lithium/', 'Lithium'], ['/gold/', 'Gold'], ['/uran/', 'Uran'], ['/seltene-erden/', 'Seltene Erden'], ['/graphit/', 'Graphit'], ['/wolfram/', 'Wolfram'], ['/antimon/', 'Antimon'], ['/abfall/', 'Abfall']],
     '/kupfer/': [['/kupfer/', 'Kupferketten'], ['/kupfer/markt/', 'Kupfermarkt'], ['/kupfer/markt/bericht/', 'Kettenbericht'], ['/kupfer/routenbelege/', 'Routenbelege']],
     '/lithium/': [['/lithium/', 'Lithium-Standorte'], ['/lithium/markt/', 'Lithiummarkt']],
+    '/gold/': [['/gold/', 'Gold-Standorte'], ['/gold/markt/', 'Goldmarkt']],
+    '/uran/': [['/uran/', 'Uran-Standorte'], ['/uran/markt/', 'Uranmarkt']],
+    '/seltene-erden/': [['/seltene-erden/', 'Seltenerd-Standorte'], ['/seltene-erden/markt/', 'Markt']],
+    '/graphit/': [['/graphit/', 'Graphit-Standorte'], ['/graphit/markt/', 'Graphitmarkt']],
+    '/wolfram/': [['/wolfram/', 'Wolfram-Standorte'], ['/wolfram/markt/', 'Wolframmarkt']],
+    '/antimon/': [['/antimon/', 'Antimon-Standorte'], ['/antimon/markt/', 'Antimonmarkt']],
     '/abfall/': [['/abfall/', 'Abfallanlagen Europa'], ['/anlagen/', 'EPA-Anlagen USA'], ['/quellen/', 'Abfallquellen'], ['/recherche/', 'Stoff- und Geldströme']],
-    '/daten/': [['/daten/', 'Daten & Quellen'], ['/datenluecken/', 'Datenlücken'], ['/produktion/', 'Produktion'], ['/audit/', 'Methodik: Prüfbericht'], ['/foundation/', 'Methodik: Datenfundament']]
+    '/unternehmen/': [['/unternehmen/', 'Übersicht'], ['/uebernahmen/', 'Übernahmen 2026'], ['/verbindungen/', 'Verbindungen zwischen Unternehmen']],
+    '/analysen/': [['/analysen/', 'Übersicht'], ['/datenluecken/', 'Datenlücken']],
+    '/daten/': [['/daten/', 'Daten & Quellen'], ['/produktion/', 'Produktion'], ['/audit/', 'Methodik: Prüfbericht'], ['/foundation/', 'Methodik: Datenfundament'], ['/schnittstelle/', 'Schnittstelle'], ['/begriffe/', 'Begriffe']]
   };
+  // Pfade, die zu einer Rohstoff-Leiste gehören, ohne mit ihr zu beginnen
+  var UNTER_ZU = {'/anlagen/': '/abfall/', '/quellen/': '/abfall/', '/recherche/': '/abfall/'};
   // Klartext für Statuscodes und englische Fachwörter. Der Code bleibt im Tooltip und in data-begriff erhalten.
   var BEGRIFFE = {
     APPROVED: ['freigegeben', 'Beziehung mit gelesener Quelle, ausdrücklich freigegeben (Status APPROVED).'],
@@ -68,6 +79,13 @@
     MENUE.forEach(function (m) { m[2].forEach(function (p) { if (pfad.indexOf(p) === 0 && p.length > len) { best = m; len = p.length; } }); });
     return best;
   }
+  function unterListe() {
+    var b = bereich(); if (!b) return null;
+    var best = null, len = -1;
+    for (var k in UNTER) if (pfad.indexOf(k) === 0 && k.length > len && b[2].some(function (p) { return k.indexOf(p) === 0; })) { best = k; len = k.length; }
+    for (var z in UNTER_ZU) if (pfad.indexOf(z) === 0) best = UNTER_ZU[z];
+    return UNTER[best || b[0]] || null;
+  }
   function el(tag, attrs, html) { var e = document.createElement(tag); for (var k in attrs) e.setAttribute(k, attrs[k]); if (html != null) e.innerHTML = html; return e; }
   function link(href, text, aktiv) { var a = el('a', {href: href}); a.textContent = text; if (aktiv) a.setAttribute('aria-current', 'page'); return a; }
 
@@ -78,14 +96,16 @@
       '<i><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></svg></i><span>marktatlas<b>.</b></span>'));
     var nav = el('nav', {'class': 'ss-menue', id: 'ss-menue', 'aria-label': 'Hauptmenü'});
     MENUE.forEach(function (m) {
-      var a = link(m[0], m[1], b === m); if (m[0] === '/begriffe/') a.className = 'ss-rechts'; nav.appendChild(a);
-      if (b === m && UNTER[m[0]]) {
+      var a = link(m[0], m[1], b === m); nav.appendChild(a);
+      var ul = b === m ? unterListe() : null;
+      if (ul) {
         var u = el('div', {'class': 'ss-menue-unter'});
-        UNTER[m[0]].forEach(function (x) { u.appendChild(link(x[0], x[1], x[0] === pfad)); });
+        ul.forEach(function (x) { u.appendChild(link(x[0], x[1], x[0] === pfad)); });
         nav.appendChild(u);
       }
     });
     kopf.appendChild(nav);
+    kopf.appendChild(el('a', {'class': 'ss-umschalter', href: ANNAHMEN_ATLAS, title: 'Zum Annahmen-Atlas wechseln'}, '<span class="an">Belegt</span><span>Annahmen</span>'));
     // Seiteneigene Bedienelemente (z. B. Quellen-Knopf der 2D-Karte) bleiben erhalten.
     if (alt) {
       var akt = el('div', {'class': 'ss-aktionen'});
@@ -108,9 +128,9 @@
     return kopf;
   }
   function unterBauen() {
-    var b = bereich(); if (!b || !UNTER[b[0]]) return null;
+    var b = bereich(), ul = unterListe(); if (!ul) return null;
     var nav = el('nav', {'class': 'ss-unter', 'data-site-shell': '', 'data-umschalter': '', 'aria-label': 'Seiten im Bereich ' + b[1]});
-    UNTER[b[0]].forEach(function (x) { nav.appendChild(link(x[0], x[1], x[0] === pfad)); });
+    ul.forEach(function (x) { nav.appendChild(link(x[0], x[1], x[0] === pfad)); });
     return nav;
   }
   function altenKopfFinden() {

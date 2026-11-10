@@ -14,6 +14,7 @@
 .atlas-modes{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;padding:3px;background:#09121e;border:1px solid #34465c;border-radius:7px;margin:8px 0}
 .atlas-modes button{min-height:40px;font-size:12px;letter-spacing:.04em;border-radius:4px}
 .atlas-modes button[aria-pressed=true]{background:#2b3b3b;color:var(--lime)}
+.atlas-kennzahlen{margin:8px 0}.atlas-kennzahlen>summary::before{content:'▸';margin-right:6px}.atlas-kennzahlen[open]>summary::before{content:'▾'}.atlas-kennzahlen>summary{list-style:none;cursor:pointer;font-size:12px;color:var(--muted);min-height:28px;display:flex;align-items:center}
 .atlas-dashboard{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;margin:8px 0}
 .atlas-dashboard span{border:1px solid #34465c;border-radius:5px;padding:6px;min-width:0}
 .atlas-dashboard strong,.atlas-dashboard small{display:block}.atlas-dashboard strong{font-size:18px;font-variant-numeric:tabular-nums}.atlas-dashboard small{font-size:11px;line-height:1.25;color:var(--muted)}
