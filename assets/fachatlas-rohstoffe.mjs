@@ -5,5 +5,6 @@ export const GENERATED={
  "graphit":{"label":"Graphit","area":null,"subtype":null,"sites":"graphit","tools":[["/graphit/","Graphit-Fachatlas"],["/graphit/markt/","Graphitmarkt"]],"generated":true},
  "lithium":{"label":"Lithium","area":null,"subtype":null,"sites":"lithium","tools":[["/lithium/","Lithium-Fachatlas"],["/lithium/markt/","Lithiummarkt"]],"generated":true},
  "seltene-erden":{"label":"Seltene Erden","area":null,"subtype":null,"sites":"seltene-erden","tools":[["/seltene-erden/","Seltene Erden-Fachatlas"],["/seltene-erden/markt/","Seltene Erdenmarkt"]],"generated":true},
- "uran":{"label":"Uran","area":null,"subtype":null,"sites":"uran","tools":[["/uran/","Uran-Fachatlas"],["/uran/markt/","Uranmarkt"]],"generated":true}
+ "uran":{"label":"Uran","area":null,"subtype":null,"sites":"uran","tools":[["/uran/","Uran-Fachatlas"],["/uran/markt/","Uranmarkt"]],"generated":true},
+ "wolfram":{"label":"Wolfram","area":null,"subtype":null,"sites":"wolfram","tools":[["/wolfram/","Wolfram-Fachatlas"],["/wolfram/markt/","Wolframmarkt"]],"generated":true}
 };
