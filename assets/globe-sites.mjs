@@ -2,6 +2,7 @@
  *  Coordinates and statuses are shown as reported; the panel never approves or completes a record. */
 import {escapeHtml as esc} from './map-logic.mjs';
 import {currentFach} from './fachatlas.mjs';
+import {verbindungHtml,nameKurz} from './verbindung-klartext.mjs';
 
 const num=n=>new Intl.NumberFormat('de-DE').format(n);
 const coord=n=>new Intl.NumberFormat('de-DE',{maximumFractionDigits:5}).format(n);
@@ -50,10 +51,15 @@ export async function attachSites(engine,host){
  }
  function source(s){return s.url&&/^https:\/\//.test(s.url)?`<a href="${esc(s.url)}" rel="noopener" target="_blank">${esc(s.label)}</a>`:esc(s.label);}
  function openLinks(list){
-  const l=list[0];
-  dialog.querySelector('#sites-dialog-title').textContent=`${l.from.name||'UNKNOWN'} → ${l.to.name||'UNKNOWN'}`;
-  dialog.querySelector('#sites-dialog-body').innerHTML=`<p class="dialog-lead">Verbindung aus dem Fachatlas ${esc(l.dataset.label)}: ${esc(l.type)}. Der Bogen ist schematisch zwischen den beiden gemeldeten Koordinaten gezeichnet, kein belegter Transportweg. Evidenz ${esc(l.evidence)}, Prüfstatus ${esc(l.audit)}; nichts ist freigegeben.</p><dl>${row(l.from)}${row(l.to)}</dl><p class="empty-note">Beziehung ${esc(l.id)}${l.source?` · Beleg der Beziehung: ${source(l.source)}`:''} · <a href="${esc(l.dataset.fachatlas)}">Fachatlas ${esc(l.dataset.label)}</a></p>`;
+  // Klartext oben (Eddie 2026-11-10): welche Verbindung, warum, wichtigste Angaben; Kennungen, Koordinaten und Rohquellen eingeklappt.
+  const l=list[0],x=data.link_info?.[l.id]||{};
+  dialog.querySelector('#sites-dialog-title').textContent=`${nameKurz(l.from.name)} → ${nameKurz(l.to.name)}`;
+  const fach=l.dataset.fachatlas?`<a href="${esc(l.dataset.fachatlas)}">Im Fachatlas ${esc(l.dataset.short||l.dataset.label)} ansehen</a>`:'';
+  const technik=`<p>Der Bogen ist schematisch zwischen den beiden gemeldeten Koordinaten gezeichnet, kein belegter Transportweg. Evidenz ${esc(l.evidence)}, Prüfstatus ${esc(l.audit)}. Datensatz: ${esc(l.dataset.label)}.</p><dl>${row(l.from)}${row(l.to)}</dl><p class="empty-note">Beziehung ${esc(l.id)}${l.source?` · Beleg der Beziehung: ${source(l.source)}`:''}</p>`;
+  dialog.querySelector('#sites-dialog-body').innerHTML=verbindungHtml({typ:l.type,von:{name:l.from.name,art:l.from.kind,land:l.from.country},nach:{name:l.to.name,art:l.to.kind,land:l.to.country},
+   rohstoff:['standorte','rohstoffwelt'].includes(l.dataset.id)?null:(l.dataset.short||l.dataset.label),material:x.m,anteil:x.p,evidenz:l.evidence,pruef:l.audit,aussage:x.a,zitat:x.z,beleg:l.source},{technik,aktionen:fach});
   if(!dialog.open)dialog.showModal();
+  dialog.querySelector('#sites-dialog-body').scrollTop=0;
  }
  function open(list){
   dialog.querySelector('#sites-dialog-title').textContent=list.length===1?list[0].name||'Standort':`${num(list.length)} Standorte an dieser Stelle`;

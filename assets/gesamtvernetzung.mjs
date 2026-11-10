@@ -67,7 +67,7 @@ export function stufeBeziehung(d){
  if(d.relationType==='supply')return 'Abnehmer';
  return 'Eigentum & Kapital';
 }
-export function evidenz(status,audit){return (status||'UNKNOWN')+(audit==='FREIGEGEBEN'?' · freigegeben':'');}
+export function evidenz(status,audit){return (status||'UNKNOWN')+(audit==='FREIGEGEBEN'||audit==='APPROVED'?' · freigegeben':'');}
 
 /** Fraktionen einer Atlas-Beziehung (atlas-logic Kante) und einer Fachatlas-Verbindung (globe-sites Link). */
 export function fraktionBeziehung(d,entities){
