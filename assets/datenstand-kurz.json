@@ -1,0 +1,105 @@
+{
+ "erzeugt_von": "scripts/analysis/aktualitaet/build_datenstand.py",
+ "fest": {
+  "aeltester_letzter_abruf": "2026-09-05",
+  "datensaetze": 18,
+  "neuester_abruf": "2026-11-10",
+  "text": "Globus- und Grunddaten: fester Datenstand, neu gelesen nur bei einem Neubau des Datensatzes."
+ },
+ "schema": "atlas.datenstand-kurz/1",
+ "taeglich": {
+  "kupfer": {
+   "abgerufen": "2026-11-11",
+   "datum": "2026-11-10",
+   "drei_monate_usd_t": 13830.0,
+   "herausgeber": "London Metal Exchange (LME), wiedergegeben von Westmetall",
+   "kasse_usd_t": 13992.0,
+   "lagerbestand_t": 316625,
+   "quelle_url": "https://www.westmetall.com/en/markdaten.php?action=table&field=LME_Cu_cash",
+   "veraenderung_kasse_pct": -0.27
+  },
+  "meldungen": {
+   "abgerufen": "2026-11-11",
+   "anzahl_14_tage": 0,
+   "hinweis": "Presse-Meldungen, automatisch gefunden. Nur Hinweise auf moegliche Engpaesse, nie Fakten oder Freigaben.",
+   "neueste": []
+  },
+  "quellen": [
+   {
+    "abgerufen": "2026-11-11",
+    "id": "gdelt-engpass-meldungen",
+    "status": "TEILWEISE",
+    "titel": "Presse-Meldungen zu Lieferengpässen (täglich, GDELT, nur Hinweise)"
+   },
+   {
+    "abgerufen": "2026-11-11",
+    "id": "lme-kupfer-westmetall",
+    "status": "GELADEN",
+    "titel": "LME Kupfer: Kassakurs, 3-Monats-Kurs und Lagerbestand (täglich, über Westmetall)"
+   }
+  ],
+  "text": "Jede Nacht neu gelesen. Kein Echtzeit-Strom: der Wert gilt für den genannten Handelstag."
+ },
+ "woechentlich": {
+  "geladen": [
+   {
+    "abgerufen": "2026-11-10",
+    "id": "eurostat-comext-eu-einfuhr",
+    "status": "GELADEN",
+    "titel": "Eurostat Comext: EU-Einfuhren kritischer Rohstoffe nach Herkunftsland (monatlich)"
+   },
+   {
+    "abgerufen": "2026-11-10",
+    "id": "gleif-lei",
+    "status": "GELADEN",
+    "titel": "GLEIF: LEI-Einträge der Atlas-Firmen (Name, Status, Handelsregister)"
+   },
+   {
+    "abgerufen": "2026-11-10",
+    "id": "wikidata-boersenfirmen",
+    "status": "GELADEN",
+    "titel": "Wikidata: börsennotierte Firmen mit Hauptsitz (Abgleich mit dem Globus)"
+   }
+  ],
+  "gesperrt": [
+   {
+    "abgerufen": null,
+    "id": "sanktionen-eu",
+    "status": "GESPERRT",
+    "titel": "EU-Finanzsanktionsliste"
+   },
+   {
+    "abgerufen": null,
+    "id": "sanktionen-ofac",
+    "status": "GESPERRT",
+    "titel": "OFAC SDN-Liste (USA)"
+   },
+   {
+    "abgerufen": null,
+    "id": "sanktionen-uk",
+    "status": "GESPERRT",
+    "titel": "UK-Sanktionsliste"
+   },
+   {
+    "abgerufen": null,
+    "id": "sanktionen-un",
+    "status": "GESPERRT",
+    "titel": "UN-Sanktionsliste (Sicherheitsrat)"
+   },
+   {
+    "abgerufen": null,
+    "id": "sec-edgar",
+    "status": "GESPERRT",
+    "titel": "SEC EDGAR Meldungen (USA)"
+   },
+   {
+    "abgerufen": null,
+    "id": "weltbank-pink-sheet",
+    "status": "GESPERRT",
+    "titel": "Weltbank Rohstoffpreise (Pink Sheet, monatlich)"
+   }
+  ],
+  "letzter_lauf": "2026-11-10",
+  "text": "Wöchentlich automatisch neu gelesen; Änderungen werden Prüfaufträge, nie Freigaben."
+ }
+}

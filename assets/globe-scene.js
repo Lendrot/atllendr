@@ -33,7 +33,7 @@ export function createGlobe(host,callbacks={}){
   renderer.domElement.setAttribute('aria-label','3D-Erde: Ziehen zum Drehen, Mausrad oder zwei Finger zum Zoomen. Pfeiltasten drehen; Plus und Minus zoomen. Alle Einträge sind auch in der Liste erreichbar.');
   const controls=new GlobeNavigation(camera,renderer.domElement,{
     onStart:()=>{flight=null;stopRotation();callbacks.onHover?.(null);},
-    onHover:event=>{if(introHidden)return;if(!event){callbacks.onHover?.(null);return;}const hit=pick(event,false);renderer.domElement.style.cursor=hit?'pointer':'grab';callbacks.onHover?.(hit?.deal||null,event.clientX,event.clientY);},
+    onHover:event=>{if(introHidden)return;if(!event){callbacks.onHover?.(null);return;}const hit=pick(event,false);renderer.domElement.style.cursor=hit?'pointer':'grab';callbacks.onHover?.(hit?.deal||null,event.clientX,event.clientY);if(!hit&&callbacks.onSiteLinkHover){const l=pickLink(event);if(l)renderer.domElement.style.cursor='pointer';callbacks.onSiteLinkHover(l,event.clientX,event.clientY);}},
     onTap:event=>{if(introHidden)return;const hit=pick(event,true);if(hit?.deal)callbacks.onDealClick?.(hit.deal.id);else if(hit?.companies)callbacks.onCompanyClick?.(hit.companies);else if(hit?.sites)callbacks.onSiteClick?.(hit.sites);else if(hit?.links)callbacks.onSiteLinkClick?.(hit.links);}
  
   },host.parentElement);
@@ -187,10 +187,10 @@ export function createGlobe(host,callbacks={}){
   // width (follows the zoom), dashes (open/pending, money), dimming on selection, filter visibility and the pulses.
   // Picking still uses an invisible thin line per relation, so clicks and tooltips work as before.
   const RIBBON_STEPS=48,pickMaterial=new THREE.LineBasicMaterial({visible:false}),ribbonUniforms={uTime:{value:0},uScale:{value:1}};
-  const ribbonVertex='attribute vec3 aSide;attribute float aT;attribute float aAcross;attribute vec3 aColor;attribute float aEntry;attribute float aStyle;attribute float aFlow;attribute float aVisible;attribute float aLen;'+
+  const ribbonVertex='attribute vec3 aSide;attribute float aT;attribute float aAcross;attribute vec3 aColor;attribute float aEntry;attribute float aStyle;attribute float aFlow;attribute float aVisible;attribute float aLen;attribute float aWidth;'+
     'uniform float uScale;uniform float uSelected;varying float vT;varying float vAcross;varying vec3 vColor;varying float vStyle;varying float vFlow;varying float vAlpha;varying float vLen;varying float vPhase;varying float vHead;'+
     'void main(){float sel=uSelected<0.0?0.0:(abs(aEntry-uSelected)<0.5?1.0:-1.0);float H=clamp(22.0*uScale/max(aLen,.001),.08,.3);'+
-    'float w=(aT<1.0-H?.35+.65*smoothstep(0.0,.3,aT/(1.0-H)):3.2*(1.0-aT)/H)*uScale*(sel>.5?1.8:1.0);vHead=aT>1.0-H+.001?1.0:0.0;'+
+    'float w=(aT<1.0-H?.35+.65*smoothstep(0.0,.3,aT/(1.0-H)):3.2*(1.0-aT)/H)*uScale*aWidth*(sel>.5?1.8:1.0);vHead=aT>1.0-H+.001?1.0:0.0;'+
     'vT=aT;vAcross=aAcross;vColor=aColor;vStyle=aStyle;vFlow=aFlow;vLen=aLen;vPhase=fract(aEntry*.173);vAlpha=aVisible*(sel<-.5?.13:1.0);'+
     'gl_Position=projectionMatrix*modelViewMatrix*vec4(position+aSide*aAcross*w,1.0);}';
   const ribbonFragment='uniform float uTime;uniform float uFlowOn;uniform float uBase;varying float vT;varying float vAcross;varying vec3 vColor;varying float vStyle;varying float vFlow;varying float vAlpha;varying float vLen;varying float vPhase;varying float vHead;'+
@@ -200,9 +200,9 @@ export function createGlobe(host,callbacks={}){
     'float edge=1.0-smoothstep(.45,1.0,abs(vAcross));'+
     'gl_FragColor=vec4(mix(vColor,vec3(1.0),max(pulse*.6,vHead*.22)),vAlpha*edge*(.45+.55*vT)*(uBase+(1.0-uBase)*max(pulse,vHead*.6)));}';
   function ribbonMesh(items){
-    // items: {points (RIBBON_STEPS+1 Vector3), color, style 0 solid | 1 dashed | 2 money, flow 0|1}
+    // items: {points (RIBBON_STEPS+1 Vector3), color, style 0 solid | 1 dashed | 2 money, flow 0|1, width (factor, default 1; Bogenstärke nach Menge, menge-wert.mjs)}
     const n=items.length*(RIBBON_STEPS+1)*2,f3=()=>new Float32Array(n*3),f1=()=>new Float32Array(n);
-    const pos=f3(),side=f3(),color=f3(),t=f1(),across=f1(),entry=f1(),style=f1(),flow=f1(),visible=f1().fill(1),len=f1();
+    const pos=f3(),side=f3(),color=f3(),t=f1(),across=f1(),entry=f1(),style=f1(),flow=f1(),visible=f1().fill(1),len=f1(),width=f1();
     const index=new Uint32Array(items.length*RIBBON_STEPS*6),c=new THREE.Color(),tangent=new THREE.Vector3(),normal=new THREE.Vector3(),s=new THREE.Vector3();
     let v=0,k=0;
     items.forEach((item,e)=>{
@@ -210,12 +210,12 @@ export function createGlobe(host,callbacks={}){
       c.setHex(item.color,THREE.LinearSRGBColorSpace);item.start=v;item.count=p.length*2;
       for(let i=0;i<p.length;i++){
         tangent.subVectors(p[Math.min(i+1,p.length-1)],p[Math.max(i-1,0)]);normal.copy(p[i]).normalize();s.crossVectors(tangent,normal).normalize();
-        for(const a of [-1,1]){pos.set(p[i].toArray(),v*3);side.set(s.toArray(),v*3);c.toArray(color,v*3);t[v]=i/(p.length-1);across[v]=a;entry[v]=e;style[v]=item.style;flow[v]=item.flow;len[v]=length;v++;}
+        for(const a of [-1,1]){pos.set(p[i].toArray(),v*3);side.set(s.toArray(),v*3);c.toArray(color,v*3);t[v]=i/(p.length-1);across[v]=a;entry[v]=e;style[v]=item.style;flow[v]=item.flow;len[v]=length;width[v]=item.width??1;v++;}
         if(i)index.set([v-4,v-3,v-2,v-3,v-1,v-2],(k++)*6);
       }
     });
     const geometry=new THREE.BufferGeometry();
-    for(const [name,array,size] of [['position',pos,3],['aSide',side,3],['aColor',color,3],['aT',t,1],['aAcross',across,1],['aEntry',entry,1],['aStyle',style,1],['aFlow',flow,1],['aVisible',visible,1],['aLen',len,1]])geometry.setAttribute(name,new THREE.BufferAttribute(array,size));
+    for(const [name,array,size] of [['position',pos,3],['aSide',side,3],['aColor',color,3],['aT',t,1],['aAcross',across,1],['aEntry',entry,1],['aStyle',style,1],['aFlow',flow,1],['aVisible',visible,1],['aLen',len,1],['aWidth',width,1]])geometry.setAttribute(name,new THREE.BufferAttribute(array,size));
     geometry.setIndex(new THREE.BufferAttribute(index,1));
     const material=new THREE.ShaderMaterial({uniforms:{...ribbonUniforms,uSelected:{value:-1},uFlowOn:{value:reduced?0:1},uBase:{value:.62}},vertexShader:ribbonVertex,fragmentShader:ribbonFragment,transparent:true,depthWrite:false,side:THREE.DoubleSide});
     const mesh=new THREE.Mesh(geometry,material);mesh.frustumCulled=false;mesh.raycast=()=>{};return mesh;
@@ -278,7 +278,7 @@ export function createGlobe(host,callbacks={}){
     const items=records.map((r,k)=>{
       const points=Array.from({length:RIBBON_STEPS+1},(_,i)=>vec(arcSample(r.from,r.to,i/RIBBON_STEPS,0,.55)));
       for(let i=0;i<LINK_STEPS;i++){const o=(k*LINK_STEPS+i)*6;pos.set(arcSample(r.from,r.to,i/LINK_STEPS,0,.55),o);pos.set(arcSample(r.from,r.to,(i+1)/LINK_STEPS,0,.55),o+3);}
-      return {points,color:r.color??0x85caff,style:0,flow:1};
+      return {points,color:r.color??0x85caff,style:0,flow:1,width:r.width??1};
     });
     const geometry=new THREE.BufferGeometry();geometry.setAttribute('position',new THREE.BufferAttribute(pos,3));
     siteLinks=new THREE.LineSegments(geometry,pickMaterial);siteLinks.visible=sitesVisible;
@@ -344,6 +344,18 @@ export function createGlobe(host,callbacks={}){
     const link=layers.lines&&siteLinks?.visible?raycaster.intersectObject(siteLinks).find(h=>!ground||h.distance<ground.distance+1):null;
     if(link)return {links:[siteLinkRecords[Math.floor(link.index/2/LINK_STEPS)]]};
     return null;
+  }
+  // Überfahren einer Fachatlas-Verbindung (Eddie 2026-11-11: Menge und Wert direkt am Bogen): höchstens alle 80 ms ein Treffertest.
+  let linkPickAt=0,linkPickLast=null;
+  function pickLink(event){
+    const now=performance.now();if(now-linkPickAt<80)return linkPickLast;linkPickAt=now;
+    if(!layers.lines||!siteLinks?.visible){linkPickLast=null;return null;}
+    const rect=canvas.getBoundingClientRect();pointer.x=(event.clientX-rect.left)/rect.width*2-1;pointer.y=-(event.clientY-rect.top)/rect.height*2+1;
+    raycaster.setFromCamera(pointer,camera);
+    const groundPoint=raycaster.ray.intersectSphere(new THREE.Sphere(new THREE.Vector3(),100),new THREE.Vector3()),ground=groundPoint?camera.position.distanceTo(groundPoint):null;
+    raycaster.params.Line.threshold=Math.max(.025,(camera.position.length()-100)*Math.tan(camera.fov*Math.PI/360)*2/size.height*8);
+    const hit=raycaster.intersectObject(siteLinks,false).find(h=>ground==null||h.distance<ground+1);
+    linkPickLast=hit?siteLinkRecords[Math.floor(hit.index/2/LINK_STEPS)]:null;return linkPickLast;
   }
   canvas.addEventListener('keydown',event=>{
     if(introHidden)return;

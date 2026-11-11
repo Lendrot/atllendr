@@ -30,3 +30,6 @@
 @media(max-width:760px){.sites-toggle{left:10px;bottom:52px;font-size:12px;padding:7px 9px;max-width:calc(100% - 65px)}.sites-toggle>strong{display:none}}
 .sites-toggle input:checked+.checkbox-ui:after{content:"";width:7px;height:4px;position:absolute;left:3px;top:3px;border-left:2px solid #1b2d3d;border-bottom:2px solid #1b2d3d;transform:rotate(-45deg)}
 .sites-toggle .site-short{display:none}@media(max-width:760px){.sites-toggle{flex-direction:row;flex-wrap:wrap;gap:2px 10px}.sites-toggle .site-long{display:none}.sites-toggle .site-short{display:inline}.sites-toggle b{padding-left:4px}}
+.mw-box:empty{display:none}.mw-legende{font-size:12px;line-height:1.45;border-top:1px solid #263449;padding-top:6px;margin-top:2px;max-width:330px}.mw-legende b{font-weight:600;margin:0;padding:0}.mw-legende .mw-stufe{display:inline-flex;align-items:center;margin-right:8px;white-space:nowrap}
+@media(max-width:760px){.mw-box{flex-basis:100%}.mw-legende{border:0;padding-top:0;margin-top:0;font-size:11px;white-space:nowrap;overflow:hidden}.mw-legende small,.mw-legende b,.mw-legende .mw-stufe:last-of-type{display:none}.mw-legende:before{content:"Bogen = Menge/Jahr: ";font-weight:600}.mw-legende .mw-stufe{margin-right:5px}.mw-legende i{width:16px!important;margin-right:3px!important}}
+.mw-quelle{font-size:13px}

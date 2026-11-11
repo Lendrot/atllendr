@@ -3,6 +3,7 @@
 import {escapeHtml as esc} from './map-logic.mjs';
 import {currentFach} from './fachatlas.mjs';
 import {verbindungHtml,nameKurz} from './verbindung-klartext.mjs';
+import {skala,legendeHtml,mengeWert} from './menge-wert.mjs';
 
 const num=n=>new Intl.NumberFormat('de-DE').format(n);
 const coord=n=>new Intl.NumberFormat('de-DE',{maximumFractionDigits:5}).format(n);
@@ -34,9 +35,14 @@ export async function attachSites(engine,host){
  const dialog=document.createElement('dialog');dialog.id='sites-dialog';dialog.setAttribute('aria-labelledby','sites-dialog-title');
  dialog.innerHTML='<div class="dialog-top"><h2 id="sites-dialog-title"></h2><button class="icon-button" id="sites-dialog-close" aria-label="Schließen">×</button></div><div id="sites-dialog-body"></div>';
  document.body.append(dialog);dialog.querySelector('#sites-dialog-close').onclick=()=>dialog.close();
+ // Bogenstärke nach Menge pro Jahr (Eddie 2026-11-11): nur Mengen laut Quelle (link_info j); ohne Menge dünn. Skala je Ansicht.
+ const legende=document.createElement('div');legende.className='mw-box';panel.append(legende);
  function apply(){
   engine.setSites(records.filter(r=>r&&state[r.dataset.id]));
-  engine.setSiteLinks?.(linkFilter?allLinks.flatMap(l=>{const c=linkFilter(l);return c==null?[]:[{...l,color:c}];}):links.filter(l=>state[l.dataset.id]));
+  const drawn=linkFilter?allLinks.flatMap(l=>{const c=linkFilter(l);return c==null?[]:[{...l,color:c}];}):links.filter(l=>state[l.dataset.id]);
+  const jt=l=>{const j=data.link_info?.[l.id]?.j;return j&&j[1]===1?j[0]:null;},sk=skala(drawn.map(jt));
+  engine.setSiteLinks?.(drawn.map(l=>({...l,width:sk.f(jt(l))})));
+  legende.innerHTML=drawn.length?legendeHtml(sk,drawn.length,false):'';
   const url=new URL(location.href),on=datasets.filter(d=>state[d.id]).map(d=>d.id);
   if(on.length===datasets.length)url.searchParams.delete('sites');else url.searchParams.set('sites',on.join(','));
   if(url.href!==location.href)history.replaceState(history.state,'',url);
@@ -53,7 +59,12 @@ export async function attachSites(engine,host){
  // Gleiche Angaben an jeder Verbindung (Eddie 2026-11-10): Menge und Stand stehen immer da, ohne Beleg als „unbekannt“.
  // Menge entfällt nur bei Eigentum, Betrieb und Kontrolle (dort zählt der Anteil, es wird keine Ware bewegt).
  const OHNE_MENGE=new Set(['OWNS','PARTIALLY_OWNS','OPERATES','CONTROLS','HEADQUARTERS','betreibt']);
- function gleicheAngaben(l,x){return[...(OHNE_MENGE.has(l.type)?[]:[['Menge',x.q||'unbekannt']]),['Stand',x.t||'unbekannt']];}
+ // Menge und Wert (Eddie 2026-11-11): Wert = Menge laut Quelle × Referenzpreis (menge-wert.mjs), nur bei passender Preisbasis; sonst unbekannt.
+ const mengeVon=x=>mengeWert({t:x.j?.[0],jahr:x.j?.[1]===1,text:x.q,basis:x.b,wertQuelle:x.g,umrechnung:x.j?.[2]},false);
+ function gleicheAngaben(l,x){return[...(OHNE_MENGE.has(l.type)?[]:mengeVon(x).zeilen),['Stand',x.t||'unbekannt'],...(x.l?[['Länderstrom (Handelsstatistik, keine Firmenmenge)',x.l.map(z=>z[0]).join(' · ')]]:[])];}
+ // Länderstrom (2026-11-11): amtlicher Länderhandel als Rahmen, nie Menge dieser Verbindung; Link zur gespeicherten Eurostat-Abfrage.
+ const laenderLinks=x=>(x.l||[]).filter(z=>z[1]&&/^https:\/\//.test(z[1])).map((z,i)=>`<a class="vk-laenderstrom" href="${esc(z[1])}" target="_blank" rel="noopener">Eurostat-Abfrage${x.l.length>1?' '+(i+1):''} ↗</a>`).join(' · ');
+ function kurz(l){const x=data.link_info?.[l.id]||{};return {titel:`${nameKurz(l.from.name)} → ${nameKurz(l.to.name)}`,text:OHNE_MENGE.has(l.type)?'Eigentum oder Betrieb, keine Warenlieferung':mengeVon(x).kurz};}
  function openLinks(list){
   // Klartext oben (Eddie 2026-11-10): welche Verbindung, warum, wichtigste Angaben; Kennungen, Koordinaten und Rohquellen eingeklappt.
   const l=list[0],x=data.link_info?.[l.id]||{};
@@ -62,7 +73,7 @@ export async function attachSites(engine,host){
   const technik=`<p>Der Bogen ist schematisch zwischen den beiden gemeldeten Koordinaten gezeichnet, kein belegter Transportweg. Evidenz ${esc(l.evidence)}, Prüfstatus ${esc(l.audit)}. Datensatz: ${esc(l.dataset.label)}.</p><dl>${row(l.from)}${row(l.to)}</dl><p class="empty-note">Beziehung ${esc(l.id)}${l.source?` · Beleg der Beziehung: ${source(l.source)}`:''}</p>`;
   dialog.querySelector('#sites-dialog-body').innerHTML=verbindungHtml({typ:l.type,von:{name:l.from.name,art:l.from.kind,land:l.from.country},nach:{name:l.to.name,art:l.to.kind,land:l.to.country},
    rohstoff:['standorte','rohstoffwelt'].includes(l.dataset.id)?null:(l.dataset.short||l.dataset.label),material:x.m,entsteht:x.n,anteil:x.p,evidenz:l.evidence,pruef:l.audit,aussage:x.a,zitat:x.z,beleg:l.source,extra:gleicheAngaben(l,x),
-   verwendung:x.v?{zweck:x.v[0],wie:'belegt',zitat:x.v[1],beleg:{label:x.v[3],url:x.v[2]}}:null},{technik,aktionen:fach});
+   verwendung:x.v?{zweck:x.v[0],wie:'belegt',zitat:x.v[1],beleg:{label:x.v[3],url:x.v[2]}}:null},{technik,aktionen:[OHNE_MENGE.has(l.type)?'':mengeVon(x).quelleHtml,laenderLinks(x),fach].filter(Boolean).join(' · ')});
   if(!dialog.open)dialog.showModal();
   dialog.querySelector('#sites-dialog-body').scrollTop=0;
  }
@@ -74,5 +85,5 @@ export async function attachSites(engine,host){
  apply();
  // Firmensuche (Eddie 2026-11-10): Standorte, deren Name nach Normalisierung gleich dem gesuchten Namen ist; Konzernsitze zuerst.
  const finde=(t,nrm)=>records.filter(r=>r&&r.name&&nrm(r.name)===t).sort((a,b)=>(b.dataset.id==='standorte')-(a.dataset.id==='standorte'));
- return {open,openLinks,finde,counts:data.counts,allLinks,setLinkFilter:fn=>{linkFilter=fn;apply();}};
+ return {open,openLinks,kurz,finde,counts:data.counts,allLinks,setLinkFilter:fn=>{linkFilter=fn;apply();}};
 }

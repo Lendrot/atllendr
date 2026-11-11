@@ -65,3 +65,4 @@ body.gesamt-aktiv .space-top .direction-key{display:none}
 @media(max-width:760px){#app .gesamt-panel{left:8px;right:76px;top:auto;bottom:48px;width:auto;max-height:42%}}
 @media(max-width:760px){#app .gesamt-panel:has(.vf-zu){right:auto;padding:4px 6px 4px 10px;max-width:calc(100% - 84px)}}
 .atlas-firma-hinweis{margin:6px 8px;font-size:13px;line-height:1.45;color:var(--muted)}.atlas-firma-hinweis a{color:#8fd0ff}
+@media(max-width:760px){#app footer>span:first-child span{display:inline}#app footer #data-frische{display:none}#app footer #data-date::after{content:" · "}}
