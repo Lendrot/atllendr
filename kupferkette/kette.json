@@ -1,0 +1,3805 @@
+{
+ "schema": "atlas.kupferkette-globus/4",
+ "erzeugt_von": "scripts/analysis/kupferkette/kupferkette.py",
+ "db_schema": "atlas.datenbasis/1",
+ "rohstoff": "Kupfer",
+ "kette": "Kamoa-Kakula -> Aurubis -> Prysmian",
+ "auftrag": "Eddie Sablah 2026-11-11: exakt ein Rohstoff, exakt eine Lieferkette, komplettes Ende-zu-Ende-System von der Datenbank bis zum 3D-Globus.",
+ "begruendung": "Pilotkette Prysmian (Projektschwerpunkt seit 2026-11-04). Einzige Kupferkette im Hauptatlas, die von der Mine bis zu einem europaeischen Kabelhersteller reicht und deren Glieder im Freigabe-Ledger stehen (7 von 8 Verbindungen APPROVED). Diese Datei waehlt nur aus; alle Werte, Zitate und Freigaben liest kupferkette.py aus den Quell-Datensaetzen.",
+ "stand": "2026-11-11",
+ "kundenfrage": {
+  "kette_id": "K-KAMOA-KAKULA-AURUBIS-PRYSMIAN",
+  "kunde": "Prysmian",
+  "frage": "Woher kommt das Kupfer, das Prysmian von Aurubis bezieht, über welche Glieder läuft es, in welcher Menge, und welche Glieder sind belegt?"
+ },
+ "ansichten": {
+  "belegt": "Nur Ebene BELEGT: Angaben mit Quelle und Zitat; Unbekanntes bleibt unbekannt.",
+  "annahmen": "Belegt plus Ebene ANNAHME aus dem Annahmen-Atlas: begruendete Annahmen mit Art und Konfidenz, als Annahme markiert, nie belegt."
+ },
+ "regeln": [
+  "Jede belegte Angabe mit Quelle, woertlichem Zitat (gegen gepinnte Textkopie geprueft), Evidenzstatus und Stand.",
+  "FREIGEGEBEN nur mit Ledger-Eintrag APPROVED oder dokumentierter Entscheidung; sonst KANDIDAT.",
+  "UNKNOWN bleibt UNKNOWN: kein Wert, Grund sichtbar. Kein Lieferwert aus Menge x Preis.",
+  "Eigentuemer und Risiken nur mit Quelle und Zitat; Rechnung nur als reine Arithmetik aus belegten Werten, Formel sichtbar.",
+  "Annahmen stehen in eigener Ebene mit Begruendung und Konfidenz; sie werden nie FACT oder FREIGEGEBEN."
+ ],
+ "zaehler": {
+  "standorte": 8,
+  "standorte_mit_ort": 8,
+  "firmen": 4,
+  "verbindungen": 8,
+  "verbindungen_freigegeben": 7,
+  "verbindungen_kandidat": 1,
+  "verbindungen_fact": 8,
+  "mengen_belegt": 6,
+  "mengen_unbekannt": 17,
+  "verbindungen_mit_liefermenge": 0,
+  "annahmen_verbindungen": 2,
+  "annahmen_mengen": 10,
+  "verbindungen_mit_liefermenge_inkl_annahmen": 10,
+  "eigentum_angaben": 10,
+  "eigentum_freigegeben": 5,
+  "risiko_angaben": 8,
+  "quellen": 23,
+  "belege": 52
+ },
+ "quellen": {
+  "annahmen-atlas": {
+   "quelle_id": "annahmen-atlas",
+   "herausgeber": "Annahmen-Atlas (Lendrot/atlaslendrot)",
+   "titel": "annahmen/annahmen-welt.json, Stand 2026-11-03",
+   "url": "https://github.com/Lendrot/atlaslendrot/blob/60e03b84339c9a7be8ea763e346897ad903c1a29/annahmen/annahmen-welt.json",
+   "art": "ANNAHMEN_ATLAS",
+   "veroeffentlicht": "2026-11-03",
+   "abgerufen": "2026-11-11",
+   "textkopie": "analysis/kupferkette/annahmen-snapshot.json",
+   "textkopie_sha256": null
+  },
+  "cc2:cc2-src-001": {
+   "quelle_id": "cc2:cc2-src-001",
+   "herausgeber": "Kitco News (Reuters-Agenturmeldung, off the wire)",
+   "titel": "Salzgitter says it has no plans to exit Aurubis",
+   "url": "https://www.kitco.com/news/off-the-wire/2025-11-10/salzgitter-says-it-has-no-plans-exit-aurubis",
+   "art": "REPUTABLE_SECONDARY",
+   "veroeffentlicht": "2025-11-10",
+   "abgerufen": "2026-11-02",
+   "textkopie": "analysis/research/company-connections-v2/raw/b1-kitco_salzgitter_aurubis.txt",
+   "textkopie_sha256": "a955654f5667bbfbc4077374189d87d6deb3bd321d53f68cf154bb3c855038e5"
+  },
+  "cc3:cc3-src-001": {
+   "quelle_id": "cc3:cc3-src-001",
+   "herausgeber": "Aurubis AG",
+   "titel": "Prysmian and Aurubis deepen strategic partnership with landmark long-term copper agreement",
+   "url": "https://www.aurubis.com/en/media/press-releases/press-releases-2026/prysmian-and-aurubis-deepen-strategic-partnership-with-landmark-long-term-copper-agreement",
+   "art": "PRIMARY_COMPANY",
+   "veroeffentlicht": "2026-09-23",
+   "abgerufen": "2026-11-03",
+   "textkopie": "analysis/research/company-connections-v3/raw/aurubis-prysmian-2026.txt",
+   "textkopie_sha256": "43463970228eddc802b52f1807149b62aac9654e2914b79fee33d5c23c5e72cc"
+  },
+  "kb:ivn_disruption2025": {
+   "quelle_id": "kb:ivn_disruption2025",
+   "herausgeber": "Ivanhoe Mines",
+   "titel": "disruption2025",
+   "url": "https://www.ivanhoemines.com/news-stories/news-release/ivanhoe-mines-reports-temporary-interruption-of-underground-mining-at-kakula-mine/",
+   "art": "COMPANY_PRIMARY",
+   "veroeffentlicht": "2025-05-20",
+   "abgerufen": "2026-10-07",
+   "textkopie": null,
+   "textkopie_sha256": null
+  },
+  "kb:ivn_fy2025": {
+   "quelle_id": "kb:ivn_fy2025",
+   "herausgeber": "Ivanhoe Mines",
+   "titel": "fy2025",
+   "url": "https://www.ivanhoemines.com/news-stories/news-release/ivanhoe-mines-issues-2025-fourth-quarter-and-annual-financial-results/",
+   "art": "COMPANY_PRIMARY",
+   "veroeffentlicht": "2026-02-18",
+   "abgerufen": "2026-10-07",
+   "textkopie": null,
+   "textkopie_sha256": null
+  },
+  "kb:ivn_offtake2021": {
+   "quelle_id": "kb:ivn_offtake2021",
+   "herausgeber": "Ivanhoe Mines",
+   "titel": "offtake2021",
+   "url": "https://www.ivanhoemines.com/news-stories/news-release/kamoa-kakulas-off-take-agreements-signed-for-phase-1-blister-copper-and-copper-concentrate/",
+   "art": "COMPANY_PRIMARY",
+   "veroeffentlicht": "2021-06-09",
+   "abgerufen": "2026-10-07",
+   "textkopie": null,
+   "textkopie_sha256": null
+  },
+  "kb:ivn_q12026": {
+   "quelle_id": "kb:ivn_q12026",
+   "herausgeber": "Ivanhoe Mines",
+   "titel": "q12026",
+   "url": "https://www.ivanhoemines.com/news-stories/news-release/ivanhoe-mines-issues-2026-first-quarter-financial-results-overview-of-operations-and-exploration-activities/",
+   "art": "COMPANY_PRIMARY",
+   "veroeffentlicht": "2026-05-06",
+   "abgerufen": "2026-10-07",
+   "textkopie": null,
+   "textkopie_sha256": null
+  },
+  "kb:traf_anodes2026": {
+   "quelle_id": "kb:traf_anodes2026",
+   "herausgeber": "Trafigura",
+   "titel": "trafigura-anodes2026",
+   "url": "https://www.trafigura.com/news-and-insights/press-releases/2026/trafigura-aurubis-and-kamoa-copper-complete-first-sale-of-low-carbon-refined-copper-via-the-lobito-atlantic-railway/",
+   "art": "COMPANY_PRIMARY",
+   "veroeffentlicht": "2026-02-19",
+   "abgerufen": "2026-10-07",
+   "textkopie": null,
+   "textkopie_sha256": null
+  },
+  "kk-aurubis-ar-2024-25-s111": {
+   "quelle_id": "kk-aurubis-ar-2024-25-s111",
+   "herausgeber": "Aurubis AG",
+   "titel": "Annual Report 2024/25, Shareholder structure",
+   "url": "https://www.aurubis.com/en/dam/jcr:ee11db35-01e5-45e0-8653-cd678d233be1/Aurubis_Annual%20Report_FY%202024_25%20(1).pdf#page=111",
+   "art": "COMPANY_PRIMARY",
+   "veroeffentlicht": null,
+   "abgerufen": "2026-11-11",
+   "textkopie": "analysis/kupferkette/raw/aurubis-ar-2024-25-p111.txt",
+   "textkopie_sha256": "3eeec2ba7ab3448c4bd296b282fdf5d5819b1ac22667b243aba49d6458ab1f73"
+  },
+  "kk-aurubis-ar-2024-25-s247": {
+   "quelle_id": "kk-aurubis-ar-2024-25-s247",
+   "herausgeber": "Aurubis AG",
+   "titel": "Annual Report 2024/25, Shareholdings exceeding 10 % of the voting rights",
+   "url": "https://www.aurubis.com/en/dam/jcr:ee11db35-01e5-45e0-8653-cd678d233be1/Aurubis_Annual%20Report_FY%202024_25%20(1).pdf#page=247",
+   "art": "COMPANY_PRIMARY",
+   "veroeffentlicht": null,
+   "abgerufen": "2026-11-11",
+   "textkopie": "analysis/kupferkette/raw/aurubis-ar-2024-25-p247.txt",
+   "textkopie_sha256": "479bd7260d1f59cedddcc494960175b23fc98a1f364b6d145509bc9bb2f452bd"
+  },
+  "kk-prysmian-ar-2025-s22": {
+   "quelle_id": "kk-prysmian-ar-2025-s22",
+   "herausgeber": "Prysmian S.p.A.",
+   "titel": "Integrated Annual Report 2025, Profile",
+   "url": "https://www.prysmian.com/sites/www.prysmian.com/files/media/documents/PRYSMIAN_2025%20-INTEGRATED%20ANNUAL%20REPORT_0.pdf#page=22",
+   "art": "COMPANY_PRIMARY",
+   "veroeffentlicht": "2026",
+   "abgerufen": "2026-11-11",
+   "textkopie": "analysis/kupferkette/raw/prysmian-ar-2025-p022.txt",
+   "textkopie_sha256": "5162b2bd51a5c5fc54b71e45a2ebec95641d4eb207ca5e04a45b8a14847574d4"
+  },
+  "kk-prysmian-ar-2025-s34": {
+   "quelle_id": "kk-prysmian-ar-2025-s34",
+   "herausgeber": "Prysmian S.p.A.",
+   "titel": "Integrated Annual Report 2025, Composition of the shareholder base",
+   "url": "https://www.prysmian.com/sites/www.prysmian.com/files/media/documents/PRYSMIAN_2025%20-INTEGRATED%20ANNUAL%20REPORT_0.pdf#page=34",
+   "art": "COMPANY_PRIMARY",
+   "veroeffentlicht": "2026",
+   "abgerufen": "2026-11-11",
+   "textkopie": "analysis/kupferkette/raw/prysmian-ar-2025-p034.txt",
+   "textkopie_sha256": "9d7514d235db9fa2fd7b1f719d61e902a905efa72ea514671c65dc9577b9ca39"
+  },
+  "kk-prysmian-ar-2025-sitz": {
+   "quelle_id": "kk-prysmian-ar-2025-sitz",
+   "herausgeber": "Prysmian S.p.A.",
+   "titel": "Integrated Annual Report 2025, Explanatory Notes A",
+   "url": "https://www.prysmian.com/sites/www.prysmian.com/files/media/documents/PRYSMIAN_2025%20-INTEGRATED%20ANNUAL%20REPORT_0.pdf",
+   "art": "COMPANY_PRIMARY",
+   "veroeffentlicht": "2026",
+   "abgerufen": "2026-11-11",
+   "textkopie": "analysis/kupferkette/raw/prysmian-ar-2025-p406.txt",
+   "textkopie_sha256": "4b7488698e3154440eeafb0804e94934871918c2926424ffe45b3cd78e096e4f"
+  },
+  "kk-wikidata-prysmian": {
+   "quelle_id": "kk-wikidata-prysmian",
+   "herausgeber": "Wikidata",
+   "titel": "Prysmian Group (Q1964784) P159 -> Mailand (Q490) P625",
+   "url": "https://www.wikidata.org/wiki/Q1964784",
+   "art": "WIKIDATA_P625",
+   "veroeffentlicht": null,
+   "abgerufen": "2026-11-11",
+   "textkopie": "analysis/kupferkette/raw/wikidata-prysmian-sitz.txt",
+   "textkopie_sha256": "e3d34567c806b2fb1f7f2bf42538e2cc1da829d10a0f6f8920ccb3a18a5dce1c"
+  },
+  "pilot:aurubis-ar-2024-25": {
+   "quelle_id": "pilot:aurubis-ar-2024-25",
+   "herausgeber": "Aurubis AG",
+   "titel": "Annual Report 2024/25",
+   "url": "https://www.aurubis.com/en/dam/jcr:ee11db35-01e5-45e0-8653-cd678d233be1/Aurubis_Annual%20Report_FY%202024_25%20(1).pdf",
+   "art": "COMPANY_PRIMARY",
+   "veroeffentlicht": null,
+   "abgerufen": "2026-11-03",
+   "textkopie": null,
+   "textkopie_sha256": null
+  },
+  "pilot:prysmian-ar-2025": {
+   "quelle_id": "pilot:prysmian-ar-2025",
+   "herausgeber": "Prysmian S.p.A.",
+   "titel": "Integrated Annual Report 2025",
+   "url": "https://www.prysmian.com/sites/www.prysmian.com/files/media/documents/PRYSMIAN_2025%20-INTEGRATED%20ANNUAL%20REPORT_0.pdf",
+   "art": "COMPANY_PRIMARY",
+   "veroeffentlicht": null,
+   "abgerufen": "2026-11-04",
+   "textkopie": null,
+   "textkopie_sha256": null
+  },
+  "preis:aurubis-ar-2024-25": {
+   "quelle_id": "preis:aurubis-ar-2024-25",
+   "herausgeber": "Aurubis AG",
+   "titel": "Annual Report 2024/25",
+   "url": "https://www.aurubis.com/en/dam/jcr:ee11db35-01e5-45e0-8653-cd678d233be1/Aurubis_Annual%20Report_FY%202024_25%20(1).pdf",
+   "art": "COMPANY_PRIMARY",
+   "veroeffentlicht": null,
+   "abgerufen": "2026-11-10",
+   "textkopie": null,
+   "textkopie_sha256": null
+  },
+  "usgs:usgs-mcs-2026-copper": {
+   "quelle_id": "usgs:usgs-mcs-2026-copper",
+   "herausgeber": "U.S. Geological Survey",
+   "titel": "Mineral Commodity Summaries 2026, Copper",
+   "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-copper.pdf",
+   "art": "GOVERNMENT_STATISTICS",
+   "veroeffentlicht": "2026-02",
+   "abgerufen": "2026-10-27",
+   "textkopie": "analysis/research/usgs-mcs-2026-copper/mcs2026-copper.txt",
+   "textkopie_sha256": "6a34c6588d409c4fbaa6f839e326e532129aaaaac7332132c641be5842e185df"
+  },
+  "wikidata:Q1055": {
+   "quelle_id": "wikidata:Q1055",
+   "herausgeber": "Wikidata",
+   "titel": "Hamburg (P159 von Aurubis Q486013)",
+   "url": "https://www.wikidata.org/wiki/Q1055",
+   "art": "WIKIDATA_P625",
+   "veroeffentlicht": null,
+   "abgerufen": "2026-10-28",
+   "textkopie": null,
+   "textkopie_sha256": null
+  },
+  "wikidata:Q138158169": {
+   "quelle_id": "wikidata:Q138158169",
+   "herausgeber": "Wikidata",
+   "titel": "Kamoa-Kakula Copper Complex",
+   "url": "https://www.wikidata.org/wiki/Q138158169",
+   "art": "WIKIDATA_P625",
+   "veroeffentlicht": null,
+   "abgerufen": "2026-10-28",
+   "textkopie": null,
+   "textkopie_sha256": null
+  },
+  "wikidata:Q271404": {
+   "quelle_id": "wikidata:Q271404",
+   "herausgeber": "Wikidata",
+   "titel": "Kolwezi",
+   "url": "https://www.wikidata.org/wiki/Q271404",
+   "art": "WIKIDATA_P625",
+   "veroeffentlicht": null,
+   "abgerufen": "2026-10-28",
+   "textkopie": null,
+   "textkopie_sha256": null
+  },
+  "wikidata:Q334": {
+   "quelle_id": "wikidata:Q334",
+   "herausgeber": "Wikidata",
+   "titel": "Singapore (P159 von Trafigura Q687508)",
+   "url": "https://www.wikidata.org/wiki/Q334",
+   "art": "WIKIDATA_P625",
+   "veroeffentlicht": null,
+   "abgerufen": "2026-10-28",
+   "textkopie": null,
+   "textkopie_sha256": null
+  },
+  "wikidata:Q59537856": {
+   "quelle_id": "wikidata:Q59537856",
+   "herausgeber": "Wikidata",
+   "titel": "Port of Lobito",
+   "url": "https://www.wikidata.org/wiki/Q59537856",
+   "art": "WIKIDATA_P625",
+   "veroeffentlicht": null,
+   "abgerufen": "2026-10-28",
+   "textkopie": null,
+   "textkopie_sha256": null
+  }
+ },
+ "standorte": [
+  {
+   "id": "S1",
+   "name": "Kamoa-Kakula Copper Complex",
+   "kurz": "Mine Kamoa-Kakula",
+   "rolle": "Mine",
+   "stufe": 1,
+   "art": "MINE_COMPLEX",
+   "land": "CD",
+   "firma": "Kamoa Copper SA",
+   "betreiber_belege": [
+    {
+     "rolle": "hauptbeleg",
+     "zitat": "OTCQX: IVPAF) Co-Chairs Robert Friedland and Yufeng “Miles” Sun are pleased to announce that Kamoa Copper SA – the operating company of the joint venture between Ivanhoe Mines, Zijin Mining Group, Crystal River and the Government of the Democratic Republic of Congo (DRC) – has signed copper concentrate and blister copper off-take agreements on competitive arm’s-length commercial terms, for 100% of Kamoa-Kakula’s Phase 1 copper output, which is projected to be approximately 200,000 tonnes of copper per year.",
+     "fundstelle": "offtake2021.txt Zeile 1228",
+     "quelle": "kb:ivn_offtake2021"
+    }
+   ],
+   "betreiber_einschraenkung": "Historical2021 operator evidence; current operator identity verification required",
+   "ort": {
+    "lat": -10.8125,
+    "lon": 25.1875,
+    "genauigkeit": "FACILITY",
+    "evidenz": "SOURCE_STATES_COORDINATE",
+    "freigabe": "FREIGEGEBEN",
+    "belege": [
+     {
+      "rolle": "hauptbeleg",
+      "zitat": "Kamoa-Kakula Copper Complex: P625 -10.8125, 25.1875",
+      "fundstelle": "copper-site-coordinates.json (gepinnt, Freigabe Eddie Sablah 2026-10-29)",
+      "quelle": "wikidata:Q138158169"
+     }
+    ]
+   },
+   "mengen": [
+    {
+     "id": "M-S1-PRODUKTION",
+     "groesse": "PRODUKTION",
+     "groesse_text": "Kupferproduktion (Kupfer im Konzentrat)",
+     "ebene": "BELEGT",
+     "annahme": null,
+     "wert": 388841.0,
+     "wert_von": null,
+     "wert_bis": null,
+     "einheit": "t Kupfer im Konzentrat",
+     "zeitraum": [
+      "2025-01-01",
+      "2025-12-31"
+     ],
+     "evidenz": "FACT",
+     "freigabe": "FREIGEGEBEN",
+     "freigabe_herkunft": "Eddie Sablah 2026-10-29: Jahreswert 388.841 t aus dem Jahresabschluss vom 18.02.2026 ersetzt die vorlaeufigen 388.838 t (analysis/copper-market-expected.json)",
+     "stand": "2026-02-18",
+     "grund_unbekannt": null,
+     "belege": [
+      {
+       "rolle": "hauptbeleg",
+       "zitat": "Kamoa-Kakula produced a total of 388,841 tonnes of copper in concentrate in 2025, within the revised guidance range of 370,000 tonnes to 420,000 tonnes.",
+       "fundstelle": "fy2025.txt Zeile 2944",
+       "quelle": "kb:ivn_fy2025"
+      }
+     ]
+    }
+   ],
+   "eigentum": [
+    {
+     "id": "E-S1-1",
+     "eigentuemer": "Kamoa Holding",
+     "anteil": 80.0,
+     "umfang": "DIREKT",
+     "evidenz": "FACT",
+     "freigabe": "FREIGEGEBEN",
+     "freigabe_herkunft": "Ledger APPROVED 2026-10-27, Claude (im Auftrag von Eddie Sablah)",
+     "stand": "2026-02-18",
+     "einschraenkung": null,
+     "atlas_id": "relationship:26e96888-06a2-53de-bf8b-4b680b8f5b70",
+     "belege": [
+      {
+       "rolle": "hauptbeleg",
+       "zitat": "Kamoa Holding holds an 80% interest in Kamoa-Kakula, with the DRC government holding the remaining 20% interest.",
+       "fundstelle": "fy2025.txt",
+       "quelle": "kb:ivn_fy2025"
+      }
+     ]
+    },
+    {
+     "id": "E-S1-2",
+     "eigentuemer": "Government of the Democratic Republic of Congo",
+     "anteil": 20.0,
+     "umfang": "DIREKT",
+     "evidenz": "FACT",
+     "freigabe": "FREIGEGEBEN",
+     "freigabe_herkunft": "Ledger APPROVED 2026-10-27, Claude (im Auftrag von Eddie Sablah)",
+     "stand": "2026-02-18",
+     "einschraenkung": null,
+     "atlas_id": "relationship:dccc77ea-27e4-5049-b883-fd4188230128",
+     "belege": [
+      {
+       "rolle": "hauptbeleg",
+       "zitat": "Kamoa Holding holds an 80% interest in Kamoa-Kakula, with the DRC government holding the remaining 20% interest.",
+       "fundstelle": "fy2025.txt",
+       "quelle": "kb:ivn_fy2025"
+      }
+     ]
+    },
+    {
+     "id": "E-S1-3",
+     "eigentuemer": "Ivanhoe Mines",
+     "anteil": 39.6,
+     "umfang": "INDIREKT",
+     "evidenz": "FACT",
+     "freigabe": "FREIGEGEBEN",
+     "freigabe_herkunft": "Ledger APPROVED 2026-10-27, Claude (im Auftrag von Eddie Sablah)",
+     "stand": "2026-02-18",
+     "einschraenkung": "Do not sum indirect interests with direct owners",
+     "atlas_id": "relationship:88120320-0ee1-59b2-8ad2-696c38835aca",
+     "belege": [
+      {
+       "rolle": "hauptbeleg",
+       "zitat": "Kamoa Holding holds an 80% interest in Kamoa-Kakula, with the DRC government holding the remaining 20% interest.",
+       "fundstelle": "fy2025.txt",
+       "quelle": "kb:ivn_fy2025"
+      }
+     ]
+    },
+    {
+     "id": "E-S1-4",
+     "eigentuemer": "Zijin Mining",
+     "anteil": 39.6,
+     "umfang": "INDIREKT",
+     "evidenz": "FACT",
+     "freigabe": "FREIGEGEBEN",
+     "freigabe_herkunft": "Ledger APPROVED 2026-10-27, Claude (im Auftrag von Eddie Sablah)",
+     "stand": "2026-02-18",
+     "einschraenkung": "Do not sum indirect interests with direct owners",
+     "atlas_id": "relationship:fbe0bd71-9b27-5467-8729-ac54bbb6cc5b",
+     "belege": [
+      {
+       "rolle": "hauptbeleg",
+       "zitat": "Kamoa Holding holds an 80% interest in Kamoa-Kakula, with the DRC government holding the remaining 20% interest.",
+       "fundstelle": "fy2025.txt",
+       "quelle": "kb:ivn_fy2025"
+      }
+     ]
+    },
+    {
+     "id": "E-S1-5",
+     "eigentuemer": "Crystal River",
+     "anteil": 0.8,
+     "umfang": "INDIREKT",
+     "evidenz": "FACT",
+     "freigabe": "FREIGEGEBEN",
+     "freigabe_herkunft": "Ledger APPROVED 2026-10-27, Claude (im Auftrag von Eddie Sablah)",
+     "stand": "2026-02-18",
+     "einschraenkung": "Do not sum indirect interests with direct owners",
+     "atlas_id": "relationship:08dc2580-8a1c-5f99-b10a-1215afff20fd",
+     "belege": [
+      {
+       "rolle": "hauptbeleg",
+       "zitat": "Kamoa Holding holds an 80% interest in Kamoa-Kakula, with the DRC government holding the remaining 20% interest.",
+       "fundstelle": "fy2025.txt",
+       "quelle": "kb:ivn_fy2025"
+      }
+     ]
+    }
+   ],
+   "eigentum_unbekannt": null,
+   "risiken": [
+    {
+     "id": "R-S1-2",
+     "art": "LAENDERANTEIL",
+     "art_text": "Länderanteil",
+     "text": "DR Kongo stellt 13,9 % der Welt-Bergbauproduktion 2025 (USGS, Schätzung: 3.200 von 23.000 kt), Rang 2 von 17 einzeln genannten Ländern; unter der Schwelle von 50 % für ein Konzentrationssignal (Schwelle ist Annahme, nicht bestätigt).",
+     "evidenz": "RECHNUNG",
+     "rechnung": "3200 / 23000 kt = 13.91 %",
+     "freigabe": "FREIGEGEBEN",
+     "freigabe_herkunft": "Entscheidung Weltreferenz: Eddie Sablah 2026-10-27",
+     "stand": "2025",
+     "atlas_id": "usgs-mcs-2026-copper",
+     "belege": [
+      {
+       "rolle": "hauptbeleg",
+       "zitat": "World total (rounded) 23,000 23,000 27,600 29,000 980,000",
+       "fundstelle": "Page 2, table 'World Mine and Refinery Production and Reserves'",
+       "quelle": "usgs:usgs-mcs-2026-copper"
+      },
+      {
+       "rolle": "hauptbeleg",
+       "zitat": "Congo (Kinshasa) 2,990 3,200 2,560 2,800 80,000",
+       "fundstelle": "Page 2, table 'World Mine and Refinery Production and Reserves'",
+       "quelle": "usgs:usgs-mcs-2026-copper"
+      }
+     ]
+    },
+    {
+     "id": "R-S1-1",
+     "art": "STOERUNG",
+     "art_text": "Störung",
+     "text": "Störung: Untertagebau in der Kakula-Mine am 18.05.2025 nach seismischer Aktivität ausgesetzt (Quelle vom 2025-05-20).",
+     "evidenz": "FACT",
+     "rechnung": null,
+     "freigabe": "KANDIDAT",
+     "freigabe_herkunft": "Angabe der Wissensbasis, nicht einzeln freigegeben",
+     "stand": "2025-05-20",
+     "atlas_id": "claim:b959cbd1-1880-5df3-9057-4f9c60d2f2d0",
+     "belege": [
+      {
+       "rolle": "hauptbeleg",
+       "zitat": "Over the past week, seismic activity was experienced in the eastern section of the Kakula mine, leading to Kamoa Copper’s management team suspending underground operations on Sunday, May 18, 2025.",
+       "fundstelle": "disruption2025.txt Zeile 1237",
+       "quelle": "kb:ivn_disruption2025"
+      }
+     ]
+    }
+   ],
+   "risiko_unbekannt": null,
+   "ersatz": []
+  },
+  {
+   "id": "S2",
+   "name": "Kamoa-Kakula Phase 1 and 2 concentrators",
+   "kurz": "Aufbereitung Phase 1+2",
+   "rolle": "Aufbereitung",
+   "stufe": 2,
+   "art": "PROCESSING_COMPLEX",
+   "land": "CD",
+   "firma": null,
+   "betreiber_belege": [],
+   "betreiber_einschraenkung": null,
+   "ort": {
+    "lat": -10.8125,
+    "lon": 25.1875,
+    "genauigkeit": "OPERATION_SITE",
+    "evidenz": "DERIVED_FROM_OPERATION_SITE",
+    "freigabe": "FREIGEGEBEN",
+    "belege": [
+     {
+      "rolle": "hauptbeleg",
+      "zitat": "Kamoa-Kakula Copper Complex: P625 -10.8125, 25.1875 (Koordinate der Betriebsstätte Kamoa-Kakula Copper Complex)",
+      "fundstelle": "copper-site-coordinates.json (gepinnt, Freigabe Eddie Sablah 2026-10-29)",
+      "quelle": "wikidata:Q138158169"
+     }
+    ]
+   },
+   "mengen": [],
+   "eigentum": [],
+   "eigentum_unbekannt": null,
+   "risiken": [
+    {
+     "id": "R-S2-1",
+     "art": "STOERUNG",
+     "art_text": "Störung",
+     "text": "Während der Kakula-Unterbrechung liefen die Aufbereitungen Phase 1+2 nur mit verringerter Leistung aus Halden (Quelle vom 2025-05-20).",
+     "evidenz": "FACT",
+     "rechnung": null,
+     "freigabe": "KANDIDAT",
+     "freigabe_herkunft": "Angabe der Wissensbasis, nicht einzeln freigegeben",
+     "stand": "2025-05-20",
+     "atlas_id": "claim:731bbf5b-e7f0-50ae-91f6-5b16db3f5377",
+     "belege": [
+      {
+       "rolle": "hauptbeleg",
+       "zitat": "Operations at Phase 1 and 2 concentrators continue at reduced capacity from surface stockpiles",
+       "fundstelle": "disruption2025.txt Zeile 1221",
+       "quelle": "kb:ivn_disruption2025"
+      }
+     ]
+    }
+   ],
+   "risiko_unbekannt": null,
+   "ersatz": []
+  },
+  {
+   "id": "S3",
+   "name": "Kamoa-Kakula on-site copper smelter",
+   "kurz": "Hütte Kamoa-Kakula",
+   "rolle": "Hütte",
+   "stufe": 3,
+   "art": "SMELTER",
+   "land": "CD",
+   "firma": null,
+   "betreiber_belege": [],
+   "betreiber_einschraenkung": null,
+   "ort": {
+    "lat": -10.8125,
+    "lon": 25.1875,
+    "genauigkeit": "OPERATION_SITE",
+    "evidenz": "DERIVED_FROM_OPERATION_SITE",
+    "freigabe": "FREIGEGEBEN",
+    "belege": [
+     {
+      "rolle": "hauptbeleg",
+      "zitat": "Kamoa-Kakula Copper Complex: P625 -10.8125, 25.1875 (Koordinate der Betriebsstätte Kamoa-Kakula Copper Complex)",
+      "fundstelle": "copper-site-coordinates.json (gepinnt, Freigabe Eddie Sablah 2026-10-29)",
+      "quelle": "wikidata:Q138158169"
+     }
+    ]
+   },
+   "mengen": [
+    {
+     "id": "M-S3-NENNKAPAZITAET",
+     "groesse": "NENNKAPAZITAET",
+     "groesse_text": "Nennkapazitaet der Huette",
+     "ebene": "BELEGT",
+     "annahme": null,
+     "wert": 500000.0,
+     "wert_von": null,
+     "wert_bis": null,
+     "einheit": "t/Jahr Blisterkupfer",
+     "zeitraum": null,
+     "evidenz": "FACT",
+     "freigabe": "KANDIDAT",
+     "freigabe_herkunft": "Angabe der Wissensbasis, nicht einzeln freigegeben",
+     "stand": "2026-02-18",
+     "grund_unbekannt": null,
+     "belege": [
+      {
+       "rolle": "hauptbeleg",
+       "zitat": "Kamoa-Kakula’s 500,000-tonne-per-annum on-site, direct-to-blister copper smelter, the largest in Africa, cast the first batch of anodes in late December 2025.",
+       "fundstelle": "fy2025.txt",
+       "quelle": "kb:ivn_fy2025"
+      }
+     ]
+    },
+    {
+     "id": "M-S3-PRODUKTION_QUARTAL",
+     "groesse": "PRODUKTION_QUARTAL",
+     "groesse_text": "Anodenproduktion im Quartal",
+     "ebene": "BELEGT",
+     "annahme": null,
+     "wert": 63671.0,
+     "wert_von": null,
+     "wert_bis": null,
+     "einheit": "t Kupfer in Anoden",
+     "zeitraum": [
+      "2026-01-01",
+      "2026-03-31"
+     ],
+     "evidenz": "FACT",
+     "freigabe": "KANDIDAT",
+     "freigabe_herkunft": "Angabe der Wissensbasis, nicht einzeln freigegeben",
+     "stand": "2026-05-06",
+     "grund_unbekannt": null,
+     "belege": [
+      {
+       "rolle": "hauptbeleg",
+       "zitat": "The quarterly total consists of 63,671 tonnes of copper in anode produced by Kamoa-Kakula’s 500,000-tonne-per-annum on-site, direct-to-blister copper smelter and 7,746 tonnes of copper in blister produced by the Lualaba Copper Smelter (LCS), in Kolwezi.",
+       "fundstelle": "q12026.txt Zeile 1403",
+       "quelle": "kb:ivn_q12026"
+      }
+     ]
+    }
+   ],
+   "eigentum": [
+    {
+     "id": "E-S3-1",
+     "eigentuemer": "Kamoa-Kakula (Kamoa Holding 80 %, Regierung DR Kongo 20 %)",
+     "anteil": null,
+     "umfang": "ZUGEHOERIG",
+     "evidenz": "FACT",
+     "freigabe": "KANDIDAT",
+     "freigabe_herkunft": "Zitat der Wissensbasis-Quelle, nicht einzeln freigegeben",
+     "stand": "2026-02-18",
+     "einschraenkung": "Die Quelle nennt die Hütte als Teil von Kamoa-Kakula; eine eigene Eigentumsangabe für die Hütte gibt es nicht. Die Ledger-Freigabe gilt für den Minenkomplex, nicht für die Hütte.",
+     "atlas_id": null,
+     "belege": [
+      {
+       "rolle": "hauptbeleg",
+       "zitat": "Kamoa-Kakula’s 500,000-tonne-per-annum on-site, direct-to-blister copper smelter, the largest in Africa, cast the first batch of anodes in late December 2025.",
+       "fundstelle": "fy2025.txt",
+       "quelle": "kb:ivn_fy2025"
+      },
+      {
+       "rolle": "zusatzbeleg",
+       "zitat": "Kamoa Holding holds an 80% interest in Kamoa-Kakula, with the DRC government holding the remaining 20% interest.",
+       "fundstelle": "fy2025.txt",
+       "quelle": "kb:ivn_fy2025"
+      }
+     ]
+    }
+   ],
+   "eigentum_unbekannt": null,
+   "risiken": [],
+   "risiko_unbekannt": null,
+   "ersatz": []
+  },
+  {
+   "id": "S4",
+   "name": "Trafigura dry port facility in Kolwezi",
+   "kurz": "Trockenhafen Kolwezi",
+   "rolle": "Trockenhafen",
+   "stufe": 4,
+   "art": "TERMINAL",
+   "land": "CD",
+   "firma": null,
+   "betreiber_belege": [],
+   "betreiber_einschraenkung": null,
+   "ort": {
+    "lat": -10.716667,
+    "lon": 25.466667,
+    "genauigkeit": "LOCALITY",
+    "evidenz": "DERIVED_FROM_NAMED_LOCALITY",
+    "freigabe": "FREIGEGEBEN",
+    "belege": [
+     {
+      "rolle": "hauptbeleg",
+      "zitat": "Kolwezi: P625 -10.716667, 25.466667",
+      "fundstelle": "copper-site-coordinates.json (gepinnt, Freigabe Eddie Sablah 2026-10-29)",
+      "quelle": "wikidata:Q271404"
+     }
+    ]
+   },
+   "mengen": [],
+   "eigentum": [
+    {
+     "id": "E-S4-1",
+     "eigentuemer": "Trafigura",
+     "anteil": null,
+     "umfang": "ZUGEHOERIG",
+     "evidenz": "FACT",
+     "freigabe": "KANDIDAT",
+     "freigabe_herkunft": "Zitat der Wissensbasis-Quelle, nicht einzeln freigegeben",
+     "stand": "2026-02-18",
+     "einschraenkung": "Die Quelle schreibt „Trafigura’s dry port facility“; ob Trafigura Eigentümer oder Betreiber ist, sagt sie nicht.",
+     "atlas_id": null,
+     "belege": [
+      {
+       "rolle": "hauptbeleg",
+       "zitat": "The anodes, produced by the Kamoa-Kakula Copper Complex, have been delivered to Trafigura’s dry port facility in Kolwezi, in the DRC.",
+       "fundstelle": "fy2025.txt",
+       "quelle": "kb:ivn_fy2025"
+      }
+     ]
+    }
+   ],
+   "eigentum_unbekannt": null,
+   "risiken": [],
+   "risiko_unbekannt": null,
+   "ersatz": []
+  },
+  {
+   "id": "S5",
+   "name": "Port of Lobito",
+   "kurz": "Hafen Lobito",
+   "rolle": "Hafen",
+   "stufe": 5,
+   "art": "PORT",
+   "land": "AO",
+   "firma": null,
+   "betreiber_belege": [],
+   "betreiber_einschraenkung": null,
+   "ort": {
+    "lat": -12.345,
+    "lon": 13.5475,
+    "genauigkeit": "FACILITY",
+    "evidenz": "SOURCE_STATES_COORDINATE",
+    "freigabe": "FREIGEGEBEN",
+    "belege": [
+     {
+      "rolle": "hauptbeleg",
+      "zitat": "Port of Lobito: P625 -12.345, 13.5475",
+      "fundstelle": "copper-site-coordinates.json (gepinnt, Freigabe Eddie Sablah 2026-10-29)",
+      "quelle": "wikidata:Q59537856"
+     }
+    ]
+   },
+   "mengen": [
+    {
+     "id": "M-S5-BETREIBER",
+     "groesse": "BETREIBER",
+     "groesse_text": "Betreiber",
+     "ebene": "BELEGT",
+     "annahme": null,
+     "wert": null,
+     "wert_von": null,
+     "wert_bis": null,
+     "einheit": null,
+     "zeitraum": null,
+     "evidenz": "UNKNOWN",
+     "freigabe": "UNKNOWN",
+     "freigabe_herkunft": null,
+     "stand": null,
+     "grund_unbekannt": "Hafenbetreiber von Lobito ist im Atlas nicht belegt.",
+     "belege": []
+    }
+   ],
+   "eigentum": [],
+   "eigentum_unbekannt": "Eigentümer des Hafens Lobito ist im Atlas nicht belegt.",
+   "risiken": [],
+   "risiko_unbekannt": null,
+   "ersatz": []
+  },
+  {
+   "id": "S6",
+   "name": "Trafigura (group reference)",
+   "kurz": "Trafigura (Singapur)",
+   "rolle": "Händler (Konzernsitz)",
+   "stufe": 5,
+   "art": "COMPANY",
+   "land": null,
+   "firma": "Trafigura (group reference)",
+   "betreiber_belege": [],
+   "betreiber_einschraenkung": null,
+   "ort": {
+    "lat": 1.3,
+    "lon": 103.8,
+    "genauigkeit": "HQ_CITY",
+    "evidenz": "DERIVED_FROM_HQ_PLACE",
+    "freigabe": "FREIGEGEBEN",
+    "belege": [
+     {
+      "rolle": "hauptbeleg",
+      "zitat": "Singapore (P159 von Trafigura Q687508): P625 1.3, 103.8",
+      "fundstelle": "copper-site-coordinates.json (gepinnt, Freigabe Eddie Sablah 2026-10-29)",
+      "quelle": "wikidata:Q334"
+     }
+    ]
+   },
+   "mengen": [],
+   "eigentum": [],
+   "eigentum_unbekannt": "Eigentümer von Trafigura ist im Atlas nicht belegt (Wikidata ohne Angabe, kein gelesener Jahresbericht).",
+   "risiken": [],
+   "risiko_unbekannt": "Für Trafigura liegt im Atlas kein belegtes Risiko vor (kein Störungs-, Sanktions- oder Preissensitivitäts-Beleg).",
+   "ersatz": []
+  },
+  {
+   "id": "S7",
+   "name": "Aurubis Group",
+   "kurz": "Aurubis (Hamburg)",
+   "rolle": "Raffination und Drahtwerk (Konzernsitz)",
+   "stufe": 6,
+   "art": "COMPANY",
+   "land": null,
+   "firma": "Aurubis Group",
+   "betreiber_belege": [],
+   "betreiber_einschraenkung": null,
+   "ort": {
+    "lat": 53.55,
+    "lon": 10.0,
+    "genauigkeit": "HQ_CITY",
+    "evidenz": "DERIVED_FROM_HQ_PLACE",
+    "freigabe": "FREIGEGEBEN",
+    "belege": [
+     {
+      "rolle": "hauptbeleg",
+      "zitat": "Hamburg (P159 von Aurubis Q486013): P625 53.55, 10.0",
+      "fundstelle": "copper-site-coordinates.json (gepinnt, Freigabe Eddie Sablah 2026-10-29)",
+      "quelle": "wikidata:Q1055"
+     }
+    ]
+   },
+   "mengen": [
+    {
+     "id": "M-S7-DRAHTPRODUKTION",
+     "groesse": "DRAHTPRODUKTION",
+     "groesse_text": "Kupferdraht-Produktion",
+     "ebene": "BELEGT",
+     "annahme": null,
+     "wert": 869.0,
+     "wert_von": null,
+     "wert_bis": null,
+     "einheit": "kt",
+     "zeitraum": [
+      "2024-10-01",
+      "2025-09-30"
+     ],
+     "evidenz": "FACT",
+     "freigabe": "KANDIDAT",
+     "freigabe_herkunft": "Pilot-Paket PILOT-PRYSMIAN-2-2026-11-10, REVIEW_REQUIRED",
+     "stand": "2026-11-03",
+     "grund_unbekannt": null,
+     "belege": [
+      {
+       "rolle": "hauptbeleg",
+       "zitat": "kept the production of wire rod high at 869,000 t in fiscal year 2024/25",
+       "fundstelle": "PDF-Seite 147",
+       "quelle": "pilot:aurubis-ar-2024-25"
+      }
+     ]
+    },
+    {
+     "id": "M-S7-KONZENTRATDURCHSATZ",
+     "groesse": "KONZENTRATDURCHSATZ",
+     "groesse_text": "Konzentratdurchsatz",
+     "ebene": "BELEGT",
+     "annahme": null,
+     "wert": 2180.0,
+     "wert_von": null,
+     "wert_bis": null,
+     "einheit": "kt Konzentrat",
+     "zeitraum": [
+      "2024-10-01",
+      "2025-09-30"
+     ],
+     "evidenz": "FACT",
+     "freigabe": "KANDIDAT",
+     "freigabe_herkunft": "Pilot-Paket PILOT-PRYSMIAN-2-2026-11-10, REVIEW_REQUIRED",
+     "stand": "2026-11-03",
+     "grund_unbekannt": null,
+     "belege": [
+      {
+       "rolle": "hauptbeleg",
+       "zitat": "concentrate throughput declined by 4 % to 2,180,000 t in fiscal year 2024/25",
+       "fundstelle": "PDF-Seite 146",
+       "quelle": "pilot:aurubis-ar-2024-25"
+      }
+     ]
+    }
+   ],
+   "eigentum": [
+    {
+     "id": "E-S7-1",
+     "eigentuemer": "Salzgitter AG",
+     "anteil": 29.99,
+     "umfang": "AKTIONAER",
+     "evidenz": "FACT",
+     "freigabe": "KANDIDAT",
+     "freigabe_herkunft": "Jahresbericht gelesen, nicht im Ledger",
+     "stand": "2025-09-30",
+     "einschraenkung": "Stand Geschäftsjahresende 30.09.2025; nach Umtauschanleihe im Oktober 2025 laut Aurubis 25,5 %.",
+     "atlas_id": null,
+     "belege": [
+      {
+       "rolle": "hauptbeleg",
+       "zitat": "the largest single shareholder, Salzgitter AG, continued to hold a 29.99 % stake (previous year: 29.99 %) in Aurubis AG.",
+       "fundstelle": "PDF-Seite 111 (pdftotext)",
+       "quelle": "kk-aurubis-ar-2024-25-s111"
+      },
+      {
+       "rolle": "zusatzbeleg",
+       "zitat": "Following the placement of an exchangeable bond in October 2025, the stake decreased to 25.5 %, according to an updated company presentation.",
+       "fundstelle": "PDF-Seite 111 (pdftotext)",
+       "quelle": "kk-aurubis-ar-2024-25-s111"
+      },
+      {
+       "rolle": "gegenprobe",
+       "zitat": "German steelmaker Salzgitter said on Monday it was not planning to exit its stake in copper producer Aurubis.",
+       "fundstelle": "Artikeltext, Absätze 1 und 3",
+       "quelle": "cc2:cc2-src-001"
+      },
+      {
+       "rolle": "gegenprobe",
+       "zitat": "Salzgitter, which owns 29.99% of Aurubis",
+       "fundstelle": "Artikeltext, Absätze 1 und 3",
+       "quelle": "cc2:cc2-src-001"
+      }
+     ]
+    },
+    {
+     "id": "E-S7-2",
+     "eigentuemer": "Rossmann Beteiligungs GmbH",
+     "anteil": 15.01,
+     "umfang": "AKTIONAER",
+     "evidenz": "FACT",
+     "freigabe": "KANDIDAT",
+     "freigabe_herkunft": "Jahresbericht gelesen, nicht im Ledger",
+     "stand": "2025-09-29",
+     "einschraenkung": "Stimmrechtsmitteilung: 11,34 % Stimmrechte plus 3,66 % Instrumente.",
+     "atlas_id": null,
+     "belege": [
+      {
+       "rolle": "hauptbeleg",
+       "zitat": "exceeded the threshold of 15 % of the voting rights on September 29, 2025 and amounted to 15.01 % of the voting rights on that date",
+       "fundstelle": "PDF-Seite 247 (pdftotext)",
+       "quelle": "kk-aurubis-ar-2024-25-s247"
+      }
+     ]
+    }
+   ],
+   "eigentum_unbekannt": null,
+   "risiken": [
+    {
+     "id": "R-S7-1",
+     "art": "PREISSENSITIVITAET",
+     "art_text": "Preissensitivität",
+     "text": "Aurubis: +10 % bei allen relevanten Rohstoffpreisen ändern das Ergebnis über die Derivate zum 30.09.2025 bei Kupfer um −3 Mio. EUR (Vorjahr −22), Silber −2, Gold +50, Energie −3 Mio. EUR; laut Bericht durch noch nicht preisfixierte Kauf- und Verkaufsverträge teilweise oder ganz ausgeglichen.",
+     "evidenz": "FACT",
+     "rechnung": null,
+     "freigabe": "KANDIDAT",
+     "freigabe_herkunft": "CANDIDATES_NOT_IN_LEDGER, REVIEW_REQUIRED",
+     "stand": "2026-11-10",
+     "atlas_id": "PS-06",
+     "belege": [
+      {
+       "rolle": "hauptbeleg",
+       "zitat": "Commodity price sensitivity",
+       "fundstelle": "PDF-Seite 296",
+       "quelle": "preis:aurubis-ar-2024-25"
+      },
+      {
+       "rolle": "zusatzbeleg",
+       "zitat": "In the event of a 10 % increase (decrease) in all relevant commodity prices",
+       "fundstelle": "PDF-Seite 296",
+       "quelle": "preis:aurubis-ar-2024-25"
+      },
+      {
+       "rolle": "zusatzbeleg",
+       "zitat": "compensated",
+       "fundstelle": "PDF-Seite 296",
+       "quelle": "preis:aurubis-ar-2024-25"
+      },
+      {
+       "rolle": "zusatzbeleg",
+       "zitat": "partially or completely",
+       "fundstelle": "PDF-Seite 296",
+       "quelle": "preis:aurubis-ar-2024-25"
+      }
+     ]
+    }
+   ],
+   "risiko_unbekannt": null,
+   "ersatz": [
+    {
+     "id": "X-S7-1",
+     "art": "HERKUNFT_ALTERNATIV",
+     "text": "Aurubis bezieht einen wesentlichen Teil seines Konzentrats aus Chile, Peru und Brasilien.",
+     "evidenz": "FACT",
+     "freigabe": "KANDIDAT",
+     "freigabe_herkunft": "Pilot-Paket PILOT-PRYSMIAN-2-2026-11-10, REVIEW_REQUIRED",
+     "stand": "2026-11-03",
+     "atlas_id": "AUR-01",
+     "belege": [
+      {
+       "rolle": "hauptbeleg",
+       "zitat": "A significant portion of our copper concentrates is sourced from South American countries such as Chile, Peru and Brazil",
+       "fundstelle": "PDF-Seite 118",
+       "quelle": "pilot:aurubis-ar-2024-25"
+      }
+     ]
+    },
+    {
+     "id": "X-S7-2",
+     "art": "KEINE_NAMEN",
+     "text": "Aurubis nennt aus Wettbewerbsgründen nur Länder, keine Minen oder Lieferfirmen.",
+     "evidenz": "FACT",
+     "freigabe": "KANDIDAT",
+     "freigabe_herkunft": "Pilot-Paket PILOT-PRYSMIAN-2-2026-11-10, REVIEW_REQUIRED",
+     "stand": "2026-11-03",
+     "atlas_id": "AUR-04",
+     "belege": [
+      {
+       "rolle": "hauptbeleg",
+       "zitat": "We only specify the associated countries and not the mine locations and companies for reasons related to competition",
+       "fundstelle": "PDF-Seite 187",
+       "quelle": "pilot:aurubis-ar-2024-25"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "S8",
+   "name": "Prysmian, Konzernsitz",
+   "kurz": "Prysmian (Mailand)",
+   "rolle": "Kabelhersteller (Konzernsitz)",
+   "stufe": 7,
+   "art": "COMPANY_HQ",
+   "land": "IT",
+   "firma": "Prysmian",
+   "betreiber_belege": [],
+   "betreiber_einschraenkung": null,
+   "ort": {
+    "lat": 45.466944444444,
+    "lon": 9.19,
+    "genauigkeit": "HQ_CITY",
+    "evidenz": "DERIVED_FROM_HQ_PLACE",
+    "freigabe": "KANDIDAT",
+    "belege": [
+     {
+      "rolle": "hauptbeleg",
+      "zitat": "Q490 P625 (coordinate location): latitude 45.466944444444, longitude 9.19",
+      "fundstelle": "Special:EntityData Q1964784 und Q490",
+      "quelle": "kk-wikidata-prysmian"
+     },
+     {
+      "rolle": "hauptbeleg",
+      "zitat": "Q1964784 P159 (headquarters location): Q490",
+      "fundstelle": "Special:EntityData Q1964784 und Q490",
+      "quelle": "kk-wikidata-prysmian"
+     },
+     {
+      "rolle": "gegenprobe",
+      "zitat": "The Company has its registered office in Via Chiese 6, Milan (Italy).",
+      "fundstelle": "PDF-Seite 406 (pdftotext)",
+      "quelle": "kk-prysmian-ar-2025-sitz"
+     }
+    ]
+   },
+   "mengen": [
+    {
+     "id": "M-S8-ANTEIL_WELTKUPFER",
+     "groesse": "ANTEIL_WELTKUPFER",
+     "groesse_text": "Kupferbedarf als Anteil an der Weltproduktion",
+     "ebene": "BELEGT",
+     "annahme": null,
+     "wert": 2.0,
+     "wert_von": null,
+     "wert_bis": 3.0,
+     "einheit": "% (Spanne, \"about\")",
+     "zeitraum": [
+      "2025-01-01",
+      "2025-12-31"
+     ],
+     "evidenz": "FACT",
+     "freigabe": "KANDIDAT",
+     "freigabe_herkunft": "Pilot-Paket PILOT-PRYSMIAN-2-2026-11-10, REVIEW_REQUIRED",
+     "stand": "2026-11-04",
+     "grund_unbekannt": null,
+     "belege": [
+      {
+       "rolle": "hauptbeleg",
+       "zitat": "the Group consumes about 2-3% of the world’s copper production",
+       "fundstelle": "PDF-Seite 218",
+       "quelle": "pilot:prysmian-ar-2025"
+      }
+     ]
+    }
+   ],
+   "eigentum": [
+    {
+     "id": "E-S8-1",
+     "eigentuemer": "Streubesitz: institutionelle Anleger über 76 %, größter genannter Aktionär BlackRock Inc. 6,0 %",
+     "anteil": null,
+     "umfang": "AKTIONAERSSTRUKTUR",
+     "evidenz": "FACT",
+     "freigabe": "KANDIDAT",
+     "freigabe_herkunft": "Jahresbericht gelesen, nicht im Ledger",
+     "stand": "2025-12-31",
+     "einschraenkung": "Kein Mehrheitsaktionär genannt; Anteil BlackRock aus einer Grafik des Berichts.",
+     "atlas_id": null,
+     "belege": [
+      {
+       "rolle": "hauptbeleg",
+       "zitat": "Institutional investors account for over 76% of the shareholder base.",
+       "fundstelle": "PDF-Seite 34 (pdftotext, Grafik)",
+       "quelle": "kk-prysmian-ar-2025-s34"
+      },
+      {
+       "rolle": "zusatzbeleg",
+       "zitat": "6.0% Blackrock Inc",
+       "fundstelle": "PDF-Seite 34 (pdftotext, Grafik)",
+       "quelle": "kk-prysmian-ar-2025-s34"
+      },
+      {
+       "rolle": "zusatzbeleg",
+       "zitat": "Prysmian debuted on the Milan Stock Exchange in 2007, becoming a fully public company.",
+       "fundstelle": "PDF-Seite 22 (pdftotext)",
+       "quelle": "kk-prysmian-ar-2025-s22"
+      }
+     ]
+    }
+   ],
+   "eigentum_unbekannt": null,
+   "risiken": [
+    {
+     "id": "R-S8-3",
+     "art": "HANDELSMASSNAHME",
+     "art_text": "Handelsmaßnahme",
+     "text": "Die US-Kupferzölle 2025 haben laut Prysmian einen Schrottüberschuss in den USA ausgelöst.",
+     "evidenz": "FACT",
+     "rechnung": null,
+     "freigabe": "KANDIDAT",
+     "freigabe_herkunft": "Pilot-Paket PILOT-PRYSMIAN-2-2026-11-10, REVIEW_REQUIRED",
+     "stand": "2026-11-04",
+     "atlas_id": "PRY-14",
+     "belege": [
+      {
+       "rolle": "hauptbeleg",
+       "zitat": "the 2025 copper tariffs led to a surplus of copper scrap in the US",
+       "fundstelle": "PDF-Seite 150",
+       "quelle": "pilot:prysmian-ar-2025"
+      }
+     ]
+    },
+    {
+     "id": "R-S8-2",
+     "art": "LIEFERANTENPOLITIK",
+     "art_text": "Lieferantenpolitik",
+     "text": "Prysmian versucht laut Risikobericht, Abhängigkeit von einem einzelnen Lieferanten zu vermeiden.",
+     "evidenz": "FACT",
+     "rechnung": null,
+     "freigabe": "KANDIDAT",
+     "freigabe_herkunft": "Pilot-Paket PILOT-PRYSMIAN-2-2026-11-10, REVIEW_REQUIRED",
+     "stand": "2026-11-04",
+     "atlas_id": "PRY-09",
+     "belege": [
+      {
+       "rolle": "hauptbeleg",
+       "zitat": "avoid situations of dependence on a single supplier",
+       "fundstelle": "PDF-Seite 379",
+       "quelle": "pilot:prysmian-ar-2025"
+      }
+     ]
+    },
+    {
+     "id": "R-S8-1",
+     "art": "PREISSENSITIVITAET",
+     "art_text": "Preissensitivität",
+     "text": "Bei ±10 % Metallpreis ändert sich das Eigenkapital über die Metallderivate um ±49,17 Mio. EUR (LME-Teil ±91,73 Mio. EUR).",
+     "evidenz": "FACT",
+     "rechnung": null,
+     "freigabe": "KANDIDAT",
+     "freigabe_herkunft": "Pilot-Paket PILOT-PRYSMIAN-2-2026-11-10, REVIEW_REQUIRED",
+     "stand": "2026-11-04",
+     "atlas_id": "PRY-05",
+     "belege": [
+      {
+       "rolle": "hauptbeleg",
+       "zitat": "a 10% increase/ decrease in strategic material prices versus prices at December 31, 2025",
+       "fundstelle": "PDF-Seite 414",
+       "quelle": "pilot:prysmian-ar-2025"
+      },
+      {
+       "rolle": "zusatzbeleg",
+       "zitat": "Total (49.17) 49.17",
+       "fundstelle": "PDF-Seite 414",
+       "quelle": "pilot:prysmian-ar-2025"
+      },
+      {
+       "rolle": "zusatzbeleg",
+       "zitat": "LME (91.73) 91.73",
+       "fundstelle": "PDF-Seite 414",
+       "quelle": "pilot:prysmian-ar-2025"
+      }
+     ]
+    }
+   ],
+   "risiko_unbekannt": null,
+   "ersatz": [
+    {
+     "id": "X-S8-1",
+     "art": "LIEFERANTEN_MEHRERE",
+     "text": "Von regelmäßigen Lieferanten bezieht Prysmian über 99 % des Primärkupfers (Draht und Kathoden).",
+     "evidenz": "FACT",
+     "freigabe": "KANDIDAT",
+     "freigabe_herkunft": "Pilot-Paket PILOT-PRYSMIAN-2-2026-11-10, REVIEW_REQUIRED",
+     "stand": "2026-11-04",
+     "atlas_id": "PRY-02",
+     "belege": [
+      {
+       "rolle": "hauptbeleg",
+       "zitat": "Regular suppliers of primary copper are those from which Prysmian purchases over 99% of all the primary copper (rods and cathodes).",
+       "fundstelle": "PDF-Seite 145",
+       "quelle": "pilot:prysmian-ar-2025"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "verbindungen": [
+  {
+   "id": "V1",
+   "von": "S1",
+   "nach": "S2",
+   "art": "VERARBEITUNG",
+   "art_atlas": "PROCESSES_AT",
+   "ware": "Kupfererz",
+   "ebene": "BELEGT",
+   "evidenz": "FACT",
+   "freigabe": "FREIGEGEBEN",
+   "freigabe_herkunft": "Ledger APPROVED 2026-10-28, Claude (im Auftrag von Eddie Sablah)",
+   "stand": "2026-02-18",
+   "geprueft_am": "2026-10-28",
+   "transportweg": null,
+   "einschraenkung": null,
+   "atlas_id": "relationship:8eaa4876-19e5-54af-a8ff-2fdf3dbcb71a",
+   "annahme": null,
+   "belege": [
+    {
+     "rolle": "hauptbeleg",
+     "zitat": "Total copper production consisted of 385,811 tonnes of copper in concentrate produced by the Phase 1, 2 and 3 concentrators, as well as 3,030 tonnes of copper in concentrate produced by the slag concentrator located at the on-site smelter.",
+     "fundstelle": "fy2025.txt Zeile 2944",
+     "quelle": "kb:ivn_fy2025"
+    }
+   ],
+   "hinweise": [],
+   "mengen": [
+    {
+     "id": "M-V1-LIEFERMENGE",
+     "groesse": "LIEFERMENGE",
+     "groesse_text": "Liefermenge",
+     "ebene": "BELEGT",
+     "annahme": null,
+     "wert": null,
+     "wert_von": null,
+     "wert_bis": null,
+     "einheit": "t",
+     "zeitraum": null,
+     "evidenz": "UNKNOWN",
+     "freigabe": "UNKNOWN",
+     "freigabe_herkunft": null,
+     "stand": null,
+     "grund_unbekannt": "Keine Quelle nennt eine Menge fuer diese Verbindung.",
+     "belege": []
+    },
+    {
+     "id": "M-V1-LIEFERWERT",
+     "groesse": "LIEFERWERT",
+     "groesse_text": "Lieferwert",
+     "ebene": "BELEGT",
+     "annahme": null,
+     "wert": null,
+     "wert_von": null,
+     "wert_bis": null,
+     "einheit": "USD",
+     "zeitraum": null,
+     "evidenz": "UNKNOWN",
+     "freigabe": "UNKNOWN",
+     "freigabe_herkunft": null,
+     "stand": null,
+     "grund_unbekannt": "Keine Quelle nennt einen Lieferwert; Menge x Preis waere eine Ableitung.",
+     "belege": []
+    },
+    {
+     "id": "M-V1-LIEFERMENGE-ANNAHME",
+     "groesse": "LIEFERMENGE",
+     "groesse_text": "Liefermenge",
+     "ebene": "ANNAHME",
+     "annahme": {
+      "id": "A-MENGE-WEG",
+      "art": "SCHAETZUNG",
+      "konfidenz": 0.35,
+      "begruendung": "Annahme A-MENGE-WEG: Förderung Kamoa-Kakula Copper Complex: 389 kt Cu pro Jahr, Kettenmenge 388,8 kt (belegt im Hauptatlas); 13 Abnehmer, Anteil 8 % zu gleichen Teilen.",
+      "quelle": "annahmen-atlas"
+     },
+     "wert": 29.9,
+     "wert_von": null,
+     "wert_bis": null,
+     "einheit": "kt Cu/Jahr",
+     "zeitraum": null,
+     "evidenz": "ANNAHME",
+     "freigabe": "ANNAHME",
+     "freigabe_herkunft": "29,9 kt Cu pro Jahr (Annahme A-MENGE-WEG)",
+     "stand": "2026-11-03",
+     "grund_unbekannt": null,
+     "belege": []
+    }
+   ]
+  },
+  {
+   "id": "V2",
+   "von": "S2",
+   "nach": "S3",
+   "art": "VERARBEITUNG",
+   "art_atlas": "PROCESSES_AT",
+   "ware": "Kupferkonzentrat",
+   "ebene": "BELEGT",
+   "evidenz": "FACT",
+   "freigabe": "FREIGEGEBEN",
+   "freigabe_herkunft": "Ledger APPROVED 2026-10-27, Claude (im Auftrag von Eddie Sablah)",
+   "stand": "2026-02-18",
+   "geprueft_am": "2026-10-27",
+   "transportweg": null,
+   "einschraenkung": null,
+   "atlas_id": "relationship:fe26164a-441c-53b7-b882-9c3bca07d7e4",
+   "annahme": null,
+   "belege": [
+    {
+     "rolle": "hauptbeleg",
+     "zitat": "Kamoa-Kakula’s margins are expected to expand as the smelter ramps up, as concentrates produced by Phase 1, 2, and 3 concentrators are smelted on-site rather than exported unbeneficiated.",
+     "fundstelle": "fy2025.txt Zeile 2977",
+     "quelle": "kb:ivn_fy2025"
+    }
+   ],
+   "hinweise": [],
+   "mengen": [
+    {
+     "id": "M-V2-LIEFERMENGE",
+     "groesse": "LIEFERMENGE",
+     "groesse_text": "Liefermenge",
+     "ebene": "BELEGT",
+     "annahme": null,
+     "wert": null,
+     "wert_von": null,
+     "wert_bis": null,
+     "einheit": "t",
+     "zeitraum": null,
+     "evidenz": "UNKNOWN",
+     "freigabe": "UNKNOWN",
+     "freigabe_herkunft": null,
+     "stand": null,
+     "grund_unbekannt": "Keine Quelle nennt eine Menge fuer diese Verbindung.",
+     "belege": []
+    },
+    {
+     "id": "M-V2-LIEFERWERT",
+     "groesse": "LIEFERWERT",
+     "groesse_text": "Lieferwert",
+     "ebene": "BELEGT",
+     "annahme": null,
+     "wert": null,
+     "wert_von": null,
+     "wert_bis": null,
+     "einheit": "USD",
+     "zeitraum": null,
+     "evidenz": "UNKNOWN",
+     "freigabe": "UNKNOWN",
+     "freigabe_herkunft": null,
+     "stand": null,
+     "grund_unbekannt": "Keine Quelle nennt einen Lieferwert; Menge x Preis waere eine Ableitung.",
+     "belege": []
+    },
+    {
+     "id": "M-V2-LIEFERMENGE-ANNAHME",
+     "groesse": "LIEFERMENGE",
+     "groesse_text": "Liefermenge",
+     "ebene": "ANNAHME",
+     "annahme": {
+      "id": "A-MENGE-WEG",
+      "art": "SCHAETZUNG",
+      "konfidenz": 0.35,
+      "begruendung": "Annahme A-MENGE-WEG: Durchsatz Kamoa-Kakula Phase 1 and 2 concentrators 29,9 kt Cu pro Jahr (Summe der Zuflüsse im Netz); einziger Abnehmer im Netz.",
+      "quelle": "annahmen-atlas"
+     },
+     "wert": 29.9,
+     "wert_von": null,
+     "wert_bis": null,
+     "einheit": "kt Cu/Jahr",
+     "zeitraum": null,
+     "evidenz": "ANNAHME",
+     "freigabe": "ANNAHME",
+     "freigabe_herkunft": "29,9 kt Cu pro Jahr (Annahme A-MENGE-WEG)",
+     "stand": "2026-11-03",
+     "grund_unbekannt": null,
+     "belege": []
+    }
+   ]
+  },
+  {
+   "id": "V3",
+   "von": "S3",
+   "nach": "S4",
+   "art": "TRANSPORT",
+   "art_atlas": "TRANSPORTS_TO",
+   "ware": "Kupferanoden",
+   "ebene": "BELEGT",
+   "evidenz": "FACT",
+   "freigabe": "FREIGEGEBEN",
+   "freigabe_herkunft": "Ledger APPROVED 2026-10-27, Claude (im Auftrag von Eddie Sablah)",
+   "stand": "2026-02-18",
+   "geprueft_am": "2026-10-27",
+   "transportweg": null,
+   "einschraenkung": null,
+   "atlas_id": "relationship:9c9d7fb8-4b6a-5ad8-b0d6-5792d5373424",
+   "annahme": null,
+   "belege": [
+    {
+     "rolle": "hauptbeleg",
+     "zitat": "The anodes, produced by the Kamoa-Kakula Copper Complex, have been delivered to Trafigura’s dry port facility in Kolwezi, in the DRC.",
+     "fundstelle": "fy2025.txt",
+     "quelle": "kb:ivn_fy2025"
+    }
+   ],
+   "hinweise": [],
+   "mengen": [
+    {
+     "id": "M-V3-LIEFERMENGE",
+     "groesse": "LIEFERMENGE",
+     "groesse_text": "Liefermenge",
+     "ebene": "BELEGT",
+     "annahme": null,
+     "wert": null,
+     "wert_von": null,
+     "wert_bis": null,
+     "einheit": "t",
+     "zeitraum": null,
+     "evidenz": "UNKNOWN",
+     "freigabe": "UNKNOWN",
+     "freigabe_herkunft": null,
+     "stand": null,
+     "grund_unbekannt": "Keine Quelle nennt eine Menge fuer diese Verbindung.",
+     "belege": []
+    },
+    {
+     "id": "M-V3-LIEFERWERT",
+     "groesse": "LIEFERWERT",
+     "groesse_text": "Lieferwert",
+     "ebene": "BELEGT",
+     "annahme": null,
+     "wert": null,
+     "wert_von": null,
+     "wert_bis": null,
+     "einheit": "USD",
+     "zeitraum": null,
+     "evidenz": "UNKNOWN",
+     "freigabe": "UNKNOWN",
+     "freigabe_herkunft": null,
+     "stand": null,
+     "grund_unbekannt": "Keine Quelle nennt einen Lieferwert; Menge x Preis waere eine Ableitung.",
+     "belege": []
+    },
+    {
+     "id": "M-V3-LIEFERMENGE-ANNAHME",
+     "groesse": "LIEFERMENGE",
+     "groesse_text": "Liefermenge",
+     "ebene": "ANNAHME",
+     "annahme": {
+      "id": "A-MENGE-WEG",
+      "art": "SCHAETZUNG",
+      "konfidenz": 0.35,
+      "begruendung": "Annahme A-MENGE-WEG: Durchsatz Kamoa-Kakula on-site copper smelter 59,8 kt Cu pro Jahr (Summe der Zuflüsse im Netz); 7 Abnehmer, Anteil 14 % zu gleichen Teilen.",
+      "quelle": "annahmen-atlas"
+     },
+     "wert": 8.5,
+     "wert_von": null,
+     "wert_bis": null,
+     "einheit": "kt Cu/Jahr",
+     "zeitraum": null,
+     "evidenz": "ANNAHME",
+     "freigabe": "ANNAHME",
+     "freigabe_herkunft": "8,5 kt Cu pro Jahr (Annahme A-MENGE-WEG)",
+     "stand": "2026-11-03",
+     "grund_unbekannt": null,
+     "belege": []
+    }
+   ]
+  },
+  {
+   "id": "V4",
+   "von": "S3",
+   "nach": "S5",
+   "art": "TRANSPORT",
+   "art_atlas": "TRANSPORTS_TO",
+   "ware": "Kupferanoden",
+   "ebene": "BELEGT",
+   "evidenz": "FACT",
+   "freigabe": "FREIGEGEBEN",
+   "freigabe_herkunft": "Ledger APPROVED 2026-10-29, Claude (im Auftrag von Eddie Sablah)",
+   "stand": "2026-05-06",
+   "geprueft_am": "2026-10-29",
+   "transportweg": "RAIL",
+   "einschraenkung": "Historical Q12026 batch; no ongoing share inferred; flood disruption status later reported",
+   "atlas_id": "relationship:611478c4-f849-583f-afed-e15cdfa4426c",
+   "annahme": null,
+   "belege": [
+    {
+     "rolle": "hauptbeleg",
+     "zitat": "The anodes arrived at the Atlantic port of Lobito shortly before quarter-end and were subsequently shipped to Europe for refining, where they are expected to arrive imminently.",
+     "fundstelle": "q12026.txt Zeile 1424",
+     "quelle": "kb:ivn_q12026"
+    }
+   ],
+   "hinweise": [
+    {
+     "text": "Stoerung: Transporte ueber Lobito nach Flutschaeden in Angola voruebergehend bis Juni 2026 ausgesetzt (Quelle vom 2026-05-06).",
+     "stand": "2026-05-06",
+     "belege": [
+      {
+       "rolle": "hauptbeleg",
+       "zitat": "Subsequently, shipments along Lobito were temporarily halted until June while flood damage in Angola is repaired.",
+       "fundstelle": "q12026.txt Zeile 1424",
+       "quelle": "kb:ivn_q12026"
+      }
+     ]
+    }
+   ],
+   "mengen": [
+    {
+     "id": "M-V4-LIEFERMENGE",
+     "groesse": "LIEFERMENGE",
+     "groesse_text": "Liefermenge",
+     "ebene": "BELEGT",
+     "annahme": null,
+     "wert": null,
+     "wert_von": null,
+     "wert_bis": null,
+     "einheit": "t",
+     "zeitraum": null,
+     "evidenz": "UNKNOWN",
+     "freigabe": "UNKNOWN",
+     "freigabe_herkunft": null,
+     "stand": null,
+     "grund_unbekannt": "Keine Quelle nennt eine Menge fuer diese Verbindung.",
+     "belege": []
+    },
+    {
+     "id": "M-V4-LIEFERWERT",
+     "groesse": "LIEFERWERT",
+     "groesse_text": "Lieferwert",
+     "ebene": "BELEGT",
+     "annahme": null,
+     "wert": null,
+     "wert_von": null,
+     "wert_bis": null,
+     "einheit": "USD",
+     "zeitraum": null,
+     "evidenz": "UNKNOWN",
+     "freigabe": "UNKNOWN",
+     "freigabe_herkunft": null,
+     "stand": null,
+     "grund_unbekannt": "Keine Quelle nennt einen Lieferwert; Menge x Preis waere eine Ableitung.",
+     "belege": []
+    },
+    {
+     "id": "M-V4-LIEFERMENGE-ANNAHME",
+     "groesse": "LIEFERMENGE",
+     "groesse_text": "Liefermenge",
+     "ebene": "ANNAHME",
+     "annahme": {
+      "id": "A-MENGE-WEG",
+      "art": "SCHAETZUNG",
+      "konfidenz": 0.35,
+      "begruendung": "Annahme A-MENGE-WEG: Durchsatz Kamoa-Kakula on-site copper smelter 59,8 kt Cu pro Jahr (Summe der Zuflüsse im Netz); 7 Abnehmer, Anteil 14 % zu gleichen Teilen.",
+      "quelle": "annahmen-atlas"
+     },
+     "wert": 8.5,
+     "wert_von": null,
+     "wert_bis": null,
+     "einheit": "kt Cu/Jahr",
+     "zeitraum": null,
+     "evidenz": "ANNAHME",
+     "freigabe": "ANNAHME",
+     "freigabe_herkunft": "8,5 kt Cu pro Jahr (Annahme A-MENGE-WEG)",
+     "stand": "2026-11-03",
+     "grund_unbekannt": null,
+     "belege": []
+    }
+   ]
+  },
+  {
+   "id": "V5",
+   "von": "S3",
+   "nach": "S6",
+   "art": "HANDEL",
+   "art_atlas": "OFFTAKE_AGREEMENT",
+   "ware": "Kupferanoden",
+   "ebene": "BELEGT",
+   "evidenz": "FACT",
+   "freigabe": "FREIGEGEBEN",
+   "freigabe_herkunft": "Ledger APPROVED 2026-10-27, Claude (im Auftrag von Eddie Sablah)",
+   "stand": "2026-02-19",
+   "geprueft_am": "2026-10-27",
+   "transportweg": null,
+   "einschraenkung": "Group reference and AsiaTrading legal contract describe overlapping context; not additive shares.",
+   "atlas_id": "relationship:370d9263-bd59-5a1e-a9ed-1677b5811e1f",
+   "annahme": null,
+   "belege": [
+    {
+     "rolle": "hauptbeleg",
+     "zitat": "Trafigura is one of three offtakers for the copper anodes produced by the Kamoa-Kakula smelter.",
+     "fundstelle": "trafigura-anodes2026.txt Zeile 357",
+     "quelle": "kb:traf_anodes2026"
+    }
+   ],
+   "hinweise": [],
+   "mengen": [
+    {
+     "id": "M-V5-LIEFERMENGE",
+     "groesse": "LIEFERMENGE",
+     "groesse_text": "Liefermenge",
+     "ebene": "BELEGT",
+     "annahme": null,
+     "wert": null,
+     "wert_von": null,
+     "wert_bis": null,
+     "einheit": "t",
+     "zeitraum": null,
+     "evidenz": "UNKNOWN",
+     "freigabe": "UNKNOWN",
+     "freigabe_herkunft": null,
+     "stand": null,
+     "grund_unbekannt": "Trafigura ist einer von drei Anoden-Abnehmern; ihr Anteil ist nicht genannt. Die 80 % fuer CITIC Metal und Gold Mountains erlauben keine Ableitung des Rests auf Trafigura.",
+     "belege": []
+    },
+    {
+     "id": "M-V5-LIEFERWERT",
+     "groesse": "LIEFERWERT",
+     "groesse_text": "Lieferwert",
+     "ebene": "BELEGT",
+     "annahme": null,
+     "wert": null,
+     "wert_von": null,
+     "wert_bis": null,
+     "einheit": "USD",
+     "zeitraum": null,
+     "evidenz": "UNKNOWN",
+     "freigabe": "UNKNOWN",
+     "freigabe_herkunft": null,
+     "stand": null,
+     "grund_unbekannt": "Keine Quelle nennt einen Lieferwert; Menge x Preis waere eine Ableitung.",
+     "belege": []
+    },
+    {
+     "id": "M-V5-LIEFERMENGE-ANNAHME",
+     "groesse": "LIEFERMENGE",
+     "groesse_text": "Liefermenge",
+     "ebene": "ANNAHME",
+     "annahme": {
+      "id": "A-MENGE-WEG",
+      "art": "SCHAETZUNG",
+      "konfidenz": 0.35,
+      "begruendung": "Annahme A-MENGE-WEG: Durchsatz Kamoa-Kakula on-site copper smelter 59,8 kt Cu pro Jahr (Summe der Zuflüsse im Netz); 7 Abnehmer, Anteil 14 % zu gleichen Teilen.",
+      "quelle": "annahmen-atlas"
+     },
+     "wert": 8.5,
+     "wert_von": null,
+     "wert_bis": null,
+     "einheit": "kt Cu/Jahr",
+     "zeitraum": null,
+     "evidenz": "ANNAHME",
+     "freigabe": "ANNAHME",
+     "freigabe_herkunft": "8,5 kt Cu pro Jahr (Annahme A-MENGE-WEG)",
+     "stand": "2026-11-03",
+     "grund_unbekannt": null,
+     "belege": []
+    }
+   ]
+  },
+  {
+   "id": "V7",
+   "von": "S3",
+   "nach": "S7",
+   "art": "VERARBEITUNG",
+   "art_atlas": "PROCESSES_AT",
+   "ware": "Kupferanoden",
+   "ebene": "BELEGT",
+   "evidenz": "FACT",
+   "freigabe": "FREIGEGEBEN",
+   "freigabe_herkunft": "Ledger APPROVED 2026-10-30, Claude (im Auftrag von Eddie Sablah)",
+   "stand": "2026-02-18",
+   "geprueft_am": "2026-10-30",
+   "transportweg": null,
+   "einschraenkung": "Planned refining at unspecified European group facilities; excluded from confirmed downstream and quantitative scenarios",
+   "atlas_id": "relationship:05fe1841-bc4b-53dd-8016-9591d74825c8",
+   "annahme": null,
+   "belege": [
+    {
+     "rolle": "hauptbeleg",
+     "zitat": "From there, the anodes will be transported along the Lobito Railway Corridor to the Atlantic Port of Lobito, and then shipped to Aurubis Group’s European facilities for refining.",
+     "fundstelle": "fy2025.txt Zeile 2997",
+     "quelle": "kb:ivn_fy2025"
+    },
+    {
+     "rolle": "zusatzbeleg",
+     "zitat": "From there, the copper anodes will be shipped from the Port of Lobito to Aurubis, for use in its European refining operations",
+     "fundstelle": "Status INFERENCE -> FACT: Eddie Sablah 2026-10-30",
+     "quelle": "kb:traf_anodes2026"
+    }
+   ],
+   "hinweise": [],
+   "mengen": [
+    {
+     "id": "M-V7-LIEFERMENGE",
+     "groesse": "LIEFERMENGE",
+     "groesse_text": "Liefermenge",
+     "ebene": "BELEGT",
+     "annahme": null,
+     "wert": null,
+     "wert_von": null,
+     "wert_bis": null,
+     "einheit": "t",
+     "zeitraum": null,
+     "evidenz": "UNKNOWN",
+     "freigabe": "UNKNOWN",
+     "freigabe_herkunft": null,
+     "stand": null,
+     "grund_unbekannt": "Keine Quelle nennt eine Menge fuer diese Verbindung.",
+     "belege": []
+    },
+    {
+     "id": "M-V7-LIEFERWERT",
+     "groesse": "LIEFERWERT",
+     "groesse_text": "Lieferwert",
+     "ebene": "BELEGT",
+     "annahme": null,
+     "wert": null,
+     "wert_von": null,
+     "wert_bis": null,
+     "einheit": "USD",
+     "zeitraum": null,
+     "evidenz": "UNKNOWN",
+     "freigabe": "UNKNOWN",
+     "freigabe_herkunft": null,
+     "stand": null,
+     "grund_unbekannt": "Keine Quelle nennt einen Lieferwert; Menge x Preis waere eine Ableitung.",
+     "belege": []
+    },
+    {
+     "id": "M-V7-LIEFERMENGE-ANNAHME",
+     "groesse": "LIEFERMENGE",
+     "groesse_text": "Liefermenge",
+     "ebene": "ANNAHME",
+     "annahme": {
+      "id": "A-MENGE-WEG",
+      "art": "SCHAETZUNG",
+      "konfidenz": 0.35,
+      "begruendung": "Annahme A-MENGE-WEG: Durchsatz Kamoa-Kakula on-site copper smelter 59,8 kt Cu pro Jahr (Summe der Zuflüsse im Netz); 7 Abnehmer, Anteil 14 % zu gleichen Teilen.",
+      "quelle": "annahmen-atlas"
+     },
+     "wert": 8.5,
+     "wert_von": null,
+     "wert_bis": null,
+     "einheit": "kt Cu/Jahr",
+     "zeitraum": null,
+     "evidenz": "ANNAHME",
+     "freigabe": "ANNAHME",
+     "freigabe_herkunft": "8,5 kt Cu pro Jahr (Annahme A-MENGE-WEG)",
+     "stand": "2026-11-03",
+     "grund_unbekannt": null,
+     "belege": []
+    }
+   ]
+  },
+  {
+   "id": "V9",
+   "von": "S4",
+   "nach": "S5",
+   "art": "TRANSPORT",
+   "art_atlas": "TRANSPORTS_TO",
+   "ware": "Kupferanoden",
+   "ebene": "ANNAHME",
+   "evidenz": "ANNAHME",
+   "freigabe": "ANNAHME",
+   "freigabe_herkunft": "Annahme A-WEG-53 (BRANCHENWISSEN), nicht belegt",
+   "stand": "2026-11-03",
+   "geprueft_am": null,
+   "transportweg": null,
+   "einschraenkung": null,
+   "atlas_id": "A-WEG-53",
+   "annahme": {
+    "id": "A-WEG-53",
+    "art": "BRANCHENWISSEN",
+    "konfidenz": 0.75,
+    "begruendung": "Trafigura betreibt den Lobito-Atlantic-Bahnkorridor; der Trockenhafen in Kolwezi ist sein Sammelpunkt Richtung Lobito (im Atlas belegt: TRANSPORT_CONTRACT zum Korridor).",
+    "quelle": "annahmen-atlas"
+   },
+   "belege": [],
+   "hinweise": [],
+   "mengen": [
+    {
+     "id": "M-V9-LIEFERMENGE-ANNAHME",
+     "groesse": "LIEFERMENGE",
+     "groesse_text": "Liefermenge",
+     "ebene": "ANNAHME",
+     "annahme": {
+      "id": "A-MENGE-WEG",
+      "art": "SCHAETZUNG",
+      "konfidenz": 0.35,
+      "begruendung": "Annahme A-MENGE-WEG: Durchsatz Trafigura dry port facility in Kolwezi 8,5 kt Cu pro Jahr (Summe der Zuflüsse im Netz); einziger Abnehmer im Netz.",
+      "quelle": "annahmen-atlas"
+     },
+     "wert": 8.5,
+     "wert_von": null,
+     "wert_bis": null,
+     "einheit": "kt Cu/Jahr",
+     "zeitraum": null,
+     "evidenz": "ANNAHME",
+     "freigabe": "ANNAHME",
+     "freigabe_herkunft": "8,5 kt Cu pro Jahr (Annahme A-MENGE-WEG)",
+     "stand": "2026-11-03",
+     "grund_unbekannt": null,
+     "belege": []
+    }
+   ]
+  },
+  {
+   "id": "V10",
+   "von": "S5",
+   "nach": "S7",
+   "art": "TRANSPORT",
+   "art_atlas": "TRANSPORTS_TO",
+   "ware": "Kupferanoden",
+   "ebene": "ANNAHME",
+   "evidenz": "ANNAHME",
+   "freigabe": "ANNAHME",
+   "freigabe_herkunft": "Annahme A-WEG-52 (QUELLENKANDIDAT), nicht belegt",
+   "stand": "2026-11-03",
+   "geprueft_am": null,
+   "transportweg": null,
+   "einschraenkung": null,
+   "atlas_id": "A-WEG-52",
+   "annahme": {
+    "id": "A-WEG-52",
+    "art": "QUELLENKANDIDAT",
+    "konfidenz": 0.7,
+    "begruendung": "Belegt ist ein Anoden-Abnahmevertrag Kamoa-Kakula -> Aurubis; der Atlantikweg ueber Lobito ist fuer Europa der kuerzeste.",
+    "quelle": "annahmen-atlas"
+   },
+   "belege": [],
+   "hinweise": [],
+   "mengen": [
+    {
+     "id": "M-V10-LIEFERMENGE-ANNAHME",
+     "groesse": "LIEFERMENGE",
+     "groesse_text": "Liefermenge",
+     "ebene": "ANNAHME",
+     "annahme": {
+      "id": "A-MENGE-WEG",
+      "art": "SCHAETZUNG",
+      "konfidenz": 0.35,
+      "begruendung": "Annahme A-MENGE-WEG: Durchsatz Port of Lobito 47 kt Cu pro Jahr (Summe der Zuflüsse im Netz); 2 Abnehmer, Anteil 50 % zu gleichen Teilen.",
+      "quelle": "annahmen-atlas"
+     },
+     "wert": 23.5,
+     "wert_von": null,
+     "wert_bis": null,
+     "einheit": "kt Cu/Jahr",
+     "zeitraum": null,
+     "evidenz": "ANNAHME",
+     "freigabe": "ANNAHME",
+     "freigabe_herkunft": "23,5 kt Cu pro Jahr (Annahme A-MENGE-WEG)",
+     "stand": "2026-11-03",
+     "grund_unbekannt": null,
+     "belege": []
+    }
+   ]
+  },
+  {
+   "id": "V6",
+   "von": "S6",
+   "nach": "S7",
+   "art": "HANDEL",
+   "art_atlas": "OFFTAKE_AGREEMENT",
+   "ware": "Kupferanoden",
+   "ebene": "BELEGT",
+   "evidenz": "FACT",
+   "freigabe": "FREIGEGEBEN",
+   "freigabe_herkunft": "Ledger APPROVED 2026-10-27, Claude (im Auftrag von Eddie Sablah)",
+   "stand": "2026-02-19",
+   "geprueft_am": "2026-10-27",
+   "transportweg": null,
+   "einschraenkung": "Commercial sale; do not traverse as physical receipt or refining.",
+   "atlas_id": "relationship:04d96a54-2fbd-572f-8f7b-bea248f233ca",
+   "annahme": null,
+   "belege": [
+    {
+     "rolle": "hauptbeleg",
+     "zitat": "– Trafigura has completed the first sale of low-carbon-intensive copper anodes produced by Kamoa Copper to the Aurubis Group, a leading global provider of non-ferrous metals with best-in-class sustainability standards.",
+     "fundstelle": "trafigura-anodes2026.txt Zeile 346",
+     "quelle": "kb:traf_anodes2026"
+    }
+   ],
+   "hinweise": [],
+   "mengen": [
+    {
+     "id": "M-V6-LIEFERMENGE",
+     "groesse": "LIEFERMENGE",
+     "groesse_text": "Liefermenge",
+     "ebene": "BELEGT",
+     "annahme": null,
+     "wert": null,
+     "wert_von": null,
+     "wert_bis": null,
+     "einheit": "t",
+     "zeitraum": null,
+     "evidenz": "UNKNOWN",
+     "freigabe": "UNKNOWN",
+     "freigabe_herkunft": null,
+     "stand": null,
+     "grund_unbekannt": "Keine Quelle nennt eine Menge fuer diese Verbindung.",
+     "belege": []
+    },
+    {
+     "id": "M-V6-LIEFERWERT",
+     "groesse": "LIEFERWERT",
+     "groesse_text": "Lieferwert",
+     "ebene": "BELEGT",
+     "annahme": null,
+     "wert": null,
+     "wert_von": null,
+     "wert_bis": null,
+     "einheit": "USD",
+     "zeitraum": null,
+     "evidenz": "UNKNOWN",
+     "freigabe": "UNKNOWN",
+     "freigabe_herkunft": null,
+     "stand": null,
+     "grund_unbekannt": "Keine Quelle nennt einen Lieferwert; Menge x Preis waere eine Ableitung.",
+     "belege": []
+    },
+    {
+     "id": "M-V6-LIEFERMENGE-ANNAHME",
+     "groesse": "LIEFERMENGE",
+     "groesse_text": "Liefermenge",
+     "ebene": "ANNAHME",
+     "annahme": {
+      "id": "A-MENGE-WEG",
+      "art": "SCHAETZUNG",
+      "konfidenz": 0.35,
+      "begruendung": "Annahme A-MENGE-WEG: Durchsatz Trafigura (group reference) 8,5 kt Cu pro Jahr (Summe der Zuflüsse im Netz); einziger Abnehmer im Netz.",
+      "quelle": "annahmen-atlas"
+     },
+     "wert": 8.5,
+     "wert_von": null,
+     "wert_bis": null,
+     "einheit": "kt Cu/Jahr",
+     "zeitraum": null,
+     "evidenz": "ANNAHME",
+     "freigabe": "ANNAHME",
+     "freigabe_herkunft": "8,5 kt Cu pro Jahr (Annahme A-MENGE-WEG)",
+     "stand": "2026-11-03",
+     "grund_unbekannt": null,
+     "belege": []
+    }
+   ]
+  },
+  {
+   "id": "V8",
+   "von": "S7",
+   "nach": "S8",
+   "art": "LIEFERUNG",
+   "art_atlas": "SUPPLIES",
+   "ware": "Kupferdraht (copper wire rod)",
+   "ebene": "BELEGT",
+   "evidenz": "FACT",
+   "freigabe": "KANDIDAT",
+   "freigabe_herkunft": "nicht im Ledger (CANDIDATES_NOT_IN_LEDGER, REVIEW_REQUIRED)",
+   "stand": "2026-09-23",
+   "geprueft_am": null,
+   "transportweg": null,
+   "einschraenkung": "SOURCE_SNAPSHOT_NOT_CURRENT_VALIDITY; SINGLE_SOURCE_ONLY; NO_CONTROL_INFERENCE. Material: Kupferdraht (copper wire rod), keine Menge genannt. Gleichlautende Meldung auf prysmian.com. Vorgängervertrag 24.04.2024 (aurubis.com, 'particularly in Prysmian European plants'). Welche Aurubis-Hütten und welche Prysmian-Werke beliefert werden, ist nicht genannt.",
+   "atlas_id": "analysis/research/company-connections-v3/research.json#cc3:rel:001",
+   "annahme": null,
+   "belege": [
+    {
+     "rolle": "hauptbeleg",
+     "zitat": "Prysmian and Aurubis have signed a landmark long-term agreement for the supply of copper wire rod",
+     "fundstelle": "Pressemitteilung, Absätze 1 und 4",
+     "quelle": "cc3:cc3-src-001"
+    },
+    {
+     "rolle": "zusatzbeleg",
+     "zitat": "Its four copper rod plants across Europe also provide Prysmian with flexibility and proximity to key markets.",
+     "fundstelle": "Pressemitteilung, Absätze 1 und 4",
+     "quelle": "cc3:cc3-src-001"
+    }
+   ],
+   "hinweise": [],
+   "mengen": [
+    {
+     "id": "M-V8-LIEFERMENGE",
+     "groesse": "LIEFERMENGE",
+     "groesse_text": "Liefermenge",
+     "ebene": "BELEGT",
+     "annahme": null,
+     "wert": null,
+     "wert_von": null,
+     "wert_bis": null,
+     "einheit": "t",
+     "zeitraum": null,
+     "evidenz": "UNKNOWN",
+     "freigabe": "UNKNOWN",
+     "freigabe_herkunft": null,
+     "stand": null,
+     "grund_unbekannt": "Menge Aurubis -> Prysmian in keinem gelesenen Dokument genannt (Aurubis AR 2024/25, Prysmian AR 2025, Pressemitteilung 23.09.2026); siehe pilot-prysmian-v1/facts.json not_found.",
+     "belege": []
+    },
+    {
+     "id": "M-V8-LIEFERWERT",
+     "groesse": "LIEFERWERT",
+     "groesse_text": "Lieferwert",
+     "ebene": "BELEGT",
+     "annahme": null,
+     "wert": null,
+     "wert_von": null,
+     "wert_bis": null,
+     "einheit": "USD",
+     "zeitraum": null,
+     "evidenz": "UNKNOWN",
+     "freigabe": "UNKNOWN",
+     "freigabe_herkunft": null,
+     "stand": null,
+     "grund_unbekannt": "Keine Quelle nennt einen Lieferwert; Menge x Preis waere eine Ableitung.",
+     "belege": []
+    },
+    {
+     "id": "M-V8-LIEFERMENGE-ANNAHME",
+     "groesse": "LIEFERMENGE",
+     "groesse_text": "Liefermenge",
+     "ebene": "ANNAHME",
+     "annahme": {
+      "id": "A-LIEFER-AUR-PRY",
+      "art": "SCHAETZUNG",
+      "konfidenz": 0.3,
+      "begruendung": "Prysmian braucht nach eigener Angabe 2–3 % der Weltkupferproduktion (Geschäftsbericht 2025, S. 218), also rund 460–690 kt, und kauft fast nur Draht bei Stammlieferanten. Aurubis erzeugt 869 kt Draht (Geschäftsbericht 2024/25) und ist der größte Drahthersteller Europas, wo Prysmian seine meisten Werke hat. Angenommen ist, dass Aurubis gut ein Viertel des Prysmian-Bedarfs deckt (Mitte 575 kt × 25 % ≈ 140 kt, rund 16 % des Aurubis-Drahts). Grobe Größenordnung, bis der Kunde die Menge nennt.",
+      "quelle": "annahmen-atlas"
+     },
+     "wert": 140.0,
+     "wert_von": 90.0,
+     "wert_bis": 200.0,
+     "einheit": "kt Kupferdraht/Jahr",
+     "zeitraum": null,
+     "evidenz": "ANNAHME",
+     "freigabe": "ANNAHME",
+     "freigabe_herkunft": "Rund 140 kt Kupferdraht pro Jahr (Spanne 90–200 kt).",
+     "stand": "2026-11-03",
+     "grund_unbekannt": null,
+     "belege": []
+    }
+   ]
+  }
+ ],
+ "ausfall": {
+  "frage": "Glied X fällt aus: was fehlt Prysmian (Mailand) (Tonnen), was kostet es mehr, wie lange dauert es, wer ersetzt es?",
+  "kunde": "S8",
+  "lieferant": "S7",
+  "mine": "S1",
+  "regeln": [
+   "Klick auf ein Glied = Ausfall dieses Glieds; gerechnet wird nur aus der Datenbank (kette.json).",
+   "Der Kunde verliert die Kette nur, wenn jeder erfasste Weg ueber das Glied fuehrt (Regel Meilenstein 6); nicht erfasste Ausweichwege koennen real existieren.",
+   "Fehlende Menge bleibt unbekannt, nie 0; belegte Mengen nur als Obergrenze mit sichtbarer Rechnung.",
+   "Keine Mehrkosten ohne belegten Ersatzpreis, Aufschlag oder Preiselastizitaet; zitiert werden nur Sensitivitaeten.",
+   "Annahmen nur in der Ansicht 'Mit Annahmen', mit Annahme-ID, Konfidenz und Rechnung; das Ergebnis ist eine Schlussfolgerung, nie ein Fakt."
+  ],
+  "eingaben": [
+   {
+    "id": "wege",
+    "text": "Lieferwege um das Glied"
+   },
+   {
+    "id": "menge",
+    "text": "Liefermenge zum Kunden"
+   },
+   {
+    "id": "preis",
+    "text": "Ersatzpreis oder Aufschlag"
+   },
+   {
+    "id": "dauer",
+    "text": "Wiederanlauf- oder Ersatzzeit"
+   },
+   {
+    "id": "ersatz",
+    "text": "Benannter Ersatz (Weg, Herkunft oder Lieferant)"
+   }
+  ],
+  "glieder": [
+   {
+    "standort": "S1",
+    "m6_betroffen": [],
+    "ansichten": {
+     "belegt": {
+      "kunde_abgeschnitten": true,
+      "lage": "Die Mine selbst fällt aus: ihr Kupfer erreicht Aurubis (Hamburg) und damit Prysmian (Mailand) nicht mehr. Aurubis (Hamburg) liefert weiter aus anderen Herkünften.",
+      "betroffene_wege": [
+       "V1",
+       "V2",
+       "V5",
+       "V7",
+       "V6",
+       "V8"
+      ],
+      "ausweichwege": [],
+      "tonnen": {
+       "status": "UNBEKANNT",
+       "grund": "Menge Aurubis -> Prysmian in keinem gelesenen Dokument genannt (Aurubis AR 2024/25, Prysmian AR 2025, Pressemitteilung 23.09.2026); siehe pilot-prysmian-v1/facts.json not_found.",
+       "menge_belegt": "M-V8-LIEFERMENGE",
+       "obergrenze": {
+        "kt": 388.8,
+        "rechnung": "min(Förderung Mine Kamoa-Kakula 388,8 kt; Drahtproduktion Aurubis (Hamburg) 869,0 kt)",
+        "posten": [
+         {
+          "menge": "M-S1-PRODUKTION",
+          "standort": "S1",
+          "kt": 388.8,
+          "text": "Förderung Mine Kamoa-Kakula"
+         },
+         {
+          "menge": "M-S7-DRAHTPRODUKTION",
+          "standort": "S7",
+          "kt": 869.0,
+          "text": "Drahtproduktion Aurubis (Hamburg)"
+         }
+        ],
+        "status": "RECHNUNG",
+        "hinweis": "Obergrenze aus belegten Mengen, keine Liefermenge."
+       }
+      },
+      "mehrkosten": {
+       "status": "UNBEKANNT",
+       "grund": "Keine gelesene Quelle nennt einen Ersatzpreis, Aufschlag oder eine Preiselastizität; Mehrkosten wären eine Ableitung (gleiche Regel wie die Länder-Szenarien, Meilenstein 6).",
+       "einordnung": [
+        "R-S8-1"
+       ]
+      },
+      "dauer": {
+       "status": "UNBEKANNT",
+       "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+       "einordnung": [
+        "R-S1-1"
+       ],
+       "hinweise_an": []
+      },
+      "ersatz": {
+       "status": "BELEGT",
+       "wege": [],
+       "angaben": [
+        "X-S7-1",
+        "X-S7-2"
+       ],
+       "grund": null
+      },
+      "eingaben": [
+       {
+        "id": "wege",
+        "text": "Lieferwege um das Glied",
+        "status": "BELEGT"
+       },
+       {
+        "id": "menge",
+        "text": "Liefermenge zum Kunden",
+        "status": "UNBEKANNT"
+       },
+       {
+        "id": "preis",
+        "text": "Ersatzpreis oder Aufschlag",
+        "status": "UNBEKANNT"
+       },
+       {
+        "id": "dauer",
+        "text": "Wiederanlauf- oder Ersatzzeit",
+        "status": "UNBEKANNT"
+       },
+       {
+        "id": "ersatz",
+        "text": "Benannter Ersatz (Weg, Herkunft oder Lieferant)",
+        "status": "BELEGT"
+       }
+      ],
+      "eingaben_belegt": 2,
+      "eingaben_mit_annahmen": 2
+     },
+     "annahmen": {
+      "kunde_abgeschnitten": true,
+      "lage": "Die Mine selbst fällt aus: ihr Kupfer erreicht Aurubis (Hamburg) und damit Prysmian (Mailand) nicht mehr. Aurubis (Hamburg) liefert weiter aus anderen Herkünften.",
+      "betroffene_wege": [
+       "V1",
+       "V2",
+       "V3",
+       "V4",
+       "V5",
+       "V7",
+       "V9",
+       "V10",
+       "V6",
+       "V8"
+      ],
+      "ausweichwege": [],
+      "tonnen": {
+       "status": "UNBEKANNT",
+       "grund": "Menge Aurubis -> Prysmian in keinem gelesenen Dokument genannt (Aurubis AR 2024/25, Prysmian AR 2025, Pressemitteilung 23.09.2026); siehe pilot-prysmian-v1/facts.json not_found.",
+       "menge_belegt": "M-V8-LIEFERMENGE",
+       "obergrenze": {
+        "kt": 388.8,
+        "rechnung": "min(Förderung Mine Kamoa-Kakula 388,8 kt; Drahtproduktion Aurubis (Hamburg) 869,0 kt)",
+        "posten": [
+         {
+          "menge": "M-S1-PRODUKTION",
+          "standort": "S1",
+          "kt": 388.8,
+          "text": "Förderung Mine Kamoa-Kakula"
+         },
+         {
+          "menge": "M-S7-DRAHTPRODUKTION",
+          "standort": "S7",
+          "kt": 869.0,
+          "text": "Drahtproduktion Aurubis (Hamburg)"
+         }
+        ],
+        "status": "RECHNUNG",
+        "hinweis": "Obergrenze aus belegten Mengen, keine Liefermenge."
+       },
+       "annahme": {
+        "kt": 5.17,
+        "von": 3.32,
+        "bis": 7.38,
+        "einheit": "kt Cu/Jahr",
+        "annahmen": [
+         "A-MENGE-WEG",
+         "A-LIEFER-AUR-PRY"
+        ],
+        "konfidenz": 0.3,
+        "rechnung": "Zufluss bei Aurubis (Hamburg), der über Mine Kamoa-Kakula läuft: 40,6 kt Cu (Mengen je Weg) × Anteil Prysmian (Mailand) am Ausstoß 12,7 % (17,3 von 136,1 kt) = 5,17 kt; Spanne mit 90–200 statt 140 kt Liefermenge"
+       }
+      },
+      "mehrkosten": {
+       "status": "UNBEKANNT",
+       "grund": "Keine gelesene Quelle nennt einen Ersatzpreis, Aufschlag oder eine Preiselastizität; Mehrkosten wären eine Ableitung (gleiche Regel wie die Länder-Szenarien, Meilenstein 6). Auch der Annahmen-Atlas enthält keine Annahme zu Ersatzpreis oder Aufschlag.",
+       "einordnung": [
+        "R-S8-1"
+       ]
+      },
+      "dauer": {
+       "status": "UNBEKANNT",
+       "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied. Auch der Annahmen-Atlas enthält keine Annahme zur Ausfalldauer.",
+       "einordnung": [
+        "R-S1-1"
+       ],
+       "hinweise_an": []
+      },
+      "ersatz": {
+       "status": "BELEGT",
+       "wege": [],
+       "angaben": [
+        "X-S7-1",
+        "X-S7-2"
+       ],
+       "grund": null,
+       "wege_annahme": []
+      },
+      "eingaben": [
+       {
+        "id": "wege",
+        "text": "Lieferwege um das Glied",
+        "status": "BELEGT"
+       },
+       {
+        "id": "menge",
+        "text": "Liefermenge zum Kunden",
+        "status": "ANNAHME"
+       },
+       {
+        "id": "preis",
+        "text": "Ersatzpreis oder Aufschlag",
+        "status": "UNBEKANNT"
+       },
+       {
+        "id": "dauer",
+        "text": "Wiederanlauf- oder Ersatzzeit",
+        "status": "UNBEKANNT"
+       },
+       {
+        "id": "ersatz",
+        "text": "Benannter Ersatz (Weg, Herkunft oder Lieferant)",
+        "status": "BELEGT"
+       }
+      ],
+      "eingaben_belegt": 2,
+      "eingaben_mit_annahmen": 3
+     }
+    },
+    "simulierbar": true
+   },
+   {
+    "standort": "S2",
+    "m6_betroffen": [
+     {
+      "standort": "S1",
+      "verliert_alle_erfassten_abnehmer": true,
+      "andere_gleicher_art": []
+     }
+    ],
+    "ansichten": {
+     "belegt": {
+      "kunde_abgeschnitten": true,
+      "lage": "Kein erfasster Weg von Mine Kamoa-Kakula zu Prysmian (Mailand) führt an Aufbereitung Phase 1+2 vorbei: das Kupfer dieser Mine erreicht Aurubis (Hamburg) und damit Prysmian (Mailand) in den erfassten Wegen nicht mehr. Aurubis (Hamburg) liefert weiter aus anderen Herkünften.",
+      "betroffene_wege": [
+       "V1",
+       "V2",
+       "V5",
+       "V7",
+       "V6",
+       "V8"
+      ],
+      "ausweichwege": [],
+      "tonnen": {
+       "status": "UNBEKANNT",
+       "grund": "Menge Aurubis -> Prysmian in keinem gelesenen Dokument genannt (Aurubis AR 2024/25, Prysmian AR 2025, Pressemitteilung 23.09.2026); siehe pilot-prysmian-v1/facts.json not_found.",
+       "menge_belegt": "M-V8-LIEFERMENGE",
+       "obergrenze": {
+        "kt": 388.8,
+        "rechnung": "min(Förderung Mine Kamoa-Kakula 388,8 kt; Drahtproduktion Aurubis (Hamburg) 869,0 kt)",
+        "posten": [
+         {
+          "menge": "M-S1-PRODUKTION",
+          "standort": "S1",
+          "kt": 388.8,
+          "text": "Förderung Mine Kamoa-Kakula"
+         },
+         {
+          "menge": "M-S7-DRAHTPRODUKTION",
+          "standort": "S7",
+          "kt": 869.0,
+          "text": "Drahtproduktion Aurubis (Hamburg)"
+         }
+        ],
+        "status": "RECHNUNG",
+        "hinweis": "Obergrenze aus belegten Mengen, keine Liefermenge."
+       }
+      },
+      "mehrkosten": {
+       "status": "UNBEKANNT",
+       "grund": "Keine gelesene Quelle nennt einen Ersatzpreis, Aufschlag oder eine Preiselastizität; Mehrkosten wären eine Ableitung (gleiche Regel wie die Länder-Szenarien, Meilenstein 6).",
+       "einordnung": [
+        "R-S8-1"
+       ]
+      },
+      "dauer": {
+       "status": "UNBEKANNT",
+       "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+       "einordnung": [
+        "R-S2-1"
+       ],
+       "hinweise_an": []
+      },
+      "ersatz": {
+       "status": "BELEGT",
+       "wege": [],
+       "angaben": [
+        "X-S7-1",
+        "X-S7-2"
+       ],
+       "grund": null
+      },
+      "eingaben": [
+       {
+        "id": "wege",
+        "text": "Lieferwege um das Glied",
+        "status": "BELEGT"
+       },
+       {
+        "id": "menge",
+        "text": "Liefermenge zum Kunden",
+        "status": "UNBEKANNT"
+       },
+       {
+        "id": "preis",
+        "text": "Ersatzpreis oder Aufschlag",
+        "status": "UNBEKANNT"
+       },
+       {
+        "id": "dauer",
+        "text": "Wiederanlauf- oder Ersatzzeit",
+        "status": "UNBEKANNT"
+       },
+       {
+        "id": "ersatz",
+        "text": "Benannter Ersatz (Weg, Herkunft oder Lieferant)",
+        "status": "BELEGT"
+       }
+      ],
+      "eingaben_belegt": 2,
+      "eingaben_mit_annahmen": 2
+     },
+     "annahmen": {
+      "kunde_abgeschnitten": true,
+      "lage": "Kein erfasster Weg von Mine Kamoa-Kakula zu Prysmian (Mailand) führt an Aufbereitung Phase 1+2 vorbei: das Kupfer dieser Mine erreicht Aurubis (Hamburg) und damit Prysmian (Mailand) in den erfassten Wegen nicht mehr. Aurubis (Hamburg) liefert weiter aus anderen Herkünften. Im Annahmen-Netz laufen 27,8 von 40,6 kt Cu dieser Mine auf dem Weg zu Aurubis (Hamburg) an Aufbereitung Phase 1+2 vorbei (Wege außerhalb der Kettenansicht, Annahme).",
+      "betroffene_wege": [
+       "V1",
+       "V2",
+       "V3",
+       "V4",
+       "V5",
+       "V7",
+       "V9",
+       "V10",
+       "V6",
+       "V8"
+      ],
+      "ausweichwege": [],
+      "tonnen": {
+       "status": "UNBEKANNT",
+       "grund": "Menge Aurubis -> Prysmian in keinem gelesenen Dokument genannt (Aurubis AR 2024/25, Prysmian AR 2025, Pressemitteilung 23.09.2026); siehe pilot-prysmian-v1/facts.json not_found.",
+       "menge_belegt": "M-V8-LIEFERMENGE",
+       "obergrenze": {
+        "kt": 388.8,
+        "rechnung": "min(Förderung Mine Kamoa-Kakula 388,8 kt; Drahtproduktion Aurubis (Hamburg) 869,0 kt)",
+        "posten": [
+         {
+          "menge": "M-S1-PRODUKTION",
+          "standort": "S1",
+          "kt": 388.8,
+          "text": "Förderung Mine Kamoa-Kakula"
+         },
+         {
+          "menge": "M-S7-DRAHTPRODUKTION",
+          "standort": "S7",
+          "kt": 869.0,
+          "text": "Drahtproduktion Aurubis (Hamburg)"
+         }
+        ],
+        "status": "RECHNUNG",
+        "hinweis": "Obergrenze aus belegten Mengen, keine Liefermenge."
+       },
+       "annahme": {
+        "kt": 1.63,
+        "von": 1.05,
+        "bis": 2.33,
+        "einheit": "kt Cu/Jahr",
+        "annahmen": [
+         "A-MENGE-WEG",
+         "A-LIEFER-AUR-PRY"
+        ],
+        "konfidenz": 0.3,
+        "rechnung": "Zufluss bei Aurubis (Hamburg), der über Aufbereitung Phase 1+2 läuft: 12,8 kt Cu (Mengen je Weg) × Anteil Prysmian (Mailand) am Ausstoß 12,7 % (17,3 von 136,1 kt) = 1,63 kt; Spanne mit 90–200 statt 140 kt Liefermenge"
+       }
+      },
+      "mehrkosten": {
+       "status": "UNBEKANNT",
+       "grund": "Keine gelesene Quelle nennt einen Ersatzpreis, Aufschlag oder eine Preiselastizität; Mehrkosten wären eine Ableitung (gleiche Regel wie die Länder-Szenarien, Meilenstein 6). Auch der Annahmen-Atlas enthält keine Annahme zu Ersatzpreis oder Aufschlag.",
+       "einordnung": [
+        "R-S8-1"
+       ]
+      },
+      "dauer": {
+       "status": "UNBEKANNT",
+       "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied. Auch der Annahmen-Atlas enthält keine Annahme zur Ausfalldauer.",
+       "einordnung": [
+        "R-S2-1"
+       ],
+       "hinweise_an": []
+      },
+      "ersatz": {
+       "status": "BELEGT",
+       "wege": [],
+       "angaben": [
+        "X-S7-1",
+        "X-S7-2"
+       ],
+       "grund": null,
+       "wege_annahme": []
+      },
+      "eingaben": [
+       {
+        "id": "wege",
+        "text": "Lieferwege um das Glied",
+        "status": "BELEGT"
+       },
+       {
+        "id": "menge",
+        "text": "Liefermenge zum Kunden",
+        "status": "ANNAHME"
+       },
+       {
+        "id": "preis",
+        "text": "Ersatzpreis oder Aufschlag",
+        "status": "UNBEKANNT"
+       },
+       {
+        "id": "dauer",
+        "text": "Wiederanlauf- oder Ersatzzeit",
+        "status": "UNBEKANNT"
+       },
+       {
+        "id": "ersatz",
+        "text": "Benannter Ersatz (Weg, Herkunft oder Lieferant)",
+        "status": "BELEGT"
+       }
+      ],
+      "eingaben_belegt": 2,
+      "eingaben_mit_annahmen": 3
+     }
+    },
+    "simulierbar": true
+   },
+   {
+    "standort": "S3",
+    "m6_betroffen": [
+     {
+      "standort": "S2",
+      "verliert_alle_erfassten_abnehmer": true,
+      "andere_gleicher_art": []
+     }
+    ],
+    "ansichten": {
+     "belegt": {
+      "kunde_abgeschnitten": true,
+      "lage": "Kein erfasster Weg von Mine Kamoa-Kakula zu Prysmian (Mailand) führt an Hütte Kamoa-Kakula vorbei: das Kupfer dieser Mine erreicht Aurubis (Hamburg) und damit Prysmian (Mailand) in den erfassten Wegen nicht mehr. Aurubis (Hamburg) liefert weiter aus anderen Herkünften.",
+      "betroffene_wege": [
+       "V1",
+       "V2",
+       "V5",
+       "V7",
+       "V6",
+       "V8"
+      ],
+      "ausweichwege": [],
+      "tonnen": {
+       "status": "UNBEKANNT",
+       "grund": "Menge Aurubis -> Prysmian in keinem gelesenen Dokument genannt (Aurubis AR 2024/25, Prysmian AR 2025, Pressemitteilung 23.09.2026); siehe pilot-prysmian-v1/facts.json not_found.",
+       "menge_belegt": "M-V8-LIEFERMENGE",
+       "obergrenze": {
+        "kt": 388.8,
+        "rechnung": "min(Förderung Mine Kamoa-Kakula 388,8 kt; Drahtproduktion Aurubis (Hamburg) 869,0 kt)",
+        "posten": [
+         {
+          "menge": "M-S1-PRODUKTION",
+          "standort": "S1",
+          "kt": 388.8,
+          "text": "Förderung Mine Kamoa-Kakula"
+         },
+         {
+          "menge": "M-S7-DRAHTPRODUKTION",
+          "standort": "S7",
+          "kt": 869.0,
+          "text": "Drahtproduktion Aurubis (Hamburg)"
+         }
+        ],
+        "status": "RECHNUNG",
+        "hinweis": "Obergrenze aus belegten Mengen, keine Liefermenge."
+       }
+      },
+      "mehrkosten": {
+       "status": "UNBEKANNT",
+       "grund": "Keine gelesene Quelle nennt einen Ersatzpreis, Aufschlag oder eine Preiselastizität; Mehrkosten wären eine Ableitung (gleiche Regel wie die Länder-Szenarien, Meilenstein 6).",
+       "einordnung": [
+        "R-S8-1"
+       ]
+      },
+      "dauer": {
+       "status": "UNBEKANNT",
+       "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+       "einordnung": [],
+       "hinweise_an": [
+        "V4"
+       ]
+      },
+      "ersatz": {
+       "status": "BELEGT",
+       "wege": [],
+       "angaben": [
+        "X-S7-1",
+        "X-S7-2"
+       ],
+       "grund": null
+      },
+      "eingaben": [
+       {
+        "id": "wege",
+        "text": "Lieferwege um das Glied",
+        "status": "BELEGT"
+       },
+       {
+        "id": "menge",
+        "text": "Liefermenge zum Kunden",
+        "status": "UNBEKANNT"
+       },
+       {
+        "id": "preis",
+        "text": "Ersatzpreis oder Aufschlag",
+        "status": "UNBEKANNT"
+       },
+       {
+        "id": "dauer",
+        "text": "Wiederanlauf- oder Ersatzzeit",
+        "status": "UNBEKANNT"
+       },
+       {
+        "id": "ersatz",
+        "text": "Benannter Ersatz (Weg, Herkunft oder Lieferant)",
+        "status": "BELEGT"
+       }
+      ],
+      "eingaben_belegt": 2,
+      "eingaben_mit_annahmen": 2
+     },
+     "annahmen": {
+      "kunde_abgeschnitten": true,
+      "lage": "Kein erfasster Weg von Mine Kamoa-Kakula zu Prysmian (Mailand) führt an Hütte Kamoa-Kakula vorbei: das Kupfer dieser Mine erreicht Aurubis (Hamburg) und damit Prysmian (Mailand) in den erfassten Wegen nicht mehr. Aurubis (Hamburg) liefert weiter aus anderen Herkünften. Im Annahmen-Netz laufen 15,0 von 40,6 kt Cu dieser Mine auf dem Weg zu Aurubis (Hamburg) an Hütte Kamoa-Kakula vorbei (Wege außerhalb der Kettenansicht, Annahme).",
+      "betroffene_wege": [
+       "V1",
+       "V2",
+       "V3",
+       "V4",
+       "V5",
+       "V7",
+       "V9",
+       "V10",
+       "V6",
+       "V8"
+      ],
+      "ausweichwege": [],
+      "tonnen": {
+       "status": "UNBEKANNT",
+       "grund": "Menge Aurubis -> Prysmian in keinem gelesenen Dokument genannt (Aurubis AR 2024/25, Prysmian AR 2025, Pressemitteilung 23.09.2026); siehe pilot-prysmian-v1/facts.json not_found.",
+       "menge_belegt": "M-V8-LIEFERMENGE",
+       "obergrenze": {
+        "kt": 388.8,
+        "rechnung": "min(Förderung Mine Kamoa-Kakula 388,8 kt; Drahtproduktion Aurubis (Hamburg) 869,0 kt)",
+        "posten": [
+         {
+          "menge": "M-S1-PRODUKTION",
+          "standort": "S1",
+          "kt": 388.8,
+          "text": "Förderung Mine Kamoa-Kakula"
+         },
+         {
+          "menge": "M-S7-DRAHTPRODUKTION",
+          "standort": "S7",
+          "kt": 869.0,
+          "text": "Drahtproduktion Aurubis (Hamburg)"
+         }
+        ],
+        "status": "RECHNUNG",
+        "hinweis": "Obergrenze aus belegten Mengen, keine Liefermenge."
+       },
+       "annahme": {
+        "kt": 3.26,
+        "von": 2.1,
+        "bis": 4.66,
+        "einheit": "kt Cu/Jahr",
+        "annahmen": [
+         "A-MENGE-WEG",
+         "A-LIEFER-AUR-PRY"
+        ],
+        "konfidenz": 0.3,
+        "rechnung": "Zufluss bei Aurubis (Hamburg), der über Hütte Kamoa-Kakula läuft: 25,6 kt Cu (Mengen je Weg) × Anteil Prysmian (Mailand) am Ausstoß 12,7 % (17,3 von 136,1 kt) = 3,26 kt; Spanne mit 90–200 statt 140 kt Liefermenge"
+       }
+      },
+      "mehrkosten": {
+       "status": "UNBEKANNT",
+       "grund": "Keine gelesene Quelle nennt einen Ersatzpreis, Aufschlag oder eine Preiselastizität; Mehrkosten wären eine Ableitung (gleiche Regel wie die Länder-Szenarien, Meilenstein 6). Auch der Annahmen-Atlas enthält keine Annahme zu Ersatzpreis oder Aufschlag.",
+       "einordnung": [
+        "R-S8-1"
+       ]
+      },
+      "dauer": {
+       "status": "UNBEKANNT",
+       "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied. Auch der Annahmen-Atlas enthält keine Annahme zur Ausfalldauer.",
+       "einordnung": [],
+       "hinweise_an": [
+        "V4"
+       ]
+      },
+      "ersatz": {
+       "status": "BELEGT",
+       "wege": [],
+       "angaben": [
+        "X-S7-1",
+        "X-S7-2"
+       ],
+       "grund": null,
+       "wege_annahme": []
+      },
+      "eingaben": [
+       {
+        "id": "wege",
+        "text": "Lieferwege um das Glied",
+        "status": "BELEGT"
+       },
+       {
+        "id": "menge",
+        "text": "Liefermenge zum Kunden",
+        "status": "ANNAHME"
+       },
+       {
+        "id": "preis",
+        "text": "Ersatzpreis oder Aufschlag",
+        "status": "UNBEKANNT"
+       },
+       {
+        "id": "dauer",
+        "text": "Wiederanlauf- oder Ersatzzeit",
+        "status": "UNBEKANNT"
+       },
+       {
+        "id": "ersatz",
+        "text": "Benannter Ersatz (Weg, Herkunft oder Lieferant)",
+        "status": "BELEGT"
+       }
+      ],
+      "eingaben_belegt": 2,
+      "eingaben_mit_annahmen": 3
+     }
+    },
+    "simulierbar": true
+   },
+   {
+    "standort": "S4",
+    "m6_betroffen": [
+     {
+      "standort": "S3",
+      "verliert_alle_erfassten_abnehmer": false,
+      "andere_gleicher_art": [
+       "S5",
+       "S7"
+      ]
+     }
+    ],
+    "ansichten": {
+     "belegt": {
+      "kunde_abgeschnitten": false,
+      "lage": "Prysmian (Mailand) bleibt über 2 erfasste Wege ohne Trockenhafen Kolwezi angebunden. Erfasste Wege sind Beziehungen, kein bestätigter Fahrweg; ob Mengen über dieses Glied liefen, ist unbekannt.",
+      "betroffene_wege": [],
+      "ausweichwege": [
+       [
+        "V1",
+        "V2",
+        "V5",
+        "V6",
+        "V8"
+       ],
+       [
+        "V1",
+        "V2",
+        "V7",
+        "V8"
+       ]
+      ],
+      "tonnen": {
+       "status": "UNBEKANNT",
+       "grund": "Menge Aurubis -> Prysmian in keinem gelesenen Dokument genannt (Aurubis AR 2024/25, Prysmian AR 2025, Pressemitteilung 23.09.2026); siehe pilot-prysmian-v1/facts.json not_found.",
+       "menge_belegt": "M-V8-LIEFERMENGE",
+       "obergrenze": {
+        "kt": 388.8,
+        "rechnung": "min(Förderung Mine Kamoa-Kakula 388,8 kt; Drahtproduktion Aurubis (Hamburg) 869,0 kt)",
+        "posten": [
+         {
+          "menge": "M-S1-PRODUKTION",
+          "standort": "S1",
+          "kt": 388.8,
+          "text": "Förderung Mine Kamoa-Kakula"
+         },
+         {
+          "menge": "M-S7-DRAHTPRODUKTION",
+          "standort": "S7",
+          "kt": 869.0,
+          "text": "Drahtproduktion Aurubis (Hamburg)"
+         }
+        ],
+        "status": "RECHNUNG",
+        "hinweis": "Obergrenze aus belegten Mengen, keine Liefermenge."
+       }
+      },
+      "mehrkosten": {
+       "status": "UNBEKANNT",
+       "grund": "Keine gelesene Quelle nennt einen Ersatzpreis, Aufschlag oder eine Preiselastizität; Mehrkosten wären eine Ableitung (gleiche Regel wie die Länder-Szenarien, Meilenstein 6).",
+       "einordnung": [
+        "R-S8-1"
+       ]
+      },
+      "dauer": {
+       "status": "UNBEKANNT",
+       "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+       "einordnung": [],
+       "hinweise_an": []
+      },
+      "ersatz": {
+       "status": "BELEGT",
+       "wege": [
+        [
+         "V1",
+         "V2",
+         "V5",
+         "V6",
+         "V8"
+        ],
+        [
+         "V1",
+         "V2",
+         "V7",
+         "V8"
+        ]
+       ],
+       "angaben": [],
+       "grund": null
+      },
+      "eingaben": [
+       {
+        "id": "wege",
+        "text": "Lieferwege um das Glied",
+        "status": "BELEGT"
+       },
+       {
+        "id": "menge",
+        "text": "Liefermenge zum Kunden",
+        "status": "UNBEKANNT"
+       },
+       {
+        "id": "preis",
+        "text": "Ersatzpreis oder Aufschlag",
+        "status": "UNBEKANNT"
+       },
+       {
+        "id": "dauer",
+        "text": "Wiederanlauf- oder Ersatzzeit",
+        "status": "UNBEKANNT"
+       },
+       {
+        "id": "ersatz",
+        "text": "Benannter Ersatz (Weg, Herkunft oder Lieferant)",
+        "status": "BELEGT"
+       }
+      ],
+      "eingaben_belegt": 2,
+      "eingaben_mit_annahmen": 2
+     },
+     "annahmen": {
+      "kunde_abgeschnitten": false,
+      "lage": "Prysmian (Mailand) bleibt über 3 erfasste Wege ohne Trockenhafen Kolwezi angebunden. Erfasste Wege sind Beziehungen, kein bestätigter Fahrweg; ob Mengen über dieses Glied liefen, ist unbekannt. Im Annahmen-Netz laufen 36,3 von 40,6 kt Cu dieser Mine auf dem Weg zu Aurubis (Hamburg) an Trockenhafen Kolwezi vorbei (Wege außerhalb der Kettenansicht, Annahme).",
+      "betroffene_wege": [
+       "V3",
+       "V9"
+      ],
+      "ausweichwege": [
+       [
+        "V1",
+        "V2",
+        "V4",
+        "V10",
+        "V8"
+       ],
+       [
+        "V1",
+        "V2",
+        "V5",
+        "V6",
+        "V8"
+       ],
+       [
+        "V1",
+        "V2",
+        "V7",
+        "V8"
+       ]
+      ],
+      "tonnen": {
+       "status": "UNBEKANNT",
+       "grund": "Menge Aurubis -> Prysmian in keinem gelesenen Dokument genannt (Aurubis AR 2024/25, Prysmian AR 2025, Pressemitteilung 23.09.2026); siehe pilot-prysmian-v1/facts.json not_found.",
+       "menge_belegt": "M-V8-LIEFERMENGE",
+       "obergrenze": {
+        "kt": 388.8,
+        "rechnung": "min(Förderung Mine Kamoa-Kakula 388,8 kt; Drahtproduktion Aurubis (Hamburg) 869,0 kt)",
+        "posten": [
+         {
+          "menge": "M-S1-PRODUKTION",
+          "standort": "S1",
+          "kt": 388.8,
+          "text": "Förderung Mine Kamoa-Kakula"
+         },
+         {
+          "menge": "M-S7-DRAHTPRODUKTION",
+          "standort": "S7",
+          "kt": 869.0,
+          "text": "Drahtproduktion Aurubis (Hamburg)"
+         }
+        ],
+        "status": "RECHNUNG",
+        "hinweis": "Obergrenze aus belegten Mengen, keine Liefermenge."
+       },
+       "annahme": {
+        "kt": 0.54,
+        "von": 0.35,
+        "bis": 0.78,
+        "einheit": "kt Cu/Jahr",
+        "annahmen": [
+         "A-MENGE-WEG",
+         "A-LIEFER-AUR-PRY"
+        ],
+        "konfidenz": 0.3,
+        "rechnung": "Zufluss bei Aurubis (Hamburg), der über Trockenhafen Kolwezi läuft: 4,3 kt Cu (Mengen je Weg) × Anteil Prysmian (Mailand) am Ausstoß 12,7 % (17,3 von 136,1 kt) = 0,54 kt; Spanne mit 90–200 statt 140 kt Liefermenge"
+       }
+      },
+      "mehrkosten": {
+       "status": "UNBEKANNT",
+       "grund": "Keine gelesene Quelle nennt einen Ersatzpreis, Aufschlag oder eine Preiselastizität; Mehrkosten wären eine Ableitung (gleiche Regel wie die Länder-Szenarien, Meilenstein 6). Auch der Annahmen-Atlas enthält keine Annahme zu Ersatzpreis oder Aufschlag.",
+       "einordnung": [
+        "R-S8-1"
+       ]
+      },
+      "dauer": {
+       "status": "UNBEKANNT",
+       "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied. Auch der Annahmen-Atlas enthält keine Annahme zur Ausfalldauer.",
+       "einordnung": [],
+       "hinweise_an": []
+      },
+      "ersatz": {
+       "status": "BELEGT",
+       "wege": [
+        [
+         "V1",
+         "V2",
+         "V4",
+         "V10",
+         "V8"
+        ],
+        [
+         "V1",
+         "V2",
+         "V5",
+         "V6",
+         "V8"
+        ],
+        [
+         "V1",
+         "V2",
+         "V7",
+         "V8"
+        ]
+       ],
+       "angaben": [],
+       "grund": null,
+       "wege_annahme": [
+        [
+         "V1",
+         "V2",
+         "V4",
+         "V10",
+         "V8"
+        ]
+       ]
+      },
+      "eingaben": [
+       {
+        "id": "wege",
+        "text": "Lieferwege um das Glied",
+        "status": "BELEGT"
+       },
+       {
+        "id": "menge",
+        "text": "Liefermenge zum Kunden",
+        "status": "ANNAHME"
+       },
+       {
+        "id": "preis",
+        "text": "Ersatzpreis oder Aufschlag",
+        "status": "UNBEKANNT"
+       },
+       {
+        "id": "dauer",
+        "text": "Wiederanlauf- oder Ersatzzeit",
+        "status": "UNBEKANNT"
+       },
+       {
+        "id": "ersatz",
+        "text": "Benannter Ersatz (Weg, Herkunft oder Lieferant)",
+        "status": "BELEGT"
+       }
+      ],
+      "eingaben_belegt": 2,
+      "eingaben_mit_annahmen": 3
+     }
+    },
+    "simulierbar": true
+   },
+   {
+    "standort": "S5",
+    "m6_betroffen": [
+     {
+      "standort": "S3",
+      "verliert_alle_erfassten_abnehmer": false,
+      "andere_gleicher_art": [
+       "S4",
+       "S7"
+      ]
+     }
+    ],
+    "ansichten": {
+     "belegt": {
+      "kunde_abgeschnitten": false,
+      "lage": "Prysmian (Mailand) bleibt über 2 erfasste Wege ohne Hafen Lobito angebunden. Erfasste Wege sind Beziehungen, kein bestätigter Fahrweg; ob Mengen über dieses Glied liefen, ist unbekannt.",
+      "betroffene_wege": [],
+      "ausweichwege": [
+       [
+        "V1",
+        "V2",
+        "V5",
+        "V6",
+        "V8"
+       ],
+       [
+        "V1",
+        "V2",
+        "V7",
+        "V8"
+       ]
+      ],
+      "tonnen": {
+       "status": "UNBEKANNT",
+       "grund": "Menge Aurubis -> Prysmian in keinem gelesenen Dokument genannt (Aurubis AR 2024/25, Prysmian AR 2025, Pressemitteilung 23.09.2026); siehe pilot-prysmian-v1/facts.json not_found.",
+       "menge_belegt": "M-V8-LIEFERMENGE",
+       "obergrenze": {
+        "kt": 388.8,
+        "rechnung": "min(Förderung Mine Kamoa-Kakula 388,8 kt; Drahtproduktion Aurubis (Hamburg) 869,0 kt)",
+        "posten": [
+         {
+          "menge": "M-S1-PRODUKTION",
+          "standort": "S1",
+          "kt": 388.8,
+          "text": "Förderung Mine Kamoa-Kakula"
+         },
+         {
+          "menge": "M-S7-DRAHTPRODUKTION",
+          "standort": "S7",
+          "kt": 869.0,
+          "text": "Drahtproduktion Aurubis (Hamburg)"
+         }
+        ],
+        "status": "RECHNUNG",
+        "hinweis": "Obergrenze aus belegten Mengen, keine Liefermenge."
+       }
+      },
+      "mehrkosten": {
+       "status": "UNBEKANNT",
+       "grund": "Keine gelesene Quelle nennt einen Ersatzpreis, Aufschlag oder eine Preiselastizität; Mehrkosten wären eine Ableitung (gleiche Regel wie die Länder-Szenarien, Meilenstein 6).",
+       "einordnung": [
+        "R-S8-1"
+       ]
+      },
+      "dauer": {
+       "status": "UNBEKANNT",
+       "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+       "einordnung": [],
+       "hinweise_an": [
+        "V4"
+       ]
+      },
+      "ersatz": {
+       "status": "BELEGT",
+       "wege": [
+        [
+         "V1",
+         "V2",
+         "V5",
+         "V6",
+         "V8"
+        ],
+        [
+         "V1",
+         "V2",
+         "V7",
+         "V8"
+        ]
+       ],
+       "angaben": [],
+       "grund": null
+      },
+      "eingaben": [
+       {
+        "id": "wege",
+        "text": "Lieferwege um das Glied",
+        "status": "BELEGT"
+       },
+       {
+        "id": "menge",
+        "text": "Liefermenge zum Kunden",
+        "status": "UNBEKANNT"
+       },
+       {
+        "id": "preis",
+        "text": "Ersatzpreis oder Aufschlag",
+        "status": "UNBEKANNT"
+       },
+       {
+        "id": "dauer",
+        "text": "Wiederanlauf- oder Ersatzzeit",
+        "status": "UNBEKANNT"
+       },
+       {
+        "id": "ersatz",
+        "text": "Benannter Ersatz (Weg, Herkunft oder Lieferant)",
+        "status": "BELEGT"
+       }
+      ],
+      "eingaben_belegt": 2,
+      "eingaben_mit_annahmen": 2
+     },
+     "annahmen": {
+      "kunde_abgeschnitten": false,
+      "lage": "Prysmian (Mailand) bleibt über 2 erfasste Wege ohne Hafen Lobito angebunden. Erfasste Wege sind Beziehungen, kein bestätigter Fahrweg; ob Mengen über dieses Glied liefen, ist unbekannt. Im Annahmen-Netz laufen 17,1 von 40,6 kt Cu dieser Mine auf dem Weg zu Aurubis (Hamburg) an Hafen Lobito vorbei (Wege außerhalb der Kettenansicht, Annahme).",
+      "betroffene_wege": [
+       "V3",
+       "V4",
+       "V9",
+       "V10"
+      ],
+      "ausweichwege": [
+       [
+        "V1",
+        "V2",
+        "V5",
+        "V6",
+        "V8"
+       ],
+       [
+        "V1",
+        "V2",
+        "V7",
+        "V8"
+       ]
+      ],
+      "tonnen": {
+       "status": "UNBEKANNT",
+       "grund": "Menge Aurubis -> Prysmian in keinem gelesenen Dokument genannt (Aurubis AR 2024/25, Prysmian AR 2025, Pressemitteilung 23.09.2026); siehe pilot-prysmian-v1/facts.json not_found.",
+       "menge_belegt": "M-V8-LIEFERMENGE",
+       "obergrenze": {
+        "kt": 388.8,
+        "rechnung": "min(Förderung Mine Kamoa-Kakula 388,8 kt; Drahtproduktion Aurubis (Hamburg) 869,0 kt)",
+        "posten": [
+         {
+          "menge": "M-S1-PRODUKTION",
+          "standort": "S1",
+          "kt": 388.8,
+          "text": "Förderung Mine Kamoa-Kakula"
+         },
+         {
+          "menge": "M-S7-DRAHTPRODUKTION",
+          "standort": "S7",
+          "kt": 869.0,
+          "text": "Drahtproduktion Aurubis (Hamburg)"
+         }
+        ],
+        "status": "RECHNUNG",
+        "hinweis": "Obergrenze aus belegten Mengen, keine Liefermenge."
+       },
+       "annahme": {
+        "kt": 2.99,
+        "von": 1.92,
+        "bis": 4.27,
+        "einheit": "kt Cu/Jahr",
+        "annahmen": [
+         "A-MENGE-WEG",
+         "A-LIEFER-AUR-PRY"
+        ],
+        "konfidenz": 0.3,
+        "rechnung": "Zufluss bei Aurubis (Hamburg), der über Hafen Lobito läuft: 23,5 kt Cu (Mengen je Weg) × Anteil Prysmian (Mailand) am Ausstoß 12,7 % (17,3 von 136,1 kt) = 2,99 kt; Spanne mit 90–200 statt 140 kt Liefermenge"
+       }
+      },
+      "mehrkosten": {
+       "status": "UNBEKANNT",
+       "grund": "Keine gelesene Quelle nennt einen Ersatzpreis, Aufschlag oder eine Preiselastizität; Mehrkosten wären eine Ableitung (gleiche Regel wie die Länder-Szenarien, Meilenstein 6). Auch der Annahmen-Atlas enthält keine Annahme zu Ersatzpreis oder Aufschlag.",
+       "einordnung": [
+        "R-S8-1"
+       ]
+      },
+      "dauer": {
+       "status": "UNBEKANNT",
+       "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied. Auch der Annahmen-Atlas enthält keine Annahme zur Ausfalldauer.",
+       "einordnung": [],
+       "hinweise_an": [
+        "V4"
+       ]
+      },
+      "ersatz": {
+       "status": "BELEGT",
+       "wege": [
+        [
+         "V1",
+         "V2",
+         "V5",
+         "V6",
+         "V8"
+        ],
+        [
+         "V1",
+         "V2",
+         "V7",
+         "V8"
+        ]
+       ],
+       "angaben": [],
+       "grund": null,
+       "wege_annahme": []
+      },
+      "eingaben": [
+       {
+        "id": "wege",
+        "text": "Lieferwege um das Glied",
+        "status": "BELEGT"
+       },
+       {
+        "id": "menge",
+        "text": "Liefermenge zum Kunden",
+        "status": "ANNAHME"
+       },
+       {
+        "id": "preis",
+        "text": "Ersatzpreis oder Aufschlag",
+        "status": "UNBEKANNT"
+       },
+       {
+        "id": "dauer",
+        "text": "Wiederanlauf- oder Ersatzzeit",
+        "status": "UNBEKANNT"
+       },
+       {
+        "id": "ersatz",
+        "text": "Benannter Ersatz (Weg, Herkunft oder Lieferant)",
+        "status": "BELEGT"
+       }
+      ],
+      "eingaben_belegt": 2,
+      "eingaben_mit_annahmen": 3
+     }
+    },
+    "simulierbar": true
+   },
+   {
+    "standort": "S6",
+    "m6_betroffen": [
+     {
+      "standort": "S3",
+      "verliert_alle_erfassten_abnehmer": true,
+      "andere_gleicher_art": []
+     }
+    ],
+    "ansichten": {
+     "belegt": {
+      "kunde_abgeschnitten": false,
+      "lage": "Prysmian (Mailand) bleibt über 1 erfassten Weg ohne Trafigura (Singapur) angebunden. Erfasste Wege sind Beziehungen, kein bestätigter Fahrweg; ob Mengen über dieses Glied liefen, ist unbekannt.",
+      "betroffene_wege": [
+       "V5",
+       "V6"
+      ],
+      "ausweichwege": [
+       [
+        "V1",
+        "V2",
+        "V7",
+        "V8"
+       ]
+      ],
+      "tonnen": {
+       "status": "UNBEKANNT",
+       "grund": "Menge Aurubis -> Prysmian in keinem gelesenen Dokument genannt (Aurubis AR 2024/25, Prysmian AR 2025, Pressemitteilung 23.09.2026); siehe pilot-prysmian-v1/facts.json not_found.",
+       "menge_belegt": "M-V8-LIEFERMENGE",
+       "obergrenze": {
+        "kt": 388.8,
+        "rechnung": "min(Förderung Mine Kamoa-Kakula 388,8 kt; Drahtproduktion Aurubis (Hamburg) 869,0 kt)",
+        "posten": [
+         {
+          "menge": "M-S1-PRODUKTION",
+          "standort": "S1",
+          "kt": 388.8,
+          "text": "Förderung Mine Kamoa-Kakula"
+         },
+         {
+          "menge": "M-S7-DRAHTPRODUKTION",
+          "standort": "S7",
+          "kt": 869.0,
+          "text": "Drahtproduktion Aurubis (Hamburg)"
+         }
+        ],
+        "status": "RECHNUNG",
+        "hinweis": "Obergrenze aus belegten Mengen, keine Liefermenge."
+       }
+      },
+      "mehrkosten": {
+       "status": "UNBEKANNT",
+       "grund": "Keine gelesene Quelle nennt einen Ersatzpreis, Aufschlag oder eine Preiselastizität; Mehrkosten wären eine Ableitung (gleiche Regel wie die Länder-Szenarien, Meilenstein 6).",
+       "einordnung": [
+        "R-S8-1"
+       ]
+      },
+      "dauer": {
+       "status": "UNBEKANNT",
+       "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+       "einordnung": [],
+       "hinweise_an": []
+      },
+      "ersatz": {
+       "status": "BELEGT",
+       "wege": [
+        [
+         "V1",
+         "V2",
+         "V7",
+         "V8"
+        ]
+       ],
+       "angaben": [],
+       "grund": null
+      },
+      "eingaben": [
+       {
+        "id": "wege",
+        "text": "Lieferwege um das Glied",
+        "status": "BELEGT"
+       },
+       {
+        "id": "menge",
+        "text": "Liefermenge zum Kunden",
+        "status": "UNBEKANNT"
+       },
+       {
+        "id": "preis",
+        "text": "Ersatzpreis oder Aufschlag",
+        "status": "UNBEKANNT"
+       },
+       {
+        "id": "dauer",
+        "text": "Wiederanlauf- oder Ersatzzeit",
+        "status": "UNBEKANNT"
+       },
+       {
+        "id": "ersatz",
+        "text": "Benannter Ersatz (Weg, Herkunft oder Lieferant)",
+        "status": "BELEGT"
+       }
+      ],
+      "eingaben_belegt": 2,
+      "eingaben_mit_annahmen": 2
+     },
+     "annahmen": {
+      "kunde_abgeschnitten": false,
+      "lage": "Prysmian (Mailand) bleibt über 3 erfasste Wege ohne Trafigura (Singapur) angebunden. Erfasste Wege sind Beziehungen, kein bestätigter Fahrweg; ob Mengen über dieses Glied liefen, ist unbekannt. Im Annahmen-Netz laufen 32,0 von 40,6 kt Cu dieser Mine auf dem Weg zu Aurubis (Hamburg) an Trafigura (Singapur) vorbei (Wege außerhalb der Kettenansicht, Annahme).",
+      "betroffene_wege": [
+       "V5",
+       "V6"
+      ],
+      "ausweichwege": [
+       [
+        "V1",
+        "V2",
+        "V3",
+        "V9",
+        "V10",
+        "V8"
+       ],
+       [
+        "V1",
+        "V2",
+        "V4",
+        "V10",
+        "V8"
+       ],
+       [
+        "V1",
+        "V2",
+        "V7",
+        "V8"
+       ]
+      ],
+      "tonnen": {
+       "status": "UNBEKANNT",
+       "grund": "Menge Aurubis -> Prysmian in keinem gelesenen Dokument genannt (Aurubis AR 2024/25, Prysmian AR 2025, Pressemitteilung 23.09.2026); siehe pilot-prysmian-v1/facts.json not_found.",
+       "menge_belegt": "M-V8-LIEFERMENGE",
+       "obergrenze": {
+        "kt": 388.8,
+        "rechnung": "min(Förderung Mine Kamoa-Kakula 388,8 kt; Drahtproduktion Aurubis (Hamburg) 869,0 kt)",
+        "posten": [
+         {
+          "menge": "M-S1-PRODUKTION",
+          "standort": "S1",
+          "kt": 388.8,
+          "text": "Förderung Mine Kamoa-Kakula"
+         },
+         {
+          "menge": "M-S7-DRAHTPRODUKTION",
+          "standort": "S7",
+          "kt": 869.0,
+          "text": "Drahtproduktion Aurubis (Hamburg)"
+         }
+        ],
+        "status": "RECHNUNG",
+        "hinweis": "Obergrenze aus belegten Mengen, keine Liefermenge."
+       },
+       "annahme": {
+        "kt": 1.09,
+        "von": 0.7,
+        "bis": 1.55,
+        "einheit": "kt Cu/Jahr",
+        "annahmen": [
+         "A-MENGE-WEG",
+         "A-LIEFER-AUR-PRY"
+        ],
+        "konfidenz": 0.3,
+        "rechnung": "Zufluss bei Aurubis (Hamburg), der über Trafigura (Singapur) läuft: 8,5 kt Cu (Mengen je Weg) × Anteil Prysmian (Mailand) am Ausstoß 12,7 % (17,3 von 136,1 kt) = 1,09 kt; Spanne mit 90–200 statt 140 kt Liefermenge"
+       }
+      },
+      "mehrkosten": {
+       "status": "UNBEKANNT",
+       "grund": "Keine gelesene Quelle nennt einen Ersatzpreis, Aufschlag oder eine Preiselastizität; Mehrkosten wären eine Ableitung (gleiche Regel wie die Länder-Szenarien, Meilenstein 6). Auch der Annahmen-Atlas enthält keine Annahme zu Ersatzpreis oder Aufschlag.",
+       "einordnung": [
+        "R-S8-1"
+       ]
+      },
+      "dauer": {
+       "status": "UNBEKANNT",
+       "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied. Auch der Annahmen-Atlas enthält keine Annahme zur Ausfalldauer.",
+       "einordnung": [],
+       "hinweise_an": []
+      },
+      "ersatz": {
+       "status": "BELEGT",
+       "wege": [
+        [
+         "V1",
+         "V2",
+         "V3",
+         "V9",
+         "V10",
+         "V8"
+        ],
+        [
+         "V1",
+         "V2",
+         "V4",
+         "V10",
+         "V8"
+        ],
+        [
+         "V1",
+         "V2",
+         "V7",
+         "V8"
+        ]
+       ],
+       "angaben": [],
+       "grund": null,
+       "wege_annahme": [
+        [
+         "V1",
+         "V2",
+         "V3",
+         "V9",
+         "V10",
+         "V8"
+        ],
+        [
+         "V1",
+         "V2",
+         "V4",
+         "V10",
+         "V8"
+        ]
+       ]
+      },
+      "eingaben": [
+       {
+        "id": "wege",
+        "text": "Lieferwege um das Glied",
+        "status": "BELEGT"
+       },
+       {
+        "id": "menge",
+        "text": "Liefermenge zum Kunden",
+        "status": "ANNAHME"
+       },
+       {
+        "id": "preis",
+        "text": "Ersatzpreis oder Aufschlag",
+        "status": "UNBEKANNT"
+       },
+       {
+        "id": "dauer",
+        "text": "Wiederanlauf- oder Ersatzzeit",
+        "status": "UNBEKANNT"
+       },
+       {
+        "id": "ersatz",
+        "text": "Benannter Ersatz (Weg, Herkunft oder Lieferant)",
+        "status": "BELEGT"
+       }
+      ],
+      "eingaben_belegt": 2,
+      "eingaben_mit_annahmen": 3
+     }
+    },
+    "simulierbar": true
+   },
+   {
+    "standort": "S7",
+    "m6_betroffen": [
+     {
+      "standort": "S3",
+      "verliert_alle_erfassten_abnehmer": false,
+      "andere_gleicher_art": [
+       "S4",
+       "S5"
+      ]
+     },
+     {
+      "standort": "S6",
+      "verliert_alle_erfassten_abnehmer": true,
+      "andere_gleicher_art": []
+     }
+    ],
+    "ansichten": {
+     "belegt": {
+      "kunde_abgeschnitten": true,
+      "lage": "Prysmian (Mailand) verliert den einzigen erfassten Lieferanten dieser Kette (V8, Kandidat, nicht freigegeben).",
+      "betroffene_wege": [
+       "V1",
+       "V2",
+       "V5",
+       "V7",
+       "V6",
+       "V8"
+      ],
+      "ausweichwege": [],
+      "tonnen": {
+       "status": "UNBEKANNT",
+       "grund": "Menge Aurubis -> Prysmian in keinem gelesenen Dokument genannt (Aurubis AR 2024/25, Prysmian AR 2025, Pressemitteilung 23.09.2026); siehe pilot-prysmian-v1/facts.json not_found.",
+       "menge_belegt": "M-V8-LIEFERMENGE",
+       "obergrenze": {
+        "kt": 869.0,
+        "rechnung": "min(Drahtproduktion Aurubis (Hamburg) 869,0 kt)",
+        "posten": [
+         {
+          "menge": "M-S7-DRAHTPRODUKTION",
+          "standort": "S7",
+          "kt": 869.0,
+          "text": "Drahtproduktion Aurubis (Hamburg)"
+         }
+        ],
+        "status": "RECHNUNG",
+        "hinweis": "Obergrenze aus belegten Mengen, keine Liefermenge."
+       }
+      },
+      "mehrkosten": {
+       "status": "UNBEKANNT",
+       "grund": "Keine gelesene Quelle nennt einen Ersatzpreis, Aufschlag oder eine Preiselastizität; Mehrkosten wären eine Ableitung (gleiche Regel wie die Länder-Szenarien, Meilenstein 6).",
+       "einordnung": [
+        "R-S8-1"
+       ]
+      },
+      "dauer": {
+       "status": "UNBEKANNT",
+       "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+       "einordnung": [],
+       "hinweise_an": []
+      },
+      "ersatz": {
+       "status": "UNBEKANNT",
+       "wege": [],
+       "angaben": [
+        "X-S8-1"
+       ],
+       "grund": "Keine gelesene Quelle nennt einen anderen Lieferanten von Prysmian (Mailand) mit Namen."
+      },
+      "eingaben": [
+       {
+        "id": "wege",
+        "text": "Lieferwege um das Glied",
+        "status": "BELEGT"
+       },
+       {
+        "id": "menge",
+        "text": "Liefermenge zum Kunden",
+        "status": "UNBEKANNT"
+       },
+       {
+        "id": "preis",
+        "text": "Ersatzpreis oder Aufschlag",
+        "status": "UNBEKANNT"
+       },
+       {
+        "id": "dauer",
+        "text": "Wiederanlauf- oder Ersatzzeit",
+        "status": "UNBEKANNT"
+       },
+       {
+        "id": "ersatz",
+        "text": "Benannter Ersatz (Weg, Herkunft oder Lieferant)",
+        "status": "UNBEKANNT"
+       }
+      ],
+      "eingaben_belegt": 1,
+      "eingaben_mit_annahmen": 1
+     },
+     "annahmen": {
+      "kunde_abgeschnitten": true,
+      "lage": "Prysmian (Mailand) verliert den einzigen erfassten Lieferanten dieser Kette (V8, Kandidat, nicht freigegeben).",
+      "betroffene_wege": [
+       "V1",
+       "V2",
+       "V3",
+       "V4",
+       "V5",
+       "V7",
+       "V9",
+       "V10",
+       "V6",
+       "V8"
+      ],
+      "ausweichwege": [],
+      "tonnen": {
+       "status": "UNBEKANNT",
+       "grund": "Menge Aurubis -> Prysmian in keinem gelesenen Dokument genannt (Aurubis AR 2024/25, Prysmian AR 2025, Pressemitteilung 23.09.2026); siehe pilot-prysmian-v1/facts.json not_found.",
+       "menge_belegt": "M-V8-LIEFERMENGE",
+       "obergrenze": {
+        "kt": 869.0,
+        "rechnung": "min(Drahtproduktion Aurubis (Hamburg) 869,0 kt)",
+        "posten": [
+         {
+          "menge": "M-S7-DRAHTPRODUKTION",
+          "standort": "S7",
+          "kt": 869.0,
+          "text": "Drahtproduktion Aurubis (Hamburg)"
+         }
+        ],
+        "status": "RECHNUNG",
+        "hinweis": "Obergrenze aus belegten Mengen, keine Liefermenge."
+       },
+       "annahme": {
+        "kt": 140.0,
+        "von": 90.0,
+        "bis": 200.0,
+        "einheit": "kt Kupferdraht/Jahr",
+        "annahmen": [
+         "A-LIEFER-AUR-PRY"
+        ],
+        "konfidenz": 0.3,
+        "rechnung": "gesamte angenommene Liefermenge V8"
+       }
+      },
+      "mehrkosten": {
+       "status": "UNBEKANNT",
+       "grund": "Keine gelesene Quelle nennt einen Ersatzpreis, Aufschlag oder eine Preiselastizität; Mehrkosten wären eine Ableitung (gleiche Regel wie die Länder-Szenarien, Meilenstein 6). Auch der Annahmen-Atlas enthält keine Annahme zu Ersatzpreis oder Aufschlag.",
+       "einordnung": [
+        "R-S8-1"
+       ]
+      },
+      "dauer": {
+       "status": "UNBEKANNT",
+       "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied. Auch der Annahmen-Atlas enthält keine Annahme zur Ausfalldauer.",
+       "einordnung": [],
+       "hinweise_an": []
+      },
+      "ersatz": {
+       "status": "UNBEKANNT",
+       "wege": [],
+       "angaben": [
+        "X-S8-1"
+       ],
+       "grund": "Keine gelesene Quelle nennt einen anderen Lieferanten von Prysmian (Mailand) mit Namen. Der Annahmen-Atlas nennt keine weiteren Lieferanten des Kunden.",
+       "wege_annahme": []
+      },
+      "eingaben": [
+       {
+        "id": "wege",
+        "text": "Lieferwege um das Glied",
+        "status": "BELEGT"
+       },
+       {
+        "id": "menge",
+        "text": "Liefermenge zum Kunden",
+        "status": "ANNAHME"
+       },
+       {
+        "id": "preis",
+        "text": "Ersatzpreis oder Aufschlag",
+        "status": "UNBEKANNT"
+       },
+       {
+        "id": "dauer",
+        "text": "Wiederanlauf- oder Ersatzzeit",
+        "status": "UNBEKANNT"
+       },
+       {
+        "id": "ersatz",
+        "text": "Benannter Ersatz (Weg, Herkunft oder Lieferant)",
+        "status": "UNBEKANNT"
+       }
+      ],
+      "eingaben_belegt": 1,
+      "eingaben_mit_annahmen": 2
+     }
+    },
+    "simulierbar": true
+   }
+  ],
+  "messung": {
+   "glieder": 7,
+   "simulierbar": 7,
+   "eingaben_je_glied": 5,
+   "eingaben_gesamt": 35,
+   "eingaben_belegt": 13,
+   "eingaben_mit_annahmen": 20,
+   "je_glied": [
+    {
+     "standort": "S1",
+     "simulierbar": true,
+     "belegt": 2,
+     "mit_annahmen": 3
+    },
+    {
+     "standort": "S2",
+     "simulierbar": true,
+     "belegt": 2,
+     "mit_annahmen": 3
+    },
+    {
+     "standort": "S3",
+     "simulierbar": true,
+     "belegt": 2,
+     "mit_annahmen": 3
+    },
+    {
+     "standort": "S4",
+     "simulierbar": true,
+     "belegt": 2,
+     "mit_annahmen": 3
+    },
+    {
+     "standort": "S5",
+     "simulierbar": true,
+     "belegt": 2,
+     "mit_annahmen": 3
+    },
+    {
+     "standort": "S6",
+     "simulierbar": true,
+     "belegt": 2,
+     "mit_annahmen": 3
+    },
+    {
+     "standort": "S7",
+     "simulierbar": true,
+     "belegt": 1,
+     "mit_annahmen": 2
+    }
+   ],
+   "anteil_belegt_prozent": 37.1,
+   "anteil_mit_annahmen_prozent": 57.1
+  },
+  "netz_annahmen": {
+   "wege": 14,
+   "quelle": "annahmen-atlas",
+   "regel": "A-MENGE-WEG"
+  }
+ }
+}
