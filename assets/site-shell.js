@@ -105,6 +105,7 @@
       }
     });
     kopf.appendChild(nav);
+    kopf.appendChild(sucheBauen());
     kopf.appendChild(el('a', {'class': 'ss-umschalter', href: ANNAHMEN_ATLAS, title: 'Zum Annahmen-Atlas wechseln'}, '<span class="an">Belegt</span><span>Annahmen</span>'));
     // Seiteneigene Bedienelemente (z. B. Quellen-Knopf der 2D-Karte) bleiben erhalten.
     if (alt) {
@@ -126,6 +127,76 @@
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && kopf.hasAttribute('data-offen')) knopf.click(); });
     kopf.appendChild(knopf);
     return kopf;
+  }
+  // Firmensuche im Seitenkopf (Eddie 2026-11-10: „eine direkte Suchleiste nach einer bestimmten Firma fehlt“).
+  // Keine zweite Suche: sie nutzt den Suchindex der Unternehmensakte (/unternehmen/akte/daten/suche.json) und lädt ihn erst,
+  // wenn jemand ins Feld tippt. Treffer öffnen die Akte; „Globus“ springt zur Firma auf dem Hauptglobus (?firma=).
+  var AKTE = '/unternehmen/akte/';
+  function nrm(s) { return String(s || '').normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/&/g, ' and ').replace(/[^a-z0-9]+/g, ' ').trim(); }
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return {'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]; }); }
+  function sucheBauen() {
+    var form = el('form', {'class': 'ss-suche', role: 'search', action: AKTE, 'data-site-shell-suche': ''});
+    form.innerHTML = '<button type="button" class="ss-suche-auf" aria-label="Firma suchen" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg></button>' +
+      '<label class="ss-suche-feld"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>' +
+      '<span class="ss-weg">Firma suchen</span><input type="search" name="firma" placeholder="Firma suchen, z. B. Siemens" autocomplete="off" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="ss-suche-liste"></label>' +
+      '<div class="ss-suche-liste" id="ss-suche-liste" role="listbox" aria-label="Gefundene Unternehmen" hidden></div>';
+    var auf = form.querySelector('.ss-suche-auf'), feld = form.querySelector('input'), liste = form.querySelector('.ss-suche-liste');
+    var index = null, laedt = null, treffer = [], aktiv = -1, timer = null, gezeigt = '';
+    function laden() {
+      if (!laedt) laedt = fetch(AKTE + 'daten/suche.json').then(function (r) { if (!r.ok) throw Error('Suchindex'); return r.json(); })
+        .then(function (d) { index = d.akten.map(function (a) { return [a, nrm(a[1])]; }); zeigen(); })
+        .catch(function () { laedt = null; liste.innerHTML = '<p class="ss-suche-info">Der Suchindex konnte nicht geladen werden. <a href="' + AKTE + '">Zur Unternehmensakte</a></p>'; offen(true); });
+      return laedt;
+    }
+    function offen(an) { liste.hidden = !an; feld.setAttribute('aria-expanded', String(an)); }
+    function suchen(t) {
+      var r = [];
+      for (var i = 0; i < index.length; i++) { var x = index[i]; if (x[1].indexOf(t) >= 0 || (x[0][2] && x[0][2].indexOf(t) >= 0)) r.push(x); }
+      // Wie die Akte: Namensanfang zuerst, dann Firmen mit mehr belegten Antworten, dann kürzere Namen
+      r.sort(function (a, b) { var x = a[1].indexOf(t) === 0 ? 0 : 1, y = b[1].indexOf(t) === 0 ? 0 : 1; return x - y || b[0][4].replace(/U/g, '').length - a[0][4].replace(/U/g, '').length || a[1].length - b[1].length; });
+      return r;
+    }
+    function zeigen() {
+      var t = nrm(feld.value); aktiv = -1; feld.removeAttribute('aria-activedescendant');
+      if (t.length < 2) { offen(false); liste.innerHTML = ''; treffer = []; return; }
+      if (!index) { liste.innerHTML = '<p class="ss-suche-info">Suchindex wird geladen …</p>'; offen(true); laden(); return; }
+      var alle = suchen(t); treffer = alle.slice(0, 8); gezeigt = t;
+      liste.innerHTML = treffer.length ? treffer.map(function (x, i) {
+        var a = x[0], belegt = a[4].replace(/U/g, '').length;
+        return '<div class="ss-treffer" role="option" id="ss-treffer-' + i + '" aria-selected="false"><a href="' + AKTE + '#' + esc(a[0]) + '"><b>' + esc(a[1]) + '</b><small>' + esc(a[3] || 'Land unbekannt') + ' · ' + belegt + ' von 6 Fragen belegt</small></a>' +
+          '<a class="ss-globus" href="/atlas/?firma=' + encodeURIComponent(a[1]) + '&amp;akte=' + esc(a[0]) + '" title="' + esc(a[1]) + ' auf dem Globus zeigen">Globus</a></div>';
+      }).join('') + '<p class="ss-suche-info">' + alle.length.toLocaleString('de-DE') + ' Treffer in ' + index.length.toLocaleString('de-DE') + ' Unternehmensakten' + (alle.length > 8 ? ' · die 8 besten' : '') + '</p>'
+        : '<p class="ss-suche-info">Kein Unternehmen mit diesem Namen im Atlas. Das heißt nicht, dass es die Firma nicht gibt.</p>';
+      offen(true);
+    }
+    function markieren(i) {
+      var z = liste.querySelectorAll('.ss-treffer'); if (!z.length) return;
+      aktiv = (i + z.length) % z.length;
+      Array.prototype.forEach.call(z, function (n, j) { n.setAttribute('aria-selected', String(j === aktiv)); });
+      feld.setAttribute('aria-activedescendant', 'ss-treffer-' + aktiv); z[aktiv].scrollIntoView({block: 'nearest'});
+    }
+    feld.addEventListener('focus', function () { laden(); if (liste.innerHTML && nrm(feld.value).length >= 2) offen(true); });
+    feld.addEventListener('input', function () { clearTimeout(timer); timer = setTimeout(zeigen, 120); });
+    feld.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowDown') { e.preventDefault(); markieren(aktiv + 1); }
+      else if (e.key === 'ArrowUp') { e.preventDefault(); markieren(aktiv - 1); }
+      else if (e.key === 'Escape') { offen(false); if (form.hasAttribute('data-offen')) auf.click(); }
+    });
+    // Enter öffnet den markierten oder den ersten Treffer
+    form.addEventListener('submit', function (e) {
+      e.preventDefault(); clearTimeout(timer);
+      if (index && nrm(feld.value) !== gezeigt) zeigen();
+      var z = treffer[aktiv < 0 ? 0 : aktiv];
+      if (z) location.href = AKTE + '#' + z[0][0]; else if (!index) laden().then(function () { if (treffer[0]) location.href = AKTE + '#' + treffer[0][0][0]; });
+    });
+    // Handy: die Lupe öffnet das Feld unter dem Kopf
+    auf.addEventListener('click', function () {
+      var an = !form.hasAttribute('data-offen');
+      if (an) { form.setAttribute('data-offen', ''); feld.focus(); } else { form.removeAttribute('data-offen'); offen(false); }
+      auf.setAttribute('aria-expanded', String(an));
+    });
+    document.addEventListener('click', function (e) { if (!form.contains(e.target)) offen(false); });
+    return form;
   }
   function unterBauen() {
     var b = bereich(), ul = unterListe(); if (!ul) return null;

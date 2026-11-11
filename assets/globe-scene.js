@@ -179,22 +179,26 @@ export function createGlobe(host,callbacks={}){
     companyPoints.visible=companiesVisible;scene.add(companyPoints);invalidate();
   }
   // Verbindungen als Band (Eddie 2026-11-08: "nicht zwei Punkte verbinden, sondern die Verbindung sein"): every
-  // relation is one tapered band along its arc, without end-point markers; light pulses run along it in its direction
-  // (buyer -> target, origin -> destination). All bands of a set are one mesh and one draw call; the shader does the
+  // relation is one band along its arc, without end-point markers; light pulses run along it in its direction
+  // (buyer -> target, origin -> destination).
+  // Sender und Empfänger (Eddie 2026-11-10): the band starts thin and faint at the sender (from/buyer) and ends in a solid,
+  // brighter arrowhead at the receiver (to/target), so the direction reads without motion too (reduced motion, screenshots).
+  // The head length follows the band width (zoom), at most 30 % of the arc; dashes never cut the head. All bands of a set are one mesh and one draw call; the shader does the
   // width (follows the zoom), dashes (open/pending, money), dimming on selection, filter visibility and the pulses.
   // Picking still uses an invisible thin line per relation, so clicks and tooltips work as before.
   const RIBBON_STEPS=48,pickMaterial=new THREE.LineBasicMaterial({visible:false}),ribbonUniforms={uTime:{value:0},uScale:{value:1}};
   const ribbonVertex='attribute vec3 aSide;attribute float aT;attribute float aAcross;attribute vec3 aColor;attribute float aEntry;attribute float aStyle;attribute float aFlow;attribute float aVisible;attribute float aLen;'+
-    'uniform float uScale;uniform float uSelected;varying float vT;varying float vAcross;varying vec3 vColor;varying float vStyle;varying float vFlow;varying float vAlpha;varying float vLen;varying float vPhase;'+
-    'void main(){float sel=uSelected<0.0?0.0:(abs(aEntry-uSelected)<0.5?1.0:-1.0);float w=(.3+.7*sin(3.14159*aT))*uScale*(sel>.5?1.8:1.0);'+
+    'uniform float uScale;uniform float uSelected;varying float vT;varying float vAcross;varying vec3 vColor;varying float vStyle;varying float vFlow;varying float vAlpha;varying float vLen;varying float vPhase;varying float vHead;'+
+    'void main(){float sel=uSelected<0.0?0.0:(abs(aEntry-uSelected)<0.5?1.0:-1.0);float H=clamp(22.0*uScale/max(aLen,.001),.08,.3);'+
+    'float w=(aT<1.0-H?.35+.65*smoothstep(0.0,.3,aT/(1.0-H)):3.2*(1.0-aT)/H)*uScale*(sel>.5?1.8:1.0);vHead=aT>1.0-H+.001?1.0:0.0;'+
     'vT=aT;vAcross=aAcross;vColor=aColor;vStyle=aStyle;vFlow=aFlow;vLen=aLen;vPhase=fract(aEntry*.173);vAlpha=aVisible*(sel<-.5?.13:1.0);'+
     'gl_Position=projectionMatrix*modelViewMatrix*vec4(position+aSide*aAcross*w,1.0);}';
-  const ribbonFragment='uniform float uTime;uniform float uFlowOn;uniform float uBase;varying float vT;varying float vAcross;varying vec3 vColor;varying float vStyle;varying float vFlow;varying float vAlpha;varying float vLen;varying float vPhase;'+
+  const ribbonFragment='uniform float uTime;uniform float uFlowOn;uniform float uBase;varying float vT;varying float vAcross;varying vec3 vColor;varying float vStyle;varying float vFlow;varying float vAlpha;varying float vLen;varying float vPhase;varying float vHead;'+
     'void main(){if(vAlpha<.01)discard;float along=vT*vLen;'+
-    'if(vStyle>.5){float period=vStyle>2.5?.9:vStyle>1.5?2.6:2.2;if(mod(along,period)>period*(vStyle>2.5?.55:vStyle>1.5?.65:.55))discard;}'+
+    'if(vStyle>.5&&vHead<.5){float period=vStyle>2.5?.9:vStyle>1.5?2.6:2.2;if(mod(along,period)>period*(vStyle>2.5?.55:vStyle>1.5?.65:.55))discard;}'+
     'float head=fract(vT*max(1.0,vLen/70.0)-uTime*.16+vPhase);float pulse=vFlow*uFlowOn*pow(head,10.0);'+
     'float edge=1.0-smoothstep(.45,1.0,abs(vAcross));'+
-    'gl_FragColor=vec4(mix(vColor,vec3(1.0),pulse*.6),vAlpha*edge*(uBase+(1.0-uBase)*pulse));}';
+    'gl_FragColor=vec4(mix(vColor,vec3(1.0),max(pulse*.6,vHead*.22)),vAlpha*edge*(.45+.55*vT)*(uBase+(1.0-uBase)*max(pulse,vHead*.6)));}';
   function ribbonMesh(items){
     // items: {points (RIBBON_STEPS+1 Vector3), color, style 0 solid | 1 dashed | 2 money, flow 0|1}
     const n=items.length*(RIBBON_STEPS+1)*2,f3=()=>new Float32Array(n*3),f1=()=>new Float32Array(n);

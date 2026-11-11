@@ -3,8 +3,8 @@
  "input": {
   "ledger": "foundation/V29/copper-knowledge.sqlite",
   "sha256": "f637e8f69749fae1750fd284cbf6aa824c81ba7876c1aca6abb0fcaf6ae88dfe",
-  "review_queue_sha256": "c240b5d17989caa2a395dca253ef5db4f1d1f3701fc8370cb47360ea8e0eef65",
-  "approval_ledger_sha256": "477b6fc9e170a0458cba6b2b227b4588ed3bcc6dd8f552c83163f2e4d45badcf"
+  "review_queue_sha256": "89d083e61f6d2d9615f91b55cf28b52eef45c77d846b1c3503e4d00a89a2ec4e",
+  "approval_ledger_sha256": "f797611a62385d7abb9a822a24922c49701df68fe39f06de4ff1e213633c5ea6"
  },
  "scope": "Copper chains of the V29 copper ledger (18 selected source-bound chains, not global copper coverage).",
  "fact_status": "INFERENCE",
@@ -2641,14 +2641,19 @@
    "capacity_by_country": [
     {
      "material_basis": "REFINED_METAL",
-     "known_total_kt_per_year": 294.8,
-     "facilities_with_capacity": 1,
-     "facilities_without_capacity": 3,
+     "known_total_kt_per_year": 629.8,
+     "facilities_with_capacity": 2,
+     "facilities_without_capacity": 2,
      "groups": [
+      {
+       "country": "USA",
+       "kt_per_year": 335.0,
+       "share_pct": 53.2
+      },
       {
        "country": "Peru",
        "kt_per_year": 294.8,
-       "share_pct": 100.0
+       "share_pct": 46.8
       }
      ]
     }
@@ -2716,7 +2721,55 @@
      "chains": [
       "kennecott"
      ],
-     "capacity": null
+     "capacity": {
+      "status": "FACT",
+      "candidate": true,
+      "value": 335000,
+      "unit": "t/year",
+      "value_kt_per_year": 335.0,
+      "material_basis": "REFINED_METAL",
+      "material_form": "refined copper",
+      "reference_year": null,
+      "period_type": null,
+      "claim": {
+       "claim_id": "csv1:kennecott-refinery:capacity",
+       "value": 335000,
+       "unit": "t/year",
+       "value_kt": 335.0,
+       "field": "capacity",
+       "fact_status": "FACT",
+       "candidate": true,
+       "evidence_status": "SOURCE_TEXT_READ_NOT_IN_LEDGER",
+       "material_basis": "REFINED_METAL",
+       "material_form": "refined copper",
+       "measurement_basis": null,
+       "period_type": null,
+       "period_start": null,
+       "period_end": null,
+       "reference_year": null,
+       "locator": "Seite 325, Group smelters, refineries ... (Capacity based on 100% ownership)",
+       "quote_fragments": [
+        "Flash smelting furnace/flash convertor",
+        "335,000 tonnes per",
+        "year refined copper"
+       ],
+       "usage_restrictions": [
+        "CANDIDATE_NOT_IN_LEDGER",
+        "CAPACITY_WITHOUT_PERIOD"
+       ],
+       "sources": [
+        {
+         "source_id": "csv1-riotinto-ar-2025",
+         "publisher": "Rio Tinto",
+         "source_name": "Annual Report 2025",
+         "source_url": "https://company-announcements.afr.com/asx/rio/88b8e74c-0d54-11f1-bade-ca622cf181ba.pdf",
+         "source_quality": "COMPANY_PRIMARY",
+         "accessed_at": "2026-11-10"
+        }
+       ]
+      },
+      "superseded_or_duplicate_claim_ids": []
+     }
     },
     {
      "entity_id": "entity:4ea70469-a907-429a-bc87-92c9f97369f6",
@@ -3090,6 +3143,7 @@
     ]
    },
    "output_via": "MINE_CATHODE_OF_ONLY_SXEW",
+   "output_basis": "REFINED_METAL",
    "status": "INFERENCE",
    "output_kt": 177.7,
    "utilisation_pct": 50.8,
@@ -3162,11 +3216,269 @@
     ]
    },
    "output_via": "FACILITY",
+   "output_basis": "REFINED_METAL",
    "status": "INFERENCE",
    "output_kt": 244.2,
    "utilisation_pct": 82.8,
    "restrictions": [
     "CAPACITY_WITHOUT_PERIOD"
+   ]
+  },
+  {
+   "entity_id": "entity:b1167de6-e504-4779-8589-39b470d424a9",
+   "name": "Ilo copper smelter",
+   "stage": "SMELTER",
+   "country": "Peru",
+   "capacity": {
+    "status": "FACT",
+    "value": 1376050,
+    "unit": "t/year",
+    "value_kt_per_year": 1376.05,
+    "material_basis": "CONCENTRATE",
+    "material_form": "copper concentrate",
+    "reference_year": null,
+    "period_type": "UNKNOWN",
+    "claim": {
+     "claim_id": "claim:568f8422-d971-5702-a6c4-b89090294f84",
+     "value": 1376050,
+     "unit": "t/year",
+     "field": "capacity",
+     "fact_status": "FACT",
+     "evidence_status": "SOURCE_TEXT_REVIEWED",
+     "material_basis": "CONCENTRATE",
+     "material_form": "copper concentrate",
+     "measurement_basis": "NAMEPLATE_OR_DESIGN_CAPACITY",
+     "period_type": "UNKNOWN",
+     "period_start": null,
+     "period_end": null,
+     "reference_year": null,
+     "sources": [
+      {
+       "source_id": "v292-southern-10k-2025",
+       "publisher": "Southern Copper Corporation",
+       "source_url": "https://www.sec.gov/Archives/edgar/data/1001838/000110465926021492/scco-20251231x10k.htm",
+       "source_quality": "REGULATORY",
+       "accessed_at": "2026-10-07"
+      }
+     ]
+    },
+    "superseded_or_duplicate_claim_ids": []
+   },
+   "output_claim": {
+    "claim_id": "csv1:ilo-smelter:concentrate:2025",
+    "value": 1040.7,
+    "unit": "kt",
+    "value_kt": 1040.7,
+    "field": "concentrate_processed",
+    "fact_status": "FACT",
+    "candidate": true,
+    "evidence_status": "SOURCE_TEXT_READ_NOT_IN_LEDGER",
+    "material_basis": "CONCENTRATE",
+    "material_form": "copper concentrate smelted",
+    "measurement_basis": "Die Quelle nennt keine Aufteilung nach Herkunft: \"without distinguishing between the products of the two mines\" (Toquepala, Cuajone).",
+    "period_type": "CALENDAR_YEAR",
+    "period_start": "2025-01-01",
+    "period_end": "2026-01-01",
+    "reference_year": 2025,
+    "locator": "Item 2, Processing Facilities—Ilo, Smelter table",
+    "quote_fragments": [
+     "production information for 2025, 2024 and 2023 for our Ilo smelter plant",
+     "Concentrate smelted (kt) 1,040.7 1,230.9 1,292.9"
+    ],
+    "usage_restrictions": [
+     "CANDIDATE_NOT_IN_LEDGER"
+    ],
+    "sources": [
+     {
+      "source_id": "csv1-southern-10k-2025",
+      "publisher": "Southern Copper Corporation",
+      "source_name": "Form 10-K for the fiscal year ended December 31, 2025",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1001838/000110465926021492/scco-20251231x10k.htm",
+      "source_quality": "COMPANY_PRIMARY",
+      "accessed_at": "2026-10-07"
+     }
+    ]
+   },
+   "output_via": "FACILITY_CONCENTRATE_PROCESSED_CANDIDATE",
+   "output_basis": "CONCENTRATE",
+   "status": "INFERENCE",
+   "output_kt": 1040.7,
+   "utilisation_pct": 75.6,
+   "restrictions": [
+    "CAPACITY_WITHOUT_PERIOD"
+   ]
+  },
+  {
+   "entity_id": "entity:0da85694-11d1-489f-a25c-f24b899bbb00",
+   "name": "Kennecott copper refinery",
+   "stage": "REFINERY",
+   "country": "USA",
+   "capacity": {
+    "status": "FACT",
+    "candidate": true,
+    "value": 335000,
+    "unit": "t/year",
+    "value_kt_per_year": 335.0,
+    "material_basis": "REFINED_METAL",
+    "material_form": "refined copper",
+    "reference_year": null,
+    "period_type": null,
+    "claim": {
+     "claim_id": "csv1:kennecott-refinery:capacity",
+     "value": 335000,
+     "unit": "t/year",
+     "value_kt": 335.0,
+     "field": "capacity",
+     "fact_status": "FACT",
+     "candidate": true,
+     "evidence_status": "SOURCE_TEXT_READ_NOT_IN_LEDGER",
+     "material_basis": "REFINED_METAL",
+     "material_form": "refined copper",
+     "measurement_basis": null,
+     "period_type": null,
+     "period_start": null,
+     "period_end": null,
+     "reference_year": null,
+     "locator": "Seite 325, Group smelters, refineries ... (Capacity based on 100% ownership)",
+     "quote_fragments": [
+      "Flash smelting furnace/flash convertor",
+      "335,000 tonnes per",
+      "year refined copper"
+     ],
+     "usage_restrictions": [
+      "CANDIDATE_NOT_IN_LEDGER",
+      "CAPACITY_WITHOUT_PERIOD"
+     ],
+     "sources": [
+      {
+       "source_id": "csv1-riotinto-ar-2025",
+       "publisher": "Rio Tinto",
+       "source_name": "Annual Report 2025",
+       "source_url": "https://company-announcements.afr.com/asx/rio/88b8e74c-0d54-11f1-bade-ca622cf181ba.pdf",
+       "source_quality": "COMPANY_PRIMARY",
+       "accessed_at": "2026-11-10"
+      }
+     ]
+    },
+    "superseded_or_duplicate_claim_ids": []
+   },
+   "output_claim": {
+    "claim_id": "csv1:kennecott-refinery:own:2025",
+    "value": 134,
+    "unit": "kt",
+    "value_kt": 134.0,
+    "field": "production",
+    "fact_status": "FACT",
+    "candidate": true,
+    "evidence_status": "SOURCE_TEXT_READ_NOT_IN_LEDGER",
+    "material_basis": "REFINED_METAL",
+    "material_form": "refined copper (own feed)",
+    "measurement_basis": null,
+    "period_type": "CALENDAR_YEAR",
+    "period_start": "2025-01-01",
+    "period_end": "2026-01-01",
+    "reference_year": 2025,
+    "locator": "Seite 278, Metals and minerals production, COPPER (production-consolidated basis); Fußnote 6 Seite 279",
+    "quote_fragments": [
+     "Kennecott (US)6 - Production of refined metal 134 134 193 193 109 109",
+     "Purchased and tolled copper concentrates are excluded from reported production figures and guidance"
+    ],
+    "usage_restrictions": [
+     "CANDIDATE_NOT_IN_LEDGER",
+     "EXCLUDES_PURCHASED_FEED"
+    ],
+    "sources": [
+     {
+      "source_id": "csv1-riotinto-ar-2025",
+      "publisher": "Rio Tinto",
+      "source_name": "Annual Report 2025",
+      "source_url": "https://company-announcements.afr.com/asx/rio/88b8e74c-0d54-11f1-bade-ca622cf181ba.pdf",
+      "source_quality": "COMPANY_PRIMARY",
+      "accessed_at": "2026-11-10"
+     }
+    ]
+   },
+   "output_via": "FACILITY_CANDIDATE",
+   "output_basis": "REFINED_METAL",
+   "status": "INFERENCE",
+   "output_kt": 173.0,
+   "utilisation_pct": 51.6,
+   "restrictions": [
+    "CAPACITY_WITHOUT_PERIOD",
+    "OUTPUT_IS_SUM_OF_OWN_AND_PURCHASED_FEED"
+   ],
+   "output_components": [
+    {
+     "claim_id": "csv1:kennecott-refinery:own:2025",
+     "value": 134,
+     "unit": "kt",
+     "value_kt": 134.0,
+     "field": "production",
+     "fact_status": "FACT",
+     "candidate": true,
+     "evidence_status": "SOURCE_TEXT_READ_NOT_IN_LEDGER",
+     "material_basis": "REFINED_METAL",
+     "material_form": "refined copper (own feed)",
+     "measurement_basis": null,
+     "period_type": "CALENDAR_YEAR",
+     "period_start": "2025-01-01",
+     "period_end": "2026-01-01",
+     "reference_year": 2025,
+     "locator": "Seite 278, Metals and minerals production, COPPER (production-consolidated basis); Fußnote 6 Seite 279",
+     "quote_fragments": [
+      "Kennecott (US)6 - Production of refined metal 134 134 193 193 109 109",
+      "Purchased and tolled copper concentrates are excluded from reported production figures and guidance"
+     ],
+     "usage_restrictions": [
+      "CANDIDATE_NOT_IN_LEDGER",
+      "EXCLUDES_PURCHASED_FEED"
+     ],
+     "sources": [
+      {
+       "source_id": "csv1-riotinto-ar-2025",
+       "publisher": "Rio Tinto",
+       "source_name": "Annual Report 2025",
+       "source_url": "https://company-announcements.afr.com/asx/rio/88b8e74c-0d54-11f1-bade-ca622cf181ba.pdf",
+       "source_quality": "COMPANY_PRIMARY",
+       "accessed_at": "2026-11-10"
+      }
+     ]
+    },
+    {
+     "claim_id": "csv1:kennecott-refinery:purchased:2025",
+     "value": 39,
+     "unit": "kt",
+     "value_kt": 39.0,
+     "field": "production_from_purchased_feed",
+     "fact_status": "FACT",
+     "candidate": true,
+     "evidence_status": "SOURCE_TEXT_READ_NOT_IN_LEDGER",
+     "material_basis": "REFINED_METAL",
+     "material_form": "copper cathode from purchased concentrate",
+     "measurement_basis": "Belegter Fremdeinsatz: Kennecott verarbeitet auch zugekauftes Konzentrat. Ein Lieferanteil der eigenen Mine wird nicht abgeleitet.",
+     "period_type": "CALENDAR_YEAR",
+     "period_start": "2025-01-01",
+     "period_end": "2026-01-01",
+     "reference_year": 2025,
+     "locator": "Seite 279, Fußnote 6",
+     "quote_fragments": [
+      "We continue to process third party concentrate to optimise smelter utilisation",
+      "(39 thousand tonnes for full year 2025)"
+     ],
+     "usage_restrictions": [
+      "CANDIDATE_NOT_IN_LEDGER"
+     ],
+     "sources": [
+      {
+       "source_id": "csv1-riotinto-ar-2025",
+       "publisher": "Rio Tinto",
+       "source_name": "Annual Report 2025",
+       "source_url": "https://company-announcements.afr.com/asx/rio/88b8e74c-0d54-11f1-bade-ca622cf181ba.pdf",
+       "source_quality": "COMPANY_PRIMARY",
+       "accessed_at": "2026-11-10"
+      }
+     ]
+    }
    ]
   },
   {
@@ -3234,6 +3546,7 @@
     ]
    },
    "output_via": "MINE_CATHODE_OF_ONLY_SXEW",
+   "output_basis": "REFINED_METAL",
    "status": "INFERENCE",
    "output_kt": 117.0,
    "utilisation_pct": 58.5,
@@ -3283,53 +3596,9 @@
    },
    "output_claim": null,
    "output_via": null,
+   "output_basis": null,
    "status": "UNKNOWN",
    "unknown_reason": "NO_OUTPUT_FOR_YEAR"
-  },
-  {
-   "entity_id": "entity:b1167de6-e504-4779-8589-39b470d424a9",
-   "name": "Ilo copper smelter",
-   "stage": "SMELTER",
-   "country": "Peru",
-   "capacity": {
-    "status": "FACT",
-    "value": 1376050,
-    "unit": "t/year",
-    "value_kt_per_year": 1376.05,
-    "material_basis": "CONCENTRATE",
-    "material_form": "copper concentrate",
-    "reference_year": null,
-    "period_type": "UNKNOWN",
-    "claim": {
-     "claim_id": "claim:568f8422-d971-5702-a6c4-b89090294f84",
-     "value": 1376050,
-     "unit": "t/year",
-     "field": "capacity",
-     "fact_status": "FACT",
-     "evidence_status": "SOURCE_TEXT_REVIEWED",
-     "material_basis": "CONCENTRATE",
-     "material_form": "copper concentrate",
-     "measurement_basis": "NAMEPLATE_OR_DESIGN_CAPACITY",
-     "period_type": "UNKNOWN",
-     "period_start": null,
-     "period_end": null,
-     "reference_year": null,
-     "sources": [
-      {
-       "source_id": "v292-southern-10k-2025",
-       "publisher": "Southern Copper Corporation",
-       "source_url": "https://www.sec.gov/Archives/edgar/data/1001838/000110465926021492/scco-20251231x10k.htm",
-       "source_quality": "REGULATORY",
-       "accessed_at": "2026-10-07"
-      }
-     ]
-    },
-    "superseded_or_duplicate_claim_ids": []
-   },
-   "output_claim": null,
-   "output_via": null,
-   "status": "UNKNOWN",
-   "unknown_reason": "MATERIAL_BASIS_MISMATCH"
   },
   {
    "entity_id": "entity:436387f3-1b53-48a2-8f3d-35722a6bcffd",
@@ -3374,10 +3643,47 @@
      "claim:6acf046d-8fe0-562d-b597-4a03d786aec9"
     ]
    },
-   "output_claim": null,
-   "output_via": null,
+   "output_claim": {
+    "claim_id": "csv1:kansanshi-smelter:concentrate:2025",
+    "value": 1205574,
+    "unit": "dmt",
+    "value_kt": 1205.6,
+    "field": "concentrate_processed",
+    "fact_status": "FACT",
+    "candidate": true,
+    "evidence_status": "SOURCE_TEXT_READ_NOT_IN_LEDGER",
+    "material_basis": "CONCENTRATE",
+    "material_form": "copper concentrate (dry metric tonnes)",
+    "measurement_basis": "Kapazität wechselte im Jahr: Erweiterung \"was commissioned in Q3, 2025\", \"to 1.6 Mtpa from the previous capacity level of 1.38 Mtpa\". Keine Auslastung berechnet.",
+    "period_type": "CALENDAR_YEAR",
+    "period_start": "2025-01-01",
+    "period_end": "2026-01-01",
+    "reference_year": 2025,
+    "locator": "Seite 21, Kansanshi Copper Smelter; Tabelle Seite 24",
+    "quote_fragments": [
+     "In 2025, the smelter processed 1,205,574 dry metric tonnes of concentrate",
+     "Concentrate Processed ‘000 DMT 1,206 1,356 1,281 1,305"
+    ],
+    "usage_restrictions": [
+     "CANDIDATE_NOT_IN_LEDGER",
+     "CAPACITY_CHANGED_DURING_PERIOD"
+    ],
+    "sources": [
+     {
+      "source_id": "csv1-fqm-aif-2026",
+      "publisher": "First Quantum Minerals Ltd.",
+      "source_name": "Annual Information Form as at December 31, 2025 (10. Februar 2026)",
+      "source_url": "https://www.first-quantum.com/wp-content/uploads/2026/02/260210-FQM-AIF-2026-FINAL.pdf",
+      "source_quality": "COMPANY_PRIMARY",
+      "accessed_at": "2026-11-10"
+     }
+    ]
+   },
+   "output_via": "FACILITY_CONCENTRATE_PROCESSED_CANDIDATE",
+   "output_basis": "CONCENTRATE",
    "status": "UNKNOWN",
-   "unknown_reason": "MATERIAL_BASIS_MISMATCH"
+   "unknown_reason": "CAPACITY_CHANGED_DURING_PERIOD",
+   "output_kt": 1205.6
   },
   {
    "entity_id": "entity:be3c251b-870b-4029-b775-b4a718edf468",
@@ -3421,6 +3727,7 @@
    },
    "output_claim": null,
    "output_via": null,
+   "output_basis": null,
    "status": "UNKNOWN",
    "unknown_reason": "MATERIAL_BASIS_MISMATCH"
   },
@@ -3466,6 +3773,7 @@
    },
    "output_claim": null,
    "output_via": null,
+   "output_basis": null,
    "status": "UNKNOWN",
    "unknown_reason": "MATERIAL_BASIS_MISMATCH"
   },
@@ -3511,11 +3819,74 @@
    },
    "output_claim": null,
    "output_via": null,
+   "output_basis": null,
    "status": "UNKNOWN",
    "unknown_reason": "MATERIAL_BASIS_MISMATCH"
   }
  ],
  "balance": [
+  {
+   "entity_id": "entity:b1167de6-e504-4779-8589-39b470d424a9",
+   "name": "Ilo copper smelter",
+   "stage": "SMELTER",
+   "country": "Peru",
+   "output_kt": 305.2,
+   "output_claim": {
+    "claim_id": "csv1:ilo-smelter:anode:2025",
+    "value": 305.2,
+    "unit": "kt",
+    "value_kt": 305.2,
+    "field": "production",
+    "fact_status": "FACT",
+    "candidate": true,
+    "evidence_status": "SOURCE_TEXT_READ_NOT_IN_LEDGER",
+    "material_basis": "INTERMEDIATE_PRODUCT",
+    "material_form": "copper anode",
+    "measurement_basis": null,
+    "period_type": "CALENDAR_YEAR",
+    "period_start": "2025-01-01",
+    "period_end": "2026-01-01",
+    "reference_year": 2025,
+    "locator": "Item 2, Processing Facilities—Ilo, Smelter table",
+    "quote_fragments": [
+     "production information for 2025, 2024 and 2023 for our Ilo smelter plant",
+     "Anode production (kt) 305.2 359.4 362.9",
+     "Our Ilo smelter produces copper anodes for the refinery we operate as part of the same facility"
+    ],
+    "usage_restrictions": [
+     "CANDIDATE_NOT_IN_LEDGER"
+    ],
+    "sources": [
+     {
+      "source_id": "csv1-southern-10k-2025",
+      "publisher": "Southern Copper Corporation",
+      "source_name": "Form 10-K for the fiscal year ended December 31, 2025",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1001838/000110465926021492/scco-20251231x10k.htm",
+      "source_quality": "COMPANY_PRIMARY",
+      "accessed_at": "2026-10-07"
+     }
+    ]
+   },
+   "purchased_feed_output": null,
+   "linked_mines": [
+    {
+     "name": "Cuajone",
+     "value_kt": 162.8,
+     "status": "INFERENCE",
+     "unknown_reason": null
+    },
+    {
+     "name": "Toquepala",
+     "value_kt": 224.9,
+     "status": "INFERENCE",
+     "unknown_reason": null
+    }
+   ],
+   "linked_mine_supply_known_kt": 387.7,
+   "linked_mines_unknown": 0,
+   "difference": "NOT_COMPUTED",
+   "reason": "MATERIAL_BASIS_DIFFERS_AND_THIRD_PARTY_FEED_UNKNOWN"
+  },
   {
    "entity_id": "entity:436387f3-1b53-48a2-8f3d-35722a6bcffd",
    "name": "Kansanshi Copper Smelter",
@@ -3546,6 +3917,7 @@
      }
     ]
    },
+   "purchased_feed_output": null,
    "linked_mines": [
     {
      "name": "Kansanshi",
@@ -3562,6 +3934,60 @@
    ],
    "linked_mine_supply_known_kt": 370.2,
    "linked_mines_unknown": 0,
+   "difference": "NOT_COMPUTED",
+   "reason": "MATERIAL_BASIS_DIFFERS_AND_THIRD_PARTY_FEED_UNKNOWN"
+  },
+  {
+   "entity_id": "entity:3d5cd21b-fdf4-477b-ab05-4cc57e876514",
+   "name": "PT Smelting Gresik copper smelter and refinery integrated facility",
+   "stage": "SMELTER",
+   "country": "Indonesien",
+   "output_kt": 230.3,
+   "output_claim": {
+    "claim_id": "csv1:pt-smelting:anode:2025",
+    "value": 230300,
+    "unit": "t",
+    "value_kt": 230.3,
+    "field": "production",
+    "fact_status": "FACT",
+    "candidate": true,
+    "evidence_status": "SOURCE_TEXT_READ_NOT_IN_LEDGER",
+    "material_basis": "INTERMEDIATE_PRODUCT",
+    "material_form": "copper anode",
+    "measurement_basis": null,
+    "period_type": "CALENDAR_YEAR",
+    "period_start": "2025-01-01",
+    "period_end": "2026-01-01",
+    "reference_year": 2025,
+    "locator": "Seite 27 (PDF 29), PT Smelting",
+    "quote_fragments": [
+     "PT Smelting’s copper anode production from its smelter totaled 230,300 metric tons in 2025"
+    ],
+    "usage_restrictions": [
+     "CANDIDATE_NOT_IN_LEDGER"
+    ],
+    "sources": [
+     {
+      "source_id": "csv1-fcx-10k-2025",
+      "publisher": "Freeport-McMoRan Inc.",
+      "source_name": "Form 10-K for the fiscal year ended December 31, 2025",
+      "source_url": "https://s22.q4cdn.com/529358580/files/doc_financials/10-K/10_k2025.pdf",
+      "source_quality": "COMPANY_PRIMARY",
+      "accessed_at": "2026-11-10"
+     }
+    ]
+   },
+   "purchased_feed_output": null,
+   "linked_mines": [
+    {
+     "name": "Grasberg minerals district / PTFI integrated mine",
+     "value_kt": null,
+     "status": "UNKNOWN",
+     "unknown_reason": "NO_CLAIM_FOR_YEAR"
+    }
+   ],
+   "linked_mine_supply_known_kt": null,
+   "linked_mines_unknown": 1,
    "difference": "NOT_COMPUTED",
    "reason": "MATERIAL_BASIS_DIFFERS_AND_THIRD_PARTY_FEED_UNKNOWN"
   },
@@ -3595,6 +4021,7 @@
      }
     ]
    },
+   "purchased_feed_output": null,
    "linked_mines": [
     {
      "name": "Grasberg minerals district / PTFI integrated mine",
@@ -3638,6 +4065,7 @@
      }
     ]
    },
+   "purchased_feed_output": null,
    "linked_mines": [
     {
      "name": "Cuajone",
@@ -3654,6 +4082,99 @@
    ],
    "linked_mine_supply_known_kt": 387.7,
    "linked_mines_unknown": 0,
+   "difference": "NOT_COMPUTED",
+   "reason": "MATERIAL_BASIS_DIFFERS_AND_THIRD_PARTY_FEED_UNKNOWN"
+  },
+  {
+   "entity_id": "entity:0da85694-11d1-489f-a25c-f24b899bbb00",
+   "name": "Kennecott copper refinery",
+   "stage": "REFINERY",
+   "country": "USA",
+   "output_kt": 134.0,
+   "output_claim": {
+    "claim_id": "csv1:kennecott-refinery:own:2025",
+    "value": 134,
+    "unit": "kt",
+    "value_kt": 134.0,
+    "field": "production",
+    "fact_status": "FACT",
+    "candidate": true,
+    "evidence_status": "SOURCE_TEXT_READ_NOT_IN_LEDGER",
+    "material_basis": "REFINED_METAL",
+    "material_form": "refined copper (own feed)",
+    "measurement_basis": null,
+    "period_type": "CALENDAR_YEAR",
+    "period_start": "2025-01-01",
+    "period_end": "2026-01-01",
+    "reference_year": 2025,
+    "locator": "Seite 278, Metals and minerals production, COPPER (production-consolidated basis); Fußnote 6 Seite 279",
+    "quote_fragments": [
+     "Kennecott (US)6 - Production of refined metal 134 134 193 193 109 109",
+     "Purchased and tolled copper concentrates are excluded from reported production figures and guidance"
+    ],
+    "usage_restrictions": [
+     "CANDIDATE_NOT_IN_LEDGER",
+     "EXCLUDES_PURCHASED_FEED"
+    ],
+    "sources": [
+     {
+      "source_id": "csv1-riotinto-ar-2025",
+      "publisher": "Rio Tinto",
+      "source_name": "Annual Report 2025",
+      "source_url": "https://company-announcements.afr.com/asx/rio/88b8e74c-0d54-11f1-bade-ca622cf181ba.pdf",
+      "source_quality": "COMPANY_PRIMARY",
+      "accessed_at": "2026-11-10"
+     }
+    ]
+   },
+   "purchased_feed_output": {
+    "value_kt": 39.0,
+    "claim": {
+     "claim_id": "csv1:kennecott-refinery:purchased:2025",
+     "value": 39,
+     "unit": "kt",
+     "value_kt": 39.0,
+     "field": "production_from_purchased_feed",
+     "fact_status": "FACT",
+     "candidate": true,
+     "evidence_status": "SOURCE_TEXT_READ_NOT_IN_LEDGER",
+     "material_basis": "REFINED_METAL",
+     "material_form": "copper cathode from purchased concentrate",
+     "measurement_basis": "Belegter Fremdeinsatz: Kennecott verarbeitet auch zugekauftes Konzentrat. Ein Lieferanteil der eigenen Mine wird nicht abgeleitet.",
+     "period_type": "CALENDAR_YEAR",
+     "period_start": "2025-01-01",
+     "period_end": "2026-01-01",
+     "reference_year": 2025,
+     "locator": "Seite 279, Fußnote 6",
+     "quote_fragments": [
+      "We continue to process third party concentrate to optimise smelter utilisation",
+      "(39 thousand tonnes for full year 2025)"
+     ],
+     "usage_restrictions": [
+      "CANDIDATE_NOT_IN_LEDGER"
+     ],
+     "sources": [
+      {
+       "source_id": "csv1-riotinto-ar-2025",
+       "publisher": "Rio Tinto",
+       "source_name": "Annual Report 2025",
+       "source_url": "https://company-announcements.afr.com/asx/rio/88b8e74c-0d54-11f1-bade-ca622cf181ba.pdf",
+       "source_quality": "COMPANY_PRIMARY",
+       "accessed_at": "2026-11-10"
+      }
+     ]
+    }
+   },
+   "linked_mines": [
+    {
+     "name": "Kennecott / Bingham Canyon mine",
+     "value_kt": null,
+     "status": "UNKNOWN",
+     "unknown_reason": "NO_CLAIM_FOR_YEAR"
+    }
+   ],
+   "linked_mine_supply_known_kt": null,
+   "linked_mines_unknown": 1,
    "difference": "NOT_COMPUTED",
    "reason": "MATERIAL_BASIS_DIFFERS_AND_THIRD_PARTY_FEED_UNKNOWN"
   },
@@ -3687,6 +4208,7 @@
      }
     ]
    },
+   "purchased_feed_output": null,
    "linked_mines": [
     {
      "name": "Grasberg minerals district / PTFI integrated mine",
@@ -3701,6 +4223,318 @@
    "reason": "MATERIAL_BASIS_DIFFERS_AND_THIRD_PARTY_FEED_UNKNOWN"
   }
  ],
+ "facility_values": {
+  "package": "CSV-1.0-2026-11-10",
+  "status": "CANDIDATES_NOT_IN_LEDGER",
+  "source_sha256": "63a7e205dcc586378ead4062392ea1c867ae697f2b1ac3d536be74907d512da6",
+  "rows": [
+   {
+    "claim_id": "csv1:ilo-smelter:concentrate:2025",
+    "value": 1040.7,
+    "unit": "kt",
+    "value_kt": 1040.7,
+    "field": "concentrate_processed",
+    "fact_status": "FACT",
+    "candidate": true,
+    "evidence_status": "SOURCE_TEXT_READ_NOT_IN_LEDGER",
+    "material_basis": "CONCENTRATE",
+    "material_form": "copper concentrate smelted",
+    "measurement_basis": "Die Quelle nennt keine Aufteilung nach Herkunft: \"without distinguishing between the products of the two mines\" (Toquepala, Cuajone).",
+    "period_type": "CALENDAR_YEAR",
+    "period_start": "2025-01-01",
+    "period_end": "2026-01-01",
+    "reference_year": 2025,
+    "locator": "Item 2, Processing Facilities—Ilo, Smelter table",
+    "quote_fragments": [
+     "production information for 2025, 2024 and 2023 for our Ilo smelter plant",
+     "Concentrate smelted (kt) 1,040.7 1,230.9 1,292.9"
+    ],
+    "usage_restrictions": [
+     "CANDIDATE_NOT_IN_LEDGER"
+    ],
+    "sources": [
+     {
+      "source_id": "csv1-southern-10k-2025",
+      "publisher": "Southern Copper Corporation",
+      "source_name": "Form 10-K for the fiscal year ended December 31, 2025",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1001838/000110465926021492/scco-20251231x10k.htm",
+      "source_quality": "COMPANY_PRIMARY",
+      "accessed_at": "2026-10-07"
+     }
+    ],
+    "entity_id": "entity:b1167de6-e504-4779-8589-39b470d424a9",
+    "name": "Ilo copper smelter"
+   },
+   {
+    "claim_id": "csv1:ilo-smelter:anode:2025",
+    "value": 305.2,
+    "unit": "kt",
+    "value_kt": 305.2,
+    "field": "production",
+    "fact_status": "FACT",
+    "candidate": true,
+    "evidence_status": "SOURCE_TEXT_READ_NOT_IN_LEDGER",
+    "material_basis": "INTERMEDIATE_PRODUCT",
+    "material_form": "copper anode",
+    "measurement_basis": null,
+    "period_type": "CALENDAR_YEAR",
+    "period_start": "2025-01-01",
+    "period_end": "2026-01-01",
+    "reference_year": 2025,
+    "locator": "Item 2, Processing Facilities—Ilo, Smelter table",
+    "quote_fragments": [
+     "production information for 2025, 2024 and 2023 for our Ilo smelter plant",
+     "Anode production (kt) 305.2 359.4 362.9",
+     "Our Ilo smelter produces copper anodes for the refinery we operate as part of the same facility"
+    ],
+    "usage_restrictions": [
+     "CANDIDATE_NOT_IN_LEDGER"
+    ],
+    "sources": [
+     {
+      "source_id": "csv1-southern-10k-2025",
+      "publisher": "Southern Copper Corporation",
+      "source_name": "Form 10-K for the fiscal year ended December 31, 2025",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1001838/000110465926021492/scco-20251231x10k.htm",
+      "source_quality": "COMPANY_PRIMARY",
+      "accessed_at": "2026-10-07"
+     }
+    ],
+    "entity_id": "entity:b1167de6-e504-4779-8589-39b470d424a9",
+    "name": "Ilo copper smelter"
+   },
+   {
+    "claim_id": "csv1:kansanshi-smelter:concentrate:2025",
+    "value": 1205574,
+    "unit": "dmt",
+    "value_kt": 1205.6,
+    "field": "concentrate_processed",
+    "fact_status": "FACT",
+    "candidate": true,
+    "evidence_status": "SOURCE_TEXT_READ_NOT_IN_LEDGER",
+    "material_basis": "CONCENTRATE",
+    "material_form": "copper concentrate (dry metric tonnes)",
+    "measurement_basis": "Kapazität wechselte im Jahr: Erweiterung \"was commissioned in Q3, 2025\", \"to 1.6 Mtpa from the previous capacity level of 1.38 Mtpa\". Keine Auslastung berechnet.",
+    "period_type": "CALENDAR_YEAR",
+    "period_start": "2025-01-01",
+    "period_end": "2026-01-01",
+    "reference_year": 2025,
+    "locator": "Seite 21, Kansanshi Copper Smelter; Tabelle Seite 24",
+    "quote_fragments": [
+     "In 2025, the smelter processed 1,205,574 dry metric tonnes of concentrate",
+     "Concentrate Processed ‘000 DMT 1,206 1,356 1,281 1,305"
+    ],
+    "usage_restrictions": [
+     "CANDIDATE_NOT_IN_LEDGER",
+     "CAPACITY_CHANGED_DURING_PERIOD"
+    ],
+    "sources": [
+     {
+      "source_id": "csv1-fqm-aif-2026",
+      "publisher": "First Quantum Minerals Ltd.",
+      "source_name": "Annual Information Form as at December 31, 2025 (10. Februar 2026)",
+      "source_url": "https://www.first-quantum.com/wp-content/uploads/2026/02/260210-FQM-AIF-2026-FINAL.pdf",
+      "source_quality": "COMPANY_PRIMARY",
+      "accessed_at": "2026-11-10"
+     }
+    ],
+    "entity_id": "entity:436387f3-1b53-48a2-8f3d-35722a6bcffd",
+    "name": "Kansanshi Copper Smelter"
+   },
+   {
+    "claim_id": "csv1:pt-smelting:anode:2025",
+    "value": 230300,
+    "unit": "t",
+    "value_kt": 230.3,
+    "field": "production",
+    "fact_status": "FACT",
+    "candidate": true,
+    "evidence_status": "SOURCE_TEXT_READ_NOT_IN_LEDGER",
+    "material_basis": "INTERMEDIATE_PRODUCT",
+    "material_form": "copper anode",
+    "measurement_basis": null,
+    "period_type": "CALENDAR_YEAR",
+    "period_start": "2025-01-01",
+    "period_end": "2026-01-01",
+    "reference_year": 2025,
+    "locator": "Seite 27 (PDF 29), PT Smelting",
+    "quote_fragments": [
+     "PT Smelting’s copper anode production from its smelter totaled 230,300 metric tons in 2025"
+    ],
+    "usage_restrictions": [
+     "CANDIDATE_NOT_IN_LEDGER"
+    ],
+    "sources": [
+     {
+      "source_id": "csv1-fcx-10k-2025",
+      "publisher": "Freeport-McMoRan Inc.",
+      "source_name": "Form 10-K for the fiscal year ended December 31, 2025",
+      "source_url": "https://s22.q4cdn.com/529358580/files/doc_financials/10-K/10_k2025.pdf",
+      "source_quality": "COMPANY_PRIMARY",
+      "accessed_at": "2026-11-10"
+     }
+    ],
+    "entity_id": "entity:3d5cd21b-fdf4-477b-ab05-4cc57e876514",
+    "name": "PT Smelting Gresik copper smelter and refinery integrated facility"
+   },
+   {
+    "claim_id": "csv1:pt-smelting:cathode:2025",
+    "value": 207200,
+    "unit": "t",
+    "value_kt": 207.2,
+    "field": "production",
+    "fact_status": "FACT",
+    "candidate": true,
+    "evidence_status": "SOURCE_TEXT_READ_NOT_IN_LEDGER",
+    "material_basis": "REFINED_METAL",
+    "material_form": "copper cathode",
+    "measurement_basis": null,
+    "period_type": "CALENDAR_YEAR",
+    "period_start": "2025-01-01",
+    "period_end": "2026-01-01",
+    "reference_year": 2025,
+    "locator": "Seite 27 (PDF 29), PT Smelting",
+    "quote_fragments": [
+     "Copper cathode production from its refinery totaled 207,200 metric tons in"
+    ],
+    "usage_restrictions": [
+     "CANDIDATE_NOT_IN_LEDGER"
+    ],
+    "sources": [
+     {
+      "source_id": "csv1-fcx-10k-2025",
+      "publisher": "Freeport-McMoRan Inc.",
+      "source_name": "Form 10-K for the fiscal year ended December 31, 2025",
+      "source_url": "https://s22.q4cdn.com/529358580/files/doc_financials/10-K/10_k2025.pdf",
+      "source_quality": "COMPANY_PRIMARY",
+      "accessed_at": "2026-11-10"
+     }
+    ],
+    "entity_id": "entity:3d5cd21b-fdf4-477b-ab05-4cc57e876514",
+    "name": "PT Smelting Gresik copper smelter and refinery integrated facility"
+   },
+   {
+    "claim_id": "csv1:kennecott-refinery:own:2025",
+    "value": 134,
+    "unit": "kt",
+    "value_kt": 134.0,
+    "field": "production",
+    "fact_status": "FACT",
+    "candidate": true,
+    "evidence_status": "SOURCE_TEXT_READ_NOT_IN_LEDGER",
+    "material_basis": "REFINED_METAL",
+    "material_form": "refined copper (own feed)",
+    "measurement_basis": null,
+    "period_type": "CALENDAR_YEAR",
+    "period_start": "2025-01-01",
+    "period_end": "2026-01-01",
+    "reference_year": 2025,
+    "locator": "Seite 278, Metals and minerals production, COPPER (production-consolidated basis); Fußnote 6 Seite 279",
+    "quote_fragments": [
+     "Kennecott (US)6 - Production of refined metal 134 134 193 193 109 109",
+     "Purchased and tolled copper concentrates are excluded from reported production figures and guidance"
+    ],
+    "usage_restrictions": [
+     "CANDIDATE_NOT_IN_LEDGER",
+     "EXCLUDES_PURCHASED_FEED"
+    ],
+    "sources": [
+     {
+      "source_id": "csv1-riotinto-ar-2025",
+      "publisher": "Rio Tinto",
+      "source_name": "Annual Report 2025",
+      "source_url": "https://company-announcements.afr.com/asx/rio/88b8e74c-0d54-11f1-bade-ca622cf181ba.pdf",
+      "source_quality": "COMPANY_PRIMARY",
+      "accessed_at": "2026-11-10"
+     }
+    ],
+    "entity_id": "entity:0da85694-11d1-489f-a25c-f24b899bbb00",
+    "name": "Kennecott copper refinery"
+   },
+   {
+    "claim_id": "csv1:kennecott-refinery:purchased:2025",
+    "value": 39,
+    "unit": "kt",
+    "value_kt": 39.0,
+    "field": "production_from_purchased_feed",
+    "fact_status": "FACT",
+    "candidate": true,
+    "evidence_status": "SOURCE_TEXT_READ_NOT_IN_LEDGER",
+    "material_basis": "REFINED_METAL",
+    "material_form": "copper cathode from purchased concentrate",
+    "measurement_basis": "Belegter Fremdeinsatz: Kennecott verarbeitet auch zugekauftes Konzentrat. Ein Lieferanteil der eigenen Mine wird nicht abgeleitet.",
+    "period_type": "CALENDAR_YEAR",
+    "period_start": "2025-01-01",
+    "period_end": "2026-01-01",
+    "reference_year": 2025,
+    "locator": "Seite 279, Fußnote 6",
+    "quote_fragments": [
+     "We continue to process third party concentrate to optimise smelter utilisation",
+     "(39 thousand tonnes for full year 2025)"
+    ],
+    "usage_restrictions": [
+     "CANDIDATE_NOT_IN_LEDGER"
+    ],
+    "sources": [
+     {
+      "source_id": "csv1-riotinto-ar-2025",
+      "publisher": "Rio Tinto",
+      "source_name": "Annual Report 2025",
+      "source_url": "https://company-announcements.afr.com/asx/rio/88b8e74c-0d54-11f1-bade-ca622cf181ba.pdf",
+      "source_quality": "COMPANY_PRIMARY",
+      "accessed_at": "2026-11-10"
+     }
+    ],
+    "entity_id": "entity:0da85694-11d1-489f-a25c-f24b899bbb00",
+    "name": "Kennecott copper refinery"
+   },
+   {
+    "claim_id": "csv1:kennecott-refinery:capacity",
+    "value": 335000,
+    "unit": "t/year",
+    "value_kt": 335.0,
+    "field": "capacity",
+    "fact_status": "FACT",
+    "candidate": true,
+    "evidence_status": "SOURCE_TEXT_READ_NOT_IN_LEDGER",
+    "material_basis": "REFINED_METAL",
+    "material_form": "refined copper",
+    "measurement_basis": null,
+    "period_type": null,
+    "period_start": null,
+    "period_end": null,
+    "reference_year": null,
+    "locator": "Seite 325, Group smelters, refineries ... (Capacity based on 100% ownership)",
+    "quote_fragments": [
+     "Flash smelting furnace/flash convertor",
+     "335,000 tonnes per",
+     "year refined copper"
+    ],
+    "usage_restrictions": [
+     "CANDIDATE_NOT_IN_LEDGER",
+     "CAPACITY_WITHOUT_PERIOD"
+    ],
+    "sources": [
+     {
+      "source_id": "csv1-riotinto-ar-2025",
+      "publisher": "Rio Tinto",
+      "source_name": "Annual Report 2025",
+      "source_url": "https://company-announcements.afr.com/asx/rio/88b8e74c-0d54-11f1-bade-ca622cf181ba.pdf",
+      "source_quality": "COMPANY_PRIMARY",
+      "accessed_at": "2026-11-10"
+     }
+    ],
+    "entity_id": "entity:0da85694-11d1-489f-a25c-f24b899bbb00",
+    "name": "Kennecott copper refinery"
+   }
+  ],
+  "not_covered": {
+   "Olympic Dam copper smelter / electrorefinery": "BHP Annual Report 2026 nennt nur Copper SA gesamt (Kathode), keinen Hütten- oder Raffineriewert; Seite Copper South Australia gelesen 2026-11-10.",
+   "Kennecott copper smelter": "Rio Tinto AR 2025 nennt nur raffiniertes Kupfer und den 45-Tage-Stillstand, keinen Anodenwert.",
+   "Lualaba Copper Smelter, Kamoa-Kakula on-site smelter": "Ivanhoe AIF 2025: Hütte vor Ort mit \"first feed of concentrate taking place in December 2025\", kein Jahresausstoß 2025; Mengen an die Lualaba-Hütte (Lohnverarbeitung seit Mai 2021) nicht genannt.",
+   "JXNMM smelting facilities in Japan": "Gruppe ohne einzelne Anlage; nicht verortbar, kein Wert."
+  }
+ },
  "world_reference": {
   "status": "FACT",
   "reference_id": "usgs-mcs-2026-copper",
@@ -11112,11 +11946,11 @@
      "target_entity_id": "entity:0da85694-11d1-489f-a25c-f24b899bbb00",
      "target_name": "Kennecott copper refinery",
      "fact_status": "FACT",
-     "temporal_status": "UNKNOWN_PERIOD",
+     "temporal_status": "REPORTING_PERIOD",
      "material_form": "copper cathode",
      "review_status": "APPROVED",
      "blockers": [
-      "PERIOD_UNKNOWN",
+      "REPORTING_PERIOD_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
       "NOT_INDEPENDENTLY_AUDITED"
@@ -11302,11 +12136,11 @@
      "target_entity_id": "entity:4ea70469-a907-429a-bc87-92c9f97369f6",
      "target_name": "PTFI Manyar copper electrorefinery",
      "fact_status": "FACT",
-     "temporal_status": "UNKNOWN_PERIOD",
+     "temporal_status": "REPORTING_PERIOD",
      "material_form": "copper cathode",
      "review_status": "APPROVED",
      "blockers": [
-      "PERIOD_UNKNOWN",
+      "REPORTING_PERIOD_ONLY",
       "IDENTITY_SOURCE_SCOPED",
       "SINGLE_SOURCE_ONLY",
       "NOT_INDEPENDENTLY_AUDITED"
@@ -13104,5 +13938,5 @@
   "covered_kt": 2759.7,
   "comparability": "DEFINITIONS_DIFFER_NO_CROSS_DEFINITION_AGGREGATE"
  },
- "output_sha256": "3d40ab0d05d99da0ef28b4780b641a5bb4f3b565f68fb0bbd6c59a20896cd206"
+ "output_sha256": "f387448b7fb0e0fc1a4b2bbb959e5ce9e61d43af2355b7fbde8506c435c85822"
 }

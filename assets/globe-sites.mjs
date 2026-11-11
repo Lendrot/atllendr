@@ -50,6 +50,10 @@ export async function attachSites(engine,host){
   return `<div><dt>${esc(r.name||'Name UNKNOWN')}</dt><dd>${esc(r.kind)} · ${esc(r.country)} · Status ${esc(r.status)}<br>Koordinate wie gemeldet: ${coord(r.lat)}, ${coord(r.lon)} · Datensatz ${esc(r.id)}<br>Quelle: ${r.source?source(r.source):esc(r.dataset.source)+' · '+esc(r.dataset.evidence)} · ${link}${ann}</dd></div>`;
  }
  function source(s){return s.url&&/^https:\/\//.test(s.url)?`<a href="${esc(s.url)}" rel="noopener" target="_blank">${esc(s.label)}</a>`:esc(s.label);}
+ // Gleiche Angaben an jeder Verbindung (Eddie 2026-11-10): Menge und Stand stehen immer da, ohne Beleg als „unbekannt“.
+ // Menge entfällt nur bei Eigentum, Betrieb und Kontrolle (dort zählt der Anteil, es wird keine Ware bewegt).
+ const OHNE_MENGE=new Set(['OWNS','PARTIALLY_OWNS','OPERATES','CONTROLS','HEADQUARTERS','betreibt']);
+ function gleicheAngaben(l,x){return[...(OHNE_MENGE.has(l.type)?[]:[['Menge',x.q||'unbekannt']]),['Stand',x.t||'unbekannt']];}
  function openLinks(list){
   // Klartext oben (Eddie 2026-11-10): welche Verbindung, warum, wichtigste Angaben; Kennungen, Koordinaten und Rohquellen eingeklappt.
   const l=list[0],x=data.link_info?.[l.id]||{};
@@ -57,7 +61,8 @@ export async function attachSites(engine,host){
   const fach=l.dataset.fachatlas?`<a href="${esc(l.dataset.fachatlas)}">Im Fachatlas ${esc(l.dataset.short||l.dataset.label)} ansehen</a>`:'';
   const technik=`<p>Der Bogen ist schematisch zwischen den beiden gemeldeten Koordinaten gezeichnet, kein belegter Transportweg. Evidenz ${esc(l.evidence)}, Prüfstatus ${esc(l.audit)}. Datensatz: ${esc(l.dataset.label)}.</p><dl>${row(l.from)}${row(l.to)}</dl><p class="empty-note">Beziehung ${esc(l.id)}${l.source?` · Beleg der Beziehung: ${source(l.source)}`:''}</p>`;
   dialog.querySelector('#sites-dialog-body').innerHTML=verbindungHtml({typ:l.type,von:{name:l.from.name,art:l.from.kind,land:l.from.country},nach:{name:l.to.name,art:l.to.kind,land:l.to.country},
-   rohstoff:['standorte','rohstoffwelt'].includes(l.dataset.id)?null:(l.dataset.short||l.dataset.label),material:x.m,anteil:x.p,evidenz:l.evidence,pruef:l.audit,aussage:x.a,zitat:x.z,beleg:l.source},{technik,aktionen:fach});
+   rohstoff:['standorte','rohstoffwelt'].includes(l.dataset.id)?null:(l.dataset.short||l.dataset.label),material:x.m,entsteht:x.n,anteil:x.p,evidenz:l.evidence,pruef:l.audit,aussage:x.a,zitat:x.z,beleg:l.source,extra:gleicheAngaben(l,x),
+   verwendung:x.v?{zweck:x.v[0],wie:'belegt',zitat:x.v[1],beleg:{label:x.v[3],url:x.v[2]}}:null},{technik,aktionen:fach});
   if(!dialog.open)dialog.showModal();
   dialog.querySelector('#sites-dialog-body').scrollTop=0;
  }
@@ -67,5 +72,7 @@ export async function attachSites(engine,host){
   if(!dialog.open)dialog.showModal();
  }
  apply();
- return {open,openLinks,counts:data.counts,allLinks,setLinkFilter:fn=>{linkFilter=fn;apply();}};
+ // Firmensuche (Eddie 2026-11-10): Standorte, deren Name nach Normalisierung gleich dem gesuchten Namen ist; Konzernsitze zuerst.
+ const finde=(t,nrm)=>records.filter(r=>r&&r.name&&nrm(r.name)===t).sort((a,b)=>(b.dataset.id==='standorte')-(a.dataset.id==='standorte'));
+ return {open,openLinks,finde,counts:data.counts,allLinks,setLinkFilter:fn=>{linkFilter=fn;apply();}};
 }

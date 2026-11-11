@@ -1,3 +1,4 @@
+import {quelleText} from './quellen-anzeige.mjs';
 import {availabilityEnvelope,availabilityDetail,gapIds} from './copper-public-availability-v293.mjs';
 import { validateCopperGraph, analyzeDisruption } from './copper-analysis-v29.mjs';
 
@@ -135,10 +136,10 @@ try { const parsed = new URL(value); return ['https:', 'http:'].includes(parsed.
 function renderSources() {
 for (const source of graph.sources) {
 const item = el('article', undefined, 'source');
-item.append(el('h3', source.source_name || source.title || source.source_id), chip(source.source_quality || 'UNKNOWN_SOURCE_QUALITY'));
+item.append(el('h3', quelleText(source.source_id, source.source_url || source.url, source.source_name || source.title || 'Quelle')), chip(source.source_quality || 'UNKNOWN_SOURCE_QUALITY'));
 const url = safeUrl(source.source_url || source.url);
 if (url) { const link = el('a', url); link.href = url; link.target = '_blank'; link.rel = 'noopener noreferrer'; item.append(link); }
-item.append(paragraph(`Veröffentlicht: ${printable(source.source_published_at || source.source_date)} · Zugriff: ${printable(source.access_date || source.accessed_at)}`, 'small'), el('code', source.source_id));
+item.append(paragraph(`Veröffentlicht: ${printable(source.source_published_at || source.source_date)} · Zugriff: ${printable(source.access_date || source.accessed_at)}`, 'small'));
 item.append(paragraph(`Gesichertes Artefakt (${source.artifact_type || 'Originalquelle'}) SHA-256: ${printable(source.raw_artifact_sha256)}`, 'small'));
 const matching = graph.evidence.filter(e => e.source_id === source.source_id);
 const details = el('details'); details.append(el('summary', `${matching.length} Evidence-Verweise`));
@@ -304,7 +305,7 @@ const names=new Map(neighborhood.entities.map(e=>[e.entity_id,e.canonical_name])
 block.append(el('summary',`${names.get(entityId)} · ${neighborhood.relationships.length} direkte Beziehungen`));
 for(const r of neighborhood.relationships) {
 const line=el('p');line.append(chip(r.fact_status),el('strong',`${names.get(r.source_entity_id)} → ${names.get(r.target_entity_id)}`),paragraph(`${label(r.relationship_type)} · ${r.material_form || 'Material UNKNOWN'} · Zeit: ${r.valid_from || 'UNKNOWN'} bis ${r.valid_to || 'UNKNOWN'}`, 'small'));
-for(const eid of r.evidence_refs){const ev=neighborhood.evidence.find(e=>e.evidence_id===eid),source=neighborhood.sources.find(s=>s.source_id===ev?.source_id);const link=el('a',source?.source_name || eid);link.href=safeUrl(source?.source_url) || '#';link.target='_blank';link.rel='noopener noreferrer';line.append(link,paragraph(printable(ev?.source_locator),'small'));if(source?.artifact_type==='WEB_RETRIEVAL_EXTRACT')line.append(paragraph('Gesicherter Primärtextauszug; Originaldatei nicht gesichert.','small'));}
+for(const eid of r.evidence_refs){const ev=neighborhood.evidence.find(e=>e.evidence_id===eid),source=neighborhood.sources.find(s=>s.source_id===ev?.source_id);const link=el('a',quelleText(source?.source_id,source?.source_url,'Quelle'));link.href=safeUrl(source?.source_url) || '#';link.target='_blank';link.rel='noopener noreferrer';line.append(link,paragraph(printable(ev?.source_locator),'small'));if(source?.artifact_type==='WEB_RETRIEVAL_EXTRACT')line.append(paragraph('Gesicherter Primärtextauszug; Originaldatei nicht gesichert.','small'));}
 if(r.usage_restrictions?.length)line.append(paragraph(r.usage_restrictions.join(' · '),'small'));
 block.append(line);
 }

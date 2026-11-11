@@ -3,6 +3,7 @@
 // scripts/analysis/build_copper_market.py); hier wird nichts neu berechnet außer Diagrammgeometrie.
 // Anteile in Abschnitt 1 bis 3 beziehen sich auf den erfassten Bestand; Weltanteile nur gegen die freigegebene USGS-Referenz. UNKNOWN wird nie als 0 gezeichnet.
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+import {quelleHtml,quelleText} from './quellen-anzeige.mjs';
 const safe=url=>/^https?:\/\//.test(url||'')?esc(url):'#';
 const fmt=(v,d=1)=>v==null?'UNKNOWN':Number(v).toLocaleString('de-DE',{minimumFractionDigits:d,maximumFractionDigits:d});
 // Farbe folgt dem Land, nie dem Rang (validiert gegen die dunkle Panelfläche #10232f).
@@ -13,7 +14,7 @@ export const NOT_ZERO='UNKNOWN · kein Wert, nicht 0';
 const REASON={NO_CLAIM_FOR_YEAR:'keine Produktionsangabe für das Jahr im Ledger',CONFLICTING_CLAIMS:'widersprüchliche Quellenwerte, nicht gemittelt',
  EQUITY_SHARE_ONLY:'nur Beteiligungsanteil berichtet (kein 100-%-Wert)',NO_ADMISSIBLE_CLAIM:'keine zulässige Angabe',AMBIGUOUS_TOTAL:'mehrere Gesamtwerte',
  AMBIGUOUS_PRODUCT_CLAIMS:'mehrere Werte für dasselbe Produkt',PERIOD_MISMATCH:'Teilwerte mit verschiedenen Zeiträumen',UNIT_UNKNOWN:'Einheit unbekannt',
- MATERIAL_BASIS_MISMATCH:'Kapazität in Konzentrat, Ausstoß in Metall: nicht vergleichbar',NO_OUTPUT_FOR_YEAR:'kein zuordenbarer Ausstoß im Jahr',
+ MATERIAL_BASIS_MISMATCH:'Kapazität in Konzentrat, Ausstoß in Metall: nicht vergleichbar',CAPACITY_CHANGED_DURING_PERIOD:'Kapazität änderte sich im Jahr (Erweiterung): keine Auslastung',NO_OUTPUT_FOR_YEAR:'kein zuordenbarer Ausstoß im Jahr',
  REFERENCE_SOURCE_NOT_APPROVED:'Referenzquelle für Weltzahlen noch nicht freigegeben',NOT_IN_REFERENCE:'in der Referenzquelle nicht enthalten'};
 export const reasonLabel=r=>REASON[r]||r||'Grund UNKNOWN';
 const STATUS_ORDER=['APPROVED','VERIFIED','REVIEW_READY','BLOCKED','REJECTED','NOT_IN_REVIEW_QUEUE'];
@@ -60,14 +61,16 @@ export function validateView(v){
   if(Math.abs(cov-(cc.covered_kt??-1))>0.05)bad.push('Kostenkurve Abdeckung');
   if(['average','weighted_average','median'].some(k=>k in cc))bad.push('Kostenmittel über verschiedene Definitionen');
  }
- for(const u of v?.utilisation||[])if(u.status==='INFERENCE'&&(u.capacity?.material_basis==='CONCENTRATE'))bad.push('Auslastung über verschiedene Materialbasen');
+ for(const u of v?.utilisation||[])if(u.status==='INFERENCE'&&u.capacity?.material_basis==='CONCENTRATE'&&!(u.output_basis==='CONCENTRATE'&&u.output_claim?.field==='concentrate_processed'))bad.push('Auslastung über verschiedene Materialbasen');
+ for(const f of v?.facility_values?.rows||[])if(f.fact_status!=='FACT'||!f.candidate||!f.sources?.[0]?.source_url||!f.quote_fragments?.length)bad.push((f.claim_id||'?')+': Anlagenwert ohne Quelle oder Zitat');
+ for(const u of v?.utilisation||[])if(u.output_components&&Math.abs(u.output_components.reduce((m,c)=>m+c.value_kt,0)-u.output_kt)>0.05)bad.push(u.name+': Ausstoß-Teile ergeben nicht die Summe');
  return bad;
 }
 const guard=v=>{const b=validateView(v);if(b.length)throw Error('Marktdaten inkonsistent: '+b.join('; '))};
 
 const statusChips=counts=>STATUS_ORDER.filter(s=>counts?.[s]).map(s=>`<span class="mk-st mk-st-${s.toLowerCase()}" data-review="${s}">${counts[s]} ${STATUS_LABEL[s]}</span>`).join(' ')||'<span class="mk-st">keine Beziehungen</span>';
 const unknownTag=r=>`<span class="mk-unknown" data-status="UNKNOWN">${NOT_ZERO}: ${esc(reasonLabel(r))}</span>`;
-const claimSrc=c=>(c?.sources||[]).map(s=>`<a href="${safe(s.source_url)}" target="_blank" rel="noopener noreferrer">${esc(s.publisher||s.source_id)}</a>`).join(', ')||'Quelle UNKNOWN';
+const claimSrc=c=>((c?.sources||[]).map(s=>quelleHtml(s.source_id,s.source_url)).join(', ')||'Quelle UNKNOWN')+(c?.candidate?' (Kandidat, nicht im Ledger)':'');
 const period=p=>!p?'':p.period_type==='FISCAL_YEAR'?`GJ ${esc((p.period_start||'').slice(0,7))} bis ${esc((p.period_end||'').slice(0,7))}`:p.period_type==='CALENDAR_YEAR'?`KJ ${esc((p.period_start||'').slice(0,4))}`:esc(p.period_type);
 
 export function renderKpis(v){
@@ -152,8 +155,8 @@ export function renderUtilisation(v){
  guard(v);const ok=v.utilisation.filter(u=>u.status==='INFERENCE'),unk=v.utilisation.filter(u=>u.status!=='INFERENCE');
  const bars=ok.map(u=>`<div class="mk-util" data-entity="${esc(u.entity_id)}"><p><strong>${esc(short(u.name))}</strong> · ${esc(u.country)} <span class="mk-inf">INFERENCE</span></p>
   <div class="mk-cap" title="Kapazität ${fmt(u.capacity.value_kt_per_year)} kt/Jahr"><span style="width:${Math.min(100,u.utilisation_pct)}%;background:${color(u.country)}" title="Ausstoß ${fmt(u.output_kt)} kt"></span></div>
-  <p class="small">${fmt(u.output_kt)} kt Ausstoß ${period(u.output_claim)} von ${fmt(u.capacity.value_kt_per_year)} kt/Jahr Kapazität = <strong>${fmt(u.utilisation_pct)} %</strong>${u.output_via==='MINE_CATHODE_OF_ONLY_SXEW'?' · Ausstoß = Kathodenproduktion der Mine (einzige SX-EW-Anlage)':''}${u.restrictions?.includes('CAPACITY_WITHOUT_PERIOD')?' · Kapazität ohne Jahresbezug in der Quelle':''}<br>Quellen: ${claimSrc(u.capacity.claim)} · ${claimSrc(u.output_claim)}</p></div>`).join('');
- const rest=unk.map(u=>`<li>${esc(short(u.name))} (${esc(u.country)}): Kapazität ${fmt(u.capacity.value,u.capacity.value%1?1:0)} ${esc(u.capacity.unit)} · ${unknownTag(u.unknown_reason)}</li>`).join('');
+  <p class="small">${fmt(u.output_kt)} kt ${u.output_basis==='CONCENTRATE'?'verarbeitetes Konzentrat':'Ausstoß'} ${period(u.output_claim)}${u.output_components?` (${u.output_components.map(c=>fmt(c.value_kt)+' kt '+(c.field==='production_from_purchased_feed'?'aus zugekauftem Konzentrat':'aus eigenem Material')).join(' + ')})`:''} von ${fmt(u.capacity.value_kt_per_year)} kt/Jahr Kapazität = <strong>${fmt(u.utilisation_pct)} %</strong>${u.output_via==='MINE_CATHODE_OF_ONLY_SXEW'?' · Ausstoß = Kathodenproduktion der Mine (einzige SX-EW-Anlage)':''}${u.restrictions?.includes('CAPACITY_WITHOUT_PERIOD')?' · Kapazität ohne Jahresbezug in der Quelle':''}<br>Quellen: ${claimSrc(u.capacity.claim)} · ${claimSrc(u.output_claim)}</p></div>`).join('');
+ const rest=unk.map(u=>`<li>${esc(short(u.name))} (${esc(u.country)}): Kapazität ${fmt(u.capacity.value,u.capacity.value%1?1:0)} ${esc(u.capacity.unit)}${u.output_kt!=null?` · ${u.output_basis==='CONCENTRATE'?'verarbeitetes Konzentrat':'Ausstoß'} ${fmt(u.output_kt)} kt (${claimSrc(u.output_claim)})`:''} · ${unknownTag(u.unknown_reason)}</li>`).join('');
  return bars+(rest?`<details><summary>Nicht vergleichbar (${unk.length})</summary><ul class="mk-list">${rest}</ul></details>`:'');
 }
 
@@ -164,7 +167,16 @@ export function renderBalance(v){
   return `<div class="mk-bal" data-entity="${esc(b.entity_id)}"><p><strong>${esc(short(b.name))}</strong> · ${esc(b.country)}</p>
   <div class="mk-pair"><span>Minenangebot der angebundenen Ketten</span><div class="mk-cap">${b.linked_mine_supply_known_kt==null?'':`<span style="width:${100*b.linked_mine_supply_known_kt/max}%;background:${color(b.country)}"></span>`}</div><b>${b.linked_mine_supply_known_kt==null?'UNKNOWN':fmt(b.linked_mine_supply_known_kt)+' kt Cu-Inhalt'}</b></div>
   <div class="mk-pair"><span>Ausstoß ${b.stage==='SMELTER'?'Anoden':'Kathoden'} ${esc(v.kpi.year)}</span><div class="mk-cap"><span style="width:${100*b.output_kt/max}%;background:${color(b.country)};opacity:.6"></span></div><b>${fmt(b.output_kt)} kt</b></div>
-  <p class="small">${b.linked_mines.map(m=>`${esc(short(m.name))} ${m.value_kt==null?'UNKNOWN':fmt(m.value_kt)+' kt'}`).join(' · ')}. Keine Differenz berechnet: verschiedene Materialbasis, Fremdeinsatz und Konzentratverkäufe sind im Ledger nicht belegt.</p></div>`}).join('')||'<p class="empty">Keine Anlage mit Ausstoß und angebundener Mine.</p>';
+  <p class="small">${b.linked_mines.map(m=>`${esc(short(m.name))} ${m.value_kt==null?'UNKNOWN':fmt(m.value_kt)+' kt'}`).join(' · ')}.${b.output_claim?.candidate?' Ausstoß: '+claimSrc(b.output_claim)+'.':''}${b.purchased_feed_output?` Belegter Fremdeinsatz: zusätzlich ${fmt(b.purchased_feed_output.value_kt)} kt Kathoden aus zugekauftem Konzentrat (${claimSrc(b.purchased_feed_output.claim)}); der Anteil der eigenen Mine wird nicht abgeleitet.`:''} Keine Differenz berechnet: verschiedene Materialbasis${b.purchased_feed_output?'':', Fremdeinsatz'} und Konzentratverkäufe sind nicht belegt.</p></div>`}).join('')||'<p class="empty">Keine Anlage mit Ausstoß und angebundener Mine.</p>';
+}
+
+// Hüttenmengen: belegte Anlagenwerte außerhalb des Ledgers, mit Fundstelle und Zitat.
+export function renderFacilityValues(v){
+ guard(v);const f=v.facility_values;if(!f?.rows?.length)return '';
+ const lbl={concentrate_processed:'verarbeitetes Konzentrat',production:'Ausstoß',production_from_purchased_feed:'Ausstoß aus zugekauftem Konzentrat',capacity:'Kapazität'};
+ const rows=f.rows.map(x=>`<li data-facility-value="${esc(x.claim_id)}"><strong>${esc(short(x.name))}</strong>: ${esc(lbl[x.field]||x.field)} ${fmt(x.value_kt)} ${x.field==='capacity'?'kt/Jahr':'kt'} (${esc(x.material_form||x.material_basis)}) ${x.period_type?period(x):'ohne Jahresbezug'} <span class="mk-st">FACT</span>${x.measurement_basis?' · '+esc(x.measurement_basis):''}<br><small>Quelle: ${claimSrc(x)}, ${esc(x.locator)} · Zitat: „${esc(x.quote_fragments.join(' … '))}“</small></li>`).join('');
+ const nc=Object.entries(f.not_covered||{}).map(([k,r])=>`<li>${esc(k)}: ${esc(r)}</li>`).join('');
+ return `<details class="mk-cands"><summary>Hüttenmengen ${esc(v.kpi.year)} aus Betreiberberichten (${f.rows.length}), noch nicht im Ledger</summary><ul class="mk-list">${rows}</ul><p class="small">Ohne belegten Wert (UNKNOWN):</p><ul class="mk-list">${nc}</ul></details>`;
 }
 
 const srcLink=w=>w.sources.map(s=>`<a href="${safe(s.source_url)}" target="_blank" rel="noopener noreferrer">${esc(s.publisher)}: ${esc(s.title)}</a>`).join(', ');
@@ -236,7 +248,7 @@ export function renderCostCurve(v){
 
 // Tabellen für Excel/CSV: jede Zeile trägt Status und Quelle; fehlende Werte stehen als UNKNOWN, nie als leere Zelle oder 0.
 const U=v=>v==null?'UNKNOWN':v;
-const srcCols=list=>[(list||[]).map(s=>s.publisher||s.source_id).filter(Boolean).join(' | ')||'UNKNOWN',(list||[]).map(s=>s.source_url).filter(Boolean).join(' | ')||'UNKNOWN'];
+const srcCols=list=>[(list||[]).map(s=>quelleText(s.source_id,s.source_url)).filter(Boolean).join(' | ')||'UNKNOWN',(list||[]).map(s=>s.source_url).filter(Boolean).join(' | ')||'UNKNOWN'];
 const grpCols=(v,r)=>{const g=(v.candidates?.groups||[]).find(g=>g.candidate_id===r.group_candidate_id);return g?[g.name,g.value_kt]:['','']};
 export function exportTables(v,now=new Date()){
  guard(v);const y=v.kpi.year;
@@ -277,7 +289,7 @@ export function renderChainReport(v,chainId){
  const grp=(v.candidates?.groups||[]).find(g=>g.candidate_id===r.group_candidate_id);
  const gtxt=grp?`<p data-group="${esc(grp.candidate_id)}">Gruppenkandidat (nicht im Ledger, nicht je Mine aufgeteilt): ${esc(grp.name)} ${fmt(grp.value_kt)} kt <span class="mk-st">${esc(grp.fact_status)}</span> · <a href="${safe(grp.source.source_url)}" target="_blank" rel="noopener noreferrer">${esc(grp.source.publisher)}</a>, ${esc(grp.locator)}</p>`:'';
  const cst=cost?`<strong>${fmt(cost.cost_usd_lb,2)} USD/lb</strong> ${esc(DEF_LABEL[cost.cost_definition]||cost.cost_definition)} · <a href="${safe(cost.source.source_url)}" target="_blank" rel="noopener noreferrer">${esc(cost.source.publisher)}</a>, ${esc(cost.locator)}<br><small>„${esc(cost.quote_fragments.join(' … '))}“</small>`:`<span class="mk-unknown" data-status="UNKNOWN">${NOT_ZERO}: ${esc(miss?.reason||'keine berichteten Kosten')}</span>`;
- const rows=c.relationships.map(x=>`<tr data-relationship="${esc(x.relationship_id)}" data-review="${esc(x.review_status)}"><td>${esc(x.relationship_type)}</td><td>${esc(short(x.source_name))} → ${esc(short(x.target_name))}${x.material_form?`<br><small>${esc(x.material_form)}</small>`:''}</td><td><span class="mk-st mk-st-${esc(x.review_status.toLowerCase())}">${esc(STATUS_LABEL[x.review_status]||x.review_status)}</span><br><small>${esc(x.fact_status)}${x.blockers.length?' · '+esc(x.blockers.join(', ')):''}</small></td><td>${x.evidence.map(e=>`<a href="${safe(e.source_url)}" target="_blank" rel="noopener noreferrer">${esc(e.publisher||e.source_id)}</a>${e.locator_text?`<br><small>${esc(e.locator_text)}</small>`:''}`).join('<br>')||'Quelle UNKNOWN'}</td></tr>`).join('');
+ const rows=c.relationships.map(x=>`<tr data-relationship="${esc(x.relationship_id)}" data-review="${esc(x.review_status)}"><td>${esc(x.relationship_type)}</td><td>${esc(short(x.source_name))} → ${esc(short(x.target_name))}${x.material_form?`<br><small>${esc(x.material_form)}</small>`:''}</td><td><span class="mk-st mk-st-${esc(x.review_status.toLowerCase())}">${esc(STATUS_LABEL[x.review_status]||x.review_status)}</span><br><small>${esc(x.fact_status)}${x.blockers.length?' · '+esc(x.blockers.join(', ')):''}</small></td><td>${x.evidence.map(e=>`${quelleHtml(e.source_id,e.source_url)}${e.locator_text?`<br><small>${esc(e.locator_text)}</small>`:''}`).join('<br>')||'Quelle UNKNOWN'}</td></tr>`).join('');
  return `<article class="mk-report" data-chain="${esc(c.chain_id)}"><header><p class="eyebrow">Kettenbericht · Kupfer · ${v.kpi.year}</p><h1>${esc(short(r.name))}</h1><p>${esc(r.country)} · Betreiber laut Ledger: ${esc(r.operator)}</p></header>
  <section><h2>Minenangebot ${v.kpi.year}</h2><p>${val}</p>${sup}${cand}${gtxt}</section>
  <section><h2>Berichtete Stückkosten</h2><p>${cst}</p></section>
@@ -313,7 +325,7 @@ export async function mount(doc=document){
   doc.getElementById('mk-stages').innerHTML=renderStages(v);
   doc.getElementById('mk-world').innerHTML=renderWorld(v);
   doc.getElementById('mk-util').innerHTML=renderUtilisation(v);
-  doc.getElementById('mk-balance').innerHTML=renderBalance(v);
+  doc.getElementById('mk-balance').innerHTML=renderBalance(v)+renderFacilityValues(v);
   doc.getElementById('mk-cost').innerHTML=renderCostCurve(v);
   const sel=doc.getElementById('mk-buyer-select');
   sel.innerHTML=v.buyers.map(b=>`<option value="${esc(b.entity_id)}">${esc(short(b.name))}${b.upstream_mines.length?' ← '+esc(b.upstream_countries.join(', ')):''}</option>`).join('');

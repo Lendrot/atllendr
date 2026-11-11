@@ -9,6 +9,8 @@
 //   fokus() fährt die Kamera auf die Gesamtansicht
 //   extra: optionales HTML unter den VF (z. B. Standort-Arten), rein beschreibend
 //   zu: true startet zugeklappt (nur Kopfzeile)
+//   Richtung (Eddie 2026-11-10 "wer Sender und wer Empfänger ist"): unter den VF steht immer dieselbe kleine Erklärung:
+//     jedes Band beginnt schmal und blass beim Sender und endet mit einer Pfeilspitze beim Empfänger (beide Globen zeichnen so).
 //   recht: optional, Ebene "Rechtliche Fälle" (Eddie 2026-11-09): Knopf "§ Rechtliche Fälle" zeigt in der offenen VF nur die
 //     Verbindungen mit einem rechtlichen Fall und darunter eine durchsuchbare Liste dieser Fälle.
 //     {faelle() -> [{id, titel, status, art, norm, such}] (nur Fälle der gerade sichtbaren VF), gesamt() -> Zahl aller Fälle,
@@ -60,8 +62,15 @@ const STIL = `.vf{display:flex;flex-direction:column;gap:6px;pointer-events:auto
 .vf-st{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;border-radius:4px;padding:0 5px;margin-right:4px;background:#fff3cd;color:#7a5200}
 .vf-st[data-st=belegt]{background:#f8d7da;color:#8a1c1c}.vf-st[data-st=widerlegt]{background:#e2e8ee;color:#3e5a74}
 .vf-recht p{margin:0;color:#5b7690;font-size:11.5px}
-.vf-zu .vf-recht{display:none}`;
+.vf-zu .vf-recht{display:none}
+.vf-richtung{display:flex;flex-wrap:wrap;align-items:center;gap:6px;color:#3e5a74;font-size:11.5px}
+.vf-richtung svg{flex:none}.vf-richtung b{font-weight:600;color:#1d3247}
+.vf-zu .vf-richtung{display:none}`;
 
+// Pfeil wie auf dem Globus: schmal und blass am Sender, Spitze am Empfänger.
+const RICHTUNG = '<div class="vf-richtung" data-vf="richtung"><b>Sender</b><svg width="58" height="12" viewBox="0 0 58 12" aria-hidden="true">' +
+  '<defs><linearGradient id="vf-pfeil" x1="0" x2="1"><stop offset="0" stop-color="#1378ba" stop-opacity=".35"/><stop offset="1" stop-color="#1378ba"/></linearGradient></defs>' +
+  '<path d="M1 5.4 L44 4 L44 1 L57 6 L44 11 L44 8 L1 6.6 Z" fill="url(#vf-pfeil)"/></svg><b>Empfänger</b><span>Band schmal beim Sender, Pfeilspitze beim Empfänger</span></div>';
 const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
 const zahl = n => n == null ? '' : '<small>' + Number(n).toLocaleString('de-DE') + '</small>';
 const strich = x => 'border-top-color:' + esc(x.farbe || '#888') + (x.strich ? ';border-top-style:dashed' : '');
@@ -108,7 +117,7 @@ export function vfLegende(el, opt) {
       '<div class="vf-menue" id="vf-menue"' + (menueOffen ? '' : ' hidden') + '><p>Weitere Vernetzungen hinzuschalten:</p>' +
       gs.map(g => '<fieldset data-gruppe="' + esc(g.id) + '"><legend>' + esc(g.titel) + '</legend>' + g.items.map(x => '<label><input type="checkbox" data-g="' + esc(g.id) + '" data-i="' + esc(x.id) + '"' +
         (opt.istAn(g.id, x.id) ? ' checked' : '') + '><i style="' + strich(x) + '"></i>' + esc(x.name) + zahl(x.zahl) + '</label>').join('') + '</fieldset>').join('') + '</div>' +
-      rechtHtml() + '<div class="vf-extra">' + (opt.extra ? opt.extra() : '') + '</div>';
+      RICHTUNG + rechtHtml() + '<div class="vf-extra">' + (opt.extra ? opt.extra() : '') + '</div>';
     el.querySelectorAll('.vf-liste,.vf-menue,.vf-recht ul').forEach((x, i) => { x.scrollTop = rollen[i] || 0; });
     if (fokusSuche) { const i = el.querySelector('[data-vf=recht-suche]'); if (i) { i.focus(); i.setSelectionRange(i.value.length, i.value.length); } }
   }

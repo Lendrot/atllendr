@@ -84,3 +84,38 @@ header.ss-kopf[data-site-shell]{view-transition-name:ss-kopf}
 @keyframes ss-raus{to{opacity:0;transform:translateY(-6px)}}
 @keyframes ss-rein{from{opacity:0;transform:translateY(10px)}}
 @media (prefers-reduced-motion:reduce){html.ss-laedt:before{animation:none;transform:scaleX(.6)}}
+/* Firmensuche im Seitenkopf (Eddie 2026-11-10): sucht in den Unternehmensakten, Treffer öffnen Akte oder Globus */
+header.ss-kopf form.ss-suche{position:relative;flex:0 1 260px;min-width:170px;margin:0;display:flex;align-items:center}
+header.ss-kopf .ss-suche-feld{display:flex;align-items:center;gap:7px;width:100%;height:38px;padding:0 10px;border:1px solid #cfe0ec;border-radius:10px;background:#f6fafd;color:#50677d;cursor:text}
+header.ss-kopf .ss-suche-feld:focus-within{border-color:#1378ba;background:#fff;box-shadow:0 0 0 3px #1378ba22}
+header.ss-kopf .ss-suche svg{width:17px;height:17px;flex:none;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round}
+header.ss-kopf .ss-suche input{all:unset;flex:1;min-width:0;height:100%;font:500 14px/1.2 'DM Sans',Arial,sans-serif;color:#112a44}
+header.ss-kopf .ss-suche input::placeholder{color:#6d8296;opacity:1}
+header.ss-kopf .ss-suche input::-webkit-search-cancel-button{-webkit-appearance:none}
+header.ss-kopf .ss-weg{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+header.ss-kopf button.ss-suche-auf{display:none;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid #d8e5ef;border-radius:10px;background:#fff;color:#112a44;cursor:pointer;padding:0}
+header.ss-kopf button.ss-suche-auf svg{width:20px;height:20px}
+header.ss-kopf .ss-suche-liste{position:absolute;top:calc(100% + 6px);right:0;width:min(420px,calc(100vw - 20px));max-height:min(440px,calc(100dvh - 80px));overflow:auto;padding:6px;background:#fff;border:1px solid #d2e2eb;border-radius:12px;box-shadow:0 14px 34px #17456d2e;z-index:1001}
+header.ss-kopf .ss-suche-liste[hidden]{display:none}
+header.ss-kopf .ss-treffer{display:flex;align-items:stretch;gap:6px;border-radius:8px}
+header.ss-kopf .ss-treffer[aria-selected="true"],header.ss-kopf .ss-treffer:hover{background:#eef5fc}
+header.ss-kopf .ss-treffer>a:first-child{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px;padding:8px 10px;min-height:44px;justify-content:center;color:#112a44;text-decoration:none}
+header.ss-kopf .ss-treffer b{font-weight:600;font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+header.ss-kopf .ss-treffer small{font-size:12px;color:#5b7287}
+header.ss-kopf a.ss-globus{flex:none;align-self:center;display:flex;align-items:center;min-height:34px;padding:0 10px;margin-right:4px;border:1px solid #cfe0ec;border-radius:8px;color:#0b5cab;text-decoration:none;font-size:12px;font-weight:600;background:#fff}
+header.ss-kopf a.ss-globus:hover{border-color:#0b5cab}
+header.ss-kopf .ss-suche-info{margin:6px 10px 4px;font-size:12px;line-height:1.4;color:#5b7287}
+header.ss-kopf .ss-suche-info a{color:#0b5cab}
+@media (max-width:1100px) and (min-width:901px){header.ss-kopf form.ss-suche{flex-basis:200px;min-width:150px}header.ss-kopf nav.ss-menue a{padding:0 8px}}
+@media (max-width:900px){
+ header.ss-kopf form.ss-suche{position:static;flex:none;min-width:0;order:2;margin-left:0}
+ header.ss-kopf button.ss-suche-auf{display:flex}
+ header.ss-kopf .ss-suche-feld{display:none;position:absolute;top:56px;left:0;right:0;width:auto;height:54px;border-radius:0;border:0;border-bottom:1px solid #d8e5ef;background:#fff;padding:0 14px;box-shadow:0 10px 20px #17456d1f}
+ header.ss-kopf form.ss-suche[data-offen] .ss-suche-feld{display:flex}
+ header.ss-kopf form.ss-suche[data-offen] button.ss-suche-auf{background:#eef5fc;border-color:#9fc4e3}
+ header.ss-kopf .ss-suche input{font-size:16px}
+ header.ss-kopf .ss-suche-liste{top:116px;left:8px;right:8px;width:auto;max-height:calc(100dvh - 130px)}
+}
+/* Schmale Handys: Wortmarke ausblenden, damit Lupe und Menüknopf Platz haben (Logo bleibt) */
+@media (max-width:470px){body[data-ss-globus] header.ss-kopf .ss-marke span{display:none}}
+@media (max-width:430px){header.ss-kopf .ss-marke span{display:none}}

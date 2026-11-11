@@ -2,6 +2,7 @@
 // Reine Anzeige von /assets/risk-signals-view.json (Projektion von analysis/risk-signals.json); hier wird keine Regel ausgewertet.
 // APPROVED (belegt) und CANDIDATE (vorläufig) bleiben getrennt. UNKNOWN wird nie als "kein Risiko" dargestellt.
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+import {quelleHtml} from './quellen-anzeige.mjs';
 const safe=url=>/^https?:\/\//.test(url||'')?esc(url):'#';
 export const BASES=['APPROVED','CANDIDATE'];
 export const BASIS_LABEL={APPROVED:'Belegt',CANDIDATE:'Vorläufig'};
@@ -43,7 +44,7 @@ export function validateView(v){
 
 function relLine(v,rid){
  const r=v.relationships[rid]||{review_status:'UNKNOWN'};
- const src=(r.sources||[]).map(s=>`<a href="${safe(s.source_url)}" target="_blank" rel="noopener noreferrer">${esc(s.publisher||s.source_id)}</a> (${esc(s.source_quality||'Qualität UNKNOWN')}, abgerufen ${esc(s.accessed_at||'UNKNOWN')})`).join(' · ')||'Quelle UNKNOWN';
+ const src=(r.sources||[]).map(s=>`${quelleHtml(s.source_id,s.source_url)} (${esc(s.source_quality||'Qualität UNKNOWN')}, abgerufen ${esc(s.accessed_at||'UNKNOWN')})`).join(' · ')||'Quelle UNKNOWN';
  const ev=(r.evidence||[]).map(e=>`${esc(e.verification_status||'UNKNOWN')} · ${e.independent_audit_status==='NOT_AUDITED'?'nicht unabhängig auditiert':esc(e.independent_audit_status||'Audit UNKNOWN')}`).join(' · ')||'Evidenz UNKNOWN';
  return `<li data-relationship="${esc(rid)}"><strong>${r.rank?'Queue-Rang '+esc(r.rank):'ohne Queue-Rang'}</strong> · ${esc(r.from||'?')} → ${esc(r.to||'?')} (${esc(r.relationship_type||'Typ UNKNOWN')}, ${esc(r.material_form||'Material UNKNOWN')})<br><small>Prüfstand ${esc(r.review_status)} · ${esc(r.fact_status||'UNKNOWN')} · Zeit ${esc(r.temporal_status||'UNKNOWN')} · Evidenz ${ev}<br>Quelle: ${src}</small></li>`;
 }

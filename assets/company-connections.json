@@ -15,8 +15,8 @@
    "version": "1"
   },
   "inputs_sha256": {
-   "analysis/copper-review-queue.json": "c240b5d17989caa2a395dca253ef5db4f1d1f3701fc8370cb47360ea8e0eef65",
-   "analysis/approval-ledger.jsonl": "477b6fc9e170a0458cba6b2b227b4588ed3bcc6dd8f552c83163f2e4d45badcf",
+   "analysis/copper-review-queue.json": "89d083e61f6d2d9615f91b55cf28b52eef45c77d846b1c3503e4d00a89a2ec4e",
+   "analysis/approval-ledger.jsonl": "f797611a62385d7abb9a822a24922c49701df68fe39f06de4ff1e213633c5ea6",
    "analysis/transactions-v30.json": "c5fab0e5b010841dca90275ca61d9b6224a512dd942382a5f1c938fb0af45d55",
    "ma-intelligence/data/intelligence/verified/atlas-connections.json": "0f0199a27dc73578afeac1ae7d0423a5c9ce949699012043a93260e3de71da9d",
    "analysis/research/company-connections-v1/research.json": "e0a65ef5ce5a2eadad6774f9cdca05a3e31171df381e8362e8cc47c3a8b40adb",
