@@ -26,6 +26,12 @@
   },
   "quellen": [
    {
+    "abgerufen": "2026-11-12",
+    "id": "ezb-referenzkurs-usd",
+    "status": "GELADEN",
+    "titel": "EZB-Referenzkurs US-Dollar je Euro (täglich, über Eurostat ert_bil_eur_d)"
+   },
+   {
     "abgerufen": "2026-11-11",
     "id": "gdelt-engpass-meldungen",
     "status": "TEILWEISE",

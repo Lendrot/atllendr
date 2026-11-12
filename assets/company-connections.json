@@ -3,7 +3,7 @@
  "meta": {
   "asOf": "2026-11-02",
   "scope": "168 belegte Verbindungen zwischen 152 Unternehmen aus drei Atlas-Datensätzen und neu belegten Kandidaten. Nur FACT mit Quelle; „neu belegt“ sind gelesene Kandidaten außerhalb des Ledgers. „Über Anlage“ heißt: beide Unternehmen sind über eine belegte Beziehung mit derselben Anlage verbunden; daraus folgt kein Vertrag, keine Menge und keine Kontrolle. Gleichnamige Einträge (z. B. Konzern und Gesellschaft) werden nicht zusammengeführt. Keine vollständige Liste: 20300 Einträge anderer Datensätze ohne Beleg oder ohne Unternehmen auf beiden Seiten sind nicht aufgenommen.",
-  "fact_status": "Projektion vorhandener FACT-Beziehungen plus neu belegte Kandidaten (Herleitung NEU_BELEGT); keine neue Freigabe",
+  "fact_status": "Projektion vorhandener FACT-Beziehungen plus neu belegte Kandidaten (Herleitung NEU_BELEGT); Freigabe neu belegter Verbindungen nur über analysis/research/company-connections-freigaben.jsonl mit Prüfbericht",
   "usage_restrictions": [
    "NEU_BELEGT_IS_CANDIDATE_NOT_LEDGER",
    "UEBER_ANLAGE_IS_NOT_CONTRACT",
@@ -19,8 +19,9 @@
    "analysis/approval-ledger.jsonl": "f797611a62385d7abb9a822a24922c49701df68fe39f06de4ff1e213633c5ea6",
    "analysis/transactions-v30.json": "c5fab0e5b010841dca90275ca61d9b6224a512dd942382a5f1c938fb0af45d55",
    "ma-intelligence/data/intelligence/verified/atlas-connections.json": "0f0199a27dc73578afeac1ae7d0423a5c9ce949699012043a93260e3de71da9d",
+   "analysis/research/company-connections-freigaben.jsonl": "eb8ca92ffaada91e25b27dad8274006fb235cc81ccab20050e400accad84f9cf",
    "analysis/research/company-connections-v1/research.json": "e0a65ef5ce5a2eadad6774f9cdca05a3e31171df381e8362e8cc47c3a8b40adb",
-   "analysis/research/company-connections-v2/research.json": "51afb35cf7f272c4e50d34b3b9cbde9839d443a459b2c1da33db7d4c869a4990",
+   "analysis/research/company-connections-v2/research.json": "7e25e855444a0e57a06410aebae4e97ac9011934f6599e659d27e4f22945cbad",
    "analysis/research/company-connections-v3/research.json": "0326d31cf0a37e7332e8e36020e1fdbdaa2c5c15f59034d45e8a44be0d01be88"
   },
   "excluded_inputs": {
@@ -64,8 +65,8 @@
    "Übernahmen": 66
   },
   "nach_freigabe": {
-   "APPROVED": 61,
-   "KANDIDAT": 48,
+   "APPROVED": 105,
+   "KANDIDAT": 4,
    "NICHT_GEPRUEFT": 59
   }
  },
@@ -1946,14 +1947,14 @@
    "art": "Gemeinschaftsunternehmen mit",
    "art_code": "JOINT_VENTURE",
    "menge": null,
-   "ereignis": "SIGNED",
+   "ereignis": "REPORTED",
    "nach_id": "neu:Via Verkehr Holding GmbH & Co. KG (SNCF-Gruppe)",
    "nach": "Via Verkehr Holding GmbH & Co. KG (SNCF-Gruppe)",
    "ueber": null,
    "anteil_pct": null,
    "stand": "2001-12-07",
    "beleg": "FACT",
-   "freigabe": "KANDIDAT",
+   "freigabe": "APPROVED",
    "quelle_url": "https://ec.europa.eu/competition/mergers/cases/decisions/m2646_de.pdf",
    "quelle_titel": "Sache Nr. COMP/M.2646 - Rhenus / Via Verkehr Holding (SNCF) / Rhenus-Keolis, Entscheidung nach Art. 6 Abs. 1 b",
    "belegstelle": [
@@ -1970,9 +1971,16 @@
    "input_record_ids": [
     "analysis/research/company-connections-v2/research.json#cc2:rel:012"
    ],
+   "freigabe_beleg": {
+    "herausgeber": "BEHOERDE",
+    "herausgeber_text": "Behörde oder amtliches Register (EU-Kommission, USGS, GLEIF)",
+    "geprueft_am": "2026-11-11",
+    "pruefer": "Claude (Selbstprüfung, Quelle gelesen)",
+    "bericht": "analysis/research/company-connections-freigabe-2026-11-11/pruefbericht-2026-11-11.pdf"
+   },
    "ueber_text": "direkte Verbindung",
-   "herleitung_text": "neu belegt (Kandidat)",
-   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben"
+   "herleitung_text": "neu belegt",
+   "freigabe_text": "freigegeben"
   },
   {
    "id": "cc-n-cc2-rel-020",
@@ -1990,7 +1998,7 @@
    "anteil_pct": null,
    "stand": "2012-06-29",
    "beleg": "FACT",
-   "freigabe": "KANDIDAT",
+   "freigabe": "APPROVED",
    "quelle_url": "https://ec.europa.eu/competition/mergers/cases/decisions/m6285_673_2.pdf",
    "quelle_titel": "Case No COMP/M.6285 - SARIA / Danish Crown / Daka JV, Commission decision pursuant to Article 6(1)(b)",
    "belegstelle": [
@@ -2007,9 +2015,16 @@
    "input_record_ids": [
     "analysis/research/company-connections-v2/research.json#cc2:rel:020"
    ],
+   "freigabe_beleg": {
+    "herausgeber": "BEHOERDE",
+    "herausgeber_text": "Behörde oder amtliches Register (EU-Kommission, USGS, GLEIF)",
+    "geprueft_am": "2026-11-11",
+    "pruefer": "Claude (Selbstprüfung, Quelle gelesen)",
+    "bericht": "analysis/research/company-connections-freigabe-2026-11-11/pruefbericht-2026-11-11.pdf"
+   },
    "ueber_text": "direkte Verbindung",
-   "herleitung_text": "neu belegt (Kandidat)",
-   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben"
+   "herleitung_text": "neu belegt",
+   "freigabe_text": "freigegeben"
   },
   {
    "id": "cc-at-loan_oeeb_gravita_2023",
@@ -2079,7 +2094,7 @@
    "anteil_pct": null,
    "stand": "2024-07-02",
    "beleg": "FACT",
-   "freigabe": "KANDIDAT",
+   "freigabe": "APPROVED",
    "quelle_url": "https://www.nsenergybusiness.com/news/acwa-power-secures-financing-for-tashkent-riverside-project-in-uzbekistan/",
    "quelle_titel": "ACWA Power secures financing for Tashkent Riverside project in Uzbekistan",
    "belegstelle": [
@@ -2096,9 +2111,16 @@
    "input_record_ids": [
     "analysis/research/company-connections-v2/research.json#cc2:rel:037"
    ],
+   "freigabe_beleg": {
+    "herausgeber": "DRITTER",
+    "herausgeber_text": "Quelle eines unabhängigen Dritten (Presse, Fachpresse, Vertragspartner einer anderen Seite)",
+    "geprueft_am": "2026-11-11",
+    "pruefer": "Claude (Selbstprüfung, Quelle gelesen)",
+    "bericht": "analysis/research/company-connections-freigabe-2026-11-11/pruefbericht-2026-11-11.pdf"
+   },
    "ueber_text": "direkte Verbindung",
-   "herleitung_text": "neu belegt (Kandidat)",
-   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben"
+   "herleitung_text": "neu belegt",
+   "freigabe_text": "freigegeben"
   },
   {
    "id": "cc-3ef23e52-5e4",
@@ -2252,7 +2274,7 @@
    "anteil_pct": null,
    "stand": "2026-09-23",
    "beleg": "FACT",
-   "freigabe": "KANDIDAT",
+   "freigabe": "APPROVED",
    "quelle_url": "https://www.aurubis.com/en/media/press-releases/press-releases-2026/prysmian-and-aurubis-deepen-strategic-partnership-with-landmark-long-term-copper-agreement",
    "quelle_titel": "Prysmian and Aurubis deepen strategic partnership with landmark long-term copper agreement",
    "belegstelle": [
@@ -2268,9 +2290,16 @@
    "input_record_ids": [
     "analysis/research/company-connections-v3/research.json#cc3:rel:001"
    ],
+   "freigabe_beleg": {
+    "herausgeber": "BETEILIGTER",
+    "herausgeber_text": "Quelle von einem Beteiligten (Unternehmen oder Konzern einer Seite)",
+    "geprueft_am": "2026-11-11",
+    "pruefer": "Claude (Selbstprüfung, Quelle gelesen)",
+    "bericht": "analysis/research/company-connections-freigabe-2026-11-11/pruefbericht-2026-11-11.pdf"
+   },
    "ueber_text": "direkte Verbindung",
-   "herleitung_text": "neu belegt (Kandidat)",
-   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben"
+   "herleitung_text": "neu belegt",
+   "freigabe_text": "freigegeben"
   },
   {
    "id": "cc-n-cc2-rel-008",
@@ -2288,7 +2317,7 @@
    "anteil_pct": 50,
    "stand": "2025-01-15",
    "beleg": "FACT",
-   "freigabe": "KANDIDAT",
+   "freigabe": "APPROVED",
    "quelle_url": "https://www.lundinmining.com/news/lundin-mining-completes-joint-acquisition-of-filo-with-bhp-and-50-sale-of-josemaria-to-form-vicuxf1a-corp",
    "quelle_titel": "Lundin Mining Completes Joint Acquisition of Filo with BHP and 50% Sale of Josemaria to Form Vicuña Corp.",
    "belegstelle": [
@@ -2305,9 +2334,16 @@
    "input_record_ids": [
     "analysis/research/company-connections-v2/research.json#cc2:rel:008"
    ],
+   "freigabe_beleg": {
+    "herausgeber": "BETEILIGTER",
+    "herausgeber_text": "Quelle von einem Beteiligten (Unternehmen oder Konzern einer Seite)",
+    "geprueft_am": "2026-11-11",
+    "pruefer": "Claude (Selbstprüfung, Quelle gelesen)",
+    "bericht": "analysis/research/company-connections-freigabe-2026-11-11/pruefbericht-2026-11-11.pdf"
+   },
    "ueber_text": "direkte Verbindung",
-   "herleitung_text": "neu belegt (Kandidat)",
-   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben"
+   "herleitung_text": "neu belegt",
+   "freigabe_text": "freigegeben"
   },
   {
    "id": "cc-n-cc2-rel-021",
@@ -2325,7 +2361,7 @@
    "anteil_pct": null,
    "stand": "2025-12-31",
    "beleg": "FACT",
-   "freigabe": "KANDIDAT",
+   "freigabe": "APPROVED",
    "quelle_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0325/2026032500043.pdf",
    "quelle_titel": "China Nonferrous Mining Corporation Limited – Announcement of Annual Results for the Year Ended 31 December 2025",
    "belegstelle": [
@@ -2341,9 +2377,16 @@
    "input_record_ids": [
     "analysis/research/company-connections-v2/research.json#cc2:rel:021"
    ],
+   "freigabe_beleg": {
+    "herausgeber": "BETEILIGTER",
+    "herausgeber_text": "Quelle von einem Beteiligten (Unternehmen oder Konzern einer Seite)",
+    "geprueft_am": "2026-11-11",
+    "pruefer": "Claude (Selbstprüfung, Quelle gelesen)",
+    "bericht": "analysis/research/company-connections-freigabe-2026-11-11/pruefbericht-2026-11-11.pdf"
+   },
    "ueber_text": "direkte Verbindung",
-   "herleitung_text": "neu belegt (Kandidat)",
-   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben"
+   "herleitung_text": "neu belegt",
+   "freigabe_text": "freigegeben"
   },
   {
    "id": "cc-n-cc1-rel-003",
@@ -2361,7 +2404,7 @@
    "anteil_pct": 1.0,
    "stand": "2026-03-30",
    "beleg": "FACT",
-   "freigabe": "KANDIDAT",
+   "freigabe": "APPROVED",
    "quelle_url": "https://www.ivanhoemines.com/wp-content/uploads/20260331-IVN_AIF_31-Dec-2025-ABF2.pdf",
    "quelle_titel": "Ivanhoe Mines Ltd. Annual Information Form for the year ended December 31, 2025",
    "belegstelle": [
@@ -2383,9 +2426,16 @@
    "input_record_ids": [
     "analysis/research/company-connections-v1/research.json#cc1:rel:003"
    ],
+   "freigabe_beleg": {
+    "herausgeber": "BETEILIGTER",
+    "herausgeber_text": "Quelle von einem Beteiligten (Unternehmen oder Konzern einer Seite)",
+    "geprueft_am": "2026-11-11",
+    "pruefer": "Claude (Selbstprüfung, Quelle gelesen)",
+    "bericht": "analysis/research/company-connections-freigabe-2026-11-11/pruefbericht-2026-11-11.pdf"
+   },
    "ueber_text": "direkte Verbindung",
-   "herleitung_text": "neu belegt (Kandidat)",
-   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben"
+   "herleitung_text": "neu belegt",
+   "freigabe_text": "freigegeben"
   },
   {
    "id": "cc-n-cc2-rel-009",
@@ -2403,7 +2453,7 @@
    "anteil_pct": 77,
    "stand": "2024-07-11",
    "beleg": "FACT",
-   "freigabe": "KANDIDAT",
+   "freigabe": "APPROVED",
    "quelle_url": "https://www.teck.com/news/news-releases/2024/teck-reports-unaudited-third-quarter-results-for-2024",
    "quelle_titel": "Teck Reports Unaudited Third Quarter Results for 2024",
    "belegstelle": [
@@ -2420,9 +2470,16 @@
    "input_record_ids": [
     "analysis/research/company-connections-v2/research.json#cc2:rel:009"
    ],
+   "freigabe_beleg": {
+    "herausgeber": "BETEILIGTER",
+    "herausgeber_text": "Quelle von einem Beteiligten (Unternehmen oder Konzern einer Seite)",
+    "geprueft_am": "2026-11-11",
+    "pruefer": "Claude (Selbstprüfung, Quelle gelesen)",
+    "bericht": "analysis/research/company-connections-freigabe-2026-11-11/pruefbericht-2026-11-11.pdf"
+   },
    "ueber_text": "direkte Verbindung",
-   "herleitung_text": "neu belegt (Kandidat)",
-   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben"
+   "herleitung_text": "neu belegt",
+   "freigabe_text": "freigegeben"
   },
   {
    "id": "cc-n-cc2-rel-014",
@@ -2440,7 +2497,7 @@
    "anteil_pct": null,
    "stand": "2020-12-01",
    "beleg": "FACT",
-   "freigabe": "KANDIDAT",
+   "freigabe": "APPROVED",
    "quelle_url": "https://www.ivanhoemines.com/news-stories/news-release/kamoa-kakula-copper-project-secures-us420-million-in-project-level-credit-facilities-including-a-eur-176-million-us211-million-covered-equipment-financing-facility-with-a-us9-million-down-paymen/",
    "quelle_titel": "Kamoa-Kakula Copper Project secures US$420 million in project-level credit facilities ...",
    "belegstelle": [
@@ -2455,9 +2512,16 @@
    "input_record_ids": [
     "analysis/research/company-connections-v2/research.json#cc2:rel:014"
    ],
+   "freigabe_beleg": {
+    "herausgeber": "BETEILIGTER",
+    "herausgeber_text": "Quelle von einem Beteiligten (Unternehmen oder Konzern einer Seite)",
+    "geprueft_am": "2026-11-11",
+    "pruefer": "Claude (Selbstprüfung, Quelle gelesen)",
+    "bericht": "analysis/research/company-connections-freigabe-2026-11-11/pruefbericht-2026-11-11.pdf"
+   },
    "ueber_text": "direkte Verbindung",
-   "herleitung_text": "neu belegt (Kandidat)",
-   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben"
+   "herleitung_text": "neu belegt",
+   "freigabe_text": "freigegeben"
   },
   {
    "id": "cc-n-cc1-rel-002",
@@ -2475,7 +2539,7 @@
    "anteil_pct": 49.5,
    "stand": "2026-03-30",
    "beleg": "FACT",
-   "freigabe": "KANDIDAT",
+   "freigabe": "APPROVED",
    "quelle_url": "https://www.ivanhoemines.com/wp-content/uploads/20260331-IVN_AIF_31-Dec-2025-ABF2.pdf",
    "quelle_titel": "Ivanhoe Mines Ltd. Annual Information Form for the year ended December 31, 2025",
    "belegstelle": [
@@ -2498,9 +2562,16 @@
    "input_record_ids": [
     "analysis/research/company-connections-v1/research.json#cc1:rel:002"
    ],
+   "freigabe_beleg": {
+    "herausgeber": "BETEILIGTER",
+    "herausgeber_text": "Quelle von einem Beteiligten (Unternehmen oder Konzern einer Seite)",
+    "geprueft_am": "2026-11-11",
+    "pruefer": "Claude (Selbstprüfung, Quelle gelesen)",
+    "bericht": "analysis/research/company-connections-freigabe-2026-11-11/pruefbericht-2026-11-11.pdf"
+   },
    "ueber_text": "direkte Verbindung",
-   "herleitung_text": "neu belegt (Kandidat)",
-   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben"
+   "herleitung_text": "neu belegt",
+   "freigabe_text": "freigegeben"
   },
   {
    "id": "cc-n-cc2-rel-013",
@@ -2518,7 +2589,7 @@
    "anteil_pct": 9.8,
    "stand": "2019-10-08",
    "beleg": "FACT",
-   "freigabe": "KANDIDAT",
+   "freigabe": "APPROVED",
    "quelle_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2019/1008/ltn20191008779.pdf",
    "quelle_titel": "Announcement in relation to Increase in Shareholding in Ivanhoe Mines Ltd. of Canada",
    "belegstelle": [
@@ -2535,9 +2606,16 @@
    "input_record_ids": [
     "analysis/research/company-connections-v2/research.json#cc2:rel:013"
    ],
+   "freigabe_beleg": {
+    "herausgeber": "BETEILIGTER",
+    "herausgeber_text": "Quelle von einem Beteiligten (Unternehmen oder Konzern einer Seite)",
+    "geprueft_am": "2026-11-11",
+    "pruefer": "Claude (Selbstprüfung, Quelle gelesen)",
+    "bericht": "analysis/research/company-connections-freigabe-2026-11-11/pruefbericht-2026-11-11.pdf"
+   },
    "ueber_text": "direkte Verbindung",
-   "herleitung_text": "neu belegt (Kandidat)",
-   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben"
+   "herleitung_text": "neu belegt",
+   "freigabe_text": "freigegeben"
   },
   {
    "id": "cc-n-cc1-rel-004",
@@ -2555,7 +2633,7 @@
    "anteil_pct": 20.0,
    "stand": "2026-03-30",
    "beleg": "FACT",
-   "freigabe": "KANDIDAT",
+   "freigabe": "APPROVED",
    "quelle_url": "https://www.ivanhoemines.com/wp-content/uploads/20260331-IVN_AIF_31-Dec-2025-ABF2.pdf",
    "quelle_titel": "Ivanhoe Mines Ltd. Annual Information Form for the year ended December 31, 2025",
    "belegstelle": [
@@ -2570,9 +2648,16 @@
    "input_record_ids": [
     "analysis/research/company-connections-v1/research.json#cc1:rel:004"
    ],
+   "freigabe_beleg": {
+    "herausgeber": "BETEILIGTER",
+    "herausgeber_text": "Quelle von einem Beteiligten (Unternehmen oder Konzern einer Seite)",
+    "geprueft_am": "2026-11-11",
+    "pruefer": "Claude (Selbstprüfung, Quelle gelesen)",
+    "bericht": "analysis/research/company-connections-freigabe-2026-11-11/pruefbericht-2026-11-11.pdf"
+   },
    "ueber_text": "direkte Verbindung",
-   "herleitung_text": "neu belegt (Kandidat)",
-   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben"
+   "herleitung_text": "neu belegt",
+   "freigabe_text": "freigegeben"
   },
   {
    "id": "cc-n-cc2-rel-022",
@@ -2590,7 +2675,7 @@
    "anteil_pct": null,
    "stand": "2024-01-16",
    "beleg": "FACT",
-   "freigabe": "KANDIDAT",
+   "freigabe": "APPROVED",
    "quelle_url": "https://www.ivanhoemines.com/?p=4503",
    "quelle_titel": "Ivanhoe Mines and Gécamines Sign New Joint Venture to Restart the Ultra-High-Grade Kipushi Mine, a Century Since First Opening",
    "belegstelle": [
@@ -2607,9 +2692,16 @@
    "input_record_ids": [
     "analysis/research/company-connections-v2/research.json#cc2:rel:022"
    ],
+   "freigabe_beleg": {
+    "herausgeber": "BETEILIGTER",
+    "herausgeber_text": "Quelle von einem Beteiligten (Unternehmen oder Konzern einer Seite)",
+    "geprueft_am": "2026-11-11",
+    "pruefer": "Claude (Selbstprüfung, Quelle gelesen)",
+    "bericht": "analysis/research/company-connections-freigabe-2026-11-11/pruefbericht-2026-11-11.pdf"
+   },
    "ueber_text": "direkte Verbindung",
-   "herleitung_text": "neu belegt (Kandidat)",
-   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben"
+   "herleitung_text": "neu belegt",
+   "freigabe_text": "freigegeben"
   },
   {
    "id": "cc-n-cc2-rel-038",
@@ -2627,7 +2719,7 @@
    "anteil_pct": null,
    "stand": "2015-12-08",
    "beleg": "FACT",
-   "freigabe": "KANDIDAT",
+   "freigabe": "APPROVED",
    "quelle_url": "https://www.ivanhoemines.com/news-stories/news-release/ivanhoe-mines-and-zijin-mining-group-complete-deal-for-zijins-us412-million-investment-in-the-kamoa-copper-project/",
    "quelle_titel": "Ivanhoe Mines and Zijin Mining Group complete deal for Zijin’s US$412 million investment in the Kamoa Copper Project",
    "belegstelle": [
@@ -2643,9 +2735,16 @@
    "input_record_ids": [
     "analysis/research/company-connections-v2/research.json#cc2:rel:038"
    ],
+   "freigabe_beleg": {
+    "herausgeber": "BETEILIGTER",
+    "herausgeber_text": "Quelle von einem Beteiligten (Unternehmen oder Konzern einer Seite)",
+    "geprueft_am": "2026-11-11",
+    "pruefer": "Claude (Selbstprüfung, Quelle gelesen)",
+    "bericht": "analysis/research/company-connections-freigabe-2026-11-11/pruefbericht-2026-11-11.pdf"
+   },
    "ueber_text": "direkte Verbindung",
-   "herleitung_text": "neu belegt (Kandidat)",
-   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben"
+   "herleitung_text": "neu belegt",
+   "freigabe_text": "freigegeben"
   },
   {
    "id": "cc-n-cc1-rel-001",
@@ -2663,7 +2762,7 @@
    "anteil_pct": 49.5,
    "stand": "2026-03-30",
    "beleg": "FACT",
-   "freigabe": "KANDIDAT",
+   "freigabe": "APPROVED",
    "quelle_url": "https://www.ivanhoemines.com/wp-content/uploads/20260331-IVN_AIF_31-Dec-2025-ABF2.pdf",
    "quelle_titel": "Ivanhoe Mines Ltd. Annual Information Form for the year ended December 31, 2025",
    "belegstelle": [
@@ -2692,9 +2791,16 @@
    "input_record_ids": [
     "analysis/research/company-connections-v1/research.json#cc1:rel:001"
    ],
+   "freigabe_beleg": {
+    "herausgeber": "BETEILIGTER",
+    "herausgeber_text": "Quelle von einem Beteiligten (Unternehmen oder Konzern einer Seite)",
+    "geprueft_am": "2026-11-11",
+    "pruefer": "Claude (Selbstprüfung, Quelle gelesen)",
+    "bericht": "analysis/research/company-connections-freigabe-2026-11-11/pruefbericht-2026-11-11.pdf"
+   },
    "ueber_text": "direkte Verbindung",
-   "herleitung_text": "neu belegt (Kandidat)",
-   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben"
+   "herleitung_text": "neu belegt",
+   "freigabe_text": "freigegeben"
   },
   {
    "id": "cc-n-cc2-rel-003",
@@ -2702,17 +2808,17 @@
    "bereich": "Kupfer",
    "von_id": "entity:de79b038-f961-444a-b997-7e5405f64aaf",
    "von": "Jiangxi Copper Company Limited",
-   "art": "hat übernommen (100 %)",
+   "art": "hat übernommen",
    "art_code": "ACQUIRED",
    "menge": null,
    "ereignis": "COMPLETED",
    "nach_id": "neu:SolGold plc",
    "nach": "SolGold plc",
    "ueber": null,
-   "anteil_pct": 100,
+   "anteil_pct": null,
    "stand": "2026-03-05",
    "beleg": "FACT",
-   "freigabe": "KANDIDAT",
+   "freigabe": "APPROVED",
    "quelle_url": "https://www.investegate.co.uk/announcement/rns/solgold--solg/de-listing-and-cancellation-of-trading-/9459080",
    "quelle_titel": "SolGold plc – De-Listing and Cancellation of Trading (RNS)",
    "belegstelle": [
@@ -2729,9 +2835,16 @@
    "input_record_ids": [
     "analysis/research/company-connections-v2/research.json#cc2:rel:003"
    ],
+   "freigabe_beleg": {
+    "herausgeber": "BETEILIGTER",
+    "herausgeber_text": "Quelle von einem Beteiligten (Unternehmen oder Konzern einer Seite)",
+    "geprueft_am": "2026-11-11",
+    "pruefer": "Claude (Selbstprüfung, Quelle gelesen)",
+    "bericht": "analysis/research/company-connections-freigabe-2026-11-11/pruefbericht-2026-11-11.pdf"
+   },
    "ueber_text": "direkte Verbindung",
-   "herleitung_text": "neu belegt (Kandidat)",
-   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben"
+   "herleitung_text": "neu belegt",
+   "freigabe_text": "freigegeben"
   },
   {
    "id": "cc-n-cc2-rel-023",
@@ -2749,7 +2862,7 @@
    "anteil_pct": null,
    "stand": "2025-08-08",
    "beleg": "FACT",
-   "freigabe": "KANDIDAT",
+   "freigabe": "APPROVED",
    "quelle_url": "https://www.zambiamonitor.com/bank-of-zambia-expands-gold-purchase-programme-to-small-scale-miners-renews-kansanshi-deal/",
    "quelle_titel": "Bank of Zambia expands gold purchase programme to small-scale miners, renews Kansanshi deal",
    "belegstelle": [
@@ -2766,9 +2879,16 @@
    "input_record_ids": [
     "analysis/research/company-connections-v2/research.json#cc2:rel:023"
    ],
+   "freigabe_beleg": {
+    "herausgeber": "DRITTER",
+    "herausgeber_text": "Quelle eines unabhängigen Dritten (Presse, Fachpresse, Vertragspartner einer anderen Seite)",
+    "geprueft_am": "2026-11-11",
+    "pruefer": "Claude (Selbstprüfung, Quelle gelesen)",
+    "bericht": "analysis/research/company-connections-freigabe-2026-11-11/pruefbericht-2026-11-11.pdf"
+   },
    "ueber_text": "direkte Verbindung",
-   "herleitung_text": "neu belegt (Kandidat)",
-   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben"
+   "herleitung_text": "neu belegt",
+   "freigabe_text": "freigegeben"
   },
   {
    "id": "cc-n-cc2-rel-030",
@@ -2786,7 +2906,7 @@
    "anteil_pct": null,
    "stand": null,
    "beleg": "FACT",
-   "freigabe": "KANDIDAT",
+   "freigabe": "APPROVED",
    "quelle_url": "https://www.fluor.com/projects/minera-escondida-copper-mine-epcm",
    "quelle_titel": "BHP Billiton, Rio Tinto, JECO and JECO 2 Minera Escondida Copper Mine",
    "belegstelle": [
@@ -2801,9 +2921,16 @@
    "input_record_ids": [
     "analysis/research/company-connections-v2/research.json#cc2:rel:030"
    ],
+   "freigabe_beleg": {
+    "herausgeber": "DRITTER",
+    "herausgeber_text": "Quelle eines unabhängigen Dritten (Presse, Fachpresse, Vertragspartner einer anderen Seite)",
+    "geprueft_am": "2026-11-11",
+    "pruefer": "Claude (Selbstprüfung, Quelle gelesen)",
+    "bericht": "analysis/research/company-connections-freigabe-2026-11-11/pruefbericht-2026-11-11.pdf"
+   },
    "ueber_text": "direkte Verbindung",
-   "herleitung_text": "neu belegt (Kandidat)",
-   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben"
+   "herleitung_text": "neu belegt",
+   "freigabe_text": "freigegeben"
   },
   {
    "id": "cc-n-cc2-rel-031",
@@ -2821,7 +2948,7 @@
    "anteil_pct": 30,
    "stand": "2021-02-15",
    "beleg": "FACT",
-   "freigabe": "KANDIDAT",
+   "freigabe": "APPROVED",
    "quelle_url": "https://www.mining-technology.com/news/mitsubishi-materials-mantoverde-copper-mine",
    "quelle_titel": "Mitsubishi Materials acquires 30% stake in Mantoverde copper mine",
    "belegstelle": [
@@ -2837,9 +2964,16 @@
    "input_record_ids": [
     "analysis/research/company-connections-v2/research.json#cc2:rel:031"
    ],
+   "freigabe_beleg": {
+    "herausgeber": "DRITTER",
+    "herausgeber_text": "Quelle eines unabhängigen Dritten (Presse, Fachpresse, Vertragspartner einer anderen Seite)",
+    "geprueft_am": "2026-11-11",
+    "pruefer": "Claude (Selbstprüfung, Quelle gelesen)",
+    "bericht": "analysis/research/company-connections-freigabe-2026-11-11/pruefbericht-2026-11-11.pdf"
+   },
    "ueber_text": "direkte Verbindung",
-   "herleitung_text": "neu belegt (Kandidat)",
-   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben"
+   "herleitung_text": "neu belegt",
+   "freigabe_text": "freigegeben"
   },
   {
    "id": "cc-n-cc2-rel-039",
@@ -2892,7 +3026,7 @@
    "anteil_pct": null,
    "stand": "2023-08-27",
    "beleg": "FACT",
-   "freigabe": "KANDIDAT",
+   "freigabe": "APPROVED",
    "quelle_url": "https://www.first-quantum.com/news/first-quantum-and-rio-tinto-announce-completion-of-the-la-granja-agreement/",
    "quelle_titel": "First Quantum and Rio Tinto Announce Completion of the La Granja Agreement",
    "belegstelle": [
@@ -2909,9 +3043,16 @@
    "input_record_ids": [
     "analysis/research/company-connections-v2/research.json#cc2:rel:010"
    ],
+   "freigabe_beleg": {
+    "herausgeber": "BETEILIGTER",
+    "herausgeber_text": "Quelle von einem Beteiligten (Unternehmen oder Konzern einer Seite)",
+    "geprueft_am": "2026-11-11",
+    "pruefer": "Claude (Selbstprüfung, Quelle gelesen)",
+    "bericht": "analysis/research/company-connections-freigabe-2026-11-11/pruefbericht-2026-11-11.pdf"
+   },
    "ueber_text": "direkte Verbindung",
-   "herleitung_text": "neu belegt (Kandidat)",
-   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben"
+   "herleitung_text": "neu belegt",
+   "freigabe_text": "freigegeben"
   },
   {
    "id": "cc-n-cc2-rel-002",
@@ -2929,7 +3070,7 @@
    "anteil_pct": null,
    "stand": "2025-08-05",
    "beleg": "FACT",
-   "freigabe": "KANDIDAT",
+   "freigabe": "APPROVED",
    "quelle_url": "https://www.first-quantum.com/wp-content/uploads/2026/03/First-Quantum-2025-AR-Final-Web.pdf",
    "quelle_titel": "First Quantum Minerals Ltd. – 2025 Annual Report (inkl. MD&A Q4 2025)",
    "belegstelle": [
@@ -2946,9 +3087,16 @@
    "input_record_ids": [
     "analysis/research/company-connections-v2/research.json#cc2:rel:002"
    ],
+   "freigabe_beleg": {
+    "herausgeber": "BETEILIGTER",
+    "herausgeber_text": "Quelle von einem Beteiligten (Unternehmen oder Konzern einer Seite)",
+    "geprueft_am": "2026-11-11",
+    "pruefer": "Claude (Selbstprüfung, Quelle gelesen)",
+    "bericht": "analysis/research/company-connections-freigabe-2026-11-11/pruefbericht-2026-11-11.pdf"
+   },
    "ueber_text": "direkte Verbindung",
-   "herleitung_text": "neu belegt (Kandidat)",
-   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben"
+   "herleitung_text": "neu belegt",
+   "freigabe_text": "freigegeben"
   },
   {
    "id": "cc-n-cc2-rel-001",
@@ -2966,7 +3114,7 @@
    "anteil_pct": 29.99,
    "stand": "2025-11-10",
    "beleg": "FACT",
-   "freigabe": "KANDIDAT",
+   "freigabe": "APPROVED",
    "quelle_url": "https://www.kitco.com/news/off-the-wire/2025-11-10/salzgitter-says-it-has-no-plans-exit-aurubis",
    "quelle_titel": "Salzgitter says it has no plans to exit Aurubis",
    "belegstelle": [
@@ -2982,9 +3130,16 @@
    "input_record_ids": [
     "analysis/research/company-connections-v2/research.json#cc2:rel:001"
    ],
+   "freigabe_beleg": {
+    "herausgeber": "DRITTER",
+    "herausgeber_text": "Quelle eines unabhängigen Dritten (Presse, Fachpresse, Vertragspartner einer anderen Seite)",
+    "geprueft_am": "2026-11-11",
+    "pruefer": "Claude (Selbstprüfung, Quelle gelesen)",
+    "bericht": "analysis/research/company-connections-freigabe-2026-11-11/pruefbericht-2026-11-11.pdf"
+   },
    "ueber_text": "direkte Verbindung",
-   "herleitung_text": "neu belegt (Kandidat)",
-   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben"
+   "herleitung_text": "neu belegt",
+   "freigabe_text": "freigegeben"
   },
   {
    "id": "cc-n-cc2-rel-029",
@@ -3002,7 +3157,7 @@
    "anteil_pct": null,
    "stand": "2024-11-05",
    "beleg": "FACT",
-   "freigabe": "KANDIDAT",
+   "freigabe": "APPROVED",
    "quelle_url": "https://energiminas.com/2024/11/05/gestion-integral-de-residuos-seche-firma-contrato-con-antamina-e-inicia-labores-en-la-mina-en-febrero-de-2025",
    "quelle_titel": "Gestión integral de residuos: Séché firma contrato con Antamina e inicia labores en la mina en febrero de 2025",
    "belegstelle": [
@@ -3018,9 +3173,16 @@
    "input_record_ids": [
     "analysis/research/company-connections-v2/research.json#cc2:rel:029"
    ],
+   "freigabe_beleg": {
+    "herausgeber": "DRITTER",
+    "herausgeber_text": "Quelle eines unabhängigen Dritten (Presse, Fachpresse, Vertragspartner einer anderen Seite)",
+    "geprueft_am": "2026-11-11",
+    "pruefer": "Claude (Selbstprüfung, Quelle gelesen)",
+    "bericht": "analysis/research/company-connections-freigabe-2026-11-11/pruefbericht-2026-11-11.pdf"
+   },
    "ueber_text": "direkte Verbindung",
-   "herleitung_text": "neu belegt (Kandidat)",
-   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben"
+   "herleitung_text": "neu belegt",
+   "freigabe_text": "freigegeben"
   },
   {
    "id": "cc-n-cc2-rel-024",
@@ -3074,7 +3236,7 @@
    "anteil_pct": null,
    "stand": "2019-07-31",
    "beleg": "FACT",
-   "freigabe": "KANDIDAT",
+   "freigabe": "APPROVED",
    "quelle_url": "https://www.trafigura.com/news-and-insights/press-releases/2019/nyrstar-restructuring-completed-trafigura-group-pte-ltd-becomes-majority-owner-of-nyrstar-s-operating-business/",
    "quelle_titel": "Nyrstar restructuring completed. Trafigura Group Pte Ltd becomes majority owner of Nyrstar’s operating business.",
    "belegstelle": [
@@ -3090,9 +3252,16 @@
    "input_record_ids": [
     "analysis/research/company-connections-v2/research.json#cc2:rel:032"
    ],
+   "freigabe_beleg": {
+    "herausgeber": "BETEILIGTER",
+    "herausgeber_text": "Quelle von einem Beteiligten (Unternehmen oder Konzern einer Seite)",
+    "geprueft_am": "2026-11-11",
+    "pruefer": "Claude (Selbstprüfung, Quelle gelesen)",
+    "bericht": "analysis/research/company-connections-freigabe-2026-11-11/pruefbericht-2026-11-11.pdf"
+   },
    "ueber_text": "direkte Verbindung",
-   "herleitung_text": "neu belegt (Kandidat)",
-   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben"
+   "herleitung_text": "neu belegt",
+   "freigabe_text": "freigegeben"
   },
   {
    "id": "cc-n-cc2-rel-004",
@@ -3110,7 +3279,7 @@
    "anteil_pct": 40,
    "stand": "2025-12",
    "beleg": "FACT",
-   "freigabe": "KANDIDAT",
+   "freigabe": "APPROVED",
    "quelle_url": "https://news.metal.com/newscontent/103926945",
    "quelle_titel": "Yunnan Copper: The Hongnipo copper mine is currently under construction, with annual self-produced copper concentrates expected to contain 69,800 mt of copper",
    "belegstelle": [
@@ -3127,9 +3296,16 @@
    "input_record_ids": [
     "analysis/research/company-connections-v2/research.json#cc2:rel:004"
    ],
+   "freigabe_beleg": {
+    "herausgeber": "DRITTER",
+    "herausgeber_text": "Quelle eines unabhängigen Dritten (Presse, Fachpresse, Vertragspartner einer anderen Seite)",
+    "geprueft_am": "2026-11-11",
+    "pruefer": "Claude (Selbstprüfung, Quelle gelesen)",
+    "bericht": "analysis/research/company-connections-freigabe-2026-11-11/pruefbericht-2026-11-11.pdf"
+   },
    "ueber_text": "direkte Verbindung",
-   "herleitung_text": "neu belegt (Kandidat)",
-   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben"
+   "herleitung_text": "neu belegt",
+   "freigabe_text": "freigegeben"
   },
   {
    "id": "cc-n-cc2-rel-011",
@@ -3147,7 +3323,7 @@
    "anteil_pct": 35,
    "stand": null,
    "beleg": "FACT",
-   "freigabe": "KANDIDAT",
+   "freigabe": "APPROVED",
    "quelle_url": "https://www.zccm-ih.com.zm/investments/energy-assets/maamba-energy-ltd/",
    "quelle_titel": "Maamba Energy Ltd – Investments (Energy Assets)",
    "belegstelle": [
@@ -3163,9 +3339,16 @@
    "input_record_ids": [
     "analysis/research/company-connections-v2/research.json#cc2:rel:011"
    ],
+   "freigabe_beleg": {
+    "herausgeber": "BETEILIGTER",
+    "herausgeber_text": "Quelle von einem Beteiligten (Unternehmen oder Konzern einer Seite)",
+    "geprueft_am": "2026-11-11",
+    "pruefer": "Claude (Selbstprüfung, Quelle gelesen)",
+    "bericht": "analysis/research/company-connections-freigabe-2026-11-11/pruefbericht-2026-11-11.pdf"
+   },
    "ueber_text": "direkte Verbindung",
-   "herleitung_text": "neu belegt (Kandidat)",
-   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben"
+   "herleitung_text": "neu belegt",
+   "freigabe_text": "freigegeben"
   },
   {
    "id": "cc-n-cc2-rel-015",
@@ -3183,7 +3366,7 @@
    "anteil_pct": 100,
    "stand": "2019-03-12",
    "beleg": "FACT",
-   "freigabe": "KANDIDAT",
+   "freigabe": "APPROVED",
    "quelle_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2019/0313/ltn20190313461.pdf",
    "quelle_titel": "Announcement in relation to Progress of Acquisition of Nevsun Resources Ltd. by All Cash Takeover",
    "belegstelle": [
@@ -3201,9 +3384,16 @@
    "input_record_ids": [
     "analysis/research/company-connections-v2/research.json#cc2:rel:015"
    ],
+   "freigabe_beleg": {
+    "herausgeber": "BETEILIGTER",
+    "herausgeber_text": "Quelle von einem Beteiligten (Unternehmen oder Konzern einer Seite)",
+    "geprueft_am": "2026-11-11",
+    "pruefer": "Claude (Selbstprüfung, Quelle gelesen)",
+    "bericht": "analysis/research/company-connections-freigabe-2026-11-11/pruefbericht-2026-11-11.pdf"
+   },
    "ueber_text": "direkte Verbindung",
-   "herleitung_text": "neu belegt (Kandidat)",
-   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben"
+   "herleitung_text": "neu belegt",
+   "freigabe_text": "freigegeben"
   },
   {
    "id": "cc-a-2bd096e884d5",
@@ -5156,7 +5346,7 @@
    "anteil_pct": null,
    "stand": 2019,
    "beleg": "FACT",
-   "freigabe": "KANDIDAT",
+   "freigabe": "APPROVED",
    "quelle_url": "https://pubs.usgs.gov/myb/vol3/2019/myb3-2019-ghana.pdf",
    "quelle_titel": "2019 Minerals Yearbook – Ghana [Advance Release]",
    "belegstelle": [
@@ -5172,9 +5362,16 @@
    "input_record_ids": [
     "analysis/research/company-connections-v2/research.json#cc2:rel:016"
    ],
+   "freigabe_beleg": {
+    "herausgeber": "BEHOERDE",
+    "herausgeber_text": "Behörde oder amtliches Register (EU-Kommission, USGS, GLEIF)",
+    "geprueft_am": "2026-11-11",
+    "pruefer": "Claude (Selbstprüfung, Quelle gelesen)",
+    "bericht": "analysis/research/company-connections-freigabe-2026-11-11/pruefbericht-2026-11-11.pdf"
+   },
    "ueber_text": "direkte Verbindung",
-   "herleitung_text": "neu belegt (Kandidat)",
-   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben"
+   "herleitung_text": "neu belegt",
+   "freigabe_text": "freigegeben"
   },
   {
    "id": "cc-ma-abb-netcontrol-Q52825",
@@ -6440,7 +6637,7 @@
    "anteil_pct": null,
    "stand": "2026-04-16",
    "beleg": "FACT",
-   "freigabe": "KANDIDAT",
+   "freigabe": "APPROVED",
    "quelle_url": "https://www.mining-technology.com/news/abb-gmd-rmd-systems-australian-mine/",
    "quelle_titel": "ABB to provide GMD and RMD systems for Australian mine",
    "belegstelle": [
@@ -6456,9 +6653,16 @@
    "input_record_ids": [
     "analysis/research/company-connections-v2/research.json#cc2:rel:025"
    ],
+   "freigabe_beleg": {
+    "herausgeber": "DRITTER",
+    "herausgeber_text": "Quelle eines unabhängigen Dritten (Presse, Fachpresse, Vertragspartner einer anderen Seite)",
+    "geprueft_am": "2026-11-11",
+    "pruefer": "Claude (Selbstprüfung, Quelle gelesen)",
+    "bericht": "analysis/research/company-connections-freigabe-2026-11-11/pruefbericht-2026-11-11.pdf"
+   },
    "ueber_text": "direkte Verbindung",
-   "herleitung_text": "neu belegt (Kandidat)",
-   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben"
+   "herleitung_text": "neu belegt",
+   "freigabe_text": "freigegeben"
   },
   {
    "id": "cc-n-cc2-rel-040",
@@ -6476,7 +6680,7 @@
    "anteil_pct": null,
    "stand": "2015-04-13",
    "beleg": "FACT",
-   "freigabe": "KANDIDAT",
+   "freigabe": "APPROVED",
    "quelle_url": "https://www.mining-technology.com/news/newsrio-tinto-partners-with-accenture-for-cloud-based-delivery-model-4553408/",
    "quelle_titel": "Rio Tinto partners with Accenture for cloud-based delivery model",
    "belegstelle": [
@@ -6492,9 +6696,16 @@
    "input_record_ids": [
     "analysis/research/company-connections-v2/research.json#cc2:rel:040"
    ],
+   "freigabe_beleg": {
+    "herausgeber": "DRITTER",
+    "herausgeber_text": "Quelle eines unabhängigen Dritten (Presse, Fachpresse, Vertragspartner einer anderen Seite)",
+    "geprueft_am": "2026-11-11",
+    "pruefer": "Claude (Selbstprüfung, Quelle gelesen)",
+    "bericht": "analysis/research/company-connections-freigabe-2026-11-11/pruefbericht-2026-11-11.pdf"
+   },
    "ueber_text": "direkte Verbindung",
-   "herleitung_text": "neu belegt (Kandidat)",
-   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben"
+   "herleitung_text": "neu belegt",
+   "freigabe_text": "freigegeben"
   },
   {
    "id": "cc-n-cc2-rel-005",
@@ -6554,7 +6765,7 @@
    "anteil_pct": null,
    "stand": "2023-05-17",
    "beleg": "FACT",
-   "freigabe": "KANDIDAT",
+   "freigabe": "APPROVED",
    "quelle_url": "https://www.mining-technology.com/news/asm-sell-ndfeb-alloy-noveon/",
    "quelle_titel": "Australian Strategic Materials to sell NdFeB alloy to Noveon",
    "belegstelle": [
@@ -6570,9 +6781,16 @@
    "input_record_ids": [
     "analysis/research/company-connections-v2/research.json#cc2:rel:017"
    ],
+   "freigabe_beleg": {
+    "herausgeber": "DRITTER",
+    "herausgeber_text": "Quelle eines unabhängigen Dritten (Presse, Fachpresse, Vertragspartner einer anderen Seite)",
+    "geprueft_am": "2026-11-11",
+    "pruefer": "Claude (Selbstprüfung, Quelle gelesen)",
+    "bericht": "analysis/research/company-connections-freigabe-2026-11-11/pruefbericht-2026-11-11.pdf"
+   },
    "ueber_text": "direkte Verbindung",
-   "herleitung_text": "neu belegt (Kandidat)",
-   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben"
+   "herleitung_text": "neu belegt",
+   "freigabe_text": "freigegeben"
   },
   {
    "id": "cc-n-cc2-rel-041",
@@ -6590,7 +6808,7 @@
    "anteil_pct": 72.7,
    "stand": "2023-12-22",
    "beleg": "FACT",
-   "freigabe": "KANDIDAT",
+   "freigabe": "APPROVED",
    "quelle_url": "https://www.nsenergybusiness.com/deals/harbour-energy-to-acquire-wintershall-deas-ep-business-for-11-2bn/",
    "quelle_titel": "Harbour Energy to acquire Wintershall Dea’s E&P business for $11.2bn",
    "belegstelle": [
@@ -6605,9 +6823,16 @@
    "input_record_ids": [
     "analysis/research/company-connections-v2/research.json#cc2:rel:041"
    ],
+   "freigabe_beleg": {
+    "herausgeber": "DRITTER",
+    "herausgeber_text": "Quelle eines unabhängigen Dritten (Presse, Fachpresse, Vertragspartner einer anderen Seite)",
+    "geprueft_am": "2026-11-11",
+    "pruefer": "Claude (Selbstprüfung, Quelle gelesen)",
+    "bericht": "analysis/research/company-connections-freigabe-2026-11-11/pruefbericht-2026-11-11.pdf"
+   },
    "ueber_text": "direkte Verbindung",
-   "herleitung_text": "neu belegt (Kandidat)",
-   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben"
+   "herleitung_text": "neu belegt",
+   "freigabe_text": "freigegeben"
   },
   {
    "id": "cc-n-cc2-rel-034",
@@ -6625,7 +6850,7 @@
    "anteil_pct": null,
    "stand": "2021-06-09",
    "beleg": "FACT",
-   "freigabe": "KANDIDAT",
+   "freigabe": "APPROVED",
    "quelle_url": "https://markets.financialcontent.com/stocks/article/bizwire-2021-6-9-carlyle-acquires-1e",
    "quelle_titel": "Carlyle Acquires 1E",
    "belegstelle": [
@@ -6640,9 +6865,16 @@
    "input_record_ids": [
     "analysis/research/company-connections-v2/research.json#cc2:rel:034"
    ],
+   "freigabe_beleg": {
+    "herausgeber": "BETEILIGTER",
+    "herausgeber_text": "Quelle von einem Beteiligten (Unternehmen oder Konzern einer Seite)",
+    "geprueft_am": "2026-11-11",
+    "pruefer": "Claude (Selbstprüfung, Quelle gelesen)",
+    "bericht": "analysis/research/company-connections-freigabe-2026-11-11/pruefbericht-2026-11-11.pdf"
+   },
    "ueber_text": "direkte Verbindung",
-   "herleitung_text": "neu belegt (Kandidat)",
-   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben"
+   "herleitung_text": "neu belegt",
+   "freigabe_text": "freigegeben"
   },
   {
    "id": "cc-n-cc2-rel-035",
@@ -6695,7 +6927,7 @@
    "anteil_pct": null,
    "stand": "2024-10-03",
    "beleg": "FACT",
-   "freigabe": "KANDIDAT",
+   "freigabe": "APPROVED",
    "quelle_url": "https://www.mining-technology.com/news/energy-fuels-base-178m/",
    "quelle_titel": "Energy Fuels finalises purchase of Base Resources for $178m",
    "belegstelle": [
@@ -6710,9 +6942,16 @@
    "input_record_ids": [
     "analysis/research/company-connections-v2/research.json#cc2:rel:042"
    ],
+   "freigabe_beleg": {
+    "herausgeber": "DRITTER",
+    "herausgeber_text": "Quelle eines unabhängigen Dritten (Presse, Fachpresse, Vertragspartner einer anderen Seite)",
+    "geprueft_am": "2026-11-11",
+    "pruefer": "Claude (Selbstprüfung, Quelle gelesen)",
+    "bericht": "analysis/research/company-connections-freigabe-2026-11-11/pruefbericht-2026-11-11.pdf"
+   },
    "ueber_text": "direkte Verbindung",
-   "herleitung_text": "neu belegt (Kandidat)",
-   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben"
+   "herleitung_text": "neu belegt",
+   "freigabe_text": "freigegeben"
   },
   {
    "id": "cc-n-cc2-rel-006",
@@ -6730,7 +6969,7 @@
    "anteil_pct": 100,
    "stand": "2024-09-25",
    "beleg": "FACT",
-   "freigabe": "KANDIDAT",
+   "freigabe": "APPROVED",
    "quelle_url": "https://im-mining.com/2024/09/25/epiroc-renames-mobius-linkoa-following-full-acquisition-of-asi-mining/",
    "quelle_titel": "Epiroc renames Mobius LinkOA following full acquisition of ASI Mining",
    "belegstelle": [
@@ -6745,9 +6984,16 @@
    "input_record_ids": [
     "analysis/research/company-connections-v2/research.json#cc2:rel:006"
    ],
+   "freigabe_beleg": {
+    "herausgeber": "DRITTER",
+    "herausgeber_text": "Quelle eines unabhängigen Dritten (Presse, Fachpresse, Vertragspartner einer anderen Seite)",
+    "geprueft_am": "2026-11-11",
+    "pruefer": "Claude (Selbstprüfung, Quelle gelesen)",
+    "bericht": "analysis/research/company-connections-freigabe-2026-11-11/pruefbericht-2026-11-11.pdf"
+   },
    "ueber_text": "direkte Verbindung",
-   "herleitung_text": "neu belegt (Kandidat)",
-   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben"
+   "herleitung_text": "neu belegt",
+   "freigabe_text": "freigegeben"
   },
   {
    "id": "cc-n-cc2-rel-027",
@@ -6765,7 +7011,7 @@
    "anteil_pct": 100,
    "stand": "2022-08-16",
    "beleg": "FACT",
-   "freigabe": "KANDIDAT",
+   "freigabe": "APPROVED",
    "quelle_url": "https://www.investegate.co.uk/announcement/rns/gsk--gsk/gsk-completes-acquisition-of-affinivax-inc-/7102051",
    "quelle_titel": "GSK completes acquisition of Affinivax, Inc.",
    "belegstelle": [
@@ -6781,9 +7027,16 @@
    "input_record_ids": [
     "analysis/research/company-connections-v2/research.json#cc2:rel:027"
    ],
+   "freigabe_beleg": {
+    "herausgeber": "BETEILIGTER",
+    "herausgeber_text": "Quelle von einem Beteiligten (Unternehmen oder Konzern einer Seite)",
+    "geprueft_am": "2026-11-11",
+    "pruefer": "Claude (Selbstprüfung, Quelle gelesen)",
+    "bericht": "analysis/research/company-connections-freigabe-2026-11-11/pruefbericht-2026-11-11.pdf"
+   },
    "ueber_text": "direkte Verbindung",
-   "herleitung_text": "neu belegt (Kandidat)",
-   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben"
+   "herleitung_text": "neu belegt",
+   "freigabe_text": "freigegeben"
   },
   {
    "id": "cc-n-cc2-rel-026",
@@ -6801,7 +7054,7 @@
    "anteil_pct": null,
    "stand": "2025-10-23",
    "beleg": "FACT",
-   "freigabe": "KANDIDAT",
+   "freigabe": "APPROVED",
    "quelle_url": "https://www.investegate.co.uk/announcement/rns/international-biotech-trust--ibt/novartis-to-acquire-ibt-portfolio-company-avidity/9196434",
    "quelle_titel": "Novartis to acquire IBT portfolio company Avidity",
    "belegstelle": [
@@ -6817,9 +7070,16 @@
    "input_record_ids": [
     "analysis/research/company-connections-v2/research.json#cc2:rel:026"
    ],
+   "freigabe_beleg": {
+    "herausgeber": "BETEILIGTER",
+    "herausgeber_text": "Quelle von einem Beteiligten (Unternehmen oder Konzern einer Seite)",
+    "geprueft_am": "2026-11-11",
+    "pruefer": "Claude (Selbstprüfung, Quelle gelesen)",
+    "bericht": "analysis/research/company-connections-freigabe-2026-11-11/pruefbericht-2026-11-11.pdf"
+   },
    "ueber_text": "direkte Verbindung",
-   "herleitung_text": "neu belegt (Kandidat)",
-   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben"
+   "herleitung_text": "neu belegt",
+   "freigabe_text": "freigegeben"
   },
   {
    "id": "cc-n-cc2-rel-019",
@@ -6837,7 +7097,7 @@
    "anteil_pct": 100,
    "stand": "2017-10-04",
    "beleg": "FACT",
-   "freigabe": "KANDIDAT",
+   "freigabe": "APPROVED",
    "quelle_url": "https://ec.europa.eu/competition/mergers/cases/decisions/m8604_63_3.pdf",
    "quelle_titel": "Case M.8604 – Xella International / Ursa, Commission decision pursuant to Article 6(1)(b)",
    "belegstelle": [
@@ -6853,9 +7113,16 @@
    "input_record_ids": [
     "analysis/research/company-connections-v2/research.json#cc2:rel:019"
    ],
+   "freigabe_beleg": {
+    "herausgeber": "BEHOERDE",
+    "herausgeber_text": "Behörde oder amtliches Register (EU-Kommission, USGS, GLEIF)",
+    "geprueft_am": "2026-11-11",
+    "pruefer": "Claude (Selbstprüfung, Quelle gelesen)",
+    "bericht": "analysis/research/company-connections-freigabe-2026-11-11/pruefbericht-2026-11-11.pdf"
+   },
    "ueber_text": "direkte Verbindung",
-   "herleitung_text": "neu belegt (Kandidat)",
-   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben"
+   "herleitung_text": "neu belegt",
+   "freigabe_text": "freigegeben"
   },
   {
    "id": "cc-n-cc2-rel-033",
@@ -6873,7 +7140,7 @@
    "anteil_pct": null,
    "stand": "2018-10-22",
    "beleg": "FACT",
-   "freigabe": "KANDIDAT",
+   "freigabe": "APPROVED",
    "quelle_url": "https://www.mining-technology.com/news/basf-and-nornickel-sign-deal-meet-battery-materials-demand",
    "quelle_titel": "BASF and Nornickel sign deal to meet battery materials demand",
    "belegstelle": [
@@ -6889,9 +7156,16 @@
    "input_record_ids": [
     "analysis/research/company-connections-v2/research.json#cc2:rel:033"
    ],
+   "freigabe_beleg": {
+    "herausgeber": "DRITTER",
+    "herausgeber_text": "Quelle eines unabhängigen Dritten (Presse, Fachpresse, Vertragspartner einer anderen Seite)",
+    "geprueft_am": "2026-11-11",
+    "pruefer": "Claude (Selbstprüfung, Quelle gelesen)",
+    "bericht": "analysis/research/company-connections-freigabe-2026-11-11/pruefbericht-2026-11-11.pdf"
+   },
    "ueber_text": "direkte Verbindung",
-   "herleitung_text": "neu belegt (Kandidat)",
-   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben"
+   "herleitung_text": "neu belegt",
+   "freigabe_text": "freigegeben"
   },
   {
    "id": "cc-n-cc2-rel-028",
@@ -6909,7 +7183,7 @@
    "anteil_pct": null,
    "stand": "2021-05-24",
    "beleg": "FACT",
-   "freigabe": "KANDIDAT",
+   "freigabe": "APPROVED",
    "quelle_url": "https://www.investegate.co.uk/announcement/rns/vodafone-group--vod/global-partnership-for-ethiopia-licence-award/6482257",
    "quelle_titel": "Global Partnership for Ethiopia licence award",
    "belegstelle": [
@@ -6925,9 +7199,16 @@
    "input_record_ids": [
     "analysis/research/company-connections-v2/research.json#cc2:rel:028"
    ],
+   "freigabe_beleg": {
+    "herausgeber": "BETEILIGTER",
+    "herausgeber_text": "Quelle von einem Beteiligten (Unternehmen oder Konzern einer Seite)",
+    "geprueft_am": "2026-11-11",
+    "pruefer": "Claude (Selbstprüfung, Quelle gelesen)",
+    "bericht": "analysis/research/company-connections-freigabe-2026-11-11/pruefbericht-2026-11-11.pdf"
+   },
    "ueber_text": "direkte Verbindung",
-   "herleitung_text": "neu belegt (Kandidat)",
-   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben"
+   "herleitung_text": "neu belegt",
+   "freigabe_text": "freigegeben"
   },
   {
    "id": "cc-n-cc2-rel-036",
@@ -6945,7 +7226,7 @@
    "anteil_pct": null,
    "stand": "2025-12-15",
    "beleg": "FACT",
-   "freigabe": "KANDIDAT",
+   "freigabe": "APPROVED",
    "quelle_url": "https://markets.financialcontent.com/stocks/article/bizwire-2025-12-15-servicenow-completes-acquisition-of-moveworks",
    "quelle_titel": "ServiceNow completes acquisition of Moveworks",
    "belegstelle": [
@@ -6960,9 +7241,16 @@
    "input_record_ids": [
     "analysis/research/company-connections-v2/research.json#cc2:rel:036"
    ],
+   "freigabe_beleg": {
+    "herausgeber": "BETEILIGTER",
+    "herausgeber_text": "Quelle von einem Beteiligten (Unternehmen oder Konzern einer Seite)",
+    "geprueft_am": "2026-11-11",
+    "pruefer": "Claude (Selbstprüfung, Quelle gelesen)",
+    "bericht": "analysis/research/company-connections-freigabe-2026-11-11/pruefbericht-2026-11-11.pdf"
+   },
    "ueber_text": "direkte Verbindung",
-   "herleitung_text": "neu belegt (Kandidat)",
-   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben"
+   "herleitung_text": "neu belegt",
+   "freigabe_text": "freigegeben"
   },
   {
    "id": "cc-n-cc2-rel-018",
@@ -6980,7 +7268,7 @@
    "anteil_pct": null,
    "stand": "2026-07-29",
    "beleg": "FACT",
-   "freigabe": "KANDIDAT",
+   "freigabe": "APPROVED",
    "quelle_url": "https://api.gleif.org/api/v1/lei-records?filter[lei]=549300DKBYNOI0B1NP44,549300N65GFVKSHGJW59&include=direct-parent",
    "quelle_titel": "GLEIF LEI-Records 549300DKBYNOI0B1NP44 (Montréal Exchange Inc.) und 549300N65GFVKSHGJW59 (TMX Group Limited) inkl. Direct Parent",
    "belegstelle": [
@@ -6997,9 +7285,16 @@
    "input_record_ids": [
     "analysis/research/company-connections-v2/research.json#cc2:rel:018"
    ],
+   "freigabe_beleg": {
+    "herausgeber": "BEHOERDE",
+    "herausgeber_text": "Behörde oder amtliches Register (EU-Kommission, USGS, GLEIF)",
+    "geprueft_am": "2026-11-11",
+    "pruefer": "Claude (Selbstprüfung, Quelle gelesen)",
+    "bericht": "analysis/research/company-connections-freigabe-2026-11-11/pruefbericht-2026-11-11.pdf"
+   },
    "ueber_text": "direkte Verbindung",
-   "herleitung_text": "neu belegt (Kandidat)",
-   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben"
+   "herleitung_text": "neu belegt",
+   "freigabe_text": "freigegeben"
   },
   {
    "id": "cc-n-cc2-rel-043",
@@ -7017,7 +7312,7 @@
    "anteil_pct": null,
    "stand": "2025-07-08",
    "beleg": "FACT",
-   "freigabe": "KANDIDAT",
+   "freigabe": "APPROVED",
    "quelle_url": "https://www.miningmx.com/news/61646-vodacom-business-and-sasol-partner-to-deliver-mpn-solution/",
    "quelle_titel": "Vodacom Business and Sasol partner to deliver MPN Solution",
    "belegstelle": [
@@ -7032,9 +7327,16 @@
    "input_record_ids": [
     "analysis/research/company-connections-v2/research.json#cc2:rel:043"
    ],
+   "freigabe_beleg": {
+    "herausgeber": "BETEILIGTER",
+    "herausgeber_text": "Quelle von einem Beteiligten (Unternehmen oder Konzern einer Seite)",
+    "geprueft_am": "2026-11-11",
+    "pruefer": "Claude (Selbstprüfung, Quelle gelesen)",
+    "bericht": "analysis/research/company-connections-freigabe-2026-11-11/pruefbericht-2026-11-11.pdf"
+   },
    "ueber_text": "direkte Verbindung",
-   "herleitung_text": "neu belegt (Kandidat)",
-   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben"
+   "herleitung_text": "neu belegt",
+   "freigabe_text": "freigegeben"
   },
   {
    "id": "cc-n-cc2-rel-007",
@@ -7052,7 +7354,7 @@
    "anteil_pct": null,
    "stand": "2022-11-01",
    "beleg": "FACT",
-   "freigabe": "KANDIDAT",
+   "freigabe": "APPROVED",
    "quelle_url": "https://markets.financialcontent.com/stocks/article/bizwire-2022-11-1-wesco-international-finalizes-purchase-of-rahi-systems-a-leading-provider-of-global-hyperscale-data-center-solutions",
    "quelle_titel": "Wesco International Finalizes Purchase of Rahi Systems, a Leading Provider of Global Hyperscale Data Center Solutions",
    "belegstelle": [
@@ -7068,9 +7370,16 @@
    "input_record_ids": [
     "analysis/research/company-connections-v2/research.json#cc2:rel:007"
    ],
+   "freigabe_beleg": {
+    "herausgeber": "BETEILIGTER",
+    "herausgeber_text": "Quelle von einem Beteiligten (Unternehmen oder Konzern einer Seite)",
+    "geprueft_am": "2026-11-11",
+    "pruefer": "Claude (Selbstprüfung, Quelle gelesen)",
+    "bericht": "analysis/research/company-connections-freigabe-2026-11-11/pruefbericht-2026-11-11.pdf"
+   },
    "ueber_text": "direkte Verbindung",
-   "herleitung_text": "neu belegt (Kandidat)",
-   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben"
+   "herleitung_text": "neu belegt",
+   "freigabe_text": "freigegeben"
   }
  ]
 }
