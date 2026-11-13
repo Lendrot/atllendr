@@ -619,7 +619,15 @@ function ebenen(daten, an) {
   }
   const kante = v => `${n(S[v.von])} → ${n(S[v.nach])}${v.ebene === 'ANNAHME' ? ' (Annahme)' : ''}`;
   return {ware: ware.map(n).join(' → '), wareKurz: ware.map(s => s.kurz.replace(/ \(.*\)$/, '')).join(' → '),
-    transport: V.filter(v => v.art === 'TRANSPORT').map(kante), handel: V.filter(v => v.art === 'HANDEL').map(kante)};
+    transport: V.filter(v => v.art === 'TRANSPORT').map(kante), handel: V.filter(v => v.art === 'HANDEL').map(kante),
+    // Haendler: Glied mit Handel hinein und hinaus (kauft bei X, verkauft an Y)
+    haendler: daten.standorte.map(h => ({h, ein: V.filter(v => v.art === 'HANDEL' && v.nach === h.id && v.ebene === 'BELEGT'), aus: V.filter(v => v.art === 'HANDEL' && v.von === h.id && v.ebene === 'BELEGT')}))
+      .filter(x => x.ein.length && x.aus.length)
+      .map(({h, ein, aus}) => {
+        const sitz = (h.kurz.match(/\((.*)\)$/) || [])[1], name = h.kurz.replace(/ \(.*\)$/, '');
+        return `${nr(h)}. ${name} ist Rohstoffhändler: kauft einen Teil der Anoden bei der ${ein.map(v => S[v.von].kurz).join(', ')} und verkauft sie an ${aus.map(v => S[v.nach].kurz.replace(/ \(.*\)$/, '')).join(', ')}; wie viel, ist nicht belegt`
+          + (sitz ? `. Die Ware fährt nicht über ${sitz} (dort ist nur der Firmensitz)` : '');
+      })};
 }
 function kurzHtml(daten) {
   const an = status.ansicht === 'annahmen', A = daten.ausfall, S = Object.fromEntries(daten.standorte.map(s => [s.id, s]));
@@ -641,7 +649,7 @@ function kurzHtml(daten) {
     + `<li data-kurz="herkunft"><b>Woher?</b> Aus der ${esc(mine.kurz)} (${esc(LAND[mine.land] || mine.land || 'Land unbekannt')}).</li>`
     + `<li data-kurz="weg"><b>Über welche Glieder?</b> Ware: ${esc(E.ware)}. `
     + `Transport der Anoden: ${esc(E.transport.join('; '))}${an ? '' : '; der Seeweg ab Lobito nach Hamburg ist nicht belegt'}. `
-    + `Verkauf teils über den Händler: ${esc(E.handel.join('; '))}. `
+    + `${E.haendler.length ? esc(E.haendler.join('. ')) : `Handel: ${esc(E.handel.join('; '))}`}. `
     + `<small>Orange Bögen = Ware wird dort weiterverarbeitet (Liefer­beziehung, kein Fahrweg); blau = Transport; lila = Handel.</small></li>`
     + `<li data-kurz="ausfall"><b>Fällt ${esc(lief.kurz.replace(/ \(.*\)$/, ''))} aus?</b> ${fehlt}</li></ol>`
     + `<p class="hinweis">Gelb markiert = Annahme. Alles andere hat eine gelesene Quelle; was fehlt, steht als „unbekannt“ da.</p>`;
