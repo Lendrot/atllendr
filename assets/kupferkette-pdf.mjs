@@ -287,7 +287,7 @@ function seiteEins(daten, opt, qv, S) {
 }
 const RE_KUERZEL = {LAENDERRISIKO: 'L', SANKTIONEN: 'S', NATURGEFAHREN: 'N', KONZENTRATION: 'K'};
 const KAT_KURZ = {LAENDERRISIKO: 'Länder', SANKTIONEN: 'Sanktionen', NATURGEFAHREN: 'Natur', KONZENTRATION: 'Konzentration'};
-const ART = {VERARBEITUNG: 'Verarbeitung', TRANSPORT: 'Transport', HANDEL: 'Handel (Verkauf, kein Warenweg)', LIEFERUNG: 'Lieferung'};
+const ART = {VERARBEITUNG: 'Weiterverarbeitung', TRANSPORT: 'Transport', HANDEL: 'Handel (Verkauf, kein Warenweg)', LIEFERUNG: 'Lieferung'};
 
 function seiteZwei(daten, opt, qv, S) {
   const an = opt.ansicht === 'annahmen';
@@ -416,7 +416,7 @@ function karte(seite, daten, opt, x, y, w, h, rahmen, bild) {
   for (const g of gruppen) seite.kreis(px(g.lon), py(g.lat), 3.2, {fuell: g.st.every(s => s.ort.freigabe !== 'FREIGEGEBEN') ? F.li : '#ffd27a', strich: F.weiss});
   // Legende und Bildnachweis
   // Legende der Linien: eine Zeile unter der Karte (über der Karte würde sie Beschriftungen verdecken)
-  const lg = [[F.cu, null, 'Verarbeitung'], [F.tr, null, 'Transport'], [F.ha, [3, 1.6], 'Handel (kein Warenweg)'], [F.li, [3, 1.6], 'Lieferung, Kandidat']];
+  const lg = [[F.cu, null, 'Weiterverarbeitung'], [F.tr, null, 'Transport'], [F.ha, [3, 1.6], 'Handel (kein Warenweg)'], [F.li, [3, 1.6], 'Lieferung, Kandidat']];
   if (an) lg.push(['#9aa7b0', [2, 1.6], 'Annahme']);
   let lx = x;
   for (const [c, sd, t] of lg) { seite.linie(lx, y + h + 7, lx + 16, y + h + 7, {c, lw: 1.6, strichel: sd}); seite.text(lx + 19, y + h + 10, t, {gr: MINDESTSCHRIFT, c: F.muted}); lx += 19 + breiteVon(t, 'n', MINDESTSCHRIFT) + 10; }

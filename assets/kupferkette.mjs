@@ -24,7 +24,7 @@ const FARBE = {VERARBEITUNG: 0xe39b3c, TRANSPORT: 0x38a8e0, HANDEL: 0x9a7fd6, LI
 const FARBE_ANNAHME = 0xd9dee3;
 const FARBE_ALT = 0x26c6da;
 const BEZUG_TEXT = {BELEGTE_BEZIEHUNG: 'belegte Beziehung zur Kette', GLEICHE_ART: 'gleiche Art, keine belegte Beziehung zur Kette'};
-const ART_TEXT = {VERARBEITUNG: 'Verarbeitung', TRANSPORT: 'Transport', HANDEL: 'Handel (Verkauf)', LIEFERUNG: 'Lieferung'};
+const ART_TEXT = {VERARBEITUNG: 'Weiterverarbeitung (Lieferbeziehung)', TRANSPORT: 'Transport', HANDEL: 'Handel (Verkauf)', LIEFERUNG: 'Lieferung'};
 const FREIGABE_TEXT = {FREIGEGEBEN: 'freigegeben', KANDIDAT: 'Kandidat, nicht freigegeben', UNKNOWN: 'unbekannt', ANNAHME: 'nicht belegt'};
 const EVIDENZ_TEXT = {FACT: 'Fakt laut Quelle', INFERENCE: 'Schlussfolgerung', CONFLICT: 'Quellen widersprechen sich', UNKNOWN: 'unbekannt', ANNAHME: 'Annahme',
   RECHNUNG: 'Rechnung aus belegten Werten', ABGLEICH: 'Abgleich mit gelesener Liste'};
@@ -309,7 +309,7 @@ function baueGlobus(daten, waehle) {
     m.position.copy(p); scene.add(m);
     const b = document.createElement('button');
     b.className = 'marke alt weg'; b.type = 'button'; b.dataset.alternative = a.id; b.setAttribute('aria-pressed', 'false');
-    b.textContent = `Ersatz: ${a.kurz}`; b.title = `${a.rolle}: ${a.name}`;
+    b.textContent = `möglich: ${a.kurz}`; b.title = `Mögliche Ausweichquelle, keine bestätigte Lieferung. ${a.rolle}: ${a.name}`;
     b.addEventListener('click', () => waehle({typ: 'alternative', id: a.id}));
     host.append(b); altMarken.push({el: b, pos: p, versatz: 0, alt: a.id});
     for (const sid of a.fuer) {
@@ -609,11 +609,23 @@ function wertPanel(daten) {
 // Kasten "In 2 Minuten": drei Saetze fuer jemanden, der das Projekt nicht kennt (Abnahmeliste Punkt 11).
 const LAND = {CD: 'DR Kongo', AO: 'Angola', IT: 'Italien', DE: 'Deutschland', SG: 'Singapur'};
 const mio = x => x.toLocaleString('de-DE', {minimumFractionDigits: 1, maximumFractionDigits: 1});
+function ebenen(daten, an) {
+  const S = Object.fromEntries(daten.standorte.map(s => [s.id, s])), n = s => `${nr(s)}. ${s.kurz}`;
+  const V = daten.verbindungen.filter(v => v.ebene === 'BELEGT' || (an && v.ebene === 'ANNAHME'));
+  const ware = [S[daten.ausfall.mine]];
+  for (let k = 0; k < 20; k++) {
+    const v = V.find(x => x.ebene === 'BELEGT' && ['VERARBEITUNG', 'LIEFERUNG'].includes(x.art) && x.von === ware.at(-1).id);
+    if (!v) break; ware.push(S[v.nach]);
+  }
+  const kante = v => `${n(S[v.von])} → ${n(S[v.nach])}${v.ebene === 'ANNAHME' ? ' (Annahme)' : ''}`;
+  return {ware: ware.map(n).join(' → '), wareKurz: ware.map(s => s.kurz.replace(/ \(.*\)$/, '')).join(' → '),
+    transport: V.filter(v => v.art === 'TRANSPORT').map(kante), handel: V.filter(v => v.art === 'HANDEL').map(kante)};
+}
 function kurzHtml(daten) {
   const an = status.ansicht === 'annahmen', A = daten.ausfall, S = Object.fromEntries(daten.standorte.map(s => [s.id, s]));
   const mine = S[A.mine], lief = S[A.lieferant], kunde = S[A.kunde];
   const stufen = [...new Set(daten.standorte.map(s => s.stufe))].sort((a, b) => a - b);
-  const weg = stufen.map(st => daten.standorte.filter(s => s.stufe === st).map(s => `${nr(s)}. ${s.kurz}`).join(' bzw. ')).join(' → ');
+  const E = ebenen(daten, an);
   const g = A.glieder.find(x => x.standort === A.lieferant).ansichten[status.ansicht];
   const t = g.tonnen.annahme, mk = g.mehrkosten, du = g.dauer;
   let fehlt = `${esc(kunde.kurz)} verliert den einzigen erfassten Kupferlieferanten dieser Kette. `;
@@ -623,9 +635,14 @@ function kurzHtml(daten) {
     if (du.status === 'ANNAHME' && mk.ueber_dauer) fehlt += `, bei ≈ ${esc(String(du.annahme.wert).replace('.', ','))} Monaten Ausfall ≈ ${mio(mk.ueber_dauer.mio_eur)} Mio. €`;
     fehlt += '.</span> Belegt ist keine dieser Zahlen.';
   } else fehlt += 'Liefermenge, Mehrkosten und Dauer sind in keiner gelesenen Quelle genannt: <span class="unbekannt">unbekannt</span> (Ansicht „Mit Annahmen“ zeigt Schätzwerte).';
+  const nAlt = S[A.lieferant].alternativen?.length || 0;
+  fehlt += ` Ein bestätigter Ersatzlieferant ist <b>nicht bekannt</b>${nAlt ? `; ${nAlt} Hütten gleicher Art kämen in Frage (türkis, „möglich“), ob sie liefern würden, ist offen` : ''}.`;
   return `<p class="eyebrow">In 2 Minuten</p><ol>`
     + `<li data-kurz="herkunft"><b>Woher?</b> Aus der ${esc(mine.kurz)} (${esc(LAND[mine.land] || mine.land || 'Land unbekannt')}).</li>`
-    + `<li data-kurz="weg"><b>Über welche Glieder?</b> ${esc(weg)}. Je Glied: Punkt auf dem Globus, Liste unten.</li>`
+    + `<li data-kurz="weg"><b>Über welche Glieder?</b> Ware: ${esc(E.ware)}. `
+    + `Transport der Anoden: ${esc(E.transport.join('; '))}${an ? '' : '; der Seeweg ab Lobito nach Hamburg ist nicht belegt'}. `
+    + `Verkauf teils über den Händler: ${esc(E.handel.join('; '))}. `
+    + `<small>Orange Bögen = Ware wird dort weiterverarbeitet (Liefer­beziehung, kein Fahrweg); blau = Transport; lila = Handel.</small></li>`
     + `<li data-kurz="ausfall"><b>Fällt ${esc(lief.kurz.replace(/ \(.*\)$/, ''))} aus?</b> ${fehlt}</li></ol>`
     + `<p class="hinweis">Gelb markiert = Annahme. Alles andere hat eine gelesene Quelle; was fehlt, steht als „unbekannt“ da.</p>`;
 }
@@ -806,15 +823,16 @@ function testmodus(daten) {
   const S = Object.fromEntries(daten.standorte.map(s => [s.id, s])), A = daten.ausfall;
   const mische = (arr, n) => { const k = (n * 2 + 1) % arr.length; return arr.slice(k).concat(arr.slice(0, k)); };   // richtige Antwort wandert
   const ohneKlammer = t => t.replace(/ \(.*\)$/, '');
+  const E = ebenen(daten, false);
   const fragen = [
     {id: 'F1', text: 'Woher kommt das Kupfer?', richtig: `${S[A.mine].kurz} (${LAND[S[A.mine].land] || S[A.mine].land})`,
-     falsch: ['Escondida (Chile)', `${ohneKlammer(S[A.lieferant].kurz)} (Deutschland)`]},
-    {id: 'F2', text: 'Über welche Glieder läuft es zum Kunden?',
-     richtig: 'Mine → Aufbereitung → Hütte → Hafen bzw. Händler → ' + ohneKlammer(S[A.lieferant].kurz) + ' → ' + ohneKlammer(S[A.kunde].kurz),
-     falsch: ['Mine → ' + ohneKlammer(S[A.kunde].kurz) + ' (direkt)', 'Mine → Hafen → ' + ohneKlammer(S[A.kunde].kurz) + ' → ' + ohneKlammer(S[A.lieferant].kurz)]},
+     falsch: [['chile', 'Escondida (Chile)'], ['aurubis', `${ohneKlammer(S[A.lieferant].kurz)} (Deutschland)`]]},
+    {id: 'F2', text: 'Welchen Weg nimmt das Kupfer als Ware bis zum Kunden?',
+     richtig: E.wareKurz + ' (Transport über Kolwezi und Lobito, Verkauf teils über Trafigura)',   // wie Kasten "In 2 Minuten"
+     falsch: [['direkt', `${ohneKlammer(S[A.mine].kurz)} → ${ohneKlammer(S[A.kunde].kurz)} (direkt)`], ['umgekehrt', `${ohneKlammer(S[A.mine].kurz)} → Hafen Lobito → ${ohneKlammer(S[A.kunde].kurz)} → ${ohneKlammer(S[A.lieferant].kurz)}`]]},
     {id: 'F3', text: `Was fehlt ${ohneKlammer(S[A.kunde].kurz)}, wenn ${ohneKlammer(S[A.lieferant].kurz)} ausfällt?`,
-     richtig: 'Der einzige erfasste Kupferlieferant dieser Kette; die Menge ist nur geschätzt',
-     falsch: ['Nichts, ein Ersatzlieferant ist belegt', 'Nur der Hafen Lobito']},
+     richtig: 'Der einzige erfasste Kupferlieferant dieser Kette; ein bestätigter Ersatz ist nicht bekannt',
+     falsch: [['ersatz', 'Nichts, ein Ersatzlieferant ist bestätigt'], ['lobito', 'Nur der Hafen Lobito']]},
   ];
   const box = document.createElement('section');
   box.id = 'testmodus'; box.className = 'testmodus'; box.setAttribute('aria-label', 'Verständnistest');
@@ -834,9 +852,9 @@ function testmodus(daten) {
       return;
     }
     if (i < fragen.length) {
-      const f = fragen[i], opt = mische([f.richtig, ...f.falsch], i);
+      const f = fragen[i], opt = mische([['richtig', f.richtig], ...f.falsch], i);
       box.innerHTML = `<p class="eyebrow">Frage ${i + 1} von ${fragen.length}</p><p><b>${esc(f.text)}</b></p>`
-        + opt.map(o => `<button type="button" class="test-antwort" data-richtig="${o === f.richtig}">${esc(o)}</button>`).join('')
+        + opt.map(([code, o]) => `<button type="button" class="test-antwort" data-richtig="${code === 'richtig'}" data-code="${code}">${esc(o)}</button>`).join('')
         + `<button type="button" class="test-weiss-nicht" data-richtig="false" data-weiss-nicht>Weiß ich nicht</button>`
         + `<button type="button" class="test-zu" aria-expanded="true">einklappen</button>`;
       return;
@@ -844,7 +862,7 @@ function testmodus(daten) {
     const sek = Math.round((performance.now() - t0) / 1000), ok = erg.filter(e => e.ok).length;
     const f = fps.ms > 0 ? Math.round(fps.bilder / fps.ms * 1000) : null;
     const zeile = `K11 ${geraet} ${new Date().toISOString().slice(0, 16)}Z t=${sek}s richtig=${ok}/3 `
-      + erg.map(e => `${e.id}${e.ok ? '+' : e.wn ? '?' : '-'}${e.s}s`).join(' ')
+      + erg.map(e => `${e.id}${e.ok ? '+' : e.wn ? '?' : `-${e.code}-`}${e.s}s`).join(' ')
       + ` fps=${f === null ? 'nicht gedreht' : `${f} (gedreht ${(fps.ms / 1000).toFixed(1)}s, langsamstes Bild ${Math.round(fps.schlimmstes)}ms)`}`
       + ` ansicht=${status.ansicht} fenster=${innerWidth}x${innerHeight} dpr=${devicePixelRatio}`;
     status.test = {zeile, sek, richtig: ok, fps: f};
@@ -857,7 +875,7 @@ function testmodus(daten) {
     if (b.classList.contains('test-zu')) { const zu = box.classList.toggle('zu'); b.textContent = zu ? 'Frage zeigen' : 'einklappen'; b.setAttribute('aria-expanded', String(!zu)); return; }
     if (b.dataset.richtig !== undefined) {
       const jetzt = performance.now();
-      erg.push({id: fragen[i].id, ok: b.dataset.richtig === 'true', wn: 'weissNicht' in b.dataset, s: Math.round((jetzt - tf) / 1000)});
+      erg.push({id: fragen[i].id, ok: b.dataset.richtig === 'true', wn: 'weissNicht' in b.dataset, code: b.dataset.code, s: Math.round((jetzt - tf) / 1000)});
       tf = jetzt; i++; box.classList.remove('zu'); zeige();
     }
   });
