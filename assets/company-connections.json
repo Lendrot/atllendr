@@ -21,7 +21,7 @@
    "ma-intelligence/data/intelligence/verified/atlas-connections.json": "0f0199a27dc73578afeac1ae7d0423a5c9ce949699012043a93260e3de71da9d",
    "analysis/research/company-connections-freigaben.jsonl": "eb8ca92ffaada91e25b27dad8274006fb235cc81ccab20050e400accad84f9cf",
    "analysis/research/company-connections-v1/research.json": "e0a65ef5ce5a2eadad6774f9cdca05a3e31171df381e8362e8cc47c3a8b40adb",
-   "analysis/research/company-connections-v2/research.json": "7e25e855444a0e57a06410aebae4e97ac9011934f6599e659d27e4f22945cbad",
+   "analysis/research/company-connections-v2/research.json": "4bd33a8b0e55a4a8615d81cf174361c9f0680c9f0e3217e53a0d578e18708b47",
    "analysis/research/company-connections-v3/research.json": "0326d31cf0a37e7332e8e36020e1fdbdaa2c5c15f59034d45e8a44be0d01be88"
   },
   "excluded_inputs": {

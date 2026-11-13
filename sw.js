@@ -1,6 +1,6 @@
 // Leitet Root-Pfad-Anfragen der Atlas-Seiten auf /atllendr/ um (Daten bleiben byte-identisch).
 // Version = Quell-Commit; jede Aenderung hier loest im Browser ein Service-Worker-Update aus.
-const V='f717f4ce13e79d53326c7b2e68bab9f856adba26';
+const V='de745f6513fd74a460989b84346bd4db4a34eec3';
 const P='/atllendr';
 self.addEventListener('install',()=>self.skipWaiting());
 self.addEventListener('activate',e=>e.waitUntil(self.clients.claim()));

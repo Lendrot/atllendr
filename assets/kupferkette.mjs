@@ -35,6 +35,14 @@ const konf = k => k.toLocaleString('de-DE', {minimumFractionDigits: 2});
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
 const zahl = w => Number(w).toLocaleString('de-DE', {maximumFractionDigits: 2});
 const $ = id => document.getElementById(id);
+// Anzeige-Nummer je Glied: gleiche Stufe (parallele Glieder) -> 5a, 5b
+let NR = {};
+const nr = s => NR[s.id] || String(s.stufe);
+function nummern(daten) {
+  const st = {};
+  for (const s of daten.standorte) (st[s.stufe] ||= []).push(s);
+  NR = Object.fromEntries(daten.standorte.map(s => [s.id, st[s.stufe].length > 1 ? `${s.stufe}${'abcdefgh'[st[s.stufe].indexOf(s)]}` : String(s.stufe)]));
+}
 const status = {geladen: false, knoten: 0, boegen: 0, boegen_sichtbar: 0, auswahl: null, ansicht: 'belegt', ausfallModus: false, rot: [], alt_knoten: 0, alt_sichtbar: [], alt_boegen: 0, kompakt: false, buendel: [], schilder_gezeigt: [],
   risiko: false, risikoKat: 'ALLE', risiko_ringe: 0, risiko_marken: 0};
 // Risiko-Ebene: Status je Feld fuer die aktuelle Ansicht (BS = belegt am Standort/an der Firma, BL = belegt nur Landesebene, A = Annahme, U = unbekannt)
@@ -183,7 +191,7 @@ function gliederHtml(daten) {
     const reText = re.length ? `Risiko-Ebene ${re.filter(x => x.status === 'BELEGT').length} von ${re.length} Kategorien belegt` : '';
     const risiko = ri || h || reText ? [ri, h ? `${h} Störungshinweis${h > 1 ? 'e' : ''} an Verbindungen` : '', reText].filter(Boolean).join(' · ') : '<span class="unbekannt">unbekannt</span>';
     const kette = g ? `<small data-ek-kurz="${esc(g.status)}">Eigentümerkette: ${g.baum ? esc(g.status_text) : '<span class="unbekannt">unbekannt</span>'}</small>` : '';
-    return `<li><button type="button" data-glied="${esc(s.id)}" aria-pressed="false"><b>${esc(s.stufe)}. ${esc(s.kurz)}</b><small>Eigentümer: ${eig}</small>${kette}<small>Risiko: ${risiko}</small></button></li>`;
+    return `<li><button type="button" data-glied="${esc(s.id)}" aria-pressed="false"><b>${esc(nr(s))}. ${esc(s.kurz)}</b><small>Eigentümer: ${eig}</small>${kette}<small>Risiko: ${risiko}</small></button></li>`;
   }).join('');
 }
 
@@ -195,14 +203,14 @@ function kapazitaetKurz(a) {
 }
 function alternativenHtml(daten) {
   const A = Object.fromEntries((daten.alternativen || []).map(a => [a.id, a]));
-  return daten.standorte.filter(s => s.alternativen?.length).map(s => `<li data-alternativen-glied="${esc(s.id)}"><b>${esc(s.stufe)}. ${esc(s.kurz)}</b> <small>(${s.alternativen.length})</small>`
+  return daten.standorte.filter(s => s.alternativen?.length).map(s => `<li data-alternativen-glied="${esc(s.id)}"><b>${esc(nr(s))}. ${esc(s.kurz)}</b> <small>(${s.alternativen.length})</small>`
     + s.alternativen.map(i => A[i]).map(a => `<button type="button" data-alternative="${esc(a.id)}" aria-pressed="false"><b>${esc(a.kurz)}</b> <small>${esc(a.rolle)} · ${kapazitaetKurz(a)}</small>`
       + `<span class="chip ${a.bezug.art === 'BELEGTE_BEZIEHUNG' ? 'f' : 'k'}">${esc(BEZUG_TEXT[a.bezug.art])}</span></button>`).join('') + '</li>').join('');
 }
 function alternativeDetail(daten, id) {
   const a = daten.alternativen.find(x => x.id === id), Q = daten.quellen, S = Object.fromEntries(daten.standorte.map(s => [s.id, s]));
   const ort = `${zahl(a.ort.lat)}, ${zahl(a.ort.lon)} (${esc(a.ort.genauigkeit)}, ${esc(FREIGABE_TEXT[a.ort.freigabe])})`;
-  return `<h2>Ausweichquelle: ${esc(a.name)}</h2><p class="eyebrow">${esc(a.ersatz_text)} · könnte ersetzen: ${a.fuer.map(i => esc(`${S[i].stufe}. ${S[i].kurz}`)).join(', ')} · keine bestätigte Ersatzlieferung</p>`
+  return `<h2>Ausweichquelle: ${esc(a.name)}</h2><p class="eyebrow">${esc(a.ersatz_text)} · könnte ersetzen: ${a.fuer.map(i => esc(`${nr(S[i])}. ${S[i].kurz}`)).join(', ')} · keine bestätigte Ersatzlieferung</p>`
     + `<dl><dt>Rolle</dt><dd>${esc(a.rolle)}</dd><dt>Land</dt><dd>${a.land ? esc(a.land) : '<span class="unbekannt">unbekannt</span>'}</dd><dt>Ort</dt><dd>${ort}${a.ort.hinweis ? ` <small>${esc(a.ort.hinweis)}</small>` : ''}</dd>`
     + `<dt>Bezug</dt><dd>${esc(a.bezug.text)} <span class="chip ${a.bezug.freigabe === 'FREIGEGEBEN' ? 'f' : 'k'}">${esc(BEZUG_TEXT[a.bezug.art])} · ${esc(FREIGABE_TEXT[a.bezug.freigabe])}</span><div class="hinweis">${esc(a.bezug.freigabe_herkunft)}</div></dd>`
     + `<dt>Einschränkung</dt><dd>${esc(a.einschraenkung)}</dd></dl>`
@@ -261,9 +269,9 @@ function baueGlobus(daten, waehle) {
     for (const [i, s] of g.standorte.entries()) {
       const b = document.createElement('button');
       b.className = 'marke'; b.type = 'button'; b.dataset.standort = s.id; b.setAttribute('aria-pressed', 'false');
-      b.textContent = `${s.stufe}. ${s.kurz}`; b.title = `${s.rolle}: ${s.name}`;
+      b.textContent = `${nr(s)}. ${s.kurz}`; b.title = `${s.rolle}: ${s.name}`;
       b.addEventListener('click', () => waehle({typ: status.ausfallModus && s.id !== daten.ausfall?.kunde ? 'ausfall' : 'standort', id: s.id}));
-      host.append(b); marken.push({el: b, pos: p, versatz: i, stufe: s.stufe, id: s.id, name: `${s.stufe}. ${s.kurz}`});
+      host.append(b); marken.push({el: b, pos: p, versatz: i, stufe: s.stufe, id: s.id, name: `${nr(s)}. ${s.kurz}`});
     }
   }
   status.knoten = marken.length;
@@ -561,7 +569,7 @@ function risikoPanel(daten) {
     + `davon ${m.belegt_standort_oder_firma} am Standort/an der Firma, ${m.belegt_nur_landesebene} nur Landesebene · `
     + (an ? `<span class="am">Annahme ${m.annahme}, mit Annahmen ${m.mit_annahmen} von ${m.felder}</span> · unbekannt ${m.unbekannt}` : `unbekannt ${m.unbekannt + m.annahme}`);
   $('risiko-matrix').innerHTML = `<thead><tr><th>Glied</th>${R.kategorien.map(k => `<th title="${esc(k.text)}">${esc(MATRIX_KOPF[k.id] || k.text)}</th>`).join('')}</tr></thead><tbody>`
-    + daten.standorte.map(s => `<tr><th>${esc(s.stufe)}. ${esc(s.kurz)}</th>${R.kategorien.map(k => { const st = feldStatus(s.risikoebene[k.id]);
+    + daten.standorte.map(s => `<tr><th>${esc(nr(s))}. ${esc(s.kurz)}</th>${R.kategorien.map(k => { const st = feldStatus(s.risikoebene[k.id]);
       return `<td><button type="button" data-risiko-feld="${esc(s.id)}:${esc(k.id)}" aria-pressed="false" aria-label="${esc(s.kurz)}, ${esc(K[k.id])}: ${esc(RS[st][0])}"><span class="rs ${RS[st][1]}" data-rs="${st}">${esc(RS_KURZ[st])}</span></button></td>`; }).join('')}</tr>`).join('')
     + '</tbody>';
   $('risiko-regeln').textContent = R.regeln.join(' ');
@@ -569,7 +577,7 @@ function risikoPanel(daten) {
 function risikoFeldHtml(daten, sid, kat, titel = true) {
   const s = daten.standorte.find(x => x.id === sid), f = s.risikoebene[kat], Q = daten.quellen, an = status.ansicht === 'annahmen';
   const K = Object.fromEntries(daten.risikoebene.kategorien.map(k => [k.id, k.text])), st = feldStatus(f);
-  let h = titel ? `<h2>${esc(K[kat])}: ${esc(s.stufe)}. ${esc(s.kurz)}</h2><p class="eyebrow">Risiko-Ebene · Ansicht ${an ? 'Mit Annahmen' : 'Belegt'} · ${rsChip(st)}</p>`
+  let h = titel ? `<h2>${esc(K[kat])}: ${esc(nr(s))}. ${esc(s.kurz)}</h2><p class="eyebrow">Risiko-Ebene · Ansicht ${an ? 'Mit Annahmen' : 'Belegt'} · ${rsChip(st)}</p>`
     : `<h4 style="margin:8px 0 2px;font-size:13px">${esc(K[kat])} ${rsChip(st)}</h4>`;
   h += f.belegt.map(e => `<div data-risiko-eintrag="${esc(e.id)}"><b>${esc(RE_BEZUG[e.bezug])}${e.land && e.bezug === 'LAND' ? ` (${esc(daten.risikoebene.laender[e.land]?.name || e.land)})` : ''}:</b> ${esc(e.text)} ${chips(e)}`
     + `<div class="hinweis">${e.rechnung ? `Rechnung: ${esc(e.rechnung)} · ` : ''}${esc(e.freigabe_herkunft)} · Stand ${esc(e.stand)}</div>${belegeHtml(e.belege, Q)}</div>`).join('');
@@ -598,6 +606,29 @@ function wertPanel(daten) {
     + `<p class="hinweis">${an ? `<span class="am">Wert = ${esc(pb.formel)}. Metallwert des enthaltenen Kupfers; echte Lieferpreise weichen ab.</span>` : 'Belegt: Wert nur, wenn eine Quelle ihn nennt; Menge × Preis ist hier gesperrt.'}</p>`
     + (T ? `<p class="hinweis" id="tiefe-mess">Datentiefe je Glied: belegt <b>${T.belegt} von ${T.zellen}</b> Feldern${an ? ` · <span class="am">mit Annahmen gefüllt ${T.mit_annahmen} von ${T.zellen}</span>` : ''}.</p>` : '');
 }
+// Kasten "In 2 Minuten": drei Saetze fuer jemanden, der das Projekt nicht kennt (Abnahmeliste Punkt 11).
+const LAND = {CD: 'DR Kongo', AO: 'Angola', IT: 'Italien', DE: 'Deutschland', SG: 'Singapur'};
+const mio = x => x.toLocaleString('de-DE', {minimumFractionDigits: 1, maximumFractionDigits: 1});
+function kurzHtml(daten) {
+  const an = status.ansicht === 'annahmen', A = daten.ausfall, S = Object.fromEntries(daten.standorte.map(s => [s.id, s]));
+  const mine = S[A.mine], lief = S[A.lieferant], kunde = S[A.kunde];
+  const stufen = [...new Set(daten.standorte.map(s => s.stufe))].sort((a, b) => a - b);
+  const weg = stufen.map(st => daten.standorte.filter(s => s.stufe === st).map(s => `${nr(s)}. ${s.kurz}`).join(' bzw. ')).join(' → ');
+  const g = A.glieder.find(x => x.standort === A.lieferant).ansichten[status.ansicht];
+  const t = g.tonnen.annahme, mk = g.mehrkosten, du = g.dauer;
+  let fehlt = `${esc(kunde.kurz)} verliert den einzigen erfassten Kupferlieferanten dieser Kette. `;
+  if (an && t) {
+    fehlt += `<span class="am">Annahme: ≈ ${esc(kurzZahl(t.kt))} kt ${esc(t.einheit.replace(/^kt /, '').replace('/Jahr', ''))} pro Jahr fehlen`;
+    if (mk.status === 'ANNAHME') fehlt += `, Mehrkosten ≈ ${mio(mk.je_jahr.mio_eur)} Mio. € pro Jahr`;
+    if (du.status === 'ANNAHME' && mk.ueber_dauer) fehlt += `, bei ≈ ${esc(String(du.annahme.wert).replace('.', ','))} Monaten Ausfall ≈ ${mio(mk.ueber_dauer.mio_eur)} Mio. €`;
+    fehlt += '.</span> Belegt ist keine dieser Zahlen.';
+  } else fehlt += 'Liefermenge, Mehrkosten und Dauer sind in keiner gelesenen Quelle genannt: <span class="unbekannt">unbekannt</span> (Ansicht „Mit Annahmen“ zeigt Schätzwerte).';
+  return `<p class="eyebrow">In 2 Minuten</p><ol>`
+    + `<li data-kurz="herkunft"><b>Woher?</b> Aus der ${esc(mine.kurz)} (${esc(LAND[mine.land] || mine.land || 'Land unbekannt')}).</li>`
+    + `<li data-kurz="weg"><b>Über welche Glieder?</b> ${esc(weg)}. Je Glied: Punkt auf dem Globus, Liste unten.</li>`
+    + `<li data-kurz="ausfall"><b>Fällt ${esc(lief.kurz.replace(/ \(.*\)$/, ''))} aus?</b> ${fehlt}</li></ol>`
+    + `<p class="hinweis">Gelb markiert = Annahme. Alles andere hat eine gelesene Quelle; was fehlt, steht als „unbekannt“ da.</p>`;
+}
 function antwort(daten) {
   const S = Object.fromEntries(daten.standorte.map(s => [s.id, s]));
   const ende = Math.max(...daten.standorte.map(s => s.stufe));
@@ -624,6 +655,7 @@ function panel(daten) {
   $('einleitung').textContent = daten.begruendung;
   for (const b of document.querySelectorAll('[data-ansicht]')) b.setAttribute('aria-pressed', String(b.dataset.ansicht === status.ansicht));
   $('ansicht-text').textContent = daten.ansichten[status.ansicht];
+  $('kurz').innerHTML = kurzHtml(daten);
   $('frage').innerHTML = antwort(daten);
   $('kpis').innerHTML = [
     [an ? z.verbindungen + z.annahmen_verbindungen : z.verbindungen, an ? 'Verbindungen (inkl. Annahmen)' : 'Verbindungen'], [`${z.verbindungen_freigegeben}/${z.verbindungen}`, 'belegte freigegeben'], [z.standorte, 'Standorte'],
@@ -675,7 +707,7 @@ function detail(daten, auswahl) {
     const s = S[auswahl.id];
     const ort = s.ort.lat === null ? '<span class="unbekannt">unbekannt</span>' : `${zahl(s.ort.lat)}, ${zahl(s.ort.lon)} (${esc(s.ort.genauigkeit)}, ${esc(FREIGABE_TEXT[s.ort.freigabe])})`;
     const mengen = s.mengen.filter(zeigen);
-    $('detail').innerHTML = `<h2>${esc(s.name)}</h2><dl><dt>Rolle</dt><dd>${esc(s.stufe)}. ${esc(s.rolle)}</dd><dt>Land</dt><dd>${s.land ? esc(s.land) : '<span class="unbekannt">unbekannt</span>'}</dd>`
+    $('detail').innerHTML = `<h2>${esc(s.name)}</h2><dl><dt>Rolle</dt><dd>${esc(nr(s))}. ${esc(s.rolle)}</dd><dt>Land</dt><dd>${s.land ? esc(s.land) : '<span class="unbekannt">unbekannt</span>'}</dd>`
       + `<dt>Unternehmen</dt><dd>${s.firma ? esc(s.firma) : '<span class="unbekannt">unbekannt</span>'}${s.betreiber_einschraenkung ? ` <small>(${esc(s.betreiber_einschraenkung)})</small>` : ''}</dd>`
       + `<dt>Ort</dt><dd>${ort}</dd></dl>` + gliedAnnahmenHtml(s, Q)
       + (mengen.length ? mengen.map(m => mengeHtml(m, Q, daten)).join('') : '<div class="ub" data-unbekannt><b>Menge:</b> <span class="unbekannt">unbekannt</span><br>Für diesen Standort nennt keine gelesene Quelle eine Menge.</div>')
@@ -718,6 +750,7 @@ async function start() {
     daten = await r.json();
     if (daten.schema !== 'atlas.kupferkette-globus/7') throw Error('unbekanntes Schema ' + daten.schema);
   } catch (e) { $('titel').textContent = 'Kupferkette konnte nicht geladen werden'; $('detail').innerHTML = `<p class="fehler">${esc(e.message)}</p>`; return; }
+  nummern(daten);
   const par = new URLSearchParams(location.search);
   status.ansicht = par.get('ansicht') === 'annahmen' ? 'annahmen' : 'belegt';
   panel(daten);
@@ -764,5 +797,71 @@ async function start() {
   else waehle(w && daten.verbindungen.some(v => v.id === w) ? {typ: 'verbindung', id: w} : w && daten.standorte.some(s => s.id === w) ? {typ: 'standort', id: w}
     : w && (daten.alternativen || []).some(a => a.id === w) ? {typ: 'alternative', id: w} : null);
   status.geladen = true;
+  if (par.get('test') === '1') testmodus(daten);
+}
+
+// Testmodus ?test=1 (Abnahmeliste Punkt 11): drei Fragen, Zeit je Frage, Bildrate beim Drehen, Ergebniszeile zum Weitergeben.
+// Speichert und sendet nichts; die Zeile zeigt nur die Seite selbst an.
+function testmodus(daten) {
+  const S = Object.fromEntries(daten.standorte.map(s => [s.id, s])), A = daten.ausfall;
+  const mische = (arr, n) => { const k = (n * 2 + 1) % arr.length; return arr.slice(k).concat(arr.slice(0, k)); };   // richtige Antwort wandert
+  const ohneKlammer = t => t.replace(/ \(.*\)$/, '');
+  const fragen = [
+    {id: 'F1', text: 'Woher kommt das Kupfer?', richtig: `${S[A.mine].kurz} (${LAND[S[A.mine].land] || S[A.mine].land})`,
+     falsch: ['Escondida (Chile)', `${ohneKlammer(S[A.lieferant].kurz)} (Deutschland)`]},
+    {id: 'F2', text: 'Über welche Glieder läuft es zum Kunden?',
+     richtig: 'Mine → Aufbereitung → Hütte → Hafen bzw. Händler → ' + ohneKlammer(S[A.lieferant].kurz) + ' → ' + ohneKlammer(S[A.kunde].kurz),
+     falsch: ['Mine → ' + ohneKlammer(S[A.kunde].kurz) + ' (direkt)', 'Mine → Hafen → ' + ohneKlammer(S[A.kunde].kurz) + ' → ' + ohneKlammer(S[A.lieferant].kurz)]},
+    {id: 'F3', text: `Was fehlt ${ohneKlammer(S[A.kunde].kurz)}, wenn ${ohneKlammer(S[A.lieferant].kurz)} ausfällt?`,
+     richtig: 'Der einzige erfasste Kupferlieferant dieser Kette; die Menge ist nur geschätzt',
+     falsch: ['Nichts, ein Ersatzlieferant ist belegt', 'Nur der Hafen Lobito']},
+  ];
+  const box = document.createElement('section');
+  box.id = 'testmodus'; box.className = 'testmodus'; box.setAttribute('aria-label', 'Verständnistest');
+  document.body.append(box);
+  const geraet = innerWidth < 600 ? 'handy' : 'laptop', erg = [];
+  let t0 = 0, tf = 0, i = 0;
+  // Bildrate: Frames zaehlen, solange ein Finger/die Maus auf dem Globus gedrueckt ist (die Seite zeichnet dann jedes Bild neu).
+  const fps = {bilder: 0, ms: 0, schlimmstes: 0}; let druck = false, letzt = 0;
+  const schleife = t => { if (!druck) return; if (letzt) { const d = t - letzt; fps.bilder++; fps.ms += d; fps.schlimmstes = Math.max(fps.schlimmstes, d); } letzt = t; requestAnimationFrame(schleife); };
+  const g = document.getElementById('globus');
+  g.addEventListener('pointerdown', () => { if (!druck) { druck = true; letzt = 0; requestAnimationFrame(schleife); } });
+  addEventListener('pointerup', () => { druck = false; });
+  addEventListener('pointercancel', () => { druck = false; });
+  const zeige = () => {
+    if (!t0) {
+      box.innerHTML = `<p><b>Verständnistest</b> (3 Fragen). Bitte ohne Hilfe beantworten; du darfst die Seite benutzen, den Globus drehen und antippen. Die Zeit läuft ab „Start“.</p><button type="button" id="test-start">Start</button>`;
+      return;
+    }
+    if (i < fragen.length) {
+      const f = fragen[i], opt = mische([f.richtig, ...f.falsch], i);
+      box.innerHTML = `<p class="eyebrow">Frage ${i + 1} von ${fragen.length}</p><p><b>${esc(f.text)}</b></p>`
+        + opt.map(o => `<button type="button" class="test-antwort" data-richtig="${o === f.richtig}">${esc(o)}</button>`).join('')
+        + `<button type="button" class="test-weiss-nicht" data-richtig="false" data-weiss-nicht>Weiß ich nicht</button>`
+        + `<button type="button" class="test-zu" aria-expanded="true">einklappen</button>`;
+      return;
+    }
+    const sek = Math.round((performance.now() - t0) / 1000), ok = erg.filter(e => e.ok).length;
+    const f = fps.ms > 0 ? Math.round(fps.bilder / fps.ms * 1000) : null;
+    const zeile = `K11 ${geraet} ${new Date().toISOString().slice(0, 16)}Z t=${sek}s richtig=${ok}/3 `
+      + erg.map(e => `${e.id}${e.ok ? '+' : e.wn ? '?' : '-'}${e.s}s`).join(' ')
+      + ` fps=${f === null ? 'nicht gedreht' : `${f} (gedreht ${(fps.ms / 1000).toFixed(1)}s, langsamstes Bild ${Math.round(fps.schlimmstes)}ms)`}`
+      + ` ansicht=${status.ansicht} fenster=${innerWidth}x${innerHeight} dpr=${devicePixelRatio}`;
+    status.test = {zeile, sek, richtig: ok, fps: f};
+    box.innerHTML = `<p><b>Fertig.</b> ${ok} von 3 richtig in ${sek} s. Bitte diese Zeile an Claude schicken:</p><textarea readonly id="test-zeile" rows="3">${esc(zeile)}</textarea><button type="button" id="test-kopie">Kopieren</button>`;
+  };
+  box.addEventListener('click', e => {
+    const b = e.target.closest('button'); if (!b) return;
+    if (b.id === 'test-start') { t0 = tf = performance.now(); zeige(); return; }
+    if (b.id === 'test-kopie') { const t = document.getElementById('test-zeile'); t.select(); navigator.clipboard?.writeText(t.value).catch(() => {}); b.textContent = 'Kopiert'; return; }
+    if (b.classList.contains('test-zu')) { const zu = box.classList.toggle('zu'); b.textContent = zu ? 'Frage zeigen' : 'einklappen'; b.setAttribute('aria-expanded', String(!zu)); return; }
+    if (b.dataset.richtig !== undefined) {
+      const jetzt = performance.now();
+      erg.push({id: fragen[i].id, ok: b.dataset.richtig === 'true', wn: 'weissNicht' in b.dataset, s: Math.round((jetzt - tf) / 1000)});
+      tf = jetzt; i++; box.classList.remove('zu'); zeige();
+    }
+  });
+  status.test = {zeile: null};
+  zeige();
 }
 start();

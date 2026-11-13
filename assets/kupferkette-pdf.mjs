@@ -5,6 +5,7 @@
 // nur Land, Annahme, unbekannt); Annahmen erscheinen nur in der Ansicht "Mit Annahmen"; unbekannt bleibt unbekannt, nie 0.
 // Kein fremdes Paket: ein kleiner PDF-1.4-Schreiber mit den Standardschriften Helvetica (WinAnsi) und dem schon geladenen
 // Erdbild /assets/earth-blue-marble.jpg (NASA Blue Marble, plattkarte) als Kartenausschnitt. Es wird nichts nachgeladen.
+const nrPdf = (daten, s) => { const g = daten.standorte.filter(x => x.stufe === s.stufe); return g.length > 1 ? `${s.stufe}${'abcdefgh'[g.indexOf(s)]}` : String(s.stufe); };
 
 // --- Schrift: Breiten der Standardschriften (Adobe AFM, 1/1000 em) für WinAnsi-Codes 32..255 -----------------------------
 const BREITE = {
@@ -237,7 +238,7 @@ function seiteEins(daten, opt, qv, S) {
   // Einzelrisiken mit Namen; Zitate und Details stehen in der Quellenliste bzw. auf /kupferkette/.
   const an = opt.ansicht === 'annahmen', zeigen = o => an || o.ebene !== 'ANNAHME', ek = daten.eigentumskette;
   const zeilen = daten.standorte.map(s => {
-    const glied = [B(`${s.stufe}. ${s.kurz}`), s.land ? T(`(${s.land})`, 'n', F.muted) : null];
+    const glied = [B(`${nrPdf(daten, s)}. ${s.kurz}`), s.land ? T(`(${s.land})`, 'n', F.muted) : null];
     const mengen = s.mengen.filter(zeigen).filter(m => m.groesse !== 'BETREIBER');
     const menge = mengen.length ? mengen.flatMap((m, i) => [i ? NL : null, T(`${MENGE_KURZ[m.groesse] || m.groesse_text}:`), m.wert === null ? null : B(wert(m)),
       m.zeitraum ? T(`(${jahr(m)})`, 'n', F.muted) : null, M(stand(m)), m.ebene === 'ANNAHME' ? qv.ref([m.annahme.quelle]) : qv.belege(m.belege)]) : [M('U')];
@@ -246,7 +247,7 @@ function seiteEins(daten, opt, qv, S) {
       T(`${kurzname(e.eigentuemer)}${e.anteil !== null ? ` ${z(e.anteil)} %` : ''}`), M(stand(e)), qv.belege(e.belege)]);
     if (!eig.length && g?.baum && g.bezug === 'ZUGEHOERIG') {
       const erstes = daten.standorte.find(x => ek.glieder[x.id]?.baum?.knoten === g.baum.knoten);
-      eig.push(T(erstes && erstes.id !== s.id ? `wie Glied ${erstes.stufe}` : ek.knoten[g.wurzel].name), M('K'), qv.belege(g.bezug_belege));
+      eig.push(T(erstes && erstes.id !== s.id ? `wie Glied ${nrPdf(daten, erstes)}` : ek.knoten[g.wurzel].name), M('K'), qv.belege(g.bezug_belege));
     }
     if (!eig.length) eig.push(M('U'));
     const ri = [];
@@ -402,7 +403,7 @@ function karte(seite, daten, opt, x, y, w, h, rahmen, bild) {
     const cx = px(g.lon), cy = py(g.lat);
     const st = [...new Set(g.st.map(s => s.stufe))].sort((a, b) => a - b);
     // Ballung (mehr als 2 Glieder am selben Ort): nur die Nummern, Namen stehen in der Tabelle darunter
-    const zeilen = g.st.length > 2 ? [`${st[0]}.–${st.at(-1)}. ${g.st[0].kurz.replace(/^\S+\s/, '')} u. a.`] : g.st.map(s => `${s.stufe}. ${s.kurz}`), gr = MINDESTSCHRIFT, lw = Math.max(...zeilen.map(t => breiteVon(t, 'b', gr))) + 6, lh = zeilen.length * gr * 1.22 + 4;
+    const zeilen = g.st.length > 2 ? [`${st[0]}.–${st.at(-1)}. ${g.st[0].kurz.replace(/^\S+\s/, '')} u. a.`] : g.st.map(s => `${nrPdf(daten, s)}. ${s.kurz}`), gr = MINDESTSCHRIFT, lw = Math.max(...zeilen.map(t => breiteVon(t, 'b', gr))) + 6, lh = zeilen.length * gr * 1.22 + 4;
     const lagen = [[cx + 7, cy - lh / 2], [cx - 7 - lw, cy - lh / 2], [cx - lw / 2, cy - 7 - lh], [cx - lw / 2, cy + 7], [cx + 7, cy - lh - 2], [cx + 7, cy + 2], [cx - 7 - lw, cy + 2], [cx - 7 - lw, cy - lh - 2]];
     const frei = ([lx, ly]) => lx >= x + 1 && ly >= y + 1 && lx + lw <= x + w - 1 && ly + lh <= y + h - 1
       && !belegt.some(r => lx < r[0] + r[2] + 2 && lx + lw + 2 > r[0] && ly < r[1] + r[3] + 2 && ly + lh + 2 > r[1]);
@@ -474,7 +475,7 @@ function baue(daten, opt, rahmen, bild) {
     an ? T(`(Menge x LME-Kasse ${z(pb.preis.wert)} US$/t vom ${pb.preis.datum} ÷ EZB ${z(pb.kurs.wert, 4)} US$/€ vom ${pb.kurs.datum})`, 'n', F.muted) : null, an ? qv.ref([pb.preis.quelle, pb.kurs.quelle]) : null, NL);
   if (ekm) antwort.push(T(`• Eigentümer bis oben: ${ekm.vollstaendig} von ${ekm.glieder} Gliedern (${ekm.vollstaendig_freigegeben} freigegeben).`), NL);
   if (rem) antwort.push(T(`• Risiko-Ebene: ${rem.belegt} von ${rem.felder} Feldern belegt.`), NL);
-  antwort.push(T(`• Ausfall: ${afm.simulierbar} von ${afm.glieder} Gliedern simulierbar; Seite 2:`), B(`${S[opt.ausfall].stufe}. ${S[opt.ausfall].kurz}.`));
+  antwort.push(T(`• Ausfall: ${afm.simulierbar} von ${afm.glieder} Gliedern simulierbar; Seite 2:`), B(`${nrPdf(daten, S[opt.ausfall])}. ${S[opt.ausfall].kurz}.`));
   fluss(s1, antwort, rx, y, rw, gr);
   y += kh + 18;
   const inhalt = seiteEins(daten, opt, qv, S);
@@ -497,7 +498,7 @@ function baue(daten, opt, rahmen, bild) {
   fuss(s1, daten, opt);
   // Seite 2
   const s2 = new Seite(), z2 = seiteZwei(daten, opt, qv, S), aus = S[opt.ausfall];
-  kopf(s2, daten, opt, 2, `Ausfallszenario: ${aus.stufe}. ${aus.kurz} fällt aus`);
+  kopf(s2, daten, opt, 2, `Ausfallszenario: ${nrPdf(daten, aus)}. ${aus.kurz} fällt aus`);
   y = 70;
   y += fluss(s2, [B(z2.a.kunde_abgeschnitten ? `Kette zu ${z2.kunde} unterbrochen. ` : `Kette zu ${z2.kunde} nicht unterbrochen. `), T(z2.a.lage),
     I(' Schlussfolgerung aus der Datenbank, kein Fakt.')], L, y, BR, gr) + 5;
