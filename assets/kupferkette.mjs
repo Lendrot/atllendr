@@ -854,6 +854,9 @@ function testmodus(daten) {
   g.addEventListener('pointerdown', () => { if (!druck) { druck = true; letzt = 0; requestAnimationFrame(schleife); } });
   addEventListener('pointerup', () => { druck = false; });
   addEventListener('pointercancel', () => { druck = false; });
+  // Der Testkasten liegt unten über der Seite: Platz darunter freihalten, damit sich alles darüber scrollen lässt.
+  const platz = () => { document.body.style.paddingBottom = `${box.offsetHeight + 16}px`; };
+  new ResizeObserver(platz).observe(box);
   const zeige = () => {
     if (!t0) {
       box.innerHTML = `<p><b>Verständnistest</b> (3 Fragen). Bitte ohne Hilfe beantworten; du darfst die Seite benutzen, den Globus drehen und antippen. Die Zeit läuft ab „Start“.</p><button type="button" id="test-start">Start</button>`;
