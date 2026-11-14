@@ -4,6 +4,7 @@ import {metricLabels,periodKey,formatQuantity,rowsFor,nationalMetrics,partnerSha
 
 const app=document.getElementById('app');
 const $=id=>document.getElementById(id);
+const RUHE=new URLSearchParams(location.search).get('ruhe');  // start() schreibt die Adresse um
 let data,verified,features=[],engine=null,selected=null,layer={entities:{},deals:[]};
 let material='coal',period='',direction='all';
 const number=value=>new Intl.NumberFormat('de-DE',{maximumFractionDigits:1}).format(value);
@@ -72,7 +73,7 @@ async function start(){
   const {createGlobe}=await import('./globe-scene.js');
   const notice=text=>{$('scene-notice').textContent=text;$('scene-notice').hidden=false;};
   engine=createGlobe($('globe'),{onDealClick:showObservation,onNotice:notice,onError:notice,onLabels:items=>{for(const role of ['buyer','target']){const el=$(role+'-label'),item=items.find(i=>i.role===role);if(!selected||!item?.visible){el.hidden=true;continue;}el.hidden=false;el.innerHTML=`<small>${role==='buyer'?'AUSGANGSLAND':'ZIELLAND'}</small><b>${esc(item.entity.name)}</b>`;el.style.transform=`translate(${Math.max(8,Math.min($('globe').clientWidth-170,item.x+12))}px,${Math.max(65,item.y-35)}px)`;}},onHover:(deal,x,y)=>{const el=$('hover-tooltip');if(!deal){el.hidden=true;return;}const rect=$('globe').getBoundingClientRect();el.textContent=layer.entities[deal.buyerId].name+' → '+layer.entities[deal.targetId].name+' · '+formatQuantity(deal.observation);el.hidden=false;el.style.left=Math.max(8,Math.min(rect.width-270,x-rect.left+10))+'px';el.style.top=Math.max(70,y-rect.top-55)+'px';}});
-  engine.setDeals(layer.deals,layer.entities);engine.setCompanies([]);engine.focusLocation(22,79,270);$('loading').hidden=true;
+  engine.setDeals(layer.deals,layer.entities);engine.setCompanies([]);engine.focusLocation(22,79,270);$('loading').hidden=true;import('./globe-ruhe.mjs').then(m=>m.installRuhe(engine,{offen:()=>!$('selection-card').hidden,ruhe:RUHE})).catch(e=>console.error(e));
  }catch{
   $('loading').textContent='3D ist auf diesem Gerät nicht verfügbar. Alle Mengen, Handelspartner und Quellen bleiben in der Datenliste zugänglich.';document.querySelectorAll('.globe-controls button').forEach(b=>b.disabled=true);
  }

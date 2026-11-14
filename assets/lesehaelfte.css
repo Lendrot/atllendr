@@ -1,0 +1,52 @@
+/* Lesehälfte 50/50 (Eddie 2026-11-14, analysis/NEUES_DESIGN.md): links lesen, rechts Globus. Nur ab 761 px; am Handy
+   bleibt die bisherige Anordnung untereinander. Gesteuert von lesehaelfte.mjs (Klasse body.lesehaelfte). */
+@media(min-width:761px){
+body.lesehaelfte #app .workspace{position:relative;display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr) minmax(0,5fr);grid-template-rows:minmax(0,1fr)}
+body.lesehaelfte #app .sidebar{grid-column:1;grid-row:1;min-width:0;max-height:none}
+body.lesehaelfte #app .lese-ebenen{grid-column:2;grid-row:1;min-width:0;min-height:0;overflow:auto;overscroll-behavior:contain;background:#f5f9fd;border-right:1px solid #d8e5ef;padding:14px 14px 24px;display:flex;flex-direction:column;gap:12px}
+body.lesehaelfte #app .space{grid-column:3;grid-row:1;min-width:0}
+/* Ausgewählter Eintrag: ersetzt die Liste (Spalte der Seitenleiste) statt als Fenster über dem Globus zu liegen;
+   Ebenen und Legende daneben bleiben bedienbar. */
+body.lesehaelfte #app .lese-detail{display:none}
+body.lesehaelfte #app .workspace.detail-offen .lese-detail{display:block;grid-column:1;grid-row:1;z-index:8;min-width:0;min-height:0;background:#fff;border-right:1px solid #d8e5ef;overflow:auto;overscroll-behavior:contain}
+body.lesehaelfte #app .lese-detail .selection-card{position:static;inset:auto;width:auto;max-width:none;max-height:none;margin:0;border:0;border-radius:0;box-shadow:none;backdrop-filter:none;background:#fff;padding:22px 28px 32px;overflow:visible;font-size:16px;line-height:1.55}
+/* Ebenen-Kästen: normale Blöcke in der Lesehälfte, volle Breite, kein Schweben. */
+body.lesehaelfte #app .lese-ebenen .sites-toggle{position:static;inset:auto;max-width:none;width:auto;flex:none;flex-direction:column;flex-wrap:nowrap;white-space:normal;overflow:visible;touch-action:auto;box-shadow:none;backdrop-filter:none;padding:10px 12px}
+body.lesehaelfte #app .lese-ebenen .sites-toggle label{flex:none}
+body.lesehaelfte #app .lese-ebenen .gesamt-panel{position:static;inset:auto;width:auto;max-width:none;max-height:none;flex:none;overflow:visible}
+body.lesehaelfte #app .lese-ebenen .gesamt-panel[hidden]{display:none}
+body.lesehaelfte #app .lese-ebenen:empty{display:none}
+body.lesehaelfte #app .lese-ebenen .direction-key{position:static;max-width:none;max-height:none;overflow:visible;margin:0;flex:none;justify-content:flex-start;background:#fff;border:1px solid #d8e5ef;border-radius:8px;padding:8px 10px;box-shadow:none}
+}
+/* Mittlere Breiten: Seitenleiste und Ebenen untereinander in der linken Hälfte. */
+@media(min-width:761px) and (max-width:1199px){
+body.lesehaelfte #app .workspace{grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:minmax(0,3fr) minmax(0,2fr)}
+body.lesehaelfte #app .sidebar{grid-column:1;grid-row:1}
+body.lesehaelfte #app .lese-ebenen{grid-column:1;grid-row:2;border-top:1px solid #d8e5ef}
+body.lesehaelfte #app .space{grid-column:2;grid-row:1/3}
+body.lesehaelfte #app .workspace.detail-offen .lese-detail{grid-column:1;grid-row:1}
+}
+/* Rohstoffwelt /minen/ (gleiche Aufteilung, eigene Kästen): Kennung, Legende, Cluster in die Ebenen-Spalte, Standortdetail
+   ersetzt die Liste. Globus rechts 50 %. Gesteuert von mines-globe.js (installLesehaelfte mit eigenen Zielen). */
+@media(min-width:761px){
+body.lesehaelfte[data-world=mines] .workspace{position:relative;display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr) minmax(0,5fr);grid-template-rows:minmax(0,1fr)}
+body.lesehaelfte[data-world=mines] .sidebar{grid-column:1;grid-row:1;min-width:0}
+body.lesehaelfte[data-world=mines] .lese-ebenen{grid-column:2;grid-row:1;min-width:0;min-height:0;overflow:auto;overscroll-behavior:contain;background:#fbf8f2;border-right:1px solid #dfd5c5;padding:14px 14px 24px;display:flex;flex-direction:column;gap:12px}
+body.lesehaelfte[data-world=mines] .space{grid-column:3;grid-row:1;min-width:0}
+body.lesehaelfte[data-world=mines] .lese-detail{display:none}
+body.lesehaelfte[data-world=mines] .workspace.detail-offen .lese-detail{display:block;grid-column:1;grid-row:1;z-index:8;min-width:0;min-height:0;background:#fff;border-right:1px solid #dfd5c5;overflow:auto;overscroll-behavior:contain}
+body.lesehaelfte[data-world=mines] .lese-detail .detail{position:static;inset:auto;width:auto;max-width:none;max-height:none;margin:0;border:0;border-radius:0;box-shadow:none;padding:22px 28px 32px;overflow:visible}
+body.lesehaelfte[data-world=mines] .lese-detail .detail p,body.lesehaelfte[data-world=mines] .lese-detail .detail dd,body.lesehaelfte[data-world=mines] .lese-detail .detail li{font-size:15px;line-height:1.55}
+body.lesehaelfte[data-world=mines] .lese-ebenen .mine-identity,body.lesehaelfte[data-world=mines] .lese-ebenen .legend,body.lesehaelfte[data-world=mines] .lese-ebenen .cluster{position:static;inset:auto;max-width:none;width:auto;margin:0;flex:none;box-shadow:none}
+body.lesehaelfte[data-world=mines] .lese-ebenen .legend{font-size:13px}
+}
+@media(min-width:761px) and (max-width:1199px){
+body.lesehaelfte[data-world=mines] .workspace{grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:minmax(0,3fr) minmax(0,2fr)}
+body.lesehaelfte[data-world=mines] .lese-ebenen{grid-column:1;grid-row:2;border-top:1px solid #dfd5c5}
+body.lesehaelfte[data-world=mines] .space{grid-column:2;grid-row:1/3}
+}
+/* Handy: die leeren Hüllen der Lesehälfte nehmen keinen Platz im Raster ein (sonst rutscht der Globus aus /minen/). */
+body:not(.lesehaelfte) .lese-ebenen,body:not(.lesehaelfte) .lese-detail{display:none}
+/* Eingebettet (?embed=1, Rohstoffseiten): Kopfzeile der Seitenhülle aus, sonst verdeckt sie „Filter & Liste".
+   Steht hier, weil embed.css unter Bestandsschutz (preservation-v295) liegt. */
+html.embedded header.ss-kopf[data-site-shell],html.embedded nav.ss-unter[data-site-shell]{display:none!important}

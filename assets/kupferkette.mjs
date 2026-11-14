@@ -18,7 +18,9 @@
 // "Belegt": nur Werte, die eine Quelle nennt, sonst "unbekannt" (Länderstrom als Obergrenze daneben). "Mit Annahmen": Menge aus dem
 // Annahmen-Atlas, Wert als Rechnung Menge × LME-Kasse ÷ EZB-Kurs; Formel und Datenstand stehen fertig in kette.json (wert, rechnung).
 import * as THREE from 'three';
-import {OrbitControls} from './three/OrbitControls.js';
+import {createGlobe} from './globe-scene.js';
+import {geoVector} from './globe-math.mjs';
+import {installRuhe} from './globe-ruhe.mjs';   // nach 7 s ohne Bedienung und ohne Auswahl: Afrika, Äquator waagerecht
 
 const FARBE = {VERARBEITUNG: 0xe39b3c, TRANSPORT: 0x38a8e0, HANDEL: 0x9a7fd6, LIEFERUNG: 0xe8643c};
 const FARBE_ANNAHME = 0xd9dee3;
@@ -43,7 +45,7 @@ function nummern(daten) {
   for (const s of daten.standorte) (st[s.stufe] ||= []).push(s);
   NR = Object.fromEntries(daten.standorte.map(s => [s.id, st[s.stufe].length > 1 ? `${s.stufe}${'abcdefgh'[st[s.stufe].indexOf(s)]}` : String(s.stufe)]));
 }
-const status = {geladen: false, knoten: 0, boegen: 0, boegen_sichtbar: 0, auswahl: null, ansicht: 'belegt', ausfallModus: false, rot: [], alt_knoten: 0, alt_sichtbar: [], alt_boegen: 0, kompakt: false, buendel: [], schilder_gezeigt: [],
+const status = {geladen: false, knoten: 0, boegen: 0, boegen_sichtbar: 0, auswahl: null, ansicht: 'belegt', ausfallModus: false, rot: [], alt_knoten: 0, alt_sichtbar: [], alt_boegen: 0, optionen: true, optionen_boegen: 0, kompakt: false, buendel: [], schilder_gezeigt: [],
   risiko: false, risikoKat: 'ALLE', risiko_ringe: 0, risiko_marken: 0};
 // Risiko-Ebene: Status je Feld fuer die aktuelle Ansicht (BS = belegt am Standort/an der Firma, BL = belegt nur Landesebene, A = Annahme, U = unbekannt)
 const RS = {BS: ['belegt', 'rs-bs', 0xe53935], BL: ['belegt (Land)', 'rs-bl', 0xffa726], A: ['Annahme', 'rs-a', 0xb0bec5], U: ['unbekannt', 'rs-u', 0x8a5a00]};
@@ -219,33 +221,28 @@ function alternativeDetail(daten, id) {
 }
 
 // --- Globus ---------------------------------------------------------------------------------------------------------
-function vec(lat, lon, r = 1) {
-  const phi = (90 - lat) * Math.PI / 180, theta = (lon + 180) * Math.PI / 180;
-  return new THREE.Vector3(-r * Math.sin(phi) * Math.cos(theta), r * Math.cos(phi), r * Math.sin(phi) * Math.sin(theta));
-}
+// Ein Globus (Eddie 2026-11-14, analysis/NEUES_DESIGN.md): die Kette läuft auf dem Motor des Hauptglobus (globe-scene.js:
+// NASA-Erde, Grenzen, Kacheln beim Zoomen, gleiche Bedienung). Die Seite fügt nur ihre eigenen Punkte, Bögen und Schilder als
+// Ebene hinzu (engine.addLayer); einen zweiten three.js-Globus gibt es nicht mehr. Erdradius des Motors = 100 Einheiten.
+const R = 100;
+function vec(lat, lon, r = 1) { return new THREE.Vector3(...geoVector(lat, lon, r * R)); }
 function bogenPunkte(a, b) {
   const va = vec(a.lat, a.lon).normalize(), vb = vec(b.lat, b.lon).normalize();
   const winkel = va.angleTo(vb), hoehe = 0.01 + Math.min(0.16, winkel * 0.12), n = 64, pts = [];
   for (let i = 0; i <= n; i++) {
     const t = i / n, p = new THREE.Vector3().copy(va).lerp(vb, t).normalize();
     if (winkel > 1e-6) { const s = Math.sin(winkel); p.copy(va).multiplyScalar(Math.sin((1 - t) * winkel) / s).add(vb.clone().multiplyScalar(Math.sin(t * winkel) / s)); }
-    pts.push(p.multiplyScalar(1.003 + hoehe * Math.sin(Math.PI * t)));
+    pts.push(p.multiplyScalar(R * (1.003 + hoehe * Math.sin(Math.PI * t))));
   }
   return pts;
 }
 
 function baueGlobus(daten, waehle) {
-  const host = $('globus');
-  const renderer = new THREE.WebGLRenderer({antialias: true, preserveDrawingBuffer: true});
-  renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
-  host.prepend(renderer.domElement);
-  const scene = new THREE.Scene(); scene.background = new THREE.Color(0x06121c);
-  const camera = new THREE.PerspectiveCamera(40, 1, 0.01, 100);
-  const controls = new OrbitControls(camera, renderer.domElement);
-  controls.enableDamping = true; controls.minDistance = 1.25; controls.maxDistance = 6; controls.enablePan = false;
-  const erde = new THREE.Mesh(new THREE.SphereGeometry(1, 96, 64), new THREE.MeshBasicMaterial({color: 0x2a4a63}));
-  scene.add(erde);
-  new THREE.TextureLoader().load('/assets/earth-blue-marble.jpg', t => { t.colorSpace = THREE.SRGBColorSpace; erde.material.map = t; erde.material.color.set(0xffffff); erde.material.needsUpdate = true; zeichne(); });
+  const host = $('globus'), flaeche = $('globus-flaeche');
+  const engine = createGlobe(flaeche, {space: true});
+  let scene, camera, renderer, neu;
+  engine.addLayer(m => { ({scene, camera, renderer} = m); neu = m.invalidate; });
+  const zeichne = () => neu();
 
   // Knoten: Standorte mit gleicher Koordinate teilen sich eine Marke (z. B. Mine, Aufbereitung und Huette am selben Ort).
   const gruppen = new Map();
@@ -259,10 +256,10 @@ function baueGlobus(daten, waehle) {
   for (const g of gruppen.values()) {
     const p = vec(g.lat, g.lon, 1.004);
     const kandidat = g.standorte.every(s => s.ort.freigabe !== 'FREIGEGEBEN');
-    const m = new THREE.Mesh(new THREE.SphereGeometry(0.012, 16, 12), new THREE.MeshBasicMaterial({color: kandidat ? 0xe8643c : 0xffd27a}));
+    const m = new THREE.Mesh(new THREE.SphereGeometry(1.2, 16, 12), new THREE.MeshBasicMaterial({color: kandidat ? 0xe8643c : 0xffd27a}));
     m.position.copy(p); scene.add(m);
     if (daten.risikoebene) {   // Ring der Risiko-Ebene: Farbe = bester Belegstand der Glieder an diesem Ort
-      const ring = new THREE.Mesh(new THREE.RingGeometry(0.019, 0.026, 40), new THREE.MeshBasicMaterial({color: RS.U[2], transparent: true, opacity: 0.95, side: THREE.DoubleSide}));
+      const ring = new THREE.Mesh(new THREE.RingGeometry(1.9, 2.6, 40), new THREE.MeshBasicMaterial({color: RS.U[2], transparent: true, opacity: 0.95, side: THREE.DoubleSide}));
       ring.position.copy(vec(g.lat, g.lon, 1.005)); ring.lookAt(ring.position.clone().multiplyScalar(2)); ring.visible = false; scene.add(ring);
       ringe.push({ring, standorte: g.standorte});
     }
@@ -288,7 +285,7 @@ function baueGlobus(daten, waehle) {
     const stuecke = gestrichelt ? [] : [pts];
     if (gestrichelt) for (let i = 0; i + 2 < pts.length; i += 4) stuecke.push(pts.slice(i, i + 3));
     for (const st of stuecke) {
-      const r = new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(st), Math.max(2, st.length * 2), 0.0055, 6, false), mat);
+      const r = new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(st), Math.max(2, st.length * 2), 0.55, 6, false), mat);
       r.userData.verbindung = v.id; gruppe.add(r);
     }
     scene.add(gruppe); boegen.push(gruppe);
@@ -300,12 +297,13 @@ function baueGlobus(daten, waehle) {
   }
   status.boegen = boegen.length;
 
-  // Ausweichquellen: eigener Punkt je Ausweichquelle, Name und Bogen nur bei passender Auswahl.
+  // Weitere Kettenoptionen (Ausweichquellen, Eddie 2026-11-14 "welche weiteren Kettenoptionen es gibt"): eigener türkiser Punkt
+  // je Ausweichquelle; ihre Bögen "könnte ersetzen" sind bei eingeschalteten Kettenoptionen immer sichtbar (blass), bei Auswahl
+  // des Glieds bzw. der Ausweichquelle kräftig. Namen erscheinen nur bei passender Auswahl (Übersicht bleibt lesbar).
   const altMarken = [], altBoegen = [];
-  const ALT = Object.fromEntries((daten.alternativen || []).map(a => [a.id, a]));
   for (const a of daten.alternativen || []) {
     const p = vec(a.ort.lat, a.ort.lon, 1.004);
-    const m = new THREE.Mesh(new THREE.SphereGeometry(0.009, 14, 10), new THREE.MeshBasicMaterial({color: FARBE_ALT}));
+    const m = new THREE.Mesh(new THREE.SphereGeometry(0.9, 14, 10), new THREE.MeshBasicMaterial({color: FARBE_ALT}));
     m.position.copy(p); scene.add(m);
     const b = document.createElement('button');
     b.className = 'marke alt weg'; b.type = 'button'; b.dataset.alternative = a.id; b.setAttribute('aria-pressed', 'false');
@@ -316,8 +314,8 @@ function baueGlobus(daten, waehle) {
       const o = pos[sid];
       if (o.lat === null || (o.lat === a.ort.lat && o.lon === a.ort.lon)) continue;
       const pts = bogenPunkte(o, a.ort), mat = new THREE.MeshBasicMaterial({color: FARBE_ALT, transparent: true, opacity: 0.9});
-      const g = new THREE.Group(); g.userData = {alt: a.id, glied: sid}; g.visible = false;
-      for (let i = 0; i + 2 < pts.length; i += 4) g.add(new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts.slice(i, i + 3)), 4, 0.0035, 5, false), mat));
+      const g = new THREE.Group(); g.userData = {alt: a.id, glied: sid, mat}; g.visible = false;
+      for (let i = 0; i + 2 < pts.length; i += 4) g.add(new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts.slice(i, i + 3)), 4, 0.35, 5, false), mat));
       scene.add(g); altBoegen.push(g);
     }
   }
@@ -337,7 +335,8 @@ function baueGlobus(daten, waehle) {
     if (treffer) waehle({typ: 'verbindung', id: treffer.object.userData.verbindung});
   });
 
-  const blick = vec(8, 18, host.clientWidth < host.clientHeight * 1.1 ? 4.3 : 3.2); camera.position.copy(blick); controls.update();
+  // Blick auf die Kette (DR Kongo bis Norditalien), wie bisher; danach bedient man den Globus wie den Hauptglobus.
+  engine.focusLocation(8, 18, host.clientWidth < host.clientHeight * 1.1 ? 345 : 290);
   // Handy (schmaler Globus): Namensschilder, die sich ueberdecken, werden zu einem Buendel mit Knopf "+n";
   // Mengen-Schilder nur fuer den gewaehlten Bogen bzw. die Boegen am gewaehlten Glied.
   const offen = new Set(), buendelKnoepfe = [];
@@ -347,7 +346,7 @@ function baueGlobus(daten, waehle) {
     while (buendelKnoepfe.length <= n) {
       const b = document.createElement('button');
       b.className = 'buendel weg'; b.type = 'button';
-      b.addEventListener('click', ev => { ev.stopPropagation(); const k = b.dataset.buendel; offen.has(k) ? offen.delete(k) : offen.add(k); zeichne(); });
+      b.addEventListener('click', ev => { ev.stopPropagation(); const k = b.dataset.buendel; offen.has(k) ? offen.delete(k) : offen.add(k); bild(); zeichne(); });
       host.append(b); buendelKnoepfe.push(b);
     }
     return buendelKnoepfe[n];
@@ -363,19 +362,15 @@ function baueGlobus(daten, waehle) {
       if (zeigen) status.schilder_gezeigt.push(v);
     }
   }
-  let anforderung = 0;
-  function zeichne() { if (!anforderung) anforderung = requestAnimationFrame(bild); }
+  // Schilder je gezeichnetem Bild des Motors neu setzen (onCameraView läuft vor jedem Bild).
   function bild() {
-    anforderung = 0;
     const w = host.clientWidth, h = host.clientHeight;
-    if (renderer.domElement.width !== Math.floor(w * renderer.getPixelRatio())) { renderer.setSize(w, h, false); camera.aspect = w / h; camera.updateProjectionMatrix(); }
-    const bewegt = controls.update();
-    renderer.render(scene, camera);
+    camera.updateMatrixWorld();
     const cam = camera.position.clone().normalize();
     // Marken projizieren und ueberlappende nach oben schieben (gierig, von unten nach oben).
     const belegt = [];
     schilderZeigen();
-    const liste = marken.concat(altMarken.filter(m => status.alt_sichtbar.includes(m.alt)), schilder.filter(m => m.gezeigt)).map(m => { const p = m.pos.clone().project(camera); return {m, x: (p.x + 1) / 2 * w, y: (1 - p.y) / 2 * h, sichtbar: m.pos.clone().normalize().dot(cam) > 0.15}; })
+    const liste = marken.concat(altMarken.filter(m => status.alt_sichtbar.includes(m.alt)), schilder.filter(m => m.gezeigt)).map(m => { const p = m.pos.clone().project(camera); return {m, x: (p.x + 1) / 2 * w, y: (1 - p.y) / 2 * h, sichtbar: m.pos.clone().normalize().dot(cam) > 0.15 && Math.abs(p.x) <= 1.05 && Math.abs(p.y) <= 1.05}; })
       .sort((a, b) => b.y - a.y);
     // Buendel (nur Handy): Glied-Marken, deren Schilder sich an der Ausgangsstelle ueberdecken
     const versteckt = new Set(), koepfe = new Map();
@@ -424,12 +419,11 @@ function baueGlobus(daten, waehle) {
       e.m.el.style.left = `${e.x}px`; e.m.el.style.top = `${y}px`;
     }
     for (let i = nb; i < buendelKnoepfe.length; i++) buendelKnoepfe[i].classList.add('weg');
-    if (bewegt) zeichne();
   }
-  controls.addEventListener('change', zeichne);
-  addEventListener('resize', zeichne);
+  engine.onCameraView(bild);
   zeichne();
   return {
+    engine,
     risiko() {
       status.risiko_ringe = 0;
       for (const r of ringe) {
@@ -477,16 +471,21 @@ function baueGlobus(daten, waehle) {
       }
       status.alt_sichtbar = altFuer(auswahl);
       const glied = auswahl?.typ === 'alternative' ? null : auswahl?.id;
-      for (const g of altBoegen) g.visible = status.alt_sichtbar.includes(g.userData.alt) && (!glied || g.userData.glied === glied);
+      status.optionen_boegen = 0;
+      for (const g of altBoegen) {
+        const kraeftig = status.alt_sichtbar.includes(g.userData.alt) && (!glied || g.userData.glied === glied);
+        g.visible = kraeftig || status.optionen;
+        g.userData.mat.opacity = kraeftig ? 0.95 : 0.4;
+        if (g.visible) status.optionen_boegen++;
+      }
       for (const m of altMarken) {
         m.el.classList.toggle('weg', !status.alt_sichtbar.includes(m.alt));
         m.el.setAttribute('aria-pressed', String(auswahl?.typ === 'alternative' && auswahl.id === m.alt));
       }
-      zeichne();
+      bild(); zeichne();   // Schilder sofort setzen, nicht erst mit dem nächsten Bild des Motors (am Handy 20 Bilder/s)
     },
   };
 }
-
 // --- Ausfall-Simulation ----------------------------------------------------------------------------------------------
 const STATUS_TEXT = {BELEGT: ['belegt', 'f'], RECHNUNG: ['Rechnung aus belegten Werten', 'r'], ANNAHME: ['Annahme', 'a'], UNBEKANNT: ['unbekannt', 'u']};
 const statusChip = st => `<span class="chip ${STATUS_TEXT[st][1]}" data-status="${esc(st)}">${esc(STATUS_TEXT[st][0])}</span>`;
@@ -804,6 +803,9 @@ async function start() {
     if (!status.ausfallModus && status.auswahl?.typ === 'ausfall') waehle(null);
   });
   $('risiko-an').addEventListener('click', () => risikoAn(!status.risiko));
+  $('optionen-an').addEventListener('click', () => {   // weitere Kettenoptionen (Ausweichquellen) dauerhaft auf dem Globus
+    status.optionen = !status.optionen; $('optionen-an').setAttribute('aria-pressed', String(status.optionen)); globus?.hebe(status.auswahl);
+  });
   $('risiko-kategorien').addEventListener('click', e => { const b = e.target.closest('[data-risiko-kat]'); if (b) risikoAn(true, b.dataset.risikoKat); });
   $('risiko-matrix').addEventListener('click', e => { const b = e.target.closest('[data-risiko-feld]'); if (b) waehle({typ: 'risiko', id: b.dataset.risikoFeld}); });
   $('glieder').addEventListener('click', e => { const b = e.target.closest('[data-glied]'); if (b) waehle({typ: 'standort', id: b.dataset.glied}); });
@@ -813,7 +815,7 @@ async function start() {
   $('legende-knopf')?.addEventListener('click', () => {
     const auf = $('globus').classList.toggle('legende-offen'); $('legende-knopf').setAttribute('aria-expanded', String(auf));
   });
-  try { globus = baueGlobus(daten, waehle); } catch (e) { $('globus').insertAdjacentHTML('beforeend', `<p class="fehler">3D-Ansicht nicht verfügbar: ${esc(e.message)}</p>`); }
+  try { globus = baueGlobus(daten, waehle); installRuhe(globus.engine, {offen: () => !!status.auswahl}); } catch (e) { $('globus').insertAdjacentHTML('beforeend', `<p class="fehler">3D-Ansicht nicht verfügbar: ${esc(e.message)}</p>`); }
   const w = par.get('w'), af = par.get('ausfall'), rk = par.get('risiko');
   if (rk && daten.risikoebene) risikoAn(true, rk === 'ALLE' || daten.risikoebene.kategorien.some(k => k.id === rk) ? rk : 'ALLE');
   const rf = w && w.includes(':') && daten.risikoebene ? w.split(':') : null;

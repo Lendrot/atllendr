@@ -87,7 +87,7 @@ const num=n=>new Intl.NumberFormat('de-DE').format(n);
  *  Annahmen-Atlas): Klick auf eine Vernetzungsfraktion schaltet die Gesamtvernetzung ein, zeigt nur diese VF und fährt auf die
  *  Gesamtansicht (engine.home); Menü "+ VF" schaltet weitere hinzu, "Alle" stellt zurück. */
 export function attachGesamt({engine,sites,getAtlas,toAtlas,host}){
- const sw=host.querySelector('.sites-toggle .layer-switch');if(!sw||!sites?.allLinks)return null;
+ const sw=(host.querySelector('.sites-toggle .layer-switch')||document.querySelector('.sites-toggle .layer-switch'));  // Lesehälfte (lesehaelfte.mjs) hängt den Kasten ab 761 px aus .space umif(!sw||!sites?.allLinks)return null;
  const button=document.createElement('button');button.type='button';button.dataset.gesamt='';button.setAttribute('aria-pressed','false');button.innerHTML='<i class="layer-net"></i>Gesamtvernetzung';sw.append(button);
  const panel=document.createElement('section');panel.className='gesamt-panel';panel.id='gesamt-panel';panel.setAttribute('aria-label','Gesamtvernetzung');host.append(panel);
  const off=Object.fromEntries(GRUPPEN.map(([g])=>[g,new Set()]));

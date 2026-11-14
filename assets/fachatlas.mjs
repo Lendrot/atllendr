@@ -6,7 +6,7 @@ import {GENERATED} from './fachatlas-rohstoffe.mjs';  // scripts/rohstoffe/neuer
 
 export const FACHATLANTEN={
  rohstoffwelt:{label:'Rohstoffwelt',area:'resources',subtype:null,sites:'rohstoffwelt',tools:[['/minen/','Rohstoffwelt-Werkzeuge']]},
- kupfer:{label:'Kupfer',area:'resources',subtype:'Kupferkathoden',sites:'kupfer',tools:[['/kupfer/','Kupfer Intelligence'],['/kupfer/markt/','Kupfermarkt']]},
+ kupfer:{label:'Kupfer',area:'resources',subtype:'Kupferkathoden',sites:'kupfer',tools:[['/kupfer/','Kupfer Intelligence'],['/kupfer/markt/','Kupfermarkt'],['/kupferkette/','Kette Kamoa→Prysmian']]},
  abfall:{label:'Abfallwirtschaft Europa',area:'waste',subtype:null,sites:'abfall',focus:[50,10,190],tools:[['/abfall/','Abfall-Kennzahlen']]},
  // EPA TRI: no evidenced recipient routes (themen card), so the main globe shows no relations in this Fachatlas.
  anlagen:{label:'EPA-Anlagen',area:null,subtype:null,sites:'anlagen',focus:[39,-97,230],tools:[['/anlagen/','EPA-Anlagen-Recherche']]},

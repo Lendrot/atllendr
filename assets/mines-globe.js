@@ -6,6 +6,8 @@ import {buildOwnershipIndex,ownershipContext,ownershipExportJson,ownershipExport
 import {resourceRestrictions,resourceGapRefs,safeResourceExport,renderResourceAvailability,resourceAnalysisExclusions} from './safe-unknown.mjs';
 import {installEmbedControls} from './embed-controls.mjs';
 import {quelleHtml,quelleKurz} from './quellen-anzeige.mjs';
+import {installLesehaelfte} from './lesehaelfte.mjs';
+import {FACHATLANTEN} from './fachatlas.mjs';
 const $=id=>document.getElementById(id),esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const fmt=v=>v==null?'UNKNOWN':new Intl.NumberFormat('de-DE',{maximumFractionDigits:6}).format(v);
 const safe=url=>/^https?:\/\//.test(url||'')?esc(url):'#';
@@ -181,7 +183,7 @@ async function start(){
   const overview=await json('/foundation/v28.3/'+index.pages[0].path);
   catalogAssets=overview;assets=mergeAssets([...catalogAssets,...primary.assets],legacy.mines,observations);graph=buildResourceGraph(assets,primary.relationships);bindFilters();restoreFilters();
   render();
-  try{const {createGlobe}=await import('./globe-scene.js');engine=createGlobe($('globe'),{markerScale:world==='mines'?1.7:1.3,onCompanyClick:records=>{if(records.length===1)select(byId(records[0].mineId));else{clusterIds=new Set(records.map(r=>r.mineId));limit=100;$('cluster').innerHTML=`<strong>${records.length} Standorte im Cluster</strong><button id="cluster-clear">Cluster auflösen</button>`;$('cluster').hidden=false;$('cluster-clear').onclick=()=>{clusterIds=null;$('cluster').hidden=true;render()};render()}},onNotice:notice,onError:notice,onRotation:active=>$('rotation').setAttribute('aria-pressed',String(active))});render();$('loading').hidden=true;}
+  try{const {createGlobe}=await import('./globe-scene.js');engine=createGlobe($('globe'),{markerScale:world==='mines'?1.7:1.3,onCompanyClick:records=>{if(records.length===1)select(byId(records[0].mineId));else{clusterIds=new Set(records.map(r=>r.mineId));limit=100;$('cluster').innerHTML=`<strong>${records.length} Standorte im Cluster</strong><button id="cluster-clear">Cluster auflösen</button>`;$('cluster').hidden=false;$('cluster-clear').onclick=()=>{clusterIds=null;$('cluster').hidden=true;render()};render()}},onNotice:notice,onError:notice,onRotation:active=>$('rotation').setAttribute('aria-pressed',String(active))});render();$('loading').hidden=true;import('./globe-ruhe.mjs').then(m=>m.installRuhe(engine,{offen:()=>!$('detail').hidden||!$('cluster').hidden})).catch(console.error);}
   catch(e){$('loading').innerHTML='3D nicht verfügbar. Liste und Datendetails bleiben nutzbar.';console.error(e);for(const id of ['zoom-in','zoom-out','home','rotation'])$(id).disabled=true}
   hydrateLegacy().catch(e=>{notice('Zusatzdaten konnten nicht geladen werden.');console.error(e)});
   if($('risk-open'))$('risk-open').onclick=()=>openRiskOverview();
@@ -189,5 +191,12 @@ async function start(){
   const target=new URLSearchParams(location.search).get('id');if(target){const a=await findAsset(target);if(a){if(!visible().some(x=>x.id===a.id)){for(const id of ['status','country','commodity','quality'])$(id).value='all';$('kind').value=a.kind==='operation_group'?'mine':a.kind}$('search').value=a.name;persistFilters();render();select(a)}}
  }catch(e){$('coverage').textContent='Daten nicht geladen';$('loading').innerHTML='Daten konnten nicht geladen werden. <button id="retry">Erneut versuchen</button>';$('retry').onclick=start;console.error(e)}
 }
-start();
+// Neues Design (analysis/NEUES_DESIGN.md): links lesen (50 %), rechts der Globus. Der Link zum Hauptglobus folgt dem
+// Rohstoff-Filter: gibt es für den Rohstoff einen Fachatlas, öffnet er /atlas/?fach=<id> (Hauptglobus nur dieser Rohstoff).
+installLesehaelfte({workspace:document.querySelector('.app .workspace'),space:document.querySelector('.app .space'),ziele:[['.mine-identity','ebenen'],['.legend','ebenen'],['#cluster','ebenen'],['#detail','detail']]});
+const FACH_NACH_NAME=new Map(Object.entries(FACHATLANTEN).flatMap(([id,f])=>[[id,id],[f.label.toLowerCase(),id],...(f.aliases||[]).map(a=>[a.toLowerCase(),id])]));
+function fachFuerRohstoff(name){return FACH_NACH_NAME.get(String(name||'').trim().toLowerCase())||'rohstoffwelt'}
+function fachLink(){const a=document.querySelector('.fach-globe a');if(!a)return;const id=fachFuerRohstoff($('commodity').value);a.href='/atlas/?fach='+id;a.textContent=id==='rohstoffwelt'?'Auf dem 3D-Hauptglobus ansehen':'Auf dem 3D-Hauptglobus ansehen: nur '+FACHATLANTEN[id].label}
+$('commodity').addEventListener('change',fachLink);addEventListener('popstate',fachLink);
+start().then(fachLink);
 addEventListener('popstate',()=>{if(!assets.length)return;restoreFilters();clusterIds=null;limit=100;render()});
