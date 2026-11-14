@@ -1,9 +1,10 @@
 import {clusterProjected,markerPixels} from './globe-detail.mjs';
 import {statuses,hasPoint} from './market-logic.mjs';
 import * as THREE from 'three';
-import {GlobeNavigation} from './globe-navigation.js';
+import {GlobeNavigation,MIN_DISTANCE_NO_TILES} from './globe-navigation.js';
 import {borderPositions} from './globe-borders.mjs';
 import {geoVector,vectorGeo,arcSample,frontVisible,greatCircleAngle} from './globe-math.mjs';
+import {createTileLayer} from './globe-tiles.mjs';
 
 const vec=coordinates=>new THREE.Vector3(...coordinates);
 const up=new THREE.Vector3(0,1,0);
@@ -33,8 +34,10 @@ export function createGlobe(host,callbacks={}){
   renderer.domElement.setAttribute('aria-label','3D-Erde: Ziehen zum Drehen, Mausrad oder zwei Finger zum Zoomen. Pfeiltasten drehen; Plus und Minus zoomen. Alle Einträge sind auch in der Liste erreichbar.');
   const controls=new GlobeNavigation(camera,renderer.domElement,{
     onStart:()=>{flight=null;stopRotation();callbacks.onHover?.(null);},
-    onHover:event=>{if(introHidden)return;if(!event){callbacks.onHover?.(null);return;}const hit=pick(event,false);renderer.domElement.style.cursor=hit?'pointer':'grab';callbacks.onHover?.(hit?.deal||null,event.clientX,event.clientY);if(!hit&&callbacks.onSiteLinkHover){const l=pickLink(event);if(l)renderer.domElement.style.cursor='pointer';callbacks.onSiteLinkHover(l,event.clientX,event.clientY);}},
-    onTap:event=>{if(introHidden)return;const hit=pick(event,true);if(hit?.deal)callbacks.onDealClick?.(hit.deal.id);else if(hit?.companies)callbacks.onCompanyClick?.(hit.companies);else if(hit?.sites)callbacks.onSiteClick?.(hit.sites);else if(hit?.links)callbacks.onSiteLinkClick?.(hit.links);}
+    onHover:event=>{if(introHidden)return;if(!event){callbacks.onHover?.(null);callbacks.onSurfaceHover?.(null);return;}const hit=pick(event,false);renderer.domElement.style.cursor=hit?'pointer':'grab';callbacks.onHover?.(hit?.deal||null,event.clientX,event.clientY);let l=null;if(!hit&&callbacks.onSiteLinkHover){l=pickLink(event);if(l)renderer.domElement.style.cursor='pointer';callbacks.onSiteLinkHover(l,event.clientX,event.clientY);}
+      // Land unter der Maus (Eddie 2026-11-14): hebt sich immer hervor; busy = Punkt oder Verbindung getroffen (deren Klick hat Vorrang).
+      if(callbacks.onSurfaceHover){const at=surfaceAt(event),busy=!!(hit||l);callbacks.onSurfaceHover(at,event,busy);if(at&&!busy&&callbacks.surfaceClickable?.(at))renderer.domElement.style.cursor='pointer';}},
+    onTap:event=>{if(introHidden)return;const hit=pick(event,true);if(hit?.deal)callbacks.onDealClick?.(hit.deal.id);else if(hit?.companies)callbacks.onCompanyClick?.(hit.companies);else if(hit?.sites)callbacks.onSiteClick?.(hit.sites);else if(hit?.links)callbacks.onSiteLinkClick?.(hit.links);callbacks.onSurfaceTap?.(surfaceAt(event),event,!!hit);}
  
   },host.parentElement);
   controls.autoRotate=false;
@@ -79,6 +82,9 @@ export function createGlobe(host,callbacks={}){
     transparent:true,depthWrite:false,blending:THREE.AdditiveBlending
   });
   scene.add(new THREE.Mesh(new THREE.SphereGeometry(102,80,56),atmosphereMaterial));
+  // Scharfe Erde beim Heranzoomen: NASA-Kacheln nur für den sichtbaren Ausschnitt (assets/globe-tiles.mjs).
+  const tiles=createTileLayer(THREE,scene,renderer,{invalidate:()=>invalidate(),host});
+  if(tiles.state().disabled)controls.minDistance=MIN_DISTANCE_NO_TILES;
   // Weltraum: the sky is one group (stars, with callbacks.space also Milky Way and nebulae) that turns against the
   // Earth's rotation while the Earth spins (Eddie 2026-11-08). Without callbacks.space the plain star dots as before.
   const sky=new THREE.Group();sky.matrixAutoUpdate=false;scene.add(sky);
@@ -347,6 +353,13 @@ export function createGlobe(host,callbacks={}){
   }
   // Überfahren einer Fachatlas-Verbindung (Eddie 2026-11-11: Menge und Wert direkt am Bogen): höchstens alle 80 ms ein Treffertest.
   let linkPickAt=0,linkPickLast=null;
+  // Erdoberfläche unter dem Zeiger als Breite/Länge (Kugel mit Radius 100, Achsen wie geoVector); null = daneben.
+  const surfaceSphere=new THREE.Sphere(new THREE.Vector3(),100),surfaceRay=new THREE.Raycaster(),surfacePointer=new THREE.Vector2();
+  function surfaceAt(event){
+    const rect=canvas.getBoundingClientRect();surfacePointer.set((event.clientX-rect.left)/rect.width*2-1,-(event.clientY-rect.top)/rect.height*2+1);
+    surfaceRay.setFromCamera(surfacePointer,camera);const p=surfaceRay.ray.intersectSphere(surfaceSphere,new THREE.Vector3());
+    return p?{lat:Math.asin(Math.max(-1,Math.min(1,p.y/100)))*180/Math.PI,lon:Math.atan2(-p.z,p.x)*180/Math.PI}:null;
+  }
   function pickLink(event){
     const now=performance.now();if(now-linkPickAt<80)return linkPickLast;linkPickAt=now;
     if(!layers.lines||!siteLinks?.visible){linkPickLast=null;return null;}
@@ -489,9 +502,10 @@ export function createGlobe(host,callbacks={}){
     // Weltraum-Anflug: only the Earth, its atmosphere and the stars; data layers return when the intro ends.
     const hidden=(introHidden?[dealGroup,companyPoints,sitePoints,siteLinks]:[...(layers.points?[]:[companyPoints,sitePoints]),...(layers.lines?[]:[dealGroup,siteLinks])]).filter(o=>o?.visible);
     for(const o of hidden)o.visible=false;
+    tiles.update(camera,size.width,size.height);
     renderer.render(scene,camera);
     for(const o of hidden)o.visible=true;
   }
   wake();
-  return {introOrbit,introApproach,introEnd,introHit,project,startRotation,distance:()=>camera.position.length(),homeDistance,onCameraView:fn=>{viewListeners.push(fn);invalidate();},setLayers:next=>{Object.assign(layers,next);invalidate();},getLayers:()=>({...layers}),setCompanies,setSites,setSiteLinks,showSites:visible=>{sitesVisible=visible;if(sitePoints)sitePoints.visible=visible&&siteData?.n>0;if(siteLinks)siteLinks.visible=visible;invalidate();},setDeals,germany,filterDeals,selectDeal,focusLocation,home,zoom,toggleRotation,showCompanies:visible=>{companiesVisible=visible;if(companyPoints)companyPoints.visible=visible;invalidate();},isRotating:()=>controls.autoRotate,dispose:()=>{disposed=true;cancelAnimationFrame(frame);frame=0;visibility.disconnect();document.removeEventListener('visibilitychange',onVisibility);for(const type of inputs)inputHost.removeEventListener(type,wake,{capture:true});pointMaterial.dispose();siteMaterial.dispose();pickMaterial.dispose();resizeObserver.disconnect();controls.dispose();scene.traverse(o=>{o.geometry?.dispose();if(Array.isArray(o.material))o.material.forEach(m=>m.dispose());else o.material?.dispose();});renderer.dispose();}};
+  return {introOrbit,introApproach,introEnd,introHit,project,startRotation,distance:()=>camera.position.length(),homeDistance,onCameraView:fn=>{viewListeners.push(fn);invalidate();},setLayers:next=>{Object.assign(layers,next);invalidate();},getLayers:()=>({...layers}),setCompanies,setSites,setSiteLinks,showSites:visible=>{sitesVisible=visible;if(sitePoints)sitePoints.visible=visible&&siteData?.n>0;if(siteLinks)siteLinks.visible=visible;invalidate();},setDeals,germany,filterDeals,selectDeal,focusLocation,home,zoom,toggleRotation,showCompanies:visible=>{companiesVisible=visible;if(companyPoints)companyPoints.visible=visible;invalidate();},isRotating:()=>controls.autoRotate,minDistance:()=>controls.minDistance,addLayer:build=>build({THREE,scene,camera,renderer,invalidate}),dispose:()=>{disposed=true;tiles.dispose();cancelAnimationFrame(frame);frame=0;visibility.disconnect();document.removeEventListener('visibilitychange',onVisibility);for(const type of inputs)inputHost.removeEventListener(type,wake,{capture:true});pointMaterial.dispose();siteMaterial.dispose();pickMaterial.dispose();resizeObserver.disconnect();controls.dispose();scene.traverse(o=>{o.geometry?.dispose();if(Array.isArray(o.material))o.material.forEach(m=>m.dispose());else o.material?.dispose();});renderer.dispose();}};
 }

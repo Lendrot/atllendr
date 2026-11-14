@@ -85,5 +85,8 @@ export async function attachSites(engine,host){
  apply();
  // Firmensuche (Eddie 2026-11-10): Standorte, deren Name nach Normalisierung gleich dem gesuchten Namen ist; Konzernsitze zuerst.
  const finde=(t,nrm)=>records.filter(r=>r&&r.name&&nrm(r.name)===t).sort((a,b)=>(b.dataset.id==='standorte')-(a.dataset.id==='standorte'));
- return {open,openLinks,kurz,finde,counts:data.counts,allLinks,setLinkFilter:fn=>{linkFilter=fn;apply();}};
+ // Länderansicht (globe-country.mjs): alle Standorte (im Fachatlas nur dessen) und die Zusatzangaben je Verbindung.
+ let siteRowsCache=null;
+ const siteRows=()=>siteRowsCache||(siteRowsCache=fach?records.filter(Boolean):data.rows.map((_,i)=>rowRecord(i)));
+ return {open,openLinks,kurz,finde,counts:data.counts,allLinks,siteRows,info:id=>data.link_info?.[id],setLinkFilter:fn=>{linkFilter=fn;apply();}};
 }

@@ -11,8 +11,8 @@
   "umfang": "Gezählt: auf dem Hauptglobus gezeichnete Verbindungen und alle Firmenverbindungen auf /verbindungen/. Nicht gezeichnete Verbindungen (ohne Koordinate) und der Annahmen-Atlas zählen nicht.",
   "stand": "2026-11-11",
   "inputs_sha256": {
-   "dist/assets/globe-sites.json": "9eaccda2dc6be4489d2629be384011e0f3b99763e4a61570e821127deeba7270",
-   "analysis/company-connections.json": "13f45d358c9ea95bbe9dbcfcaaca55825ac9c8ac9d5c915081d4495af08a1276",
+   "dist/assets/globe-sites.json": "0b8ab956fca5056dfbb7c833e1d2da1c153c1e9f7a81d3001311c55b2ae3c3c5",
+   "analysis/company-connections.json": "154041bea38376890f09b6d27405d6a021fe3df359b1a5f0e8dccf84bad9b43c",
    "analysis/approval-ledger.jsonl": "f797611a62385d7abb9a822a24922c49701df68fe39f06de4ff1e213633c5ea6"
   }
  },
@@ -23,8 +23,8 @@
   "wo": "Hauptatlas",
   "gesamt": 5390,
   "freigegeben": 218,
-  "ungeprueft": 5167,
-  "offen": 5,
+  "ungeprueft": 5171,
+  "offen": 1,
   "quote_pct": 4.0,
   "quote_text": "218 von 5.390 (4 %)",
   "freigegeben_quelle": {
@@ -46,8 +46,8 @@
   "wo": "Hauptatlas",
   "gesamt": 286,
   "freigegeben": 218,
-  "ungeprueft": 63,
-  "offen": 5,
+  "ungeprueft": 67,
+  "offen": 1,
   "quote_pct": 76.2,
   "quote_text": "218 von 286 (76 %)",
   "freigegeben_quelle": {
@@ -162,8 +162,8 @@
    "wo": "Hauptglobus (gezeichnete Bögen)",
    "gesamt": 4,
    "freigegeben": 0,
-   "ungeprueft": 0,
-   "offen": 4,
+   "ungeprueft": 4,
+   "offen": 0,
    "quote_pct": 0.0,
    "quote_text": "0 von 4 (0 %)",
    "freigegeben_quelle": {

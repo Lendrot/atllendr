@@ -2,9 +2,11 @@ import * as THREE from 'three';
 
 const origin=new THREE.Vector3();
 const surface=new THREE.Sphere(origin,100);
-export const MIN_DISTANCE=101.5;
+// 100,6 = rund 38 km über dem Boden (Eddie 2026-11-14 "weiter ranzoomen"); scharf durch Landsat-Kacheln (globe-tiles.mjs).
+// Ohne Kacheln (?kacheln=aus) setzt globe-scene.js wieder 101,5 (~96 km), weil das Grundbild darunter nur unscharf wird.
+export const MIN_DISTANCE=100.6,MIN_DISTANCE_NO_TILES=101.5;
 export const MAX_DISTANCE=590;
-export function zoomDistance(distance,factor){return THREE.MathUtils.clamp(100+(distance-100)*factor,MIN_DISTANCE,MAX_DISTANCE);}
+export function zoomDistance(distance,factor,min=MIN_DISTANCE,max=MAX_DISTANCE){return THREE.MathUtils.clamp(100+(distance-100)*factor,min,max);}
 
 // Rotate the camera around the fixed Earth. Rays intersect its surface, so
 // a finger moves a local place by the same screen distance at every altitude.
@@ -90,7 +92,7 @@ export class GlobeNavigation {
   }
   zoom(factor,point){
     const anchor=point?this.hit(point):null;
-    this.camera.position.setLength(zoomDistance(this.camera.position.length(),factor));this.update();
+    this.camera.position.setLength(zoomDistance(this.camera.position.length(),factor,this.minDistance,this.maxDistance));this.update();
     if(point)this.align(anchor,point);
   }
   state(){

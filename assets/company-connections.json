@@ -65,6 +65,10 @@
    "Übernahmen": 66
   },
   "nach_freigabe": {
+   "FREIGEGEBEN": 105,
+   "KANDIDAT": 63
+  },
+  "nach_pruefstufe": {
    "APPROVED": 105,
    "KANDIDAT": 4,
    "NICHT_GEPRUEFT": 59
@@ -1874,7 +1878,7 @@
    "anteil_pct": null,
    "stand": "2026-09-12",
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://www.rethmann-gruppe.de/",
    "quelle_titel": "RETHMANN Group",
    "input_record_ids": [
@@ -1884,7 +1888,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-at-ownership_rethmann_rhenus",
@@ -1900,7 +1905,7 @@
    "anteil_pct": null,
    "stand": "2026-09-12",
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://www.rethmann-gruppe.de/",
    "quelle_titel": "RETHMANN Group",
    "input_record_ids": [
@@ -1910,7 +1915,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-at-ownership_rethmann_saria",
@@ -1926,7 +1932,7 @@
    "anteil_pct": null,
    "stand": "2026-09-12",
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://www.rethmann-gruppe.de/",
    "quelle_titel": "RETHMANN Group",
    "input_record_ids": [
@@ -1936,7 +1942,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-n-cc2-rel-012",
@@ -1954,7 +1961,7 @@
    "anteil_pct": null,
    "stand": "2001-12-07",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://ec.europa.eu/competition/mergers/cases/decisions/m2646_de.pdf",
    "quelle_titel": "Sache Nr. COMP/M.2646 - Rhenus / Via Verkehr Holding (SNCF) / Rhenus-Keolis, Entscheidung nach Art. 6 Abs. 1 b",
    "belegstelle": [
@@ -1980,7 +1987,8 @@
    },
    "ueber_text": "direkte Verbindung",
    "herleitung_text": "neu belegt",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-n-cc2-rel-020",
@@ -1998,7 +2006,7 @@
    "anteil_pct": null,
    "stand": "2012-06-29",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://ec.europa.eu/competition/mergers/cases/decisions/m6285_673_2.pdf",
    "quelle_titel": "Case No COMP/M.6285 - SARIA / Danish Crown / Daka JV, Commission decision pursuant to Article 6(1)(b)",
    "belegstelle": [
@@ -2024,7 +2032,8 @@
    },
    "ueber_text": "direkte Verbindung",
    "herleitung_text": "neu belegt",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-at-loan_oeeb_gravita_2023",
@@ -2040,7 +2049,7 @@
    "anteil_pct": null,
    "stand": "Unterzeichnung 02.05.2023",
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://www.proparco.fr/en/carte-des-projets/gravita-netherlands",
    "quelle_titel": "Developing industrial recycling in Ghana and Senegal",
    "input_record_ids": [
@@ -2050,7 +2059,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-at-loan_proparco_gravita_2023",
@@ -2066,7 +2076,7 @@
    "anteil_pct": null,
    "stand": "Unterzeichnung 02.05.2023",
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://www.proparco.fr/en/carte-des-projets/gravita-netherlands",
    "quelle_titel": "Developing industrial recycling in Ghana and Senegal",
    "input_record_ids": [
@@ -2076,7 +2086,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-n-cc2-rel-037",
@@ -2094,7 +2105,7 @@
    "anteil_pct": null,
    "stand": "2024-07-02",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.nsenergybusiness.com/news/acwa-power-secures-financing-for-tashkent-riverside-project-in-uzbekistan/",
    "quelle_titel": "ACWA Power secures financing for Tashkent Riverside project in Uzbekistan",
    "belegstelle": [
@@ -2120,7 +2131,8 @@
    },
    "ueber_text": "direkte Verbindung",
    "herleitung_text": "neu belegt",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-3ef23e52-5e4",
@@ -2136,7 +2148,7 @@
    "anteil_pct": null,
    "stand": null,
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.first-quantum.com/wp-content/uploads/2026/03/First-Quantum-2025-AR-Final-Web.pdf",
    "quelle_titel": "fqm-ar-2025",
    "weitere_quellen": [],
@@ -2148,7 +2160,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-42cfc177-d79",
@@ -2164,7 +2177,7 @@
    "anteil_pct": 80,
    "stand": null,
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.first-quantum.com/wp-content/uploads/2026/03/First-Quantum-2025-AR-Final-Web.pdf",
    "quelle_titel": "fqm-ar-2025",
    "weitere_quellen": [],
@@ -2175,7 +2188,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-04d96a54-2fb",
@@ -2191,7 +2205,7 @@
    "anteil_pct": null,
    "stand": "2026-02-19",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.trafigura.com/news-and-insights/press-releases/2026/trafigura-aurubis-and-kamoa-copper-complete-first-sale-of-low-carbon-refined-copper-via-the-lobito-atlantic-railway/",
    "quelle_titel": "trafigura-anodes2026",
    "weitere_quellen": [],
@@ -2202,7 +2216,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-293d7e05-155",
@@ -2218,7 +2233,7 @@
    "anteil_pct": 20,
    "stand": null,
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.first-quantum.com/wp-content/uploads/2026/03/First-Quantum-2025-AR-Final-Web.pdf",
    "quelle_titel": "fqm-ar-2025",
    "weitere_quellen": [],
@@ -2229,7 +2244,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-c35efe38-ee8",
@@ -2245,7 +2261,7 @@
    "anteil_pct": null,
    "stand": "2021-06-09",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.ivanhoemines.com/news-stories/news-release/kamoa-kakulas-off-take-agreements-signed-for-phase-1-blister-copper-and-copper-concentrate/",
    "quelle_titel": "offtake2021",
    "weitere_quellen": [],
@@ -2256,7 +2272,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-n-cc3-rel-001",
@@ -2274,7 +2291,7 @@
    "anteil_pct": null,
    "stand": "2026-09-23",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.aurubis.com/en/media/press-releases/press-releases-2026/prysmian-and-aurubis-deepen-strategic-partnership-with-landmark-long-term-copper-agreement",
    "quelle_titel": "Prysmian and Aurubis deepen strategic partnership with landmark long-term copper agreement",
    "belegstelle": [
@@ -2299,7 +2316,8 @@
    },
    "ueber_text": "direkte Verbindung",
    "herleitung_text": "neu belegt",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-n-cc2-rel-008",
@@ -2317,7 +2335,7 @@
    "anteil_pct": 50,
    "stand": "2025-01-15",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.lundinmining.com/news/lundin-mining-completes-joint-acquisition-of-filo-with-bhp-and-50-sale-of-josemaria-to-form-vicuxf1a-corp",
    "quelle_titel": "Lundin Mining Completes Joint Acquisition of Filo with BHP and 50% Sale of Josemaria to Form Vicuña Corp.",
    "belegstelle": [
@@ -2343,7 +2361,8 @@
    },
    "ueber_text": "direkte Verbindung",
    "herleitung_text": "neu belegt",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-n-cc2-rel-021",
@@ -2361,7 +2380,7 @@
    "anteil_pct": null,
    "stand": "2025-12-31",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0325/2026032500043.pdf",
    "quelle_titel": "China Nonferrous Mining Corporation Limited – Announcement of Annual Results for the Year Ended 31 December 2025",
    "belegstelle": [
@@ -2386,7 +2405,8 @@
    },
    "ueber_text": "direkte Verbindung",
    "herleitung_text": "neu belegt",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-n-cc1-rel-003",
@@ -2404,7 +2424,7 @@
    "anteil_pct": 1.0,
    "stand": "2026-03-30",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.ivanhoemines.com/wp-content/uploads/20260331-IVN_AIF_31-Dec-2025-ABF2.pdf",
    "quelle_titel": "Ivanhoe Mines Ltd. Annual Information Form for the year ended December 31, 2025",
    "belegstelle": [
@@ -2435,7 +2455,8 @@
    },
    "ueber_text": "direkte Verbindung",
    "herleitung_text": "neu belegt",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-n-cc2-rel-009",
@@ -2453,7 +2474,7 @@
    "anteil_pct": 77,
    "stand": "2024-07-11",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.teck.com/news/news-releases/2024/teck-reports-unaudited-third-quarter-results-for-2024",
    "quelle_titel": "Teck Reports Unaudited Third Quarter Results for 2024",
    "belegstelle": [
@@ -2479,7 +2500,8 @@
    },
    "ueber_text": "direkte Verbindung",
    "herleitung_text": "neu belegt",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-n-cc2-rel-014",
@@ -2497,7 +2519,7 @@
    "anteil_pct": null,
    "stand": "2020-12-01",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.ivanhoemines.com/news-stories/news-release/kamoa-kakula-copper-project-secures-us420-million-in-project-level-credit-facilities-including-a-eur-176-million-us211-million-covered-equipment-financing-facility-with-a-us9-million-down-paymen/",
    "quelle_titel": "Kamoa-Kakula Copper Project secures US$420 million in project-level credit facilities ...",
    "belegstelle": [
@@ -2521,7 +2543,8 @@
    },
    "ueber_text": "direkte Verbindung",
    "herleitung_text": "neu belegt",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-n-cc1-rel-002",
@@ -2539,7 +2562,7 @@
    "anteil_pct": 49.5,
    "stand": "2026-03-30",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.ivanhoemines.com/wp-content/uploads/20260331-IVN_AIF_31-Dec-2025-ABF2.pdf",
    "quelle_titel": "Ivanhoe Mines Ltd. Annual Information Form for the year ended December 31, 2025",
    "belegstelle": [
@@ -2571,7 +2594,8 @@
    },
    "ueber_text": "direkte Verbindung",
    "herleitung_text": "neu belegt",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-n-cc2-rel-013",
@@ -2589,7 +2613,7 @@
    "anteil_pct": 9.8,
    "stand": "2019-10-08",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2019/1008/ltn20191008779.pdf",
    "quelle_titel": "Announcement in relation to Increase in Shareholding in Ivanhoe Mines Ltd. of Canada",
    "belegstelle": [
@@ -2615,7 +2639,8 @@
    },
    "ueber_text": "direkte Verbindung",
    "herleitung_text": "neu belegt",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-n-cc1-rel-004",
@@ -2633,7 +2658,7 @@
    "anteil_pct": 20.0,
    "stand": "2026-03-30",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.ivanhoemines.com/wp-content/uploads/20260331-IVN_AIF_31-Dec-2025-ABF2.pdf",
    "quelle_titel": "Ivanhoe Mines Ltd. Annual Information Form for the year ended December 31, 2025",
    "belegstelle": [
@@ -2657,7 +2682,8 @@
    },
    "ueber_text": "direkte Verbindung",
    "herleitung_text": "neu belegt",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-n-cc2-rel-022",
@@ -2675,7 +2701,7 @@
    "anteil_pct": null,
    "stand": "2024-01-16",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.ivanhoemines.com/?p=4503",
    "quelle_titel": "Ivanhoe Mines and Gécamines Sign New Joint Venture to Restart the Ultra-High-Grade Kipushi Mine, a Century Since First Opening",
    "belegstelle": [
@@ -2701,7 +2727,8 @@
    },
    "ueber_text": "direkte Verbindung",
    "herleitung_text": "neu belegt",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-n-cc2-rel-038",
@@ -2719,7 +2746,7 @@
    "anteil_pct": null,
    "stand": "2015-12-08",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.ivanhoemines.com/news-stories/news-release/ivanhoe-mines-and-zijin-mining-group-complete-deal-for-zijins-us412-million-investment-in-the-kamoa-copper-project/",
    "quelle_titel": "Ivanhoe Mines and Zijin Mining Group complete deal for Zijin’s US$412 million investment in the Kamoa Copper Project",
    "belegstelle": [
@@ -2744,7 +2771,8 @@
    },
    "ueber_text": "direkte Verbindung",
    "herleitung_text": "neu belegt",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-n-cc1-rel-001",
@@ -2762,7 +2790,7 @@
    "anteil_pct": 49.5,
    "stand": "2026-03-30",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.ivanhoemines.com/wp-content/uploads/20260331-IVN_AIF_31-Dec-2025-ABF2.pdf",
    "quelle_titel": "Ivanhoe Mines Ltd. Annual Information Form for the year ended December 31, 2025",
    "belegstelle": [
@@ -2800,7 +2828,8 @@
    },
    "ueber_text": "direkte Verbindung",
    "herleitung_text": "neu belegt",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-n-cc2-rel-003",
@@ -2818,7 +2847,7 @@
    "anteil_pct": null,
    "stand": "2026-03-05",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.investegate.co.uk/announcement/rns/solgold--solg/de-listing-and-cancellation-of-trading-/9459080",
    "quelle_titel": "SolGold plc – De-Listing and Cancellation of Trading (RNS)",
    "belegstelle": [
@@ -2844,7 +2873,8 @@
    },
    "ueber_text": "direkte Verbindung",
    "herleitung_text": "neu belegt",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-n-cc2-rel-023",
@@ -2862,7 +2892,7 @@
    "anteil_pct": null,
    "stand": "2025-08-08",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.zambiamonitor.com/bank-of-zambia-expands-gold-purchase-programme-to-small-scale-miners-renews-kansanshi-deal/",
    "quelle_titel": "Bank of Zambia expands gold purchase programme to small-scale miners, renews Kansanshi deal",
    "belegstelle": [
@@ -2888,7 +2918,8 @@
    },
    "ueber_text": "direkte Verbindung",
    "herleitung_text": "neu belegt",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-n-cc2-rel-030",
@@ -2906,7 +2937,7 @@
    "anteil_pct": null,
    "stand": null,
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.fluor.com/projects/minera-escondida-copper-mine-epcm",
    "quelle_titel": "BHP Billiton, Rio Tinto, JECO and JECO 2 Minera Escondida Copper Mine",
    "belegstelle": [
@@ -2930,7 +2961,8 @@
    },
    "ueber_text": "direkte Verbindung",
    "herleitung_text": "neu belegt",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-n-cc2-rel-031",
@@ -2948,7 +2980,7 @@
    "anteil_pct": 30,
    "stand": "2021-02-15",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.mining-technology.com/news/mitsubishi-materials-mantoverde-copper-mine",
    "quelle_titel": "Mitsubishi Materials acquires 30% stake in Mantoverde copper mine",
    "belegstelle": [
@@ -2973,7 +3005,8 @@
    },
    "ueber_text": "direkte Verbindung",
    "herleitung_text": "neu belegt",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-n-cc2-rel-039",
@@ -3008,7 +3041,8 @@
    ],
    "ueber_text": "direkte Verbindung",
    "herleitung_text": "neu belegt (Kandidat)",
-   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben"
+   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben",
+   "pruefstufe": "KANDIDAT"
   },
   {
    "id": "cc-n-cc2-rel-010",
@@ -3026,7 +3060,7 @@
    "anteil_pct": null,
    "stand": "2023-08-27",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.first-quantum.com/news/first-quantum-and-rio-tinto-announce-completion-of-the-la-granja-agreement/",
    "quelle_titel": "First Quantum and Rio Tinto Announce Completion of the La Granja Agreement",
    "belegstelle": [
@@ -3052,7 +3086,8 @@
    },
    "ueber_text": "direkte Verbindung",
    "herleitung_text": "neu belegt",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-n-cc2-rel-002",
@@ -3070,7 +3105,7 @@
    "anteil_pct": null,
    "stand": "2025-08-05",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.first-quantum.com/wp-content/uploads/2026/03/First-Quantum-2025-AR-Final-Web.pdf",
    "quelle_titel": "First Quantum Minerals Ltd. – 2025 Annual Report (inkl. MD&A Q4 2025)",
    "belegstelle": [
@@ -3096,7 +3131,8 @@
    },
    "ueber_text": "direkte Verbindung",
    "herleitung_text": "neu belegt",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-n-cc2-rel-001",
@@ -3114,7 +3150,7 @@
    "anteil_pct": 29.99,
    "stand": "2025-11-10",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.kitco.com/news/off-the-wire/2025-11-10/salzgitter-says-it-has-no-plans-exit-aurubis",
    "quelle_titel": "Salzgitter says it has no plans to exit Aurubis",
    "belegstelle": [
@@ -3139,7 +3175,8 @@
    },
    "ueber_text": "direkte Verbindung",
    "herleitung_text": "neu belegt",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-n-cc2-rel-029",
@@ -3157,7 +3194,7 @@
    "anteil_pct": null,
    "stand": "2024-11-05",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://energiminas.com/2024/11/05/gestion-integral-de-residuos-seche-firma-contrato-con-antamina-e-inicia-labores-en-la-mina-en-febrero-de-2025",
    "quelle_titel": "Gestión integral de residuos: Séché firma contrato con Antamina e inicia labores en la mina en febrero de 2025",
    "belegstelle": [
@@ -3182,7 +3219,8 @@
    },
    "ueber_text": "direkte Verbindung",
    "herleitung_text": "neu belegt",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-n-cc2-rel-024",
@@ -3218,7 +3256,8 @@
    ],
    "ueber_text": "direkte Verbindung",
    "herleitung_text": "neu belegt (Kandidat)",
-   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben"
+   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben",
+   "pruefstufe": "KANDIDAT"
   },
   {
    "id": "cc-n-cc2-rel-032",
@@ -3236,7 +3275,7 @@
    "anteil_pct": null,
    "stand": "2019-07-31",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.trafigura.com/news-and-insights/press-releases/2019/nyrstar-restructuring-completed-trafigura-group-pte-ltd-becomes-majority-owner-of-nyrstar-s-operating-business/",
    "quelle_titel": "Nyrstar restructuring completed. Trafigura Group Pte Ltd becomes majority owner of Nyrstar’s operating business.",
    "belegstelle": [
@@ -3261,7 +3300,8 @@
    },
    "ueber_text": "direkte Verbindung",
    "herleitung_text": "neu belegt",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-n-cc2-rel-004",
@@ -3279,7 +3319,7 @@
    "anteil_pct": 40,
    "stand": "2025-12",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://news.metal.com/newscontent/103926945",
    "quelle_titel": "Yunnan Copper: The Hongnipo copper mine is currently under construction, with annual self-produced copper concentrates expected to contain 69,800 mt of copper",
    "belegstelle": [
@@ -3305,7 +3345,8 @@
    },
    "ueber_text": "direkte Verbindung",
    "herleitung_text": "neu belegt",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-n-cc2-rel-011",
@@ -3323,7 +3364,7 @@
    "anteil_pct": 35,
    "stand": null,
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.zccm-ih.com.zm/investments/energy-assets/maamba-energy-ltd/",
    "quelle_titel": "Maamba Energy Ltd – Investments (Energy Assets)",
    "belegstelle": [
@@ -3348,7 +3389,8 @@
    },
    "ueber_text": "direkte Verbindung",
    "herleitung_text": "neu belegt",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-n-cc2-rel-015",
@@ -3366,7 +3408,7 @@
    "anteil_pct": 100,
    "stand": "2019-03-12",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2019/0313/ltn20190313461.pdf",
    "quelle_titel": "Announcement in relation to Progress of Acquisition of Nevsun Resources Ltd. by All Cash Takeover",
    "belegstelle": [
@@ -3393,7 +3435,8 @@
    },
    "ueber_text": "direkte Verbindung",
    "herleitung_text": "neu belegt",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-2bd096e884d5",
@@ -3409,7 +3452,7 @@
    "anteil_pct": null,
    "stand": "2026-08-18",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2026/260818_bhpannualreport2026.pdf",
    "quelle_titel": "BHP Annual Report 2026",
    "weitere_quellen": [
@@ -3427,7 +3470,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-f13f81ed2daf",
@@ -3443,7 +3487,7 @@
    "anteil_pct": null,
    "stand": "2026-08-18",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2026/260818_bhpannualreport2026.pdf",
    "quelle_titel": "BHP Annual Report 2026",
    "weitere_quellen": [],
@@ -3455,7 +3499,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-c5935c310349",
@@ -3471,7 +3516,7 @@
    "anteil_pct": null,
    "stand": "2026-08-18",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2026/260818_bhpannualreport2026.pdf",
    "quelle_titel": "BHP Annual Report 2026",
    "weitere_quellen": [
@@ -3488,7 +3533,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-63c0fe349b6c",
@@ -3504,7 +3550,7 @@
    "anteil_pct": null,
    "stand": "2026-08-18",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2026/260818_bhpannualreport2026.pdf",
    "quelle_titel": "BHP Annual Report 2026",
    "weitere_quellen": [
@@ -3521,7 +3567,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-ef18dfef2837",
@@ -3537,7 +3584,7 @@
    "anteil_pct": null,
    "stand": "2026-08-18",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2026/260818_bhpannualreport2026.pdf",
    "quelle_titel": "BHP Annual Report 2026",
    "weitere_quellen": [],
@@ -3549,7 +3596,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-c916945ec8f6",
@@ -3565,7 +3613,7 @@
    "anteil_pct": null,
    "stand": "2026-08-18",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2026/260818_bhpannualreport2026.pdf",
    "quelle_titel": "BHP Annual Report 2026",
    "weitere_quellen": [],
@@ -3577,7 +3625,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-69f16694d904",
@@ -3593,7 +3642,7 @@
    "anteil_pct": null,
    "stand": "2026-08-18",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2026/260818_bhpannualreport2026.pdf",
    "quelle_titel": "BHP Annual Report 2026",
    "weitere_quellen": [],
@@ -3606,7 +3655,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-82d779acf423",
@@ -3622,7 +3672,7 @@
    "anteil_pct": null,
    "stand": "2026-08-18",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2026/260818_bhpannualreport2026.pdf",
    "quelle_titel": "BHP Annual Report 2026",
    "weitere_quellen": [],
@@ -3635,7 +3685,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-e020edb647e6",
@@ -3651,7 +3702,7 @@
    "anteil_pct": null,
    "stand": "2026-08-18",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2026/260818_bhpannualreport2026.pdf",
    "quelle_titel": "BHP Annual Report 2026",
    "weitere_quellen": [
@@ -3668,7 +3719,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-8c88ae28fd7f",
@@ -3684,7 +3736,7 @@
    "anteil_pct": null,
    "stand": "2026-08-18",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.antamina.com/wp-content/uploads/2024/10/sustainability-report-antamina-2023.pdf",
    "quelle_titel": "Antamina Sustainability Report 2023",
    "weitere_quellen": [
@@ -3701,7 +3753,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-1eb142a7771b",
@@ -3717,7 +3770,7 @@
    "anteil_pct": null,
    "stand": "2026-03-31",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.ivanhoemines.com/news-stories/news-release/ivanhoe-mines-issues-2025-fourth-quarter-and-annual-financial-results/",
    "quelle_titel": "fy2025",
    "weitere_quellen": [
@@ -3739,7 +3792,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-d8daf390bf4a",
@@ -3755,7 +3809,7 @@
    "anteil_pct": null,
    "stand": "2026-03-31",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.ivanhoemines.com/news-stories/news-release/ivanhoe-mines-issues-2025-fourth-quarter-and-annual-financial-results/",
    "quelle_titel": "fy2025",
    "weitere_quellen": [
@@ -3777,7 +3831,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-838d8fc08ea6",
@@ -3793,7 +3848,7 @@
    "anteil_pct": null,
    "stand": "2026-03-31",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.ivanhoemines.com/news-stories/news-release/ivanhoe-mines-issues-2025-fourth-quarter-and-annual-financial-results/",
    "quelle_titel": "fy2025",
    "weitere_quellen": [
@@ -3810,7 +3865,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-773c918e19d6",
@@ -3826,7 +3882,7 @@
    "anteil_pct": null,
    "stand": "2026-02-18",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.ivanhoemines.com/news-stories/news-release/kamoa-kakulas-off-take-agreements-signed-for-phase-1-blister-copper-and-copper-concentrate/",
    "quelle_titel": "offtake2021",
    "weitere_quellen": [
@@ -3843,7 +3899,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-6af55cdc9f98",
@@ -3859,7 +3916,7 @@
    "anteil_pct": null,
    "stand": "2026-02-18",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.ivanhoemines.com/news-stories/news-release/ivanhoe-mines-issues-2025-fourth-quarter-and-annual-financial-results/",
    "quelle_titel": "fy2025",
    "weitere_quellen": [],
@@ -3871,7 +3928,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-7fd02f0081eb",
@@ -3887,7 +3945,7 @@
    "anteil_pct": null,
    "stand": "2026-02-18",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.ivanhoemines.com/news-stories/news-release/ivanhoe-mines-issues-2025-fourth-quarter-and-annual-financial-results/",
    "quelle_titel": "fy2025",
    "weitere_quellen": [],
@@ -3899,7 +3957,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-23cf7cacc727",
@@ -3915,7 +3974,7 @@
    "anteil_pct": null,
    "stand": "2026-02-18",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.ivanhoemines.com/news-stories/news-release/ivanhoe-mines-issues-2025-fourth-quarter-and-annual-financial-results/",
    "quelle_titel": "fy2025",
    "weitere_quellen": [],
@@ -3927,7 +3986,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-0740a9e9e9ee",
@@ -3943,7 +4003,7 @@
    "anteil_pct": null,
    "stand": "2026-08-18",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2026/260818_bhpannualreport2026.pdf",
    "quelle_titel": "BHP Annual Report 2026",
    "weitere_quellen": [],
@@ -3955,7 +4015,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-4caa8d1cd0e5",
@@ -3971,7 +4032,7 @@
    "anteil_pct": null,
    "stand": "2026-08-18",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2026/260818_bhpannualreport2026.pdf",
    "quelle_titel": "BHP Annual Report 2026",
    "weitere_quellen": [
@@ -3988,7 +4049,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-122c8925138c",
@@ -4004,7 +4066,7 @@
    "anteil_pct": null,
    "stand": "2026-08-18",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2026/260818_bhpannualreport2026.pdf",
    "quelle_titel": "BHP Annual Report 2026",
    "weitere_quellen": [
@@ -4021,7 +4083,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-811612867cee",
@@ -4037,7 +4100,7 @@
    "anteil_pct": null,
    "stand": "2026-08-18",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2026/260818_bhpannualreport2026.pdf",
    "quelle_titel": "BHP Annual Report 2026",
    "weitere_quellen": [],
@@ -4049,7 +4112,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-b4c7f77ada97",
@@ -4065,7 +4129,7 @@
    "anteil_pct": null,
    "stand": "2026-03-31",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.ivanhoemines.com/news-stories/news-release/kamoa-kakulas-off-take-agreements-signed-for-phase-1-blister-copper-and-copper-concentrate/",
    "quelle_titel": "offtake2021",
    "weitere_quellen": [
@@ -4087,7 +4151,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-94d3cbe9a7e1",
@@ -4103,7 +4168,7 @@
    "anteil_pct": null,
    "stand": "2026-03-31",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.ivanhoemines.com/wp-content/uploads/20260331-IVN_AIF_31-Dec-2025-ABF2.pdf",
    "quelle_titel": "aif2025",
    "weitere_quellen": [
@@ -4125,7 +4190,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-17c53c423c03",
@@ -4141,7 +4207,7 @@
    "anteil_pct": null,
    "stand": "2026-03-31",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.ivanhoemines.com/news-stories/news-release/ivanhoe-mines-issues-2025-fourth-quarter-and-annual-financial-results/",
    "quelle_titel": "fy2025",
    "weitere_quellen": [
@@ -4158,7 +4224,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-487fdc42d336",
@@ -4174,7 +4241,7 @@
    "anteil_pct": null,
    "stand": "2026-02-18",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.ivanhoemines.com/news-stories/news-release/kamoa-kakulas-off-take-agreements-signed-for-phase-1-blister-copper-and-copper-concentrate/",
    "quelle_titel": "offtake2021",
    "weitere_quellen": [
@@ -4191,7 +4258,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-c44b0e124633",
@@ -4207,7 +4275,7 @@
    "anteil_pct": null,
    "stand": "2026-08-18",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2026/260818_bhpannualreport2026.pdf",
    "quelle_titel": "BHP Annual Report 2026",
    "weitere_quellen": [
@@ -4224,7 +4292,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-19e00a27e9b4",
@@ -4240,7 +4309,7 @@
    "anteil_pct": null,
    "stand": "2026-08-18",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://withmaterials.mmc.co.jp/en/132",
    "quelle_titel": "MMC WITH MATERIALS: Securing the future of our limited metal resources vol.1",
    "weitere_quellen": [
@@ -4257,7 +4326,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-74f7161b0d8e",
@@ -4273,7 +4343,7 @@
    "anteil_pct": null,
    "stand": "2026-08-18",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2026/260818_bhpannualreport2026.pdf",
    "quelle_titel": "BHP Annual Report 2026",
    "weitere_quellen": [],
@@ -4285,7 +4355,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-5f596dc3b2a5",
@@ -4301,7 +4372,7 @@
    "anteil_pct": null,
    "stand": "2026-08-18",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2026/260818_bhpannualreport2026.pdf",
    "quelle_titel": "BHP Annual Report 2026",
    "weitere_quellen": [],
@@ -4313,7 +4384,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-36463a0ec840",
@@ -4329,7 +4401,7 @@
    "anteil_pct": null,
    "stand": "2026-08-18",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2026/260818_bhpannualreport2026.pdf",
    "quelle_titel": "BHP Annual Report 2026",
    "weitere_quellen": [],
@@ -4342,7 +4414,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-40eadc0c6a96",
@@ -4358,7 +4431,7 @@
    "anteil_pct": null,
    "stand": "2026-03-31",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.ivanhoemines.com/news-stories/news-release/kamoa-kakulas-off-take-agreements-signed-for-phase-1-blister-copper-and-copper-concentrate/",
    "quelle_titel": "offtake2021",
    "weitere_quellen": [
@@ -4376,7 +4449,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-89a99864b478",
@@ -4392,7 +4466,7 @@
    "anteil_pct": null,
    "stand": "2026-03-31",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.ivanhoemines.com/news-stories/news-release/kamoa-kakulas-off-take-agreements-signed-for-phase-1-blister-copper-and-copper-concentrate/",
    "quelle_titel": "offtake2021",
    "weitere_quellen": [
@@ -4410,7 +4484,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-1ae5eb46c648",
@@ -4426,7 +4501,7 @@
    "anteil_pct": null,
    "stand": "2026-03-31",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.ivanhoemines.com/news-stories/news-release/kamoa-kakulas-off-take-agreements-signed-for-phase-1-blister-copper-and-copper-concentrate/",
    "quelle_titel": "offtake2021",
    "weitere_quellen": [
@@ -4443,7 +4518,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-70eefb40c48e",
@@ -4459,7 +4535,7 @@
    "anteil_pct": null,
    "stand": "2026-03-31",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.ivanhoemines.com/news-stories/news-release/ivanhoe-mines-issues-2025-fourth-quarter-and-annual-financial-results/",
    "quelle_titel": "fy2025",
    "weitere_quellen": [
@@ -4481,7 +4557,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-9433c1541232",
@@ -4497,7 +4574,7 @@
    "anteil_pct": null,
    "stand": "2026-03-31",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.ivanhoemines.com/wp-content/uploads/20260331-IVN_AIF_31-Dec-2025-ABF2.pdf",
    "quelle_titel": "aif2025",
    "weitere_quellen": [
@@ -4519,7 +4596,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-be039685d200",
@@ -4535,7 +4613,7 @@
    "anteil_pct": null,
    "stand": "2026-03-31",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.ivanhoemines.com/news-stories/news-release/ivanhoe-mines-issues-2025-fourth-quarter-and-annual-financial-results/",
    "quelle_titel": "fy2025",
    "weitere_quellen": [
@@ -4552,7 +4630,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-6e01bc1d876d",
@@ -4568,7 +4647,7 @@
    "anteil_pct": null,
    "stand": "2026-02-18",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.ivanhoemines.com/news-stories/news-release/kamoa-kakulas-off-take-agreements-signed-for-phase-1-blister-copper-and-copper-concentrate/",
    "quelle_titel": "offtake2021",
    "weitere_quellen": [
@@ -4585,7 +4664,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-5801aa78c16b",
@@ -4601,7 +4681,7 @@
    "anteil_pct": null,
    "stand": "2026-02-18",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.ivanhoemines.com/news-stories/news-release/ivanhoe-mines-issues-2025-fourth-quarter-and-annual-financial-results/",
    "quelle_titel": "fy2025",
    "weitere_quellen": [],
@@ -4613,7 +4693,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-86f5180b4adb",
@@ -4629,7 +4710,7 @@
    "anteil_pct": null,
    "stand": "2026-08-18",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2026/260818_bhpannualreport2026.pdf",
    "quelle_titel": "BHP Annual Report 2026",
    "weitere_quellen": [],
@@ -4641,7 +4722,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-842ec56530e0",
@@ -4657,7 +4739,7 @@
    "anteil_pct": null,
    "stand": "2026-08-18",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2026/260818_bhpannualreport2026.pdf",
    "quelle_titel": "BHP Annual Report 2026",
    "weitere_quellen": [
@@ -4674,7 +4756,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-58b938f80e59",
@@ -4690,7 +4773,7 @@
    "anteil_pct": null,
    "stand": "2026-08-18",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.antamina.com/wp-content/uploads/2024/10/sustainability-report-antamina-2023.pdf",
    "quelle_titel": "Antamina Sustainability Report 2023",
    "weitere_quellen": [
@@ -4707,7 +4790,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-f938949e2936",
@@ -4723,7 +4807,7 @@
    "anteil_pct": null,
    "stand": "2026-08-18",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2026/260818_bhpannualreport2026.pdf",
    "quelle_titel": "BHP Annual Report 2026",
    "weitere_quellen": [],
@@ -4735,7 +4819,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-2d3b1876c6c8",
@@ -4751,7 +4836,7 @@
    "anteil_pct": null,
    "stand": "2026-08-18",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2026/260818_bhpannualreport2026.pdf",
    "quelle_titel": "BHP Annual Report 2026",
    "weitere_quellen": [],
@@ -4763,7 +4848,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-ffe76776350b",
@@ -4779,7 +4865,7 @@
    "anteil_pct": null,
    "stand": "2026-08-18",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2026/260818_bhpannualreport2026.pdf",
    "quelle_titel": "BHP Annual Report 2026",
    "weitere_quellen": [],
@@ -4791,7 +4877,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-508de38e0532",
@@ -4807,7 +4894,7 @@
    "anteil_pct": null,
    "stand": "2026-08-18",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://withmaterials.mmc.co.jp/en/132",
    "quelle_titel": "MMC WITH MATERIALS: Securing the future of our limited metal resources vol.1",
    "weitere_quellen": [
@@ -4824,7 +4911,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-cc726f26b499",
@@ -4840,7 +4928,7 @@
    "anteil_pct": null,
    "stand": "2026-08-18",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2026/260818_bhpannualreport2026.pdf",
    "quelle_titel": "BHP Annual Report 2026",
    "weitere_quellen": [],
@@ -4852,7 +4940,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-ea81016edd2c",
@@ -4868,7 +4957,7 @@
    "anteil_pct": null,
    "stand": "2026-08-18",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2026/260818_bhpannualreport2026.pdf",
    "quelle_titel": "BHP Annual Report 2026",
    "weitere_quellen": [],
@@ -4880,7 +4969,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-140c0d1fb9e7",
@@ -4896,7 +4986,7 @@
    "anteil_pct": null,
    "stand": "2026-08-18",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2026/260818_bhpannualreport2026.pdf",
    "quelle_titel": "BHP Annual Report 2026",
    "weitere_quellen": [
@@ -4913,7 +5003,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-db6de2fb0c28",
@@ -4929,7 +5020,7 @@
    "anteil_pct": null,
    "stand": "2026-08-18",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.bhp.com/-/media/documents/investors/annual-reports/2026/260818_bhpannualreport2026.pdf",
    "quelle_titel": "BHP Annual Report 2026",
    "weitere_quellen": [
@@ -4946,7 +5037,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-69d9f53c8c23",
@@ -4962,7 +5054,7 @@
    "anteil_pct": null,
    "stand": "2021-06-09",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.ivanhoemines.com/news-stories/news-release/kamoa-kakulas-off-take-agreements-signed-for-phase-1-blister-copper-and-copper-concentrate/",
    "quelle_titel": "offtake2021",
    "weitere_quellen": [],
@@ -4974,7 +5066,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-b8eb77c0948a",
@@ -4990,7 +5083,7 @@
    "anteil_pct": null,
    "stand": "2026-03-31",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.ivanhoemines.com/news-stories/news-release/kamoa-kakulas-off-take-agreements-signed-for-phase-1-blister-copper-and-copper-concentrate/",
    "quelle_titel": "offtake2021",
    "weitere_quellen": [
@@ -5012,7 +5105,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-8236c99aa0b2",
@@ -5028,7 +5122,7 @@
    "anteil_pct": null,
    "stand": "2026-03-31",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.ivanhoemines.com/wp-content/uploads/20260331-IVN_AIF_31-Dec-2025-ABF2.pdf",
    "quelle_titel": "aif2025",
    "weitere_quellen": [
@@ -5050,7 +5144,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-0465e5e4c0d1",
@@ -5066,7 +5161,7 @@
    "anteil_pct": null,
    "stand": "2026-03-31",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.ivanhoemines.com/wp-content/uploads/20260331-IVN_AIF_31-Dec-2025-ABF2.pdf",
    "quelle_titel": "aif2025",
    "weitere_quellen": [
@@ -5083,7 +5178,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-3ed9ff332bb4",
@@ -5099,7 +5195,7 @@
    "anteil_pct": null,
    "stand": "2026-02-18",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.ivanhoemines.com/news-stories/news-release/kamoa-kakulas-off-take-agreements-signed-for-phase-1-blister-copper-and-copper-concentrate/",
    "quelle_titel": "offtake2021",
    "weitere_quellen": [
@@ -5116,7 +5212,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-7f6d3528bacb",
@@ -5132,7 +5229,7 @@
    "anteil_pct": null,
    "stand": "2026-02-18",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.ivanhoemines.com/news-stories/news-release/ivanhoe-mines-issues-2025-fourth-quarter-and-annual-financial-results/",
    "quelle_titel": "fy2025",
    "weitere_quellen": [],
@@ -5144,7 +5241,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-a-d36609ab02e6",
@@ -5160,7 +5258,7 @@
    "anteil_pct": null,
    "stand": "2026-02-18",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.ivanhoemines.com/news-stories/news-release/ivanhoe-mines-issues-2025-fourth-quarter-and-annual-financial-results/",
    "quelle_titel": "fy2025",
    "weitere_quellen": [],
@@ -5172,7 +5270,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "über gemeinsame Anlage",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-at-ownership_gravita_global_gravita_mozambique",
@@ -5188,7 +5287,7 @@
    "anteil_pct": 3.62,
    "stand": "2024-03-31",
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://www.gravitaindia.com/Upload/PDF/Gravita-India-BRSR_23-24.pdf",
    "quelle_titel": "Business Responsibility and Sustainability Report 2023–24",
    "input_record_ids": [
@@ -5198,7 +5297,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-at-ownership_gravita_global_gravita_netherlands",
@@ -5214,7 +5314,7 @@
    "anteil_pct": 100,
    "stand": "2024-03-31",
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://www.gravitaindia.com/Upload/PDF/Gravita-India-BRSR_23-24.pdf",
    "quelle_titel": "Business Responsibility and Sustainability Report 2023–24",
    "input_record_ids": [
@@ -5224,7 +5324,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-at-ownership_gravita_india_gravita_global",
@@ -5240,7 +5341,7 @@
    "anteil_pct": 100,
    "stand": "2024-03-31",
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://www.gravitaindia.com/Upload/PDF/Gravita-India-BRSR_23-24.pdf",
    "quelle_titel": "Business Responsibility and Sustainability Report 2023–24",
    "input_record_ids": [
@@ -5250,7 +5351,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-at-ownership_gravita_netherlands_gravita_mozambique",
@@ -5266,7 +5368,7 @@
    "anteil_pct": 96.38,
    "stand": "2024-03-31",
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://www.gravitaindia.com/Upload/PDF/Gravita-India-BRSR_23-24.pdf",
    "quelle_titel": "Business Responsibility and Sustainability Report 2023–24",
    "input_record_ids": [
@@ -5276,7 +5378,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-at-ownership_gravita_netherlands_gravita_senegal",
@@ -5292,7 +5395,7 @@
    "anteil_pct": 100,
    "stand": "2024-03-31",
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://www.gravitaindia.com/Upload/PDF/Gravita-India-BRSR_23-24.pdf",
    "quelle_titel": "Business Responsibility and Sustainability Report 2023–24",
    "input_record_ids": [
@@ -5302,7 +5405,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-at-ownership_gravita_netherlands_recyclers_ghana",
@@ -5318,7 +5422,7 @@
    "anteil_pct": 100,
    "stand": "2024-03-31",
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://www.gravitaindia.com/Upload/PDF/Gravita-India-BRSR_23-24.pdf",
    "quelle_titel": "Business Responsibility and Sustainability Report 2023–24",
    "input_record_ids": [
@@ -5328,7 +5432,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-n-cc2-rel-016",
@@ -5346,7 +5451,7 @@
    "anteil_pct": null,
    "stand": 2019,
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://pubs.usgs.gov/myb/vol3/2019/myb3-2019-ghana.pdf",
    "quelle_titel": "2019 Minerals Yearbook – Ghana [Advance Release]",
    "belegstelle": [
@@ -5371,7 +5476,8 @@
    },
    "ueber_text": "direkte Verbindung",
    "herleitung_text": "neu belegt",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-ma-abb-netcontrol-Q52825",
@@ -5387,7 +5493,7 @@
    "anteil_pct": null,
    "stand": 2026,
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://new.abb.com/news/detail/134832/abb-completes-netcontrol-acquisition-expanding-grid-automation-offering-for-utilities",
    "quelle_titel": "Meldung zum Abschluss",
    "input_record_ids": [
@@ -5397,7 +5503,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-ma-abbott-exact-Q306764",
@@ -5413,7 +5520,7 @@
    "anteil_pct": null,
    "stand": 2026,
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://abbott.mediaroom.com/2026-03-23-Abbott-completes-acquisition-of-Exact-Sciences",
    "quelle_titel": "Meldung zum Abschluss",
    "input_record_ids": [
@@ -5423,7 +5530,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-ma-accenture-comware-Q338825",
@@ -5439,7 +5547,7 @@
    "anteil_pct": null,
    "stand": 2026,
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://newsroom.accenture.com/news/2026/accenture-to-acquire-comware-to-strengthen-accenture-edge-and-accelerate-digital-core-reinvention-for-mid-market-companies-in-japan",
    "quelle_titel": "Meldung zum Abschluss",
    "input_record_ids": [
@@ -5449,7 +5557,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-ma-accenture-verum-Q338825",
@@ -5465,7 +5574,7 @@
    "anteil_pct": null,
    "stand": 2026,
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://newsroom.accenture.com/news/2026/accenture-to-acquire-verum-partners-expanding-its-capital-projects-capabilities-in-brazil",
    "quelle_titel": "Meldung zum Abschluss",
    "input_record_ids": [
@@ -5475,7 +5584,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-ma-deal_covestro__adnoc__2025-ADNOC",
@@ -5491,7 +5601,7 @@
    "anteil_pct": null,
    "stand": 2025,
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://www.boerse-express.com/news/articles/covestro-aktie-uebernahme-durch-adnoc-vollzogen-848109",
    "quelle_titel": "Meldung zum Abschluss",
    "input_record_ids": [
@@ -5501,7 +5611,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-ms-carlyle-surventis-BASF-Q926806",
@@ -5517,7 +5628,7 @@
    "anteil_pct": null,
    "stand": 2026,
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://www.basf.com/global/en/media/news-releases/2026/07/p-26-113",
    "quelle_titel": "Meldung zum Abschluss",
    "input_record_ids": [
@@ -5527,7 +5638,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-ma-basf-agbitech-Q9401",
@@ -5543,7 +5655,7 @@
    "anteil_pct": 100,
    "stand": 2026,
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://www.basf.com/global/en/media/news-releases/2026/03/p-26-029",
    "quelle_titel": "Meldung zum Abschluss",
    "input_record_ids": [
@@ -5553,7 +5665,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-ma-deal_bugatti_rimac__hof_capital__2026-BlueFive Capital",
@@ -5569,7 +5682,7 @@
    "anteil_pct": 45,
    "stand": 2026,
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://newsroom.bugatti.com/press-releases/bugatti-rimac-ownership-transition-new-leadership",
    "quelle_titel": "Meldung zum Abschluss",
    "input_record_ids": [
@@ -5579,7 +5692,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-ma-deal_rimac_group__hof_capital__2026-BlueFive Capital",
@@ -5595,7 +5709,7 @@
    "anteil_pct": 20.6,
    "stand": 2026,
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://newsroom.bugatti.com/press-releases/bugatti-rimac-ownership-transition-new-leadership",
    "quelle_titel": "Meldung zum Abschluss",
    "input_record_ids": [
@@ -5605,7 +5719,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-ma-capitalone-brex-Q1034654",
@@ -5621,7 +5736,7 @@
    "anteil_pct": null,
    "stand": 2026,
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://www.capitalone.com/about/newsroom/capital-one-completes-acquisition-of-brex/",
    "quelle_titel": "Meldung zum Abschluss",
    "input_record_ids": [
@@ -5631,7 +5746,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-ma-carlyle-surventis-Q926806",
@@ -5647,7 +5763,7 @@
    "anteil_pct": null,
    "stand": 2026,
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://www.basf.com/global/en/media/news-releases/2026/07/p-26-113",
    "quelle_titel": "Meldung zum Abschluss",
    "input_record_ids": [
@@ -5657,7 +5773,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-ma-cybrid-genernano-cybrid",
@@ -5673,7 +5790,7 @@
    "anteil_pct": null,
    "stand": 2026,
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://www.linkedin.com/pulse/cybrid-technologies-completes-acquisition-controlling-okuic",
    "quelle_titel": "Meldung zum Abschluss",
    "input_record_ids": [
@@ -5683,7 +5800,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-ma-deal_heller__dn_solutions__2026-DN Solutions",
@@ -5699,7 +5817,7 @@
    "anteil_pct": null,
    "stand": 2026,
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://www.dn-solutions.com/global/board/news/newsDetail.do?boardSeq=2265&drvSeq=2&pageNo=1&schKeyword=&schType=",
    "quelle_titel": "Meldung zum Abschluss",
    "input_record_ids": [
@@ -5709,7 +5827,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-ms-deal_ebm_papst_industrielle_antriebstechnik__siemens__undated-ebm-papst-company_siemens",
@@ -5725,7 +5844,7 @@
    "anteil_pct": null,
    "stand": 2025,
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://press.siemens.com/de/de/pressemitteilung/siemens-schliesst-kauf-des-geschaefts-fuer-industrielle-antriebstechnik-von-ebm",
    "quelle_titel": "Meldung zum Abschluss",
    "input_record_ids": [
@@ -5735,7 +5854,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-ma-ecopetrol-brava-Q1282130",
@@ -5751,7 +5871,7 @@
    "anteil_pct": null,
    "stand": 2026,
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://www.prnewswire.com/news-releases/ecopetrol-completes-acquisition-of-a-controlling-51-stake-in-brava-energia-sa-and-strengthens-its-growth-platform-in-brazil-302853566.html",
    "quelle_titel": "Meldung zum Abschluss",
    "input_record_ids": [
@@ -5761,7 +5881,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-ma-energyfuels-asm-energyfuels",
@@ -5777,7 +5898,7 @@
    "anteil_pct": null,
    "stand": 2026,
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://investors.energyfuels.com/2026-08-28-Energy-Fuels-Completes-Acquisition-of-Australian-Strategic-Materials",
    "quelle_titel": "Meldung zum Abschluss",
    "input_record_ids": [
@@ -5787,7 +5908,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-ma-epiroc-eventspec-Q47498532",
@@ -5803,7 +5925,7 @@
    "anteil_pct": null,
    "stand": 2026,
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://www.epirocgroup.com/en/media/corporate-press-releases/2026/20260804-epiroc-completes-acquisition-of-the-business-of-mining-aftermarket-solutions-provider-in-south-africa",
    "quelle_titel": "Meldung zum Abschluss",
    "input_record_ids": [
@@ -5813,7 +5935,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-ms-deal_missoni__katjes_international__2026-FSI (nach vorherigem Erw-company_katjes_internati",
@@ -5829,7 +5952,7 @@
    "anteil_pct": 27,
    "stand": 2026,
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://www.eqs-news.com/de/news/corporate/katjes-international-closes-investment-in-global-brand-missoni/7d9538ea-49fd-496e-b68c-512c020b232b_en",
    "quelle_titel": "Meldung zum Abschluss",
    "input_record_ids": [
@@ -5839,7 +5962,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-ma-google-wiz-Q95",
@@ -5855,7 +5979,7 @@
    "anteil_pct": null,
    "stand": 2026,
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/wiz-acquisition/",
    "quelle_titel": "Meldung zum Abschluss",
    "input_record_ids": [
@@ -5865,7 +5989,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-ma-gsk-rapt-Q212322",
@@ -5881,7 +6006,7 @@
    "anteil_pct": null,
    "stand": 2026,
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://www.gsk.com/en-gb/media/press-releases/gsk-completes-acquisition-of-rapt-therapeutics/",
    "quelle_titel": "Meldung zum Abschluss",
    "input_record_ids": [
@@ -5891,7 +6016,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-ma-henkel-olaplex-Q276507",
@@ -5907,7 +6033,7 @@
    "anteil_pct": null,
    "stand": 2026,
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://www.henkel.com/press-and-media/press-releases-and-kits/2026-07-07-henkel-successfully-closes-acquisition-of-premium-hair-care-brand-olaplex-2193832",
    "quelle_titel": "Meldung zum Abschluss",
    "input_record_ids": [
@@ -5917,7 +6043,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-ma-deal_bugatti_rimac__hof_capital__2026-company_hof_capital",
@@ -5933,7 +6060,7 @@
    "anteil_pct": 45,
    "stand": 2026,
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://newsroom.bugatti.com/press-releases/bugatti-rimac-ownership-transition-new-leadership",
    "quelle_titel": "Meldung zum Abschluss",
    "input_record_ids": [
@@ -5943,7 +6070,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-ma-deal_rimac_group__hof_capital__2026-company_hof_capital",
@@ -5959,7 +6087,7 @@
    "anteil_pct": 20.6,
    "stand": 2026,
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://newsroom.bugatti.com/press-releases/bugatti-rimac-ownership-transition-new-leadership",
    "quelle_titel": "Meldung zum Abschluss",
    "input_record_ids": [
@@ -5969,7 +6097,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-ma-holcim-pacasmayo-Q16466481",
@@ -5985,7 +6114,7 @@
    "anteil_pct": null,
    "stand": 2026,
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://www.holcim.com/media/media-releases/holcim-completes-acquisition-majority-stake-cementos-pacasmayo",
    "quelle_titel": "Meldung zum Abschluss",
    "input_record_ids": [
@@ -5995,7 +6124,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-ma-holcim-xella-Q16466481",
@@ -6011,7 +6141,7 @@
    "anteil_pct": null,
    "stand": 2026,
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://www.holcim.com/media/media-releases/holcim-completes-acquisition-xella",
    "quelle_titel": "Meldung zum Abschluss",
    "input_record_ids": [
@@ -6021,7 +6151,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-ma-deal_nem_balcke_duerr__hyundai_heavy_industries_power_systems__2026-Hyundai Heavy Industries",
@@ -6037,7 +6168,7 @@
    "anteil_pct": null,
    "stand": 2026,
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://mutares.com/en/mutares-has-signed-an-agreement-to-sell-nem-energy-group-to-hyundai-heavy-industries-power-systems-hps/",
    "quelle_titel": "Meldung zum Abschluss",
    "input_record_ids": [
@@ -6047,7 +6178,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-ma-deal_jsw_jfe_kalinga_steel__jfe_steel__2026-company_jfe_steel",
@@ -6063,7 +6195,7 @@
    "anteil_pct": 50,
    "stand": 2026,
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://www.jfe-steel.co.jp/en/release/2026/03/260331.html",
    "quelle_titel": "Meldung zum Abschluss",
    "input_record_ids": [
@@ -6073,7 +6205,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-ma-deal_graze_nature_delivered__katjes_international__2026-company_katjes_internati",
@@ -6089,7 +6222,7 @@
    "anteil_pct": 100,
    "stand": 2026,
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://www.eqs-news.com/news/corporate/katjes-international-acquires-graze-brand-from-unilever/7b89e50e-93ea-4ce9-bb93-a4d342c842c2_en",
    "quelle_titel": "Meldung zum Abschluss",
    "input_record_ids": [
@@ -6099,7 +6232,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-ma-deal_missoni__katjes_international__2026-company_katjes_internati",
@@ -6115,7 +6249,7 @@
    "anteil_pct": 27,
    "stand": 2026,
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://www.eqs-news.com/de/news/corporate/katjes-international-closes-investment-in-global-brand-missoni/7d9538ea-49fd-496e-b68c-512c020b232b_en",
    "quelle_titel": "Meldung zum Abschluss",
    "input_record_ids": [
@@ -6125,7 +6259,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-ma-marvell-celestial-Q1347782",
@@ -6141,7 +6276,7 @@
    "anteil_pct": null,
    "stand": 2026,
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://www.marvell.com/company/newsroom/marvell-completes-acquisition-of-celestial-ai.html",
    "quelle_titel": "Meldung zum Abschluss",
    "input_record_ids": [
@@ -6151,7 +6286,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-ms-deal_nem_balcke_duerr__hyundai_heavy_industries_power_systems__2026-Mutares SE & Co. KGaA-Hyundai Heavy Industries",
@@ -6167,7 +6303,7 @@
    "anteil_pct": null,
    "stand": 2026,
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://mutares.com/en/mutares-has-signed-an-agreement-to-sell-nem-energy-group-to-hyundai-heavy-industries-power-systems-hps/",
    "quelle_titel": "Meldung zum Abschluss",
    "input_record_ids": [
@@ -6177,7 +6313,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-ma-novartis-avidity-Q507154",
@@ -6193,7 +6330,7 @@
    "anteil_pct": null,
    "stand": 2026,
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://www.novartis.com/news/media-releases/novartis-successfully-completes-acquisition-avidity-biosciences-strengthening-late-stage-neuroscience-pipeline-and-advancing-xrna-strategy",
    "quelle_titel": "Meldung zum Abschluss",
    "input_record_ids": [
@@ -6203,7 +6340,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-ma-paloalto-cyberark-Q7128508",
@@ -6219,7 +6357,7 @@
    "anteil_pct": null,
    "stand": 2026,
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://www.paloaltonetworks.com/company/press/2026/palo-alto-networks-completes-acquisition-of-cyberark-to-secure-the-ai-era",
    "quelle_titel": "Meldung zum Abschluss",
    "input_record_ids": [
@@ -6229,7 +6367,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-ma-piramal-yapan-piramal",
@@ -6245,7 +6384,7 @@
    "anteil_pct": null,
    "stand": 2026,
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://www.eqs-news.com/de/news/corporate/piramal-pharma-limited-completes-acquisition-of-controlling-stake-in-yapan-bio-private-limited/aa568294-a68a-4d94-bf89-b32eda281541_en",
    "quelle_titel": "Meldung zum Abschluss",
    "input_record_ids": [
@@ -6255,7 +6394,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-ms-deal_bugatti_rimac__hof_capital__2026-company_porsche-BlueFive Capital",
@@ -6271,7 +6411,7 @@
    "anteil_pct": 45,
    "stand": 2026,
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://newsroom.bugatti.com/press-releases/bugatti-rimac-ownership-transition-new-leadership",
    "quelle_titel": "Meldung zum Abschluss",
    "input_record_ids": [
@@ -6281,7 +6421,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-ms-deal_bugatti_rimac__hof_capital__2026-company_porsche-company_hof_capital",
@@ -6297,7 +6438,7 @@
    "anteil_pct": 45,
    "stand": 2026,
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://newsroom.bugatti.com/press-releases/bugatti-rimac-ownership-transition-new-leadership",
    "quelle_titel": "Meldung zum Abschluss",
    "input_record_ids": [
@@ -6307,7 +6448,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-ms-deal_rimac_group__hof_capital__2026-company_porsche-BlueFive Capital",
@@ -6323,7 +6465,7 @@
    "anteil_pct": 20.6,
    "stand": 2026,
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://newsroom.bugatti.com/press-releases/bugatti-rimac-ownership-transition-new-leadership",
    "quelle_titel": "Meldung zum Abschluss",
    "input_record_ids": [
@@ -6333,7 +6475,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-ms-deal_rimac_group__hof_capital__2026-company_porsche-company_hof_capital",
@@ -6349,7 +6492,7 @@
    "anteil_pct": 20.6,
    "stand": 2026,
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://newsroom.bugatti.com/press-releases/bugatti-rimac-ownership-transition-new-leadership",
    "quelle_titel": "Meldung zum Abschluss",
    "input_record_ids": [
@@ -6359,7 +6502,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-ma-servicenow-armis-Q7455653",
@@ -6375,7 +6519,7 @@
    "anteil_pct": null,
    "stand": 2026,
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000054/erq1fy26.htm",
    "quelle_titel": "Meldung zum Abschluss",
    "input_record_ids": [
@@ -6385,7 +6529,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-ma-deal_ebm_papst_industrielle_antriebstechnik__siemens__undated-company_siemens",
@@ -6401,7 +6546,7 @@
    "anteil_pct": null,
    "stand": 2025,
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://press.siemens.com/de/de/pressemitteilung/siemens-schliesst-kauf-des-geschaefts-fuer-industrielle-antriebstechnik-von-ebm",
    "quelle_titel": "Meldung zum Abschluss",
    "input_record_ids": [
@@ -6411,7 +6556,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-ma-deal_telis_gruppe__swiss_life_deutschland__2026-Swiss Life Deutschland",
@@ -6427,7 +6573,7 @@
    "anteil_pct": null,
    "stand": 2026,
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://www.swisslife.com/en/home/media/media-releases/newsfeed-eqs/corporate/2026/20260701_1545.html",
    "quelle_titel": "Meldung zum Abschluss",
    "input_record_ids": [
@@ -6437,7 +6583,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-ma-deal_thriveni_pellets__tata_steel__2026-company_tata_steel",
@@ -6453,7 +6600,7 @@
    "anteil_pct": 50.01,
    "stand": 2026,
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://www.tatasteel.com/media/25351/tata-steel-announcement.pdf",
    "quelle_titel": "Meldung zum Abschluss",
    "input_record_ids": [
@@ -6463,7 +6610,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-ms-deal_thriveni_pellets__tata_steel__2026-Thriveni Earthmovers Pri-company_tata_steel",
@@ -6479,7 +6627,7 @@
    "anteil_pct": 50.01,
    "stand": 2026,
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://www.tatasteel.com/media/25351/tata-steel-announcement.pdf",
    "quelle_titel": "Meldung zum Abschluss",
    "input_record_ids": [
@@ -6489,7 +6637,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-ma-tmx-cboe-au-Q3117577",
@@ -6505,7 +6654,7 @@
    "anteil_pct": null,
    "stand": 2026,
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://s21.q4cdn.com/671813756/files/doc_news/TMX-Group-Completes-Acquisition-of-Cboe-Australia-2026.pdf",
    "quelle_titel": "Meldung zum Abschluss",
    "input_record_ids": [
@@ -6515,7 +6664,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-ma-torishima-shin-torishima",
@@ -6531,7 +6681,7 @@
    "anteil_pct": null,
    "stand": 2026,
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://www.torishima.co.jp/uploads/Presentation_FY2026_First_en.pdf",
    "quelle_titel": "Meldung zum Abschluss",
    "input_record_ids": [
@@ -6541,7 +6691,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-ms-deal_graze_nature_delivered__katjes_international__2026-Unilever-company_katjes_internati",
@@ -6557,7 +6708,7 @@
    "anteil_pct": 100,
    "stand": 2026,
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://www.eqs-news.com/news/corporate/katjes-international-acquires-graze-brand-from-unilever/7b89e50e-93ea-4ce9-bb93-a4d342c842c2_en",
    "quelle_titel": "Meldung zum Abschluss",
    "input_record_ids": [
@@ -6567,7 +6718,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-ma-vodacom-safaricom-Q1856518",
@@ -6583,7 +6735,7 @@
    "anteil_pct": null,
    "stand": 2026,
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://www.vodacom.com/news-article.php?articleID=16911",
    "quelle_titel": "Meldung zum Abschluss",
    "input_record_ids": [
@@ -6593,7 +6745,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-ma-wesco-newark-Q7949044",
@@ -6609,7 +6762,7 @@
    "anteil_pct": null,
    "stand": 2026,
    "beleg": "FACT",
-   "freigabe": "NICHT_GEPRUEFT",
+   "freigabe": "KANDIDAT",
    "quelle_url": "https://www.prnewswire.com/news-releases/wesco-completes-acquisition-of-newark-engineering-group-expanding-data-center-cooling-and-lifecycle-services-302815535.html",
    "quelle_titel": "Meldung zum Abschluss",
    "input_record_ids": [
@@ -6619,7 +6772,8 @@
    "menge": null,
    "ereignis": null,
    "herleitung_text": "direkt belegt",
-   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess"
+   "freigabe_text": "Quelle vorhanden, nicht im Freigabeprozess",
+   "pruefstufe": "NICHT_GEPRUEFT"
   },
   {
    "id": "cc-n-cc2-rel-025",
@@ -6637,7 +6791,7 @@
    "anteil_pct": null,
    "stand": "2026-04-16",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.mining-technology.com/news/abb-gmd-rmd-systems-australian-mine/",
    "quelle_titel": "ABB to provide GMD and RMD systems for Australian mine",
    "belegstelle": [
@@ -6662,7 +6816,8 @@
    },
    "ueber_text": "direkte Verbindung",
    "herleitung_text": "neu belegt",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-n-cc2-rel-040",
@@ -6680,7 +6835,7 @@
    "anteil_pct": null,
    "stand": "2015-04-13",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.mining-technology.com/news/newsrio-tinto-partners-with-accenture-for-cloud-based-delivery-model-4553408/",
    "quelle_titel": "Rio Tinto partners with Accenture for cloud-based delivery model",
    "belegstelle": [
@@ -6705,7 +6860,8 @@
    },
    "ueber_text": "direkte Verbindung",
    "herleitung_text": "neu belegt",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-n-cc2-rel-005",
@@ -6741,7 +6897,8 @@
    ],
    "ueber_text": "direkte Verbindung",
    "herleitung_text": "neu belegt (Kandidat)",
-   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben"
+   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben",
+   "pruefstufe": "KANDIDAT"
   },
   {
    "id": "cc-n-cc2-rel-017",
@@ -6765,7 +6922,7 @@
    "anteil_pct": null,
    "stand": "2023-05-17",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.mining-technology.com/news/asm-sell-ndfeb-alloy-noveon/",
    "quelle_titel": "Australian Strategic Materials to sell NdFeB alloy to Noveon",
    "belegstelle": [
@@ -6790,7 +6947,8 @@
    },
    "ueber_text": "direkte Verbindung",
    "herleitung_text": "neu belegt",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-n-cc2-rel-041",
@@ -6808,7 +6966,7 @@
    "anteil_pct": 72.7,
    "stand": "2023-12-22",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.nsenergybusiness.com/deals/harbour-energy-to-acquire-wintershall-deas-ep-business-for-11-2bn/",
    "quelle_titel": "Harbour Energy to acquire Wintershall Dea’s E&P business for $11.2bn",
    "belegstelle": [
@@ -6832,7 +6990,8 @@
    },
    "ueber_text": "direkte Verbindung",
    "herleitung_text": "neu belegt",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-n-cc2-rel-034",
@@ -6850,7 +7009,7 @@
    "anteil_pct": null,
    "stand": "2021-06-09",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://markets.financialcontent.com/stocks/article/bizwire-2021-6-9-carlyle-acquires-1e",
    "quelle_titel": "Carlyle Acquires 1E",
    "belegstelle": [
@@ -6874,7 +7033,8 @@
    },
    "ueber_text": "direkte Verbindung",
    "herleitung_text": "neu belegt",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-n-cc2-rel-035",
@@ -6909,7 +7069,8 @@
    ],
    "ueber_text": "direkte Verbindung",
    "herleitung_text": "neu belegt (Kandidat)",
-   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben"
+   "freigabe_text": "Kandidat: Beleg gelesen, nicht im Ledger, nicht freigegeben",
+   "pruefstufe": "KANDIDAT"
   },
   {
    "id": "cc-n-cc2-rel-042",
@@ -6927,7 +7088,7 @@
    "anteil_pct": null,
    "stand": "2024-10-03",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.mining-technology.com/news/energy-fuels-base-178m/",
    "quelle_titel": "Energy Fuels finalises purchase of Base Resources for $178m",
    "belegstelle": [
@@ -6951,7 +7112,8 @@
    },
    "ueber_text": "direkte Verbindung",
    "herleitung_text": "neu belegt",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-n-cc2-rel-006",
@@ -6969,7 +7131,7 @@
    "anteil_pct": 100,
    "stand": "2024-09-25",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://im-mining.com/2024/09/25/epiroc-renames-mobius-linkoa-following-full-acquisition-of-asi-mining/",
    "quelle_titel": "Epiroc renames Mobius LinkOA following full acquisition of ASI Mining",
    "belegstelle": [
@@ -6993,7 +7155,8 @@
    },
    "ueber_text": "direkte Verbindung",
    "herleitung_text": "neu belegt",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-n-cc2-rel-027",
@@ -7011,7 +7174,7 @@
    "anteil_pct": 100,
    "stand": "2022-08-16",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.investegate.co.uk/announcement/rns/gsk--gsk/gsk-completes-acquisition-of-affinivax-inc-/7102051",
    "quelle_titel": "GSK completes acquisition of Affinivax, Inc.",
    "belegstelle": [
@@ -7036,7 +7199,8 @@
    },
    "ueber_text": "direkte Verbindung",
    "herleitung_text": "neu belegt",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-n-cc2-rel-026",
@@ -7054,7 +7218,7 @@
    "anteil_pct": null,
    "stand": "2025-10-23",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.investegate.co.uk/announcement/rns/international-biotech-trust--ibt/novartis-to-acquire-ibt-portfolio-company-avidity/9196434",
    "quelle_titel": "Novartis to acquire IBT portfolio company Avidity",
    "belegstelle": [
@@ -7079,7 +7243,8 @@
    },
    "ueber_text": "direkte Verbindung",
    "herleitung_text": "neu belegt",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-n-cc2-rel-019",
@@ -7097,7 +7262,7 @@
    "anteil_pct": 100,
    "stand": "2017-10-04",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://ec.europa.eu/competition/mergers/cases/decisions/m8604_63_3.pdf",
    "quelle_titel": "Case M.8604 – Xella International / Ursa, Commission decision pursuant to Article 6(1)(b)",
    "belegstelle": [
@@ -7122,7 +7287,8 @@
    },
    "ueber_text": "direkte Verbindung",
    "herleitung_text": "neu belegt",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-n-cc2-rel-033",
@@ -7140,7 +7306,7 @@
    "anteil_pct": null,
    "stand": "2018-10-22",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.mining-technology.com/news/basf-and-nornickel-sign-deal-meet-battery-materials-demand",
    "quelle_titel": "BASF and Nornickel sign deal to meet battery materials demand",
    "belegstelle": [
@@ -7165,7 +7331,8 @@
    },
    "ueber_text": "direkte Verbindung",
    "herleitung_text": "neu belegt",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-n-cc2-rel-028",
@@ -7183,7 +7350,7 @@
    "anteil_pct": null,
    "stand": "2021-05-24",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.investegate.co.uk/announcement/rns/vodafone-group--vod/global-partnership-for-ethiopia-licence-award/6482257",
    "quelle_titel": "Global Partnership for Ethiopia licence award",
    "belegstelle": [
@@ -7208,7 +7375,8 @@
    },
    "ueber_text": "direkte Verbindung",
    "herleitung_text": "neu belegt",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-n-cc2-rel-036",
@@ -7226,7 +7394,7 @@
    "anteil_pct": null,
    "stand": "2025-12-15",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://markets.financialcontent.com/stocks/article/bizwire-2025-12-15-servicenow-completes-acquisition-of-moveworks",
    "quelle_titel": "ServiceNow completes acquisition of Moveworks",
    "belegstelle": [
@@ -7250,7 +7418,8 @@
    },
    "ueber_text": "direkte Verbindung",
    "herleitung_text": "neu belegt",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-n-cc2-rel-018",
@@ -7268,7 +7437,7 @@
    "anteil_pct": null,
    "stand": "2026-07-29",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://api.gleif.org/api/v1/lei-records?filter[lei]=549300DKBYNOI0B1NP44,549300N65GFVKSHGJW59&include=direct-parent",
    "quelle_titel": "GLEIF LEI-Records 549300DKBYNOI0B1NP44 (Montréal Exchange Inc.) und 549300N65GFVKSHGJW59 (TMX Group Limited) inkl. Direct Parent",
    "belegstelle": [
@@ -7294,7 +7463,8 @@
    },
    "ueber_text": "direkte Verbindung",
    "herleitung_text": "neu belegt",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-n-cc2-rel-043",
@@ -7312,7 +7482,7 @@
    "anteil_pct": null,
    "stand": "2025-07-08",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://www.miningmx.com/news/61646-vodacom-business-and-sasol-partner-to-deliver-mpn-solution/",
    "quelle_titel": "Vodacom Business and Sasol partner to deliver MPN Solution",
    "belegstelle": [
@@ -7336,7 +7506,8 @@
    },
    "ueber_text": "direkte Verbindung",
    "herleitung_text": "neu belegt",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   },
   {
    "id": "cc-n-cc2-rel-007",
@@ -7354,7 +7525,7 @@
    "anteil_pct": null,
    "stand": "2022-11-01",
    "beleg": "FACT",
-   "freigabe": "APPROVED",
+   "freigabe": "FREIGEGEBEN",
    "quelle_url": "https://markets.financialcontent.com/stocks/article/bizwire-2022-11-1-wesco-international-finalizes-purchase-of-rahi-systems-a-leading-provider-of-global-hyperscale-data-center-solutions",
    "quelle_titel": "Wesco International Finalizes Purchase of Rahi Systems, a Leading Provider of Global Hyperscale Data Center Solutions",
    "belegstelle": [
@@ -7379,7 +7550,8 @@
    },
    "ueber_text": "direkte Verbindung",
    "herleitung_text": "neu belegt",
-   "freigabe_text": "freigegeben"
+   "freigabe_text": "freigegeben",
+   "pruefstufe": "APPROVED"
   }
  ]
 }

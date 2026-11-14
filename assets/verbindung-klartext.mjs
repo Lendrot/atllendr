@@ -338,11 +338,13 @@ const ALIAS = {'Transport nach': 'TRANSPORTS_TO', 'TRANSPORTED_TO': 'TRANSPORTS_
   SUPPLIES_TO: 'SUPPLIES', OFFTAKE: 'OFFTAKE_AGREEMENT'};
 const fmt = n => new Intl.NumberFormat('de-DE', {maximumFractionDigits: 1}).format(n);
 
-/** Prüfstatus in Klartext. ton: ok (freigegeben/geprüft), offen (laut Quelle, nicht geprüft), annahme, gesperrt. */
+/** Prüfstatus in Klartext. ton: ok (freigegeben/geprüft), offen (laut Quelle, nicht geprüft), annahme, gesperrt.
+ *  Hauptatlas liefert den kanonischen Freigabestatus (scripts/analysis/freigabe/status.py: FREIGEGEBEN, KANDIDAT, GESPERRT,
+ *  UNKNOWN); KANDIDAT fällt auf die Evidenz zurück. Die alten Rohwerte bleiben für den Annahmen-Atlas lesbar. */
 export function status(evidenz, pruef) {
   const e = String(evidenz || '').toUpperCase(), p = String(pruef || '').toUpperCase();
   if (p === 'REJECTED') return {ton: 'gesperrt', text: 'abgelehnt', lang: 'Bei der Prüfung abgelehnt.'};
-  if (p === 'BLOCKED') return {ton: 'gesperrt', text: 'gesperrt', lang: 'Gesperrt: der Beleg reicht für eine Freigabe nicht aus.'};
+  if (p === 'BLOCKED' || p === 'GESPERRT') return {ton: 'gesperrt', text: 'gesperrt', lang: 'Gesperrt: der Beleg reicht für eine Freigabe nicht aus.'};
   if (p === 'APPROVED' || p === 'FREIGEGEBEN') return {ton: 'ok', text: 'freigegeben', lang: 'Quelle gelesen und Verbindung bestätigt.'};
   if (p === 'REVIEWED_HISTORICAL') return {ton: 'ok', text: 'historisch geprüft', lang: 'Quelle gelesen; gilt für den genannten Zeitraum, nicht formal freigegeben.'};
   if (p === 'VERIFIED') return {ton: 'ok', text: 'quellengeprüft', lang: 'Quelle gelesen, sie stützt die Verbindung; noch nicht freigegeben.'};
