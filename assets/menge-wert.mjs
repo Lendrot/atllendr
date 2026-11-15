@@ -1,17 +1,21 @@
 /** Menge und Wert je Verbindung (Eddie 2026-11-11: "Die Bögen zeigen, dass eine Verbindung besteht, verraten aber nicht das
  *  Handelsvolumen, das Gewicht in Tonnen oder den Wert").
- *  Gemeinsame Datei, byte-gleich in Atlas-Lendrot dist/assets und atlaslendrot site/assets (Prüfung: test_menge_wert.mjs).
+ *  Seit Datenbasis Stufe 4 (2026-11-15) nur noch Hauptatlas: Anzeige in Tonnen und Euro über einheit.mjs (der Annahmen-Atlas
+ *  ist seit 2026-11-14 nachrangig und behält seine Kopie in US$).
  *
  *  Bogenstärke: Menge pro Jahr in Tonnen, logarithmisch zwischen kleinster und größter Menge der Ansicht. Ohne Menge: dünn.
- *  Wert: Menge × Referenzpreis. Preise nur aus gelesener Quelle, hier USGS Mineral Commodity Summaries 2026 (Jahresmittel 2025,
+ *  Wert: Menge × Referenzpreis ÷ EZB-Jahresmittel 2025 (US$ je €). Preise nur aus gelesener Quelle, hier USGS Mineral Commodity Summaries 2026 (Jahresmittel 2025,
  *  Schätzwerte der USGS; Abschriften der PDFs im Annahmen-Atlas unter daten/quellen/usgs-mcs-2026). Jeder Preis nennt Fundstelle
  *  und Umrechnung. Der Wert ist immer eine Schätzung: Weltmarkt- bzw. US-Preis, ohne Vertragskonditionen, Fracht, Gehaltsabschläge.
  *  Kein passender Preis = Wert unbekannt. Ein Wert, den die Quelle selbst nennt (z. B. Einkaufswert), steht als "laut Quelle".
  */
+import {LB_T, OZ_T, tonnenText, geldText, euroText, inEuro, euroMitQuelle} from './einheit.mjs';
+export {tonnenText, geldText};
 const USGS = 'https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-';
-const LB = 2204.62262; // lb je t
-const OZ = 32150.7466; // Feinunzen je t
-export const PREIS_QUELLE = 'USGS Mineral Commodity Summaries 2026, Jahresmittel 2025 (Schätzung der USGS)';
+const LB = 1 / LB_T; // lb je t (einheit.mjs)
+const OZ = 1 / OZ_T; // Feinunzen je t (einheit.mjs)
+export const PREIS_JAHR = 2025;   // Preise sind Jahresmittel 2025 -> EZB-Jahresmittel 2025
+export const PREIS_QUELLE = 'USGS Mineral Commodity Summaries 2026, Jahresmittel 2025 (Schätzung der USGS), in Euro zum EZB-Jahresmittel 2025';
 
 // je: worauf sich Preis und Menge beziehen. usd: [Preis] oder [von, bis]. stelle: Zeile der Quelle. rechnung: Umrechnung (nur Arithmetik).
 export const PREISE = {
@@ -46,34 +50,23 @@ export const PREISE = {
 };
 
 const fmt = (n, st) => new Intl.NumberFormat('de-DE', {maximumSignificantDigits: st || 3}).format(n);
-/** 33.200 -> "33,2 kt"; 4 -> "4 t"; 69.900.000 -> "69,9 Mio. t". */
-export function tonnenText(t) {
-  if (t == null || !isFinite(t)) return 'unbekannt';
-  if (t >= 1e6) return fmt(t / 1e6) + ' Mio. t';
-  if (t >= 1e4) return fmt(t / 1e3) + ' kt';
-  return fmt(t) + ' t';
-}
-/** 9,7e9 -> "9,7 Mrd. US$" */
-export function geldText(usd, w = 'US$') {
-  const a = Math.abs(usd);
-  if (a >= 1e9) return fmt(usd / 1e9, 2) + ' Mrd. ' + w;
-  if (a >= 1e6) return fmt(usd / 1e6, 2) + ' Mio. ' + w;
-  if (a >= 1e3) return fmt(usd / 1e3, 2) + ' Tsd. ' + w;
-  return fmt(usd, 2) + ' ' + w;
-}
-// [250 Mio., 310 Mio.] -> "250 bis 310 Mio. US$"
-const spanne = usd => { const t = usd.map(x => geldText(x)); if (t.length < 2) return t[0];
+// [250 Mio., 310 Mio.] -> "250 bis 310 Mio. €"
+const spanne = eur => { const t = eur.map(x => euroText(x)); if (t.length < 2) return t[0];
   const e = /^(\S+) (.*)$/, a = e.exec(t[0]), b = e.exec(t[1]); return a[2] === b[2] ? a[1] + ' bis ' + b[1] + ' ' + a[2] : t.join(' bis '); };
 const preisText = p => p.usd.map(x => fmt(x, x >= 1e5 ? 3 : 4)).join(' bis ') + ' US$ je ' + p.je;
 
 /** Wert einer Menge: t Tonnen (auf der Basis des Preises), basis = Schlüssel in PREISE, jahr = Menge pro Jahr.
- *  Gibt {text, rechnung, quelle, url, usd:[…]} oder null (kein Preis = Wert unbekannt). */
+ *  Gibt {text (Euro), rechnung, quelle, url, usd:[…], eur:[…]} oder null (kein Preis = Wert unbekannt). */
 export function wert(t, basis, jahr = true) {
   const p = PREISE[basis];
   if (!p || t == null || !isFinite(t) || t <= 0) return null;
-  const usd = p.usd.map(x => x * t);
-  return {usd, text: '≈ ' + spanne(usd) + (jahr ? ' pro Jahr' : ''),
-    rechnung: tonnenText(t) + ' × ' + preisText(p) + (p.rechnung ? ' (' + p.rechnung + ')' : ''), quelle: PREIS_QUELLE, stelle: p.stelle, url: p.url};
+  const usd = p.usd.map(x => x * t), k = inEuro(1, 'USD', PREIS_JAHR);
+  if (k.eur == null) return null;
+  const eur = usd.map(x => x * k.eur);
+  return {usd, eur, text: '≈ ' + spanne(eur) + (jahr ? ' pro Jahr' : ''),
+    rechnung: tonnenText(t) + ' × ' + preisText(p) + (p.rechnung ? ' (' + p.rechnung + ')' : '') + ' = ' + usd.map(x => geldText(x, 'USD')).join(' bis ') +
+      ' ÷ ' + k.kursText.replace(/^EZB-Jahresmittel (\d+): (.*)$/, '$2 (EZB-Jahresmittel $1)'),
+    quelle: PREIS_QUELLE, stelle: p.stelle, url: p.url};
 }
 
 /** Breitenskala für eine Ansicht: Mengen pro Jahr (t) der sichtbaren Bögen -> Faktor. Ohne Menge: UNBEKANNT. */
@@ -97,20 +90,25 @@ export function legendeHtml(sk, n, annahme) {
 }
 
 /** Menge und Wert einer Verbindung. m = {t (Tonnen auf Preisbasis), jahr (pro Jahr?), text (Menge im Klartext), basis (Schlüssel in PREISE),
- *  umrechnung: Klartext, wie aus der Quellenangabe die Menge pro Jahr wurde, wertQuelle: [Betrag, Währung] wenn die Quelle selbst einen Wert nennt}. annahme = Menge ist eine Annahme.
+ *  umrechnung: Klartext, wie aus der Quellenangabe die Menge pro Jahr wurde, wertQuelle: [Betrag, Währung, Jahr] wenn die Quelle selbst
+ *  einen Wert nennt (Euro zum EZB-Jahresmittel dieses Jahres, Quellwert bleibt sichtbar)}. annahme = Menge ist eine Annahme.
  *  Gibt {zeilen: [[Bezeichnung, Klartext]], kurz: eine Zeile für Tooltip und Listen, quelleHtml: Link zur Preisquelle oder ''}. */
 export function mengeWert(m, annahme) {
-  const z = [['Menge', m.text || 'unbekannt']];
-  let w = null, wt;
-  if (m.wertQuelle) wt = geldText(m.wertQuelle[0], m.wertQuelle[1]) + ' laut Quelle';
-  else {
+  const z = [['Menge', m.wertQuelle && m.t == null ? 'unbekannt (die Quelle nennt einen Geldbetrag, keine Menge)'
+    : (m.t != null && isFinite(m.t) ? tonnenText(m.t) + (m.jahr ? ' pro Jahr' : '') + ' · laut Quelle ' : '') + (m.text || 'unbekannt')]];
+  let w = null, wt, wq = null;
+  if (m.wertQuelle) {
+    wq = euroMitQuelle(m.wertQuelle[0], m.wertQuelle[1], m.wertQuelle[2]);
+    wt = wq.eur == null ? 'Euro unbekannt (' + wq.detail + ')' : wq.text + ' (laut Quelle ' + wq.quelle + ')';
+  } else {
     w = wert(m.t, m.basis, m.jahr);
     wt = w ? w.text + (annahme ? ' (Schätzung aus angenommener Menge)' : ' (Schätzung)') : 'unbekannt' + (m.t != null && !m.basis ? ' (kein Referenzpreis für diese Ware)' : '');
   }
   z.push(['Wert', wt]);
+  if (wq && wq.eur != null) z.push(['Kurs', wq.kursText + ' (EZB-Referenzkurs über Eurostat)']);
   if (w) z.push(['Rechnung', (m.umrechnung ? m.umrechnung + '; ' : '') + w.rechnung]);
   else if (m.umrechnung) z.push(['Rechnung', m.umrechnung]);
-  const kurz = 'Menge ' + (m.text || 'unbekannt') + ' · Wert ' + wt;
+  const kurz = 'Menge ' + (m.t != null && isFinite(m.t) ? tonnenText(m.t) + (m.jahr ? ' pro Jahr' : '') : m.wertQuelle ? 'unbekannt' : (m.text || 'unbekannt')) + ' · Wert ' + (wq ? (wq.eur == null ? 'Euro unbekannt' : wq.text) : wt);
   const quelleHtml = w ? '<span class="mw-quelle">Preis: <a href="' + w.url + '" target="_blank" rel="noopener">' + w.quelle + ' ↗</a></span>' : '';
   return {zeilen: z, kurz, quelleHtml, wert: w};
 }

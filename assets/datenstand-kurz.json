@@ -2,7 +2,7 @@
  "erzeugt_von": "scripts/analysis/aktualitaet/build_datenstand.py",
  "fest": {
   "aeltester_letzter_abruf": "2026-09-05",
-  "datensaetze": 18,
+  "datensaetze": 19,
   "neuester_abruf": "2026-11-10",
   "text": "Globus- und Grunddaten: fester Datenstand, neu gelesen nur bei einem Neubau des Datensatzes."
  },
@@ -13,7 +13,10 @@
    "datum": "2026-11-10",
    "drei_monate_usd_t": 13830.0,
    "herausgeber": "London Metal Exchange (LME), wiedergegeben von Westmetall",
+   "kasse_eur_t": 12477.26,
    "kasse_usd_t": 13992.0,
+   "kurs_datum": "2026-11-10",
+   "kurs_usd_je_eur": 1.1214,
    "lagerbestand_t": 316625,
    "quelle_url": "https://www.westmetall.com/en/markdaten.php?action=table&field=LME_Cu_cash",
    "veraenderung_kasse_pct": -0.27

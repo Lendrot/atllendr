@@ -6,6 +6,7 @@ import {escapeHtml as esc} from './map-logic.mjs';
 import {countriesFrom,nameIndex,makeLocator,countryAt,countryReport,wrap} from './country-logic.mjs';
 import {material,status,nameKurz} from './verbindung-klartext.mjs';
 import {tonnenText} from './menge-wert.mjs';
+import {euroMitQuelle} from './einheit.mjs';   // Datenbasis Stufe 4: Euro zum EZB-Jahresmittel des Statistikjahrs, US$ im Tooltip
 import {TILE_SOURCE,FINE_SOURCE,FINE_LEVEL,tileSpan} from './globe-tiles.mjs';
 
 const num=n=>new Intl.NumberFormat('de-DE').format(n);
@@ -329,7 +330,10 @@ export async function attachCountries({engine,host,sites}){
 }
 
 const pct=a=>a==null?'':(a*100).toLocaleString('de-DE',{maximumFractionDigits:a<.1?1:0})+' %';
-/** tausend US-Dollar -> "168,4 Mrd. US-$" */
+/** tausend US-Dollar (BACI) -> "≈ 149 Mrd. €" mit Quellwert und EZB-Kurs im Tooltip; ohne Kurs "Euro unbekannt (…)". */
+export function euroHtml(tsd,jahr){if(tsd==null)return 'unbekannt';const e=euroMitQuelle(tsd*1e3,'USD',jahr);
+  return `<span data-quellwert title="${esc(e.detail||'')}">${esc(e.eur==null?e.text+' ('+e.detail+')':e.text)}</span>`;}
+/** tausend US-Dollar -> "168,4 Mrd. US-$" (Quellwert) */
 export function usdText(tsd){if(tsd==null)return 'unbekannt';const v=tsd*1e3;
   return v>=1e9?(v/1e9).toLocaleString('de-DE',{maximumFractionDigits:1})+' Mrd. US-$':v>=1e6?(v/1e6).toLocaleString('de-DE',{maximumFractionDigits:1})+' Mio. US-$':Math.round(v).toLocaleString('de-DE')+' US-$';}
 /** Kurzname einer HS-Position: Text bis zum ersten Semikolon, höchstens 90 Zeichen (voller Name im Aufklapper). */
@@ -394,18 +398,18 @@ function statHtml(c,handel,fehler,sel,fi={}){
   const kopf=`<h3>Größte Aus- und Einfuhren (amtliche Statistik)</h3>`;
   if(!handel)return `<section class="cv-block cv-stat">${kopf}<p>${fehler?'Handelsstatistik nicht erreichbar: <b>unbekannt</b>.':'Lädt …'}</p></section>`;
   const m=handel.meta,d=handel.laender[c.key];
-  const quelle=`<p class="cv-quelle">Quelle: <a href="${esc(m.url)}" target="_blank" rel="noopener">${esc(m.quelle)}</a>, Jahr ${m.jahr}, Lizenz ${esc(m.lizenz)}. Werte FOB in US-Dollar; Warengruppe = HS-Position (4-stellig), Namen nach Kombinierter Nomenklatur (Eurostat). Nur Waren, keine Dienstleistungen. Die Statistik nennt keine Unternehmen und keinen Transportweg; Unternehmen, Werke und Häfen je Ware stammen aus USGS (Minerals Yearbook 2024, Werktabelle, gemeinfrei, und USGS-GIS).</p>`;
+  const quelle=`<p class="cv-quelle">Quelle: <a href="${esc(m.url)}" target="_blank" rel="noopener">${esc(m.quelle)}</a>, Jahr ${m.jahr}, Lizenz ${esc(m.lizenz)}. Werte FOB; die Quelle meldet US-Dollar, angezeigt in Euro zum EZB-Jahresmittel ${m.jahr} (Wert laut Quelle beim Überfahren); Warengruppe = HS-Position (4-stellig), Namen nach Kombinierter Nomenklatur (Eurostat). Nur Waren, keine Dienstleistungen. Die Statistik nennt keine Unternehmen und keinen Transportweg; Unternehmen, Werke und Häfen je Ware stammen aus USGS (Minerals Yearbook 2024, Werktabelle, gemeinfrei, und USGS-GIS).</p>`;
   if(!d)return `<section class="cv-block cv-stat">${kopf}<p>${esc(c.name)} steht nicht in der Statistik: <b>unbekannt</b>.</p>${quelle}</section>`;
   const teil=(r,titel)=>{
     const x=d[r];if(!x)return `<h4 class="cv-stat-h">${titel}</h4><p>unbekannt</p>`;
     const waren=x.waren.map((w,i)=>{const id=`${r}:${i}`;const partner=w.partner.map(([k,,a])=>`${esc(name(k))} ${pct(a)}`).join(', ');
       return `<li${sel===id?' class="aktiv"':''}><div class="cv-hs"><b>${esc(hsKurz(w.name))}</b> <small class="cv-muted">HS ${esc(w.hs4)}</small></div>
-<div class="cv-zahl">${esc(usdText(w.tsd_usd))} · ${pct(w.anteil)} aller ${r==='aus'?'Ausfuhren':'Einfuhren'}${w.t!=null?` · ${esc(tonnenText(w.t))}`:' · Menge unbekannt'}</div>
+<div class="cv-zahl">${euroHtml(w.tsd_usd,m.jahr)} · ${pct(w.anteil)} aller ${r==='aus'?'Ausfuhren':'Einfuhren'}${w.t!=null?` · ${esc(tonnenText(w.t))}`:' · Menge unbekannt'}</div>
 <div><small>${r==='aus'?'Wohin':'Woher'}: ${partner||'unbekannt'}</small> <button type="button" class="cv-link" data-handel="${id}" aria-pressed="${sel===id}">${sel===id?'Alle Partner auf der Karte':'auf der Karte'}</button></div>
 ${w.name&&w.name!==hsKurz(w.name)?`<details><summary>voller Warenname</summary><small>${esc(w.name)}</small></details>`:''}
 ${firmenHtml(fi,c.key,w.hs4,r)}</li>`;}).join('');
     const partner=x.partner.map(([k,,a])=>`${esc(name(k))} ${pct(a)}`).join(', ');
-    return `<h4 class="cv-stat-h">${titel} · ${esc(usdText(x.tsd_usd))} insgesamt</h4><ol class="cv-top3">${waren}</ol><p class="cv-muted">Wichtigste Partner insgesamt: ${partner||'unbekannt'}</p>`;
+    return `<h4 class="cv-stat-h">${titel} · ${euroHtml(x.tsd_usd,m.jahr)} insgesamt</h4><ol class="cv-top3">${waren}</ol><p class="cv-muted">Wichtigste Partner insgesamt: ${partner||'unbekannt'}</p>`;
   };
   return `<section class="cv-block cv-stat" data-quelle="baci">${kopf}<p class="cv-muted">${esc(c.name)}, ${m.jahr}. Gestrichelte Linien auf der Karte: wichtigste Partnerländer, → Anteil an den Ausfuhren, ← an den Einfuhren.</p>
 ${teil('aus','Ausfuhren')}${teil('ein','Einfuhren')}${quelle}</section>`;

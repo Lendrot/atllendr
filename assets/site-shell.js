@@ -5,7 +5,7 @@
   // Neuordnung (Eddie 2026-11-10, "Ganzer Vorschlag"): fünf Menüpunkte wie im Annahmen-Atlas, dazu der Umschalter Belegt ⇄ Annahmen.
   var MENUE = [
     ['/atlas/', 'Globus', ['/atlas/', '/minen/', '/logistik/', '/verarbeitung/', '/indien/', '/karte/', '/deutschland/']],
-    ['/themen/', 'Rohstoffe', ['/themen/', '/kupfer/', '/lithium/', '/gold/', '/uran/', '/seltene-erden/', '/graphit/', '/wolfram/', '/antimon/', '/abfall/', '/anlagen/', '/quellen/', '/recherche/']],
+    ['/themen/', 'Rohstoffe', ['/themen/', '/kupfer/', '/lithium/', '/gold/', '/graphit/', '/weitere-rohstoffe/', '/uran/', '/seltene-erden/', '/wolfram/', '/antimon/', '/abfall/', '/anlagen/', '/quellen/', '/recherche/']],
     ['/unternehmen/', 'Unternehmen', ['/unternehmen/', '/uebernahmen/', '/verbindungen/']],
     ['/analysen/', 'Analysen', ['/analysen/', '/datenluecken/']],
     ['/daten/', 'Quellen', ['/daten/', '/produktion/', '/audit/', '/foundation/', '/schnittstelle/', '/begriffe/']]
@@ -14,7 +14,9 @@
   // Bereichsleiste: der längste passende Pfad gewinnt (Rohstoffseiten zeigen ihre eigenen Seiten), sonst die Leiste des Menüpunkts.
   var UNTER = {
     '/atlas/': [['/atlas/', 'Gesamtglobus'], ['/minen/', 'Rohstoffwelt'], ['/indien/', 'Indien'], ['/deutschland/', 'Deutschland'], ['/karte/', '2D-Karte'], ['/minen/karte/', 'Minenkarte']],
-    '/themen/': [['/themen/', 'Alle Rohstoffe'], ['/kupfer/', 'Kupfer'], ['/lithium/', 'Lithium'], ['/gold/', 'Gold'], ['/uran/', 'Uran'], ['/seltene-erden/', 'Seltene Erden'], ['/graphit/', 'Graphit'], ['/wolfram/', 'Wolfram'], ['/antimon/', 'Antimon'], ['/abfall/', 'Abfall']],
+    '/themen/': [['/themen/', 'Alle Rohstoffe'], ['/kupfer/', 'Kupfer'], ['/lithium/', 'Lithium'], ['/gold/', 'Gold'], ['/graphit/', 'Graphit'], ['/weitere-rohstoffe/', 'Weitere Rohstoffe'], ['/abfall/', 'Abfall']],
+    // Rohstoffe unter 5 freigegebenen Wegen (Audit 2026-11-14, Punkt 10); neuer_rohstoff.py --check prueft die Aufteilung.
+    '/weitere-rohstoffe/': [['/weitere-rohstoffe/', 'Weitere Rohstoffe'], ['/uran/', 'Uran'], ['/seltene-erden/', 'Seltene Erden'], ['/wolfram/', 'Wolfram'], ['/antimon/', 'Antimon']],
     '/kupfer/': [['/kupfer/', 'Kupferketten'], ['/kupfer/markt/', 'Kupfermarkt'], ['/kupfer/markt/bericht/', 'Kettenbericht'], ['/kupfer/routenbelege/', 'Routenbelege']],
     '/lithium/': [['/lithium/', 'Lithium-Standorte'], ['/lithium/markt/', 'Lithiummarkt']],
     '/gold/': [['/gold/', 'Gold-Standorte'], ['/gold/markt/', 'Goldmarkt']],

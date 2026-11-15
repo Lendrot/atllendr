@@ -6,7 +6,7 @@
  "kette": "Kamoa-Kakula -> Aurubis -> Prysmian",
  "auftrag": "Eddie Sablah 2026-11-11: exakt ein Rohstoff, exakt eine Lieferkette, komplettes Ende-zu-Ende-System von der Datenbank bis zum 3D-Globus.",
  "begruendung": "Pilotkette Prysmian (Projektschwerpunkt seit 2026-11-04). Einzige Kupferkette im Hauptatlas, die von der Mine bis zu einem europäischen Kabelhersteller reicht und deren Glieder im Freigabe-Ledger stehen (7 von 8 Verbindungen APPROVED). Alle Werte, Zitate und Freigaben stammen aus den Quell-Datensätzen der Datenbank.",
- "stand": "2026-11-12",
+ "stand": "2026-11-15",
  "kundenfrage": {
   "kette_id": "K-KAMOA-KAKULA-AURUBIS-PRYSMIAN",
   "kunde": "Prysmian",
@@ -33,23 +33,23 @@
   "verbindungen_freigegeben": 7,
   "verbindungen_kandidat": 1,
   "verbindungen_fact": 8,
-  "mengen_belegt": 8,
-  "mengen_unbekannt": 17,
-  "verbindungen_mit_liefermenge": 0,
+  "mengen_belegt": 9,
+  "mengen_unbekannt": 16,
+  "verbindungen_mit_liefermenge": 1,
   "annahmen_verbindungen": 2,
   "annahmen_mengen": 20,
   "verbindungen_mit_liefermenge_inkl_annahmen": 10,
   "eigentum_angaben": 11,
   "eigentum_freigegeben": 5,
   "risiko_angaben": 9,
-  "quellen": 86,
-  "belege": 171,
+  "quellen": 87,
+  "belege": 173,
   "alternativen": 15,
   "alternativen_kapazitaet_belegt": 11,
   "annahmen_alternativen_durchsatz": 6,
-  "boegen_menge_belegt": 0,
+  "boegen_menge_belegt": 1,
   "boegen_wert_belegt": 0,
-  "annahmen_boegen_menge": 10,
+  "annahmen_boegen_menge": 9,
   "annahmen_boegen_wert": 10,
   "eigentumskette_vollstaendig": 7,
   "eigentumskette_kanten": 24
@@ -538,6 +538,17 @@
    "abgerufen": "2026-11-11",
    "textkopie": "analysis/kupferkette/raw/ivanhoe-aif-2025-p156.txt",
    "textkopie_sha256": "a2d2516b8a004c110aa6ed16bb9e79e0baeea5ed3fd1b8eb3c3865962b873a76"
+  },
+  "kk-ivanhoe-q3-2026": {
+   "quelle_id": "kk-ivanhoe-q3-2026",
+   "herausgeber": "Ivanhoe Mines Ltd.",
+   "titel": "Ivanhoe Mines Issues 2026 Third-Quarter Financial Results, Overview of Operations and Exploration Activities",
+   "url": "https://www.ivanhoemines.com/news-stories/news-release/ivanhoe-mines-issues-2026-third-quarter-financial-results-overview-of-operations-and-exploration-activities/",
+   "art": "COMPANY_PRIMARY",
+   "veroeffentlicht": "2026-11-03",
+   "abgerufen": "2026-11-15",
+   "textkopie": "analysis/kupferkette/raw/ivanhoe-q3-2026-kamoa.txt",
+   "textkopie_sha256": "c3754d8e17f2b75ee26aaf670a5a509ce02ace3730efbb02e18eaef693adbcd5"
   },
   "kk-prysmian-ar-2025-s22": {
    "quelle_id": "kk-prysmian-ar-2025-s22",
@@ -3319,17 +3330,33 @@
      "groesse_text": "Liefermenge",
      "ebene": "BELEGT",
      "annahme": null,
-     "wert": null,
+     "wert": 1820000.0,
      "wert_von": null,
      "wert_bis": null,
-     "einheit": "t",
-     "zeitraum": null,
-     "evidenz": "UNKNOWN",
-     "freigabe": "UNKNOWN",
-     "freigabe_herkunft": null,
-     "stand": null,
-     "grund_unbekannt": "Keine Quelle nennt eine Menge fuer diese Verbindung.",
-     "belege": []
+     "einheit": "t Erz/Quartal",
+     "zeitraum": [
+      "2026-07-01",
+      "2026-09-30"
+     ],
+     "evidenz": "FACT",
+     "freigabe": "KANDIDAT",
+     "freigabe_herkunft": "Erz, das die Aufbereitung Phase 1+2 im 3. Quartal 2026 gemahlen hat; laut Quelle aus den Kamoa-Kakula-Gruben Kakula und Kansoko geliefert. Quartalswert der Quelle, nicht auf ein Jahr hochgerechnet; kein Kupfergehalt, kein Wert (die Quelle nennt keinen).",
+     "stand": "2026-11-03",
+     "grund_unbekannt": null,
+     "belege": [
+      {
+       "rolle": "hauptbeleg",
+       "zitat": "Q3 2026 Q2 2026 Q1 2026 Q4 2025 Q3 2025 Phase 1 & 2 Ore milled (000’s tonnes) 1,820",
+       "fundstelle": "Tabelle \"Summary of quarterly production data from Kamoa-Kakula\", Zeile Phase 1 & 2, Spalte Q3 2026; Absatz zur Erzzufuhr",
+       "quelle": "kk-ivanhoe-q3-2026"
+      },
+      {
+       "rolle": "zusatzbeleg",
+       "zitat": "The Phase 1 and 2 concentrators milled 30% more ore than the prior quarter, driven predominantly by additional ore supplied from Kakula and Kansoko.",
+       "fundstelle": "Tabelle \"Summary of quarterly production data from Kamoa-Kakula\", Zeile Phase 1 & 2, Spalte Q3 2026; Absatz zur Erzzufuhr",
+       "quelle": "kk-ivanhoe-q3-2026"
+      }
+     ]
     },
     {
      "id": "M-V1-LIEFERWERT",
@@ -6270,9 +6297,9 @@
   },
   "messung": {
    "boegen": 10,
-   "menge_belegt": 0,
+   "menge_belegt": 1,
    "wert_belegt": 0,
-   "menge_annahme": 10,
+   "menge_annahme": 9,
    "wert_annahme": 10,
    "menge_offen": 0,
    "wert_offen": 0,

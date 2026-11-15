@@ -1,5 +1,6 @@
 import {countryAnchor,numeric,buildTradeLayer} from './material-logic.mjs';
 import {statuses} from './market-logic.mjs';
+import {euroMitQuelle,geldText} from './einheit.mjs';
 export const areas={companies:{label:'Unternehmen',color:'#69b5ff',shape:'● →'},waste:{label:'Abfall & Sekundärstoffe',color:'#6bddb0',shape:'◆ ⋯'},resources:{label:'Rohstoffe',color:'#ffb964',shape:'◆ ⋯'},goods:{label:'Waren & Produkte',color:'#e89cab',shape:'◆ ⋯'},money:{label:'Geld & Handelswerte',color:'#c4a1ff',shape:'◇ ⇢'}};
 const palette=['#73dce5','#f2c464','#d9a0f4','#ef9a8a','#91d779','#83adff','#e6a8ca','#cecf81','#ffc9a6','#aa9cff','#58ccb2','#ee8aa2','#bfd2ff','#e0d1a2','#82bbdc','#c1ebaf'];
 export const africa=new Set(['DZ','AO','BJ','BW','BF','BI','CV','CM','CF','TD','KM','CD','CG','CI','DJ','EG','GQ','ER','SZ','ET','GA','GM','GH','GN','GW','KE','LS','LR','LY','MG','MW','ML','MR','MU','MA','MZ','NA','NE','NG','RW','ST','SN','SC','SL','SO','ZA','SS','SD','TZ','TG','TN','UG','ZM','ZW']);
@@ -84,6 +85,11 @@ export function rankedQuantityGroups(rows){
  }
  return [...groups.values()].map(g=>({...g,entries:g.entries.sort((a,b)=>b.quantity_kg-a.quantity_kg)})).sort((a,b)=>b.period.end.localeCompare(a.period.end)||a.subtype.localeCompare(b.subtype));
 }
-export function formatMoney(value,currency){return value==null?'Wert unbekannt':new Intl.NumberFormat('de-DE',{maximumFractionDigits:2}).format(value>=1e9?value/1e9:value>=1e6?value/1e6:value)+(value>=1e9?' Mrd. ':value>=1e6?' Mio. ':' ')+(currency||'');}
+/** Datenbasis Stufe 4 (Eddie 2026-11-14): Geld in Euro zum EZB-Jahresmittel des Jahres der Angabe; Quellwert und Kurs bleiben sichtbar. */
+export function jahrVon(period){if(!period)return null;const a=String(period.start||'').slice(0,4),b=String(period.end||'').slice(0,4);
+ if(/^\d{4}$/.test(a)&&a===b)return Number(a);const j=[...new Set(String(period.label||'').match(/(?<!\d)(19|20)\d\d(?!\d)/g)||[])];return j.length===1?Number(j[0]):null;}
+export function formatMoney(value,currency,period){if(value==null)return 'Wert unbekannt';if(!currency)return geldText(value,'')+' (Währung unbekannt)';
+ const e=euroMitQuelle(value,currency,jahrVon(period));if(currency==='EUR')return e.text;
+ return e.eur==null?`Euro unbekannt (laut Quelle ${e.quelle}; ${e.detail.split('; ').pop()})`:`${e.text} (laut Quelle ${e.quelle}; ${e.kursText})`;}
 export function styleMaterialLayer(rows){return rows.map(d=>({...d,flowColor:hex(connectionColor({area:'waste',subtype:d.observation?.material_id||'Stoffstrom'},'waste'))}));}
 export {buildTradeLayer};

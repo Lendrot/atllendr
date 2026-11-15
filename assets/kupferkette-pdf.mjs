@@ -56,6 +56,7 @@ export const STAND = {
 };
 const farbe = hex => { const n = parseInt(hex.slice(1), 16); return [(n >> 16) / 255, ((n >> 8) & 255) / 255, (n & 255) / 255].map(x => +x.toFixed(3)).join(' '); };
 const z = (w, st = 2) => Number(w).toLocaleString('de-DE', {maximumFractionDigits: st});
+import {felderInTonnen, tonnenText} from './einheit.mjs';   // Anzeige in Tonnen (Datenbasis Stufe 4)
 const zeit = m => m.zeitraum ? `${m.zeitraum[0].slice(0, 7)} bis ${m.zeitraum[1].slice(0, 7)}` : '';
 
 // --- Zeichenfläche einer Seite (Koordinaten von oben links, in pt) --------------------------------------------------------
@@ -204,8 +205,9 @@ function verzeichnis(daten) {
 }
 
 // --- Inhalt ----------------------------------------------------------------------------------------------------------------
-function wert(m) {
-  if (m.wert === null) return 'unbekannt';
+function wert(m0) {
+  if (m0.wert === null) return 'unbekannt';
+  const m = felderInTonnen(m0);
   const w = m.wert_von !== null && m.wert_von !== undefined ? `rund ${z(m.wert)} (${z(m.wert_von)} bis ${z(m.wert_bis)})`
     : m.wert_bis !== null && m.wert_bis !== undefined ? `${z(m.wert)} bis ${z(m.wert_bis)}` : (m.ebene === 'ANNAHME' ? 'rund ' : '') + z(m.wert);
   return `${w} ${m.einheit || ''}`.trim();
@@ -271,15 +273,15 @@ function seiteEins(daten, opt, qv, S) {
     if (!menge.length) menge.push(M('U'));
     // Wert pro Jahr: belegt nur mit Quelle (sonst U); mit Annahmen als Rechnung Menge x LME-Kasse / EZB-Kurs (Stand A)
     const lw = v.mengen.filter(m => m.groesse === 'LIEFERWERT'), wb = lw.find(m => m.ebene === 'BELEGT'), wa = lw.find(m => m.ebene === 'ANNAHME');
-    // Mit Annahmen: Menge und Wert in einem Lauf ("rund 8,5 kt Cu/Jahr = rund 106 Mio. €/Jahr", Stand A); belegt: eigener Wert oder U
+    // Mit Annahmen: Menge und Wert in einem Lauf ("rund 8.500 t Cu/Jahr = rund 106 Mio. €/Jahr", Stand A); belegt: eigener Wert oder U
     const zusammen = an && a && wa && !(wb && wb.wert !== null);
-    if (zusammen) {   // kurz: "≈ 8,5 kt Cu/a · 106 Mio. €/a"; Spanne nur in der Seite und in kette.json
+    if (zusammen) {   // kurz: "≈ 8.500 t Cu/a · 106 Mio. €/a"; Spanne nur in der Seite und in kette.json
       const i = menge.findIndex(x => x && x.s === wert(a));
-      if (i >= 0) menge.splice(i, 3, T(`~ ${z(a.wert, 1)} ${a.einheit.replace('/Jahr', '/a')} · ${z(wa.wert, 0)} Mio. €/a`), M('A'));
+      if (i >= 0) menge.splice(i, 3, T(`~ ${(t => t.quelle ? tonnenText(t.wert) + t.einheit.slice(1) : z(a.wert, 1) + ' ' + a.einheit)(felderInTonnen(a)).replace('/Jahr', '/a')} · ${z(wa.wert, 0)} Mio. €/a`), M('A'));
     }
     const wert_ = zusammen ? [] : wb && wb.wert !== null ? [T('Wert:', 'n', F.muted), T(wert(wb)), M(stand(wb)), qv.belege(wb.belege)] : [T('Wert:', 'n', F.muted), M('U')];
     const og = v.mengen.find(m => m.groesse === 'LAENDERSTROM_MENGE'), ow = v.mengen.find(m => m.groesse === 'LAENDERSTROM_WERT');
-    const ober = og ? [T(`Obergrenze Länderstrom ${og.einheit.split(' ').pop()} ${og.zeitraum[0].slice(0, 4)}:`.replace(an ? 'Länderstrom ' : '\u0000', ''), 'n', F.muted), T(`${z(og.wert / 1000, 1)} kt, ${z(ow.wert, 0)} Mio. €`), M(stand(og)), qv.belege(og.belege)] : [];
+    const ober = og ? [T(`Obergrenze Länderstrom ${og.einheit.split(' ').pop()} ${og.zeitraum[0].slice(0, 4)}:`.replace(an ? 'Länderstrom ' : '\u0000', ''), 'n', F.muted), T(`${tonnenText(og.wert)}, ${z(ow.wert, 0)} Mio. €`), M(stand(og)), qv.belege(og.belege)] : [];
     const status = v.ebene === 'ANNAHME' ? [M('A'), qv.ref([v.annahme?.quelle])] : [M(v.freigabe === 'FREIGEGEBEN' ? 'B' : 'K'), qv.belege(v.belege)];
     return [B(`${v.id} `), T(`${S[v.von].kurz} -> ${S[v.nach].kurz}`), ...status, zusammen ? null : T('Menge:', 'n', F.muted), ...menge, ...wert_, ...ober];
   });
@@ -300,11 +302,11 @@ function seiteZwei(daten, opt, qv, S) {
   const einordnung = ids => ids.map(i => R[i]).filter(Boolean).flatMap(r => [NL, I('Einordnung: '), T(`${r.art_text}: ${r.text}`), M(stand(r)), qv.belege(r.belege)]);
   const t = a.tonnen;
   const tonnen = [];
-  if (t.status === 'BELEGT') tonnen.push(B(`${z(t.kt)} kt`), M('B'));
+  if (t.status === 'BELEGT') tonnen.push(B(tonnenText(t.kt * 1000)), M('B'));
   else tonnen.push(T('Belegt:'), M('U'), T(t.grund));
-  if (t.obergrenze) tonnen.push(NL, T('Obergrenze: höchstens '), B(`${z(t.obergrenze.kt)} kt`), M('R'), I(`${t.obergrenze.rechnung}. ${t.obergrenze.hinweis}`),
+  if (t.obergrenze) tonnen.push(NL, T('Obergrenze: höchstens '), B(tonnenText(t.obergrenze.kt * 1000)), M('R'), I(`${t.obergrenze.rechnung}. ${t.obergrenze.hinweis}`),
     qv.ref(t.obergrenze.posten.flatMap(p => { const m = [...daten.standorte.flatMap(s => s.mengen), ...daten.verbindungen.flatMap(v => v.mengen)].find(x => x.id === p.menge); return m ? m.belege.map(b => b.quelle) : []; })));
-  if (an && t.annahme) tonnen.push(NL, T('Annahme: rund '), B(`${z(t.annahme.kt)} ${t.annahme.einheit}`), T(`(${z(t.annahme.von)} bis ${z(t.annahme.bis)})`), M('A'),
+  if (an && t.annahme) tonnen.push(NL, T('Annahme: '), B(wert({wert: t.annahme.kt, wert_von: t.annahme.von, wert_bis: t.annahme.bis, einheit: t.annahme.einheit, ebene: 'ANNAHME'})), M('A'),
     I(`${t.annahme.annahmen.join(', ')}, Konfidenz ${z(t.annahme.konfidenz)}; Rechnung: ${t.annahme.rechnung}`), qv.ref(['annahmen-atlas']));
   const e = a.ersatz, ersatz = [];
   if (e.status === 'UNBEKANNT') ersatz.push(T('Benannter Ersatzlieferant:'), M('U'), T(e.grund));

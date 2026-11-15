@@ -11,7 +11,7 @@
   "umfang": "Gezählt: auf dem Hauptglobus gezeichnete Verbindungen und alle Firmenverbindungen auf /verbindungen/. Nicht gezeichnete Verbindungen (ohne Koordinate) und der Annahmen-Atlas zählen nicht.",
   "stand": "2026-11-11",
   "inputs_sha256": {
-   "dist/assets/globe-sites.json": "0b8ab956fca5056dfbb7c833e1d2da1c153c1e9f7a81d3001311c55b2ae3c3c5",
+   "dist/assets/globe-sites.json": "a67f0553ca2c48d92da7e046b39370bd7d9651b715ef28d1affc692f50302ff9",
    "analysis/company-connections.json": "154041bea38376890f09b6d27405d6a021fe3df359b1a5f0e8dccf84bad9b43c",
    "analysis/approval-ledger.jsonl": "f797611a62385d7abb9a822a24922c49701df68fe39f06de4ff1e213633c5ea6"
   }
@@ -313,8 +313,8 @@
    "quelle_text": "19 Dritte/Behörde, 25 Beteiligte",
    "naechster_schritt": "Zurückgestellte Kandidaten: Quelle suchen, die Art bzw. Identität wörtlich nennt.",
    "hinweis": null,
-   "quelle_url": "https://github.com/Lendrot/Atlas-Lendrot/blob/main/analysis/company-connections.json",
-   "quelle_titel": "gezählt aus analysis/company-connections.json"
+   "quelle_url": "https://github.com/Lendrot/Atlas-Lendrot/blob/main/scripts/analysis/build_company_connections.py",
+   "quelle_titel": "gezählt aus analysis/company-connections.json (erzeugt von scripts/analysis/build_company_connections.py)"
   },
   {
    "key": "firmen:DIREKT",
@@ -336,8 +336,8 @@
    "quelle_text": "5 Herausgeber nicht erfasst",
    "naechster_schritt": "Übernahmen und Atlas-Verbindungen sind noch nicht im Freigabeprozess: Pressemitteilungen gegenlesen.",
    "hinweis": null,
-   "quelle_url": "https://github.com/Lendrot/Atlas-Lendrot/blob/main/analysis/company-connections.json",
-   "quelle_titel": "gezählt aus analysis/company-connections.json"
+   "quelle_url": "https://github.com/Lendrot/Atlas-Lendrot/blob/main/scripts/analysis/build_company_connections.py",
+   "quelle_titel": "gezählt aus analysis/company-connections.json (erzeugt von scripts/analysis/build_company_connections.py)"
   },
   {
    "key": "firmen:UEBER_ANLAGE",
@@ -359,8 +359,8 @@
    "quelle_text": "56 Herausgeber nicht erfasst",
    "naechster_schritt": "Folgt den Kupfer-Freigaben beider Eingangsbeziehungen.",
    "hinweis": null,
-   "quelle_url": "https://github.com/Lendrot/Atlas-Lendrot/blob/main/analysis/company-connections.json",
-   "quelle_titel": "gezählt aus analysis/company-connections.json"
+   "quelle_url": "https://github.com/Lendrot/Atlas-Lendrot/blob/main/scripts/analysis/build_company_connections.py",
+   "quelle_titel": "gezählt aus analysis/company-connections.json (erzeugt von scripts/analysis/build_company_connections.py)"
   }
  ]
 }

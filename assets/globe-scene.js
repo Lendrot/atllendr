@@ -236,23 +236,34 @@ export function createGlobe(host,callbacks={}){
   // Positions are computed once into typed arrays; the cluster pass projects them with one matrix and reuses the buffers.
   // Display grouping only: every drawn point sits at an actual member's coordinate.
   const siteMaterial=new THREE.PointsMaterial({vertexColors:true,size:1,sizeAttenuation:false,transparent:true,opacity:.9,depthWrite:false});
+  // Punktgröße nach Marktpräsenz (Eddie 2026-11-14, nur in den Welten /atlas/?fach=…, assets/standort-mengen/): Attribut aScale
+  // multipliziert die Punktgröße; negativ = Menge unbekannt (Ring). Ohne Skalierung (Gesamtatlas) bleibt alles wie bisher:
+  // aScale 1, uRound 0, eckige Punkte wie gehabt.
+  const siteShape={value:0};
+  siteMaterial.onBeforeCompile=shader=>{
+    shader.uniforms.uRound=siteShape;
+    shader.vertexShader=shader.vertexShader.replace('#include <common>','#include <common>\nattribute float aScale;\nvarying float vScale;').replace('gl_PointSize = size;','gl_PointSize = size * abs( aScale );\n\tvScale = aScale;');
+    shader.fragmentShader=shader.fragmentShader.replace('#include <common>','#include <common>\nuniform float uRound;\nvarying float vScale;').replace('void main() {','void main() {\n\tif ( uRound > 0.5 ) { float d = length( gl_PointCoord - vec2( 0.5 ) ); if ( d > 0.5 || ( vScale < 0.0 && d < 0.3 ) ) discard; }');
+  };
   const siteMatrix=new THREE.Matrix4();
   let siteData=null,siteGroups=[],sitePoints=null,sitesVisible=true,lastSiteKey='',lastSiteTime=0;
   function setSites(records){
-    const n=records.length,pos=new Float32Array(n*3),color=new Float32Array(n*3),group=new Int32Array(n),groupIds=new Map(),c=new THREE.Color();
-    records.forEach((r,i)=>{pos.set(geoVector(r.lat,r.lon,100.22),i*3);c.set(r.color??0x85caff).toArray(color,i*3);if(!groupIds.has(r.group))groupIds.set(r.group,groupIds.size);group[i]=groupIds.get(r.group);});
+    const n=records.length,pos=new Float32Array(n*3),color=new Float32Array(n*3),scale=new Float32Array(n),group=new Int32Array(n),groupIds=new Map(),c=new THREE.Color();
+    records.forEach((r,i)=>{pos.set(geoVector(r.lat,r.lon,100.22),i*3);c.set(r.color??0x85caff).toArray(color,i*3);scale[i]=r.scale||1;if(!groupIds.has(r.group))groupIds.set(r.group,groupIds.size);group[i]=groupIds.get(r.group);});
+    siteShape.value=records.some(r=>r.scale&&r.scale!==1)?1:0;
     if(sitePoints){scene.remove(sitePoints);sitePoints.geometry.dispose();sitePoints=null;}
     const geometry=new THREE.BufferGeometry();
     geometry.setAttribute('position',new THREE.BufferAttribute(new Float32Array(Math.max(3,n*3)),3).setUsage(THREE.DynamicDrawUsage));
     geometry.setAttribute('color',new THREE.BufferAttribute(new Float32Array(Math.max(3,n*3)),3).setUsage(THREE.DynamicDrawUsage));
+    geometry.setAttribute('aScale',new THREE.BufferAttribute(new Float32Array(Math.max(1,n)).fill(1),1).setUsage(THREE.DynamicDrawUsage));
     geometry.setDrawRange(0,0);
     sitePoints=new THREE.Points(geometry,siteMaterial);sitePoints.frustumCulled=false;sitePoints.renderOrder=-1;sitePoints.visible=sitesVisible&&n>0;scene.add(sitePoints);
-    siteData={records,pos,color,group,n};lastSiteKey='';updateSiteClusters();
+    siteData={records,pos,color,scale,group,n};lastSiteKey='';updateSiteClusters();
   }
   function updateSiteClusters(){
     if(!siteData)return;
     camera.updateMatrixWorld();siteMatrix.multiplyMatrices(camera.projectionMatrix,camera.matrixWorldInverse);
-    const m=siteMatrix.elements,{pos,color,group,n}=siteData,cx=camera.position.x,cy=camera.position.y,cz=camera.position.z;
+    const m=siteMatrix.elements,{pos,color,scale,group,n}=siteData,cx=camera.position.x,cy=camera.position.y,cz=camera.position.z;
     const cell=camera.position.length()<120?8:14,cells=new Map(),w=size.width,h=size.height;
     for(let i=0;i<n;i++){
       const x=pos[i*3],y=pos[i*3+1],z=pos[i*3+2];
@@ -264,11 +275,12 @@ export function createGlobe(host,callbacks={}){
       const members=cells.get(key);if(members)members.push(i);else cells.set(key,[i]);
     }
     siteGroups=[...cells.values()];
-    const geometry=sitePoints.geometry,outPos=geometry.attributes.position.array,outColor=geometry.attributes.color.array;
-    siteGroups.forEach((members,k)=>{const i=members[0];outPos[k*3]=pos[i*3];outPos[k*3+1]=pos[i*3+1];outPos[k*3+2]=pos[i*3+2];outColor[k*3]=color[i*3];outColor[k*3+1]=color[i*3+1];outColor[k*3+2]=color[i*3+2];});
+    const geometry=sitePoints.geometry,outPos=geometry.attributes.position.array,outColor=geometry.attributes.color.array,outScale=geometry.attributes.aScale.array;
+    // Gruppe: der Punkt sitzt auf dem Mitglied mit der größten belegten Menge (sonst dem ersten) und hat dessen Größe.
+    siteGroups.forEach((members,k)=>{let i=members[0];for(const j of members)if(scale[j]>scale[i])i=j;if(i!==members[0]){members.splice(members.indexOf(i),1);members.unshift(i);}outPos[k*3]=pos[i*3];outPos[k*3+1]=pos[i*3+1];outPos[k*3+2]=pos[i*3+2];outColor[k*3]=color[i*3];outColor[k*3+1]=color[i*3+1];outColor[k*3+2]=color[i*3+2];outScale[k]=scale[i];});
     geometry.setDrawRange(0,siteGroups.length);
-    geometry.attributes.position.addUpdateRange(0,siteGroups.length*3);geometry.attributes.color.addUpdateRange(0,siteGroups.length*3);
-    geometry.attributes.position.needsUpdate=true;geometry.attributes.color.needsUpdate=true;geometry.boundingSphere=null;
+    geometry.attributes.position.addUpdateRange(0,siteGroups.length*3);geometry.attributes.color.addUpdateRange(0,siteGroups.length*3);geometry.attributes.aScale.addUpdateRange(0,siteGroups.length);
+    geometry.attributes.position.needsUpdate=true;geometry.attributes.color.needsUpdate=true;geometry.attributes.aScale.needsUpdate=true;geometry.boundingSphere=null;
     siteMaterial.size=markerPixels(camera.position.length()-100)*.85;
     invalidate();
   }

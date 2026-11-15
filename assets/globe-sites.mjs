@@ -4,6 +4,7 @@ import {escapeHtml as esc} from './map-logic.mjs';
 import {currentFach} from './fachatlas.mjs';
 import {verbindungHtml,nameKurz} from './verbindung-klartext.mjs';
 import {skala,legendeHtml,mengeWert} from './menge-wert.mjs';
+import {ladeMarktpraesenz,marktLegendeHtml,marktZeile} from './marktpraesenz.mjs';
 
 const num=n=>new Intl.NumberFormat('de-DE').format(n);
 const coord=n=>new Intl.NumberFormat('de-DE',{maximumFractionDigits:5}).format(n);
@@ -19,6 +20,8 @@ export async function attachSites(engine,host){
  const state=Object.fromEntries(datasets.map(d=>[d.id,chosen?chosen.has(d.id):true]));
  const byIndex=data.datasets.map(d=>datasets.includes(d)?d:null);
  const records=data.rows.map(r=>{const dataset=byIndex[r[0]];if(!dataset)return null;const own=r.length>8?data.sources[r[8]]:null;return {dataset,kind:data.kinds[r[1]],lat:r[2],lon:r[3],name:r[4],id:r[5],country:r[6],status:data.statuses[r[7]],source:own?{label:own[0],url:own[1]}:null,color:Number.parseInt(dataset.color.slice(1),16),group:dataset.id};});
+ // Punktgröße nach Marktpräsenz (Eddie 2026-11-14): nur in einer Welt, nie im Gesamtatlas (marktpraesenz.mjs).
+ const markt=fach?await ladeMarktpraesenz(fach.sites,records):null;
  const links=(data.links||[]).filter(l=>byIndex[l[0]]).map(l=>{const from=records[l[2]],to=records[l[3]];return {dataset:byIndex[l[0]],type:data.link_types[l[1]],from,to,id:l[4],evidence:data.evidences[l[5]],audit:data.audits[l[6]],source:l.length>7?{label:data.sources[l[7]][0],url:data.sources[l[7]][1]}:null,color:from.color};});
  // Gesamtvernetzung (gesamtvernetzung.mjs): alle Verbindungen aller Fachatlanten, auch der Teilmengen (Lithium, Uran …),
  // deren Punkte hier nicht doppelt gezeichnet werden; Endpunkte dafür aus den Zeilen gebaut.
@@ -37,6 +40,7 @@ export async function attachSites(engine,host){
  document.body.append(dialog);dialog.querySelector('#sites-dialog-close').onclick=()=>dialog.close();
  // Bogenstärke nach Menge pro Jahr (Eddie 2026-11-11): nur Mengen laut Quelle (link_info j); ohne Menge dünn. Skala je Ansicht.
  const legende=document.createElement('div');legende.className='mw-box';panel.append(legende);
+ if(markt){const box=document.createElement('div');box.className='mp-box';box.innerHTML=marktLegendeHtml(markt);panel.append(box);}
  function apply(){
   engine.setSites(records.filter(r=>r&&state[r.dataset.id]));
   const drawn=linkFilter?allLinks.flatMap(l=>{const c=linkFilter(l);return c==null?[]:[{...l,color:c}];}):links.filter(l=>state[l.dataset.id]);
@@ -53,7 +57,7 @@ export async function attachSites(engine,host){
   const link=r.dataset.detail?`<a href="${esc(r.dataset.detail+encodeURIComponent(r.id))}">Im Fachatlas öffnen</a>`:`<a href="${esc(r.dataset.fachatlas)}">Fachatlas ${esc(r.dataset.label)}</a>`;
   const an='https://lendrot.github.io/atlaslendrot/schnittstelle/'+(/^(gem-|entity:|legacy-row-|[a-z-]+-(site|node|owner)-)/.test(r.id)?'?id='+encodeURIComponent(r.id):'?suche='+encodeURIComponent(r.name||''));
   const ann=r.name||/^(gem-|entity:|legacy-row-|[a-z-]+-(site|node|owner)-)/.test(r.id)?` · <a href="${esc(an)}" target="_blank" rel="noopener">Im Annahmen-Atlas nachsehen ↗</a> (Annahmen, nicht belegt)`:'';
-  return `<div><dt>${esc(r.name||'Name UNKNOWN')}</dt><dd>${esc(r.kind)} · ${esc(r.country)} · Status ${esc(r.status)}<br>Koordinate wie gemeldet: ${coord(r.lat)}, ${coord(r.lon)} · Datensatz ${esc(r.id)}<br>Quelle: ${r.source?source(r.source):esc(r.dataset.source)+' · '+esc(r.dataset.evidence)} · ${link}${ann}</dd></div>`;
+  return `<div><dt>${esc(r.name||'Name UNKNOWN')}</dt><dd>${esc(r.kind)} · ${esc(r.country)} · Status ${esc(r.status)}<br>Koordinate wie gemeldet: ${coord(r.lat)}, ${coord(r.lon)} · Datensatz ${esc(r.id)}<br>${markt?marktZeile(markt,r):''}Quelle: ${r.source?source(r.source):esc(r.dataset.source)+' · '+esc(r.dataset.evidence)} · ${link}${ann}</dd></div>`;
  }
  function source(s){return s.url&&/^https:\/\//.test(s.url)?`<a href="${esc(s.url)}" rel="noopener" target="_blank">${esc(s.label)}</a>`:esc(s.label);}
  // Gleiche Angaben an jeder Verbindung (Eddie 2026-11-10): Menge und Stand stehen immer da, ohne Beleg als „unbekannt“.

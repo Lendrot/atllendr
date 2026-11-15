@@ -20,7 +20,8 @@
 import * as THREE from 'three';
 import {createGlobe} from './globe-scene.js';
 import {geoVector} from './globe-math.mjs';
-import {installRuhe} from './globe-ruhe.mjs';   // nach 7 s ohne Bedienung und ohne Auswahl: Afrika, Äquator waagerecht
+import {installRuhe} from './globe-ruhe.mjs';
+import {felderInTonnen, tonnenText} from './einheit.mjs';   // Anzeige in Tonnen (Datenbasis Stufe 4); Quellwert im Tooltip   // nach 7 s ohne Bedienung und ohne Auswahl: Afrika, Äquator waagerecht
 
 const FARBE = {VERARBEITUNG: 0xe39b3c, TRANSPORT: 0x38a8e0, HANDEL: 0x9a7fd6, LIEFERUNG: 0xe8643c};
 const FARBE_ANNAHME = 0xd9dee3;
@@ -66,11 +67,12 @@ const rsChip = st => `<span class="rs ${RS[st][1]}" data-rs="${st}">${esc(RS[st]
 const zeigen = o => status.ansicht === 'annahmen' || o.ebene !== 'ANNAHME';
 window.__kupferkette = status;
 
-function wertText(m) {
-  if (m.wert === null) return `<span class="unbekannt">unbekannt</span>`;
+function wertText(m0) {
+  if (m0.wert === null) return `<span class="unbekannt">unbekannt</span>`;
+  const m = felderInTonnen(m0);
   const w = m.wert_von !== null ? `rund ${zahl(m.wert)} (${zahl(m.wert_von)} bis ${zahl(m.wert_bis)})`
     : m.wert_bis !== null ? `${zahl(m.wert)} bis ${zahl(m.wert_bis)}` : (m.ebene === 'ANNAHME' ? 'rund ' : '') + zahl(m.wert);
-  return `${w} ${esc(m.einheit || '')}`;
+  return m.quelle ? `<span data-quellwert title="laut Quelle: ${esc(m.quelle)}">${w} ${esc(m.einheit || '')}</span>` : `${w} ${esc(m.einheit || '')}`;
 }
 const lm = (v, g, e) => v.mengen.find(m => m.groesse === g && m.ebene === e);
 const kurzZahl = w => Number(w).toLocaleString('de-DE', {maximumFractionDigits: w >= 100 ? 0 : 1});
@@ -78,7 +80,8 @@ const kurzZahl = w => Number(w).toLocaleString('de-DE', {maximumFractionDigits: 
 function bogenWerte(v) {
   const an = status.ansicht === 'annahmen', aus = (g, kurz) => {
     const b = lm(v, g, 'BELEGT'), a = lm(v, g, 'ANNAHME');
-    const k = m => g === 'LIEFERWERT' ? `${kurzZahl(m.wert)} Mio. €/a` : (m.einheit || '').startsWith('kt') ? `${kurzZahl(m.wert)} kt/a` : `${kurzZahl(m.wert)} ${m.einheit}`;
+    const k = m0 => { if (g === 'LIEFERWERT') return `${kurzZahl(m0.wert)} Mio. €/a`; const m = felderInTonnen(m0);
+      return m.quelle && /\/Jahr$/.test(m.einheit) ? `${tonnenText(m.wert)}/a` : `${kurzZahl(m.wert)} ${m.einheit}`; };
     if (b && b.wert !== null) return {m: b, art: 'B', text: kurz ? k(b) : wertText(b)};
     if (an && a) return {m: a, art: 'A', text: kurz ? `≈ ${k(a)}` : wertText(a)};
     return {m: b, art: 'U', text: 'unbekannt'};
@@ -89,7 +92,7 @@ function bogenWerte(v) {
 function schildText(v) {   // Schild am Bogen: kurz, Ansicht beachten
   const w = bogenWerte(v), t = x => x.art === 'U' ? '?' : x.text;
   const mm = w.kurzMenge.art === 'U' ? 'Menge ?' : t(w.kurzMenge), ww = w.kurzWert.art === 'U' ? 'Wert ?' : t(w.kurzWert);
-  return {text: `${mm} · ${ww}${w.og && w.kurzMenge.art !== 'B' ? ` (≤ ${kurzZahl(w.og.wert / 1000)} kt ${esc(w.og.einheit.split(' ').pop())})` : ''}`,
+  return {text: `${mm} · ${ww}${w.og && w.kurzMenge.art !== 'B' ? ` (≤ ${tonnenText(w.og.wert)} ${esc(w.og.einheit.split(' ').pop())})` : ''}`,
           art: w.kurzMenge.art === 'B' || w.kurzWert.art === 'B' ? 'B' : w.kurzMenge.art === 'A' || w.kurzWert.art === 'A' ? 'A' : 'U'};
 }
 function rechnungHtml(m, daten) {
@@ -511,9 +514,9 @@ function ausfallHtml(daten, id) {
   const kunde = S[daten.ausfall.kunde].kurz;
   const einordnung = (ids, ohne) => ids.map(i => R[i]).map(r => `<div data-einordnung><b>${esc(r.art_text)} (belegt, ${ohne}):</b> ${esc(r.text)} ${chips(r)}${belegeHtml(r.belege, Q)}</div>`).join('');
   const t = a.tonnen;
-  let tonnen = t.status === 'BELEGT' ? `<b>${zahl(t.kt)} kt</b>` : `<b>Belegt:</b> <span class="unbekannt">unbekannt</span>. ${esc(t.grund)}`;
-  if (t.obergrenze) tonnen += `<div data-obergrenze>Obergrenze: höchstens <b>${zahl(t.obergrenze.kt)} kt</b> ${statusChip('RECHNUNG')}<div class="hinweis">${esc(t.obergrenze.rechnung)} · ${esc(t.obergrenze.hinweis)}</div></div>`;
-  if (t.annahme) tonnen += `<div class="annahme-box" data-annahme-ausfall><b>Annahme:</b> rund ${zahl(t.annahme.kt)} ${esc(t.annahme.einheit)} (${zahl(t.annahme.von)} bis ${zahl(t.annahme.bis)}) `
+  let tonnen = t.status === 'BELEGT' ? `<b>${tonnenText(t.kt * 1000)}</b>` : `<b>Belegt:</b> <span class="unbekannt">unbekannt</span>. ${esc(t.grund)}`;
+  if (t.obergrenze) tonnen += `<div data-obergrenze>Obergrenze: höchstens <b>${tonnenText(t.obergrenze.kt * 1000)}</b> ${statusChip('RECHNUNG')}<div class="hinweis">${esc(t.obergrenze.rechnung)} · ${esc(t.obergrenze.hinweis)}</div></div>`;
+  if (t.annahme) tonnen += `<div class="annahme-box" data-annahme-ausfall><b>Annahme:</b> ${wertText({wert: t.annahme.kt, wert_von: t.annahme.von, wert_bis: t.annahme.bis, einheit: t.annahme.einheit, ebene: 'ANNAHME'})} `
     + `<span class="chip a">Annahme · ${t.annahme.annahmen.map(esc).join(', ')} · Konfidenz ${konf(t.annahme.konfidenz)}</span><div class="hinweis">Rechnung: ${esc(t.annahme.rechnung)} · nicht belegt, nicht freigegeben</div></div>`;
   const e = a.ersatz;
   let ersatz = e.wege.length ? `<p style="margin:2px 0">Erfasste Ausweichwege zu ${esc(kunde)}:</p><ul>${e.wege.map(w => `<li>${wegText(daten, w)}</li>`).join('')}</ul>` : '';
@@ -637,7 +640,7 @@ function kurzHtml(daten) {
   const t = g.tonnen.annahme, mk = g.mehrkosten, du = g.dauer;
   let fehlt = `${esc(kunde.kurz)} verliert den einzigen erfassten Kupferlieferanten dieser Kette. `;
   if (an && t) {
-    fehlt += `<span class="am">Annahme: ≈ ${esc(kurzZahl(t.kt))} kt ${esc(t.einheit.replace(/^kt /, '').replace('/Jahr', ''))} pro Jahr fehlen`;
+    fehlt += `<span class="am">Annahme: ≈ ${esc(tonnenText(t.kt * 1000))} ${esc(t.einheit.replace(/^kt /, '').replace('/Jahr', ''))} pro Jahr fehlen`;
     if (mk.status === 'ANNAHME') fehlt += `, Mehrkosten ≈ ${mio(mk.je_jahr.mio_eur)} Mio. € pro Jahr`;
     if (du.status === 'ANNAHME' && mk.ueber_dauer) fehlt += `, bei ≈ ${esc(String(du.annahme.wert).replace('.', ','))} Monaten Ausfall ≈ ${mio(mk.ueber_dauer.mio_eur)} Mio. €`;
     fehlt += '.</span> Belegt ist keine dieser Zahlen.';
