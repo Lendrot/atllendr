@@ -1,0 +1,2610 @@
+{
+ "ausfall": {
+  "S1": {
+   "ausweich": {
+    "grund": null,
+    "liste": [
+     {
+      "art": "LAND",
+      "fuer": "S1",
+      "glied": null,
+      "hinweis": "Förderung des Landes (Landesebene), keine freie Kapazität und keine bestätigte Lieferbeziehung.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 67000,
+       "text": "67.000 t Inhalt Förderung 2025 (78,8 % der Welt)"
+      },
+      "name": "China",
+      "quelle": {
+       "fundstelle": "Page 2, table 'World Mine Production and Reserves'",
+       "herausgeber": "U.S. Geological Survey",
+       "titel": "Mineral Commodity Summaries 2026, Tungsten",
+       "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-tungsten.pdf"
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     },
+     {
+      "art": "LAND",
+      "fuer": "S1",
+      "glied": null,
+      "hinweis": "Förderung des Landes (Landesebene), keine freie Kapazität und keine bestätigte Lieferbeziehung.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 3000,
+       "text": "3.000 t Inhalt Förderung 2025 (3,5 % der Welt)"
+      },
+      "name": "Vietnam",
+      "quelle": {
+       "fundstelle": "Page 2, table 'World Mine Production and Reserves'",
+       "herausgeber": "U.S. Geological Survey",
+       "titel": "Mineral Commodity Summaries 2026, Tungsten",
+       "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-tungsten.pdf"
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     },
+     {
+      "art": "LAND",
+      "fuer": "S1",
+      "glied": null,
+      "hinweis": "Förderung des Landes (Landesebene), keine freie Kapazität und keine bestätigte Lieferbeziehung.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 2400,
+       "text": "2.400 t Inhalt Förderung 2025 (2,8 % der Welt)"
+      },
+      "name": "Kasachstan",
+      "quelle": {
+       "fundstelle": "Page 2, table 'World Mine Production and Reserves'",
+       "herausgeber": "U.S. Geological Survey",
+       "titel": "Mineral Commodity Summaries 2026, Tungsten",
+       "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-tungsten.pdf"
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     },
+     {
+      "art": "STANDORT",
+      "freigabe": "FREIGEGEBEN",
+      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
+      "fuer": "S1",
+      "glied": null,
+      "hinweis": "Andere Wolframmine (Konzentrat); eine Lieferbeziehung ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt.",
+      "id": "AW-W-NUIPHAO",
+      "lage": {
+       "genauigkeit": "E",
+       "lat": 21.6473,
+       "lon": 105.6668,
+       "quelle": "USGS-GIS 2024, INDOPAC_Mineral_Facilities, FeatureUID VNM176"
+      },
+      "land": "VN",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": null,
+       "text": "Kapazität 4.000 t Wolfram-Inhalt pro Jahr (USGS Minerals Yearbook 2024)"
+      },
+      "name": "Nui Phao Mine (Thai Nguyen, Vietnam)",
+      "quelle": {
+       "fundstelle": "MYB-Zeile FAC_VNM0008_05 (Kapazität); GIS INDOPAC_Mineral_Facilities VNM176 (Lage)",
+       "herausgeber": "U.S. Geological Survey",
+       "titel": "Minerals Yearbook 2024, Vol. III (Area Reports: International), Tabelle Facilities; Lage: Compilation of Geospatial Data (GIS) for the Mineral Industries of Select Countries in the Indo-Pacific",
+       "url": "https://www.sciencebase.gov/catalog/item/6a8490171ba49b3133cd8055",
+       "zitat": "Nui Phao Mine · Vietnam · Tungsten Mine Concentrates · 4000 Metric tons (W content) · Assumed active · Nui Phao Mining Co., Ltd. (NPMC) · Dai Tu, Thai Nguyen Province | GIS: Nui Phao Mine · Vietnam · Tungsten Concentrate W content · 5600 mt · Assumed Active · 21.6473, 105.6668 · Nui Phao Mining Co., Ltd. (NPMC)"
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     },
+     {
+      "art": "STANDORT",
+      "freigabe": "FREIGEGEBEN",
+      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
+      "fuer": "S1",
+      "glied": null,
+      "hinweis": "Andere Wolframmine (Konzentrat); eine Lieferbeziehung ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt.",
+      "id": "AW-W-SANDAOZHUANG",
+      "lage": {
+       "genauigkeit": "E",
+       "lat": 33.9206,
+       "lon": 111.4981,
+       "quelle": "USGS-GIS 2023, CHN_Mineral_Facilities, FeatureUID CHN0601"
+      },
+      "land": "CN",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": null,
+       "text": "Kapazität 6.600 t Wolfram-Inhalt pro Jahr (USGS Minerals Yearbook 2024)"
+      },
+      "name": "Sandaozhuang Molybdän-Wolfram-Mine (Luanchuan, Henan, China)",
+      "quelle": {
+       "fundstelle": "MYB-Zeile FAC_CHN0900_01 (Kapazität); GIS CHN_Mineral_Facilities CHN0601 (Lage)",
+       "herausgeber": "U.S. Geological Survey",
+       "titel": "Minerals Yearbook 2024, Vol. III (Area Reports: International), Tabelle Facilities; Lage: Compilation of Geospatial Data (GIS) for the Mineral Industries and Related Infrastructure of the People's Republic of China",
+       "url": "https://www.sciencebase.gov/catalog/item/6a8490171ba49b3133cd8055",
+       "zitat": "Sandaozhuang Molybdenum-Tungsten Mine · China · Tungsten Mine Concentrates · 6600 Metric tons (W content) · Assumed active · China Molybdenum Co. Ltd. · Lengshui, Luanchuan, Henan Province | GIS: Sandaozhuang Mine · China · Tungsten Concentrate Tungsten oxide in concentrate · 12 kmt · Assumed Active · 33.9206, 111.4981 · China Molybdenum Co., Ltd. (CMOC)"
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     }
+    ],
+    "mit_menge": 5
+   },
+   "dauer": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine belegte Wiederanlaufzeit."
+   },
+   "ersatz": [],
+   "mehrkosten": {
+    "evidenz": "UNKNOWN",
+    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+   },
+   "mengen": [
+    {
+     "evidenz": "UNKNOWN",
+     "text": "unbekannt",
+     "verbindung": "V3"
+    },
+    {
+     "evidenz": "BELEGT",
+     "text": "700 t pro Jahr",
+     "verbindung": "V4"
+    }
+   ],
+   "ohne_abfluss": [],
+   "ohne_zufluss": [
+    "S4",
+    "S6"
+   ],
+   "tonnen": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+   },
+   "verbindungen_weg": [
+    "V3",
+    "V4"
+   ]
+  },
+  "S2": {
+   "ausweich": {
+    "grund": null,
+    "liste": [
+     {
+      "art": "LAND",
+      "fuer": "S2",
+      "glied": null,
+      "hinweis": "Förderung des Landes (Landesebene), keine freie Kapazität und keine bestätigte Lieferbeziehung.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 67000,
+       "text": "67.000 t Inhalt Förderung 2025 (78,8 % der Welt)"
+      },
+      "name": "China",
+      "quelle": {
+       "fundstelle": "Page 2, table 'World Mine Production and Reserves'",
+       "herausgeber": "U.S. Geological Survey",
+       "titel": "Mineral Commodity Summaries 2026, Tungsten",
+       "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-tungsten.pdf"
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     },
+     {
+      "art": "LAND",
+      "fuer": "S2",
+      "glied": null,
+      "hinweis": "Förderung des Landes (Landesebene), keine freie Kapazität und keine bestätigte Lieferbeziehung.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 3000,
+       "text": "3.000 t Inhalt Förderung 2025 (3,5 % der Welt)"
+      },
+      "name": "Vietnam",
+      "quelle": {
+       "fundstelle": "Page 2, table 'World Mine Production and Reserves'",
+       "herausgeber": "U.S. Geological Survey",
+       "titel": "Mineral Commodity Summaries 2026, Tungsten",
+       "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-tungsten.pdf"
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     },
+     {
+      "art": "LAND",
+      "fuer": "S2",
+      "glied": null,
+      "hinweis": "Förderung des Landes (Landesebene), keine freie Kapazität und keine bestätigte Lieferbeziehung.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 2400,
+       "text": "2.400 t Inhalt Förderung 2025 (2,8 % der Welt)"
+      },
+      "name": "Kasachstan",
+      "quelle": {
+       "fundstelle": "Page 2, table 'World Mine Production and Reserves'",
+       "herausgeber": "U.S. Geological Survey",
+       "titel": "Mineral Commodity Summaries 2026, Tungsten",
+       "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-tungsten.pdf"
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     },
+     {
+      "art": "STANDORT",
+      "freigabe": "FREIGEGEBEN",
+      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
+      "fuer": "S2",
+      "glied": null,
+      "hinweis": "Andere Wolframmine (Konzentrat); eine Lieferbeziehung ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt.",
+      "id": "AW-W-NUIPHAO",
+      "lage": {
+       "genauigkeit": "E",
+       "lat": 21.6473,
+       "lon": 105.6668,
+       "quelle": "USGS-GIS 2024, INDOPAC_Mineral_Facilities, FeatureUID VNM176"
+      },
+      "land": "VN",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": null,
+       "text": "Kapazität 4.000 t Wolfram-Inhalt pro Jahr (USGS Minerals Yearbook 2024)"
+      },
+      "name": "Nui Phao Mine (Thai Nguyen, Vietnam)",
+      "quelle": {
+       "fundstelle": "MYB-Zeile FAC_VNM0008_05 (Kapazität); GIS INDOPAC_Mineral_Facilities VNM176 (Lage)",
+       "herausgeber": "U.S. Geological Survey",
+       "titel": "Minerals Yearbook 2024, Vol. III (Area Reports: International), Tabelle Facilities; Lage: Compilation of Geospatial Data (GIS) for the Mineral Industries of Select Countries in the Indo-Pacific",
+       "url": "https://www.sciencebase.gov/catalog/item/6a8490171ba49b3133cd8055",
+       "zitat": "Nui Phao Mine · Vietnam · Tungsten Mine Concentrates · 4000 Metric tons (W content) · Assumed active · Nui Phao Mining Co., Ltd. (NPMC) · Dai Tu, Thai Nguyen Province | GIS: Nui Phao Mine · Vietnam · Tungsten Concentrate W content · 5600 mt · Assumed Active · 21.6473, 105.6668 · Nui Phao Mining Co., Ltd. (NPMC)"
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     },
+     {
+      "art": "STANDORT",
+      "freigabe": "FREIGEGEBEN",
+      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
+      "fuer": "S2",
+      "glied": null,
+      "hinweis": "Andere Wolframmine (Konzentrat); eine Lieferbeziehung ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt.",
+      "id": "AW-W-SANDAOZHUANG",
+      "lage": {
+       "genauigkeit": "E",
+       "lat": 33.9206,
+       "lon": 111.4981,
+       "quelle": "USGS-GIS 2023, CHN_Mineral_Facilities, FeatureUID CHN0601"
+      },
+      "land": "CN",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": null,
+       "text": "Kapazität 6.600 t Wolfram-Inhalt pro Jahr (USGS Minerals Yearbook 2024)"
+      },
+      "name": "Sandaozhuang Molybdän-Wolfram-Mine (Luanchuan, Henan, China)",
+      "quelle": {
+       "fundstelle": "MYB-Zeile FAC_CHN0900_01 (Kapazität); GIS CHN_Mineral_Facilities CHN0601 (Lage)",
+       "herausgeber": "U.S. Geological Survey",
+       "titel": "Minerals Yearbook 2024, Vol. III (Area Reports: International), Tabelle Facilities; Lage: Compilation of Geospatial Data (GIS) for the Mineral Industries and Related Infrastructure of the People's Republic of China",
+       "url": "https://www.sciencebase.gov/catalog/item/6a8490171ba49b3133cd8055",
+       "zitat": "Sandaozhuang Molybdenum-Tungsten Mine · China · Tungsten Mine Concentrates · 6600 Metric tons (W content) · Assumed active · China Molybdenum Co. Ltd. · Lengshui, Luanchuan, Henan Province | GIS: Sandaozhuang Mine · China · Tungsten Concentrate Tungsten oxide in concentrate · 12 kmt · Assumed Active · 33.9206, 111.4981 · China Molybdenum Co., Ltd. (CMOC)"
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     }
+    ],
+    "mit_menge": 5
+   },
+   "dauer": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine belegte Wiederanlaufzeit."
+   },
+   "ersatz": [],
+   "mehrkosten": {
+    "evidenz": "UNKNOWN",
+    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+   },
+   "mengen": [
+    {
+     "evidenz": "UNKNOWN",
+     "text": "unbekannt",
+     "verbindung": "V1"
+    },
+    {
+     "evidenz": "UNKNOWN",
+     "text": "unbekannt",
+     "verbindung": "V2"
+    }
+   ],
+   "ohne_abfluss": [],
+   "ohne_zufluss": [
+    "S3",
+    "S5"
+   ],
+   "tonnen": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+   },
+   "verbindungen_weg": [
+    "V1",
+    "V2"
+   ]
+  },
+  "S3": {
+   "ausweich": {
+    "grund": null,
+    "liste": [
+     {
+      "art": "NETZ",
+      "fuer": "S2",
+      "glied": "S5",
+      "hinweis": null,
+      "menge": {
+       "evidenz": "UNKNOWN",
+       "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+       "t": null,
+       "text": "unbekannt"
+      },
+      "name": "Masan High-Tech Materials",
+      "richtung": "ABFLUSS",
+      "verbindung": "V2"
+     },
+     {
+      "art": "STANDORT",
+      "freigabe": "FREIGEGEBEN",
+      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung nach Korrektur, getrennte Sitzung)), getrennte Sitzung",
+      "fuer": "S3",
+      "glied": null,
+      "hinweis": "Anderes Werk für Ammoniumparawolframat (APT), das Wolframkonzentrat verarbeitet; eine Lieferbeziehung ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt.",
+      "id": "AW-W-CHENZHOU-APT",
+      "lage": {
+       "genauigkeit": "E",
+       "lat": 25.8023,
+       "lon": 113.1618,
+       "quelle": "USGS-GIS 2023, CHN_Mineral_Facilities, FeatureUID CHN0738"
+      },
+      "land": "CN",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": null,
+       "text": "Kapazität 20.000 t Ammoniumparawolframat (APT) pro Jahr (USGS-GIS 2023, Datenstand 2019)"
+      },
+      "name": "APT-Werk Suxian, Chenzhou (Hunan, China), Chenzhou Diamond Tungsten",
+      "quelle": {
+       "fundstelle": "CHN_Mineral_Facilities CHN0738 (Kapazität und Lage; Datenstand laut Quelle: USGS 2019 Minerals Yearbook, Vol. III, China Country Chapter, Table 2; various other USGS, industry, geologic research, and company reports; various mining databases)",
+       "herausgeber": "U.S. Geological Survey",
+       "titel": "Compilation of Geospatial Data (GIS) for the Mineral Industries and Related Infrastructure of the People's Republic of China",
+       "url": "https://www.sciencebase.gov/catalog/item/64348094d34ee8d4add91365",
+       "zitat": "GIS: Plant in Suxian District · China · Tungsten Ammonium Paratungstate · 20 kmt · Assumed Active · 25.8023, 113.1618 · Chenzhou Diamond Tungsten Products Co., Ltd."
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     },
+     {
+      "art": "STANDORT",
+      "freigabe": "FREIGEGEBEN",
+      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung nach Korrektur, getrennte Sitzung)), getrennte Sitzung",
+      "fuer": "S3",
+      "glied": null,
+      "hinweis": "Anderes Werk für Ammoniumparawolframat (APT), das Wolframkonzentrat verarbeitet; eine Lieferbeziehung ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt. GIS Capacity Notes C,G, Shared Capacity CHN0107 Xiamen Tungsten (H.C.) Co., Ltd., gleiche Koordinate: ein Wert für das Werk am Standort, nicht für jede Gesellschaft einzeln.",
+      "id": "AW-W-XIAMEN-APT",
+      "lage": {
+       "genauigkeit": "A",
+       "lat": 24.46,
+       "lon": 117.97,
+       "quelle": "USGS-GIS 2023, CHN_Mineral_Facilities, FeatureUID CHN0106"
+      },
+      "land": "CN",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": null,
+       "text": "Kapazität 12.000 t Ammoniumparawolframat (APT) pro Jahr am Standort Xiamen, gemeinsam mit Xiamen Tungsten (H.C.) (USGS-GIS 2023, Datenstand 2019)"
+      },
+      "name": "APT-Werk Xiamen (Fujian, China), Xiamen Tungsten",
+      "quelle": {
+       "fundstelle": "CHN_Mineral_Facilities CHN0106 (Kapazität und Lage; Datenstand laut Quelle: USGS 2019 Minerals Yearbook, Vol. III, China Country Chapter, Table 2; various other USGS, industry, geologic research, and company reports; various mining databases); Capacity Notes C,G, Shared Capacity CHN0107",
+       "herausgeber": "U.S. Geological Survey",
+       "titel": "Compilation of Geospatial Data (GIS) for the Mineral Industries and Related Infrastructure of the People's Republic of China",
+       "url": "https://www.sciencebase.gov/catalog/item/64348094d34ee8d4add91365",
+       "zitat": "GIS: Plant in Xiamen · China · Tungsten Ammonium Paratungstate · 12 kmt · Assumed Active · 24.46, 117.97 · Xiamen Tungsten Co., Ltd. (XTC)"
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     }
+    ],
+    "mit_menge": 2
+   },
+   "dauer": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine belegte Wiederanlaufzeit."
+   },
+   "ersatz": [
+    {
+     "fuer": "S2",
+     "richtung": "ABFLUSS",
+     "weitere": [
+      "S5"
+     ]
+    }
+   ],
+   "mehrkosten": {
+    "evidenz": "UNKNOWN",
+    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+   },
+   "mengen": [
+    {
+     "evidenz": "UNKNOWN",
+     "text": "unbekannt",
+     "verbindung": "V1"
+    }
+   ],
+   "ohne_abfluss": [],
+   "ohne_zufluss": [],
+   "tonnen": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+   },
+   "verbindungen_weg": [
+    "V1"
+   ]
+  },
+  "S4": {
+   "ausweich": {
+    "grund": null,
+    "liste": [
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S6",
+      "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 700.0,
+       "text": "700 t pro Jahr"
+      },
+      "name": "Traxys Europe",
+      "richtung": "ABFLUSS",
+      "verbindung": "V4"
+     },
+     {
+      "art": "STANDORT",
+      "freigabe": "FREIGEGEBEN",
+      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung nach Korrektur, getrennte Sitzung)), getrennte Sitzung",
+      "fuer": "S4",
+      "glied": null,
+      "hinweis": "Anderes Werk für Ammoniumparawolframat (APT), das Wolframkonzentrat verarbeitet; eine Lieferbeziehung ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt.",
+      "id": "AW-W-CHENZHOU-APT",
+      "lage": {
+       "genauigkeit": "E",
+       "lat": 25.8023,
+       "lon": 113.1618,
+       "quelle": "USGS-GIS 2023, CHN_Mineral_Facilities, FeatureUID CHN0738"
+      },
+      "land": "CN",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": null,
+       "text": "Kapazität 20.000 t Ammoniumparawolframat (APT) pro Jahr (USGS-GIS 2023, Datenstand 2019)"
+      },
+      "name": "APT-Werk Suxian, Chenzhou (Hunan, China), Chenzhou Diamond Tungsten",
+      "quelle": {
+       "fundstelle": "CHN_Mineral_Facilities CHN0738 (Kapazität und Lage; Datenstand laut Quelle: USGS 2019 Minerals Yearbook, Vol. III, China Country Chapter, Table 2; various other USGS, industry, geologic research, and company reports; various mining databases)",
+       "herausgeber": "U.S. Geological Survey",
+       "titel": "Compilation of Geospatial Data (GIS) for the Mineral Industries and Related Infrastructure of the People's Republic of China",
+       "url": "https://www.sciencebase.gov/catalog/item/64348094d34ee8d4add91365",
+       "zitat": "GIS: Plant in Suxian District · China · Tungsten Ammonium Paratungstate · 20 kmt · Assumed Active · 25.8023, 113.1618 · Chenzhou Diamond Tungsten Products Co., Ltd."
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     },
+     {
+      "art": "STANDORT",
+      "freigabe": "FREIGEGEBEN",
+      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung nach Korrektur, getrennte Sitzung)), getrennte Sitzung",
+      "fuer": "S4",
+      "glied": null,
+      "hinweis": "Anderes Werk für Ammoniumparawolframat (APT), das Wolframkonzentrat verarbeitet; eine Lieferbeziehung ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt. GIS Capacity Notes C,G, Shared Capacity CHN0107 Xiamen Tungsten (H.C.) Co., Ltd., gleiche Koordinate: ein Wert für das Werk am Standort, nicht für jede Gesellschaft einzeln.",
+      "id": "AW-W-XIAMEN-APT",
+      "lage": {
+       "genauigkeit": "A",
+       "lat": 24.46,
+       "lon": 117.97,
+       "quelle": "USGS-GIS 2023, CHN_Mineral_Facilities, FeatureUID CHN0106"
+      },
+      "land": "CN",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": null,
+       "text": "Kapazität 12.000 t Ammoniumparawolframat (APT) pro Jahr am Standort Xiamen, gemeinsam mit Xiamen Tungsten (H.C.) (USGS-GIS 2023, Datenstand 2019)"
+      },
+      "name": "APT-Werk Xiamen (Fujian, China), Xiamen Tungsten",
+      "quelle": {
+       "fundstelle": "CHN_Mineral_Facilities CHN0106 (Kapazität und Lage; Datenstand laut Quelle: USGS 2019 Minerals Yearbook, Vol. III, China Country Chapter, Table 2; various other USGS, industry, geologic research, and company reports; various mining databases); Capacity Notes C,G, Shared Capacity CHN0107",
+       "herausgeber": "U.S. Geological Survey",
+       "titel": "Compilation of Geospatial Data (GIS) for the Mineral Industries and Related Infrastructure of the People's Republic of China",
+       "url": "https://www.sciencebase.gov/catalog/item/64348094d34ee8d4add91365",
+       "zitat": "GIS: Plant in Xiamen · China · Tungsten Ammonium Paratungstate · 12 kmt · Assumed Active · 24.46, 117.97 · Xiamen Tungsten Co., Ltd. (XTC)"
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     }
+    ],
+    "mit_menge": 3
+   },
+   "dauer": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine belegte Wiederanlaufzeit."
+   },
+   "ersatz": [
+    {
+     "fuer": "S1",
+     "richtung": "ABFLUSS",
+     "weitere": [
+      "S6"
+     ]
+    }
+   ],
+   "mehrkosten": {
+    "evidenz": "UNKNOWN",
+    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+   },
+   "mengen": [
+    {
+     "evidenz": "UNKNOWN",
+     "text": "unbekannt",
+     "verbindung": "V3"
+    }
+   ],
+   "ohne_abfluss": [],
+   "ohne_zufluss": [],
+   "tonnen": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+   },
+   "verbindungen_weg": [
+    "V3"
+   ]
+  },
+  "S5": {
+   "ausweich": {
+    "grund": null,
+    "liste": [
+     {
+      "art": "NETZ",
+      "fuer": "S2",
+      "glied": "S3",
+      "hinweis": null,
+      "menge": {
+       "evidenz": "UNKNOWN",
+       "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+       "t": null,
+       "text": "unbekannt"
+      },
+      "name": "CRONIMET Asia Pte",
+      "richtung": "ABFLUSS",
+      "verbindung": "V1"
+     },
+     {
+      "art": "STANDORT",
+      "freigabe": "FREIGEGEBEN",
+      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung nach Korrektur, getrennte Sitzung)), getrennte Sitzung",
+      "fuer": "S5",
+      "glied": null,
+      "hinweis": "Anderes Werk für Ammoniumparawolframat (APT), das Wolframkonzentrat verarbeitet; eine Lieferbeziehung ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt.",
+      "id": "AW-W-CHENZHOU-APT",
+      "lage": {
+       "genauigkeit": "E",
+       "lat": 25.8023,
+       "lon": 113.1618,
+       "quelle": "USGS-GIS 2023, CHN_Mineral_Facilities, FeatureUID CHN0738"
+      },
+      "land": "CN",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": null,
+       "text": "Kapazität 20.000 t Ammoniumparawolframat (APT) pro Jahr (USGS-GIS 2023, Datenstand 2019)"
+      },
+      "name": "APT-Werk Suxian, Chenzhou (Hunan, China), Chenzhou Diamond Tungsten",
+      "quelle": {
+       "fundstelle": "CHN_Mineral_Facilities CHN0738 (Kapazität und Lage; Datenstand laut Quelle: USGS 2019 Minerals Yearbook, Vol. III, China Country Chapter, Table 2; various other USGS, industry, geologic research, and company reports; various mining databases)",
+       "herausgeber": "U.S. Geological Survey",
+       "titel": "Compilation of Geospatial Data (GIS) for the Mineral Industries and Related Infrastructure of the People's Republic of China",
+       "url": "https://www.sciencebase.gov/catalog/item/64348094d34ee8d4add91365",
+       "zitat": "GIS: Plant in Suxian District · China · Tungsten Ammonium Paratungstate · 20 kmt · Assumed Active · 25.8023, 113.1618 · Chenzhou Diamond Tungsten Products Co., Ltd."
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     },
+     {
+      "art": "STANDORT",
+      "freigabe": "FREIGEGEBEN",
+      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung nach Korrektur, getrennte Sitzung)), getrennte Sitzung",
+      "fuer": "S5",
+      "glied": null,
+      "hinweis": "Anderes Werk für Ammoniumparawolframat (APT), das Wolframkonzentrat verarbeitet; eine Lieferbeziehung ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt. GIS Capacity Notes C,G, Shared Capacity CHN0107 Xiamen Tungsten (H.C.) Co., Ltd., gleiche Koordinate: ein Wert für das Werk am Standort, nicht für jede Gesellschaft einzeln.",
+      "id": "AW-W-XIAMEN-APT",
+      "lage": {
+       "genauigkeit": "A",
+       "lat": 24.46,
+       "lon": 117.97,
+       "quelle": "USGS-GIS 2023, CHN_Mineral_Facilities, FeatureUID CHN0106"
+      },
+      "land": "CN",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": null,
+       "text": "Kapazität 12.000 t Ammoniumparawolframat (APT) pro Jahr am Standort Xiamen, gemeinsam mit Xiamen Tungsten (H.C.) (USGS-GIS 2023, Datenstand 2019)"
+      },
+      "name": "APT-Werk Xiamen (Fujian, China), Xiamen Tungsten",
+      "quelle": {
+       "fundstelle": "CHN_Mineral_Facilities CHN0106 (Kapazität und Lage; Datenstand laut Quelle: USGS 2019 Minerals Yearbook, Vol. III, China Country Chapter, Table 2; various other USGS, industry, geologic research, and company reports; various mining databases); Capacity Notes C,G, Shared Capacity CHN0107",
+       "herausgeber": "U.S. Geological Survey",
+       "titel": "Compilation of Geospatial Data (GIS) for the Mineral Industries and Related Infrastructure of the People's Republic of China",
+       "url": "https://www.sciencebase.gov/catalog/item/64348094d34ee8d4add91365",
+       "zitat": "GIS: Plant in Xiamen · China · Tungsten Ammonium Paratungstate · 12 kmt · Assumed Active · 24.46, 117.97 · Xiamen Tungsten Co., Ltd. (XTC)"
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     }
+    ],
+    "mit_menge": 2
+   },
+   "dauer": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine belegte Wiederanlaufzeit."
+   },
+   "ersatz": [
+    {
+     "fuer": "S2",
+     "richtung": "ABFLUSS",
+     "weitere": [
+      "S3"
+     ]
+    }
+   ],
+   "mehrkosten": {
+    "evidenz": "UNKNOWN",
+    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+   },
+   "mengen": [
+    {
+     "evidenz": "UNKNOWN",
+     "text": "unbekannt",
+     "verbindung": "V2"
+    }
+   ],
+   "ohne_abfluss": [],
+   "ohne_zufluss": [],
+   "tonnen": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+   },
+   "verbindungen_weg": [
+    "V2"
+   ]
+  },
+  "S6": {
+   "ausweich": {
+    "grund": null,
+    "liste": [
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S4",
+      "hinweis": null,
+      "menge": {
+       "evidenz": "UNKNOWN",
+       "grund": "Die Quelle nennt nur einen Geldbetrag, keine Menge; ein Betrag wird nicht in Tonnen umgerechnet.",
+       "t": null,
+       "text": "unbekannt"
+      },
+      "name": "Elmet Technologies LLC",
+      "richtung": "ABFLUSS",
+      "verbindung": "V3"
+     },
+     {
+      "art": "STANDORT",
+      "freigabe": "FREIGEGEBEN",
+      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung nach Korrektur, getrennte Sitzung)), getrennte Sitzung",
+      "fuer": "S6",
+      "glied": null,
+      "hinweis": "Anderes Werk für Ammoniumparawolframat (APT), das Wolframkonzentrat verarbeitet; eine Lieferbeziehung ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt.",
+      "id": "AW-W-CHENZHOU-APT",
+      "lage": {
+       "genauigkeit": "E",
+       "lat": 25.8023,
+       "lon": 113.1618,
+       "quelle": "USGS-GIS 2023, CHN_Mineral_Facilities, FeatureUID CHN0738"
+      },
+      "land": "CN",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": null,
+       "text": "Kapazität 20.000 t Ammoniumparawolframat (APT) pro Jahr (USGS-GIS 2023, Datenstand 2019)"
+      },
+      "name": "APT-Werk Suxian, Chenzhou (Hunan, China), Chenzhou Diamond Tungsten",
+      "quelle": {
+       "fundstelle": "CHN_Mineral_Facilities CHN0738 (Kapazität und Lage; Datenstand laut Quelle: USGS 2019 Minerals Yearbook, Vol. III, China Country Chapter, Table 2; various other USGS, industry, geologic research, and company reports; various mining databases)",
+       "herausgeber": "U.S. Geological Survey",
+       "titel": "Compilation of Geospatial Data (GIS) for the Mineral Industries and Related Infrastructure of the People's Republic of China",
+       "url": "https://www.sciencebase.gov/catalog/item/64348094d34ee8d4add91365",
+       "zitat": "GIS: Plant in Suxian District · China · Tungsten Ammonium Paratungstate · 20 kmt · Assumed Active · 25.8023, 113.1618 · Chenzhou Diamond Tungsten Products Co., Ltd."
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     },
+     {
+      "art": "STANDORT",
+      "freigabe": "FREIGEGEBEN",
+      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung nach Korrektur, getrennte Sitzung)), getrennte Sitzung",
+      "fuer": "S6",
+      "glied": null,
+      "hinweis": "Anderes Werk für Ammoniumparawolframat (APT), das Wolframkonzentrat verarbeitet; eine Lieferbeziehung ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt. GIS Capacity Notes C,G, Shared Capacity CHN0107 Xiamen Tungsten (H.C.) Co., Ltd., gleiche Koordinate: ein Wert für das Werk am Standort, nicht für jede Gesellschaft einzeln.",
+      "id": "AW-W-XIAMEN-APT",
+      "lage": {
+       "genauigkeit": "A",
+       "lat": 24.46,
+       "lon": 117.97,
+       "quelle": "USGS-GIS 2023, CHN_Mineral_Facilities, FeatureUID CHN0106"
+      },
+      "land": "CN",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": null,
+       "text": "Kapazität 12.000 t Ammoniumparawolframat (APT) pro Jahr am Standort Xiamen, gemeinsam mit Xiamen Tungsten (H.C.) (USGS-GIS 2023, Datenstand 2019)"
+      },
+      "name": "APT-Werk Xiamen (Fujian, China), Xiamen Tungsten",
+      "quelle": {
+       "fundstelle": "CHN_Mineral_Facilities CHN0106 (Kapazität und Lage; Datenstand laut Quelle: USGS 2019 Minerals Yearbook, Vol. III, China Country Chapter, Table 2; various other USGS, industry, geologic research, and company reports; various mining databases); Capacity Notes C,G, Shared Capacity CHN0107",
+       "herausgeber": "U.S. Geological Survey",
+       "titel": "Compilation of Geospatial Data (GIS) for the Mineral Industries and Related Infrastructure of the People's Republic of China",
+       "url": "https://www.sciencebase.gov/catalog/item/64348094d34ee8d4add91365",
+       "zitat": "GIS: Plant in Xiamen · China · Tungsten Ammonium Paratungstate · 12 kmt · Assumed Active · 24.46, 117.97 · Xiamen Tungsten Co., Ltd. (XTC)"
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     }
+    ],
+    "mit_menge": 2
+   },
+   "dauer": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine belegte Wiederanlaufzeit."
+   },
+   "ersatz": [
+    {
+     "fuer": "S1",
+     "richtung": "ABFLUSS",
+     "weitere": [
+      "S4"
+     ]
+    }
+   ],
+   "mehrkosten": {
+    "evidenz": "UNKNOWN",
+    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+   },
+   "mengen": [
+    {
+     "evidenz": "BELEGT",
+     "text": "700 t pro Jahr",
+     "verbindung": "V4"
+    }
+   ],
+   "ohne_abfluss": [],
+   "ohne_zufluss": [],
+   "tonnen": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+   },
+   "verbindungen_weg": [
+    "V4"
+   ]
+  }
+ },
+ "eigentumskette": {
+  "beschreibung": "Eigentümerkette je Glied der Rohstoffketten bis zur obersten Gesellschaft bzw. zum letzten Eigentümer (Auftrag Eddie Sablah 2026-11-16 \"jede VF auf den Stand von Kupfer\", Paket 3). Gleiche Regeln wie Kupferkette (analysis/kupferkette/auswahl.json, Abschnitt eigentumskette): Anteil nur, wenn er im Zitat steht; Pflichtpfade ab schwelle_prozent effektivem Anteil oder Anteil unbekannt; freigegeben nur über bestätigte Zweitprüfung einer getrennten Sitzung (Datei zweitpruefung, Regel Eddie 2026-11-11); alles andere ist Kandidat.",
+  "erstpruefung": {
+   "am": "2026-11-16",
+   "pruefer": "Claude (Erstprüfung)",
+   "sitzung": "session_01JgcA7TdgLRrqKV9kyFuE5E"
+  },
+  "glieder": {
+   "S1": {
+    "baum": {
+     "effektiv": 100.0,
+     "kante": null,
+     "kinder": [
+      {
+       "effektiv": null,
+       "kante": "EK-EQR-PERSONEN-EQR",
+       "kinder": [],
+       "knoten": "R-EQR-PERSONEN",
+       "pflicht": true,
+       "schluss": "ENDE",
+       "schluss_text": "letzter Eigentümer"
+      }
+     ],
+     "knoten": "R-EQR",
+     "pflicht": true,
+     "schluss": "GESCHLOSSEN",
+     "schluss_text": "Eigentümer belegt"
+    },
+    "belegt": true,
+    "betreiber": null,
+    "bezug": "ZUGEHOERIG",
+    "bezug_belege": [
+     {
+      "fundstelle": "PDF-Seite 57 (pdftotext ohne -layout)",
+      "quelle": "rk-eqr-ar-2025-s057",
+      "rolle": "hauptbeleg",
+      "zitat": "EQR released an updated Ore Reserve Statement for its wholly owned Barruecopardo Mine in Spain"
+     }
+    ],
+    "bezug_freigabe": "FREIGEGEBEN",
+    "bezug_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
+    "bezug_text": "Das Glied gehört laut Quelle zu",
+    "ebenen": 1,
+    "einschraenkung": null,
+    "grund": null,
+    "status": "VOLLSTAENDIG_FREIGEGEBEN",
+    "status_text": "bis oben belegt und freigegeben",
+    "wurzel": "R-EQR"
+   },
+   "S2": {
+    "baum": {
+     "effektiv": 100.0,
+     "kante": null,
+     "kinder": [
+      {
+       "effektiv": null,
+       "kante": "EK-EQR-PERSONEN-EQR",
+       "kinder": [],
+       "knoten": "R-EQR-PERSONEN",
+       "pflicht": true,
+       "schluss": "ENDE",
+       "schluss_text": "letzter Eigentümer"
+      }
+     ],
+     "knoten": "R-EQR",
+     "pflicht": true,
+     "schluss": "GESCHLOSSEN",
+     "schluss_text": "Eigentümer belegt"
+    },
+    "belegt": true,
+    "betreiber": null,
+    "bezug": "ZUGEHOERIG",
+    "bezug_belege": [
+     {
+      "fundstelle": "PDF-Seite 10 (pdftotext ohne -layout)",
+      "quelle": "rk-eqr-ar-2025-s010",
+      "rolle": "hauptbeleg",
+      "zitat": "This transaction consolidates EQR’s ownership of the Mt Carbine operations"
+     }
+    ],
+    "bezug_freigabe": "FREIGEGEBEN",
+    "bezug_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
+    "bezug_text": "Das Glied gehört laut Quelle zu",
+    "ebenen": 1,
+    "einschraenkung": null,
+    "grund": null,
+    "status": "VOLLSTAENDIG_FREIGEGEBEN",
+    "status_text": "bis oben belegt und freigegeben",
+    "wurzel": "R-EQR"
+   },
+   "S3": {
+    "baum": {
+     "effektiv": 100.0,
+     "kante": null,
+     "kinder": [],
+     "knoten": "R-CRONIMET-ASIA",
+     "pflicht": true,
+     "schluss": "OFFEN",
+     "schluss_text": "endet ohne Beleg"
+    },
+    "belegt": false,
+    "betreiber": null,
+    "bezug": "IST",
+    "bezug_belege": [],
+    "bezug_freigabe": null,
+    "bezug_herkunft": null,
+    "bezug_text": "Das Glied ist diese Gesellschaft bzw. dieser Standort",
+    "ebenen": 0,
+    "einschraenkung": null,
+    "grund": null,
+    "status": "OFFEN",
+    "status_text": "Kette endet ohne Beleg",
+    "wurzel": "R-CRONIMET-ASIA"
+   },
+   "S4": {
+    "baum": {
+     "effektiv": 100.0,
+     "kante": null,
+     "kinder": [],
+     "knoten": "R-ELMET",
+     "pflicht": true,
+     "schluss": "OFFEN",
+     "schluss_text": "endet ohne Beleg"
+    },
+    "belegt": false,
+    "betreiber": null,
+    "bezug": "IST",
+    "bezug_belege": [],
+    "bezug_freigabe": null,
+    "bezug_herkunft": null,
+    "bezug_text": "Das Glied ist diese Gesellschaft bzw. dieser Standort",
+    "ebenen": 0,
+    "einschraenkung": null,
+    "grund": null,
+    "status": "OFFEN",
+    "status_text": "Kette endet ohne Beleg",
+    "wurzel": "R-ELMET"
+   },
+   "S5": {
+    "baum": {
+     "effektiv": 100.0,
+     "kante": null,
+     "kinder": [],
+     "knoten": "R-MASAN-HTM",
+     "pflicht": true,
+     "schluss": "OFFEN",
+     "schluss_text": "endet ohne Beleg"
+    },
+    "belegt": false,
+    "betreiber": null,
+    "bezug": "IST",
+    "bezug_belege": [],
+    "bezug_freigabe": null,
+    "bezug_herkunft": null,
+    "bezug_text": "Das Glied ist diese Gesellschaft bzw. dieser Standort",
+    "ebenen": 0,
+    "einschraenkung": null,
+    "grund": null,
+    "status": "OFFEN",
+    "status_text": "Kette endet ohne Beleg",
+    "wurzel": "R-MASAN-HTM"
+   },
+   "S6": {
+    "baum": {
+     "effektiv": 100.0,
+     "kante": null,
+     "kinder": [],
+     "knoten": "R-TRAXYS",
+     "pflicht": true,
+     "schluss": "OFFEN",
+     "schluss_text": "endet ohne Beleg"
+    },
+    "belegt": false,
+    "betreiber": null,
+    "bezug": "IST",
+    "bezug_belege": [],
+    "bezug_freigabe": null,
+    "bezug_herkunft": null,
+    "bezug_text": "Das Glied ist diese Gesellschaft bzw. dieser Standort",
+    "ebenen": 0,
+    "einschraenkung": null,
+    "grund": null,
+    "status": "OFFEN",
+    "status_text": "Kette endet ohne Beleg",
+    "wurzel": "R-TRAXYS"
+   }
+  },
+  "kanten": [
+   {
+    "an": "R-EQR",
+    "anteil": null,
+    "atlas_id": null,
+    "beherrschend": true,
+    "belege": [
+     {
+      "fundstelle": "JSON (Golden Copy 2026-11-16)",
+      "quelle": "rk-gleif-9269000E864BE7BE5B89-oben",
+      "rolle": "hauptbeleg",
+      "zitat": "\"lei\":\"9269000E864BE7BE5B89\",\"category\":\"ULTIMATE_ACCOUNTING_CONSOLIDATION_PARENT\",\"reason\":\"NATURAL_PERSONS\""
+     },
+     {
+      "fundstelle": "JSON (Golden Copy 2026-11-16)",
+      "quelle": "rk-gleif-9269000E864BE7BE5B89",
+      "rolle": "zusatzbeleg",
+      "zitat": "\"lei\":\"9269000E864BE7BE5B89\" … \"legalName\":{\"name\":\"EQ Resources Limited\""
+     }
+    ],
+    "einschraenkung": null,
+    "evidenz": "FACT",
+    "freigabe": "FREIGEGEBEN",
+    "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
+    "id": "EK-EQR-PERSONEN-EQR",
+    "mass": "KONTROLLE",
+    "mass_text": "Kontrolle",
+    "stand": "2026-11-16",
+    "text": "beherrscht laut LEI-Register (Namen nicht genannt)",
+    "von": "R-EQR-PERSONEN"
+   }
+  ],
+  "knoten": {
+   "R-CRONIMET-ASIA": {
+    "art": "GESELLSCHAFT",
+    "art_text": "Gesellschaft",
+    "atlas_id": null,
+    "belege": [],
+    "hinweis": null,
+    "land": "SG",
+    "lei": null,
+    "name": "CRONIMET Asia Pte Ltd",
+    "oberste": null,
+    "offen": "Keine gelesene Quelle zu Eigentümern; Firmenseiten und Register sind aus der Cloud gesperrt oder ohne Eintrag."
+   },
+   "R-ELMET": {
+    "art": "GESELLSCHAFT",
+    "art_text": "Gesellschaft",
+    "atlas_id": null,
+    "belege": [],
+    "hinweis": null,
+    "land": "US",
+    "lei": null,
+    "name": "Elmet Technologies LLC",
+    "oberste": null,
+    "offen": "Keine gelesene Quelle zu Eigentümern; LEI-Eintrag abgelaufen."
+   },
+   "R-EQR": {
+    "art": "GESELLSCHAFT",
+    "art_text": "Gesellschaft",
+    "atlas_id": null,
+    "belege": [
+     {
+      "fundstelle": "JSON (Golden Copy 2026-11-16)",
+      "quelle": "rk-gleif-9269000E864BE7BE5B89",
+      "rolle": "hauptbeleg",
+      "zitat": "\"lei\":\"9269000E864BE7BE5B89\" … \"legalName\":{\"name\":\"EQ Resources Limited\""
+     }
+    ],
+    "hinweis": null,
+    "land": "AU",
+    "lei": "9269000E864BE7BE5B89",
+    "name": "EQ Resources Limited (EQR)",
+    "oberste": null,
+    "offen": null
+   },
+   "R-EQR-PERSONEN": {
+    "art": "PERSON",
+    "art_text": "natürliche Person",
+    "atlas_id": null,
+    "belege": [],
+    "hinweis": "Das LEI-Register meldet als oberste Eigentümer natürliche Personen, nennt sie aber nicht. Namen bleiben unbekannt.",
+    "land": "AU",
+    "lei": null,
+    "name": "Natürliche Person(en), im LEI-Register nicht namentlich genannt",
+    "oberste": null,
+    "offen": null
+   },
+   "R-MASAN-HTM": {
+    "art": "GESELLSCHAFT",
+    "art_text": "Gesellschaft",
+    "atlas_id": null,
+    "belege": [],
+    "hinweis": null,
+    "land": "VN",
+    "lei": null,
+    "name": "Masan High-Tech Materials Corporation",
+    "oberste": null,
+    "offen": "Keine gelesene Quelle zu Eigentümern; Firmenseiten und Register sind aus der Cloud gesperrt oder ohne Eintrag."
+   },
+   "R-TRAXYS": {
+    "art": "GESELLSCHAFT",
+    "art_text": "Gesellschaft",
+    "atlas_id": null,
+    "belege": [
+     {
+      "fundstelle": "JSON (Golden Copy 2026-11-16)",
+      "quelle": "rk-gleif-529900BSBZ853DKUP675",
+      "rolle": "hauptbeleg",
+      "zitat": "\"lei\":\"529900BSBZ853DKUP675\" … \"legalName\":{\"name\":\"TRAXYS EUROPE S.A.\""
+     },
+     {
+      "fundstelle": "JSON (Golden Copy 2026-11-16)",
+      "quelle": "rk-gleif-529900BSBZ853DKUP675-oben",
+      "rolle": "zusatzbeleg",
+      "zitat": "\"lei\":\"529900BSBZ853DKUP675\",\"category\":\"ULTIMATE_ACCOUNTING_CONSOLIDATION_PARENT\",\"reason\":\"NON_PUBLIC\""
+     }
+    ],
+    "hinweis": null,
+    "land": "LU",
+    "lei": "529900BSBZ853DKUP675",
+    "name": "Traxys Europe S.A.",
+    "oberste": null,
+    "offen": "Im LEI-Register steht als Ausnahme NON_PUBLIC (Angabe zur Mutter nicht veröffentlicht); keine weitere gelesene Quelle."
+   }
+  },
+  "messung": {
+   "glieder": 6,
+   "glieder_eigentum_belegt": 2,
+   "glieder_unbekannt_mit_grund": 0,
+   "je_glied": {
+    "S1": {
+     "ebenen": 1,
+     "status": "VOLLSTAENDIG_FREIGEGEBEN"
+    },
+    "S2": {
+     "ebenen": 1,
+     "status": "VOLLSTAENDIG_FREIGEGEBEN"
+    },
+    "S3": {
+     "ebenen": 0,
+     "status": "OFFEN"
+    },
+    "S4": {
+     "ebenen": 0,
+     "status": "OFFEN"
+    },
+    "S5": {
+     "ebenen": 0,
+     "status": "OFFEN"
+    },
+    "S6": {
+     "ebenen": 0,
+     "status": "OFFEN"
+    }
+   },
+   "kanten": 1,
+   "kanten_freigegeben": 1,
+   "kanten_kandidat": 0,
+   "kanten_mit_anteil": 0,
+   "knoten": 6,
+   "letzte_eigentuemer": [
+    "Natürliche Person(en), im LEI-Register nicht namentlich genannt"
+   ],
+   "oberste_gesellschaften": [],
+   "offen": 4,
+   "offene_knoten": [
+    "CRONIMET Asia Pte Ltd",
+    "Elmet Technologies LLC",
+    "Masan High-Tech Materials Corporation",
+    "Traxys Europe S.A."
+   ],
+   "schwelle_prozent": 10.0,
+   "unbekannt": 0,
+   "vollstaendig": 2,
+   "vollstaendig_freigegeben": 2,
+   "vollstaendig_kandidat": 0,
+   "zweitpruefung_offen": 0
+  },
+  "quellen": {
+   "rk-eqr-ar-2025-s010": {
+    "abgerufen": "2026-11-16",
+    "art": "COMPANY_PRIMARY",
+    "fundstelle": "PDF-Seite 10 (pdftotext ohne -layout)",
+    "herausgeber": "EQ Resources Limited",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/eqr-ar-2025-p010.txt",
+    "text_artifact_sha256": "c37cce49467a5a9b105a511cf7266c00c26ae7969596541164cbd49d00a5d482",
+    "titel": "Annual Report 2025",
+    "url": "https://announcements.asx.com.au/asxpdf/20250930/pdf/06px30r3y5npl3.pdf#page=10"
+   },
+   "rk-eqr-ar-2025-s057": {
+    "abgerufen": "2026-11-16",
+    "art": "COMPANY_PRIMARY",
+    "fundstelle": "PDF-Seite 57 (pdftotext ohne -layout)",
+    "herausgeber": "EQ Resources Limited",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/eqr-ar-2025-p057.txt",
+    "text_artifact_sha256": "c2de8de2183ae898c5f060165e93479d2f4c15ea12378f704ebcbeee6e409b85",
+    "titel": "Annual Report 2025",
+    "url": "https://announcements.asx.com.au/asxpdf/20250930/pdf/06px30r3y5npl3.pdf#page=57"
+   },
+   "rk-gleif-529900BSBZ853DKUP675": {
+    "abgerufen": "2026-11-16",
+    "art": "REGISTER",
+    "fundstelle": "JSON (Golden Copy 2026-11-16)",
+    "herausgeber": "Global Legal Entity Identifier Foundation (GLEIF)",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/gleif-529900BSBZ853DKUP675-eintrag.json",
+    "text_artifact_sha256": "3caf9ba5a6b08fd5c88a3954997883c648459be5e9bb6c51029b3bace82e597d",
+    "titel": "LEI-Eintrag 529900BSBZ853DKUP675",
+    "url": "https://api.gleif.org/api/v1/lei-records/529900BSBZ853DKUP675"
+   },
+   "rk-gleif-529900BSBZ853DKUP675-oben": {
+    "abgerufen": "2026-11-16",
+    "art": "REGISTER",
+    "fundstelle": "JSON (Golden Copy 2026-11-16)",
+    "herausgeber": "Global Legal Entity Identifier Foundation (GLEIF)",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/gleif-529900BSBZ853DKUP675-ultimate-ausnahme.json",
+    "text_artifact_sha256": "ab0e3c932291d8b69bd6d56ecea3055964ae3557df5ca9292cfc6c04deb2eb79",
+    "titel": "Level-2 oberste Mutter 529900BSBZ853DKUP675",
+    "url": "https://api.gleif.org/api/v1/lei-records/529900BSBZ853DKUP675/ultimate-parent-reporting-exception"
+   },
+   "rk-gleif-9269000E864BE7BE5B89": {
+    "abgerufen": "2026-11-16",
+    "art": "REGISTER",
+    "fundstelle": "JSON (Golden Copy 2026-11-16)",
+    "herausgeber": "Global Legal Entity Identifier Foundation (GLEIF)",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/gleif-9269000E864BE7BE5B89-eintrag.json",
+    "text_artifact_sha256": "7c2173a9028c696056149e56fa0690a4424afc40772d89d86416a7398bcef2c2",
+    "titel": "LEI-Eintrag 9269000E864BE7BE5B89",
+    "url": "https://api.gleif.org/api/v1/lei-records/9269000E864BE7BE5B89"
+   },
+   "rk-gleif-9269000E864BE7BE5B89-oben": {
+    "abgerufen": "2026-11-16",
+    "art": "REGISTER",
+    "fundstelle": "JSON (Golden Copy 2026-11-16)",
+    "herausgeber": "Global Legal Entity Identifier Foundation (GLEIF)",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/gleif-9269000E864BE7BE5B89-ultimate-ausnahme.json",
+    "text_artifact_sha256": "39cbb441ab6937708a4e537eee12d23948deb0f2c859d575525070cb1740ebb3",
+    "titel": "Level-2 oberste Mutter 9269000E864BE7BE5B89",
+    "url": "https://api.gleif.org/api/v1/lei-records/9269000E864BE7BE5B89/ultimate-parent-reporting-exception"
+   }
+  },
+  "schwelle_prozent": 10.0,
+  "zweitpruefung": [
+   {
+    "abgleich": "GLEIF Level 2: NATURAL_PERSONS",
+    "aussage": "Natürliche Person(en), im LEI-Register nicht namentlich genannt → EQ Resources Limited (EQR): beherrscht laut LEI-Register (Namen nicht genannt), beherrschend, Stand 2026-11-16",
+    "belege": [
+     {
+      "quelle": "rk-gleif-9269000E864BE7BE5B89",
+      "zitat": [
+       "\"lei\":\"9269000E864BE7BE5B89\""
+      ]
+     },
+     {
+      "quelle": "rk-gleif-9269000E864BE7BE5B89-oben",
+      "zitat": [
+       "\"reason\":\"NATURAL_PERSONS\""
+      ]
+     }
+    ],
+    "bericht": "analysis/rohstoffe/eigentum/zweitpruefung/Pruefbericht-Eigentuemerkette-Rohstoffe-Zweitpruefung-2026-11-16.pdf",
+    "erstpruefung_sitzung": "session_01JgcA7TdgLRrqKV9kyFuE5E",
+    "geprueft_am": "2026-11-16",
+    "pruef_id": "R15",
+    "pruefer": "Claude (Zweitprüfung, getrennte Sitzung)",
+    "quelle_frisch_geladen": true,
+    "regel": "Eddie Sablah 2026-11-11 13:41Z: Freigabe nur, wenn zwei getrennte Sitzungen bestätigen (Zweite Sitzung + CI + 5 Fälle/Monat)",
+    "sitzung": "session_01JgcA7Tamxi4Cn8LEHHDz8t",
+    "urteil": "BESTAETIGT",
+    "ziel_id": "EK-EQR-PERSONEN-EQR",
+    "ziel_typ": "kante"
+   },
+   {
+    "abgleich": "Mt Carbine gehört EQR",
+    "aussage": "wolfram-site-legacy-row-95 gehört laut Quelle zu EQ Resources Limited (EQR)",
+    "belege": [
+     {
+      "quelle": "rk-eqr-ar-2025-s010",
+      "zitat": [
+       "This transaction consolidates EQR’s ownership of the Mt Carbine operations",
+       "The acquisition not only secures 100% of the Mt Carbine Retreatment JV assets for EQR"
+      ]
+     }
+    ],
+    "bericht": "analysis/rohstoffe/eigentum/zweitpruefung/Pruefbericht-Eigentuemerkette-Rohstoffe-Zweitpruefung-2026-11-16.pdf",
+    "erstpruefung_sitzung": "session_01JgcA7TdgLRrqKV9kyFuE5E",
+    "geprueft_am": "2026-11-16",
+    "pruef_id": "R79",
+    "pruefer": "Claude (Zweitprüfung, getrennte Sitzung)",
+    "quelle_frisch_geladen": true,
+    "regel": "Eddie Sablah 2026-11-11 13:41Z: Freigabe nur, wenn zwei getrennte Sitzungen bestätigen (Zweite Sitzung + CI + 5 Fälle/Monat)",
+    "sitzung": "session_01JgcA7Tamxi4Cn8LEHHDz8t",
+    "urteil": "BESTAETIGT",
+    "ziel_id": "wolfram/wolfram-site-legacy-row-95",
+    "ziel_typ": "glied"
+   },
+   {
+    "abgleich": "\"wholly owned\" = 100 %",
+    "aussage": "wolfram-site-legacy-row-96 gehört laut Quelle zu EQ Resources Limited (EQR)",
+    "belege": [
+     {
+      "quelle": "rk-eqr-ar-2025-s057",
+      "zitat": [
+       "updated Ore Reserve Statement for its wholly owned Barruecopardo Mine in Spain"
+      ]
+     }
+    ],
+    "bericht": "analysis/rohstoffe/eigentum/zweitpruefung/Pruefbericht-Eigentuemerkette-Rohstoffe-Zweitpruefung-2026-11-16.pdf",
+    "erstpruefung_sitzung": "session_01JgcA7TdgLRrqKV9kyFuE5E",
+    "geprueft_am": "2026-11-16",
+    "pruef_id": "R80",
+    "pruefer": "Claude (Zweitprüfung, getrennte Sitzung)",
+    "quelle_frisch_geladen": true,
+    "regel": "Eddie Sablah 2026-11-11 13:41Z: Freigabe nur, wenn zwei getrennte Sitzungen bestätigen (Zweite Sitzung + CI + 5 Fälle/Monat)",
+    "sitzung": "session_01JgcA7Tamxi4Cn8LEHHDz8t",
+    "urteil": "BESTAETIGT",
+    "ziel_id": "wolfram/wolfram-site-legacy-row-96",
+    "ziel_typ": "glied"
+   }
+  ]
+ },
+ "eingaben": {
+  "analysis/rohstoffe/eigentum/eigentumskette.json": "58f2a733e79cd462062e351135d0aafb3e27494d28e47d4268dd26a0c6bd2371",
+  "analysis/rohstoffe/fluss-freigaben.jsonl": "7bcb03cd6f866779a996144af573a32a6723c19e37c1648f6b5dfbf2b642a149",
+  "analysis/rohstoffe/mengen/annahmen-snapshot.json": "5169bc01abcdff017b11b6e2e0bdb0abbc934a843f86a8fbbf4dbdd3585165b1",
+  "analysis/rohstoffe/mengen/mengen.json": "94e6e728b63635daef1ffe47c595cd03fd4f5644a158aa61f7605bbf497706b6",
+  "analysis/rohstoffe/mengen/zweitpruefung.jsonl": "fb323cf5f6ee23aa7b0f563979efed73dcdbbdd2cf0203a287013f000c7d6770",
+  "analysis/rohstoffe/wolfram/kandidaten.json": "7160b56628f84b169b4de4aa4ef1f2a7a41dbcc2921c7e0aa7c428167d7d97ca",
+  "analysis/rohstoffe/wolfram/markt.json": "2c55a7bff2ec69921bea2e3e8d3f549c7aaeed67705b81adb8b446028df1111c"
+ },
+ "erzeugt_von": "scripts/analysis/rohstoffe/rohstoffkette.py",
+ "kette": {
+  "glieder": [
+   "S1",
+   "S6"
+  ],
+  "stufen": 2,
+  "text": "Barruecopardo → Traxys Europe",
+  "verbindungen": [
+   "V4"
+  ]
+ },
+ "kundenfrage": {
+  "antwort": "Erfasst: Barruecopardo → Traxys Europe (1 Verbindung, alle freigegeben). Menge belegt auf 1 von 1. Ob die Kette weiter bis zu einem Endprodukt reicht, ist im Atlas nicht erfasst.",
+  "frage": "Woher kommt das Wolfram, das Traxys Europe bezieht, über welche Glieder läuft es, in welcher Menge, und welche Glieder sind belegt?",
+  "kunde": "S6"
+ },
+ "preisbasis": null,
+ "preisbasis_grund": "Keine tägliche Notierung aus lesbarer, freigegebener Quelle: APT- und Konzentratpreise nur bei Preisagenturen (lizenzpflichtig). Wert nutzt den Jahrespreis 2025 (USGS MCS 2026).",
+ "regeln": [
+  "Nur freigegebene Flüsse (analysis/rohstoffe/fluss-freigaben.jsonl); jedes Zitat steht wörtlich in der gepinnten Textkopie.",
+  "Evidenzstatus wie im Generator-Datensatz: FACT nur für freigegebene Flüsse nach Eddies Entscheidung vom 2026-11-16 (fakt-entscheidung.json), nie VERIFIED oder APPROVED.",
+  "UNKNOWN bleibt UNKNOWN mit Grund; belegter Wert nur laut Quelle, Euro mit EZB-Jahresmittel. Ein Geldbetrag ist keine Menge.",
+  "Ebene „mit Annahmen“ getrennt: Menge aus dem Annahmen-Atlas (Snapshot je Fluss-ID), Wert = Menge × Preis der gelesenen Preisquelle ÷ EZB-Kurs (Tagespreis mit EZB-Tageskurs, wo eine lesbare tägliche Notierung vorliegt, sonst Jahrespreis mit EZB-Jahresmittel); zählt nie als belegt. Ausstoß und Obergrenze des liefernden Glieds werden gezeigt, zählen aber nicht als Menge der Verbindung.",
+  "Eigentümer je Glied nur mit gelesener Quelle (Zitat gegen Textkopie geprüft); freigegeben erst nach Zweitprüfung einer getrennten Sitzung. Eigentümer aus der Altliste sind Kandidaten und zählen nicht als belegt.",
+  "Ausfall = Folge im erfassten Netz; Tonnen und Mehrkosten nur, wenn eine Quelle sie nennt."
+ ],
+ "risikoebene": {
+  "kategorien": [
+   {
+    "id": "LAENDERRISIKO",
+    "text": "Länderrisiko"
+   },
+   {
+    "id": "SANKTIONEN",
+    "text": "Sanktionen und Handelsmaßnahmen"
+   },
+   {
+    "id": "NATURGEFAHREN",
+    "text": "Naturgefahren"
+   },
+   {
+    "id": "KONZENTRATION",
+    "text": "Konzentration"
+   }
+  ],
+  "messung": {
+   "anteil_belegt_prozent": 62.5,
+   "belegt": 15,
+   "belegt_nur_landesebene": 9,
+   "belegt_standort_oder_firma": 6,
+   "felder": 24,
+   "glieder": 6,
+   "je_glied": {
+    "S1": {
+     "KONZENTRATION": "BELEGT_LAND",
+     "LAENDERRISIKO": "BELEGT_LAND",
+     "NATURGEFAHREN": "BELEGT_LAND",
+     "SANKTIONEN": "BELEGT_STANDORT"
+    },
+    "S2": {
+     "KONZENTRATION": "BELEGT_LAND",
+     "LAENDERRISIKO": "BELEGT_LAND",
+     "NATURGEFAHREN": "BELEGT_LAND",
+     "SANKTIONEN": "BELEGT_STANDORT"
+    },
+    "S3": {
+     "KONZENTRATION": "UNBEKANNT",
+     "LAENDERRISIKO": "UNBEKANNT",
+     "NATURGEFAHREN": "UNBEKANNT",
+     "SANKTIONEN": "BELEGT_STANDORT"
+    },
+    "S4": {
+     "KONZENTRATION": "UNBEKANNT",
+     "LAENDERRISIKO": "BELEGT_LAND",
+     "NATURGEFAHREN": "BELEGT_LAND",
+     "SANKTIONEN": "BELEGT_STANDORT"
+    },
+    "S5": {
+     "KONZENTRATION": "UNBEKANNT",
+     "LAENDERRISIKO": "UNBEKANNT",
+     "NATURGEFAHREN": "UNBEKANNT",
+     "SANKTIONEN": "BELEGT_STANDORT"
+    },
+    "S6": {
+     "KONZENTRATION": "UNBEKANNT",
+     "LAENDERRISIKO": "BELEGT_LAND",
+     "NATURGEFAHREN": "UNBEKANNT",
+     "SANKTIONEN": "BELEGT_STANDORT"
+    }
+   },
+   "je_kategorie": {
+    "KONZENTRATION": {
+     "belegt": 2,
+     "belegt_nur_landesebene": 2,
+     "belegt_standort_oder_firma": 0,
+     "unbekannt": 4
+    },
+    "LAENDERRISIKO": {
+     "belegt": 4,
+     "belegt_nur_landesebene": 4,
+     "belegt_standort_oder_firma": 0,
+     "unbekannt": 2
+    },
+    "NATURGEFAHREN": {
+     "belegt": 3,
+     "belegt_nur_landesebene": 3,
+     "belegt_standort_oder_firma": 0,
+     "unbekannt": 3
+    },
+    "SANKTIONEN": {
+     "belegt": 6,
+     "belegt_nur_landesebene": 0,
+     "belegt_standort_oder_firma": 6,
+     "unbekannt": 0
+    }
+   },
+   "unbekannt": 9
+  },
+  "regeln": [
+   "Länderrisiko und Naturgefahren nur aus den Reisehinweisen des britischen Außenministeriums (FCDO), Antwort unverändert gespeichert; keine Punktzahl, keine Rangfolge.",
+   "Landesebene gilt für das Land, nicht nachweislich für den Standort.",
+   "Sanktionen: Länderprogramm und Namensabgleich mit den Listen EU und UK; kein Treffer ist kein Nachweis der Unbedenklichkeit; OFAC und UN nicht abgeglichen.",
+   "Konzentration nur aus der freigegebenen Weltreferenz (Förderstufe).",
+   "Land eines Glieds: Datensatz, sonst Sitz laut LEI-Register, sonst Lage der belegten Koordinate; sonst unbekannt."
+  ]
+ },
+ "rohstoff": "Wolfram",
+ "schema": "atlas.rohstoffkette/1",
+ "slug": "wolfram",
+ "stand": "2026-11-10",
+ "standorte": [
+  {
+   "alternativen": [],
+   "eigentuemer": [
+    {
+     "anteil": null,
+     "hinweis": "Eigentümer laut Altliste, Quelle ungeprüft, Anteil unbekannt",
+     "name": "EQ Resources / Saloro",
+     "status": "KANDIDAT",
+     "url": "https://www.eqresources.com.au/site/operations/barruecopardo-tungsten-mine"
+    }
+   ],
+   "eigentuemer_grund": null,
+   "entity_id": "wolfram-site-legacy-row-96",
+   "id": "S1",
+   "kurz": "Barruecopardo",
+   "land": "Spanien",
+   "name": "Barruecopardo",
+   "ort": {
+    "evidenz": "BELEGT",
+    "grund": null,
+    "lat": 41.07,
+    "lon": -6.67,
+    "quelle": "Altliste, Koordinate APPROXIMATE",
+    "status": "OFFEN",
+    "url": "https://www.eqresources.com.au/site/operations/barruecopardo-tungsten-mine"
+   },
+   "risiko": [
+    {
+     "art": "LAENDERANTEIL",
+     "bezug": "LAND",
+     "evidenz": "BELEGT",
+     "quelle": "U.S. Geological Survey, Mineral Commodity Summaries 2026, Tungsten, Page 2, table 'World Mine Production and Reserves'",
+     "text": "Spanien: 0,9 % der Weltförderung Wolfram 2025 (geschätzt), unter der Schwelle 50 %",
+     "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-tungsten.pdf"
+    }
+   ],
+   "risiko_grund": null,
+   "risiko_land": {
+    "belege": [],
+    "herkunft": "Land des Glieds im Generator-Datensatz",
+    "iso2": "ES",
+    "name": "Spanien"
+   },
+   "risikoebene": {
+    "KONZENTRATION": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "ES",
+       "quellen": [
+        {
+         "fundstelle": "Weltreferenz (Zahl gegen Abschrift geprüft)",
+         "herausgeber": "U.S. Geological Survey, Mineral Commodity Summaries 2026, Tungsten, Page 2, table 'World Mine Production and Reserves'",
+         "titel": "U.S. Geological Survey, Mineral Commodity Summaries 2026, Tungsten, Page 2, table 'World Mine Production and Reserves'",
+         "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-tungsten.pdf",
+         "zitat": null
+        }
+       ],
+       "text": "Spanien: 0,9 % der Weltförderung Wolfram 2025 (geschätzt), unter der Schwelle 50 %"
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    },
+    "LAENDERRISIKO": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "ES",
+       "quellen": [
+        {
+         "abgerufen": "2026-11-16",
+         "api": "https://www.gov.uk/api/content/foreign-travel-advice/spain",
+         "fundstelle": "GOV.UK Content API (unveränderte Antwort), Feld alert_status und Teil \"Warnings and insurance\"",
+         "herausgeber": "Foreign, Commonwealth & Development Office (UK)",
+         "sha256": "2944661a7aa240b7c7bd089e0094692aacde4e8765fa307b27fcb2259f086a0f",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/rohstoffe/risiko/raw/fcdo-spain.json",
+         "titel": "Foreign travel advice: Spain travel advice",
+         "url": "https://www.gov.uk/foreign-travel-advice/spain",
+         "zitat": "\"alert_status\":[]"
+        }
+       ],
+       "text": "Spanien: Reisehinweis FCDO (Stand 2026-11-10): keine Gebiete mit Reisewarnung (Warnstufe leer)."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    },
+    "NATURGEFAHREN": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "ES",
+       "quellen": [
+        {
+         "abgerufen": "2026-11-16",
+         "api": "https://www.gov.uk/api/content/foreign-travel-advice/spain",
+         "fundstelle": "GOV.UK Content API (unveränderte Antwort), Teil \"Safety and security\", Abschnitt Naturgefahren",
+         "herausgeber": "Foreign, Commonwealth & Development Office (UK)",
+         "sha256": "2944661a7aa240b7c7bd089e0094692aacde4e8765fa307b27fcb2259f086a0f",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/rohstoffe/risiko/raw/fcdo-spain.json",
+         "titel": "Foreign travel advice: Spain travel advice",
+         "url": "https://www.gov.uk/foreign-travel-advice/spain",
+         "zitat": "Extreme weather and natural disasters … Extreme temperatures … Wildfires … Flooding"
+        }
+       ],
+       "text": "Spanien: FCDO nennt für das Land: extreme Temperaturen, Wald- und Flächenbrände, Überschwemmungen."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    },
+    "SANKTIONEN": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "ABGLEICH",
+       "land": "ES",
+       "quellen": [
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "EU",
+         "stand": "2026-10-23",
+         "textkopie": "analysis/research/sanktionen-v1/listen/eu.json",
+         "titel": "EU Consolidated Financial Sanctions List (FSF), Stand 2026-10-23 (1779 Organisationen)",
+         "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+         "zitat": "\"stand\":\"2026-10-23\""
+        },
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "UK",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/research/sanktionen-v1/listen/uk.json",
+         "titel": "UK Sanctions List (FCDO), Stand 2026-11-10 (1667 Organisationen)",
+         "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv",
+         "zitat": "\"stand\":\"2026-11-10\""
+        }
+       ],
+       "text": "Spanien: die gelesenen Sanktionslisten EU (Stand 2026-10-23) und UK (Stand 2026-11-10) führen kein Länderprogramm. Nicht abgeglichen: OFAC, UN."
+      },
+      {
+       "bezug": "FIRMA",
+       "evidenz": "ABGLEICH",
+       "land": "ES",
+       "quellen": [
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "EU",
+         "stand": "2026-10-23",
+         "textkopie": "analysis/research/sanktionen-v1/listen/eu.json",
+         "titel": "EU Consolidated Financial Sanctions List (FSF), Stand 2026-10-23 (1779 Organisationen)",
+         "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+         "zitat": "\"stand\":\"2026-10-23\""
+        },
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "UK",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/research/sanktionen-v1/listen/uk.json",
+         "titel": "UK Sanctions List (FCDO), Stand 2026-11-10 (1667 Organisationen)",
+         "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv",
+         "zitat": "\"stand\":\"2026-11-10\""
+        }
+       ],
+       "text": "Kein Namenstreffer für EQ Resources Limited (EQR), Natürliche Person(en), im LEI-Register nicht namentlich genannt auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    }
+   },
+   "rolle": "Mine",
+   "stufe": 1
+  },
+  {
+   "alternativen": [],
+   "eigentuemer": [
+    {
+     "anteil": null,
+     "hinweis": "Eigentümer laut Altliste, Quelle ungeprüft, Anteil unbekannt",
+     "name": "EQ Resources",
+     "status": "KANDIDAT",
+     "url": "https://www.eqresources.com.au/site/operations/mt-carbine-tungsten-mine"
+    }
+   ],
+   "eigentuemer_grund": null,
+   "entity_id": "wolfram-site-legacy-row-95",
+   "id": "S2",
+   "kurz": "Mt Carbine",
+   "land": "Australien",
+   "name": "Mt Carbine",
+   "ort": {
+    "evidenz": "BELEGT",
+    "grund": null,
+    "lat": -16.53,
+    "lon": 145.13,
+    "quelle": "Altliste, Koordinate APPROXIMATE",
+    "status": "OFFEN",
+    "url": "https://www.eqresources.com.au/site/operations/mt-carbine-tungsten-mine"
+   },
+   "risiko": [
+    {
+     "art": "LAENDERANTEIL",
+     "bezug": "LAND",
+     "evidenz": "BELEGT",
+     "quelle": "U.S. Geological Survey, Mineral Commodity Summaries 2026, Tungsten, Page 2, table 'World Mine Production and Reserves'",
+     "text": "Australien: 1,2 % der Weltförderung Wolfram 2025 (geschätzt), unter der Schwelle 50 %",
+     "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-tungsten.pdf"
+    }
+   ],
+   "risiko_grund": null,
+   "risiko_land": {
+    "belege": [],
+    "herkunft": "Land des Glieds im Generator-Datensatz",
+    "iso2": "AU",
+    "name": "Australien"
+   },
+   "risikoebene": {
+    "KONZENTRATION": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "AU",
+       "quellen": [
+        {
+         "fundstelle": "Weltreferenz (Zahl gegen Abschrift geprüft)",
+         "herausgeber": "U.S. Geological Survey, Mineral Commodity Summaries 2026, Tungsten, Page 2, table 'World Mine Production and Reserves'",
+         "titel": "U.S. Geological Survey, Mineral Commodity Summaries 2026, Tungsten, Page 2, table 'World Mine Production and Reserves'",
+         "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-tungsten.pdf",
+         "zitat": null
+        }
+       ],
+       "text": "Australien: 1,2 % der Weltförderung Wolfram 2025 (geschätzt), unter der Schwelle 50 %"
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    },
+    "LAENDERRISIKO": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "AU",
+       "quellen": [
+        {
+         "abgerufen": "2026-11-16",
+         "api": "https://www.gov.uk/api/content/foreign-travel-advice/australia",
+         "fundstelle": "GOV.UK Content API (unveränderte Antwort), Feld alert_status und Teil \"Warnings and insurance\"",
+         "herausgeber": "Foreign, Commonwealth & Development Office (UK)",
+         "sha256": "018a991fa3ed890077bed81bb54c583b49cf3caf476ecca5d782faf50a9f3e56",
+         "stand": "2026-03-19",
+         "textkopie": "analysis/rohstoffe/risiko/raw/fcdo-australia.json",
+         "titel": "Foreign travel advice: Australia travel advice",
+         "url": "https://www.gov.uk/foreign-travel-advice/australia",
+         "zitat": "\"alert_status\":[]"
+        }
+       ],
+       "text": "Australien: Reisehinweis FCDO (Stand 2026-03-19): keine Gebiete mit Reisewarnung (Warnstufe leer)."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    },
+    "NATURGEFAHREN": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "AU",
+       "quellen": [
+        {
+         "abgerufen": "2026-11-16",
+         "api": "https://www.gov.uk/api/content/foreign-travel-advice/australia",
+         "fundstelle": "GOV.UK Content API (unveränderte Antwort), Teil \"Safety and security\", Abschnitt Naturgefahren",
+         "herausgeber": "Foreign, Commonwealth & Development Office (UK)",
+         "sha256": "018a991fa3ed890077bed81bb54c583b49cf3caf476ecca5d782faf50a9f3e56",
+         "stand": "2026-03-19",
+         "textkopie": "analysis/rohstoffe/risiko/raw/fcdo-australia.json",
+         "titel": "Foreign travel advice: Australia travel advice",
+         "url": "https://www.gov.uk/foreign-travel-advice/australia",
+         "zitat": "Extreme weather and natural disasters … Bushfires … Heatwaves … Flooding … Earthquakes … Tropical cyclones … Dust storms"
+        }
+       ],
+       "text": "Australien: FCDO nennt für das Land: Buschbrände, Hitzewellen, Überschwemmungen, Erdbeben, tropische Wirbelstürme, Staubstürme."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    },
+    "SANKTIONEN": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "ABGLEICH",
+       "land": "AU",
+       "quellen": [
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "EU",
+         "stand": "2026-10-23",
+         "textkopie": "analysis/research/sanktionen-v1/listen/eu.json",
+         "titel": "EU Consolidated Financial Sanctions List (FSF), Stand 2026-10-23 (1779 Organisationen)",
+         "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+         "zitat": "\"stand\":\"2026-10-23\""
+        },
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "UK",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/research/sanktionen-v1/listen/uk.json",
+         "titel": "UK Sanctions List (FCDO), Stand 2026-11-10 (1667 Organisationen)",
+         "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv",
+         "zitat": "\"stand\":\"2026-11-10\""
+        }
+       ],
+       "text": "Australien: die gelesenen Sanktionslisten EU (Stand 2026-10-23) und UK (Stand 2026-11-10) führen kein Länderprogramm. Nicht abgeglichen: OFAC, UN."
+      },
+      {
+       "bezug": "FIRMA",
+       "evidenz": "ABGLEICH",
+       "land": "AU",
+       "quellen": [
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "EU",
+         "stand": "2026-10-23",
+         "textkopie": "analysis/research/sanktionen-v1/listen/eu.json",
+         "titel": "EU Consolidated Financial Sanctions List (FSF), Stand 2026-10-23 (1779 Organisationen)",
+         "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+         "zitat": "\"stand\":\"2026-10-23\""
+        },
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "UK",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/research/sanktionen-v1/listen/uk.json",
+         "titel": "UK Sanctions List (FCDO), Stand 2026-11-10 (1667 Organisationen)",
+         "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv",
+         "zitat": "\"stand\":\"2026-11-10\""
+        }
+       ],
+       "text": "Kein Namenstreffer für EQ Resources Limited (EQR), Natürliche Person(en), im LEI-Register nicht namentlich genannt auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    }
+   },
+   "rolle": "Mine",
+   "stufe": 1
+  },
+  {
+   "alternativen": [
+    "S5"
+   ],
+   "eigentuemer": [],
+   "eigentuemer_grund": "Kein Eigentümer mit gelesener Quelle erfasst.",
+   "entity_id": "wolfram-node-cronimet-asia",
+   "id": "S3",
+   "kurz": "CRONIMET Asia Pte",
+   "land": "UNKNOWN",
+   "name": "CRONIMET Asia Pte Ltd",
+   "ort": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine Koordinate mit Quelle; es wird kein Ersatzpunkt gesetzt.",
+    "lat": null,
+    "lon": null,
+    "quelle": null,
+    "status": null,
+    "url": null
+   },
+   "risiko": [],
+   "risiko_grund": "Länderanteil nur für Förderstufe",
+   "risiko_land": {
+    "belege": [],
+    "herkunft": "Land des Glieds nicht erfasst (kein Land im Datensatz, kein gültiger LEI-Eintrag, keine Koordinate mit Quelle).",
+    "iso2": null,
+    "name": null
+   },
+   "risikoebene": {
+    "KONZENTRATION": {
+     "belegt": [],
+     "grund": "Länderanteil der Weltreferenz gilt nur für die Förderstufe; für Verarbeitung und Handel ist keine Weltreferenz geladen.",
+     "status": "UNBEKANNT"
+    },
+    "LAENDERRISIKO": {
+     "belegt": [],
+     "grund": "Land des Glieds nicht erfasst (kein Land im Datensatz, kein gültiger LEI-Eintrag, keine Koordinate mit Quelle).",
+     "status": "UNBEKANNT"
+    },
+    "NATURGEFAHREN": {
+     "belegt": [],
+     "grund": "Land des Glieds nicht erfasst (kein Land im Datensatz, kein gültiger LEI-Eintrag, keine Koordinate mit Quelle).",
+     "status": "UNBEKANNT"
+    },
+    "SANKTIONEN": {
+     "belegt": [
+      {
+       "bezug": "FIRMA",
+       "evidenz": "ABGLEICH",
+       "land": null,
+       "quellen": [
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "EU",
+         "stand": "2026-10-23",
+         "textkopie": "analysis/research/sanktionen-v1/listen/eu.json",
+         "titel": "EU Consolidated Financial Sanctions List (FSF), Stand 2026-10-23 (1779 Organisationen)",
+         "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+         "zitat": "\"stand\":\"2026-10-23\""
+        },
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "UK",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/research/sanktionen-v1/listen/uk.json",
+         "titel": "UK Sanctions List (FCDO), Stand 2026-11-10 (1667 Organisationen)",
+         "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv",
+         "zitat": "\"stand\":\"2026-11-10\""
+        }
+       ],
+       "text": "Kein Namenstreffer für CRONIMET Asia Pte Ltd auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    }
+   },
+   "rolle": "Händler",
+   "stufe": 2
+  },
+  {
+   "alternativen": [
+    "S6"
+   ],
+   "eigentuemer": [],
+   "eigentuemer_grund": "Kein Eigentümer mit gelesener Quelle erfasst.",
+   "entity_id": "wolfram-node-elmet",
+   "id": "S4",
+   "kurz": "Elmet Technologies LLC",
+   "land": "UNKNOWN",
+   "name": "Elmet Technologies LLC",
+   "ort": {
+    "evidenz": "BELEGT",
+    "grund": null,
+    "lat": 44.10055555555556,
+    "lon": -70.21527777777777,
+    "quelle": "Koordinate: Lewiston (Maine) (Wikidata, Stadt), Genauigkeit HQ_CITY",
+    "status": "APPROVED (HQ_CITY)",
+    "url": "https://www.wikidata.org/wiki/Q501170"
+   },
+   "risiko": [],
+   "risiko_grund": "Länderanteil nur für Förderstufe",
+   "risiko_land": {
+    "belege": [
+     {
+      "fundstelle": "Lage",
+      "herausgeber": "Koordinate: Lewiston (Maine) (Wikidata, Stadt), Genauigkeit HQ_CITY",
+      "titel": "Koordinate des Glieds",
+      "url": "https://www.wikidata.org/wiki/Q501170",
+      "zitat": null
+     }
+    ],
+    "herkunft": "Belegte Koordinate in Lewiston (Maine) (44.10, -70.22)",
+    "iso2": "US",
+    "name": "USA"
+   },
+   "risikoebene": {
+    "KONZENTRATION": {
+     "belegt": [],
+     "grund": "Länderanteil der Weltreferenz gilt nur für die Förderstufe; für Verarbeitung und Handel ist keine Weltreferenz geladen.",
+     "status": "UNBEKANNT"
+    },
+    "LAENDERRISIKO": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "US",
+       "quellen": [
+        {
+         "abgerufen": "2026-11-16",
+         "api": "https://www.gov.uk/api/content/foreign-travel-advice/usa",
+         "fundstelle": "GOV.UK Content API (unveränderte Antwort), Feld alert_status und Teil \"Warnings and insurance\"",
+         "herausgeber": "Foreign, Commonwealth & Development Office (UK)",
+         "sha256": "7dc7b740316aeaaef46b658286517ba28674120721280dc667c7671f282a8f92",
+         "stand": "2026-11-14",
+         "textkopie": "analysis/rohstoffe/risiko/raw/fcdo-usa.json",
+         "titel": "Foreign travel advice: USA travel advice",
+         "url": "https://www.gov.uk/foreign-travel-advice/usa",
+         "zitat": "\"alert_status\":[]"
+        }
+       ],
+       "text": "USA: Reisehinweis FCDO (Stand 2026-11-14): keine Gebiete mit Reisewarnung (Warnstufe leer)."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    },
+    "NATURGEFAHREN": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "US",
+       "quellen": [
+        {
+         "abgerufen": "2026-11-16",
+         "api": "https://www.gov.uk/api/content/foreign-travel-advice/usa",
+         "fundstelle": "GOV.UK Content API (unveränderte Antwort), Teil \"Safety and security\", Abschnitt Naturgefahren",
+         "herausgeber": "Foreign, Commonwealth & Development Office (UK)",
+         "sha256": "7dc7b740316aeaaef46b658286517ba28674120721280dc667c7671f282a8f92",
+         "stand": "2026-11-14",
+         "textkopie": "analysis/rohstoffe/risiko/raw/fcdo-usa.json",
+         "titel": "Foreign travel advice: USA travel advice",
+         "url": "https://www.gov.uk/foreign-travel-advice/usa",
+         "zitat": "Extreme weather and natural disasters … Snowstorms … Hurricanes … Earthquakes … Tornadoes … Volcanic eruptions … Wildfires … Flash flooding"
+        }
+       ],
+       "text": "USA: FCDO nennt für das Land: Schneestürme, Hurrikane, Erdbeben, Tornados, Vulkanausbrüche, Wald- und Flächenbrände, Sturzfluten."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    },
+    "SANKTIONEN": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "ABGLEICH",
+       "land": "US",
+       "quellen": [
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "EU",
+         "stand": "2026-10-23",
+         "textkopie": "analysis/research/sanktionen-v1/listen/eu.json",
+         "titel": "EU Consolidated Financial Sanctions List (FSF), Stand 2026-10-23 (1779 Organisationen)",
+         "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+         "zitat": "\"stand\":\"2026-10-23\""
+        },
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "UK",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/research/sanktionen-v1/listen/uk.json",
+         "titel": "UK Sanctions List (FCDO), Stand 2026-11-10 (1667 Organisationen)",
+         "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv",
+         "zitat": "\"stand\":\"2026-11-10\""
+        }
+       ],
+       "text": "USA: die gelesenen Sanktionslisten EU (Stand 2026-10-23) und UK (Stand 2026-11-10) führen kein Länderprogramm. Nicht abgeglichen: OFAC, UN."
+      },
+      {
+       "bezug": "FIRMA",
+       "evidenz": "ABGLEICH",
+       "land": "US",
+       "quellen": [
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "EU",
+         "stand": "2026-10-23",
+         "textkopie": "analysis/research/sanktionen-v1/listen/eu.json",
+         "titel": "EU Consolidated Financial Sanctions List (FSF), Stand 2026-10-23 (1779 Organisationen)",
+         "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+         "zitat": "\"stand\":\"2026-10-23\""
+        },
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "UK",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/research/sanktionen-v1/listen/uk.json",
+         "titel": "UK Sanctions List (FCDO), Stand 2026-11-10 (1667 Organisationen)",
+         "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv",
+         "zitat": "\"stand\":\"2026-11-10\""
+        }
+       ],
+       "text": "Kein Namenstreffer für Elmet Technologies LLC auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    }
+   },
+   "rolle": "Abnehmer",
+   "stufe": 2
+  },
+  {
+   "alternativen": [
+    "S3"
+   ],
+   "eigentuemer": [],
+   "eigentuemer_grund": "Kein Eigentümer mit gelesener Quelle erfasst.",
+   "entity_id": "wolfram-node-masan-htm",
+   "id": "S5",
+   "kurz": "Masan High-Tech Materials",
+   "land": "UNKNOWN",
+   "name": "Masan High-Tech Materials Corporation",
+   "ort": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine Koordinate mit Quelle; es wird kein Ersatzpunkt gesetzt.",
+    "lat": null,
+    "lon": null,
+    "quelle": null,
+    "status": null,
+    "url": null
+   },
+   "risiko": [],
+   "risiko_grund": "Länderanteil nur für Förderstufe",
+   "risiko_land": {
+    "belege": [],
+    "herkunft": "Land des Glieds nicht erfasst (kein Land im Datensatz, kein gültiger LEI-Eintrag, keine Koordinate mit Quelle).",
+    "iso2": null,
+    "name": null
+   },
+   "risikoebene": {
+    "KONZENTRATION": {
+     "belegt": [],
+     "grund": "Länderanteil der Weltreferenz gilt nur für die Förderstufe; für Verarbeitung und Handel ist keine Weltreferenz geladen.",
+     "status": "UNBEKANNT"
+    },
+    "LAENDERRISIKO": {
+     "belegt": [],
+     "grund": "Land des Glieds nicht erfasst (kein Land im Datensatz, kein gültiger LEI-Eintrag, keine Koordinate mit Quelle).",
+     "status": "UNBEKANNT"
+    },
+    "NATURGEFAHREN": {
+     "belegt": [],
+     "grund": "Land des Glieds nicht erfasst (kein Land im Datensatz, kein gültiger LEI-Eintrag, keine Koordinate mit Quelle).",
+     "status": "UNBEKANNT"
+    },
+    "SANKTIONEN": {
+     "belegt": [
+      {
+       "bezug": "FIRMA",
+       "evidenz": "ABGLEICH",
+       "land": null,
+       "quellen": [
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "EU",
+         "stand": "2026-10-23",
+         "textkopie": "analysis/research/sanktionen-v1/listen/eu.json",
+         "titel": "EU Consolidated Financial Sanctions List (FSF), Stand 2026-10-23 (1779 Organisationen)",
+         "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+         "zitat": "\"stand\":\"2026-10-23\""
+        },
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "UK",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/research/sanktionen-v1/listen/uk.json",
+         "titel": "UK Sanctions List (FCDO), Stand 2026-11-10 (1667 Organisationen)",
+         "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv",
+         "zitat": "\"stand\":\"2026-11-10\""
+        }
+       ],
+       "text": "Kein Namenstreffer für Masan High-Tech Materials Corporation auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    }
+   },
+   "rolle": "Abnehmer",
+   "stufe": 2
+  },
+  {
+   "alternativen": [
+    "S4"
+   ],
+   "eigentuemer": [],
+   "eigentuemer_grund": "Kein Eigentümer mit gelesener Quelle erfasst.",
+   "entity_id": "wolfram-node-traxys-europe",
+   "id": "S6",
+   "kurz": "Traxys Europe",
+   "land": "UNKNOWN",
+   "name": "Traxys Europe S.A.",
+   "ort": {
+    "evidenz": "BELEGT",
+    "grund": null,
+    "lat": 49.619166666666665,
+    "lon": 6.071944444444444,
+    "quelle": "Koordinate: Strassen (Luxemburg) (Wikidata, Stadt), Genauigkeit HQ_CITY",
+    "status": "APPROVED (HQ_CITY)",
+    "url": "https://www.wikidata.org/wiki/Q986400"
+   },
+   "risiko": [],
+   "risiko_grund": "Länderanteil nur für Förderstufe",
+   "risiko_land": {
+    "belege": [
+     {
+      "fundstelle": "JSON",
+      "herausgeber": "GLEIF",
+      "textkopie": "analysis/rohstoffe/eigentum/raw/gleif-529900BSBZ853DKUP675-eintrag.json",
+      "titel": "LEI-Eintrag 529900BSBZ853DKUP675",
+      "url": "https://api.gleif.org/api/v1/lei-records/529900BSBZ853DKUP675",
+      "zitat": "\"lei\":\"529900BSBZ853DKUP675\" … \"jurisdiction\":\"LU\""
+     }
+    ],
+    "herkunft": "Sitz laut LEI-Register (Traxys Europe S.A., Rechtsordnung LU)",
+    "iso2": "LU",
+    "name": "Luxemburg"
+   },
+   "risikoebene": {
+    "KONZENTRATION": {
+     "belegt": [],
+     "grund": "Länderanteil der Weltreferenz gilt nur für die Förderstufe; für Verarbeitung und Handel ist keine Weltreferenz geladen.",
+     "status": "UNBEKANNT"
+    },
+    "LAENDERRISIKO": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "LU",
+       "quellen": [
+        {
+         "abgerufen": "2026-11-16",
+         "api": "https://www.gov.uk/api/content/foreign-travel-advice/luxembourg",
+         "fundstelle": "GOV.UK Content API (unveränderte Antwort), Feld alert_status und Teil \"Warnings and insurance\"",
+         "herausgeber": "Foreign, Commonwealth & Development Office (UK)",
+         "sha256": "bcf2d18f614bafb1f78f553995938c479bc0bc0ca089535bcbfcd8f65c1e764c",
+         "stand": "2026-08-11",
+         "textkopie": "analysis/rohstoffe/risiko/raw/fcdo-luxembourg.json",
+         "titel": "Foreign travel advice: Luxembourg travel advice",
+         "url": "https://www.gov.uk/foreign-travel-advice/luxembourg",
+         "zitat": "\"alert_status\":[]"
+        }
+       ],
+       "text": "Luxemburg: Reisehinweis FCDO (Stand 2026-08-11): keine Gebiete mit Reisewarnung (Warnstufe leer)."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    },
+    "NATURGEFAHREN": {
+     "belegt": [],
+     "grund": "Der FCDO-Reisehinweis für Luxemburg hat keinen Abschnitt zu Naturgefahren; standortgenaue Angaben sind nicht erfasst.",
+     "status": "UNBEKANNT"
+    },
+    "SANKTIONEN": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "ABGLEICH",
+       "land": "LU",
+       "quellen": [
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "EU",
+         "stand": "2026-10-23",
+         "textkopie": "analysis/research/sanktionen-v1/listen/eu.json",
+         "titel": "EU Consolidated Financial Sanctions List (FSF), Stand 2026-10-23 (1779 Organisationen)",
+         "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+         "zitat": "\"stand\":\"2026-10-23\""
+        },
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "UK",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/research/sanktionen-v1/listen/uk.json",
+         "titel": "UK Sanctions List (FCDO), Stand 2026-11-10 (1667 Organisationen)",
+         "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv",
+         "zitat": "\"stand\":\"2026-11-10\""
+        }
+       ],
+       "text": "Luxemburg: die gelesenen Sanktionslisten EU (Stand 2026-10-23) und UK (Stand 2026-11-10) führen kein Länderprogramm. Nicht abgeglichen: OFAC, UN."
+      },
+      {
+       "bezug": "FIRMA",
+       "evidenz": "ABGLEICH",
+       "land": "LU",
+       "quellen": [
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "EU",
+         "stand": "2026-10-23",
+         "textkopie": "analysis/research/sanktionen-v1/listen/eu.json",
+         "titel": "EU Consolidated Financial Sanctions List (FSF), Stand 2026-10-23 (1779 Organisationen)",
+         "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+         "zitat": "\"stand\":\"2026-10-23\""
+        },
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "UK",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/research/sanktionen-v1/listen/uk.json",
+         "titel": "UK Sanctions List (FCDO), Stand 2026-11-10 (1667 Organisationen)",
+         "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv",
+         "zitat": "\"stand\":\"2026-11-10\""
+        }
+       ],
+       "text": "Kein Namenstreffer für Traxys Europe S.A. auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    }
+   },
+   "rolle": "Händler",
+   "stufe": 2
+  }
+ ],
+ "tiefe": {
+  "belegt": 18,
+  "dimensionen": [
+   "Eigentümer/Betreiber",
+   "Standort",
+   "Menge",
+   "Wert",
+   "Lieferbeziehung",
+   "Risiko"
+  ],
+  "gesamt": 36,
+  "mit_annahmen": 19,
+  "zeilen": [
+   {
+    "felder": {
+     "Eigentümer/Betreiber": "belegt",
+     "Lieferbeziehung": "belegt",
+     "Menge": "belegt",
+     "Risiko": "belegt",
+     "Standort": "belegt",
+     "Wert": "belegt"
+    },
+    "id": "S1"
+   },
+   {
+    "felder": {
+     "Eigentümer/Betreiber": "belegt",
+     "Lieferbeziehung": "belegt",
+     "Menge": "unbekannt",
+     "Risiko": "belegt",
+     "Standort": "belegt",
+     "Wert": "unbekannt"
+    },
+    "id": "S2"
+   },
+   {
+    "felder": {
+     "Eigentümer/Betreiber": "unbekannt",
+     "Lieferbeziehung": "belegt",
+     "Menge": "unbekannt",
+     "Risiko": "unbekannt",
+     "Standort": "unbekannt",
+     "Wert": "unbekannt"
+    },
+    "id": "S3"
+   },
+   {
+    "felder": {
+     "Eigentümer/Betreiber": "unbekannt",
+     "Lieferbeziehung": "belegt",
+     "Menge": "unbekannt",
+     "Risiko": "unbekannt",
+     "Standort": "belegt",
+     "Wert": "belegt"
+    },
+    "id": "S4"
+   },
+   {
+    "felder": {
+     "Eigentümer/Betreiber": "unbekannt",
+     "Lieferbeziehung": "belegt",
+     "Menge": "unbekannt",
+     "Risiko": "unbekannt",
+     "Standort": "unbekannt",
+     "Wert": "unbekannt"
+    },
+    "id": "S5"
+   },
+   {
+    "felder": {
+     "Eigentümer/Betreiber": "unbekannt",
+     "Lieferbeziehung": "belegt",
+     "Menge": "belegt",
+     "Risiko": "unbekannt",
+     "Standort": "belegt",
+     "Wert": "unbekannt"
+    },
+    "id": "S6"
+   }
+  ]
+ },
+ "verbindungen": [
+  {
+   "art": "LIEFERUNG",
+   "art_atlas": "SUPPLIES",
+   "auf_globus": false,
+   "aussage": "Nach dem Abnahmevertrag des Mt-Carbine-Joint-Ventures nahm CRONIMET Asia bis Ende des Geschaeftsjahrs 2022/23 das gesamte am Standort erzeugte Konzentrat ab.",
+   "belege": [
+    {
+     "fundstelle": "Annual Report 2023, PDF-Seite 16",
+     "herausgeber": "EQ Resources Limited",
+     "textkopie": "analysis/research/wolfram-flows-v1/raw/eqr-ar-2023-p16.txt",
+     "url": "https://announcements.asx.com.au/asxpdf/20230928/pdf/05vf02x9tj6nx0.pdf",
+     "zitat": "In accordance with the Offtake Agreement between … CRONIMET Australia Pty Ltd, and CRONIMET Asia Pte … by the end of the financial year CRONIMET Asia … has taken all concentrate produced on-site this year."
+    }
+   ],
+   "evidenz": "FACT",
+   "evidenz_basis": "Freigegebener Fluss; Entscheidung Eddie Sablah 2026-11-16 (analysis/rohstoffe/fakt-entscheidung.json)",
+   "flow_id": "WOF-01",
+   "freigabe": "FREIGEGEBEN",
+   "freigabe_herkunft": "Claude (delegiert durch Eddie Sablah); Prüfbericht pruefbericht-2026-11-10.pdf",
+   "id": "V1",
+   "menge": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+    "pro_jahr": null,
+    "quelle_text": null,
+    "rechnung": "",
+    "t": null,
+    "text": "unbekannt"
+   },
+   "menge_annahme": null,
+   "menge_bezug": [],
+   "nach": "S3",
+   "stand": null,
+   "von": "S2",
+   "ware": "Wolframkonzentrat",
+   "wert": {
+    "eur": null,
+    "evidenz": "UNKNOWN",
+    "grund": "Keine gelesene Quelle nennt einen Wert; Menge × Preis ist eine Rechnung und steht nur in der Ansicht „Mit Annahmen“.",
+    "quelle_text": null,
+    "rechnung": "",
+    "text": "unbekannt"
+   },
+   "wert_annahme": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine Menge, auch keine Annahme.",
+    "text": "unbekannt"
+   }
+  },
+  {
+   "art": "HANDEL",
+   "art_atlas": "OFFTAKE_AGREEMENT",
+   "auf_globus": false,
+   "aussage": "Ueber einen langfristigen Abnahmevertrag der CRONIMET-Gruppe mit Masan sind rund 70 % der Mt-Carbine-Produktion fuer die naechsten vier Jahre (ab Jahresbericht 2023) Masan zugeteilt. Liefermenge in t: UNKNOWN; ob geliefert wurde, steht in keiner gelesenen Quelle.",
+   "belege": [
+    {
+     "fundstelle": "Annual Report 2023, PDF-Seite 45",
+     "herausgeber": "EQ Resources Limited",
+     "textkopie": "analysis/research/wolfram-flows-v1/raw/eqr-ar-2023-p45.txt",
+     "url": "https://announcements.asx.com.au/asxpdf/20230928/pdf/05vf02x9tj6nx0.pdf",
+     "zitat": "by an existing long-term offtake agreement the … Cronimet Group has signed with Masan, which will … see approximately 70% of Mt Carbine’s production for … the next four years allocated to Masan."
+    }
+   ],
+   "evidenz": "FACT",
+   "evidenz_basis": "Freigegebener Fluss; Entscheidung Eddie Sablah 2026-11-16 (analysis/rohstoffe/fakt-entscheidung.json)",
+   "flow_id": "WOF-02",
+   "freigabe": "FREIGEGEBEN",
+   "freigabe_herkunft": "Claude (delegiert durch Eddie Sablah); Prüfbericht pruefbericht-2026-11-10.pdf",
+   "id": "V2",
+   "menge": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+    "pro_jahr": null,
+    "quelle_text": null,
+    "rechnung": "",
+    "t": null,
+    "text": "unbekannt"
+   },
+   "menge_annahme": null,
+   "menge_bezug": [],
+   "nach": "S5",
+   "stand": null,
+   "von": "S2",
+   "ware": "Wolframkonzentrat",
+   "wert": {
+    "eur": null,
+    "evidenz": "UNKNOWN",
+    "grund": "Keine gelesene Quelle nennt einen Wert; Menge × Preis ist eine Rechnung und steht nur in der Ansicht „Mit Annahmen“.",
+    "quelle_text": null,
+    "rechnung": "",
+    "text": "unbekannt"
+   },
+   "wert_annahme": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine Menge, auch keine Annahme.",
+    "text": "unbekannt"
+   }
+  },
+  {
+   "art": "HANDEL",
+   "art_atlas": "OFFTAKE_AGREEMENT",
+   "auf_globus": true,
+   "aussage": "Fuenfjaehriger Abnahmevertrag (ca. 30 Mio. A$) von EQR mit Elmet Technologies, im November 2024 endgueltig unterzeichnet; Barruecopardo ist die Hauptquelle des Konzentrats unter diesem Vertrag.",
+   "belege": [
+    {
+     "fundstelle": "Tungsten concentrate to commence for Elmet Technologies as EQR's Barruecopardo operation achieves monthly production record (ASX-Mitteilung), PDF-Seite 1",
+     "herausgeber": "EQ Resources Limited",
+     "textkopie": "analysis/research/wolfram-flows-v1/raw/eqr-elmet-2024-11-p1.txt",
+     "url": "https://announcements.asx.com.au/asxpdf/20241112/pdf/06b8ydylzgwqqr.pdf",
+     "zitat": "EQR has executed the definitive supply agreement with leading US-owned and fully integrated … tungsten manufacturer, Elmet Technologies LLC, for a 5-year tungsten concentrate offtake … Scheelite (tungsten) concentrate from EQR’s Barruecopardo Operations will be the primary source of … tungsten concentrate under the Elmet offtake contract."
+    },
+    {
+     "fundstelle": "Annual Report 2025, PDF-Seite 9",
+     "herausgeber": "EQ Resources Limited",
+     "textkopie": "analysis/research/wolfram-flows-v1/raw/eqr-ar-2025-p9.txt",
+     "url": "https://announcements.asx.com.au/asxpdf/20250930/pdf/06px30r3y5npl3.pdf",
+     "zitat": "Operationally, EQR’s commitments under this offtake … production at its Barruecopardo Operations in Spain, … This ensures both security of supply to Elmet"
+    }
+   ],
+   "evidenz": "FACT",
+   "evidenz_basis": "Freigegebener Fluss; Entscheidung Eddie Sablah 2026-11-16 (analysis/rohstoffe/fakt-entscheidung.json)",
+   "flow_id": "WOF-03",
+   "freigabe": "FREIGEGEBEN",
+   "freigabe_herkunft": "Claude (delegiert durch Eddie Sablah); Prüfbericht pruefbericht-2026-11-10.pdf",
+   "id": "V3",
+   "menge": {
+    "evidenz": "UNKNOWN",
+    "grund": "Die Quelle nennt nur einen Geldbetrag, keine Menge; ein Betrag wird nicht in Tonnen umgerechnet.",
+    "pro_jahr": null,
+    "quelle_text": null,
+    "rechnung": "",
+    "t": null,
+    "text": "unbekannt"
+   },
+   "menge_annahme": null,
+   "menge_bezug": [],
+   "nach": "S4",
+   "stand": "Vertrag November 2024, 5 Jahre",
+   "von": "S1",
+   "ware": "Scheelitkonzentrat (Wolframkonzentrat)",
+   "wert": {
+    "eur": 18296029.761541747,
+    "evidenz": "BELEGT",
+    "grund": null,
+    "quelle_text": "30 Mio. A$ laut Quelle",
+    "rechnung": "30 Mio. A$ ÷ EZB-Jahresmittel 2024: 1,6397 A$ je €",
+    "text": "18,3 Mio. €"
+   },
+   "wert_annahme": null
+  },
+  {
+   "art": "HANDEL",
+   "art_atlas": "OFFTAKE_AGREEMENT",
+   "auf_globus": true,
+   "aussage": "Fuenfjaehriger Handelsvertrag (Februar 2026): 3.500 t WO3 aus der Mine Barruecopardo werden zum jeweiligen Spotpreis an Traxys verkauft; zugleich Vorauszahlungsfazilitaet 15 Mio. EUR, getilgt ueber monatliche Konzentratlieferungen.",
+   "belege": [
+    {
+     "fundstelle": "EQR reduces Spanish debt and refinances remaining EUR 15M (ASX-Mitteilung), PDF-Seite 1",
+     "herausgeber": "EQ Resources Limited",
+     "textkopie": "analysis/research/wolfram-flows-v1/raw/eqr-traxys-2026-02-p1.txt",
+     "url": "https://announcements.asx.com.au/asxpdf/20260224/pdf/06wntgzllvdjp7.pdf",
+     "zitat": "transactions documents with Traxys Europe S.A. (Traxys) … with Traxys whereby 3,500 tonnes of WO3 produced from its Barruecopardo Mine in Spain will be … sold to Traxys at the prevailing spot price of delivery … facility repayable via set-off against monthly concentrate deliveries of WO3."
+    }
+   ],
+   "evidenz": "FACT",
+   "evidenz_basis": "Freigegebener Fluss; Entscheidung Eddie Sablah 2026-11-16 (analysis/rohstoffe/fakt-entscheidung.json)",
+   "flow_id": "WOF-04",
+   "freigabe": "FREIGEGEBEN",
+   "freigabe_herkunft": "Claude (delegiert durch Eddie Sablah); Prüfbericht pruefbericht-2026-11-10.pdf",
+   "id": "V4",
+   "menge": {
+    "evidenz": "BELEGT",
+    "grund": null,
+    "pro_jahr": true,
+    "quelle_text": "3.500 t WO3 gesamt (5 Jahre) (Vertragsmenge)",
+    "rechnung": "Vertragssumme 3.500 t ÷ 5 Jahre = 700 t pro Jahr",
+    "t": 700.0,
+    "text": "700 t pro Jahr"
+   },
+   "menge_annahme": null,
+   "menge_bezug": [],
+   "nach": "S6",
+   "stand": "Mitteilung vom 24.2.2026 (Vertrag laut Quelle in Kraft)",
+   "von": "S1",
+   "ware": "Wolframkonzentrat (3.500 t WO3-Inhalt)",
+   "wert": {
+    "eur": null,
+    "evidenz": "UNKNOWN",
+    "grund": "Keine gelesene Quelle nennt einen Wert; Menge × Preis ist eine Rechnung und steht nur in der Ansicht „Mit Annahmen“.",
+    "quelle_text": null,
+    "rechnung": "",
+    "text": "unbekannt"
+   },
+   "wert_annahme": {
+    "annahme_art": "RECHNUNG",
+    "eur": 23539823.00884956,
+    "eur_spanne": [
+     23539823.00884956
+    ],
+    "evidenz": "ANNAHME",
+    "preis_basis": "wo3",
+    "preis_datum": null,
+    "preis_quelle": "U.S. Geological Survey, Mineral Commodity Summaries 2026, Tungsten",
+    "preis_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-tungsten.pdf",
+    "preis_zitat": "concentrate, average in-warehouse Rotterdam, dollars per 225 275 258 252 380 … dry metric ton unit of tungsten trioxide",
+    "rechnung": "700 t (belegte Menge) × 38.000 US$ je t WO3-Inhalt (380 US$ je mtu (10 kg WO3) × 100 mtu/t, 2025e) = 26,6 Mio. US$ ÷ EZB-Jahresmittel 2025: 1,1300 US$ je €",
+    "text": "≈ 23,5 Mio. € pro Jahr"
+   }
+  }
+ ],
+ "weltreferenz": {
+  "grund": null,
+  "quelle": "Mineral Commodity Summaries 2026, Tungsten",
+  "status": "FREIGEGEBEN",
+  "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-tungsten.pdf"
+ },
+ "zaehler": {
+  "ausfall_mit_ausweich_menge": 6,
+  "belege": 5,
+  "eigentum_belegt": 2,
+  "eigentum_kandidaten": 2,
+  "eigentumskette_freigegeben": 2,
+  "eigentumskette_kanten": 1,
+  "eigentumskette_vollstaendig": 2,
+  "glieder_mit_ausweichquelle": 4,
+  "kette_stufen": 2,
+  "mengen_belegt": 1,
+  "mengen_bezug": 0,
+  "mengen_freigegeben": 0,
+  "mengen_in_tonnen": 1,
+  "mengen_mit_annahmen": 1,
+  "risiko_belegt": 2,
+  "risikoebene_belegt": 15,
+  "risikoebene_felder": 24,
+  "standorte": 6,
+  "standorte_mit_ort": 4,
+  "tiefe_belegt": 18,
+  "tiefe_gesamt": 36,
+  "tiefe_mit_annahmen": 19,
+  "verbindungen": 4,
+  "verbindungen_auf_globus": 2,
+  "verbindungen_freigegeben": 4,
+  "werte_belegt": 1,
+  "werte_in_euro": 1,
+  "werte_mit_annahmen": 2
+ }
+}

@@ -1,0 +1,4984 @@
+{
+ "ausfall": {
+  "S1": {
+   "ausweich": {
+    "grund": null,
+    "liste": [
+     {
+      "art": "LAND",
+      "fuer": "S1",
+      "glied": null,
+      "hinweis": "Förderung des Landes (Landesebene), keine freie Kapazität und keine bestätigte Lieferbeziehung.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 1400000,
+       "text": "1.400.000 t Förderung 2025 (77,8 % der Welt)"
+      },
+      "name": "China",
+      "quelle": {
+       "fundstelle": "Page 2, table 'World Mine Production and Reserves'",
+       "herausgeber": "U.S. Geological Survey",
+       "titel": "Mineral Commodity Summaries 2026, Graphite",
+       "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-graphite.pdf"
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     },
+     {
+      "art": "LAND",
+      "fuer": "S1",
+      "glied": null,
+      "hinweis": "Förderung des Landes (Landesebene), keine freie Kapazität und keine bestätigte Lieferbeziehung.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 80000,
+       "text": "80.000 t Förderung 2025 (4,4 % der Welt)"
+      },
+      "name": "Madagaskar",
+      "quelle": {
+       "fundstelle": "Page 2, table 'World Mine Production and Reserves'",
+       "herausgeber": "U.S. Geological Survey",
+       "titel": "Mineral Commodity Summaries 2026, Graphite",
+       "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-graphite.pdf"
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     },
+     {
+      "art": "LAND",
+      "fuer": "S1",
+      "glied": null,
+      "hinweis": "Förderung des Landes (Landesebene), keine freie Kapazität und keine bestätigte Lieferbeziehung.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 75000,
+       "text": "75.000 t Förderung 2025 (4,2 % der Welt)"
+      },
+      "name": "Tansania",
+      "quelle": {
+       "fundstelle": "Page 2, table 'World Mine Production and Reserves'",
+       "herausgeber": "U.S. Geological Survey",
+       "titel": "Mineral Commodity Summaries 2026, Graphite",
+       "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-graphite.pdf"
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     },
+     {
+      "art": "STANDORT",
+      "freigabe": "FREIGEGEBEN",
+      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
+      "fuer": "S1",
+      "glied": null,
+      "hinweis": "Andere Naturgraphit-Mine; eine Lieferbeziehung ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt.",
+      "id": "AW-GR-AOYU",
+      "lage": {
+       "genauigkeit": "A",
+       "lat": 45.62,
+       "lon": 132.46,
+       "quelle": "USGS-GIS 2023, CHN_Mineral_Facilities, FeatureUID CHN0501"
+      },
+      "land": "CN",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": null,
+       "text": "Kapazität 100.000 t Graphit (Bruttogewicht) pro Jahr (USGS Minerals Yearbook 2024)"
+      },
+      "name": "Graphitmine Jixi (Heilongjiang, China), Jixi Aoyu",
+      "quelle": {
+       "fundstelle": "MYB-Zeile FAC_CHN0381_01 (Kapazität); GIS CHN_Mineral_Facilities CHN0501 (Lage)",
+       "herausgeber": "U.S. Geological Survey",
+       "titel": "Minerals Yearbook 2024, Vol. III (Area Reports: International), Tabelle Facilities; Lage: Compilation of Geospatial Data (GIS) for the Mineral Industries and Related Infrastructure of the People's Republic of China",
+       "url": "https://www.sciencebase.gov/catalog/item/6a8490171ba49b3133cd8055",
+       "zitat": "Site in Jixi · China · Graphite   · 100000 Metric tons (Gross weight) · Assumed active · Jixi Aoyu Graphite Co. Ltd. · Jixi, Heilongjiang Province | GIS: Mine in Jixi · China · Graphite  · 60 kmt · Assumed Active · 45.62, 132.46 · Jixi Aoyu Graphite Co., Ltd."
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     },
+     {
+      "art": "STANDORT",
+      "freigabe": "FREIGEGEBEN",
+      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
+      "fuer": "S1",
+      "glied": null,
+      "hinweis": "Andere Naturgraphit-Mine; eine Lieferbeziehung ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt.",
+      "id": "AW-GR-YANXIN",
+      "lage": {
+       "genauigkeit": "E",
+       "lat": 36.7327,
+       "lon": 119.9238,
+       "quelle": "USGS-GIS 2023, CHN_Mineral_Facilities, FeatureUID CHN1467"
+      },
+      "land": "CN",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": null,
+       "text": "Kapazität 28.000 t Graphit (Bruttogewicht) pro Jahr (USGS Minerals Yearbook 2024)"
+      },
+      "name": "Graphitmine Qingdao (Shandong, China), Qingdao Yanxin",
+      "quelle": {
+       "fundstelle": "MYB-Zeile FAC_CHN0386_01 (Kapazität); GIS CHN_Mineral_Facilities CHN1467 (Lage)",
+       "herausgeber": "U.S. Geological Survey",
+       "titel": "Minerals Yearbook 2024, Vol. III (Area Reports: International), Tabelle Facilities; Lage: Compilation of Geospatial Data (GIS) for the Mineral Industries and Related Infrastructure of the People's Republic of China",
+       "url": "https://www.sciencebase.gov/catalog/item/6a8490171ba49b3133cd8055",
+       "zitat": "Site in Qingdao · China · Graphite   · 28000 Metric tons (Gross weight) · Assumed active · Qingdao Yanxin Graphite Products Co. Ltd. · Qingdao, Shandong Province | GIS: Qingdao Mine · China · Graphite  · 28 kmt · Assumed Active · 36.7327, 119.9238 · Qingdao Yanxin Graphite Products Co., Ltd."
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     }
+    ],
+    "mit_menge": 5
+   },
+   "dauer": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine belegte Wiederanlaufzeit."
+   },
+   "ersatz": [],
+   "mehrkosten": {
+    "evidenz": "UNKNOWN",
+    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+   },
+   "mengen": [
+    {
+     "evidenz": "BELEGT_TEXT",
+     "text": "4 Ladungen zu je ca. 10 kt (geliefert)",
+     "verbindung": "V1"
+    },
+    {
+     "evidenz": "UNKNOWN",
+     "text": "unbekannt",
+     "verbindung": "V2"
+    },
+    {
+     "evidenz": "BELEGT",
+     "text": "9.000 t im genannten Zeitraum",
+     "verbindung": "V3"
+    },
+    {
+     "evidenz": "BELEGT",
+     "text": "60.000 t pro Jahr",
+     "verbindung": "V4"
+    },
+    {
+     "evidenz": "UNKNOWN",
+     "text": "unbekannt",
+     "verbindung": "V7"
+    },
+    {
+     "evidenz": "UNKNOWN",
+     "text": "unbekannt",
+     "verbindung": "V8"
+    },
+    {
+     "evidenz": "BELEGT",
+     "text": "9.714 t pro Jahr",
+     "verbindung": "V9"
+    },
+    {
+     "evidenz": "UNKNOWN",
+     "text": "unbekannt",
+     "verbindung": "V10"
+    }
+   ],
+   "ohne_abfluss": [],
+   "ohne_zufluss": [
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S6",
+    "S7",
+    "S9",
+    "S10",
+    "S11"
+   ],
+   "tonnen": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+   },
+   "verbindungen_weg": [
+    "V1",
+    "V2",
+    "V3",
+    "V4",
+    "V7",
+    "V8",
+    "V9",
+    "V10"
+   ]
+  },
+  "S10": {
+   "ausweich": {
+    "grund": null,
+    "liste": [
+     {
+      "art": "NETZ",
+      "fuer": "S8",
+      "glied": "S11",
+      "hinweis": null,
+      "menge": {
+       "evidenz": "UNKNOWN",
+       "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+       "t": null,
+       "text": "unbekannt"
+      },
+      "name": "Tesla",
+      "richtung": "ABFLUSS",
+      "verbindung": "V5"
+     }
+    ],
+    "mit_menge": 0
+   },
+   "dauer": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine belegte Wiederanlaufzeit."
+   },
+   "ersatz": [
+    {
+     "fuer": "S8",
+     "richtung": "ABFLUSS",
+     "weitere": [
+      "S11"
+     ]
+    }
+   ],
+   "mehrkosten": {
+    "evidenz": "UNKNOWN",
+    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+   },
+   "mengen": [
+    {
+     "evidenz": "UNKNOWN",
+     "text": "unbekannt",
+     "verbindung": "V6"
+    }
+   ],
+   "ohne_abfluss": [],
+   "ohne_zufluss": [],
+   "tonnen": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+   },
+   "verbindungen_weg": [
+    "V6"
+   ]
+  },
+  "S11": {
+   "ausweich": {
+    "grund": null,
+    "liste": [
+     {
+      "art": "NETZ",
+      "fuer": "S8",
+      "glied": "S10",
+      "hinweis": null,
+      "menge": {
+       "evidenz": "UNKNOWN",
+       "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+       "t": null,
+       "text": "unbekannt"
+      },
+      "name": "Lucid Group",
+      "richtung": "ABFLUSS",
+      "verbindung": "V6"
+     }
+    ],
+    "mit_menge": 0
+   },
+   "dauer": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine belegte Wiederanlaufzeit."
+   },
+   "ersatz": [
+    {
+     "fuer": "S8",
+     "richtung": "ABFLUSS",
+     "weitere": [
+      "S10"
+     ]
+    }
+   ],
+   "mehrkosten": {
+    "evidenz": "UNKNOWN",
+    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+   },
+   "mengen": [
+    {
+     "evidenz": "UNKNOWN",
+     "text": "unbekannt",
+     "verbindung": "V5"
+    }
+   ],
+   "ohne_abfluss": [],
+   "ohne_zufluss": [],
+   "tonnen": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+   },
+   "verbindungen_weg": [
+    "V5"
+   ]
+  },
+  "S2": {
+   "ausweich": {
+    "grund": null,
+    "liste": [
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S3",
+      "hinweis": null,
+      "menge": {
+       "evidenz": "UNKNOWN",
+       "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+       "t": null,
+       "text": "unbekannt"
+      },
+      "name": "Graphex Group",
+      "richtung": "ABFLUSS",
+      "verbindung": "V8"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S4",
+      "hinweis": null,
+      "menge": {
+       "evidenz": "UNKNOWN",
+       "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+       "t": null,
+       "text": "unbekannt"
+      },
+      "name": "Hafen Nacala",
+      "richtung": "ABFLUSS",
+      "verbindung": "V2"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S5",
+      "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
+      "menge": {
+       "evidenz": "BELEGT_TEXT",
+       "grund": null,
+       "t": null,
+       "text": "4 Ladungen zu je ca. 10 kt (geliefert)"
+      },
+      "name": "Hafen Pemba",
+      "richtung": "ABFLUSS",
+      "verbindung": "V1"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S6",
+      "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 9714.286,
+       "text": "9.714 t pro Jahr"
+      },
+      "name": "NextSource Materials",
+      "richtung": "ABFLUSS",
+      "verbindung": "V9"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S7",
+      "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 60000.0,
+       "text": "60.000 t pro Jahr"
+      },
+      "name": "POSCO Future M",
+      "richtung": "ABFLUSS",
+      "verbindung": "V4"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S8",
+      "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 9000.0,
+       "text": "9.000 t im genannten Zeitraum"
+      },
+      "name": "Vidalia Active Anode Material Facility",
+      "richtung": "ABFLUSS",
+      "verbindung": "V3"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S9",
+      "hinweis": null,
+      "menge": {
+       "evidenz": "UNKNOWN",
+       "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+       "t": null,
+       "text": "unbekannt"
+      },
+      "name": "Westwater Resources",
+      "richtung": "ABFLUSS",
+      "verbindung": "V7"
+     }
+    ],
+    "mit_menge": 4
+   },
+   "dauer": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine belegte Wiederanlaufzeit."
+   },
+   "ersatz": [
+    {
+     "fuer": "S1",
+     "richtung": "ABFLUSS",
+     "weitere": [
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8",
+      "S9"
+     ]
+    }
+   ],
+   "mehrkosten": {
+    "evidenz": "UNKNOWN",
+    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+   },
+   "mengen": [
+    {
+     "evidenz": "UNKNOWN",
+     "text": "unbekannt",
+     "verbindung": "V10"
+    }
+   ],
+   "ohne_abfluss": [],
+   "ohne_zufluss": [],
+   "tonnen": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+   },
+   "verbindungen_weg": [
+    "V10"
+   ]
+  },
+  "S3": {
+   "ausweich": {
+    "grund": null,
+    "liste": [
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S2",
+      "hinweis": null,
+      "menge": {
+       "evidenz": "UNKNOWN",
+       "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+       "t": null,
+       "text": "unbekannt"
+      },
+      "name": "BTR New Materials Group",
+      "richtung": "ABFLUSS",
+      "verbindung": "V10"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S4",
+      "hinweis": null,
+      "menge": {
+       "evidenz": "UNKNOWN",
+       "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+       "t": null,
+       "text": "unbekannt"
+      },
+      "name": "Hafen Nacala",
+      "richtung": "ABFLUSS",
+      "verbindung": "V2"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S5",
+      "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
+      "menge": {
+       "evidenz": "BELEGT_TEXT",
+       "grund": null,
+       "t": null,
+       "text": "4 Ladungen zu je ca. 10 kt (geliefert)"
+      },
+      "name": "Hafen Pemba",
+      "richtung": "ABFLUSS",
+      "verbindung": "V1"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S6",
+      "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 9714.286,
+       "text": "9.714 t pro Jahr"
+      },
+      "name": "NextSource Materials",
+      "richtung": "ABFLUSS",
+      "verbindung": "V9"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S7",
+      "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 60000.0,
+       "text": "60.000 t pro Jahr"
+      },
+      "name": "POSCO Future M",
+      "richtung": "ABFLUSS",
+      "verbindung": "V4"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S8",
+      "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 9000.0,
+       "text": "9.000 t im genannten Zeitraum"
+      },
+      "name": "Vidalia Active Anode Material Facility",
+      "richtung": "ABFLUSS",
+      "verbindung": "V3"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S9",
+      "hinweis": null,
+      "menge": {
+       "evidenz": "UNKNOWN",
+       "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+       "t": null,
+       "text": "unbekannt"
+      },
+      "name": "Westwater Resources",
+      "richtung": "ABFLUSS",
+      "verbindung": "V7"
+     }
+    ],
+    "mit_menge": 4
+   },
+   "dauer": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine belegte Wiederanlaufzeit."
+   },
+   "ersatz": [
+    {
+     "fuer": "S1",
+     "richtung": "ABFLUSS",
+     "weitere": [
+      "S2",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8",
+      "S9"
+     ]
+    }
+   ],
+   "mehrkosten": {
+    "evidenz": "UNKNOWN",
+    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+   },
+   "mengen": [
+    {
+     "evidenz": "UNKNOWN",
+     "text": "unbekannt",
+     "verbindung": "V8"
+    }
+   ],
+   "ohne_abfluss": [],
+   "ohne_zufluss": [],
+   "tonnen": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+   },
+   "verbindungen_weg": [
+    "V8"
+   ]
+  },
+  "S4": {
+   "ausweich": {
+    "grund": null,
+    "liste": [
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S2",
+      "hinweis": null,
+      "menge": {
+       "evidenz": "UNKNOWN",
+       "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+       "t": null,
+       "text": "unbekannt"
+      },
+      "name": "BTR New Materials Group",
+      "richtung": "ABFLUSS",
+      "verbindung": "V10"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S3",
+      "hinweis": null,
+      "menge": {
+       "evidenz": "UNKNOWN",
+       "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+       "t": null,
+       "text": "unbekannt"
+      },
+      "name": "Graphex Group",
+      "richtung": "ABFLUSS",
+      "verbindung": "V8"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S5",
+      "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
+      "menge": {
+       "evidenz": "BELEGT_TEXT",
+       "grund": null,
+       "t": null,
+       "text": "4 Ladungen zu je ca. 10 kt (geliefert)"
+      },
+      "name": "Hafen Pemba",
+      "richtung": "ABFLUSS",
+      "verbindung": "V1"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S6",
+      "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 9714.286,
+       "text": "9.714 t pro Jahr"
+      },
+      "name": "NextSource Materials",
+      "richtung": "ABFLUSS",
+      "verbindung": "V9"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S7",
+      "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 60000.0,
+       "text": "60.000 t pro Jahr"
+      },
+      "name": "POSCO Future M",
+      "richtung": "ABFLUSS",
+      "verbindung": "V4"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S8",
+      "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 9000.0,
+       "text": "9.000 t im genannten Zeitraum"
+      },
+      "name": "Vidalia Active Anode Material Facility",
+      "richtung": "ABFLUSS",
+      "verbindung": "V3"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S9",
+      "hinweis": null,
+      "menge": {
+       "evidenz": "UNKNOWN",
+       "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+       "t": null,
+       "text": "unbekannt"
+      },
+      "name": "Westwater Resources",
+      "richtung": "ABFLUSS",
+      "verbindung": "V7"
+     }
+    ],
+    "mit_menge": 4
+   },
+   "dauer": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine belegte Wiederanlaufzeit."
+   },
+   "ersatz": [
+    {
+     "fuer": "S1",
+     "richtung": "ABFLUSS",
+     "weitere": [
+      "S2",
+      "S3",
+      "S5",
+      "S6",
+      "S7",
+      "S8",
+      "S9"
+     ]
+    }
+   ],
+   "mehrkosten": {
+    "evidenz": "UNKNOWN",
+    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+   },
+   "mengen": [
+    {
+     "evidenz": "UNKNOWN",
+     "text": "unbekannt",
+     "verbindung": "V2"
+    }
+   ],
+   "ohne_abfluss": [],
+   "ohne_zufluss": [],
+   "tonnen": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+   },
+   "verbindungen_weg": [
+    "V2"
+   ]
+  },
+  "S5": {
+   "ausweich": {
+    "grund": null,
+    "liste": [
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S2",
+      "hinweis": null,
+      "menge": {
+       "evidenz": "UNKNOWN",
+       "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+       "t": null,
+       "text": "unbekannt"
+      },
+      "name": "BTR New Materials Group",
+      "richtung": "ABFLUSS",
+      "verbindung": "V10"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S3",
+      "hinweis": null,
+      "menge": {
+       "evidenz": "UNKNOWN",
+       "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+       "t": null,
+       "text": "unbekannt"
+      },
+      "name": "Graphex Group",
+      "richtung": "ABFLUSS",
+      "verbindung": "V8"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S4",
+      "hinweis": null,
+      "menge": {
+       "evidenz": "UNKNOWN",
+       "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+       "t": null,
+       "text": "unbekannt"
+      },
+      "name": "Hafen Nacala",
+      "richtung": "ABFLUSS",
+      "verbindung": "V2"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S6",
+      "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 9714.286,
+       "text": "9.714 t pro Jahr"
+      },
+      "name": "NextSource Materials",
+      "richtung": "ABFLUSS",
+      "verbindung": "V9"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S7",
+      "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 60000.0,
+       "text": "60.000 t pro Jahr"
+      },
+      "name": "POSCO Future M",
+      "richtung": "ABFLUSS",
+      "verbindung": "V4"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S8",
+      "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 9000.0,
+       "text": "9.000 t im genannten Zeitraum"
+      },
+      "name": "Vidalia Active Anode Material Facility",
+      "richtung": "ABFLUSS",
+      "verbindung": "V3"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S9",
+      "hinweis": null,
+      "menge": {
+       "evidenz": "UNKNOWN",
+       "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+       "t": null,
+       "text": "unbekannt"
+      },
+      "name": "Westwater Resources",
+      "richtung": "ABFLUSS",
+      "verbindung": "V7"
+     }
+    ],
+    "mit_menge": 3
+   },
+   "dauer": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine belegte Wiederanlaufzeit."
+   },
+   "ersatz": [
+    {
+     "fuer": "S1",
+     "richtung": "ABFLUSS",
+     "weitere": [
+      "S2",
+      "S3",
+      "S4",
+      "S6",
+      "S7",
+      "S8",
+      "S9"
+     ]
+    }
+   ],
+   "mehrkosten": {
+    "evidenz": "UNKNOWN",
+    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+   },
+   "mengen": [
+    {
+     "evidenz": "BELEGT_TEXT",
+     "text": "4 Ladungen zu je ca. 10 kt (geliefert)",
+     "verbindung": "V1"
+    }
+   ],
+   "ohne_abfluss": [],
+   "ohne_zufluss": [],
+   "tonnen": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+   },
+   "verbindungen_weg": [
+    "V1"
+   ]
+  },
+  "S6": {
+   "ausweich": {
+    "grund": null,
+    "liste": [
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S2",
+      "hinweis": null,
+      "menge": {
+       "evidenz": "UNKNOWN",
+       "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+       "t": null,
+       "text": "unbekannt"
+      },
+      "name": "BTR New Materials Group",
+      "richtung": "ABFLUSS",
+      "verbindung": "V10"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S3",
+      "hinweis": null,
+      "menge": {
+       "evidenz": "UNKNOWN",
+       "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+       "t": null,
+       "text": "unbekannt"
+      },
+      "name": "Graphex Group",
+      "richtung": "ABFLUSS",
+      "verbindung": "V8"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S4",
+      "hinweis": null,
+      "menge": {
+       "evidenz": "UNKNOWN",
+       "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+       "t": null,
+       "text": "unbekannt"
+      },
+      "name": "Hafen Nacala",
+      "richtung": "ABFLUSS",
+      "verbindung": "V2"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S5",
+      "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
+      "menge": {
+       "evidenz": "BELEGT_TEXT",
+       "grund": null,
+       "t": null,
+       "text": "4 Ladungen zu je ca. 10 kt (geliefert)"
+      },
+      "name": "Hafen Pemba",
+      "richtung": "ABFLUSS",
+      "verbindung": "V1"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S7",
+      "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 60000.0,
+       "text": "60.000 t pro Jahr"
+      },
+      "name": "POSCO Future M",
+      "richtung": "ABFLUSS",
+      "verbindung": "V4"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S8",
+      "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 9000.0,
+       "text": "9.000 t im genannten Zeitraum"
+      },
+      "name": "Vidalia Active Anode Material Facility",
+      "richtung": "ABFLUSS",
+      "verbindung": "V3"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S9",
+      "hinweis": null,
+      "menge": {
+       "evidenz": "UNKNOWN",
+       "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+       "t": null,
+       "text": "unbekannt"
+      },
+      "name": "Westwater Resources",
+      "richtung": "ABFLUSS",
+      "verbindung": "V7"
+     }
+    ],
+    "mit_menge": 3
+   },
+   "dauer": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine belegte Wiederanlaufzeit."
+   },
+   "ersatz": [
+    {
+     "fuer": "S1",
+     "richtung": "ABFLUSS",
+     "weitere": [
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S7",
+      "S8",
+      "S9"
+     ]
+    }
+   ],
+   "mehrkosten": {
+    "evidenz": "UNKNOWN",
+    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+   },
+   "mengen": [
+    {
+     "evidenz": "BELEGT",
+     "text": "9.714 t pro Jahr",
+     "verbindung": "V9"
+    }
+   ],
+   "ohne_abfluss": [],
+   "ohne_zufluss": [],
+   "tonnen": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+   },
+   "verbindungen_weg": [
+    "V9"
+   ]
+  },
+  "S7": {
+   "ausweich": {
+    "grund": null,
+    "liste": [
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S2",
+      "hinweis": null,
+      "menge": {
+       "evidenz": "UNKNOWN",
+       "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+       "t": null,
+       "text": "unbekannt"
+      },
+      "name": "BTR New Materials Group",
+      "richtung": "ABFLUSS",
+      "verbindung": "V10"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S3",
+      "hinweis": null,
+      "menge": {
+       "evidenz": "UNKNOWN",
+       "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+       "t": null,
+       "text": "unbekannt"
+      },
+      "name": "Graphex Group",
+      "richtung": "ABFLUSS",
+      "verbindung": "V8"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S4",
+      "hinweis": null,
+      "menge": {
+       "evidenz": "UNKNOWN",
+       "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+       "t": null,
+       "text": "unbekannt"
+      },
+      "name": "Hafen Nacala",
+      "richtung": "ABFLUSS",
+      "verbindung": "V2"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S5",
+      "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
+      "menge": {
+       "evidenz": "BELEGT_TEXT",
+       "grund": null,
+       "t": null,
+       "text": "4 Ladungen zu je ca. 10 kt (geliefert)"
+      },
+      "name": "Hafen Pemba",
+      "richtung": "ABFLUSS",
+      "verbindung": "V1"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S6",
+      "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 9714.286,
+       "text": "9.714 t pro Jahr"
+      },
+      "name": "NextSource Materials",
+      "richtung": "ABFLUSS",
+      "verbindung": "V9"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S8",
+      "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 9000.0,
+       "text": "9.000 t im genannten Zeitraum"
+      },
+      "name": "Vidalia Active Anode Material Facility",
+      "richtung": "ABFLUSS",
+      "verbindung": "V3"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S9",
+      "hinweis": null,
+      "menge": {
+       "evidenz": "UNKNOWN",
+       "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+       "t": null,
+       "text": "unbekannt"
+      },
+      "name": "Westwater Resources",
+      "richtung": "ABFLUSS",
+      "verbindung": "V7"
+     }
+    ],
+    "mit_menge": 3
+   },
+   "dauer": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine belegte Wiederanlaufzeit."
+   },
+   "ersatz": [
+    {
+     "fuer": "S1",
+     "richtung": "ABFLUSS",
+     "weitere": [
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S8",
+      "S9"
+     ]
+    }
+   ],
+   "mehrkosten": {
+    "evidenz": "UNKNOWN",
+    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+   },
+   "mengen": [
+    {
+     "evidenz": "BELEGT",
+     "text": "60.000 t pro Jahr",
+     "verbindung": "V4"
+    }
+   ],
+   "ohne_abfluss": [],
+   "ohne_zufluss": [],
+   "tonnen": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+   },
+   "verbindungen_weg": [
+    "V4"
+   ]
+  },
+  "S8": {
+   "ausweich": {
+    "grund": null,
+    "liste": [
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S2",
+      "hinweis": null,
+      "menge": {
+       "evidenz": "UNKNOWN",
+       "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+       "t": null,
+       "text": "unbekannt"
+      },
+      "name": "BTR New Materials Group",
+      "richtung": "ABFLUSS",
+      "verbindung": "V10"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S3",
+      "hinweis": null,
+      "menge": {
+       "evidenz": "UNKNOWN",
+       "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+       "t": null,
+       "text": "unbekannt"
+      },
+      "name": "Graphex Group",
+      "richtung": "ABFLUSS",
+      "verbindung": "V8"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S4",
+      "hinweis": null,
+      "menge": {
+       "evidenz": "UNKNOWN",
+       "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+       "t": null,
+       "text": "unbekannt"
+      },
+      "name": "Hafen Nacala",
+      "richtung": "ABFLUSS",
+      "verbindung": "V2"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S5",
+      "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
+      "menge": {
+       "evidenz": "BELEGT_TEXT",
+       "grund": null,
+       "t": null,
+       "text": "4 Ladungen zu je ca. 10 kt (geliefert)"
+      },
+      "name": "Hafen Pemba",
+      "richtung": "ABFLUSS",
+      "verbindung": "V1"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S6",
+      "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 9714.286,
+       "text": "9.714 t pro Jahr"
+      },
+      "name": "NextSource Materials",
+      "richtung": "ABFLUSS",
+      "verbindung": "V9"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S7",
+      "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 60000.0,
+       "text": "60.000 t pro Jahr"
+      },
+      "name": "POSCO Future M",
+      "richtung": "ABFLUSS",
+      "verbindung": "V4"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S9",
+      "hinweis": null,
+      "menge": {
+       "evidenz": "UNKNOWN",
+       "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+       "t": null,
+       "text": "unbekannt"
+      },
+      "name": "Westwater Resources",
+      "richtung": "ABFLUSS",
+      "verbindung": "V7"
+     }
+    ],
+    "mit_menge": 3
+   },
+   "dauer": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine belegte Wiederanlaufzeit."
+   },
+   "ersatz": [
+    {
+     "fuer": "S1",
+     "richtung": "ABFLUSS",
+     "weitere": [
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S9"
+     ]
+    }
+   ],
+   "mehrkosten": {
+    "evidenz": "UNKNOWN",
+    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+   },
+   "mengen": [
+    {
+     "evidenz": "BELEGT",
+     "text": "9.000 t im genannten Zeitraum",
+     "verbindung": "V3"
+    },
+    {
+     "evidenz": "UNKNOWN",
+     "text": "unbekannt",
+     "verbindung": "V5"
+    },
+    {
+     "evidenz": "UNKNOWN",
+     "text": "unbekannt",
+     "verbindung": "V6"
+    }
+   ],
+   "ohne_abfluss": [],
+   "ohne_zufluss": [
+    "S10",
+    "S11"
+   ],
+   "tonnen": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+   },
+   "verbindungen_weg": [
+    "V3",
+    "V5",
+    "V6"
+   ]
+  },
+  "S9": {
+   "ausweich": {
+    "grund": null,
+    "liste": [
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S2",
+      "hinweis": null,
+      "menge": {
+       "evidenz": "UNKNOWN",
+       "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+       "t": null,
+       "text": "unbekannt"
+      },
+      "name": "BTR New Materials Group",
+      "richtung": "ABFLUSS",
+      "verbindung": "V10"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S3",
+      "hinweis": null,
+      "menge": {
+       "evidenz": "UNKNOWN",
+       "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+       "t": null,
+       "text": "unbekannt"
+      },
+      "name": "Graphex Group",
+      "richtung": "ABFLUSS",
+      "verbindung": "V8"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S4",
+      "hinweis": null,
+      "menge": {
+       "evidenz": "UNKNOWN",
+       "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+       "t": null,
+       "text": "unbekannt"
+      },
+      "name": "Hafen Nacala",
+      "richtung": "ABFLUSS",
+      "verbindung": "V2"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S5",
+      "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
+      "menge": {
+       "evidenz": "BELEGT_TEXT",
+       "grund": null,
+       "t": null,
+       "text": "4 Ladungen zu je ca. 10 kt (geliefert)"
+      },
+      "name": "Hafen Pemba",
+      "richtung": "ABFLUSS",
+      "verbindung": "V1"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S6",
+      "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 9714.286,
+       "text": "9.714 t pro Jahr"
+      },
+      "name": "NextSource Materials",
+      "richtung": "ABFLUSS",
+      "verbindung": "V9"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S7",
+      "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 60000.0,
+       "text": "60.000 t pro Jahr"
+      },
+      "name": "POSCO Future M",
+      "richtung": "ABFLUSS",
+      "verbindung": "V4"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S1",
+      "glied": "S8",
+      "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 9000.0,
+       "text": "9.000 t im genannten Zeitraum"
+      },
+      "name": "Vidalia Active Anode Material Facility",
+      "richtung": "ABFLUSS",
+      "verbindung": "V3"
+     }
+    ],
+    "mit_menge": 4
+   },
+   "dauer": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine belegte Wiederanlaufzeit."
+   },
+   "ersatz": [
+    {
+     "fuer": "S1",
+     "richtung": "ABFLUSS",
+     "weitere": [
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S6",
+      "S7",
+      "S8"
+     ]
+    }
+   ],
+   "mehrkosten": {
+    "evidenz": "UNKNOWN",
+    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+   },
+   "mengen": [
+    {
+     "evidenz": "UNKNOWN",
+     "text": "unbekannt",
+     "verbindung": "V7"
+    }
+   ],
+   "ohne_abfluss": [],
+   "ohne_zufluss": [],
+   "tonnen": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+   },
+   "verbindungen_weg": [
+    "V7"
+   ]
+  }
+ },
+ "eigentumskette": {
+  "beschreibung": "Eigentümerkette je Glied der Rohstoffketten bis zur obersten Gesellschaft bzw. zum letzten Eigentümer (Auftrag Eddie Sablah 2026-11-16 \"jede VF auf den Stand von Kupfer\", Paket 3). Gleiche Regeln wie Kupferkette (analysis/kupferkette/auswahl.json, Abschnitt eigentumskette): Anteil nur, wenn er im Zitat steht; Pflichtpfade ab schwelle_prozent effektivem Anteil oder Anteil unbekannt; freigegeben nur über bestätigte Zweitprüfung einer getrennten Sitzung (Datei zweitpruefung, Regel Eddie 2026-11-11); alles andere ist Kandidat.",
+  "erstpruefung": {
+   "am": "2026-11-16",
+   "pruefer": "Claude (Erstprüfung)",
+   "sitzung": "session_01JgcA7TdgLRrqKV9kyFuE5E"
+  },
+  "glieder": {
+   "S1": {
+    "baum": {
+     "effektiv": 100.0,
+     "kante": null,
+     "kinder": [],
+     "knoten": "R-SYRAH",
+     "pflicht": true,
+     "schluss": "OFFEN",
+     "schluss_text": "endet ohne Beleg"
+    },
+    "belegt": true,
+    "betreiber": null,
+    "bezug": "ZUGEHOERIG",
+    "bezug_belege": [
+     {
+      "fundstelle": "PDF-Seite 13 (pdftotext ohne -layout)",
+      "quelle": "rk-syr-ar-2023-s013",
+      "rolle": "hauptbeleg",
+      "zitat": "Syrah is an Australian Securities Exchange listed industrial minerals and technology company with its flagship Balama Graphite Operation in Mozambique and a downstream AAM facility in the United States."
+     }
+    ],
+    "bezug_freigabe": "FREIGEGEBEN",
+    "bezug_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
+    "bezug_text": "Das Glied gehört laut Quelle zu",
+    "ebenen": 0,
+    "einschraenkung": null,
+    "grund": null,
+    "status": "OFFEN",
+    "status_text": "Kette endet ohne Beleg",
+    "wurzel": "R-SYRAH"
+   },
+   "S10": {
+    "baum": {
+     "effektiv": 100.0,
+     "kante": null,
+     "kinder": [],
+     "knoten": "R-LUCID",
+     "pflicht": true,
+     "schluss": "OBERSTE",
+     "schluss_text": "oberste Gesellschaft"
+    },
+    "belegt": true,
+    "betreiber": null,
+    "bezug": "IST",
+    "bezug_belege": [],
+    "bezug_freigabe": null,
+    "bezug_herkunft": null,
+    "bezug_text": "Das Glied ist diese Gesellschaft bzw. dieser Standort",
+    "ebenen": 0,
+    "einschraenkung": null,
+    "grund": null,
+    "status": "VOLLSTAENDIG_FREIGEGEBEN",
+    "status_text": "bis oben belegt und freigegeben",
+    "wurzel": "R-LUCID"
+   },
+   "S11": {
+    "baum": {
+     "effektiv": 100.0,
+     "kante": null,
+     "kinder": [],
+     "knoten": "R-TESLA",
+     "pflicht": true,
+     "schluss": "OBERSTE",
+     "schluss_text": "oberste Gesellschaft"
+    },
+    "belegt": true,
+    "betreiber": null,
+    "bezug": "IST",
+    "bezug_belege": [],
+    "bezug_freigabe": null,
+    "bezug_herkunft": null,
+    "bezug_text": "Das Glied ist diese Gesellschaft bzw. dieser Standort",
+    "ebenen": 0,
+    "einschraenkung": null,
+    "grund": null,
+    "status": "VOLLSTAENDIG_FREIGEGEBEN",
+    "status_text": "bis oben belegt und freigegeben",
+    "wurzel": "R-TESLA"
+   },
+   "S2": {
+    "baum": {
+     "effektiv": 100.0,
+     "kante": null,
+     "kinder": [],
+     "knoten": "R-BTR",
+     "pflicht": true,
+     "schluss": "OFFEN",
+     "schluss_text": "endet ohne Beleg"
+    },
+    "belegt": false,
+    "betreiber": null,
+    "bezug": "IST",
+    "bezug_belege": [],
+    "bezug_freigabe": null,
+    "bezug_herkunft": null,
+    "bezug_text": "Das Glied ist diese Gesellschaft bzw. dieser Standort",
+    "ebenen": 0,
+    "einschraenkung": null,
+    "grund": null,
+    "status": "OFFEN",
+    "status_text": "Kette endet ohne Beleg",
+    "wurzel": "R-BTR"
+   },
+   "S3": {
+    "baum": {
+     "effektiv": 100.0,
+     "kante": null,
+     "kinder": [],
+     "knoten": "R-GRAPHEX",
+     "pflicht": true,
+     "schluss": "OFFEN",
+     "schluss_text": "endet ohne Beleg"
+    },
+    "belegt": false,
+    "betreiber": null,
+    "bezug": "IST",
+    "bezug_belege": [],
+    "bezug_freigabe": null,
+    "bezug_herkunft": null,
+    "bezug_text": "Das Glied ist diese Gesellschaft bzw. dieser Standort",
+    "ebenen": 0,
+    "einschraenkung": null,
+    "grund": null,
+    "status": "OFFEN",
+    "status_text": "Kette endet ohne Beleg",
+    "wurzel": "R-GRAPHEX"
+   },
+   "S4": {
+    "baum": null,
+    "belegt": false,
+    "betreiber": null,
+    "bezug": null,
+    "bezug_belege": [],
+    "bezug_freigabe": null,
+    "bezug_herkunft": null,
+    "bezug_text": null,
+    "ebenen": 0,
+    "einschraenkung": null,
+    "grund": "Eigentümer des Hafens ist mit keiner gelesenen Quelle belegt; Hafen- und Behördenseiten sind aus der Cloud gesperrt.",
+    "status": "UNBEKANNT",
+    "status_text": "Eigentümer unbekannt",
+    "wurzel": null
+   },
+   "S5": {
+    "baum": null,
+    "belegt": false,
+    "betreiber": null,
+    "bezug": null,
+    "bezug_belege": [],
+    "bezug_freigabe": null,
+    "bezug_herkunft": null,
+    "bezug_text": null,
+    "ebenen": 0,
+    "einschraenkung": null,
+    "grund": "Eigentümer des Hafens ist mit keiner gelesenen Quelle belegt; Hafen- und Behördenseiten sind aus der Cloud gesperrt.",
+    "status": "UNBEKANNT",
+    "status_text": "Eigentümer unbekannt",
+    "wurzel": null
+   },
+   "S6": {
+    "baum": {
+     "effektiv": 100.0,
+     "kante": null,
+     "kinder": [],
+     "knoten": "R-NEXTSOURCE",
+     "pflicht": true,
+     "schluss": "OFFEN",
+     "schluss_text": "endet ohne Beleg"
+    },
+    "belegt": false,
+    "betreiber": null,
+    "bezug": "IST",
+    "bezug_belege": [],
+    "bezug_freigabe": null,
+    "bezug_herkunft": null,
+    "bezug_text": "Das Glied ist diese Gesellschaft bzw. dieser Standort",
+    "ebenen": 0,
+    "einschraenkung": null,
+    "grund": null,
+    "status": "OFFEN",
+    "status_text": "Kette endet ohne Beleg",
+    "wurzel": "R-NEXTSOURCE"
+   },
+   "S7": {
+    "baum": {
+     "effektiv": 100.0,
+     "kante": null,
+     "kinder": [],
+     "knoten": "R-POSCO-FUTURE-M",
+     "pflicht": true,
+     "schluss": "OFFEN",
+     "schluss_text": "endet ohne Beleg"
+    },
+    "belegt": false,
+    "betreiber": null,
+    "bezug": "IST",
+    "bezug_belege": [],
+    "bezug_freigabe": null,
+    "bezug_herkunft": null,
+    "bezug_text": "Das Glied ist diese Gesellschaft bzw. dieser Standort",
+    "ebenen": 0,
+    "einschraenkung": null,
+    "grund": null,
+    "status": "OFFEN",
+    "status_text": "Kette endet ohne Beleg",
+    "wurzel": "R-POSCO-FUTURE-M"
+   },
+   "S8": {
+    "baum": {
+     "effektiv": 100.0,
+     "kante": null,
+     "kinder": [],
+     "knoten": "R-SYRAH",
+     "pflicht": true,
+     "schluss": "OFFEN",
+     "schluss_text": "endet ohne Beleg"
+    },
+    "belegt": true,
+    "betreiber": null,
+    "bezug": "ZUGEHOERIG",
+    "bezug_belege": [
+     {
+      "fundstelle": "PDF-Seite 13 (pdftotext ohne -layout)",
+      "quelle": "rk-syr-ar-2023-s013",
+      "rolle": "hauptbeleg",
+      "zitat": "Syrah is an Australian Securities Exchange listed industrial minerals and technology company with its flagship Balama Graphite Operation in Mozambique and a downstream AAM facility in the United States."
+     }
+    ],
+    "bezug_freigabe": "FREIGEGEBEN",
+    "bezug_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
+    "bezug_text": "Das Glied gehört laut Quelle zu",
+    "ebenen": 0,
+    "einschraenkung": "Die Quelle nennt die AAM-Anlage in den USA als Syrahs; den Ort Vidalia nennt die Belegstelle der Lieferbeziehung (GRF-05).",
+    "grund": null,
+    "status": "OFFEN",
+    "status_text": "Kette endet ohne Beleg",
+    "wurzel": "R-SYRAH"
+   },
+   "S9": {
+    "baum": {
+     "effektiv": 100.0,
+     "kante": null,
+     "kinder": [],
+     "knoten": "R-WESTWATER",
+     "pflicht": true,
+     "schluss": "OFFEN",
+     "schluss_text": "endet ohne Beleg"
+    },
+    "belegt": false,
+    "betreiber": null,
+    "bezug": "IST",
+    "bezug_belege": [],
+    "bezug_freigabe": null,
+    "bezug_herkunft": null,
+    "bezug_text": "Das Glied ist diese Gesellschaft bzw. dieser Standort",
+    "ebenen": 0,
+    "einschraenkung": null,
+    "grund": null,
+    "status": "OFFEN",
+    "status_text": "Kette endet ohne Beleg",
+    "wurzel": "R-WESTWATER"
+   }
+  },
+  "kanten": [],
+  "knoten": {
+   "R-BTR": {
+    "art": "GESELLSCHAFT",
+    "art_text": "Gesellschaft",
+    "atlas_id": null,
+    "belege": [],
+    "hinweis": null,
+    "land": "CN",
+    "lei": null,
+    "name": "BTR New Materials Group Co Ltd",
+    "oberste": null,
+    "offen": "Keine gelesene Quelle zu Eigentümern; Firmenseiten und Register sind aus der Cloud gesperrt oder ohne Eintrag."
+   },
+   "R-GRAPHEX": {
+    "art": "GESELLSCHAFT",
+    "art_text": "Gesellschaft",
+    "atlas_id": null,
+    "belege": [],
+    "hinweis": null,
+    "land": "KY",
+    "lei": null,
+    "name": "Graphex Group Limited",
+    "oberste": null,
+    "offen": "Börsennotiert; der LEI-Eintrag ist abgelaufen (LAPSED) und keine gelesene Quelle nennt eine beherrschende Mutter oder belegt, dass es keine gibt."
+   },
+   "R-LUCID": {
+    "art": "GESELLSCHAFT",
+    "art_text": "Gesellschaft",
+    "atlas_id": null,
+    "belege": [],
+    "hinweis": null,
+    "land": "US",
+    "lei": "529900MRL9Z13ZCRVD74",
+    "name": "Lucid Group, Inc.",
+    "oberste": {
+     "belege": [
+      {
+       "fundstelle": "JSON (Golden Copy 2026-11-16)",
+       "quelle": "rk-gleif-529900MRL9Z13ZCRVD74-oben",
+       "rolle": "hauptbeleg",
+       "zitat": "\"lei\":\"529900MRL9Z13ZCRVD74\",\"category\":\"ULTIMATE_ACCOUNTING_CONSOLIDATION_PARENT\",\"reason\":\"NO_KNOWN_PERSON\""
+      },
+      {
+       "fundstelle": "JSON (Golden Copy 2026-11-16)",
+       "quelle": "rk-gleif-529900MRL9Z13ZCRVD74",
+       "rolle": "zusatzbeleg",
+       "zitat": "\"lei\":\"529900MRL9Z13ZCRVD74\" … \"legalName\":{\"name\":\"Lucid Group, Inc.\""
+      }
+     ],
+     "freigabe": "FREIGEGEBEN",
+     "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
+     "grund": "KEINE_MUTTER",
+     "text": "Im LEI-Register ist keine Person oder Gesellschaft eingetragen, die die Gesellschaft beherrscht (Angabe der Gesellschaft; Großaktionäre unter der Beherrschungsschwelle sind damit nicht ausgeschlossen)."
+    },
+    "offen": null
+   },
+   "R-NEXTSOURCE": {
+    "art": "GESELLSCHAFT",
+    "art_text": "Gesellschaft",
+    "atlas_id": null,
+    "belege": [],
+    "hinweis": null,
+    "land": "CA",
+    "lei": null,
+    "name": "NextSource Materials Inc.",
+    "oberste": null,
+    "offen": "Börsennotiert; der LEI-Eintrag ist abgelaufen (LAPSED) und keine gelesene Quelle nennt eine beherrschende Mutter oder belegt, dass es keine gibt."
+   },
+   "R-POSCO-FUTURE-M": {
+    "art": "GESELLSCHAFT",
+    "art_text": "Gesellschaft",
+    "atlas_id": null,
+    "belege": [],
+    "hinweis": null,
+    "land": "KR",
+    "lei": null,
+    "name": "POSCO Future M Co., Ltd.",
+    "oberste": null,
+    "offen": "Keine gelesene Quelle zu Eigentümern; Firmenseiten und Register sind aus der Cloud gesperrt oder ohne Eintrag."
+   },
+   "R-SYRAH": {
+    "art": "GESELLSCHAFT",
+    "art_text": "Gesellschaft",
+    "atlas_id": null,
+    "belege": [],
+    "hinweis": null,
+    "land": "AU",
+    "lei": null,
+    "name": "Syrah Resources Limited",
+    "oberste": null,
+    "offen": "Börsennotiert; der LEI-Eintrag ist abgelaufen (LAPSED) und keine gelesene Quelle nennt eine beherrschende Mutter oder belegt, dass es keine gibt."
+   },
+   "R-TESLA": {
+    "art": "GESELLSCHAFT",
+    "art_text": "Gesellschaft",
+    "atlas_id": null,
+    "belege": [],
+    "hinweis": null,
+    "land": "US",
+    "lei": "54930043XZGB27CTOV49",
+    "name": "Tesla, Inc.",
+    "oberste": {
+     "belege": [
+      {
+       "fundstelle": "JSON (Golden Copy 2026-11-16)",
+       "quelle": "rk-gleif-54930043XZGB27CTOV49-oben",
+       "rolle": "hauptbeleg",
+       "zitat": "\"lei\":\"54930043XZGB27CTOV49\",\"category\":\"ULTIMATE_ACCOUNTING_CONSOLIDATION_PARENT\",\"reason\":\"NO_KNOWN_PERSON\""
+      },
+      {
+       "fundstelle": "JSON (Golden Copy 2026-11-16)",
+       "quelle": "rk-gleif-54930043XZGB27CTOV49",
+       "rolle": "zusatzbeleg",
+       "zitat": "\"lei\":\"54930043XZGB27CTOV49\" … \"legalName\":{\"name\":\"TESLA, INC.\""
+      }
+     ],
+     "freigabe": "FREIGEGEBEN",
+     "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
+     "grund": "KEINE_MUTTER",
+     "text": "Im LEI-Register ist keine Person oder Gesellschaft eingetragen, die die Gesellschaft beherrscht (Angabe der Gesellschaft; Großaktionäre unter der Beherrschungsschwelle sind damit nicht ausgeschlossen)."
+    },
+    "offen": null
+   },
+   "R-WESTWATER": {
+    "art": "GESELLSCHAFT",
+    "art_text": "Gesellschaft",
+    "atlas_id": null,
+    "belege": [],
+    "hinweis": null,
+    "land": "US",
+    "lei": null,
+    "name": "Westwater Resources, Inc.",
+    "oberste": null,
+    "offen": "Börsennotiert; der LEI-Eintrag ist abgelaufen (LAPSED) und keine gelesene Quelle nennt eine beherrschende Mutter oder belegt, dass es keine gibt."
+   }
+  },
+  "messung": {
+   "glieder": 11,
+   "glieder_eigentum_belegt": 4,
+   "glieder_unbekannt_mit_grund": 2,
+   "je_glied": {
+    "S1": {
+     "ebenen": 0,
+     "status": "OFFEN"
+    },
+    "S10": {
+     "ebenen": 0,
+     "status": "VOLLSTAENDIG_FREIGEGEBEN"
+    },
+    "S11": {
+     "ebenen": 0,
+     "status": "VOLLSTAENDIG_FREIGEGEBEN"
+    },
+    "S2": {
+     "ebenen": 0,
+     "status": "OFFEN"
+    },
+    "S3": {
+     "ebenen": 0,
+     "status": "OFFEN"
+    },
+    "S4": {
+     "ebenen": 0,
+     "status": "UNBEKANNT"
+    },
+    "S5": {
+     "ebenen": 0,
+     "status": "UNBEKANNT"
+    },
+    "S6": {
+     "ebenen": 0,
+     "status": "OFFEN"
+    },
+    "S7": {
+     "ebenen": 0,
+     "status": "OFFEN"
+    },
+    "S8": {
+     "ebenen": 0,
+     "status": "OFFEN"
+    },
+    "S9": {
+     "ebenen": 0,
+     "status": "OFFEN"
+    }
+   },
+   "kanten": 0,
+   "kanten_freigegeben": 0,
+   "kanten_kandidat": 0,
+   "kanten_mit_anteil": 0,
+   "knoten": 8,
+   "letzte_eigentuemer": [],
+   "oberste_gesellschaften": [
+    "Lucid Group, Inc.",
+    "Tesla, Inc."
+   ],
+   "offen": 7,
+   "offene_knoten": [
+    "BTR New Materials Group Co Ltd",
+    "Graphex Group Limited",
+    "NextSource Materials Inc.",
+    "POSCO Future M Co., Ltd.",
+    "Syrah Resources Limited",
+    "Westwater Resources, Inc."
+   ],
+   "schwelle_prozent": 10.0,
+   "unbekannt": 2,
+   "vollstaendig": 2,
+   "vollstaendig_freigegeben": 2,
+   "vollstaendig_kandidat": 0,
+   "zweitpruefung_offen": 0
+  },
+  "quellen": {
+   "rk-gleif-529900MRL9Z13ZCRVD74": {
+    "abgerufen": "2026-11-16",
+    "art": "REGISTER",
+    "fundstelle": "JSON (Golden Copy 2026-11-16)",
+    "herausgeber": "Global Legal Entity Identifier Foundation (GLEIF)",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/gleif-529900MRL9Z13ZCRVD74-eintrag.json",
+    "text_artifact_sha256": "ff078e893b44e008e141f17592e28c636cdb77f36543eb956c8bd6b794e44cc6",
+    "titel": "LEI-Eintrag 529900MRL9Z13ZCRVD74",
+    "url": "https://api.gleif.org/api/v1/lei-records/529900MRL9Z13ZCRVD74"
+   },
+   "rk-gleif-529900MRL9Z13ZCRVD74-oben": {
+    "abgerufen": "2026-11-16",
+    "art": "REGISTER",
+    "fundstelle": "JSON (Golden Copy 2026-11-16)",
+    "herausgeber": "Global Legal Entity Identifier Foundation (GLEIF)",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/gleif-529900MRL9Z13ZCRVD74-ultimate-ausnahme.json",
+    "text_artifact_sha256": "f18dd355a04681dcd6fc966985a90879d07f92c113091dfb749244d5f5e9037a",
+    "titel": "Level-2 oberste Mutter 529900MRL9Z13ZCRVD74",
+    "url": "https://api.gleif.org/api/v1/lei-records/529900MRL9Z13ZCRVD74/ultimate-parent-reporting-exception"
+   },
+   "rk-gleif-54930043XZGB27CTOV49": {
+    "abgerufen": "2026-11-16",
+    "art": "REGISTER",
+    "fundstelle": "JSON (Golden Copy 2026-11-16)",
+    "herausgeber": "Global Legal Entity Identifier Foundation (GLEIF)",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/gleif-54930043XZGB27CTOV49-eintrag.json",
+    "text_artifact_sha256": "939cb8d860d3ce3e4093e81b758ab48b0ec0aa0ad23d74e57779e0d2cf77d00e",
+    "titel": "LEI-Eintrag 54930043XZGB27CTOV49",
+    "url": "https://api.gleif.org/api/v1/lei-records/54930043XZGB27CTOV49"
+   },
+   "rk-gleif-54930043XZGB27CTOV49-oben": {
+    "abgerufen": "2026-11-16",
+    "art": "REGISTER",
+    "fundstelle": "JSON (Golden Copy 2026-11-16)",
+    "herausgeber": "Global Legal Entity Identifier Foundation (GLEIF)",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/gleif-54930043XZGB27CTOV49-ultimate-ausnahme.json",
+    "text_artifact_sha256": "af59ccdd3533c7776e77b763ac50349fc904d9ab2e1d9d27d4991a82ebfbfcdd",
+    "titel": "Level-2 oberste Mutter 54930043XZGB27CTOV49",
+    "url": "https://api.gleif.org/api/v1/lei-records/54930043XZGB27CTOV49/ultimate-parent-reporting-exception"
+   },
+   "rk-syr-ar-2023-s013": {
+    "abgerufen": "2026-11-16",
+    "art": "COMPANY_PRIMARY",
+    "fundstelle": "PDF-Seite 13 (pdftotext ohne -layout)",
+    "herausgeber": "Syrah Resources Limited",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/syr-ar-2023-p013.txt",
+    "text_artifact_sha256": "fb8491d268e7c22bd9a038cd5a53487149e758897472f5a913be0f283ef00798",
+    "titel": "2023 Annual Report",
+    "url": "https://announcements.asx.com.au/asxpdf/20240325/pdf/061vgw6zdgfyqx.pdf#page=13"
+   }
+  },
+  "schwelle_prozent": 10.0,
+  "zweitpruefung": [
+   {
+    "abgleich": "LEI 529900MRL9Z13ZCRVD74 = Lucid Group, Inc., Eintrag ACTIVE/ISSUED; Ausnahme NO_KNOWN_PERSON (keine beherrschende Person oder Gesellschaft bekannt)",
+    "aussage": "Lucid Group, Inc.: Im LEI-Register ist keine Person oder Gesellschaft eingetragen, die die Gesellschaft beherrscht (Angabe der Gesellschaft; Großaktionäre unter der Beherrschungsschwelle sind damit nicht ausgeschlossen).",
+    "belege": [
+     {
+      "quelle": "rk-gleif-529900MRL9Z13ZCRVD74",
+      "zitat": [
+       "\"legalName\":{\"name\":\"Lucid Group, Inc.\""
+      ]
+     },
+     {
+      "quelle": "rk-gleif-529900MRL9Z13ZCRVD74-oben",
+      "zitat": [
+       "\"lei\":\"529900MRL9Z13ZCRVD74\",\"category\":\"ULTIMATE_ACCOUNTING_CONSOLIDATION_PARENT\",\"reason\":\"NO_KNOWN_PERSON\""
+      ]
+     }
+    ],
+    "bericht": "analysis/rohstoffe/eigentum/zweitpruefung/Pruefbericht-Eigentuemerkette-Rohstoffe-Zweitpruefung-2026-11-16.pdf",
+    "erstpruefung_sitzung": "session_01JgcA7TdgLRrqKV9kyFuE5E",
+    "geprueft_am": "2026-11-16",
+    "pruef_id": "R55",
+    "pruefer": "Claude (Zweitprüfung, getrennte Sitzung)",
+    "quelle_frisch_geladen": true,
+    "regel": "Eddie Sablah 2026-11-11 13:41Z: Freigabe nur, wenn zwei getrennte Sitzungen bestätigen (Zweite Sitzung + CI + 5 Fälle/Monat)",
+    "sitzung": "session_01JgcA7Tamxi4Cn8LEHHDz8t",
+    "urteil": "BESTAETIGT",
+    "ziel_id": "R-LUCID",
+    "ziel_typ": "oberste"
+   },
+   {
+    "abgleich": "LEI 54930043XZGB27CTOV49 = TESLA, INC., Eintrag ACTIVE/ISSUED; Ausnahme NO_KNOWN_PERSON (keine beherrschende Person oder Gesellschaft bekannt)",
+    "aussage": "Tesla, Inc.: Im LEI-Register ist keine Person oder Gesellschaft eingetragen, die die Gesellschaft beherrscht (Angabe der Gesellschaft; Großaktionäre unter der Beherrschungsschwelle sind damit nicht ausgeschlossen).",
+    "belege": [
+     {
+      "quelle": "rk-gleif-54930043XZGB27CTOV49",
+      "zitat": [
+       "\"legalName\":{\"name\":\"TESLA, INC.\""
+      ]
+     },
+     {
+      "quelle": "rk-gleif-54930043XZGB27CTOV49-oben",
+      "zitat": [
+       "\"lei\":\"54930043XZGB27CTOV49\",\"category\":\"ULTIMATE_ACCOUNTING_CONSOLIDATION_PARENT\",\"reason\":\"NO_KNOWN_PERSON\""
+      ]
+     }
+    ],
+    "bericht": "analysis/rohstoffe/eigentum/zweitpruefung/Pruefbericht-Eigentuemerkette-Rohstoffe-Zweitpruefung-2026-11-16.pdf",
+    "erstpruefung_sitzung": "session_01JgcA7TdgLRrqKV9kyFuE5E",
+    "geprueft_am": "2026-11-16",
+    "pruef_id": "R60",
+    "pruefer": "Claude (Zweitprüfung, getrennte Sitzung)",
+    "quelle_frisch_geladen": true,
+    "regel": "Eddie Sablah 2026-11-11 13:41Z: Freigabe nur, wenn zwei getrennte Sitzungen bestätigen (Zweite Sitzung + CI + 5 Fälle/Monat)",
+    "sitzung": "session_01JgcA7Tamxi4Cn8LEHHDz8t",
+    "urteil": "BESTAETIGT",
+    "ziel_id": "R-TESLA",
+    "ziel_typ": "oberste"
+   },
+   {
+    "abgleich": "Standortliste nennt Vidalia; Text nennt die AAM-Anlage in den USA als Syrahs",
+    "aussage": "graphit-node-vidalia gehört laut Quelle zu Syrah Resources Limited",
+    "belege": [
+     {
+      "quelle": "rk-syr-ar-2023-s013",
+      "zitat": [
+       "Vidalia, Louisiana, USA",
+       "with its flagship Balama Graphite Operation in Mozambique and a downstream AAM facility in the United States."
+      ]
+     }
+    ],
+    "bericht": "analysis/rohstoffe/eigentum/zweitpruefung/Pruefbericht-Eigentuemerkette-Rohstoffe-Zweitpruefung-2026-11-16.pdf",
+    "erstpruefung_sitzung": "session_01JgcA7TdgLRrqKV9kyFuE5E",
+    "geprueft_am": "2026-11-16",
+    "hinweis": "Stand Jahresbericht 2023 (veröffentlicht 25.03.2024).",
+    "pruef_id": "R66",
+    "pruefer": "Claude (Zweitprüfung, getrennte Sitzung)",
+    "quelle_frisch_geladen": true,
+    "regel": "Eddie Sablah 2026-11-11 13:41Z: Freigabe nur, wenn zwei getrennte Sitzungen bestätigen (Zweite Sitzung + CI + 5 Fälle/Monat)",
+    "sitzung": "session_01JgcA7Tamxi4Cn8LEHHDz8t",
+    "urteil": "BESTAETIGT",
+    "ziel_id": "graphit/graphit-node-vidalia",
+    "ziel_typ": "glied"
+   },
+   {
+    "abgleich": "\"its flagship Balama Graphite Operation\" = Betrieb von Syrah",
+    "aussage": "graphit-site-legacy-row-85 gehört laut Quelle zu Syrah Resources Limited",
+    "belege": [
+     {
+      "quelle": "rk-syr-ar-2023-s013",
+      "zitat": [
+       "with its flagship Balama Graphite Operation in Mozambique"
+      ]
+     }
+    ],
+    "bericht": "analysis/rohstoffe/eigentum/zweitpruefung/Pruefbericht-Eigentuemerkette-Rohstoffe-Zweitpruefung-2026-11-16.pdf",
+    "erstpruefung_sitzung": "session_01JgcA7TdgLRrqKV9kyFuE5E",
+    "geprueft_am": "2026-11-16",
+    "hinweis": "Stand Jahresbericht 2023 (veröffentlicht 25.03.2024).",
+    "pruef_id": "R67",
+    "pruefer": "Claude (Zweitprüfung, getrennte Sitzung)",
+    "quelle_frisch_geladen": true,
+    "regel": "Eddie Sablah 2026-11-11 13:41Z: Freigabe nur, wenn zwei getrennte Sitzungen bestätigen (Zweite Sitzung + CI + 5 Fälle/Monat)",
+    "sitzung": "session_01JgcA7Tamxi4Cn8LEHHDz8t",
+    "urteil": "BESTAETIGT",
+    "ziel_id": "graphit/graphit-site-legacy-row-85",
+    "ziel_typ": "glied"
+   }
+  ]
+ },
+ "eingaben": {
+  "analysis/rohstoffe/eigentum/eigentumskette.json": "58f2a733e79cd462062e351135d0aafb3e27494d28e47d4268dd26a0c6bd2371",
+  "analysis/rohstoffe/fluss-freigaben.jsonl": "7bcb03cd6f866779a996144af573a32a6723c19e37c1648f6b5dfbf2b642a149",
+  "analysis/rohstoffe/graphit/kandidaten.json": "56dd35fecbbd9f4d428ff44e58db99cf274413542c1933730f1dae7ed86403a3",
+  "analysis/rohstoffe/graphit/markt.json": "4278fd32ff895333b148c239d65e328c3c256f9123dcd28bbf7b32d2a540f896",
+  "analysis/rohstoffe/mengen/annahmen-snapshot.json": "5169bc01abcdff017b11b6e2e0bdb0abbc934a843f86a8fbbf4dbdd3585165b1",
+  "analysis/rohstoffe/mengen/mengen.json": "94e6e728b63635daef1ffe47c595cd03fd4f5644a158aa61f7605bbf497706b6",
+  "analysis/rohstoffe/mengen/zweitpruefung.jsonl": "fb323cf5f6ee23aa7b0f563979efed73dcdbbdd2cf0203a287013f000c7d6770"
+ },
+ "erzeugt_von": "scripts/analysis/rohstoffe/rohstoffkette.py",
+ "kette": {
+  "glieder": [
+   "S1",
+   "S8",
+   "S11"
+  ],
+  "stufen": 3,
+  "text": "Balama → Vidalia Active Anode Material Facility → Tesla",
+  "verbindungen": [
+   "V3",
+   "V5"
+  ]
+ },
+ "kundenfrage": {
+  "antwort": "Erfasst: Balama → Vidalia Active Anode Material Facility → Tesla (2 Verbindungen, alle freigegeben). Menge belegt auf 1 von 2. Ob die Kette weiter bis zu einem Endprodukt reicht, ist im Atlas nicht erfasst.",
+  "frage": "Woher kommt der Graphit, den Tesla bezieht, über welche Glieder läuft es, in welcher Menge, und welche Glieder sind belegt?",
+  "kunde": "S11"
+ },
+ "preisbasis": null,
+ "preisbasis_grund": "Keine tägliche Notierung aus lesbarer, freigegebener Quelle: Flockengraphit wird nicht an einer Börse gehandelt, Tagespreise nur bei Preisagenturen (lizenzpflichtig). Wert mit Annahmen nutzt den Importwert 2025 (USGS MCS 2026).",
+ "regeln": [
+  "Nur freigegebene Flüsse (analysis/rohstoffe/fluss-freigaben.jsonl); jedes Zitat steht wörtlich in der gepinnten Textkopie.",
+  "Evidenzstatus wie im Generator-Datensatz: FACT nur für freigegebene Flüsse nach Eddies Entscheidung vom 2026-11-16 (fakt-entscheidung.json), nie VERIFIED oder APPROVED.",
+  "UNKNOWN bleibt UNKNOWN mit Grund; belegter Wert nur laut Quelle, Euro mit EZB-Jahresmittel. Ein Geldbetrag ist keine Menge.",
+  "Ebene „mit Annahmen“ getrennt: Menge aus dem Annahmen-Atlas (Snapshot je Fluss-ID), Wert = Menge × Preis der gelesenen Preisquelle ÷ EZB-Kurs (Tagespreis mit EZB-Tageskurs, wo eine lesbare tägliche Notierung vorliegt, sonst Jahrespreis mit EZB-Jahresmittel); zählt nie als belegt. Ausstoß und Obergrenze des liefernden Glieds werden gezeigt, zählen aber nicht als Menge der Verbindung.",
+  "Eigentümer je Glied nur mit gelesener Quelle (Zitat gegen Textkopie geprüft); freigegeben erst nach Zweitprüfung einer getrennten Sitzung. Eigentümer aus der Altliste sind Kandidaten und zählen nicht als belegt.",
+  "Ausfall = Folge im erfassten Netz; Tonnen und Mehrkosten nur, wenn eine Quelle sie nennt."
+ ],
+ "risikoebene": {
+  "kategorien": [
+   {
+    "id": "LAENDERRISIKO",
+    "text": "Länderrisiko"
+   },
+   {
+    "id": "SANKTIONEN",
+    "text": "Sanktionen und Handelsmaßnahmen"
+   },
+   {
+    "id": "NATURGEFAHREN",
+    "text": "Naturgefahren"
+   },
+   {
+    "id": "KONZENTRATION",
+    "text": "Konzentration"
+   }
+  ],
+  "messung": {
+   "anteil_belegt_prozent": 77.3,
+   "belegt": 34,
+   "belegt_nur_landesebene": 22,
+   "belegt_standort_oder_firma": 12,
+   "felder": 44,
+   "glieder": 11,
+   "je_glied": {
+    "S1": {
+     "KONZENTRATION": "BELEGT_LAND",
+     "LAENDERRISIKO": "BELEGT_LAND",
+     "NATURGEFAHREN": "BELEGT_LAND",
+     "SANKTIONEN": "BELEGT_STANDORT"
+    },
+    "S10": {
+     "KONZENTRATION": "UNBEKANNT",
+     "LAENDERRISIKO": "BELEGT_LAND",
+     "NATURGEFAHREN": "BELEGT_LAND",
+     "SANKTIONEN": "BELEGT_STANDORT"
+    },
+    "S11": {
+     "KONZENTRATION": "UNBEKANNT",
+     "LAENDERRISIKO": "BELEGT_LAND",
+     "NATURGEFAHREN": "BELEGT_LAND",
+     "SANKTIONEN": "BELEGT_STANDORT"
+    },
+    "S2": {
+     "KONZENTRATION": "UNBEKANNT",
+     "LAENDERRISIKO": "BELEGT_LAND",
+     "NATURGEFAHREN": "BELEGT_LAND",
+     "SANKTIONEN": "BELEGT_STANDORT"
+    },
+    "S3": {
+     "KONZENTRATION": "UNBEKANNT",
+     "LAENDERRISIKO": "BELEGT_LAND",
+     "NATURGEFAHREN": "BELEGT_LAND",
+     "SANKTIONEN": "BELEGT_STANDORT"
+    },
+    "S4": {
+     "KONZENTRATION": "UNBEKANNT",
+     "LAENDERRISIKO": "BELEGT_LAND",
+     "NATURGEFAHREN": "BELEGT_LAND",
+     "SANKTIONEN": "BELEGT_STANDORT"
+    },
+    "S5": {
+     "KONZENTRATION": "UNBEKANNT",
+     "LAENDERRISIKO": "BELEGT_STANDORT",
+     "NATURGEFAHREN": "BELEGT_LAND",
+     "SANKTIONEN": "BELEGT_STANDORT"
+    },
+    "S6": {
+     "KONZENTRATION": "UNBEKANNT",
+     "LAENDERRISIKO": "BELEGT_LAND",
+     "NATURGEFAHREN": "BELEGT_LAND",
+     "SANKTIONEN": "BELEGT_STANDORT"
+    },
+    "S7": {
+     "KONZENTRATION": "UNBEKANNT",
+     "LAENDERRISIKO": "BELEGT_LAND",
+     "NATURGEFAHREN": "BELEGT_LAND",
+     "SANKTIONEN": "BELEGT_STANDORT"
+    },
+    "S8": {
+     "KONZENTRATION": "UNBEKANNT",
+     "LAENDERRISIKO": "BELEGT_LAND",
+     "NATURGEFAHREN": "BELEGT_LAND",
+     "SANKTIONEN": "BELEGT_STANDORT"
+    },
+    "S9": {
+     "KONZENTRATION": "UNBEKANNT",
+     "LAENDERRISIKO": "BELEGT_LAND",
+     "NATURGEFAHREN": "BELEGT_LAND",
+     "SANKTIONEN": "BELEGT_STANDORT"
+    }
+   },
+   "je_kategorie": {
+    "KONZENTRATION": {
+     "belegt": 1,
+     "belegt_nur_landesebene": 1,
+     "belegt_standort_oder_firma": 0,
+     "unbekannt": 10
+    },
+    "LAENDERRISIKO": {
+     "belegt": 11,
+     "belegt_nur_landesebene": 10,
+     "belegt_standort_oder_firma": 1,
+     "unbekannt": 0
+    },
+    "NATURGEFAHREN": {
+     "belegt": 11,
+     "belegt_nur_landesebene": 11,
+     "belegt_standort_oder_firma": 0,
+     "unbekannt": 0
+    },
+    "SANKTIONEN": {
+     "belegt": 11,
+     "belegt_nur_landesebene": 0,
+     "belegt_standort_oder_firma": 11,
+     "unbekannt": 0
+    }
+   },
+   "unbekannt": 10
+  },
+  "regeln": [
+   "Länderrisiko und Naturgefahren nur aus den Reisehinweisen des britischen Außenministeriums (FCDO), Antwort unverändert gespeichert; keine Punktzahl, keine Rangfolge.",
+   "Landesebene gilt für das Land, nicht nachweislich für den Standort.",
+   "Sanktionen: Länderprogramm und Namensabgleich mit den Listen EU und UK; kein Treffer ist kein Nachweis der Unbedenklichkeit; OFAC und UN nicht abgeglichen.",
+   "Konzentration nur aus der freigegebenen Weltreferenz (Förderstufe).",
+   "Land eines Glieds: Datensatz, sonst Sitz laut LEI-Register, sonst Lage der belegten Koordinate; sonst unbekannt."
+  ]
+ },
+ "rohstoff": "Graphit",
+ "schema": "atlas.rohstoffkette/1",
+ "slug": "graphit",
+ "stand": "2026-11-09",
+ "standorte": [
+  {
+   "alternativen": [],
+   "eigentuemer": [
+    {
+     "anteil": null,
+     "hinweis": "Eigentümer laut Altliste, Quelle ungeprüft, Anteil unbekannt",
+     "name": "Syrah Resources",
+     "status": "KANDIDAT",
+     "url": "https://www.syrahresources.com.au/balama"
+    }
+   ],
+   "eigentuemer_grund": null,
+   "entity_id": "graphit-site-legacy-row-85",
+   "id": "S1",
+   "kurz": "Balama",
+   "land": "Mosambik",
+   "name": "Balama",
+   "ort": {
+    "evidenz": "BELEGT",
+    "grund": null,
+    "lat": -13.33,
+    "lon": 38.96,
+    "quelle": "Altliste, Koordinate APPROXIMATE",
+    "status": "OFFEN",
+    "url": "https://www.syrahresources.com.au/balama"
+   },
+   "risiko": [
+    {
+     "art": "LAENDERANTEIL",
+     "bezug": "LAND",
+     "evidenz": "BELEGT",
+     "quelle": "U.S. Geological Survey, Mineral Commodity Summaries 2026, Graphite, Page 2, table 'World Mine Production and Reserves'",
+     "text": "Mosambik: 3,3 % der Weltförderung Graphit 2025 (geschätzt), unter der Schwelle 50 %",
+     "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-graphite.pdf"
+    }
+   ],
+   "risiko_grund": null,
+   "risiko_land": {
+    "belege": [],
+    "herkunft": "Land des Glieds im Generator-Datensatz",
+    "iso2": "MZ",
+    "name": "Mosambik"
+   },
+   "risikoebene": {
+    "KONZENTRATION": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "MZ",
+       "quellen": [
+        {
+         "fundstelle": "Weltreferenz (Zahl gegen Abschrift geprüft)",
+         "herausgeber": "U.S. Geological Survey, Mineral Commodity Summaries 2026, Graphite, Page 2, table 'World Mine Production and Reserves'",
+         "titel": "U.S. Geological Survey, Mineral Commodity Summaries 2026, Graphite, Page 2, table 'World Mine Production and Reserves'",
+         "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-graphite.pdf",
+         "zitat": null
+        }
+       ],
+       "text": "Mosambik: 3,3 % der Weltförderung Graphit 2025 (geschätzt), unter der Schwelle 50 %"
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    },
+    "LAENDERRISIKO": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "MZ",
+       "quellen": [
+        {
+         "abgerufen": "2026-11-16",
+         "api": "https://www.gov.uk/api/content/foreign-travel-advice/mozambique",
+         "fundstelle": "GOV.UK Content API (unveränderte Antwort), Feld alert_status und Teil \"Warnings and insurance\"",
+         "herausgeber": "Foreign, Commonwealth & Development Office (UK)",
+         "sha256": "7bb34393c0ccea67219455470b979483ab31752fb6e9d7e545f446c37861e981",
+         "stand": "2026-08-20",
+         "textkopie": "analysis/rohstoffe/risiko/raw/fcdo-mozambique.json",
+         "titel": "Foreign travel advice: Mozambique travel advice",
+         "url": "https://www.gov.uk/foreign-travel-advice/mozambique",
+         "zitat": "\"alert_status\":[\"avoid_all_travel_to_parts\",\"avoid_all_but_essential_travel_to_parts\"] … Cabo Delgado Province … Nampula Province … Niassa Province"
+        }
+       ],
+       "text": "Mosambik: Reisehinweis FCDO (Stand 2026-08-20): rät von allen Reisen in Teile des Landes ab; rät von nicht notwendigen Reisen in Teile des Landes ab. Genannte Gebiete (englisch): Cabo Delgado Province, Nampula Province, Niassa Province. Ob das Glied in einem dieser Gebiete liegt, ist hier nicht geprüft."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    },
+    "NATURGEFAHREN": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "MZ",
+       "quellen": [
+        {
+         "abgerufen": "2026-11-16",
+         "api": "https://www.gov.uk/api/content/foreign-travel-advice/mozambique",
+         "fundstelle": "GOV.UK Content API (unveränderte Antwort), Teil \"Safety and security\", Abschnitt Naturgefahren",
+         "herausgeber": "Foreign, Commonwealth & Development Office (UK)",
+         "sha256": "7bb34393c0ccea67219455470b979483ab31752fb6e9d7e545f446c37861e981",
+         "stand": "2026-08-20",
+         "textkopie": "analysis/rohstoffe/risiko/raw/fcdo-mozambique.json",
+         "titel": "Foreign travel advice: Mozambique travel advice",
+         "url": "https://www.gov.uk/foreign-travel-advice/mozambique",
+         "zitat": "Extreme weather and natural disasters … Cyclones and floods"
+        }
+       ],
+       "text": "Mosambik: FCDO nennt für das Land: Wirbelstürme und Überschwemmungen."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    },
+    "SANKTIONEN": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "ABGLEICH",
+       "land": "MZ",
+       "quellen": [
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "EU",
+         "stand": "2026-10-23",
+         "textkopie": "analysis/research/sanktionen-v1/listen/eu.json",
+         "titel": "EU Consolidated Financial Sanctions List (FSF), Stand 2026-10-23 (1779 Organisationen)",
+         "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+         "zitat": "\"stand\":\"2026-10-23\""
+        },
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "UK",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/research/sanktionen-v1/listen/uk.json",
+         "titel": "UK Sanctions List (FCDO), Stand 2026-11-10 (1667 Organisationen)",
+         "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv",
+         "zitat": "\"stand\":\"2026-11-10\""
+        }
+       ],
+       "text": "Mosambik: die gelesenen Sanktionslisten EU (Stand 2026-10-23) und UK (Stand 2026-11-10) führen kein Länderprogramm. Nicht abgeglichen: OFAC, UN."
+      },
+      {
+       "bezug": "FIRMA",
+       "evidenz": "ABGLEICH",
+       "land": "MZ",
+       "quellen": [
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "EU",
+         "stand": "2026-10-23",
+         "textkopie": "analysis/research/sanktionen-v1/listen/eu.json",
+         "titel": "EU Consolidated Financial Sanctions List (FSF), Stand 2026-10-23 (1779 Organisationen)",
+         "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+         "zitat": "\"stand\":\"2026-10-23\""
+        },
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "UK",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/research/sanktionen-v1/listen/uk.json",
+         "titel": "UK Sanctions List (FCDO), Stand 2026-11-10 (1667 Organisationen)",
+         "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv",
+         "zitat": "\"stand\":\"2026-11-10\""
+        }
+       ],
+       "text": "Kein Namenstreffer für Syrah Resources Limited auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    }
+   },
+   "rolle": "Mine",
+   "stufe": 1
+  },
+  {
+   "alternativen": [
+    "S3",
+    "S4",
+    "S5",
+    "S6",
+    "S7",
+    "S8",
+    "S9"
+   ],
+   "eigentuemer": [],
+   "eigentuemer_grund": "Kein Eigentümer mit gelesener Quelle erfasst.",
+   "entity_id": "graphit-node-btr",
+   "id": "S2",
+   "kurz": "BTR New Materials Group",
+   "land": "Indonesien",
+   "name": "BTR New Materials Group Co Ltd",
+   "ort": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine Koordinate mit Quelle; es wird kein Ersatzpunkt gesetzt.",
+    "lat": null,
+    "lon": null,
+    "quelle": null,
+    "status": null,
+    "url": null
+   },
+   "risiko": [],
+   "risiko_grund": "Länderanteil nur für Förderstufe",
+   "risiko_land": {
+    "belege": [],
+    "herkunft": "Land des Glieds im Generator-Datensatz",
+    "iso2": "ID",
+    "name": "Indonesien"
+   },
+   "risikoebene": {
+    "KONZENTRATION": {
+     "belegt": [],
+     "grund": "Länderanteil der Weltreferenz gilt nur für die Förderstufe; für Verarbeitung und Handel ist keine Weltreferenz geladen.",
+     "status": "UNBEKANNT"
+    },
+    "LAENDERRISIKO": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "ID",
+       "quellen": [
+        {
+         "abgerufen": "2026-11-16",
+         "api": "https://www.gov.uk/api/content/foreign-travel-advice/indonesia",
+         "fundstelle": "GOV.UK Content API (unveränderte Antwort), Feld alert_status und Teil \"Warnings and insurance\"",
+         "herausgeber": "Foreign, Commonwealth & Development Office (UK)",
+         "sha256": "100d689c648cb2c627857cc17cf8642871eee78681ae273c5ae54eae190ccfbb",
+         "stand": "2026-09-18",
+         "textkopie": "analysis/rohstoffe/risiko/raw/fcdo-indonesia.json",
+         "titel": "Foreign travel advice: Indonesia travel advice",
+         "url": "https://www.gov.uk/foreign-travel-advice/indonesia",
+         "zitat": "\"alert_status\":[]"
+        }
+       ],
+       "text": "Indonesien: Reisehinweis FCDO (Stand 2026-09-18): keine Gebiete mit Reisewarnung (Warnstufe leer)."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    },
+    "NATURGEFAHREN": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "ID",
+       "quellen": [
+        {
+         "abgerufen": "2026-11-16",
+         "api": "https://www.gov.uk/api/content/foreign-travel-advice/indonesia",
+         "fundstelle": "GOV.UK Content API (unveränderte Antwort), Teil \"Safety and security\", Abschnitt Naturgefahren",
+         "herausgeber": "Foreign, Commonwealth & Development Office (UK)",
+         "sha256": "100d689c648cb2c627857cc17cf8642871eee78681ae273c5ae54eae190ccfbb",
+         "stand": "2026-09-18",
+         "textkopie": "analysis/rohstoffe/risiko/raw/fcdo-indonesia.json",
+         "titel": "Foreign travel advice: Indonesia travel advice",
+         "url": "https://www.gov.uk/foreign-travel-advice/indonesia",
+         "zitat": "Extreme weather and natural disasters … Volcanic eruptions … Flooding … Earthquakes and tsunamis … Wildfires"
+        }
+       ],
+       "text": "Indonesien: FCDO nennt für das Land: Vulkanausbrüche, Überschwemmungen, Erdbeben und Tsunamis, Wald- und Flächenbrände."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    },
+    "SANKTIONEN": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "ABGLEICH",
+       "land": "ID",
+       "quellen": [
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "EU",
+         "stand": "2026-10-23",
+         "textkopie": "analysis/research/sanktionen-v1/listen/eu.json",
+         "titel": "EU Consolidated Financial Sanctions List (FSF), Stand 2026-10-23 (1779 Organisationen)",
+         "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+         "zitat": "\"stand\":\"2026-10-23\""
+        },
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "UK",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/research/sanktionen-v1/listen/uk.json",
+         "titel": "UK Sanctions List (FCDO), Stand 2026-11-10 (1667 Organisationen)",
+         "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv",
+         "zitat": "\"stand\":\"2026-11-10\""
+        }
+       ],
+       "text": "Indonesien: die gelesenen Sanktionslisten EU (Stand 2026-10-23) und UK (Stand 2026-11-10) führen kein Länderprogramm. Nicht abgeglichen: OFAC, UN."
+      },
+      {
+       "bezug": "FIRMA",
+       "evidenz": "ABGLEICH",
+       "land": "ID",
+       "quellen": [
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "EU",
+         "stand": "2026-10-23",
+         "textkopie": "analysis/research/sanktionen-v1/listen/eu.json",
+         "titel": "EU Consolidated Financial Sanctions List (FSF), Stand 2026-10-23 (1779 Organisationen)",
+         "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+         "zitat": "\"stand\":\"2026-10-23\""
+        },
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "UK",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/research/sanktionen-v1/listen/uk.json",
+         "titel": "UK Sanctions List (FCDO), Stand 2026-11-10 (1667 Organisationen)",
+         "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv",
+         "zitat": "\"stand\":\"2026-11-10\""
+        }
+       ],
+       "text": "Kein Namenstreffer für BTR New Materials Group Co Ltd auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    }
+   },
+   "rolle": "Abnehmer",
+   "stufe": 2
+  },
+  {
+   "alternativen": [
+    "S2",
+    "S4",
+    "S5",
+    "S6",
+    "S7",
+    "S8",
+    "S9"
+   ],
+   "eigentuemer": [],
+   "eigentuemer_grund": "Kein Eigentümer mit gelesener Quelle erfasst.",
+   "entity_id": "graphit-node-graphex",
+   "id": "S3",
+   "kurz": "Graphex Group",
+   "land": "USA",
+   "name": "Graphex Group Limited (Tochtergesellschaft)",
+   "ort": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine Koordinate mit Quelle; es wird kein Ersatzpunkt gesetzt.",
+    "lat": null,
+    "lon": null,
+    "quelle": null,
+    "status": null,
+    "url": null
+   },
+   "risiko": [],
+   "risiko_grund": "Länderanteil nur für Förderstufe",
+   "risiko_land": {
+    "belege": [],
+    "herkunft": "Land des Glieds im Generator-Datensatz",
+    "iso2": "US",
+    "name": "USA"
+   },
+   "risikoebene": {
+    "KONZENTRATION": {
+     "belegt": [],
+     "grund": "Länderanteil der Weltreferenz gilt nur für die Förderstufe; für Verarbeitung und Handel ist keine Weltreferenz geladen.",
+     "status": "UNBEKANNT"
+    },
+    "LAENDERRISIKO": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "US",
+       "quellen": [
+        {
+         "abgerufen": "2026-11-16",
+         "api": "https://www.gov.uk/api/content/foreign-travel-advice/usa",
+         "fundstelle": "GOV.UK Content API (unveränderte Antwort), Feld alert_status und Teil \"Warnings and insurance\"",
+         "herausgeber": "Foreign, Commonwealth & Development Office (UK)",
+         "sha256": "7dc7b740316aeaaef46b658286517ba28674120721280dc667c7671f282a8f92",
+         "stand": "2026-11-14",
+         "textkopie": "analysis/rohstoffe/risiko/raw/fcdo-usa.json",
+         "titel": "Foreign travel advice: USA travel advice",
+         "url": "https://www.gov.uk/foreign-travel-advice/usa",
+         "zitat": "\"alert_status\":[]"
+        }
+       ],
+       "text": "USA: Reisehinweis FCDO (Stand 2026-11-14): keine Gebiete mit Reisewarnung (Warnstufe leer)."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    },
+    "NATURGEFAHREN": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "US",
+       "quellen": [
+        {
+         "abgerufen": "2026-11-16",
+         "api": "https://www.gov.uk/api/content/foreign-travel-advice/usa",
+         "fundstelle": "GOV.UK Content API (unveränderte Antwort), Teil \"Safety and security\", Abschnitt Naturgefahren",
+         "herausgeber": "Foreign, Commonwealth & Development Office (UK)",
+         "sha256": "7dc7b740316aeaaef46b658286517ba28674120721280dc667c7671f282a8f92",
+         "stand": "2026-11-14",
+         "textkopie": "analysis/rohstoffe/risiko/raw/fcdo-usa.json",
+         "titel": "Foreign travel advice: USA travel advice",
+         "url": "https://www.gov.uk/foreign-travel-advice/usa",
+         "zitat": "Extreme weather and natural disasters … Snowstorms … Hurricanes … Earthquakes … Tornadoes … Volcanic eruptions … Wildfires … Flash flooding"
+        }
+       ],
+       "text": "USA: FCDO nennt für das Land: Schneestürme, Hurrikane, Erdbeben, Tornados, Vulkanausbrüche, Wald- und Flächenbrände, Sturzfluten."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    },
+    "SANKTIONEN": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "ABGLEICH",
+       "land": "US",
+       "quellen": [
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "EU",
+         "stand": "2026-10-23",
+         "textkopie": "analysis/research/sanktionen-v1/listen/eu.json",
+         "titel": "EU Consolidated Financial Sanctions List (FSF), Stand 2026-10-23 (1779 Organisationen)",
+         "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+         "zitat": "\"stand\":\"2026-10-23\""
+        },
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "UK",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/research/sanktionen-v1/listen/uk.json",
+         "titel": "UK Sanctions List (FCDO), Stand 2026-11-10 (1667 Organisationen)",
+         "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv",
+         "zitat": "\"stand\":\"2026-11-10\""
+        }
+       ],
+       "text": "USA: die gelesenen Sanktionslisten EU (Stand 2026-10-23) und UK (Stand 2026-11-10) führen kein Länderprogramm. Nicht abgeglichen: OFAC, UN."
+      },
+      {
+       "bezug": "FIRMA",
+       "evidenz": "ABGLEICH",
+       "land": "US",
+       "quellen": [
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "EU",
+         "stand": "2026-10-23",
+         "textkopie": "analysis/research/sanktionen-v1/listen/eu.json",
+         "titel": "EU Consolidated Financial Sanctions List (FSF), Stand 2026-10-23 (1779 Organisationen)",
+         "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+         "zitat": "\"stand\":\"2026-10-23\""
+        },
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "UK",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/research/sanktionen-v1/listen/uk.json",
+         "titel": "UK Sanctions List (FCDO), Stand 2026-11-10 (1667 Organisationen)",
+         "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv",
+         "zitat": "\"stand\":\"2026-11-10\""
+        }
+       ],
+       "text": "Kein Namenstreffer für Graphex Group Limited auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    }
+   },
+   "rolle": "Abnehmer",
+   "stufe": 2
+  },
+  {
+   "alternativen": [
+    "S2",
+    "S3",
+    "S5",
+    "S6",
+    "S7",
+    "S8",
+    "S9"
+   ],
+   "eigentuemer": [],
+   "eigentuemer_grund": "Kein Eigentümer mit gelesener Quelle erfasst.",
+   "entity_id": "graphit-node-nacala",
+   "id": "S4",
+   "kurz": "Hafen Nacala",
+   "land": "UNKNOWN",
+   "name": "Hafen Nacala",
+   "ort": {
+    "evidenz": "BELEGT",
+    "grund": null,
+    "lat": -14.542361111111111,
+    "lon": 40.66591666666667,
+    "quelle": "Koordinate: Port of Nacala (Wikidata, Hafen), Genauigkeit FACILITY",
+    "status": "APPROVED (FACILITY)",
+    "url": "https://www.wikidata.org/wiki/Q7231208"
+   },
+   "risiko": [],
+   "risiko_grund": "Länderanteil nur für Förderstufe",
+   "risiko_land": {
+    "belege": [
+     {
+      "fundstelle": "Lage",
+      "herausgeber": "Koordinate: Port of Nacala (Wikidata, Hafen), Genauigkeit FACILITY",
+      "titel": "Koordinate des Glieds",
+      "url": "https://www.wikidata.org/wiki/Q7231208",
+      "zitat": null
+     }
+    ],
+    "herkunft": "Hafen Nacala, belegte Koordinate in Mosambik (-14.54, 40.67)",
+    "iso2": "MZ",
+    "name": "Mosambik"
+   },
+   "risikoebene": {
+    "KONZENTRATION": {
+     "belegt": [],
+     "grund": "Länderanteil der Weltreferenz gilt nur für die Förderstufe; für Verarbeitung und Handel ist keine Weltreferenz geladen.",
+     "status": "UNBEKANNT"
+    },
+    "LAENDERRISIKO": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "MZ",
+       "quellen": [
+        {
+         "abgerufen": "2026-11-16",
+         "api": "https://www.gov.uk/api/content/foreign-travel-advice/mozambique",
+         "fundstelle": "GOV.UK Content API (unveränderte Antwort), Feld alert_status und Teil \"Warnings and insurance\"",
+         "herausgeber": "Foreign, Commonwealth & Development Office (UK)",
+         "sha256": "7bb34393c0ccea67219455470b979483ab31752fb6e9d7e545f446c37861e981",
+         "stand": "2026-08-20",
+         "textkopie": "analysis/rohstoffe/risiko/raw/fcdo-mozambique.json",
+         "titel": "Foreign travel advice: Mozambique travel advice",
+         "url": "https://www.gov.uk/foreign-travel-advice/mozambique",
+         "zitat": "\"alert_status\":[\"avoid_all_travel_to_parts\",\"avoid_all_but_essential_travel_to_parts\"] … Cabo Delgado Province … Nampula Province … Niassa Province"
+        }
+       ],
+       "text": "Mosambik: Reisehinweis FCDO (Stand 2026-08-20): rät von allen Reisen in Teile des Landes ab; rät von nicht notwendigen Reisen in Teile des Landes ab. Genannte Gebiete (englisch): Cabo Delgado Province, Nampula Province, Niassa Province. Ob das Glied in einem dieser Gebiete liegt, ist hier nicht geprüft."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    },
+    "NATURGEFAHREN": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "MZ",
+       "quellen": [
+        {
+         "abgerufen": "2026-11-16",
+         "api": "https://www.gov.uk/api/content/foreign-travel-advice/mozambique",
+         "fundstelle": "GOV.UK Content API (unveränderte Antwort), Teil \"Safety and security\", Abschnitt Naturgefahren",
+         "herausgeber": "Foreign, Commonwealth & Development Office (UK)",
+         "sha256": "7bb34393c0ccea67219455470b979483ab31752fb6e9d7e545f446c37861e981",
+         "stand": "2026-08-20",
+         "textkopie": "analysis/rohstoffe/risiko/raw/fcdo-mozambique.json",
+         "titel": "Foreign travel advice: Mozambique travel advice",
+         "url": "https://www.gov.uk/foreign-travel-advice/mozambique",
+         "zitat": "Extreme weather and natural disasters … Cyclones and floods"
+        }
+       ],
+       "text": "Mosambik: FCDO nennt für das Land: Wirbelstürme und Überschwemmungen."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    },
+    "SANKTIONEN": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "ABGLEICH",
+       "land": "MZ",
+       "quellen": [
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "EU",
+         "stand": "2026-10-23",
+         "textkopie": "analysis/research/sanktionen-v1/listen/eu.json",
+         "titel": "EU Consolidated Financial Sanctions List (FSF), Stand 2026-10-23 (1779 Organisationen)",
+         "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+         "zitat": "\"stand\":\"2026-10-23\""
+        },
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "UK",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/research/sanktionen-v1/listen/uk.json",
+         "titel": "UK Sanctions List (FCDO), Stand 2026-11-10 (1667 Organisationen)",
+         "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv",
+         "zitat": "\"stand\":\"2026-11-10\""
+        }
+       ],
+       "text": "Mosambik: die gelesenen Sanktionslisten EU (Stand 2026-10-23) und UK (Stand 2026-11-10) führen kein Länderprogramm. Nicht abgeglichen: OFAC, UN."
+      },
+      {
+       "bezug": "FIRMA",
+       "evidenz": "ABGLEICH",
+       "land": "MZ",
+       "quellen": [
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "EU",
+         "stand": "2026-10-23",
+         "textkopie": "analysis/research/sanktionen-v1/listen/eu.json",
+         "titel": "EU Consolidated Financial Sanctions List (FSF), Stand 2026-10-23 (1779 Organisationen)",
+         "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+         "zitat": "\"stand\":\"2026-10-23\""
+        },
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "UK",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/research/sanktionen-v1/listen/uk.json",
+         "titel": "UK Sanctions List (FCDO), Stand 2026-11-10 (1667 Organisationen)",
+         "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv",
+         "zitat": "\"stand\":\"2026-11-10\""
+        }
+       ],
+       "text": "Kein Namenstreffer für Hafen Nacala auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    }
+   },
+   "rolle": "Hafen",
+   "stufe": 2
+  },
+  {
+   "alternativen": [
+    "S2",
+    "S3",
+    "S4",
+    "S6",
+    "S7",
+    "S8",
+    "S9"
+   ],
+   "eigentuemer": [],
+   "eigentuemer_grund": "Kein Eigentümer mit gelesener Quelle erfasst.",
+   "entity_id": "graphit-node-pemba",
+   "id": "S5",
+   "kurz": "Hafen Pemba",
+   "land": "UNKNOWN",
+   "name": "Hafen Pemba",
+   "ort": {
+    "evidenz": "BELEGT",
+    "grund": null,
+    "lat": -12.966666666666667,
+    "lon": 40.516666666666666,
+    "quelle": "Koordinate: Pemba (Wikidata, Stadt in Mosambik), Genauigkeit LOCALITY",
+    "status": "APPROVED (LOCALITY)",
+    "url": "https://www.wikidata.org/wiki/Q498048"
+   },
+   "risiko": [],
+   "risiko_grund": "Länderanteil nur für Förderstufe",
+   "risiko_land": {
+    "belege": [
+     {
+      "fundstelle": "Lage",
+      "herausgeber": "Koordinate: Pemba (Wikidata, Stadt in Mosambik), Genauigkeit LOCALITY",
+      "titel": "Koordinate des Glieds",
+      "url": "https://www.wikidata.org/wiki/Q498048",
+      "zitat": null
+     }
+    ],
+    "herkunft": "Hafen Pemba, belegte Koordinate in Mosambik (-12.97, 40.52)",
+    "iso2": "MZ",
+    "name": "Mosambik"
+   },
+   "risikoebene": {
+    "KONZENTRATION": {
+     "belegt": [],
+     "grund": "Länderanteil der Weltreferenz gilt nur für die Förderstufe; für Verarbeitung und Handel ist keine Weltreferenz geladen.",
+     "status": "UNBEKANNT"
+    },
+    "LAENDERRISIKO": {
+     "belegt": [
+      {
+       "bezug": "STANDORT",
+       "evidenz": "FACT",
+       "land": "MZ",
+       "quellen": [
+        {
+         "abgerufen": "2026-11-16",
+         "api": "https://www.gov.uk/api/content/foreign-travel-advice/mozambique",
+         "fundstelle": "GOV.UK Content API (unveränderte Antwort), Teil \"Warnings and insurance\"",
+         "herausgeber": "Foreign, Commonwealth & Development Office (UK)",
+         "sha256": "7bb34393c0ccea67219455470b979483ab31752fb6e9d7e545f446c37861e981",
+         "stand": "2026-08-20",
+         "textkopie": "analysis/rohstoffe/risiko/raw/fcdo-mozambique.json",
+         "titel": "Foreign travel advice: Mozambique travel advice",
+         "url": "https://www.gov.uk/foreign-travel-advice/mozambique",
+         "zitat": "advises against all travel to Cabo Delgado Province, except for Palma town and the area around Pemba and Afungi. … advises against all but essential travel to Palma town and the area around Pemba and Afungi."
+        }
+       ],
+       "text": "FCDO rät von nicht notwendigen Reisen in das Gebiet um Pemba ab (Provinz Cabo Delgado; von allen Reisen in die übrige Provinz außer Palma, Pemba und Afungi)."
+      },
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "MZ",
+       "quellen": [
+        {
+         "abgerufen": "2026-11-16",
+         "api": "https://www.gov.uk/api/content/foreign-travel-advice/mozambique",
+         "fundstelle": "GOV.UK Content API (unveränderte Antwort), Feld alert_status und Teil \"Warnings and insurance\"",
+         "herausgeber": "Foreign, Commonwealth & Development Office (UK)",
+         "sha256": "7bb34393c0ccea67219455470b979483ab31752fb6e9d7e545f446c37861e981",
+         "stand": "2026-08-20",
+         "textkopie": "analysis/rohstoffe/risiko/raw/fcdo-mozambique.json",
+         "titel": "Foreign travel advice: Mozambique travel advice",
+         "url": "https://www.gov.uk/foreign-travel-advice/mozambique",
+         "zitat": "\"alert_status\":[\"avoid_all_travel_to_parts\",\"avoid_all_but_essential_travel_to_parts\"] … Cabo Delgado Province … Nampula Province … Niassa Province"
+        }
+       ],
+       "text": "Mosambik: Reisehinweis FCDO (Stand 2026-08-20): rät von allen Reisen in Teile des Landes ab; rät von nicht notwendigen Reisen in Teile des Landes ab. Genannte Gebiete (englisch): Cabo Delgado Province, Nampula Province, Niassa Province. Ob das Glied in einem dieser Gebiete liegt, ist hier nicht geprüft."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    },
+    "NATURGEFAHREN": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "MZ",
+       "quellen": [
+        {
+         "abgerufen": "2026-11-16",
+         "api": "https://www.gov.uk/api/content/foreign-travel-advice/mozambique",
+         "fundstelle": "GOV.UK Content API (unveränderte Antwort), Teil \"Safety and security\", Abschnitt Naturgefahren",
+         "herausgeber": "Foreign, Commonwealth & Development Office (UK)",
+         "sha256": "7bb34393c0ccea67219455470b979483ab31752fb6e9d7e545f446c37861e981",
+         "stand": "2026-08-20",
+         "textkopie": "analysis/rohstoffe/risiko/raw/fcdo-mozambique.json",
+         "titel": "Foreign travel advice: Mozambique travel advice",
+         "url": "https://www.gov.uk/foreign-travel-advice/mozambique",
+         "zitat": "Extreme weather and natural disasters … Cyclones and floods"
+        }
+       ],
+       "text": "Mosambik: FCDO nennt für das Land: Wirbelstürme und Überschwemmungen."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    },
+    "SANKTIONEN": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "ABGLEICH",
+       "land": "MZ",
+       "quellen": [
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "EU",
+         "stand": "2026-10-23",
+         "textkopie": "analysis/research/sanktionen-v1/listen/eu.json",
+         "titel": "EU Consolidated Financial Sanctions List (FSF), Stand 2026-10-23 (1779 Organisationen)",
+         "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+         "zitat": "\"stand\":\"2026-10-23\""
+        },
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "UK",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/research/sanktionen-v1/listen/uk.json",
+         "titel": "UK Sanctions List (FCDO), Stand 2026-11-10 (1667 Organisationen)",
+         "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv",
+         "zitat": "\"stand\":\"2026-11-10\""
+        }
+       ],
+       "text": "Mosambik: die gelesenen Sanktionslisten EU (Stand 2026-10-23) und UK (Stand 2026-11-10) führen kein Länderprogramm. Nicht abgeglichen: OFAC, UN."
+      },
+      {
+       "bezug": "FIRMA",
+       "evidenz": "ABGLEICH",
+       "land": "MZ",
+       "quellen": [
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "EU",
+         "stand": "2026-10-23",
+         "textkopie": "analysis/research/sanktionen-v1/listen/eu.json",
+         "titel": "EU Consolidated Financial Sanctions List (FSF), Stand 2026-10-23 (1779 Organisationen)",
+         "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+         "zitat": "\"stand\":\"2026-10-23\""
+        },
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "UK",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/research/sanktionen-v1/listen/uk.json",
+         "titel": "UK Sanctions List (FCDO), Stand 2026-11-10 (1667 Organisationen)",
+         "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv",
+         "zitat": "\"stand\":\"2026-11-10\""
+        }
+       ],
+       "text": "Kein Namenstreffer für Hafen Pemba auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    }
+   },
+   "rolle": "Hafen",
+   "stufe": 2
+  },
+  {
+   "alternativen": [
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S7",
+    "S8",
+    "S9"
+   ],
+   "eigentuemer": [],
+   "eigentuemer_grund": "Kein Eigentümer mit gelesener Quelle erfasst.",
+   "entity_id": "graphit-node-nextsource",
+   "id": "S6",
+   "kurz": "NextSource Materials",
+   "land": "UNKNOWN",
+   "name": "NextSource Materials Inc.",
+   "ort": {
+    "evidenz": "BELEGT",
+    "grund": null,
+    "lat": 43.670277777778,
+    "lon": -79.386666666667,
+    "quelle": "Koordinate: Toronto (Wikidata, Stadt), Genauigkeit HQ_CITY",
+    "status": "APPROVED (HQ_CITY)",
+    "url": "https://www.wikidata.org/wiki/Q172"
+   },
+   "risiko": [],
+   "risiko_grund": "Länderanteil nur für Förderstufe",
+   "risiko_land": {
+    "belege": [
+     {
+      "fundstelle": "Lage",
+      "herausgeber": "Koordinate: Toronto (Wikidata, Stadt), Genauigkeit HQ_CITY",
+      "titel": "Koordinate des Glieds",
+      "url": "https://www.wikidata.org/wiki/Q172",
+      "zitat": null
+     }
+    ],
+    "herkunft": "Belegte Koordinate in Toronto (43.67, -79.39)",
+    "iso2": "CA",
+    "name": "Kanada"
+   },
+   "risikoebene": {
+    "KONZENTRATION": {
+     "belegt": [],
+     "grund": "Länderanteil der Weltreferenz gilt nur für die Förderstufe; für Verarbeitung und Handel ist keine Weltreferenz geladen.",
+     "status": "UNBEKANNT"
+    },
+    "LAENDERRISIKO": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "CA",
+       "quellen": [
+        {
+         "abgerufen": "2026-11-16",
+         "api": "https://www.gov.uk/api/content/foreign-travel-advice/canada",
+         "fundstelle": "GOV.UK Content API (unveränderte Antwort), Feld alert_status und Teil \"Warnings and insurance\"",
+         "herausgeber": "Foreign, Commonwealth & Development Office (UK)",
+         "sha256": "9d15c591c2c4e3f0c481bd6b82b04cbc32c061dcbcd1adada952f5b3baaa497d",
+         "stand": "2026-06-02",
+         "textkopie": "analysis/rohstoffe/risiko/raw/fcdo-canada.json",
+         "titel": "Foreign travel advice: Canada travel advice",
+         "url": "https://www.gov.uk/foreign-travel-advice/canada",
+         "zitat": "\"alert_status\":[]"
+        }
+       ],
+       "text": "Kanada: Reisehinweis FCDO (Stand 2026-06-02): keine Gebiete mit Reisewarnung (Warnstufe leer)."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    },
+    "NATURGEFAHREN": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "CA",
+       "quellen": [
+        {
+         "abgerufen": "2026-11-16",
+         "api": "https://www.gov.uk/api/content/foreign-travel-advice/canada",
+         "fundstelle": "GOV.UK Content API (unveränderte Antwort), Teil \"Safety and security\", Abschnitt Naturgefahren",
+         "herausgeber": "Foreign, Commonwealth & Development Office (UK)",
+         "sha256": "9d15c591c2c4e3f0c481bd6b82b04cbc32c061dcbcd1adada952f5b3baaa497d",
+         "stand": "2026-06-02",
+         "textkopie": "analysis/rohstoffe/risiko/raw/fcdo-canada.json",
+         "titel": "Foreign travel advice: Canada travel advice",
+         "url": "https://www.gov.uk/foreign-travel-advice/canada",
+         "zitat": "Extreme weather and natural disasters … Hurricanes … Avalanches … Earthquakes and tsunamis … Thunderstorms … Winter storms … Tornadoes … Wildfires"
+        }
+       ],
+       "text": "Kanada: FCDO nennt für das Land: Hurrikane, Lawinen, Erdbeben und Tsunamis, Gewitter, Winterstürme, Tornados, Wald- und Flächenbrände."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    },
+    "SANKTIONEN": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "ABGLEICH",
+       "land": "CA",
+       "quellen": [
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "EU",
+         "stand": "2026-10-23",
+         "textkopie": "analysis/research/sanktionen-v1/listen/eu.json",
+         "titel": "EU Consolidated Financial Sanctions List (FSF), Stand 2026-10-23 (1779 Organisationen)",
+         "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+         "zitat": "\"stand\":\"2026-10-23\""
+        },
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "UK",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/research/sanktionen-v1/listen/uk.json",
+         "titel": "UK Sanctions List (FCDO), Stand 2026-11-10 (1667 Organisationen)",
+         "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv",
+         "zitat": "\"stand\":\"2026-11-10\""
+        }
+       ],
+       "text": "Kanada: die gelesenen Sanktionslisten EU (Stand 2026-10-23) und UK (Stand 2026-11-10) führen kein Länderprogramm. Nicht abgeglichen: OFAC, UN."
+      },
+      {
+       "bezug": "FIRMA",
+       "evidenz": "ABGLEICH",
+       "land": "CA",
+       "quellen": [
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "EU",
+         "stand": "2026-10-23",
+         "textkopie": "analysis/research/sanktionen-v1/listen/eu.json",
+         "titel": "EU Consolidated Financial Sanctions List (FSF), Stand 2026-10-23 (1779 Organisationen)",
+         "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+         "zitat": "\"stand\":\"2026-10-23\""
+        },
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "UK",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/research/sanktionen-v1/listen/uk.json",
+         "titel": "UK Sanctions List (FCDO), Stand 2026-11-10 (1667 Organisationen)",
+         "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv",
+         "zitat": "\"stand\":\"2026-11-10\""
+        }
+       ],
+       "text": "Kein Namenstreffer für NextSource Materials Inc. auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    }
+   },
+   "rolle": "Abnehmer",
+   "stufe": 2
+  },
+  {
+   "alternativen": [
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S6",
+    "S8",
+    "S9"
+   ],
+   "eigentuemer": [],
+   "eigentuemer_grund": "Kein Eigentümer mit gelesener Quelle erfasst.",
+   "entity_id": "graphit-node-posco-future-m",
+   "id": "S7",
+   "kurz": "POSCO Future M",
+   "land": "Südkorea",
+   "name": "POSCO Future M Co., Ltd.",
+   "ort": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine Koordinate mit Quelle; es wird kein Ersatzpunkt gesetzt.",
+    "lat": null,
+    "lon": null,
+    "quelle": null,
+    "status": null,
+    "url": null
+   },
+   "risiko": [],
+   "risiko_grund": "Länderanteil nur für Förderstufe",
+   "risiko_land": {
+    "belege": [],
+    "herkunft": "Land des Glieds im Generator-Datensatz",
+    "iso2": "KR",
+    "name": "Südkorea"
+   },
+   "risikoebene": {
+    "KONZENTRATION": {
+     "belegt": [],
+     "grund": "Länderanteil der Weltreferenz gilt nur für die Förderstufe; für Verarbeitung und Handel ist keine Weltreferenz geladen.",
+     "status": "UNBEKANNT"
+    },
+    "LAENDERRISIKO": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "KR",
+       "quellen": [
+        {
+         "abgerufen": "2026-11-16",
+         "api": "https://www.gov.uk/api/content/foreign-travel-advice/south-korea",
+         "fundstelle": "GOV.UK Content API (unveränderte Antwort), Feld alert_status und Teil \"Warnings and insurance\"",
+         "herausgeber": "Foreign, Commonwealth & Development Office (UK)",
+         "sha256": "a08186ff6c0f32bc159f2a54f1fd3cc4576c13031c8aa1a842897b39a84c4343",
+         "stand": "2026-05-14",
+         "textkopie": "analysis/rohstoffe/risiko/raw/fcdo-south-korea.json",
+         "titel": "Foreign travel advice: South Korea travel advice",
+         "url": "https://www.gov.uk/foreign-travel-advice/south-korea",
+         "zitat": "\"alert_status\":[]"
+        }
+       ],
+       "text": "Südkorea: Reisehinweis FCDO (Stand 2026-05-14): keine Gebiete mit Reisewarnung (Warnstufe leer)."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    },
+    "NATURGEFAHREN": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "KR",
+       "quellen": [
+        {
+         "abgerufen": "2026-11-16",
+         "api": "https://www.gov.uk/api/content/foreign-travel-advice/south-korea",
+         "fundstelle": "GOV.UK Content API (unveränderte Antwort), Teil \"Safety and security\", Abschnitt Naturgefahren",
+         "herausgeber": "Foreign, Commonwealth & Development Office (UK)",
+         "sha256": "a08186ff6c0f32bc159f2a54f1fd3cc4576c13031c8aa1a842897b39a84c4343",
+         "stand": "2026-05-14",
+         "textkopie": "analysis/rohstoffe/risiko/raw/fcdo-south-korea.json",
+         "titel": "Foreign travel advice: South Korea travel advice",
+         "url": "https://www.gov.uk/foreign-travel-advice/south-korea",
+         "zitat": "Extreme weather and natural disasters … Typhoons … Flooding and landslides … Earthquakes … Forest fires"
+        }
+       ],
+       "text": "Südkorea: FCDO nennt für das Land: Taifune, Überschwemmungen und Erdrutsche, Erdbeben, Waldbrände."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    },
+    "SANKTIONEN": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "ABGLEICH",
+       "land": "KR",
+       "quellen": [
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "EU",
+         "stand": "2026-10-23",
+         "textkopie": "analysis/research/sanktionen-v1/listen/eu.json",
+         "titel": "EU Consolidated Financial Sanctions List (FSF), Stand 2026-10-23 (1779 Organisationen)",
+         "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+         "zitat": "\"stand\":\"2026-10-23\""
+        },
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "UK",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/research/sanktionen-v1/listen/uk.json",
+         "titel": "UK Sanctions List (FCDO), Stand 2026-11-10 (1667 Organisationen)",
+         "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv",
+         "zitat": "\"stand\":\"2026-11-10\""
+        }
+       ],
+       "text": "Südkorea: die gelesenen Sanktionslisten EU (Stand 2026-10-23) und UK (Stand 2026-11-10) führen kein Länderprogramm. Nicht abgeglichen: OFAC, UN."
+      },
+      {
+       "bezug": "FIRMA",
+       "evidenz": "ABGLEICH",
+       "land": "KR",
+       "quellen": [
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "EU",
+         "stand": "2026-10-23",
+         "textkopie": "analysis/research/sanktionen-v1/listen/eu.json",
+         "titel": "EU Consolidated Financial Sanctions List (FSF), Stand 2026-10-23 (1779 Organisationen)",
+         "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+         "zitat": "\"stand\":\"2026-10-23\""
+        },
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "UK",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/research/sanktionen-v1/listen/uk.json",
+         "titel": "UK Sanctions List (FCDO), Stand 2026-11-10 (1667 Organisationen)",
+         "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv",
+         "zitat": "\"stand\":\"2026-11-10\""
+        }
+       ],
+       "text": "Kein Namenstreffer für POSCO Future M Co., Ltd. auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    }
+   },
+   "rolle": "Abnehmer",
+   "stufe": 2
+  },
+  {
+   "alternativen": [
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S6",
+    "S7",
+    "S9"
+   ],
+   "eigentuemer": [],
+   "eigentuemer_grund": "Kein Eigentümer mit gelesener Quelle erfasst.",
+   "entity_id": "graphit-node-vidalia",
+   "id": "S8",
+   "kurz": "Vidalia Active Anode Material Facility",
+   "land": "USA",
+   "name": "Vidalia Active Anode Material Facility (Syrah)",
+   "ort": {
+    "evidenz": "BELEGT",
+    "grund": null,
+    "lat": 31.5683,
+    "lon": -91.4342,
+    "quelle": "Koordinate: Vidalia, Louisiana (Wikidata, Stadt), Genauigkeit LOCALITY",
+    "status": "APPROVED (LOCALITY)",
+    "url": "https://www.wikidata.org/wiki/Q2241791"
+   },
+   "risiko": [],
+   "risiko_grund": "Länderanteil nur für Förderstufe",
+   "risiko_land": {
+    "belege": [],
+    "herkunft": "Land des Glieds im Generator-Datensatz",
+    "iso2": "US",
+    "name": "USA"
+   },
+   "risikoebene": {
+    "KONZENTRATION": {
+     "belegt": [],
+     "grund": "Länderanteil der Weltreferenz gilt nur für die Förderstufe; für Verarbeitung und Handel ist keine Weltreferenz geladen.",
+     "status": "UNBEKANNT"
+    },
+    "LAENDERRISIKO": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "US",
+       "quellen": [
+        {
+         "abgerufen": "2026-11-16",
+         "api": "https://www.gov.uk/api/content/foreign-travel-advice/usa",
+         "fundstelle": "GOV.UK Content API (unveränderte Antwort), Feld alert_status und Teil \"Warnings and insurance\"",
+         "herausgeber": "Foreign, Commonwealth & Development Office (UK)",
+         "sha256": "7dc7b740316aeaaef46b658286517ba28674120721280dc667c7671f282a8f92",
+         "stand": "2026-11-14",
+         "textkopie": "analysis/rohstoffe/risiko/raw/fcdo-usa.json",
+         "titel": "Foreign travel advice: USA travel advice",
+         "url": "https://www.gov.uk/foreign-travel-advice/usa",
+         "zitat": "\"alert_status\":[]"
+        }
+       ],
+       "text": "USA: Reisehinweis FCDO (Stand 2026-11-14): keine Gebiete mit Reisewarnung (Warnstufe leer)."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    },
+    "NATURGEFAHREN": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "US",
+       "quellen": [
+        {
+         "abgerufen": "2026-11-16",
+         "api": "https://www.gov.uk/api/content/foreign-travel-advice/usa",
+         "fundstelle": "GOV.UK Content API (unveränderte Antwort), Teil \"Safety and security\", Abschnitt Naturgefahren",
+         "herausgeber": "Foreign, Commonwealth & Development Office (UK)",
+         "sha256": "7dc7b740316aeaaef46b658286517ba28674120721280dc667c7671f282a8f92",
+         "stand": "2026-11-14",
+         "textkopie": "analysis/rohstoffe/risiko/raw/fcdo-usa.json",
+         "titel": "Foreign travel advice: USA travel advice",
+         "url": "https://www.gov.uk/foreign-travel-advice/usa",
+         "zitat": "Extreme weather and natural disasters … Snowstorms … Hurricanes … Earthquakes … Tornadoes … Volcanic eruptions … Wildfires … Flash flooding"
+        }
+       ],
+       "text": "USA: FCDO nennt für das Land: Schneestürme, Hurrikane, Erdbeben, Tornados, Vulkanausbrüche, Wald- und Flächenbrände, Sturzfluten."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    },
+    "SANKTIONEN": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "ABGLEICH",
+       "land": "US",
+       "quellen": [
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "EU",
+         "stand": "2026-10-23",
+         "textkopie": "analysis/research/sanktionen-v1/listen/eu.json",
+         "titel": "EU Consolidated Financial Sanctions List (FSF), Stand 2026-10-23 (1779 Organisationen)",
+         "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+         "zitat": "\"stand\":\"2026-10-23\""
+        },
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "UK",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/research/sanktionen-v1/listen/uk.json",
+         "titel": "UK Sanctions List (FCDO), Stand 2026-11-10 (1667 Organisationen)",
+         "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv",
+         "zitat": "\"stand\":\"2026-11-10\""
+        }
+       ],
+       "text": "USA: die gelesenen Sanktionslisten EU (Stand 2026-10-23) und UK (Stand 2026-11-10) führen kein Länderprogramm. Nicht abgeglichen: OFAC, UN."
+      },
+      {
+       "bezug": "FIRMA",
+       "evidenz": "ABGLEICH",
+       "land": "US",
+       "quellen": [
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "EU",
+         "stand": "2026-10-23",
+         "textkopie": "analysis/research/sanktionen-v1/listen/eu.json",
+         "titel": "EU Consolidated Financial Sanctions List (FSF), Stand 2026-10-23 (1779 Organisationen)",
+         "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+         "zitat": "\"stand\":\"2026-10-23\""
+        },
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "UK",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/research/sanktionen-v1/listen/uk.json",
+         "titel": "UK Sanctions List (FCDO), Stand 2026-11-10 (1667 Organisationen)",
+         "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv",
+         "zitat": "\"stand\":\"2026-11-10\""
+        }
+       ],
+       "text": "Kein Namenstreffer für Syrah Resources Limited auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    }
+   },
+   "rolle": "Anodenwerk",
+   "stufe": 2
+  },
+  {
+   "alternativen": [
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S6",
+    "S7",
+    "S8"
+   ],
+   "eigentuemer": [],
+   "eigentuemer_grund": "Kein Eigentümer mit gelesener Quelle erfasst.",
+   "entity_id": "graphit-node-westwater",
+   "id": "S9",
+   "kurz": "Westwater Resources",
+   "land": "USA",
+   "name": "Westwater Resources, Inc.",
+   "ort": {
+    "evidenz": "BELEGT",
+    "grund": null,
+    "lat": 39.596388888889,
+    "lon": -104.84388888889,
+    "quelle": "Koordinate: Centennial (Colorado) (Wikidata, Stadt), Genauigkeit HQ_CITY",
+    "status": "APPROVED (HQ_CITY)",
+    "url": "https://www.wikidata.org/wiki/Q387322"
+   },
+   "risiko": [],
+   "risiko_grund": "Länderanteil nur für Förderstufe",
+   "risiko_land": {
+    "belege": [],
+    "herkunft": "Land des Glieds im Generator-Datensatz",
+    "iso2": "US",
+    "name": "USA"
+   },
+   "risikoebene": {
+    "KONZENTRATION": {
+     "belegt": [],
+     "grund": "Länderanteil der Weltreferenz gilt nur für die Förderstufe; für Verarbeitung und Handel ist keine Weltreferenz geladen.",
+     "status": "UNBEKANNT"
+    },
+    "LAENDERRISIKO": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "US",
+       "quellen": [
+        {
+         "abgerufen": "2026-11-16",
+         "api": "https://www.gov.uk/api/content/foreign-travel-advice/usa",
+         "fundstelle": "GOV.UK Content API (unveränderte Antwort), Feld alert_status und Teil \"Warnings and insurance\"",
+         "herausgeber": "Foreign, Commonwealth & Development Office (UK)",
+         "sha256": "7dc7b740316aeaaef46b658286517ba28674120721280dc667c7671f282a8f92",
+         "stand": "2026-11-14",
+         "textkopie": "analysis/rohstoffe/risiko/raw/fcdo-usa.json",
+         "titel": "Foreign travel advice: USA travel advice",
+         "url": "https://www.gov.uk/foreign-travel-advice/usa",
+         "zitat": "\"alert_status\":[]"
+        }
+       ],
+       "text": "USA: Reisehinweis FCDO (Stand 2026-11-14): keine Gebiete mit Reisewarnung (Warnstufe leer)."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    },
+    "NATURGEFAHREN": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "US",
+       "quellen": [
+        {
+         "abgerufen": "2026-11-16",
+         "api": "https://www.gov.uk/api/content/foreign-travel-advice/usa",
+         "fundstelle": "GOV.UK Content API (unveränderte Antwort), Teil \"Safety and security\", Abschnitt Naturgefahren",
+         "herausgeber": "Foreign, Commonwealth & Development Office (UK)",
+         "sha256": "7dc7b740316aeaaef46b658286517ba28674120721280dc667c7671f282a8f92",
+         "stand": "2026-11-14",
+         "textkopie": "analysis/rohstoffe/risiko/raw/fcdo-usa.json",
+         "titel": "Foreign travel advice: USA travel advice",
+         "url": "https://www.gov.uk/foreign-travel-advice/usa",
+         "zitat": "Extreme weather and natural disasters … Snowstorms … Hurricanes … Earthquakes … Tornadoes … Volcanic eruptions … Wildfires … Flash flooding"
+        }
+       ],
+       "text": "USA: FCDO nennt für das Land: Schneestürme, Hurrikane, Erdbeben, Tornados, Vulkanausbrüche, Wald- und Flächenbrände, Sturzfluten."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    },
+    "SANKTIONEN": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "ABGLEICH",
+       "land": "US",
+       "quellen": [
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "EU",
+         "stand": "2026-10-23",
+         "textkopie": "analysis/research/sanktionen-v1/listen/eu.json",
+         "titel": "EU Consolidated Financial Sanctions List (FSF), Stand 2026-10-23 (1779 Organisationen)",
+         "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+         "zitat": "\"stand\":\"2026-10-23\""
+        },
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "UK",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/research/sanktionen-v1/listen/uk.json",
+         "titel": "UK Sanctions List (FCDO), Stand 2026-11-10 (1667 Organisationen)",
+         "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv",
+         "zitat": "\"stand\":\"2026-11-10\""
+        }
+       ],
+       "text": "USA: die gelesenen Sanktionslisten EU (Stand 2026-10-23) und UK (Stand 2026-11-10) führen kein Länderprogramm. Nicht abgeglichen: OFAC, UN."
+      },
+      {
+       "bezug": "FIRMA",
+       "evidenz": "ABGLEICH",
+       "land": "US",
+       "quellen": [
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "EU",
+         "stand": "2026-10-23",
+         "textkopie": "analysis/research/sanktionen-v1/listen/eu.json",
+         "titel": "EU Consolidated Financial Sanctions List (FSF), Stand 2026-10-23 (1779 Organisationen)",
+         "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+         "zitat": "\"stand\":\"2026-10-23\""
+        },
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "UK",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/research/sanktionen-v1/listen/uk.json",
+         "titel": "UK Sanctions List (FCDO), Stand 2026-11-10 (1667 Organisationen)",
+         "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv",
+         "zitat": "\"stand\":\"2026-11-10\""
+        }
+       ],
+       "text": "Kein Namenstreffer für Westwater Resources, Inc. auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    }
+   },
+   "rolle": "Abnehmer",
+   "stufe": 2
+  },
+  {
+   "alternativen": [
+    "S11"
+   ],
+   "eigentuemer": [],
+   "eigentuemer_grund": "Kein Eigentümer mit gelesener Quelle erfasst.",
+   "entity_id": "graphit-node-lucid",
+   "id": "S10",
+   "kurz": "Lucid Group",
+   "land": "UNKNOWN",
+   "name": "Lucid Group, Inc.",
+   "ort": {
+    "evidenz": "BELEGT",
+    "grund": null,
+    "lat": 37.533333333333,
+    "lon": -122.03333333333,
+    "quelle": "Koordinate: Newark (Kalifornien) (Wikidata, Stadt), Genauigkeit HQ_CITY",
+    "status": "APPROVED (HQ_CITY)",
+    "url": "https://www.wikidata.org/wiki/Q850812"
+   },
+   "risiko": [],
+   "risiko_grund": "Länderanteil nur für Förderstufe",
+   "risiko_land": {
+    "belege": [
+     {
+      "fundstelle": "JSON",
+      "herausgeber": "GLEIF",
+      "textkopie": "analysis/rohstoffe/eigentum/raw/gleif-529900MRL9Z13ZCRVD74-eintrag.json",
+      "titel": "LEI-Eintrag 529900MRL9Z13ZCRVD74",
+      "url": "https://api.gleif.org/api/v1/lei-records/529900MRL9Z13ZCRVD74",
+      "zitat": "\"lei\":\"529900MRL9Z13ZCRVD74\" … \"jurisdiction\":\"US-DE\""
+     }
+    ],
+    "herkunft": "Sitz laut LEI-Register (Lucid Group, Inc., Rechtsordnung US-DE)",
+    "iso2": "US",
+    "name": "USA"
+   },
+   "risikoebene": {
+    "KONZENTRATION": {
+     "belegt": [],
+     "grund": "Länderanteil der Weltreferenz gilt nur für die Förderstufe; für Verarbeitung und Handel ist keine Weltreferenz geladen.",
+     "status": "UNBEKANNT"
+    },
+    "LAENDERRISIKO": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "US",
+       "quellen": [
+        {
+         "abgerufen": "2026-11-16",
+         "api": "https://www.gov.uk/api/content/foreign-travel-advice/usa",
+         "fundstelle": "GOV.UK Content API (unveränderte Antwort), Feld alert_status und Teil \"Warnings and insurance\"",
+         "herausgeber": "Foreign, Commonwealth & Development Office (UK)",
+         "sha256": "7dc7b740316aeaaef46b658286517ba28674120721280dc667c7671f282a8f92",
+         "stand": "2026-11-14",
+         "textkopie": "analysis/rohstoffe/risiko/raw/fcdo-usa.json",
+         "titel": "Foreign travel advice: USA travel advice",
+         "url": "https://www.gov.uk/foreign-travel-advice/usa",
+         "zitat": "\"alert_status\":[]"
+        }
+       ],
+       "text": "USA: Reisehinweis FCDO (Stand 2026-11-14): keine Gebiete mit Reisewarnung (Warnstufe leer)."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    },
+    "NATURGEFAHREN": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "US",
+       "quellen": [
+        {
+         "abgerufen": "2026-11-16",
+         "api": "https://www.gov.uk/api/content/foreign-travel-advice/usa",
+         "fundstelle": "GOV.UK Content API (unveränderte Antwort), Teil \"Safety and security\", Abschnitt Naturgefahren",
+         "herausgeber": "Foreign, Commonwealth & Development Office (UK)",
+         "sha256": "7dc7b740316aeaaef46b658286517ba28674120721280dc667c7671f282a8f92",
+         "stand": "2026-11-14",
+         "textkopie": "analysis/rohstoffe/risiko/raw/fcdo-usa.json",
+         "titel": "Foreign travel advice: USA travel advice",
+         "url": "https://www.gov.uk/foreign-travel-advice/usa",
+         "zitat": "Extreme weather and natural disasters … Snowstorms … Hurricanes … Earthquakes … Tornadoes … Volcanic eruptions … Wildfires … Flash flooding"
+        }
+       ],
+       "text": "USA: FCDO nennt für das Land: Schneestürme, Hurrikane, Erdbeben, Tornados, Vulkanausbrüche, Wald- und Flächenbrände, Sturzfluten."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    },
+    "SANKTIONEN": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "ABGLEICH",
+       "land": "US",
+       "quellen": [
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "EU",
+         "stand": "2026-10-23",
+         "textkopie": "analysis/research/sanktionen-v1/listen/eu.json",
+         "titel": "EU Consolidated Financial Sanctions List (FSF), Stand 2026-10-23 (1779 Organisationen)",
+         "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+         "zitat": "\"stand\":\"2026-10-23\""
+        },
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "UK",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/research/sanktionen-v1/listen/uk.json",
+         "titel": "UK Sanctions List (FCDO), Stand 2026-11-10 (1667 Organisationen)",
+         "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv",
+         "zitat": "\"stand\":\"2026-11-10\""
+        }
+       ],
+       "text": "USA: die gelesenen Sanktionslisten EU (Stand 2026-10-23) und UK (Stand 2026-11-10) führen kein Länderprogramm. Nicht abgeglichen: OFAC, UN."
+      },
+      {
+       "bezug": "FIRMA",
+       "evidenz": "ABGLEICH",
+       "land": "US",
+       "quellen": [
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "EU",
+         "stand": "2026-10-23",
+         "textkopie": "analysis/research/sanktionen-v1/listen/eu.json",
+         "titel": "EU Consolidated Financial Sanctions List (FSF), Stand 2026-10-23 (1779 Organisationen)",
+         "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+         "zitat": "\"stand\":\"2026-10-23\""
+        },
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "UK",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/research/sanktionen-v1/listen/uk.json",
+         "titel": "UK Sanctions List (FCDO), Stand 2026-11-10 (1667 Organisationen)",
+         "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv",
+         "zitat": "\"stand\":\"2026-11-10\""
+        }
+       ],
+       "text": "Kein Namenstreffer für Lucid Group, Inc. auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    }
+   },
+   "rolle": "Abnehmer",
+   "stufe": 3
+  },
+  {
+   "alternativen": [
+    "S10"
+   ],
+   "eigentuemer": [],
+   "eigentuemer_grund": "Kein Eigentümer mit gelesener Quelle erfasst.",
+   "entity_id": "graphit-node-tesla",
+   "id": "S11",
+   "kurz": "Tesla",
+   "land": "UNKNOWN",
+   "name": "Tesla, Inc.",
+   "ort": {
+    "evidenz": "BELEGT",
+    "grund": null,
+    "lat": 30.3,
+    "lon": -97.733333333333,
+    "quelle": "Koordinate: Austin (Wikidata, Stadt), Genauigkeit HQ_CITY",
+    "status": "APPROVED (HQ_CITY)",
+    "url": "https://www.wikidata.org/wiki/Q16559"
+   },
+   "risiko": [],
+   "risiko_grund": "Länderanteil nur für Förderstufe",
+   "risiko_land": {
+    "belege": [
+     {
+      "fundstelle": "JSON",
+      "herausgeber": "GLEIF",
+      "textkopie": "analysis/rohstoffe/eigentum/raw/gleif-54930043XZGB27CTOV49-eintrag.json",
+      "titel": "LEI-Eintrag 54930043XZGB27CTOV49",
+      "url": "https://api.gleif.org/api/v1/lei-records/54930043XZGB27CTOV49",
+      "zitat": "\"lei\":\"54930043XZGB27CTOV49\" … \"jurisdiction\":\"US-TX\""
+     }
+    ],
+    "herkunft": "Sitz laut LEI-Register (Tesla, Inc., Rechtsordnung US-TX)",
+    "iso2": "US",
+    "name": "USA"
+   },
+   "risikoebene": {
+    "KONZENTRATION": {
+     "belegt": [],
+     "grund": "Länderanteil der Weltreferenz gilt nur für die Förderstufe; für Verarbeitung und Handel ist keine Weltreferenz geladen.",
+     "status": "UNBEKANNT"
+    },
+    "LAENDERRISIKO": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "US",
+       "quellen": [
+        {
+         "abgerufen": "2026-11-16",
+         "api": "https://www.gov.uk/api/content/foreign-travel-advice/usa",
+         "fundstelle": "GOV.UK Content API (unveränderte Antwort), Feld alert_status und Teil \"Warnings and insurance\"",
+         "herausgeber": "Foreign, Commonwealth & Development Office (UK)",
+         "sha256": "7dc7b740316aeaaef46b658286517ba28674120721280dc667c7671f282a8f92",
+         "stand": "2026-11-14",
+         "textkopie": "analysis/rohstoffe/risiko/raw/fcdo-usa.json",
+         "titel": "Foreign travel advice: USA travel advice",
+         "url": "https://www.gov.uk/foreign-travel-advice/usa",
+         "zitat": "\"alert_status\":[]"
+        }
+       ],
+       "text": "USA: Reisehinweis FCDO (Stand 2026-11-14): keine Gebiete mit Reisewarnung (Warnstufe leer)."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    },
+    "NATURGEFAHREN": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "US",
+       "quellen": [
+        {
+         "abgerufen": "2026-11-16",
+         "api": "https://www.gov.uk/api/content/foreign-travel-advice/usa",
+         "fundstelle": "GOV.UK Content API (unveränderte Antwort), Teil \"Safety and security\", Abschnitt Naturgefahren",
+         "herausgeber": "Foreign, Commonwealth & Development Office (UK)",
+         "sha256": "7dc7b740316aeaaef46b658286517ba28674120721280dc667c7671f282a8f92",
+         "stand": "2026-11-14",
+         "textkopie": "analysis/rohstoffe/risiko/raw/fcdo-usa.json",
+         "titel": "Foreign travel advice: USA travel advice",
+         "url": "https://www.gov.uk/foreign-travel-advice/usa",
+         "zitat": "Extreme weather and natural disasters … Snowstorms … Hurricanes … Earthquakes … Tornadoes … Volcanic eruptions … Wildfires … Flash flooding"
+        }
+       ],
+       "text": "USA: FCDO nennt für das Land: Schneestürme, Hurrikane, Erdbeben, Tornados, Vulkanausbrüche, Wald- und Flächenbrände, Sturzfluten."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    },
+    "SANKTIONEN": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "ABGLEICH",
+       "land": "US",
+       "quellen": [
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "EU",
+         "stand": "2026-10-23",
+         "textkopie": "analysis/research/sanktionen-v1/listen/eu.json",
+         "titel": "EU Consolidated Financial Sanctions List (FSF), Stand 2026-10-23 (1779 Organisationen)",
+         "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+         "zitat": "\"stand\":\"2026-10-23\""
+        },
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "UK",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/research/sanktionen-v1/listen/uk.json",
+         "titel": "UK Sanctions List (FCDO), Stand 2026-11-10 (1667 Organisationen)",
+         "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv",
+         "zitat": "\"stand\":\"2026-11-10\""
+        }
+       ],
+       "text": "USA: die gelesenen Sanktionslisten EU (Stand 2026-10-23) und UK (Stand 2026-11-10) führen kein Länderprogramm. Nicht abgeglichen: OFAC, UN."
+      },
+      {
+       "bezug": "FIRMA",
+       "evidenz": "ABGLEICH",
+       "land": "US",
+       "quellen": [
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "EU",
+         "stand": "2026-10-23",
+         "textkopie": "analysis/research/sanktionen-v1/listen/eu.json",
+         "titel": "EU Consolidated Financial Sanctions List (FSF), Stand 2026-10-23 (1779 Organisationen)",
+         "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+         "zitat": "\"stand\":\"2026-10-23\""
+        },
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "UK",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/research/sanktionen-v1/listen/uk.json",
+         "titel": "UK Sanctions List (FCDO), Stand 2026-11-10 (1667 Organisationen)",
+         "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv",
+         "zitat": "\"stand\":\"2026-11-10\""
+        }
+       ],
+       "text": "Kein Namenstreffer für Tesla, Inc. auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    }
+   },
+   "rolle": "Abnehmer",
+   "stufe": 3
+  }
+ ],
+ "tiefe": {
+  "belegt": 29,
+  "dimensionen": [
+   "Eigentümer/Betreiber",
+   "Standort",
+   "Menge",
+   "Wert",
+   "Lieferbeziehung",
+   "Risiko"
+  ],
+  "gesamt": 66,
+  "mit_annahmen": 40,
+  "zeilen": [
+   {
+    "felder": {
+     "Eigentümer/Betreiber": "belegt",
+     "Lieferbeziehung": "belegt",
+     "Menge": "belegt",
+     "Risiko": "belegt",
+     "Standort": "belegt",
+     "Wert": "unbekannt"
+    },
+    "id": "S1"
+   },
+   {
+    "felder": {
+     "Eigentümer/Betreiber": "unbekannt",
+     "Lieferbeziehung": "belegt",
+     "Menge": "unbekannt",
+     "Risiko": "unbekannt",
+     "Standort": "unbekannt",
+     "Wert": "unbekannt"
+    },
+    "id": "S2"
+   },
+   {
+    "felder": {
+     "Eigentümer/Betreiber": "unbekannt",
+     "Lieferbeziehung": "belegt",
+     "Menge": "unbekannt",
+     "Risiko": "unbekannt",
+     "Standort": "unbekannt",
+     "Wert": "unbekannt"
+    },
+    "id": "S3"
+   },
+   {
+    "felder": {
+     "Eigentümer/Betreiber": "unbekannt",
+     "Lieferbeziehung": "belegt",
+     "Menge": "unbekannt",
+     "Risiko": "unbekannt",
+     "Standort": "belegt",
+     "Wert": "unbekannt"
+    },
+    "id": "S4"
+   },
+   {
+    "felder": {
+     "Eigentümer/Betreiber": "unbekannt",
+     "Lieferbeziehung": "belegt",
+     "Menge": "belegt",
+     "Risiko": "unbekannt",
+     "Standort": "belegt",
+     "Wert": "unbekannt"
+    },
+    "id": "S5"
+   },
+   {
+    "felder": {
+     "Eigentümer/Betreiber": "unbekannt",
+     "Lieferbeziehung": "belegt",
+     "Menge": "belegt",
+     "Risiko": "unbekannt",
+     "Standort": "belegt",
+     "Wert": "unbekannt"
+    },
+    "id": "S6"
+   },
+   {
+    "felder": {
+     "Eigentümer/Betreiber": "unbekannt",
+     "Lieferbeziehung": "belegt",
+     "Menge": "belegt",
+     "Risiko": "unbekannt",
+     "Standort": "unbekannt",
+     "Wert": "unbekannt"
+    },
+    "id": "S7"
+   },
+   {
+    "felder": {
+     "Eigentümer/Betreiber": "belegt",
+     "Lieferbeziehung": "belegt",
+     "Menge": "belegt",
+     "Risiko": "unbekannt",
+     "Standort": "belegt",
+     "Wert": "unbekannt"
+    },
+    "id": "S8"
+   },
+   {
+    "felder": {
+     "Eigentümer/Betreiber": "unbekannt",
+     "Lieferbeziehung": "belegt",
+     "Menge": "unbekannt",
+     "Risiko": "unbekannt",
+     "Standort": "belegt",
+     "Wert": "unbekannt"
+    },
+    "id": "S9"
+   },
+   {
+    "felder": {
+     "Eigentümer/Betreiber": "belegt",
+     "Lieferbeziehung": "belegt",
+     "Menge": "unbekannt",
+     "Risiko": "unbekannt",
+     "Standort": "belegt",
+     "Wert": "unbekannt"
+    },
+    "id": "S10"
+   },
+   {
+    "felder": {
+     "Eigentümer/Betreiber": "belegt",
+     "Lieferbeziehung": "belegt",
+     "Menge": "unbekannt",
+     "Risiko": "unbekannt",
+     "Standort": "belegt",
+     "Wert": "unbekannt"
+    },
+    "id": "S11"
+   }
+  ]
+ },
+ "verbindungen": [
+  {
+   "art": "TRANSPORT",
+   "art_atlas": "TRANSPORTS_TO",
+   "auf_globus": true,
+   "aussage": "Balama verschiffte 2023 vier Massengut-Ladungen von je rund 10 kt ueber den Hafen Pemba nach China (Feinflocken-Kunden).",
+   "belege": [
+    {
+     "fundstelle": "2023 Annual Report, PDF-Seite 14",
+     "herausgeber": "Syrah Resources Limited",
+     "textkopie": "analysis/research/graphit-flows-v1/raw/syr-ar-2023-p14.txt",
+     "url": "https://announcements.asx.com.au/asxpdf/20240325/pdf/061vgw6zdgfyqx.pdf",
+     "zitat": "BALAMA GRAPHITE OPERATION … Completed four ~10kt breakbulk shipments from Pemba port to China for fines customers"
+    }
+   ],
+   "evidenz": "FACT",
+   "evidenz_basis": "Freigegebener Fluss; Entscheidung Eddie Sablah 2026-11-16 (analysis/rohstoffe/fakt-entscheidung.json)",
+   "flow_id": "GRF-01",
+   "freigabe": "FREIGEGEBEN",
+   "freigabe_herkunft": "Claude (delegiert durch Eddie Sablah); Prüfbericht pruefbericht-2026-11-09.pdf",
+   "id": "V1",
+   "menge": {
+    "evidenz": "BELEGT_TEXT",
+    "grund": null,
+    "pro_jahr": null,
+    "quelle_text": "4 Ladungen zu je ca. 10 kt (geliefert)",
+    "rechnung": "",
+    "t": null,
+    "text": "4 Ladungen zu je ca. 10 kt (geliefert)"
+   },
+   "menge_annahme": {
+    "annahme_id": "A-GR-MENGE",
+    "einheit": "t Graphit",
+    "evidenz": "ANNAHME",
+    "grund": "Annahme A-GR-MENGE: Förderung Balama: 40 000 t Graphit pro Jahr, Balama (Syrah): Kampagnenbetrieb, 2025 stark gedrosselt (Quartale an Vidalia 0,0 kt laut Hauptatlas); Mosambik 60 000 t laut USGS, Balama rund zwei Drittel (Schätzung); 4 Abnehmer, Anteil 25 % zu gleichen Teilen.",
+    "konfidenz_text": "0,30 (schwach)",
+    "pro_jahr": true,
+    "quelle": "Annahmen-Atlas Lendrot/atlaslendrot annahmen/graphit-welt.json @ efe91bc",
+    "quelle_url": "https://github.com/Lendrot/atlaslendrot/blob/main/ANNAHMEN_WELT.md#graphit",
+    "regel_text": "Jede Grube bekommt ihre wahrscheinliche Jahresförderung an Naturgraphit, jeder Nadelkoks-Erzeuger seine Menge als Graphit-Äquivalent (Tabelle mengen.quellen). Die Menge fließt durch das Netz und wird an Verzweigungen zu gleichen Teilen aufgeteilt. Naturgraphit wird je Land und weltweit gegen USGS MCS 2026 geprüft, synthetischer Graphit gegen eine eigene Weltgröße.",
+    "t": 10000.0,
+    "text": "≈ 10.000 t Graphit pro Jahr",
+    "welt": "graphit"
+   },
+   "menge_bezug": [],
+   "nach": "S5",
+   "stand": "Geschäftsjahr 2023",
+   "von": "S1",
+   "ware": "Graphitkonzentrat (Feinflocken, Massengut)",
+   "wert": {
+    "eur": null,
+    "evidenz": "UNKNOWN",
+    "grund": "Keine gelesene Quelle nennt einen Wert; Menge × Preis ist eine Rechnung und steht nur in der Ansicht „Mit Annahmen“.",
+    "quelle_text": null,
+    "rechnung": "",
+    "text": "unbekannt"
+   },
+   "wert_annahme": {
+    "annahme_art": "RECHNUNG",
+    "eur": 8849557.522123894,
+    "eur_spanne": [
+     8849557.522123894
+    ],
+    "evidenz": "ANNAHME",
+    "preis_basis": "graphit",
+    "preis_datum": null,
+    "preis_quelle": "U.S. Geological Survey, Mineral Commodity Summaries 2026, Graphite (Natural)",
+    "preis_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-graphite.pdf",
+    "preis_zitat": "Price, average unit value of imports, dollars per metric ton at … Flake 1,330 1,200 1,080 1,050 1,000",
+    "rechnung": "10.000 t (Annahme A-GR-MENGE, t Graphit) × 1.000 US$ je t Naturgraphit (Flocken) (Importwert Flocken USA 2025e) = 10 Mio. US$ ÷ EZB-Jahresmittel 2025: 1,1300 US$ je €",
+    "text": "≈ 8,85 Mio. € pro Jahr"
+   }
+  },
+  {
+   "art": "TRANSPORT",
+   "art_atlas": "TRANSPORTS_TO",
+   "auf_globus": true,
+   "aussage": "Balama ergaenzte 2023 die Pemba-Ladungen durch Verschiffungen ueber Nacala an Ziele und Kunden weltweit.",
+   "belege": [
+    {
+     "fundstelle": "2023 Annual Report, PDF-Seite 14",
+     "herausgeber": "Syrah Resources Limited",
+     "textkopie": "analysis/research/graphit-flows-v1/raw/syr-ar-2023-p14.txt",
+     "url": "https://announcements.asx.com.au/asxpdf/20240325/pdf/061vgw6zdgfyqx.pdf",
+     "zitat": "BALAMA GRAPHITE OPERATION … supplemented by Nacala shipments to global destinations and customers"
+    }
+   ],
+   "evidenz": "FACT",
+   "evidenz_basis": "Freigegebener Fluss; Entscheidung Eddie Sablah 2026-11-16 (analysis/rohstoffe/fakt-entscheidung.json)",
+   "flow_id": "GRF-02",
+   "freigabe": "FREIGEGEBEN",
+   "freigabe_herkunft": "Claude (delegiert durch Eddie Sablah); Prüfbericht pruefbericht-2026-11-09.pdf",
+   "id": "V2",
+   "menge": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+    "pro_jahr": null,
+    "quelle_text": null,
+    "rechnung": "",
+    "t": null,
+    "text": "unbekannt"
+   },
+   "menge_annahme": {
+    "annahme_id": "A-GR-MENGE",
+    "einheit": "t Graphit",
+    "evidenz": "ANNAHME",
+    "grund": "Annahme A-GR-MENGE: Förderung Balama: 40 000 t Graphit pro Jahr, Balama (Syrah): Kampagnenbetrieb, 2025 stark gedrosselt (Quartale an Vidalia 0,0 kt laut Hauptatlas); Mosambik 60 000 t laut USGS, Balama rund zwei Drittel (Schätzung); 4 Abnehmer, Anteil 25 % zu gleichen Teilen.",
+    "konfidenz_text": "0,30 (schwach)",
+    "pro_jahr": true,
+    "quelle": "Annahmen-Atlas Lendrot/atlaslendrot annahmen/graphit-welt.json @ efe91bc",
+    "quelle_url": "https://github.com/Lendrot/atlaslendrot/blob/main/ANNAHMEN_WELT.md#graphit",
+    "regel_text": "Jede Grube bekommt ihre wahrscheinliche Jahresförderung an Naturgraphit, jeder Nadelkoks-Erzeuger seine Menge als Graphit-Äquivalent (Tabelle mengen.quellen). Die Menge fließt durch das Netz und wird an Verzweigungen zu gleichen Teilen aufgeteilt. Naturgraphit wird je Land und weltweit gegen USGS MCS 2026 geprüft, synthetischer Graphit gegen eine eigene Weltgröße.",
+    "t": 10000.0,
+    "text": "≈ 10.000 t Graphit pro Jahr",
+    "welt": "graphit"
+   },
+   "menge_bezug": [],
+   "nach": "S4",
+   "stand": "Geschaeftsjahr 1.1. bis 31.12.2023 (Berichtszeitraum)",
+   "von": "S1",
+   "ware": "Graphitkonzentrat",
+   "wert": {
+    "eur": null,
+    "evidenz": "UNKNOWN",
+    "grund": "Keine gelesene Quelle nennt einen Wert; Menge × Preis ist eine Rechnung und steht nur in der Ansicht „Mit Annahmen“.",
+    "quelle_text": null,
+    "rechnung": "",
+    "text": "unbekannt"
+   },
+   "wert_annahme": {
+    "annahme_art": "RECHNUNG",
+    "eur": 8849557.522123894,
+    "eur_spanne": [
+     8849557.522123894
+    ],
+    "evidenz": "ANNAHME",
+    "preis_basis": "graphit",
+    "preis_datum": null,
+    "preis_quelle": "U.S. Geological Survey, Mineral Commodity Summaries 2026, Graphite (Natural)",
+    "preis_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-graphite.pdf",
+    "preis_zitat": "Price, average unit value of imports, dollars per metric ton at … Flake 1,330 1,200 1,080 1,050 1,000",
+    "rechnung": "10.000 t (Annahme A-GR-MENGE, t Graphit) × 1.000 US$ je t Naturgraphit (Flocken) (Importwert Flocken USA 2025e) = 10 Mio. US$ ÷ EZB-Jahresmittel 2025: 1,1300 US$ je €",
+    "text": "≈ 8,85 Mio. € pro Jahr"
+   }
+  },
+  {
+   "art": "VERARBEITUNG",
+   "art_atlas": "PROCESSES_AT",
+   "auf_globus": true,
+   "aussage": "2023 wurden 9 kt Graphit von Balama an das eigene Anodenwerk Vidalia (USA) geliefert; Vidalia stellt Anodenmaterial aus Balama-Graphit her. Laut Tabelle im Quartalsbericht 6/2026 (S. 3) wurden in den Quartalen zum 30.6.2025 bis 30.6.2026 je 0,0 kt an Vidalia geliefert; der Fluss ruht derzeit.",
+   "belege": [
+    {
+     "fundstelle": "2023 Annual Report, PDF-Seite 14",
+     "herausgeber": "Syrah Resources Limited",
+     "textkopie": "analysis/research/graphit-flows-v1/raw/syr-ar-2023-p14.txt",
+     "url": "https://announcements.asx.com.au/asxpdf/20240325/pdf/061vgw6zdgfyqx.pdf",
+     "zitat": "BALAMA GRAPHITE OPERATION … 85kt natural graphite sold to 3rd party customers and 9kt shipped to Vidalia"
+    },
+    {
+     "fundstelle": "2023 Annual Report, PDF-Seite 29",
+     "herausgeber": "Syrah Resources Limited",
+     "textkopie": "analysis/research/graphit-flows-v1/raw/syr-ar-2023-p29.txt",
+     "url": "https://announcements.asx.com.au/asxpdf/20240325/pdf/061vgw6zdgfyqx.pdf",
+     "zitat": "The GWP of producing AAM from Vidalia, using natural graphite from Balama"
+    },
+    {
+     "fundstelle": "Quarterly Activities Report, three months ending 30 June 2026 (ASX-Mitteilung vom 23.7.2026), PDF-Seite 3",
+     "herausgeber": "Syrah Resources Limited",
+     "textkopie": "analysis/research/graphit-flows-v1/raw/syr-q2-2026-p3.txt",
+     "url": "https://company-announcements.afr.com/asx/syr/fd6aa8e8-8625-11f1-91f8-56ba1befffc4.pdf",
+     "zitat": "Graphite Shipped to Vidalia"
+    }
+   ],
+   "evidenz": "FACT",
+   "evidenz_basis": "Freigegebener Fluss; Entscheidung Eddie Sablah 2026-11-16 (analysis/rohstoffe/fakt-entscheidung.json)",
+   "flow_id": "GRF-03",
+   "freigabe": "FREIGEGEBEN",
+   "freigabe_herkunft": "Claude (delegiert durch Eddie Sablah); Prüfbericht pruefbericht-2026-11-09.pdf",
+   "id": "V3",
+   "menge": {
+    "evidenz": "BELEGT",
+    "grund": null,
+    "pro_jahr": false,
+    "quelle_text": "9.000 t (geliefert)",
+    "rechnung": "",
+    "t": 9000.0,
+    "text": "9.000 t im genannten Zeitraum"
+   },
+   "menge_annahme": null,
+   "menge_bezug": [],
+   "nach": "S8",
+   "stand": "Geschaeftsjahr 1.1. bis 31.12.2023 (Berichtszeitraum)",
+   "von": "S1",
+   "ware": "Naturgraphit (Ausgangsstoff fuer aktives Anodenmaterial)",
+   "wert": {
+    "eur": null,
+    "evidenz": "UNKNOWN",
+    "grund": "Keine gelesene Quelle nennt einen Wert; Menge × Preis ist eine Rechnung und steht nur in der Ansicht „Mit Annahmen“.",
+    "quelle_text": null,
+    "rechnung": "",
+    "text": "unbekannt"
+   },
+   "wert_annahme": {
+    "annahme_art": "RECHNUNG",
+    "eur": 7964601.769911505,
+    "eur_spanne": [
+     7964601.769911505
+    ],
+    "evidenz": "ANNAHME",
+    "preis_basis": "graphit",
+    "preis_datum": null,
+    "preis_quelle": "U.S. Geological Survey, Mineral Commodity Summaries 2026, Graphite (Natural)",
+    "preis_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-graphite.pdf",
+    "preis_zitat": "Price, average unit value of imports, dollars per metric ton at … Flake 1,330 1,200 1,080 1,050 1,000",
+    "rechnung": "9.000 t (belegte Menge) × 1.000 US$ je t Naturgraphit (Flocken) (Importwert Flocken USA 2025e) = 9 Mio. US$ ÷ EZB-Jahresmittel 2025: 1,1300 US$ je €",
+    "text": "≈ 7,96 Mio. € im genannten Zeitraum"
+   }
+  },
+  {
+   "art": "HANDEL",
+   "art_atlas": "OFFTAKE_AGREEMENT",
+   "auf_globus": false,
+   "aussage": "Verbindlicher Abnahmevertrag (1.3.2024) ueber Naturgraphit-Feinflocken aus Balama an POSCO Future M, bis 2 kt/Monat im ersten Jahr, danach 2 bis 5 kt/Monat nach Wahl von POSCO Future M, Laufzeit 6 Jahre ab Mitteilung; die Mitteilung musste bis 31.12.2025 erfolgen. Ob der Vertrag begonnen hat: UNKNOWN.",
+   "belege": [
+    {
+     "fundstelle": "Syrah signs Balama binding offtake with Posco Future M (ASX-Mitteilung), PDF-Seite 1",
+     "herausgeber": "Syrah Resources Limited",
+     "textkopie": "analysis/research/graphit-flows-v1/raw/syr-posco-2024-p1.txt",
+     "url": "https://announcements.asx.com.au/asxpdf/20240301/pdf/0611fqnfxpgt3f.pdf",
+     "zitat": "binding offtake agreement with to Posco Future M Co., Ltd … for natural graphite fines from Syrah … Balama Graphite Operations … Notification of commencement from Posco Future M must occur on or before 31 December 2025"
+    }
+   ],
+   "evidenz": "FACT",
+   "evidenz_basis": "Freigegebener Fluss; Entscheidung Eddie Sablah 2026-11-16 (analysis/rohstoffe/fakt-entscheidung.json)",
+   "flow_id": "GRF-04",
+   "freigabe": "FREIGEGEBEN",
+   "freigabe_herkunft": "Claude (delegiert durch Eddie Sablah); Prüfbericht pruefbericht-2026-11-09.pdf",
+   "id": "V4",
+   "menge": {
+    "evidenz": "BELEGT",
+    "grund": null,
+    "pro_jahr": true,
+    "quelle_text": "60.000 t/a (bis zu)",
+    "rechnung": "",
+    "t": 60000.0,
+    "text": "60.000 t pro Jahr"
+   },
+   "menge_annahme": null,
+   "menge_bezug": [],
+   "nach": "S7",
+   "stand": null,
+   "von": "S1",
+   "ware": "Naturgraphit (Feinflocken)",
+   "wert": {
+    "eur": null,
+    "evidenz": "UNKNOWN",
+    "grund": "Keine gelesene Quelle nennt einen Wert; Menge × Preis ist eine Rechnung und steht nur in der Ansicht „Mit Annahmen“.",
+    "quelle_text": null,
+    "rechnung": "",
+    "text": "unbekannt"
+   },
+   "wert_annahme": {
+    "annahme_art": "RECHNUNG",
+    "eur": 53097345.132743366,
+    "eur_spanne": [
+     53097345.132743366
+    ],
+    "evidenz": "ANNAHME",
+    "preis_basis": "graphit",
+    "preis_datum": null,
+    "preis_quelle": "U.S. Geological Survey, Mineral Commodity Summaries 2026, Graphite (Natural)",
+    "preis_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-graphite.pdf",
+    "preis_zitat": "Price, average unit value of imports, dollars per metric ton at … Flake 1,330 1,200 1,080 1,050 1,000",
+    "rechnung": "60.000 t (belegte Menge) × 1.000 US$ je t Naturgraphit (Flocken) (Importwert Flocken USA 2025e) = 60 Mio. US$ ÷ EZB-Jahresmittel 2025: 1,1300 US$ je €",
+    "text": "≈ 53,1 Mio. € pro Jahr"
+   }
+  },
+  {
+   "art": "HANDEL",
+   "art_atlas": "OFFTAKE_AGREEMENT",
+   "auf_globus": true,
+   "aussage": "Abnahmevertrag von Syrah mit Tesla ueber Anodenmaterial aus dem Werk Vidalia. Tesla machte 2025 eine Vertragsverletzung geltend; laut Quartalsbericht 6/2026 ist dies beigelegt. Kommerzielle Lieferungen hatten bis 30.6.2026 nicht begonnen (Qualifizierung laeuft).",
+   "belege": [
+    {
+     "fundstelle": "Tesla offtake alleged default cure date extended (ASX-Mitteilung), PDF-Seite 1",
+     "herausgeber": "Syrah Resources Limited",
+     "textkopie": "analysis/research/graphit-flows-v1/raw/syr-tesla-2025-09-p1.txt",
+     "url": "https://announcements.asx.com.au/asxpdf/20250917/pdf/06p9sspgbz54q0.pdf",
+     "zitat": "offtake agreement … with Tesla, Inc. … for the supply of natural graphite active anode material … from Syrah … 11.25ktpa AAM facility in Vidalia, Louisiana"
+    },
+    {
+     "fundstelle": "Quarterly Activities Report, three months ending 30 June 2026 (ASX-Mitteilung vom 23.7.2026), PDF-Seite 3",
+     "herausgeber": "Syrah Resources Limited",
+     "textkopie": "analysis/research/graphit-flows-v1/raw/syr-q2-2026-p3.txt",
+     "url": "https://company-announcements.afr.com/asx/syr/fd6aa8e8-8625-11f1-91f8-56ba1befffc4.pdf",
+     "zitat": "Syrah has offtake agreements with Tesla, Inc"
+    },
+    {
+     "fundstelle": "Quarterly Activities Report, three months ending 30 June 2026 (ASX-Mitteilung vom 23.7.2026), PDF-Seite 4",
+     "herausgeber": "Syrah Resources Limited",
+     "textkopie": "analysis/research/graphit-flows-v1/raw/syr-q2-2026-p4.txt",
+     "url": "https://company-announcements.afr.com/asx/syr/fd6aa8e8-8625-11f1-91f8-56ba1befffc4.pdf",
+     "zitat": "the alleged default of the Tesla offtake agreement was resolved … Syrah is targeting the commencement of commercial AAM sales from Vidalia in the second half of 2026"
+    }
+   ],
+   "evidenz": "FACT",
+   "evidenz_basis": "Freigegebener Fluss; Entscheidung Eddie Sablah 2026-11-16 (analysis/rohstoffe/fakt-entscheidung.json)",
+   "flow_id": "GRF-05",
+   "freigabe": "FREIGEGEBEN",
+   "freigabe_herkunft": "Claude (delegiert durch Eddie Sablah); Prüfbericht pruefbericht-2026-11-09.pdf",
+   "id": "V5",
+   "menge": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+    "pro_jahr": null,
+    "quelle_text": null,
+    "rechnung": "",
+    "t": null,
+    "text": "unbekannt"
+   },
+   "menge_annahme": {
+    "annahme_id": "A-GR-MENGE",
+    "einheit": "t Graphit",
+    "evidenz": "ANNAHME",
+    "grund": "Annahme A-GR-MENGE: Durchsatz Vidalia Active Anode Material Facility (Syrah) 10 000 t Graphit pro Jahr (Summe der Zuflüsse im Netz); 2 Abnehmer, Anteil 50 % zu gleichen Teilen.",
+    "konfidenz_text": "0,30 (schwach)",
+    "pro_jahr": true,
+    "quelle": "Annahmen-Atlas Lendrot/atlaslendrot annahmen/graphit-welt.json @ efe91bc",
+    "quelle_url": "https://github.com/Lendrot/atlaslendrot/blob/main/ANNAHMEN_WELT.md#graphit",
+    "regel_text": "Jede Grube bekommt ihre wahrscheinliche Jahresförderung an Naturgraphit, jeder Nadelkoks-Erzeuger seine Menge als Graphit-Äquivalent (Tabelle mengen.quellen). Die Menge fließt durch das Netz und wird an Verzweigungen zu gleichen Teilen aufgeteilt. Naturgraphit wird je Land und weltweit gegen USGS MCS 2026 geprüft, synthetischer Graphit gegen eine eigene Weltgröße.",
+    "t": 5000.0,
+    "text": "≈ 5.000 t Graphit pro Jahr",
+    "welt": "graphit"
+   },
+   "menge_bezug": [],
+   "nach": "S11",
+   "stand": "Mitteilung vom 17.9.2025 (Vertrag laut Quelle in Kraft)",
+   "von": "S8",
+   "ware": "Aktives Anodenmaterial aus Naturgraphit (AAM)",
+   "wert": {
+    "eur": null,
+    "evidenz": "UNKNOWN",
+    "grund": "Keine gelesene Quelle nennt einen Wert; Menge × Preis ist eine Rechnung und steht nur in der Ansicht „Mit Annahmen“.",
+    "quelle_text": null,
+    "rechnung": "",
+    "text": "unbekannt"
+   },
+   "wert_annahme": {
+    "annahme_art": "RECHNUNG",
+    "eur": 4424778.761061947,
+    "eur_spanne": [
+     4424778.761061947
+    ],
+    "evidenz": "ANNAHME",
+    "preis_basis": "graphit",
+    "preis_datum": null,
+    "preis_quelle": "U.S. Geological Survey, Mineral Commodity Summaries 2026, Graphite (Natural)",
+    "preis_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-graphite.pdf",
+    "preis_zitat": "Price, average unit value of imports, dollars per metric ton at … Flake 1,330 1,200 1,080 1,050 1,000",
+    "rechnung": "5.000 t (Annahme A-GR-MENGE, t Graphit) × 1.000 US$ je t Naturgraphit (Flocken) (Importwert Flocken USA 2025e) = 5 Mio. US$ ÷ EZB-Jahresmittel 2025: 1,1300 US$ je €",
+    "text": "≈ 4,42 Mio. € pro Jahr"
+   }
+  },
+  {
+   "art": "HANDEL",
+   "art_atlas": "OFFTAKE_AGREEMENT",
+   "auf_globus": true,
+   "aussage": "Mehrjaehriger verbindlicher Liefervertrag (2025) mit Lucid ueber Anodenmaterial aus Vidalia; Lieferbeginn war fuer Januar 2026 erwartet, laut Quartalsbericht 6/2026 hatten kommerzielle Lieferungen noch nicht begonnen.",
+   "belege": [
+    {
+     "fundstelle": "Syrah reports 2024 full year results (ASX-Mitteilung), PDF-Seite 3",
+     "herausgeber": "Syrah Resources Limited",
+     "textkopie": "analysis/research/graphit-flows-v1/raw/syr-fy-2024-p3.txt",
+     "url": "https://announcements.asx.com.au/asxpdf/20250324/pdf/06gxq03hsz3qwj.pdf",
+     "zitat": "Syrah executed a multi-year binding supply agreement with Lucid Group, Inc for … the supply of natural graphite AAM from Vidalia, USA, with deliveries expected to commence in January 2026"
+    },
+    {
+     "fundstelle": "Quarterly Activities Report, three months ending 30 June 2026 (ASX-Mitteilung vom 23.7.2026), PDF-Seite 3",
+     "herausgeber": "Syrah Resources Limited",
+     "textkopie": "analysis/research/graphit-flows-v1/raw/syr-q2-2026-p3.txt",
+     "url": "https://company-announcements.afr.com/asx/syr/fd6aa8e8-8625-11f1-91f8-56ba1befffc4.pdf",
+     "zitat": "Lucid Group, Inc."
+    },
+    {
+     "fundstelle": "Quarterly Activities Report, three months ending 30 June 2026 (ASX-Mitteilung vom 23.7.2026), PDF-Seite 4",
+     "herausgeber": "Syrah Resources Limited",
+     "textkopie": "analysis/research/graphit-flows-v1/raw/syr-q2-2026-p4.txt",
+     "url": "https://company-announcements.afr.com/asx/syr/fd6aa8e8-8625-11f1-91f8-56ba1befffc4.pdf",
+     "zitat": "Syrah is targeting the commencement of commercial AAM sales from Vidalia in the second half of 2026"
+    }
+   ],
+   "evidenz": "FACT",
+   "evidenz_basis": "Freigegebener Fluss; Entscheidung Eddie Sablah 2026-11-16 (analysis/rohstoffe/fakt-entscheidung.json)",
+   "flow_id": "GRF-06",
+   "freigabe": "FREIGEGEBEN",
+   "freigabe_herkunft": "Claude (delegiert durch Eddie Sablah); Prüfbericht pruefbericht-2026-11-09.pdf",
+   "id": "V6",
+   "menge": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+    "pro_jahr": null,
+    "quelle_text": null,
+    "rechnung": "",
+    "t": null,
+    "text": "unbekannt"
+   },
+   "menge_annahme": {
+    "annahme_id": "A-GR-MENGE",
+    "einheit": "t Graphit",
+    "evidenz": "ANNAHME",
+    "grund": "Annahme A-GR-MENGE: Durchsatz Vidalia Active Anode Material Facility (Syrah) 10 000 t Graphit pro Jahr (Summe der Zuflüsse im Netz); 2 Abnehmer, Anteil 50 % zu gleichen Teilen.",
+    "konfidenz_text": "0,30 (schwach)",
+    "pro_jahr": true,
+    "quelle": "Annahmen-Atlas Lendrot/atlaslendrot annahmen/graphit-welt.json @ efe91bc",
+    "quelle_url": "https://github.com/Lendrot/atlaslendrot/blob/main/ANNAHMEN_WELT.md#graphit",
+    "regel_text": "Jede Grube bekommt ihre wahrscheinliche Jahresförderung an Naturgraphit, jeder Nadelkoks-Erzeuger seine Menge als Graphit-Äquivalent (Tabelle mengen.quellen). Die Menge fließt durch das Netz und wird an Verzweigungen zu gleichen Teilen aufgeteilt. Naturgraphit wird je Land und weltweit gegen USGS MCS 2026 geprüft, synthetischer Graphit gegen eine eigene Weltgröße.",
+    "t": 5000.0,
+    "text": "≈ 5.000 t Graphit pro Jahr",
+    "welt": "graphit"
+   },
+   "menge_bezug": [],
+   "nach": "S10",
+   "stand": "Geschaeftsjahr 2024, Mitteilung vom 24.3.2025 (Vertrag laut Quelle in Kraft)",
+   "von": "S8",
+   "ware": "Aktives Anodenmaterial aus Naturgraphit (AAM)",
+   "wert": {
+    "eur": null,
+    "evidenz": "UNKNOWN",
+    "grund": "Keine gelesene Quelle nennt einen Wert; Menge × Preis ist eine Rechnung und steht nur in der Ansicht „Mit Annahmen“.",
+    "quelle_text": null,
+    "rechnung": "",
+    "text": "unbekannt"
+   },
+   "wert_annahme": {
+    "annahme_art": "RECHNUNG",
+    "eur": 4424778.761061947,
+    "eur_spanne": [
+     4424778.761061947
+    ],
+    "evidenz": "ANNAHME",
+    "preis_basis": "graphit",
+    "preis_datum": null,
+    "preis_quelle": "U.S. Geological Survey, Mineral Commodity Summaries 2026, Graphite (Natural)",
+    "preis_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-graphite.pdf",
+    "preis_zitat": "Price, average unit value of imports, dollars per metric ton at … Flake 1,330 1,200 1,080 1,050 1,000",
+    "rechnung": "5.000 t (Annahme A-GR-MENGE, t Graphit) × 1.000 US$ je t Naturgraphit (Flocken) (Importwert Flocken USA 2025e) = 5 Mio. US$ ÷ EZB-Jahresmittel 2025: 1,1300 US$ je €",
+    "text": "≈ 4,42 Mio. € pro Jahr"
+   }
+  },
+  {
+   "art": "HANDEL",
+   "art_atlas": "OFFTAKE_AGREEMENT",
+   "auf_globus": true,
+   "aussage": "Mehrjaehriger verbindlicher Abnahmevertrag (Quartal 7-9/2023) ueber Naturgraphit aus Balama zur Lieferung in die USA an Westwater Resources; Mengen steigend ab 2024 nur bei erreichten Meilensteinen. Am 2.4.2026 nennt Syrah den Vertrag weiter als bestehend. Ob und wie viel geliefert wurde: UNKNOWN.",
+   "belege": [
+    {
+     "fundstelle": "Quarterly Activities Report, three months ending 30 September 2023 (ASX-Mitteilung vom 17.10.2023), PDF-Seite 6",
+     "herausgeber": "Syrah Resources Limited",
+     "textkopie": "analysis/research/graphit-flows-v1/raw/syr-q3-2023-p6.txt",
+     "url": "https://announcements.asx.com.au/asxpdf/20231017/pdf/05w4c8xyhlml9c.pdf",
+     "zitat": "executing multi-year binding offtake agreements for Balama natural graphite supply into the USA … Westwater Resources, Inc. (NYSE American: WWR) … options for escalating volumes from 2024 subject to achievement of project and operational milestones"
+    },
+    {
+     "fundstelle": "Opening of Retail Entitlement Offer / Retail Offer Booklet mit Investorenpraesentation (ASX-Mitteilung vom 2.4.2026), PDF-Seite 65",
+     "herausgeber": "Syrah Resources Limited",
+     "textkopie": "analysis/research/graphit-flows-v1/raw/syr-offer-2026-p65.txt",
+     "url": "https://announcements.asx.com.au/asxpdf/20260402/pdf/06y2yvthb7xhc7.pdf",
+     "zitat": "Significant progress contracting Balama volumes ex-China through offtakes with POSCO (24-60ktpa), NextSource (up to ~7ktpa3), Westwater"
+    }
+   ],
+   "evidenz": "FACT",
+   "evidenz_basis": "Freigegebener Fluss; Entscheidung Eddie Sablah 2026-11-16 (analysis/rohstoffe/fakt-entscheidung.json)",
+   "flow_id": "GRF-07",
+   "freigabe": "FREIGEGEBEN",
+   "freigabe_herkunft": "Claude (delegiert durch Eddie Sablah); Prüfbericht pruefbericht-runde2-2026-11-09.pdf",
+   "id": "V7",
+   "menge": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+    "pro_jahr": null,
+    "quelle_text": null,
+    "rechnung": "",
+    "t": null,
+    "text": "unbekannt"
+   },
+   "menge_annahme": null,
+   "menge_bezug": [],
+   "nach": "S9",
+   "stand": "Quartal 1.7. bis 30.9.2023 (Vertrag laut Quelle in Kraft)",
+   "von": "S1",
+   "ware": "Naturgraphit (Feinflocken) fuer AAM-Werk",
+   "wert": {
+    "eur": null,
+    "evidenz": "UNKNOWN",
+    "grund": "Keine gelesene Quelle nennt einen Wert; Menge × Preis ist eine Rechnung und steht nur in der Ansicht „Mit Annahmen“.",
+    "quelle_text": null,
+    "rechnung": "",
+    "text": "unbekannt"
+   },
+   "wert_annahme": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine Menge, auch keine Annahme.",
+    "text": "unbekannt"
+   }
+  },
+  {
+   "art": "HANDEL",
+   "art_atlas": "OFFTAKE_AGREEMENT",
+   "auf_globus": false,
+   "aussage": "Mehrjaehriger verbindlicher Abnahmevertrag (Quartal 7-9/2023) ueber Naturgraphit aus Balama zur Lieferung in die USA an eine 100-%-Tochter von Graphex Group; Mengen steigend ab 2024 nur bei erreichten Meilensteinen. In der Aufzaehlung der Abnahmevertraege vom 2.4.2026 ist Graphex nicht mehr genannt; heutiger Stand des Vertrags und Lieferungen: UNKNOWN.",
+   "belege": [
+    {
+     "fundstelle": "Quarterly Activities Report, three months ending 30 September 2023 (ASX-Mitteilung vom 17.10.2023), PDF-Seite 6",
+     "herausgeber": "Syrah Resources Limited",
+     "textkopie": "analysis/research/graphit-flows-v1/raw/syr-q3-2023-p6.txt",
+     "url": "https://announcements.asx.com.au/asxpdf/20231017/pdf/05w4c8xyhlml9c.pdf",
+     "zitat": "executing multi-year binding offtake agreements for Balama natural graphite supply into the USA with a wholly-owned subsidiary of Graphex Group Limited … options for escalating volumes from 2024 subject to achievement of project and operational milestones"
+    }
+   ],
+   "evidenz": "FACT",
+   "evidenz_basis": "Freigegebener Fluss; Entscheidung Eddie Sablah 2026-11-16 (analysis/rohstoffe/fakt-entscheidung.json)",
+   "flow_id": "GRF-08",
+   "freigabe": "FREIGEGEBEN",
+   "freigabe_herkunft": "Claude (delegiert durch Eddie Sablah); Prüfbericht pruefbericht-runde2-2026-11-09.pdf",
+   "id": "V8",
+   "menge": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+    "pro_jahr": null,
+    "quelle_text": null,
+    "rechnung": "",
+    "t": null,
+    "text": "unbekannt"
+   },
+   "menge_annahme": null,
+   "menge_bezug": [],
+   "nach": "S3",
+   "stand": null,
+   "von": "S1",
+   "ware": "Naturgraphit fuer AAM-Werk",
+   "wert": {
+    "eur": null,
+    "evidenz": "UNKNOWN",
+    "grund": "Keine gelesene Quelle nennt einen Wert; Menge × Preis ist eine Rechnung und steht nur in der Ansicht „Mit Annahmen“.",
+    "quelle_text": null,
+    "rechnung": "",
+    "text": "unbekannt"
+   },
+   "wert_annahme": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine Menge, auch keine Annahme.",
+    "text": "unbekannt"
+   }
+  },
+  {
+   "art": "HANDEL",
+   "art_atlas": "OFFTAKE_AGREEMENT",
+   "auf_globus": true,
+   "aussage": "Abnahmevertrag Balama -> NextSource mit Laufzeit sieben Jahre und insgesamt bis rund 68 kt (im Mittel bis rund 7 kt/a), Stand 2.4.2026. Lieferbeginn: UNKNOWN.",
+   "belege": [
+    {
+     "fundstelle": "Opening of Retail Entitlement Offer / Retail Offer Booklet mit Investorenpraesentation (ASX-Mitteilung vom 2.4.2026), PDF-Seite 65",
+     "herausgeber": "Syrah Resources Limited",
+     "textkopie": "analysis/research/graphit-flows-v1/raw/syr-offer-2026-p65.txt",
+     "url": "https://announcements.asx.com.au/asxpdf/20260402/pdf/06y2yvthb7xhc7.pdf",
+     "zitat": "Significant progress contracting Balama volumes ex-China through offtakes with POSCO (24-60ktpa), NextSource (up to ~7ktpa3) … Average annual volumes based on an up to ~68kt in aggregate volume and seven-year term"
+    }
+   ],
+   "evidenz": "FACT",
+   "evidenz_basis": "Freigegebener Fluss; Entscheidung Eddie Sablah 2026-11-16 (analysis/rohstoffe/fakt-entscheidung.json)",
+   "flow_id": "GRF-09",
+   "freigabe": "FREIGEGEBEN",
+   "freigabe_herkunft": "Claude (delegiert durch Eddie Sablah); Prüfbericht pruefbericht-runde2-2026-11-09.pdf",
+   "id": "V9",
+   "menge": {
+    "evidenz": "BELEGT",
+    "grund": null,
+    "pro_jahr": true,
+    "quelle_text": "68.000 t gesamt (7 Jahre) (bis zu)",
+    "rechnung": "Vertragssumme 68.000 t ÷ 7 Jahre = 9.714,286 t pro Jahr",
+    "t": 9714.286,
+    "text": "9.714 t pro Jahr"
+   },
+   "menge_annahme": null,
+   "menge_bezug": [],
+   "nach": "S6",
+   "stand": "Stand 2.4.2026 (Vertrag laut Quelle in Kraft)",
+   "von": "S1",
+   "ware": "Naturgraphit aus Balama",
+   "wert": {
+    "eur": null,
+    "evidenz": "UNKNOWN",
+    "grund": "Keine gelesene Quelle nennt einen Wert; Menge × Preis ist eine Rechnung und steht nur in der Ansicht „Mit Annahmen“.",
+    "quelle_text": null,
+    "rechnung": "",
+    "text": "unbekannt"
+   },
+   "wert_annahme": {
+    "annahme_art": "RECHNUNG",
+    "eur": 8596713.274336284,
+    "eur_spanne": [
+     8596713.274336284
+    ],
+    "evidenz": "ANNAHME",
+    "preis_basis": "graphit",
+    "preis_datum": null,
+    "preis_quelle": "U.S. Geological Survey, Mineral Commodity Summaries 2026, Graphite (Natural)",
+    "preis_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-graphite.pdf",
+    "preis_zitat": "Price, average unit value of imports, dollars per metric ton at … Flake 1,330 1,200 1,080 1,050 1,000",
+    "rechnung": "9.714 t (belegte Menge) × 1.000 US$ je t Naturgraphit (Flocken) (Importwert Flocken USA 2025e) = 9,71 Mio. US$ ÷ EZB-Jahresmittel 2025: 1,1300 US$ je €",
+    "text": "≈ 8,6 Mio. € pro Jahr"
+   }
+  },
+  {
+   "art": "LIEFERUNG",
+   "art_atlas": "SUPPLIES",
+   "auf_globus": false,
+   "aussage": "Im Quartal 10-12/2025 verkaufte Syrah Naturgraphit im Spotgeschaeft an BTR (Werk in Indonesien); im selben Quartal gingen zwei grosse Massengut-Ladungen nach Indonesien zur AAM-Produktion. Menge an BTR: UNKNOWN.",
+   "belege": [
+    {
+     "fundstelle": "Quarterly Activities Report, three months ending 31 December 2025 (ASX-Mitteilung vom 28.1.2026), PDF-Seite 3",
+     "herausgeber": "Syrah Resources Limited",
+     "textkopie": "analysis/research/graphit-flows-v1/raw/syr-q4-2025-p3.txt",
+     "url": "https://company-announcements.afr.com/asx/syr/56ec0fd5-fbcb-11f0-9941-b6faa6530329.pdf",
+     "zitat": "Syrah completed two large volume breakbulk shipments to Indonesia during the quarter for consumption in ex-China AAM production … BTR New Materials Group Co Ltd (“BTR”) in Indonesia … Beyond spot sales to BTR"
+    }
+   ],
+   "evidenz": "FACT",
+   "evidenz_basis": "Freigegebener Fluss; Entscheidung Eddie Sablah 2026-11-16 (analysis/rohstoffe/fakt-entscheidung.json)",
+   "flow_id": "GRF-10",
+   "freigabe": "FREIGEGEBEN",
+   "freigabe_herkunft": "Claude (delegiert durch Eddie Sablah); Prüfbericht pruefbericht-runde2-2026-11-09.pdf",
+   "id": "V10",
+   "menge": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+    "pro_jahr": null,
+    "quelle_text": null,
+    "rechnung": "",
+    "t": null,
+    "text": "unbekannt"
+   },
+   "menge_annahme": null,
+   "menge_bezug": [],
+   "nach": "S2",
+   "stand": null,
+   "von": "S1",
+   "ware": "Naturgraphit (Feinflocken) fuer AAM-Produktion",
+   "wert": {
+    "eur": null,
+    "evidenz": "UNKNOWN",
+    "grund": "Keine gelesene Quelle nennt einen Wert; Menge × Preis ist eine Rechnung und steht nur in der Ansicht „Mit Annahmen“.",
+    "quelle_text": null,
+    "rechnung": "",
+    "text": "unbekannt"
+   },
+   "wert_annahme": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine Menge, auch keine Annahme.",
+    "text": "unbekannt"
+   }
+  }
+ ],
+ "weltreferenz": {
+  "grund": null,
+  "quelle": "Mineral Commodity Summaries 2026, Graphite",
+  "status": "FREIGEGEBEN",
+  "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-graphite.pdf"
+ },
+ "zaehler": {
+  "ausfall_mit_ausweich_menge": 9,
+  "belege": 17,
+  "eigentum_belegt": 4,
+  "eigentum_kandidaten": 1,
+  "eigentumskette_freigegeben": 2,
+  "eigentumskette_kanten": 0,
+  "eigentumskette_vollstaendig": 2,
+  "glieder_mit_ausweichquelle": 10,
+  "kette_stufen": 3,
+  "mengen_belegt": 4,
+  "mengen_bezug": 0,
+  "mengen_freigegeben": 0,
+  "mengen_in_tonnen": 3,
+  "mengen_mit_annahmen": 7,
+  "risiko_belegt": 1,
+  "risikoebene_belegt": 34,
+  "risikoebene_felder": 44,
+  "standorte": 11,
+  "standorte_mit_ort": 8,
+  "tiefe_belegt": 29,
+  "tiefe_gesamt": 66,
+  "tiefe_mit_annahmen": 40,
+  "verbindungen": 10,
+  "verbindungen_auf_globus": 7,
+  "verbindungen_freigegeben": 10,
+  "werte_belegt": 0,
+  "werte_in_euro": 0,
+  "werte_mit_annahmen": 7
+ }
+}

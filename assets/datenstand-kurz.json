@@ -9,39 +9,45 @@
  "schema": "atlas.datenstand-kurz/1",
  "taeglich": {
   "kupfer": {
-   "abgerufen": "2026-11-11",
-   "datum": "2026-11-10",
-   "drei_monate_usd_t": 13830.0,
+   "abgerufen": "2026-11-16",
+   "datum": "2026-11-13",
+   "drei_monate_usd_t": 13545.0,
    "herausgeber": "London Metal Exchange (LME), wiedergegeben von Westmetall",
-   "kasse_eur_t": 12477.26,
-   "kasse_usd_t": 13992.0,
-   "kurs_datum": "2026-11-10",
-   "kurs_usd_je_eur": 1.1214,
-   "lagerbestand_t": 316625,
+   "kasse_eur_t": 12314.51,
+   "kasse_usd_t": 13610.0,
+   "kurs_datum": "2026-11-13",
+   "kurs_usd_je_eur": 1.1052,
+   "lagerbestand_t": 329100,
    "quelle_url": "https://www.westmetall.com/en/markdaten.php?action=table&field=LME_Cu_cash",
-   "veraenderung_kasse_pct": -0.27
+   "veraenderung_kasse_pct": -0.74
   },
   "meldungen": {
-   "abgerufen": "2026-11-11",
+   "abgerufen": "2026-11-16",
    "anzahl_14_tage": 0,
    "hinweis": "Presse-Meldungen, automatisch gefunden. Nur Hinweise auf moegliche Engpaesse, nie Fakten oder Freigaben.",
    "neueste": []
   },
   "quellen": [
    {
-    "abgerufen": "2026-11-12",
+    "abgerufen": "2026-11-16",
     "id": "ezb-referenzkurs-usd",
     "status": "GELADEN",
     "titel": "EZB-Referenzkurs US-Dollar je Euro (täglich, über Eurostat ert_bil_eur_d)"
    },
    {
-    "abgerufen": "2026-11-11",
+    "abgerufen": "2026-11-16",
     "id": "gdelt-engpass-meldungen",
     "status": "TEILWEISE",
     "titel": "Presse-Meldungen zu Lieferengpässen (täglich, GDELT, nur Hinweise)"
    },
    {
-    "abgerufen": "2026-11-11",
+    "abgerufen": "2026-11-16",
+    "id": "lbma-gold-westmetall",
+    "status": "GELADEN",
+    "titel": "Gold London Fixing (LBMA), US$ je Feinunze (täglich, über Westmetall)"
+   },
+   {
+    "abgerufen": "2026-11-16",
     "id": "lme-kupfer-westmetall",
     "status": "GELADEN",
     "titel": "LME Kupfer: Kassakurs, 3-Monats-Kurs und Lagerbestand (täglich, über Westmetall)"
@@ -52,31 +58,31 @@
  "woechentlich": {
   "geladen": [
    {
-    "abgerufen": "2026-11-10",
+    "abgerufen": "2026-11-16",
     "id": "eurostat-comext-eu-einfuhr",
     "status": "GELADEN",
     "titel": "Eurostat Comext: EU-Einfuhren kritischer Rohstoffe nach Herkunftsland (monatlich)"
    },
    {
-    "abgerufen": "2026-11-10",
+    "abgerufen": "2026-11-16",
     "id": "gleif-lei",
     "status": "GELADEN",
     "titel": "GLEIF: LEI-Einträge der Atlas-Firmen (Name, Status, Handelsregister)"
    },
    {
-    "abgerufen": "2026-11-10",
+    "abgerufen": "2026-11-16",
+    "id": "sanktionen-eu",
+    "status": "GELADEN",
+    "titel": "EU-Finanzsanktionsliste"
+   },
+   {
+    "abgerufen": "2026-11-16",
     "id": "wikidata-boersenfirmen",
     "status": "GELADEN",
     "titel": "Wikidata: börsennotierte Firmen mit Hauptsitz (Abgleich mit dem Globus)"
    }
   ],
   "gesperrt": [
-   {
-    "abgerufen": null,
-    "id": "sanktionen-eu",
-    "status": "GESPERRT",
-    "titel": "EU-Finanzsanktionsliste"
-   },
    {
     "abgerufen": null,
     "id": "sanktionen-ofac",
@@ -86,7 +92,7 @@
    {
     "abgerufen": null,
     "id": "sanktionen-uk",
-    "status": "GESPERRT",
+    "status": "FEHLER",
     "titel": "UK-Sanktionsliste"
    },
    {
@@ -108,7 +114,7 @@
     "titel": "Weltbank Rohstoffpreise (Pink Sheet, monatlich)"
    }
   ],
-  "letzter_lauf": "2026-11-10",
+  "letzter_lauf": "2026-11-16",
   "text": "Wöchentlich automatisch neu gelesen; Änderungen werden Prüfaufträge, nie Freigaben."
  }
 }

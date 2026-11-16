@@ -376,7 +376,7 @@ export async function kartenBild(rahmen, quelle = '/assets/earth-blue-marble.jpg
     return {bytes, w: c.width, h: c.height};
   } catch { return null; }
 }
-function karte(seite, daten, opt, x, y, w, h, rahmen, bild) {
+function karte(seite, daten, opt, x, y, w, h, rahmen, bild, {nr = s => nrPdf(daten, s), ballung = null, linien = null} = {}) {   // nr/ballung: Beschriftung je Glied bzw. Ballung (Rohstoffketten)
   const an = opt.ansicht === 'annahmen';
   const px = lon => x + (lon - rahmen.lo0) / (rahmen.lo1 - rahmen.lo0) * w, py = lat => y + (rahmen.la1 - lat) / (rahmen.la1 - rahmen.la0) * h;
   if (bild) seite.bild('Karte', x, y, w, h); else seite.rechteck(x, y, w, h, {fuell: '#2a4a63'});
@@ -405,7 +405,7 @@ function karte(seite, daten, opt, x, y, w, h, rahmen, bild) {
     const cx = px(g.lon), cy = py(g.lat);
     const st = [...new Set(g.st.map(s => s.stufe))].sort((a, b) => a - b);
     // Ballung (mehr als 2 Glieder am selben Ort): nur die Nummern, Namen stehen in der Tabelle darunter
-    const zeilen = g.st.length > 2 ? [`${st[0]}.–${st.at(-1)}. ${g.st[0].kurz.replace(/^\S+\s/, '')} u. a.`] : g.st.map(s => `${nrPdf(daten, s)}. ${s.kurz}`), gr = MINDESTSCHRIFT, lw = Math.max(...zeilen.map(t => breiteVon(t, 'b', gr))) + 6, lh = zeilen.length * gr * 1.22 + 4;
+    const zeilen = g.st.length > 2 ? [ballung ? ballung(g.st) : `${st[0]}.–${st.at(-1)}. ${g.st[0].kurz.replace(/^\S+\s/, '')} u. a.`] : g.st.map(s => `${nr(s)}. ${s.kurz}`), gr = MINDESTSCHRIFT, lw = Math.max(...zeilen.map(t => breiteVon(t, 'b', gr))) + 6, lh = zeilen.length * gr * 1.22 + 4;
     const lagen = [[cx + 7, cy - lh / 2], [cx - 7 - lw, cy - lh / 2], [cx - lw / 2, cy - 7 - lh], [cx - lw / 2, cy + 7], [cx + 7, cy - lh - 2], [cx + 7, cy + 2], [cx - 7 - lw, cy + 2], [cx - 7 - lw, cy - lh - 2]];
     const frei = ([lx, ly]) => lx >= x + 1 && ly >= y + 1 && lx + lw <= x + w - 1 && ly + lh <= y + h - 1
       && !belegt.some(r => lx < r[0] + r[2] + 2 && lx + lw + 2 > r[0] && ly < r[1] + r[3] + 2 && ly + lh + 2 > r[1]);
@@ -418,7 +418,7 @@ function karte(seite, daten, opt, x, y, w, h, rahmen, bild) {
   for (const g of gruppen) seite.kreis(px(g.lon), py(g.lat), 3.2, {fuell: g.st.every(s => s.ort.freigabe !== 'FREIGEGEBEN') ? F.li : '#ffd27a', strich: F.weiss});
   // Legende und Bildnachweis
   // Legende der Linien: eine Zeile unter der Karte (über der Karte würde sie Beschriftungen verdecken)
-  const lg = [[F.cu, null, 'Weiterverarbeitung'], [F.tr, null, 'Transport'], [F.ha, [3, 1.6], 'Handel (kein Warenweg)'], [F.li, [3, 1.6], 'Lieferung, Kandidat']];
+  const lg = linien ? [...linien] : [[F.cu, null, 'Weiterverarbeitung'], [F.tr, null, 'Transport'], [F.ha, [3, 1.6], 'Handel (kein Warenweg)'], [F.li, [3, 1.6], 'Lieferung, Kandidat']];
   if (an) lg.push(['#9aa7b0', [2, 1.6], 'Annahme']);
   let lx = x;
   for (const [c, sd, t] of lg) { seite.linie(lx, y + h + 7, lx + 16, y + h + 7, {c, lw: 1.6, strichel: sd}); seite.text(lx + 19, y + h + 10, t, {gr: MINDESTSCHRIFT, c: F.muted}); lx += 19 + breiteVon(t, 'n', MINDESTSCHRIFT) + 10; }
@@ -598,3 +598,6 @@ export async function gespraechsausdruck(daten, opt) {
     karte: !!bild, ansicht: o.ansicht, ausfall: o.ausfall, y1: Math.round(erg.y1), unten: Math.round(A4.h - 38), texte: erg.seiten.map(s => s.texte.join(" "))};
 }
 export const _intern = {codes, breiteVon, latin1};
+// Bausteine für weitere Gesprächsausdrucke (Rohstoffketten, rohstoffkette-pdf.mjs): gleicher PDF-Schreiber, gleiche Marken,
+// gleiche Mindestschrift, gleiche Karte. Inhalt und Seitenaufbau baut jeder Ausdruck selbst.
+export const _werkzeug = {Seite, T, B, I, M, NL, F, A4, KARTE_ANTEIL, fluss, tabelle, marke, breiteVon, z, blaetter, kartenRahmen, karte, pdfDatei};

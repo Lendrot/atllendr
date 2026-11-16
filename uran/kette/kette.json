@@ -1,0 +1,4070 @@
+{
+ "ausfall": {
+  "S1": {
+   "ausweich": {
+    "grund": null,
+    "liste": [
+     {
+      "art": "NETZ",
+      "fuer": "S5",
+      "glied": "S4",
+      "hinweis": null,
+      "menge": {
+       "evidenz": "UNKNOWN",
+       "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+       "t": null,
+       "text": "unbekannt"
+      },
+      "name": "Zhalpak",
+      "richtung": "ZUFLUSS",
+      "verbindung": "V4"
+     },
+     {
+      "art": "LAND",
+      "fuer": "S1",
+      "glied": null,
+      "hinweis": "Förderung des Landes (Landesebene), keine freie Kapazität und keine bestätigte Lieferbeziehung.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 14309,
+       "text": "14.309 t Inhalt Förderung 2024 (23,8 % der Welt)"
+      },
+      "name": "Kanada",
+      "quelle": {
+       "fundstelle": "Table 'Production from mines (tonnes U)', columns 2023 and 2024",
+       "herausgeber": "World Nuclear Association",
+       "titel": "World Uranium Mining Production (Updated Friday, 23 October 2026)",
+       "url": "https://world-nuclear.org/information-library/nuclear-fuel-cycle/mining-of-uranium/world-uranium-mining-production"
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     },
+     {
+      "art": "LAND",
+      "fuer": "S1",
+      "glied": null,
+      "hinweis": "Förderung des Landes (Landesebene), keine freie Kapazität und keine bestätigte Lieferbeziehung.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 7333,
+       "text": "7.333 t Inhalt Förderung 2024 (12,2 % der Welt)"
+      },
+      "name": "Namibia",
+      "quelle": {
+       "fundstelle": "Table 'Production from mines (tonnes U)', columns 2023 and 2024",
+       "herausgeber": "World Nuclear Association",
+       "titel": "World Uranium Mining Production (Updated Friday, 23 October 2026)",
+       "url": "https://world-nuclear.org/information-library/nuclear-fuel-cycle/mining-of-uranium/world-uranium-mining-production"
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     },
+     {
+      "art": "LAND",
+      "fuer": "S1",
+      "glied": null,
+      "hinweis": "Förderung des Landes (Landesebene), keine freie Kapazität und keine bestätigte Lieferbeziehung.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 4598,
+       "text": "4.598 t Inhalt Förderung 2024 (7,6 % der Welt)"
+      },
+      "name": "Australien",
+      "quelle": {
+       "fundstelle": "Table 'Production from mines (tonnes U)', columns 2023 and 2024",
+       "herausgeber": "World Nuclear Association",
+       "titel": "World Uranium Mining Production (Updated Friday, 23 October 2026)",
+       "url": "https://world-nuclear.org/information-library/nuclear-fuel-cycle/mining-of-uranium/world-uranium-mining-production"
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     },
+     {
+      "art": "STANDORT",
+      "freigabe": "FREIGEGEBEN",
+      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
+      "fuer": "S1",
+      "glied": null,
+      "hinweis": "Andere Uranmine in Kasachstan; eine Lieferbeziehung zu CGN Mining ist nicht belegt. Förderung ist keine freie Kapazität: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt.",
+      "id": "AW-U-KATCO",
+      "lage": null,
+      "land": "KZ",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": null,
+       "text": "3.714 t U Förderung 2025"
+      },
+      "name": "Katco (Minen Tortkuduk und Moinkum, Kasachstan)",
+      "quelle": {
+       "fundstelle": "HTML, Text ohne Tags",
+       "herausgeber": "World Nuclear Association",
+       "titel": "Uranium and Nuclear Power in Kazakhstan (Country Profile)",
+       "url": "https://world-nuclear.org/information-library/country-profiles/countries-g-n/kazakhstan",
+       "zitat": "In 2025 Katco produced 3714 tU, more than any other uranium mining enterprise in Kazakhstan."
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     },
+     {
+      "art": "STANDORT",
+      "freigabe": "FREIGEGEBEN",
+      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
+      "fuer": "S1",
+      "glied": null,
+      "hinweis": "Andere Uranmine; eine Lieferbeziehung ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt.",
+      "id": "AW-U-HUSAB",
+      "lage": {
+       "genauigkeit": "A",
+       "lat": -22.573599,
+       "lon": 15.056954,
+       "quelle": "USGS-GIS 2021, AFR_Mineral_Facilities, FeatureUID NAM008"
+      },
+      "land": "NA",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": null,
+       "text": "Kapazität 4.700 t Uran-Inhalt pro Jahr (USGS Minerals Yearbook 2024)"
+      },
+      "name": "Husab Mine (Erongo, Namibia)",
+      "quelle": {
+       "fundstelle": "MYB-Zeile FAC_NAM0039_01 (Kapazität); GIS AFR_Mineral_Facilities NAM008 (Lage)",
+       "herausgeber": "U.S. Geological Survey",
+       "titel": "Minerals Yearbook 2024, Vol. III (Area Reports: International), Tabelle Facilities; Lage: Compilation of Geospatial Data (GIS) for the Mineral Industries and Related Infrastructure of Africa",
+       "url": "https://www.sciencebase.gov/catalog/item/6a8490171ba49b3133cd8055",
+       "zitat": "Husab Mine · Namibia · Uranium Mine  · 4700 Metric tons (U content) · Assumed active · Swakop Uranium (Pty.) Ltd. · Erongo Region | GIS: Husab Mine · Namibia · Uranium Uranium oxide · 5500 Metric tons · Assumed Active · -22.573599, 15.056954 · Swakop Uranium (Pty) Ltd."
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     },
+     {
+      "art": "STANDORT",
+      "freigabe": "FREIGEGEBEN",
+      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
+      "fuer": "S1",
+      "glied": null,
+      "hinweis": "Andere Uranmine; eine Lieferbeziehung ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt.",
+      "id": "AW-U-ROESSING",
+      "lage": {
+       "genauigkeit": "A",
+       "lat": -22.486178,
+       "lon": 15.052451,
+       "quelle": "USGS-GIS 2021, AFR_Mineral_Facilities, FeatureUID NAM027"
+      },
+      "land": "NA",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": null,
+       "text": "Kapazität 4.100 t Uran-Inhalt pro Jahr (USGS Minerals Yearbook 2024)"
+      },
+      "name": "Rössing Mine (Erongo, Namibia)",
+      "quelle": {
+       "fundstelle": "MYB-Zeile FAC_NAM0038_01 (Kapazität); GIS AFR_Mineral_Facilities NAM027 (Lage)",
+       "herausgeber": "U.S. Geological Survey",
+       "titel": "Minerals Yearbook 2024, Vol. III (Area Reports: International), Tabelle Facilities; Lage: Compilation of Geospatial Data (GIS) for the Mineral Industries and Related Infrastructure of Africa",
+       "url": "https://www.sciencebase.gov/catalog/item/6a8490171ba49b3133cd8055",
+       "zitat": "Rössing Mine · Namibia · Uranium Mine  · 4100 Metric tons (U content) · Assumed active · Rössing Uranium Ltd. · Erongo Region | GIS: Rössing Mine · Namibia · Uranium Uranium oxide · 4800 Metric tons · Assumed Active · -22.486178, 15.052451 · Rössing Uranium Ltd."
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     }
+    ],
+    "mit_menge": 6
+   },
+   "dauer": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine belegte Wiederanlaufzeit."
+   },
+   "ersatz": [
+    {
+     "fuer": "S5",
+     "richtung": "ZUFLUSS",
+     "weitere": [
+      "S4"
+     ]
+    }
+   ],
+   "mehrkosten": {
+    "evidenz": "UNKNOWN",
+    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+   },
+   "mengen": [
+    {
+     "evidenz": "UNKNOWN",
+     "text": "unbekannt",
+     "verbindung": "V3"
+    }
+   ],
+   "ohne_abfluss": [],
+   "ohne_zufluss": [],
+   "tonnen": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+   },
+   "verbindungen_weg": [
+    "V3"
+   ]
+  },
+  "S2": {
+   "ausweich": {
+    "grund": null,
+    "liste": [
+     {
+      "art": "LAND",
+      "fuer": "S2",
+      "glied": null,
+      "hinweis": "Förderung des Landes (Landesebene), keine freie Kapazität und keine bestätigte Lieferbeziehung.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 23270,
+       "text": "23.270 t Inhalt Förderung 2024 (38,6 % der Welt)"
+      },
+      "name": "Kasachstan",
+      "quelle": {
+       "fundstelle": "Table 'Production from mines (tonnes U)', columns 2023 and 2024",
+       "herausgeber": "World Nuclear Association",
+       "titel": "World Uranium Mining Production (Updated Friday, 23 October 2026)",
+       "url": "https://world-nuclear.org/information-library/nuclear-fuel-cycle/mining-of-uranium/world-uranium-mining-production"
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     },
+     {
+      "art": "LAND",
+      "fuer": "S2",
+      "glied": null,
+      "hinweis": "Förderung des Landes (Landesebene), keine freie Kapazität und keine bestätigte Lieferbeziehung.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 14309,
+       "text": "14.309 t Inhalt Förderung 2024 (23,8 % der Welt)"
+      },
+      "name": "Kanada",
+      "quelle": {
+       "fundstelle": "Table 'Production from mines (tonnes U)', columns 2023 and 2024",
+       "herausgeber": "World Nuclear Association",
+       "titel": "World Uranium Mining Production (Updated Friday, 23 October 2026)",
+       "url": "https://world-nuclear.org/information-library/nuclear-fuel-cycle/mining-of-uranium/world-uranium-mining-production"
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     },
+     {
+      "art": "LAND",
+      "fuer": "S2",
+      "glied": null,
+      "hinweis": "Förderung des Landes (Landesebene), keine freie Kapazität und keine bestätigte Lieferbeziehung.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 7333,
+       "text": "7.333 t Inhalt Förderung 2024 (12,2 % der Welt)"
+      },
+      "name": "Namibia",
+      "quelle": {
+       "fundstelle": "Table 'Production from mines (tonnes U)', columns 2023 and 2024",
+       "herausgeber": "World Nuclear Association",
+       "titel": "World Uranium Mining Production (Updated Friday, 23 October 2026)",
+       "url": "https://world-nuclear.org/information-library/nuclear-fuel-cycle/mining-of-uranium/world-uranium-mining-production"
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     },
+     {
+      "art": "STANDORT",
+      "freigabe": "FREIGEGEBEN",
+      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
+      "fuer": "S2",
+      "glied": null,
+      "hinweis": "Andere Uranmine; eine Lieferbeziehung ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt.",
+      "id": "AW-U-HUSAB",
+      "lage": {
+       "genauigkeit": "A",
+       "lat": -22.573599,
+       "lon": 15.056954,
+       "quelle": "USGS-GIS 2021, AFR_Mineral_Facilities, FeatureUID NAM008"
+      },
+      "land": "NA",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": null,
+       "text": "Kapazität 4.700 t Uran-Inhalt pro Jahr (USGS Minerals Yearbook 2024)"
+      },
+      "name": "Husab Mine (Erongo, Namibia)",
+      "quelle": {
+       "fundstelle": "MYB-Zeile FAC_NAM0039_01 (Kapazität); GIS AFR_Mineral_Facilities NAM008 (Lage)",
+       "herausgeber": "U.S. Geological Survey",
+       "titel": "Minerals Yearbook 2024, Vol. III (Area Reports: International), Tabelle Facilities; Lage: Compilation of Geospatial Data (GIS) for the Mineral Industries and Related Infrastructure of Africa",
+       "url": "https://www.sciencebase.gov/catalog/item/6a8490171ba49b3133cd8055",
+       "zitat": "Husab Mine · Namibia · Uranium Mine  · 4700 Metric tons (U content) · Assumed active · Swakop Uranium (Pty.) Ltd. · Erongo Region | GIS: Husab Mine · Namibia · Uranium Uranium oxide · 5500 Metric tons · Assumed Active · -22.573599, 15.056954 · Swakop Uranium (Pty) Ltd."
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     },
+     {
+      "art": "STANDORT",
+      "freigabe": "FREIGEGEBEN",
+      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
+      "fuer": "S2",
+      "glied": null,
+      "hinweis": "Andere Uranmine; eine Lieferbeziehung ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt.",
+      "id": "AW-U-ROESSING",
+      "lage": {
+       "genauigkeit": "A",
+       "lat": -22.486178,
+       "lon": 15.052451,
+       "quelle": "USGS-GIS 2021, AFR_Mineral_Facilities, FeatureUID NAM027"
+      },
+      "land": "NA",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": null,
+       "text": "Kapazität 4.100 t Uran-Inhalt pro Jahr (USGS Minerals Yearbook 2024)"
+      },
+      "name": "Rössing Mine (Erongo, Namibia)",
+      "quelle": {
+       "fundstelle": "MYB-Zeile FAC_NAM0038_01 (Kapazität); GIS AFR_Mineral_Facilities NAM027 (Lage)",
+       "herausgeber": "U.S. Geological Survey",
+       "titel": "Minerals Yearbook 2024, Vol. III (Area Reports: International), Tabelle Facilities; Lage: Compilation of Geospatial Data (GIS) for the Mineral Industries and Related Infrastructure of Africa",
+       "url": "https://www.sciencebase.gov/catalog/item/6a8490171ba49b3133cd8055",
+       "zitat": "Rössing Mine · Namibia · Uranium Mine  · 4100 Metric tons (U content) · Assumed active · Rössing Uranium Ltd. · Erongo Region | GIS: Rössing Mine · Namibia · Uranium Uranium oxide · 4800 Metric tons · Assumed Active · -22.486178, 15.052451 · Rössing Uranium Ltd."
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     }
+    ],
+    "mit_menge": 5
+   },
+   "dauer": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine belegte Wiederanlaufzeit."
+   },
+   "ersatz": [],
+   "mehrkosten": {
+    "evidenz": "UNKNOWN",
+    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+   },
+   "mengen": [
+    {
+     "evidenz": "BELEGT",
+     "text": "25,9 t im genannten Zeitraum",
+     "verbindung": "V2"
+    }
+   ],
+   "ohne_abfluss": [],
+   "ohne_zufluss": [
+    "S6"
+   ],
+   "tonnen": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+   },
+   "verbindungen_weg": [
+    "V2"
+   ]
+  },
+  "S3": {
+   "ausweich": {
+    "grund": null,
+    "liste": [
+     {
+      "art": "LAND",
+      "fuer": "S3",
+      "glied": null,
+      "hinweis": "Förderung des Landes (Landesebene), keine freie Kapazität und keine bestätigte Lieferbeziehung.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 23270,
+       "text": "23.270 t Inhalt Förderung 2024 (38,6 % der Welt)"
+      },
+      "name": "Kasachstan",
+      "quelle": {
+       "fundstelle": "Table 'Production from mines (tonnes U)', columns 2023 and 2024",
+       "herausgeber": "World Nuclear Association",
+       "titel": "World Uranium Mining Production (Updated Friday, 23 October 2026)",
+       "url": "https://world-nuclear.org/information-library/nuclear-fuel-cycle/mining-of-uranium/world-uranium-mining-production"
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     },
+     {
+      "art": "LAND",
+      "fuer": "S3",
+      "glied": null,
+      "hinweis": "Förderung des Landes (Landesebene), keine freie Kapazität und keine bestätigte Lieferbeziehung.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 14309,
+       "text": "14.309 t Inhalt Förderung 2024 (23,8 % der Welt)"
+      },
+      "name": "Kanada",
+      "quelle": {
+       "fundstelle": "Table 'Production from mines (tonnes U)', columns 2023 and 2024",
+       "herausgeber": "World Nuclear Association",
+       "titel": "World Uranium Mining Production (Updated Friday, 23 October 2026)",
+       "url": "https://world-nuclear.org/information-library/nuclear-fuel-cycle/mining-of-uranium/world-uranium-mining-production"
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     },
+     {
+      "art": "LAND",
+      "fuer": "S3",
+      "glied": null,
+      "hinweis": "Förderung des Landes (Landesebene), keine freie Kapazität und keine bestätigte Lieferbeziehung.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 4598,
+       "text": "4.598 t Inhalt Förderung 2024 (7,6 % der Welt)"
+      },
+      "name": "Australien",
+      "quelle": {
+       "fundstelle": "Table 'Production from mines (tonnes U)', columns 2023 and 2024",
+       "herausgeber": "World Nuclear Association",
+       "titel": "World Uranium Mining Production (Updated Friday, 23 October 2026)",
+       "url": "https://world-nuclear.org/information-library/nuclear-fuel-cycle/mining-of-uranium/world-uranium-mining-production"
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     },
+     {
+      "art": "STANDORT",
+      "freigabe": "FREIGEGEBEN",
+      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
+      "fuer": "S3",
+      "glied": null,
+      "hinweis": "Andere Uranmine; eine Lieferbeziehung ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt.",
+      "id": "AW-U-HUSAB",
+      "lage": {
+       "genauigkeit": "A",
+       "lat": -22.573599,
+       "lon": 15.056954,
+       "quelle": "USGS-GIS 2021, AFR_Mineral_Facilities, FeatureUID NAM008"
+      },
+      "land": "NA",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": null,
+       "text": "Kapazität 4.700 t Uran-Inhalt pro Jahr (USGS Minerals Yearbook 2024)"
+      },
+      "name": "Husab Mine (Erongo, Namibia)",
+      "quelle": {
+       "fundstelle": "MYB-Zeile FAC_NAM0039_01 (Kapazität); GIS AFR_Mineral_Facilities NAM008 (Lage)",
+       "herausgeber": "U.S. Geological Survey",
+       "titel": "Minerals Yearbook 2024, Vol. III (Area Reports: International), Tabelle Facilities; Lage: Compilation of Geospatial Data (GIS) for the Mineral Industries and Related Infrastructure of Africa",
+       "url": "https://www.sciencebase.gov/catalog/item/6a8490171ba49b3133cd8055",
+       "zitat": "Husab Mine · Namibia · Uranium Mine  · 4700 Metric tons (U content) · Assumed active · Swakop Uranium (Pty.) Ltd. · Erongo Region | GIS: Husab Mine · Namibia · Uranium Uranium oxide · 5500 Metric tons · Assumed Active · -22.573599, 15.056954 · Swakop Uranium (Pty) Ltd."
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     },
+     {
+      "art": "STANDORT",
+      "freigabe": "FREIGEGEBEN",
+      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
+      "fuer": "S3",
+      "glied": null,
+      "hinweis": "Andere Uranmine; eine Lieferbeziehung ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt.",
+      "id": "AW-U-ROESSING",
+      "lage": {
+       "genauigkeit": "A",
+       "lat": -22.486178,
+       "lon": 15.052451,
+       "quelle": "USGS-GIS 2021, AFR_Mineral_Facilities, FeatureUID NAM027"
+      },
+      "land": "NA",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": null,
+       "text": "Kapazität 4.100 t Uran-Inhalt pro Jahr (USGS Minerals Yearbook 2024)"
+      },
+      "name": "Rössing Mine (Erongo, Namibia)",
+      "quelle": {
+       "fundstelle": "MYB-Zeile FAC_NAM0038_01 (Kapazität); GIS AFR_Mineral_Facilities NAM027 (Lage)",
+       "herausgeber": "U.S. Geological Survey",
+       "titel": "Minerals Yearbook 2024, Vol. III (Area Reports: International), Tabelle Facilities; Lage: Compilation of Geospatial Data (GIS) for the Mineral Industries and Related Infrastructure of Africa",
+       "url": "https://www.sciencebase.gov/catalog/item/6a8490171ba49b3133cd8055",
+       "zitat": "Rössing Mine · Namibia · Uranium Mine  · 4100 Metric tons (U content) · Assumed active · Rössing Uranium Ltd. · Erongo Region | GIS: Rössing Mine · Namibia · Uranium Uranium oxide · 4800 Metric tons · Assumed Active · -22.486178, 15.052451 · Rössing Uranium Ltd."
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     }
+    ],
+    "mit_menge": 5
+   },
+   "dauer": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine belegte Wiederanlaufzeit."
+   },
+   "ersatz": [],
+   "mehrkosten": {
+    "evidenz": "UNKNOWN",
+    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+   },
+   "mengen": [
+    {
+     "evidenz": "UNKNOWN",
+     "text": "unbekannt",
+     "verbindung": "V1"
+    }
+   ],
+   "ohne_abfluss": [],
+   "ohne_zufluss": [
+    "S7"
+   ],
+   "tonnen": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+   },
+   "verbindungen_weg": [
+    "V1"
+   ]
+  },
+  "S4": {
+   "ausweich": {
+    "grund": null,
+    "liste": [
+     {
+      "art": "NETZ",
+      "fuer": "S5",
+      "glied": "S1",
+      "hinweis": null,
+      "menge": {
+       "evidenz": "UNKNOWN",
+       "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+       "t": null,
+       "text": "unbekannt"
+      },
+      "name": "Central Mynkuduk",
+      "richtung": "ZUFLUSS",
+      "verbindung": "V3"
+     },
+     {
+      "art": "LAND",
+      "fuer": "S4",
+      "glied": null,
+      "hinweis": "Förderung des Landes (Landesebene), keine freie Kapazität und keine bestätigte Lieferbeziehung.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 14309,
+       "text": "14.309 t Inhalt Förderung 2024 (23,8 % der Welt)"
+      },
+      "name": "Kanada",
+      "quelle": {
+       "fundstelle": "Table 'Production from mines (tonnes U)', columns 2023 and 2024",
+       "herausgeber": "World Nuclear Association",
+       "titel": "World Uranium Mining Production (Updated Friday, 23 October 2026)",
+       "url": "https://world-nuclear.org/information-library/nuclear-fuel-cycle/mining-of-uranium/world-uranium-mining-production"
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     },
+     {
+      "art": "LAND",
+      "fuer": "S4",
+      "glied": null,
+      "hinweis": "Förderung des Landes (Landesebene), keine freie Kapazität und keine bestätigte Lieferbeziehung.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 7333,
+       "text": "7.333 t Inhalt Förderung 2024 (12,2 % der Welt)"
+      },
+      "name": "Namibia",
+      "quelle": {
+       "fundstelle": "Table 'Production from mines (tonnes U)', columns 2023 and 2024",
+       "herausgeber": "World Nuclear Association",
+       "titel": "World Uranium Mining Production (Updated Friday, 23 October 2026)",
+       "url": "https://world-nuclear.org/information-library/nuclear-fuel-cycle/mining-of-uranium/world-uranium-mining-production"
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     },
+     {
+      "art": "LAND",
+      "fuer": "S4",
+      "glied": null,
+      "hinweis": "Förderung des Landes (Landesebene), keine freie Kapazität und keine bestätigte Lieferbeziehung.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 4598,
+       "text": "4.598 t Inhalt Förderung 2024 (7,6 % der Welt)"
+      },
+      "name": "Australien",
+      "quelle": {
+       "fundstelle": "Table 'Production from mines (tonnes U)', columns 2023 and 2024",
+       "herausgeber": "World Nuclear Association",
+       "titel": "World Uranium Mining Production (Updated Friday, 23 October 2026)",
+       "url": "https://world-nuclear.org/information-library/nuclear-fuel-cycle/mining-of-uranium/world-uranium-mining-production"
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     },
+     {
+      "art": "STANDORT",
+      "freigabe": "FREIGEGEBEN",
+      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
+      "fuer": "S4",
+      "glied": null,
+      "hinweis": "Andere Uranmine in Kasachstan; eine Lieferbeziehung zu CGN Mining ist nicht belegt. Förderung ist keine freie Kapazität: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt.",
+      "id": "AW-U-KATCO",
+      "lage": null,
+      "land": "KZ",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": null,
+       "text": "3.714 t U Förderung 2025"
+      },
+      "name": "Katco (Minen Tortkuduk und Moinkum, Kasachstan)",
+      "quelle": {
+       "fundstelle": "HTML, Text ohne Tags",
+       "herausgeber": "World Nuclear Association",
+       "titel": "Uranium and Nuclear Power in Kazakhstan (Country Profile)",
+       "url": "https://world-nuclear.org/information-library/country-profiles/countries-g-n/kazakhstan",
+       "zitat": "In 2025 Katco produced 3714 tU, more than any other uranium mining enterprise in Kazakhstan."
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     },
+     {
+      "art": "STANDORT",
+      "freigabe": "FREIGEGEBEN",
+      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
+      "fuer": "S4",
+      "glied": null,
+      "hinweis": "Andere Uranmine; eine Lieferbeziehung ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt.",
+      "id": "AW-U-HUSAB",
+      "lage": {
+       "genauigkeit": "A",
+       "lat": -22.573599,
+       "lon": 15.056954,
+       "quelle": "USGS-GIS 2021, AFR_Mineral_Facilities, FeatureUID NAM008"
+      },
+      "land": "NA",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": null,
+       "text": "Kapazität 4.700 t Uran-Inhalt pro Jahr (USGS Minerals Yearbook 2024)"
+      },
+      "name": "Husab Mine (Erongo, Namibia)",
+      "quelle": {
+       "fundstelle": "MYB-Zeile FAC_NAM0039_01 (Kapazität); GIS AFR_Mineral_Facilities NAM008 (Lage)",
+       "herausgeber": "U.S. Geological Survey",
+       "titel": "Minerals Yearbook 2024, Vol. III (Area Reports: International), Tabelle Facilities; Lage: Compilation of Geospatial Data (GIS) for the Mineral Industries and Related Infrastructure of Africa",
+       "url": "https://www.sciencebase.gov/catalog/item/6a8490171ba49b3133cd8055",
+       "zitat": "Husab Mine · Namibia · Uranium Mine  · 4700 Metric tons (U content) · Assumed active · Swakop Uranium (Pty.) Ltd. · Erongo Region | GIS: Husab Mine · Namibia · Uranium Uranium oxide · 5500 Metric tons · Assumed Active · -22.573599, 15.056954 · Swakop Uranium (Pty) Ltd."
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     },
+     {
+      "art": "STANDORT",
+      "freigabe": "FREIGEGEBEN",
+      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
+      "fuer": "S4",
+      "glied": null,
+      "hinweis": "Andere Uranmine; eine Lieferbeziehung ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt.",
+      "id": "AW-U-ROESSING",
+      "lage": {
+       "genauigkeit": "A",
+       "lat": -22.486178,
+       "lon": 15.052451,
+       "quelle": "USGS-GIS 2021, AFR_Mineral_Facilities, FeatureUID NAM027"
+      },
+      "land": "NA",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": null,
+       "text": "Kapazität 4.100 t Uran-Inhalt pro Jahr (USGS Minerals Yearbook 2024)"
+      },
+      "name": "Rössing Mine (Erongo, Namibia)",
+      "quelle": {
+       "fundstelle": "MYB-Zeile FAC_NAM0038_01 (Kapazität); GIS AFR_Mineral_Facilities NAM027 (Lage)",
+       "herausgeber": "U.S. Geological Survey",
+       "titel": "Minerals Yearbook 2024, Vol. III (Area Reports: International), Tabelle Facilities; Lage: Compilation of Geospatial Data (GIS) for the Mineral Industries and Related Infrastructure of Africa",
+       "url": "https://www.sciencebase.gov/catalog/item/6a8490171ba49b3133cd8055",
+       "zitat": "Rössing Mine · Namibia · Uranium Mine  · 4100 Metric tons (U content) · Assumed active · Rössing Uranium Ltd. · Erongo Region | GIS: Rössing Mine · Namibia · Uranium Uranium oxide · 4800 Metric tons · Assumed Active · -22.486178, 15.052451 · Rössing Uranium Ltd."
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     }
+    ],
+    "mit_menge": 6
+   },
+   "dauer": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine belegte Wiederanlaufzeit."
+   },
+   "ersatz": [
+    {
+     "fuer": "S5",
+     "richtung": "ZUFLUSS",
+     "weitere": [
+      "S1"
+     ]
+    }
+   ],
+   "mehrkosten": {
+    "evidenz": "UNKNOWN",
+    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+   },
+   "mengen": [
+    {
+     "evidenz": "UNKNOWN",
+     "text": "unbekannt",
+     "verbindung": "V4"
+    }
+   ],
+   "ohne_abfluss": [],
+   "ohne_zufluss": [],
+   "tonnen": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+   },
+   "verbindungen_weg": [
+    "V4"
+   ]
+  },
+  "S5": {
+   "ausweich": {
+    "grund": "Glied ohne weiteren erfassten Zu- oder Abfluss bei den Nachbarn; keine Weltreferenz für diese Stufe.",
+    "liste": [],
+    "mit_menge": 0
+   },
+   "dauer": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine belegte Wiederanlaufzeit."
+   },
+   "ersatz": [],
+   "mehrkosten": {
+    "evidenz": "UNKNOWN",
+    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+   },
+   "mengen": [
+    {
+     "evidenz": "UNKNOWN",
+     "text": "unbekannt",
+     "verbindung": "V3"
+    },
+    {
+     "evidenz": "UNKNOWN",
+     "text": "unbekannt",
+     "verbindung": "V4"
+    }
+   ],
+   "ohne_abfluss": [
+    "S1",
+    "S4"
+   ],
+   "ohne_zufluss": [],
+   "tonnen": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+   },
+   "verbindungen_weg": [
+    "V3",
+    "V4"
+   ]
+  },
+  "S6": {
+   "ausweich": {
+    "grund": "Glied ohne weiteren erfassten Zu- oder Abfluss bei den Nachbarn; keine Weltreferenz für diese Stufe.",
+    "liste": [],
+    "mit_menge": 0
+   },
+   "dauer": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine belegte Wiederanlaufzeit."
+   },
+   "ersatz": [],
+   "mehrkosten": {
+    "evidenz": "UNKNOWN",
+    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+   },
+   "mengen": [
+    {
+     "evidenz": "BELEGT",
+     "text": "25,9 t im genannten Zeitraum",
+     "verbindung": "V2"
+    }
+   ],
+   "ohne_abfluss": [
+    "S2"
+   ],
+   "ohne_zufluss": [],
+   "tonnen": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+   },
+   "verbindungen_weg": [
+    "V2"
+   ]
+  },
+  "S7": {
+   "ausweich": {
+    "grund": "Glied ohne weiteren erfassten Zu- oder Abfluss bei den Nachbarn; keine Weltreferenz für diese Stufe.",
+    "liste": [],
+    "mit_menge": 0
+   },
+   "dauer": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine belegte Wiederanlaufzeit."
+   },
+   "ersatz": [],
+   "mehrkosten": {
+    "evidenz": "UNKNOWN",
+    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+   },
+   "mengen": [
+    {
+     "evidenz": "UNKNOWN",
+     "text": "unbekannt",
+     "verbindung": "V1"
+    }
+   ],
+   "ohne_abfluss": [
+    "S3"
+   ],
+   "ohne_zufluss": [],
+   "tonnen": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+   },
+   "verbindungen_weg": [
+    "V1"
+   ]
+  }
+ },
+ "eigentumskette": {
+  "beschreibung": "Eigentümerkette je Glied der Rohstoffketten bis zur obersten Gesellschaft bzw. zum letzten Eigentümer (Auftrag Eddie Sablah 2026-11-16 \"jede VF auf den Stand von Kupfer\", Paket 3). Gleiche Regeln wie Kupferkette (analysis/kupferkette/auswahl.json, Abschnitt eigentumskette): Anteil nur, wenn er im Zitat steht; Pflichtpfade ab schwelle_prozent effektivem Anteil oder Anteil unbekannt; freigegeben nur über bestätigte Zweitprüfung einer getrennten Sitzung (Datei zweitpruefung, Regel Eddie 2026-11-11); alles andere ist Kandidat.",
+  "erstpruefung": {
+   "am": "2026-11-16",
+   "pruefer": "Claude (Erstprüfung)",
+   "sitzung": "session_01JgcA7TdgLRrqKV9kyFuE5E"
+  },
+  "glieder": {
+   "S1": {
+    "baum": {
+     "effektiv": 100.0,
+     "kante": null,
+     "kinder": [
+      {
+       "effektiv": 49.0,
+       "kante": "EK-CGNM-UK-ORTALYK",
+       "kinder": [
+        {
+         "effektiv": 49.0,
+         "kante": "EK-CGNM-CGNM-UK",
+         "kinder": [
+          {
+           "effektiv": null,
+           "kante": "EK-CUD-CGNM",
+           "kinder": [
+            {
+             "effektiv": null,
+             "kante": "EK-CGNPC-URC-CUD",
+             "kinder": [
+              {
+               "effektiv": null,
+               "kante": "EK-CGNPC-CGNPC-URC",
+               "kinder": [],
+               "knoten": "R-CGNPC",
+               "pflicht": true,
+               "schluss": "ENDE",
+               "schluss_text": "letzter Eigentümer"
+              }
+             ],
+             "knoten": "R-CGNPC-URC",
+             "pflicht": true,
+             "schluss": "GESCHLOSSEN",
+             "schluss_text": "Eigentümer belegt"
+            }
+           ],
+           "knoten": "R-CUD",
+           "pflicht": true,
+           "schluss": "GESCHLOSSEN",
+           "schluss_text": "Eigentümer belegt"
+          }
+         ],
+         "knoten": "R-CGNM",
+         "pflicht": true,
+         "schluss": "GESCHLOSSEN",
+         "schluss_text": "Eigentümer belegt"
+        }
+       ],
+       "knoten": "R-CGNM-UK",
+       "pflicht": true,
+       "schluss": "GESCHLOSSEN",
+       "schluss_text": "Eigentümer belegt"
+      },
+      {
+       "effektiv": null,
+       "kante": "EK-KAZATOMPROM-ORTALYK",
+       "kinder": [
+        {
+         "effektiv": null,
+         "kante": "EK-SAMRUK-KAZATOMPROM",
+         "kinder": [],
+         "knoten": "R-SAMRUK",
+         "pflicht": true,
+         "schluss": "ENDE",
+         "schluss_text": "letzter Eigentümer"
+        }
+       ],
+       "knoten": "R-KAZATOMPROM",
+       "pflicht": true,
+       "schluss": "GESCHLOSSEN",
+       "schluss_text": "Eigentümer belegt"
+      }
+     ],
+     "knoten": "R-ORTALYK",
+     "pflicht": true,
+     "schluss": "OFFEN",
+     "schluss_text": "endet ohne Beleg"
+    },
+    "belegt": true,
+    "betreiber": null,
+    "bezug": "ZUGEHOERIG",
+    "bezug_belege": [
+     {
+      "fundstelle": "Textkopie des Flusspakets",
+      "quelle": "rk-cgnm-fy-2025-s028",
+      "rolle": "hauptbeleg",
+      "zitat": "Uranium mines under production – Central Mynkuduk Deposit and Zhalpak Deposit … the volume of uranium extracted by Ortalyk"
+     }
+    ],
+    "bezug_freigabe": "FREIGEGEBEN",
+    "bezug_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
+    "bezug_text": "Das Glied gehört laut Quelle zu",
+    "ebenen": 5,
+    "einschraenkung": null,
+    "grund": null,
+    "status": "OFFEN",
+    "status_text": "Kette endet ohne Beleg",
+    "wurzel": "R-ORTALYK"
+   },
+   "S2": {
+    "baum": {
+     "effektiv": 100.0,
+     "kante": null,
+     "kinder": [
+      {
+       "effektiv": 100.0,
+       "kante": "EK-BOSS-HONEYMOON",
+       "kinder": [
+        {
+         "effektiv": null,
+         "kante": "EK-BOSS-PERSONEN-BOSS",
+         "kinder": [],
+         "knoten": "R-BOSS-PERSONEN",
+         "pflicht": true,
+         "schluss": "ENDE",
+         "schluss_text": "letzter Eigentümer"
+        }
+       ],
+       "knoten": "R-BOSS",
+       "pflicht": true,
+       "schluss": "GESCHLOSSEN",
+       "schluss_text": "Eigentümer belegt"
+      }
+     ],
+     "knoten": "R-HONEYMOON",
+     "pflicht": true,
+     "schluss": "GESCHLOSSEN",
+     "schluss_text": "Eigentümer belegt"
+    },
+    "belegt": true,
+    "betreiber": null,
+    "bezug": "IST",
+    "bezug_belege": [],
+    "bezug_freigabe": null,
+    "bezug_herkunft": null,
+    "bezug_text": "Das Glied ist diese Gesellschaft bzw. dieser Standort",
+    "ebenen": 2,
+    "einschraenkung": null,
+    "grund": null,
+    "status": "VOLLSTAENDIG_FREIGEGEBEN",
+    "status_text": "bis oben belegt und freigegeben",
+    "wurzel": "R-HONEYMOON"
+   },
+   "S3": {
+    "baum": {
+     "effektiv": 100.0,
+     "kante": null,
+     "kinder": [
+      {
+       "effektiv": 75.0,
+       "kante": "EK-PALADIN-LANGER-HEINRICH",
+       "kinder": [],
+       "knoten": "R-PALADIN",
+       "pflicht": true,
+       "schluss": "OBERSTE",
+       "schluss_text": "oberste Gesellschaft"
+      },
+      {
+       "effektiv": 25.0,
+       "kante": "EK-LH-MINDERHEIT-LANGER-HEINRICH",
+       "kinder": [],
+       "knoten": "R-LH-MINDERHEIT",
+       "pflicht": true,
+       "schluss": "OFFEN",
+       "schluss_text": "endet ohne Beleg"
+      }
+     ],
+     "knoten": "R-LANGER-HEINRICH",
+     "pflicht": true,
+     "schluss": "OFFEN",
+     "schluss_text": "endet ohne Beleg"
+    },
+    "belegt": true,
+    "betreiber": null,
+    "bezug": "IST",
+    "bezug_belege": [],
+    "bezug_freigabe": null,
+    "bezug_herkunft": null,
+    "bezug_text": "Das Glied ist diese Gesellschaft bzw. dieser Standort",
+    "ebenen": 1,
+    "einschraenkung": null,
+    "grund": null,
+    "status": "OFFEN",
+    "status_text": "Kette endet ohne Beleg",
+    "wurzel": "R-LANGER-HEINRICH"
+   },
+   "S4": {
+    "baum": {
+     "effektiv": 100.0,
+     "kante": null,
+     "kinder": [
+      {
+       "effektiv": 49.0,
+       "kante": "EK-CGNM-UK-ORTALYK",
+       "kinder": [
+        {
+         "effektiv": 49.0,
+         "kante": "EK-CGNM-CGNM-UK",
+         "kinder": [
+          {
+           "effektiv": null,
+           "kante": "EK-CUD-CGNM",
+           "kinder": [
+            {
+             "effektiv": null,
+             "kante": "EK-CGNPC-URC-CUD",
+             "kinder": [
+              {
+               "effektiv": null,
+               "kante": "EK-CGNPC-CGNPC-URC",
+               "kinder": [],
+               "knoten": "R-CGNPC",
+               "pflicht": true,
+               "schluss": "ENDE",
+               "schluss_text": "letzter Eigentümer"
+              }
+             ],
+             "knoten": "R-CGNPC-URC",
+             "pflicht": true,
+             "schluss": "GESCHLOSSEN",
+             "schluss_text": "Eigentümer belegt"
+            }
+           ],
+           "knoten": "R-CUD",
+           "pflicht": true,
+           "schluss": "GESCHLOSSEN",
+           "schluss_text": "Eigentümer belegt"
+          }
+         ],
+         "knoten": "R-CGNM",
+         "pflicht": true,
+         "schluss": "GESCHLOSSEN",
+         "schluss_text": "Eigentümer belegt"
+        }
+       ],
+       "knoten": "R-CGNM-UK",
+       "pflicht": true,
+       "schluss": "GESCHLOSSEN",
+       "schluss_text": "Eigentümer belegt"
+      },
+      {
+       "effektiv": null,
+       "kante": "EK-KAZATOMPROM-ORTALYK",
+       "kinder": [
+        {
+         "effektiv": null,
+         "kante": "EK-SAMRUK-KAZATOMPROM",
+         "kinder": [],
+         "knoten": "R-SAMRUK",
+         "pflicht": true,
+         "schluss": "ENDE",
+         "schluss_text": "letzter Eigentümer"
+        }
+       ],
+       "knoten": "R-KAZATOMPROM",
+       "pflicht": true,
+       "schluss": "GESCHLOSSEN",
+       "schluss_text": "Eigentümer belegt"
+      }
+     ],
+     "knoten": "R-ORTALYK",
+     "pflicht": true,
+     "schluss": "OFFEN",
+     "schluss_text": "endet ohne Beleg"
+    },
+    "belegt": true,
+    "betreiber": null,
+    "bezug": "ZUGEHOERIG",
+    "bezug_belege": [
+     {
+      "fundstelle": "Textkopie des Flusspakets",
+      "quelle": "rk-cgnm-fy-2025-s028",
+      "rolle": "hauptbeleg",
+      "zitat": "Uranium mines under production – Central Mynkuduk Deposit and Zhalpak Deposit … the volume of uranium extracted by Ortalyk"
+     }
+    ],
+    "bezug_freigabe": "FREIGEGEBEN",
+    "bezug_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
+    "bezug_text": "Das Glied gehört laut Quelle zu",
+    "ebenen": 5,
+    "einschraenkung": null,
+    "grund": null,
+    "status": "OFFEN",
+    "status_text": "Kette endet ohne Beleg",
+    "wurzel": "R-ORTALYK"
+   },
+   "S5": {
+    "baum": {
+     "effektiv": 100.0,
+     "kante": null,
+     "kinder": [
+      {
+       "effektiv": null,
+       "kante": "EK-CUD-CGNM",
+       "kinder": [
+        {
+         "effektiv": null,
+         "kante": "EK-CGNPC-URC-CUD",
+         "kinder": [
+          {
+           "effektiv": null,
+           "kante": "EK-CGNPC-CGNPC-URC",
+           "kinder": [],
+           "knoten": "R-CGNPC",
+           "pflicht": true,
+           "schluss": "ENDE",
+           "schluss_text": "letzter Eigentümer"
+          }
+         ],
+         "knoten": "R-CGNPC-URC",
+         "pflicht": true,
+         "schluss": "GESCHLOSSEN",
+         "schluss_text": "Eigentümer belegt"
+        }
+       ],
+       "knoten": "R-CUD",
+       "pflicht": true,
+       "schluss": "GESCHLOSSEN",
+       "schluss_text": "Eigentümer belegt"
+      }
+     ],
+     "knoten": "R-CGNM",
+     "pflicht": true,
+     "schluss": "GESCHLOSSEN",
+     "schluss_text": "Eigentümer belegt"
+    },
+    "belegt": true,
+    "betreiber": null,
+    "bezug": "IST",
+    "bezug_belege": [],
+    "bezug_freigabe": null,
+    "bezug_herkunft": null,
+    "bezug_text": "Das Glied ist diese Gesellschaft bzw. dieser Standort",
+    "ebenen": 3,
+    "einschraenkung": null,
+    "grund": null,
+    "status": "VOLLSTAENDIG_FREIGEGEBEN",
+    "status_text": "bis oben belegt und freigegeben",
+    "wurzel": "R-CGNM"
+   },
+   "S6": {
+    "baum": null,
+    "belegt": false,
+    "betreiber": null,
+    "bezug": null,
+    "bezug_belege": [],
+    "bezug_freigabe": null,
+    "bezug_herkunft": null,
+    "bezug_text": null,
+    "ebenen": 0,
+    "einschraenkung": null,
+    "grund": "Die gelesene Quelle nennt nur den Anlagennamen \"Honeywell Uranium Hexafluoride Processing Facility\"; Eigentümer und Anteil nennt sie nicht.",
+    "status": "UNBEKANNT",
+    "status_text": "Eigentümer unbekannt",
+    "wurzel": null
+   },
+   "S7": {
+    "baum": null,
+    "belegt": false,
+    "betreiber": null,
+    "bezug": null,
+    "bezug_belege": [],
+    "bezug_freigabe": null,
+    "bezug_herkunft": null,
+    "bezug_text": null,
+    "ebenen": 0,
+    "einschraenkung": null,
+    "grund": "Eigentümer des Hafens ist mit keiner gelesenen Quelle belegt; Hafen- und Behördenseiten sind aus der Cloud gesperrt.",
+    "status": "UNBEKANNT",
+    "status_text": "Eigentümer unbekannt",
+    "wurzel": null
+   }
+  },
+  "kanten": [
+   {
+    "an": "R-HONEYMOON",
+    "anteil": 100.0,
+    "atlas_id": null,
+    "beherrschend": false,
+    "belege": [
+     {
+      "fundstelle": "PDF-Seite 12 (pdftotext ohne -layout)",
+      "quelle": "rk-boe-q-2024-12-s012",
+      "rolle": "hauptbeleg",
+      "zitat": "Honeymoon Mine South Australia ML6109 100%"
+     }
+    ],
+    "einschraenkung": "Tabelle der Bergbaurechte (Tenement, Ort, Kennung, Anteil) im Quartalsbericht.",
+    "evidenz": "FACT",
+    "freigabe": "FREIGEGEBEN",
+    "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
+    "id": "EK-BOSS-HONEYMOON",
+    "mass": "KAPITAL",
+    "mass_text": "Kapital",
+    "stand": "2024-12-31",
+    "text": null,
+    "von": "R-BOSS"
+   },
+   {
+    "an": "R-BOSS",
+    "anteil": null,
+    "atlas_id": null,
+    "beherrschend": true,
+    "belege": [
+     {
+      "fundstelle": "JSON (Golden Copy 2026-11-16)",
+      "quelle": "rk-gleif-9845000ED0A5F908A057-oben",
+      "rolle": "hauptbeleg",
+      "zitat": "\"lei\":\"9845000ED0A5F908A057\",\"category\":\"ULTIMATE_ACCOUNTING_CONSOLIDATION_PARENT\",\"reason\":\"NATURAL_PERSONS\""
+     },
+     {
+      "fundstelle": "JSON (Golden Copy 2026-11-16)",
+      "quelle": "rk-gleif-9845000ED0A5F908A057",
+      "rolle": "zusatzbeleg",
+      "zitat": "\"lei\":\"9845000ED0A5F908A057\" … \"legalName\":{\"name\":\"BOSS ENERGY LTD\""
+     }
+    ],
+    "einschraenkung": null,
+    "evidenz": "FACT",
+    "freigabe": "FREIGEGEBEN",
+    "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
+    "id": "EK-BOSS-PERSONEN-BOSS",
+    "mass": "KONTROLLE",
+    "mass_text": "Kontrolle",
+    "stand": "2026-11-16",
+    "text": "beherrscht laut LEI-Register (Namen nicht genannt)",
+    "von": "R-BOSS-PERSONEN"
+   },
+   {
+    "an": "R-CGNM-UK",
+    "anteil": 100.0,
+    "atlas_id": null,
+    "beherrschend": false,
+    "belege": [
+     {
+      "fundstelle": "PDF-Seite 22 (pdftotext ohne -layout)",
+      "quelle": "rk-cgnm-fy-2025-s022",
+      "rolle": "hauptbeleg",
+      "zitat": "held 100% equity interest in CGNM UK"
+     }
+    ],
+    "einschraenkung": null,
+    "evidenz": "FACT",
+    "freigabe": "FREIGEGEBEN",
+    "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
+    "id": "EK-CGNM-CGNM-UK",
+    "mass": "KAPITAL",
+    "mass_text": "Kapital",
+    "stand": "2025-12-31",
+    "text": null,
+    "von": "R-CGNM"
+   },
+   {
+    "an": "R-ORTALYK",
+    "anteil": 49.0,
+    "atlas_id": null,
+    "beherrschend": false,
+    "belege": [
+     {
+      "fundstelle": "PDF-Seite 22 (pdftotext ohne -layout)",
+      "quelle": "rk-cgnm-fy-2025-s022",
+      "rolle": "hauptbeleg",
+      "zitat": "held 100% equity interest in CGNM UK, through which it held 49% of the equity interest and off-take rights of products of Ortalyk"
+     }
+    ],
+    "einschraenkung": null,
+    "evidenz": "FACT",
+    "freigabe": "FREIGEGEBEN",
+    "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
+    "id": "EK-CGNM-UK-ORTALYK",
+    "mass": "KAPITAL",
+    "mass_text": "Kapital",
+    "stand": "2025-12-31",
+    "text": null,
+    "von": "R-CGNM-UK"
+   },
+   {
+    "an": "R-CGNPC-URC",
+    "anteil": null,
+    "atlas_id": null,
+    "beherrschend": true,
+    "belege": [
+     {
+      "fundstelle": "PDF-Seite 6 (pdftotext ohne -layout)",
+      "quelle": "rk-cgnm-fy-2025-s006",
+      "rolle": "hauptbeleg",
+      "zitat": "which is in turn a subsidiary of (China General Nuclear Power Corporation) (“CGNPC”). CGNPC is the ultimate parent company of the Company."
+     }
+    ],
+    "einschraenkung": null,
+    "evidenz": "FACT",
+    "freigabe": "FREIGEGEBEN",
+    "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
+    "id": "EK-CGNPC-CGNPC-URC",
+    "mass": "KONTROLLE",
+    "mass_text": "Kontrolle",
+    "stand": "2025-12-31",
+    "text": "Tochtergesellschaft (Anteil nicht genannt)",
+    "von": "R-CGNPC"
+   },
+   {
+    "an": "R-CUD",
+    "anteil": 100.0,
+    "atlas_id": null,
+    "beherrschend": false,
+    "belege": [
+     {
+      "fundstelle": "PDF-Seite 6 (pdftotext ohne -layout)",
+      "quelle": "rk-cgnm-fy-2025-s006",
+      "rolle": "hauptbeleg",
+      "zitat": "a wholly-owned subsidiary of (CGNPC Uranium Resources Co. Ltd.) (“CGNPC-URC”)"
+     }
+    ],
+    "einschraenkung": null,
+    "evidenz": "FACT",
+    "freigabe": "FREIGEGEBEN",
+    "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
+    "id": "EK-CGNPC-URC-CUD",
+    "mass": "KAPITAL",
+    "mass_text": "Kapital",
+    "stand": "2025-12-31",
+    "text": null,
+    "von": "R-CGNPC-URC"
+   },
+   {
+    "an": "R-CGNM",
+    "anteil": null,
+    "atlas_id": null,
+    "beherrschend": true,
+    "belege": [
+     {
+      "fundstelle": "PDF-Seite 6 (pdftotext ohne -layout)",
+      "quelle": "rk-cgnm-fy-2025-s006",
+      "rolle": "hauptbeleg",
+      "zitat": "Its parent company is (China Uranium Development Company Limited) (“China Uranium Development”)"
+     }
+    ],
+    "einschraenkung": null,
+    "evidenz": "FACT",
+    "freigabe": "FREIGEGEBEN",
+    "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
+    "id": "EK-CUD-CGNM",
+    "mass": "KONTROLLE",
+    "mass_text": "Kontrolle",
+    "stand": "2025-12-31",
+    "text": "Muttergesellschaft (Anteil nicht genannt)",
+    "von": "R-CUD"
+   },
+   {
+    "an": "R-ORTALYK",
+    "anteil": null,
+    "atlas_id": null,
+    "beherrschend": false,
+    "belege": [
+     {
+      "fundstelle": "HTML, Text ohne Tags",
+      "quelle": "rk-wna-kazakhstan",
+      "rolle": "hauptbeleg",
+      "zitat": "Zhalpak 15,000 Ortalyk LLP (K'prom)"
+     }
+    ],
+    "einschraenkung": null,
+    "evidenz": "FACT",
+    "freigabe": "FREIGEGEBEN",
+    "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
+    "id": "EK-KAZATOMPROM-ORTALYK",
+    "mass": "KAPITAL",
+    "mass_text": "Kapital",
+    "stand": "2026-11-16",
+    "text": "laut Tabelle Gesellschaft von Kazatomprom (Anteil nicht genannt)",
+    "von": "R-KAZATOMPROM"
+   },
+   {
+    "an": "R-LANGER-HEINRICH",
+    "anteil": 25.0,
+    "atlas_id": null,
+    "beherrschend": false,
+    "belege": [
+     {
+      "fundstelle": "PDF-Seite 204 (pdftotext ohne -layout)",
+      "quelle": "rk-pdn-ar-2026-s204",
+      "rolle": "hauptbeleg",
+      "zitat": "The Company owns 75% of Langer Heinrich Holdings Ltd. The remaining 25% is held by non-controlling interests."
+     }
+    ],
+    "einschraenkung": "Anteil an der Holding der Mine (Langer Heinrich Holdings Ltd).",
+    "evidenz": "FACT",
+    "freigabe": "FREIGEGEBEN",
+    "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
+    "id": "EK-LH-MINDERHEIT-LANGER-HEINRICH",
+    "mass": "KAPITAL",
+    "mass_text": "Kapital",
+    "stand": "2026-06-30",
+    "text": null,
+    "von": "R-LH-MINDERHEIT"
+   },
+   {
+    "an": "R-LANGER-HEINRICH",
+    "anteil": 75.0,
+    "atlas_id": null,
+    "beherrschend": false,
+    "belege": [
+     {
+      "fundstelle": "PDF-Seite 11 (pdftotext ohne -layout)",
+      "quelle": "rk-pdn-ar-2026-s011",
+      "rolle": "hauptbeleg",
+      "zitat": "Paladin is a globally significant independent uranium producer with a 75% ownership interest in the Langer Heinrich Mine"
+     }
+    ],
+    "einschraenkung": null,
+    "evidenz": "FACT",
+    "freigabe": "FREIGEGEBEN",
+    "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
+    "id": "EK-PALADIN-LANGER-HEINRICH",
+    "mass": "KAPITAL",
+    "mass_text": "Kapital",
+    "stand": "2026-06-30",
+    "text": null,
+    "von": "R-PALADIN"
+   },
+   {
+    "an": "R-KAZATOMPROM",
+    "anteil": null,
+    "atlas_id": null,
+    "beherrschend": true,
+    "belege": [
+     {
+      "fundstelle": "JSON (Golden Copy 2026-11-16)",
+      "quelle": "rk-gleif-5493008JG5TXJP2JSY44-direkt",
+      "rolle": "hauptbeleg",
+      "zitat": "\"startNode\":{\"id\":\"5493008JG5TXJP2JSY44\",\"type\":\"LEI\"},\"endNode\":{\"id\":\"213800N83GBAZJ4ER974\",\"type\":\"LEI\"},\"type\":\"IS_DIRECTLY_CONSOLIDATED_BY\",\"status\":\"ACTIVE\""
+     }
+    ],
+    "einschraenkung": null,
+    "evidenz": "FACT",
+    "freigabe": "FREIGEGEBEN",
+    "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
+    "id": "EK-SAMRUK-KAZATOMPROM",
+    "mass": "KONTROLLE",
+    "mass_text": "Kontrolle",
+    "stand": "2026-11-16",
+    "text": "konsolidiert laut LEI-Register (Anteil nicht genannt)",
+    "von": "R-SAMRUK"
+   }
+  ],
+  "knoten": {
+   "R-BOSS": {
+    "art": "GESELLSCHAFT",
+    "art_text": "Gesellschaft",
+    "atlas_id": null,
+    "belege": [
+     {
+      "fundstelle": "JSON (Golden Copy 2026-11-16)",
+      "quelle": "rk-gleif-9845000ED0A5F908A057",
+      "rolle": "hauptbeleg",
+      "zitat": "\"lei\":\"9845000ED0A5F908A057\" … \"legalName\":{\"name\":\"BOSS ENERGY LTD\""
+     }
+    ],
+    "hinweis": null,
+    "land": "AU",
+    "lei": "9845000ED0A5F908A057",
+    "name": "Boss Energy Ltd",
+    "oberste": null,
+    "offen": null
+   },
+   "R-BOSS-PERSONEN": {
+    "art": "PERSON",
+    "art_text": "natürliche Person",
+    "atlas_id": null,
+    "belege": [],
+    "hinweis": "Das LEI-Register meldet als oberste Eigentümer natürliche Personen, nennt sie aber nicht. Namen bleiben unbekannt.",
+    "land": "AU",
+    "lei": null,
+    "name": "Natürliche Person(en), im LEI-Register nicht namentlich genannt",
+    "oberste": null,
+    "offen": null
+   },
+   "R-CGNM": {
+    "art": "GESELLSCHAFT",
+    "art_text": "Gesellschaft",
+    "atlas_id": null,
+    "belege": [],
+    "hinweis": null,
+    "land": "KY",
+    "lei": null,
+    "name": "CGN Mining Company Limited",
+    "oberste": null,
+    "offen": null
+   },
+   "R-CGNM-UK": {
+    "art": "GESELLSCHAFT",
+    "art_text": "Gesellschaft",
+    "atlas_id": null,
+    "belege": [],
+    "hinweis": null,
+    "land": "GB",
+    "lei": null,
+    "name": "CGNM UK Limited",
+    "oberste": null,
+    "offen": null
+   },
+   "R-CGNPC": {
+    "art": "STAATSEIGEN",
+    "art_text": "staatseigene Gesellschaft",
+    "atlas_id": null,
+    "belege": [
+     {
+      "fundstelle": "PDF-Seite 6 (pdftotext ohne -layout)",
+      "quelle": "rk-cgnm-fy-2025-s006",
+      "rolle": "hauptbeleg",
+      "zitat": "Both CGNPC-URC and CGNPC were state-owned enterprises established in the PRC."
+     }
+    ],
+    "hinweis": "Staatseigenes Unternehmen; welche staatliche Stelle es hält, nennt die gelesene Quelle nicht.",
+    "land": "CN",
+    "lei": null,
+    "name": "China General Nuclear Power Corporation (CGNPC)",
+    "oberste": null,
+    "offen": null
+   },
+   "R-CGNPC-URC": {
+    "art": "GESELLSCHAFT",
+    "art_text": "Gesellschaft",
+    "atlas_id": null,
+    "belege": [],
+    "hinweis": null,
+    "land": "CN",
+    "lei": null,
+    "name": "CGNPC Uranium Resources Co. Ltd. (CGNPC-URC)",
+    "oberste": null,
+    "offen": null
+   },
+   "R-CUD": {
+    "art": "GESELLSCHAFT",
+    "art_text": "Gesellschaft",
+    "atlas_id": null,
+    "belege": [],
+    "hinweis": null,
+    "land": "HK",
+    "lei": null,
+    "name": "China Uranium Development Company Limited",
+    "oberste": null,
+    "offen": null
+   },
+   "R-HONEYMOON": {
+    "art": "STANDORT",
+    "art_text": "Standort",
+    "atlas_id": null,
+    "belege": [],
+    "hinweis": null,
+    "land": "AU",
+    "lei": null,
+    "name": "Honeymoon (Uranmine)",
+    "oberste": null,
+    "offen": null
+   },
+   "R-KAZATOMPROM": {
+    "art": "GESELLSCHAFT",
+    "art_text": "Gesellschaft",
+    "atlas_id": null,
+    "belege": [
+     {
+      "fundstelle": "JSON (Golden Copy 2026-11-16)",
+      "quelle": "rk-gleif-5493008JG5TXJP2JSY44",
+      "rolle": "hauptbeleg",
+      "zitat": "\"lei\":\"5493008JG5TXJP2JSY44\" … \"legalName\":{\"name\":\"\\u0410\\u041a\\u0426\\u0418\\u041e\\u041d\\u0415\\u0420\\u041d\\u041e\\u0415 \\u041e\\u0411\\u0429\\u0415\\u0421\\u0422\\u0412\\u041e \\u00ab\\u041d\\u0410\\u0426\\u0418\\u041e\\u041d\\u0410\\u041b\\u042c\\u041d\\u0410\\u042f \\u0410\\u0422\\u041e\\u041c\\u041d\\u0410\\u042f \\u041a\\u041e\\u041c\\u041f\\u0410\\u041d\\u0418\\u042f \\u00ab\\u041a\\u0410\\u0417\\u0410\\u0422\\u041e\\u041c\\u041f\\u0420\\u041e\\u041c\\u00bb\""
+     }
+    ],
+    "hinweis": null,
+    "land": "KZ",
+    "lei": "5493008JG5TXJP2JSY44",
+    "name": "NAC Kazatomprom JSC",
+    "oberste": null,
+    "offen": null
+   },
+   "R-LANGER-HEINRICH": {
+    "art": "STANDORT",
+    "art_text": "Standort",
+    "atlas_id": null,
+    "belege": [],
+    "hinweis": null,
+    "land": "NA",
+    "lei": null,
+    "name": "Langer Heinrich (Uranmine)",
+    "oberste": null,
+    "offen": null
+   },
+   "R-LH-MINDERHEIT": {
+    "art": "GESELLSCHAFT",
+    "art_text": "Gesellschaft",
+    "atlas_id": null,
+    "belege": [],
+    "hinweis": null,
+    "land": null,
+    "lei": null,
+    "name": "Minderheitsgesellschafter von Langer Heinrich Holdings (nicht genannt)",
+    "oberste": null,
+    "offen": "Die Quelle nennt den Halter der übrigen 25 % nicht."
+   },
+   "R-ORTALYK": {
+    "art": "GESELLSCHAFT",
+    "art_text": "Gesellschaft",
+    "atlas_id": null,
+    "belege": [],
+    "hinweis": null,
+    "land": "KZ",
+    "lei": null,
+    "name": "Ortalyk LLP",
+    "oberste": null,
+    "offen": null
+   },
+   "R-PALADIN": {
+    "art": "GESELLSCHAFT",
+    "art_text": "Gesellschaft",
+    "atlas_id": null,
+    "belege": [],
+    "hinweis": null,
+    "land": "AU",
+    "lei": "549300M44UTJAP8J6B37",
+    "name": "Paladin Energy Ltd",
+    "oberste": {
+     "belege": [
+      {
+       "fundstelle": "JSON (Golden Copy 2026-11-16)",
+       "quelle": "rk-gleif-549300M44UTJAP8J6B37-oben",
+       "rolle": "hauptbeleg",
+       "zitat": "\"lei\":\"549300M44UTJAP8J6B37\",\"category\":\"ULTIMATE_ACCOUNTING_CONSOLIDATION_PARENT\",\"reason\":\"NO_KNOWN_PERSON\""
+      },
+      {
+       "fundstelle": "JSON (Golden Copy 2026-11-16)",
+       "quelle": "rk-gleif-549300M44UTJAP8J6B37",
+       "rolle": "zusatzbeleg",
+       "zitat": "\"lei\":\"549300M44UTJAP8J6B37\" … \"legalName\":{\"name\":\"PALADIN ENERGY LTD\""
+      }
+     ],
+     "freigabe": "FREIGEGEBEN",
+     "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
+     "grund": "KEINE_MUTTER",
+     "text": "Im LEI-Register ist keine Person oder Gesellschaft eingetragen, die die Gesellschaft beherrscht (Angabe der Gesellschaft; Großaktionäre unter der Beherrschungsschwelle sind damit nicht ausgeschlossen)."
+    },
+    "offen": null
+   },
+   "R-SAMRUK": {
+    "art": "STAATSEIGEN",
+    "art_text": "staatseigene Gesellschaft",
+    "atlas_id": null,
+    "belege": [
+     {
+      "fundstelle": "HTML, Text ohne Tags",
+      "quelle": "rk-wna-kazakhstan",
+      "rolle": "hauptbeleg",
+      "zitat": "Originally wholly-owned by national wealth fund Samruk-Kazyna"
+     },
+     {
+      "fundstelle": "JSON (Golden Copy 2026-11-16)",
+      "quelle": "rk-gleif-213800N83GBAZJ4ER974",
+      "rolle": "zusatzbeleg",
+      "zitat": "\"lei\":\"213800N83GBAZJ4ER974\" … \"legalName\":{\"name\":\"\\u0410\\u041a\\u0426\\u0418\\u041e\\u041d\\u0415\\u0420\\u041d\\u041e\\u0415 \\u041e\\u0411\\u0429\\u0415\\u0421\\u0422\\u0412\\u041e \\u00ab\\u0424\\u041e\\u041d\\u0414 \\u041d\\u0410\\u0426\\u0418\\u041e\\u041d\\u0410\\u041b\\u042c\\u041d\\u041e\\u0413\\u041e \\u0411\\u041b\\u0410\\u0413\\u041e\\u0421\\u041e\\u0421\\u0422\\u041e\\u042f\\u041d\\u0418\\u042f \\u00ab\\u0421\\u0410\\u041c\\u0420\\u0423\\u041a-\\u049a\\u0410\\u0417\\u042b\\u041d\\u0410\\u00bb\""
+     }
+    ],
+    "hinweis": "Nationaler Staatsfonds Kasachstans laut Quelle; den heutigen Anteil an Kazatomprom nennt die Quelle nicht.",
+    "land": "KZ",
+    "lei": "213800N83GBAZJ4ER974",
+    "name": "JSC Samruk-Kazyna (Staatsfonds)",
+    "oberste": null,
+    "offen": null
+   }
+  },
+  "messung": {
+   "glieder": 7,
+   "glieder_eigentum_belegt": 5,
+   "glieder_unbekannt_mit_grund": 2,
+   "je_glied": {
+    "S1": {
+     "ebenen": 5,
+     "status": "OFFEN"
+    },
+    "S2": {
+     "ebenen": 2,
+     "status": "VOLLSTAENDIG_FREIGEGEBEN"
+    },
+    "S3": {
+     "ebenen": 1,
+     "status": "OFFEN"
+    },
+    "S4": {
+     "ebenen": 5,
+     "status": "OFFEN"
+    },
+    "S5": {
+     "ebenen": 3,
+     "status": "VOLLSTAENDIG_FREIGEGEBEN"
+    },
+    "S6": {
+     "ebenen": 0,
+     "status": "UNBEKANNT"
+    },
+    "S7": {
+     "ebenen": 0,
+     "status": "UNBEKANNT"
+    }
+   },
+   "kanten": 11,
+   "kanten_freigegeben": 11,
+   "kanten_kandidat": 0,
+   "kanten_mit_anteil": 6,
+   "knoten": 14,
+   "letzte_eigentuemer": [
+    "China General Nuclear Power Corporation (CGNPC)",
+    "JSC Samruk-Kazyna (Staatsfonds)",
+    "Natürliche Person(en), im LEI-Register nicht namentlich genannt"
+   ],
+   "oberste_gesellschaften": [
+    "Paladin Energy Ltd"
+   ],
+   "offen": 3,
+   "offene_knoten": [
+    "Minderheitsgesellschafter von Langer Heinrich Holdings (nicht genannt)"
+   ],
+   "schwelle_prozent": 10.0,
+   "unbekannt": 2,
+   "vollstaendig": 2,
+   "vollstaendig_freigegeben": 2,
+   "vollstaendig_kandidat": 0,
+   "zweitpruefung_offen": 0
+  },
+  "quellen": {
+   "rk-boe-q-2024-12-s012": {
+    "abgerufen": "2026-11-16",
+    "art": "COMPANY_PRIMARY",
+    "fundstelle": "PDF-Seite 12 (pdftotext ohne -layout)",
+    "herausgeber": "Boss Energy Limited",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/boe-q-2024-12-p012.txt",
+    "text_artifact_sha256": "01d75779cd9fca85952b1b3b7ceb233cedcae542bf4354ebd9f1e61094fb562e",
+    "titel": "December 2024 Quarterly Report",
+    "url": "https://announcements.asx.com.au/asxpdf/20250129/pdf/06dxg8kfs900xh.pdf#page=12"
+   },
+   "rk-cgnm-fy-2025-s006": {
+    "abgerufen": "2026-11-16",
+    "art": "COMPANY_PRIMARY",
+    "fundstelle": "PDF-Seite 6 (pdftotext ohne -layout)",
+    "herausgeber": "CGN Mining Company Limited (HKEX 1164)",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/cgnm-fy-2025-p006.txt",
+    "text_artifact_sha256": "ae837e358b7c8033b1e7d991604cdddf1b22d5b15a3a6c7e7211038285cb0adf",
+    "titel": "Annual Results Announcement for the year ended 31 December 2025",
+    "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0326/2026032603114.pdf#page=6"
+   },
+   "rk-cgnm-fy-2025-s022": {
+    "abgerufen": "2026-11-16",
+    "art": "COMPANY_PRIMARY",
+    "fundstelle": "PDF-Seite 22 (pdftotext ohne -layout)",
+    "herausgeber": "CGN Mining Company Limited (HKEX 1164)",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/cgnm-fy-2025-p022.txt",
+    "text_artifact_sha256": "afdf656f3e66acc66143f5c0c242bae87c01b83bd663c9d315d81ca0e61079e9",
+    "titel": "Annual Results Announcement for the year ended 31 December 2025",
+    "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0326/2026032603114.pdf#page=22"
+   },
+   "rk-cgnm-fy-2025-s028": {
+    "abgerufen": "2026-11-08",
+    "art": "COMPANY_PRIMARY",
+    "fundstelle": "Textkopie des Flusspakets",
+    "herausgeber": "CGN Mining Company Limited (HKEX 1164)",
+    "text_artifact": "analysis/research/uran-flows-v1/raw/cgnm-fy-2025-p28.txt",
+    "text_artifact_sha256": "694309eafacf93a553760224d9c7fb0a73511c546f513b9c5e8332beb0010b00",
+    "titel": "Annual Results Announcement for the year ended 31 December 2025",
+    "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0326/2026032603114.pdf"
+   },
+   "rk-gleif-213800N83GBAZJ4ER974": {
+    "abgerufen": "2026-11-16",
+    "art": "REGISTER",
+    "fundstelle": "JSON (Golden Copy 2026-11-16)",
+    "herausgeber": "Global Legal Entity Identifier Foundation (GLEIF)",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/gleif-213800N83GBAZJ4ER974-eintrag.json",
+    "text_artifact_sha256": "87d42991dccf9b36d8ef18a0166e071450685a1f2c3e708c35b0b32b38ffde9c",
+    "titel": "LEI-Eintrag 213800N83GBAZJ4ER974",
+    "url": "https://api.gleif.org/api/v1/lei-records/213800N83GBAZJ4ER974"
+   },
+   "rk-gleif-5493008JG5TXJP2JSY44": {
+    "abgerufen": "2026-11-16",
+    "art": "REGISTER",
+    "fundstelle": "JSON (Golden Copy 2026-11-16)",
+    "herausgeber": "Global Legal Entity Identifier Foundation (GLEIF)",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/gleif-5493008JG5TXJP2JSY44-eintrag.json",
+    "text_artifact_sha256": "941aaeaff3d6581c290c79190d114b1dacb60c219512dfa33285462ce10ff803",
+    "titel": "LEI-Eintrag 5493008JG5TXJP2JSY44",
+    "url": "https://api.gleif.org/api/v1/lei-records/5493008JG5TXJP2JSY44"
+   },
+   "rk-gleif-5493008JG5TXJP2JSY44-direkt": {
+    "abgerufen": "2026-11-16",
+    "art": "REGISTER",
+    "fundstelle": "JSON (Golden Copy 2026-11-16)",
+    "herausgeber": "Global Legal Entity Identifier Foundation (GLEIF)",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/gleif-5493008JG5TXJP2JSY44-direct-beziehung.json",
+    "text_artifact_sha256": "e237057ce9176719b6293580d4d88d9f9c101b9cb9af9340fcfd9c29f2488731",
+    "titel": "Level-2 direkte Mutter 5493008JG5TXJP2JSY44",
+    "url": "https://api.gleif.org/api/v1/lei-records/5493008JG5TXJP2JSY44/direct-parent-relationship"
+   },
+   "rk-gleif-549300M44UTJAP8J6B37": {
+    "abgerufen": "2026-11-16",
+    "art": "REGISTER",
+    "fundstelle": "JSON (Golden Copy 2026-11-16)",
+    "herausgeber": "Global Legal Entity Identifier Foundation (GLEIF)",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/gleif-549300M44UTJAP8J6B37-eintrag.json",
+    "text_artifact_sha256": "a4dfb163cfc02a67d17863e113756a28036caff52ba89cc5887e4588505a604c",
+    "titel": "LEI-Eintrag 549300M44UTJAP8J6B37",
+    "url": "https://api.gleif.org/api/v1/lei-records/549300M44UTJAP8J6B37"
+   },
+   "rk-gleif-549300M44UTJAP8J6B37-oben": {
+    "abgerufen": "2026-11-16",
+    "art": "REGISTER",
+    "fundstelle": "JSON (Golden Copy 2026-11-16)",
+    "herausgeber": "Global Legal Entity Identifier Foundation (GLEIF)",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/gleif-549300M44UTJAP8J6B37-ultimate-ausnahme.json",
+    "text_artifact_sha256": "7941368095673a5330c424f927210cd019828cf57ecf02a806ebf6f41cf5e07c",
+    "titel": "Level-2 oberste Mutter 549300M44UTJAP8J6B37",
+    "url": "https://api.gleif.org/api/v1/lei-records/549300M44UTJAP8J6B37/ultimate-parent-reporting-exception"
+   },
+   "rk-gleif-9845000ED0A5F908A057": {
+    "abgerufen": "2026-11-16",
+    "art": "REGISTER",
+    "fundstelle": "JSON (Golden Copy 2026-11-16)",
+    "herausgeber": "Global Legal Entity Identifier Foundation (GLEIF)",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/gleif-9845000ED0A5F908A057-eintrag.json",
+    "text_artifact_sha256": "e4e2e9ef237fb8ba7587c7f88eb9033e755d1a9ce9825a027b046d2b91930281",
+    "titel": "LEI-Eintrag 9845000ED0A5F908A057",
+    "url": "https://api.gleif.org/api/v1/lei-records/9845000ED0A5F908A057"
+   },
+   "rk-gleif-9845000ED0A5F908A057-oben": {
+    "abgerufen": "2026-11-16",
+    "art": "REGISTER",
+    "fundstelle": "JSON (Golden Copy 2026-11-16)",
+    "herausgeber": "Global Legal Entity Identifier Foundation (GLEIF)",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/gleif-9845000ED0A5F908A057-ultimate-ausnahme.json",
+    "text_artifact_sha256": "06cb8ad019fd55397fbca971b25b8906e41d08dcd2efd03895d4de882deaf275",
+    "titel": "Level-2 oberste Mutter 9845000ED0A5F908A057",
+    "url": "https://api.gleif.org/api/v1/lei-records/9845000ED0A5F908A057/ultimate-parent-reporting-exception"
+   },
+   "rk-pdn-ar-2026-s011": {
+    "abgerufen": "2026-11-16",
+    "art": "COMPANY_PRIMARY",
+    "fundstelle": "PDF-Seite 11 (pdftotext ohne -layout)",
+    "herausgeber": "Paladin Energy Ltd",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/pdn-ar-2026-p011.txt",
+    "text_artifact_sha256": "6c9a916fe0d0182e808faa2cdb559613c8f4b139fe421b0032a2d38d60ebb725",
+    "titel": "Annual Report 2026",
+    "url": "https://announcements.asx.com.au/asxpdf/20260826/pdf/07374q7yc9qjxs.pdf#page=11"
+   },
+   "rk-pdn-ar-2026-s204": {
+    "abgerufen": "2026-11-16",
+    "art": "COMPANY_PRIMARY",
+    "fundstelle": "PDF-Seite 204 (pdftotext ohne -layout)",
+    "herausgeber": "Paladin Energy Ltd",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/pdn-ar-2026-p204.txt",
+    "text_artifact_sha256": "e459767b9eee10d5377bb1d4d8d1cedfc1eb8d7acff6df5388bd68017b2bb920",
+    "titel": "Annual Report 2026",
+    "url": "https://announcements.asx.com.au/asxpdf/20260826/pdf/07374q7yc9qjxs.pdf#page=204"
+   },
+   "rk-wna-kazakhstan": {
+    "abgerufen": "2026-11-16",
+    "art": "INDUSTRY_ASSOCIATION",
+    "fundstelle": "HTML, Text ohne Tags",
+    "herausgeber": "World Nuclear Association",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/wna-kz.txt",
+    "text_artifact_sha256": "e408bf0967e0793abf309ab399ba5667b350c5b2cdf00cd7aa091b00f19766c9",
+    "titel": "Uranium and Nuclear Power in Kazakhstan (Country Profile)",
+    "url": "https://world-nuclear.org/information-library/country-profiles/countries-g-n/kazakhstan"
+   }
+  },
+  "schwelle_prozent": 10.0,
+  "zweitpruefung": [
+   {
+    "abgleich": "100 % = 100 % (Bergbaulizenz ML6109, Stand 31.12.2024)",
+    "aussage": "Boss Energy Ltd → Honeymoon (Uranmine): 100 % (Kapital), Stand 2024-12-31",
+    "belege": [
+     {
+      "quelle": "rk-boe-q-2024-12-s012",
+      "zitat": [
+       "Honeymoon Mine South Australia ML6109 100%"
+      ]
+     }
+    ],
+    "bericht": "analysis/rohstoffe/eigentum/zweitpruefung/Pruefbericht-Eigentuemerkette-Rohstoffe-Zweitpruefung-2026-11-16.pdf",
+    "erstpruefung_sitzung": "session_01JgcA7TdgLRrqKV9kyFuE5E",
+    "geprueft_am": "2026-11-16",
+    "hinweis": "Zuordnung der Spalte mit pdftotext -layout am frischen PDF geprüft.",
+    "pruef_id": "R4",
+    "pruefer": "Claude (Zweitprüfung, getrennte Sitzung)",
+    "quelle_frisch_geladen": true,
+    "regel": "Eddie Sablah 2026-11-11 13:41Z: Freigabe nur, wenn zwei getrennte Sitzungen bestätigen (Zweite Sitzung + CI + 5 Fälle/Monat)",
+    "sitzung": "session_01JgcA7Tamxi4Cn8LEHHDz8t",
+    "urteil": "BESTAETIGT",
+    "ziel_id": "EK-BOSS-HONEYMOON",
+    "ziel_typ": "kante"
+   },
+   {
+    "abgleich": "GLEIF Level 2: Ausnahme NATURAL_PERSONS = von natürlichen Personen beherrscht, Namen nicht im Register",
+    "aussage": "Natürliche Person(en), im LEI-Register nicht namentlich genannt → Boss Energy Ltd: beherrscht laut LEI-Register (Namen nicht genannt), beherrschend, Stand 2026-11-16",
+    "belege": [
+     {
+      "quelle": "rk-gleif-9845000ED0A5F908A057",
+      "zitat": [
+       "\"lei\":\"9845000ED0A5F908A057\""
+      ]
+     },
+     {
+      "quelle": "rk-gleif-9845000ED0A5F908A057-oben",
+      "zitat": [
+       "\"reason\":\"NATURAL_PERSONS\""
+      ]
+     }
+    ],
+    "bericht": "analysis/rohstoffe/eigentum/zweitpruefung/Pruefbericht-Eigentuemerkette-Rohstoffe-Zweitpruefung-2026-11-16.pdf",
+    "erstpruefung_sitzung": "session_01JgcA7TdgLRrqKV9kyFuE5E",
+    "geprueft_am": "2026-11-16",
+    "pruef_id": "R5",
+    "pruefer": "Claude (Zweitprüfung, getrennte Sitzung)",
+    "quelle_frisch_geladen": true,
+    "regel": "Eddie Sablah 2026-11-11 13:41Z: Freigabe nur, wenn zwei getrennte Sitzungen bestätigen (Zweite Sitzung + CI + 5 Fälle/Monat)",
+    "sitzung": "session_01JgcA7Tamxi4Cn8LEHHDz8t",
+    "urteil": "BESTAETIGT",
+    "ziel_id": "EK-BOSS-PERSONEN-BOSS",
+    "ziel_typ": "kante"
+   },
+   {
+    "abgleich": "100 % = 100 %",
+    "aussage": "CGN Mining Company Limited → CGNM UK Limited: 100 % (Kapital), Stand 2025-12-31",
+    "belege": [
+     {
+      "quelle": "rk-cgnm-fy-2025-s022",
+      "zitat": [
+       "held 100% equity interest in CGNM UK, through which it held 49% of the equity interest and off-take rights of products of Ortalyk"
+      ]
+     }
+    ],
+    "bericht": "analysis/rohstoffe/eigentum/zweitpruefung/Pruefbericht-Eigentuemerkette-Rohstoffe-Zweitpruefung-2026-11-16.pdf",
+    "erstpruefung_sitzung": "session_01JgcA7TdgLRrqKV9kyFuE5E",
+    "geprueft_am": "2026-11-16",
+    "pruef_id": "R7",
+    "pruefer": "Claude (Zweitprüfung, getrennte Sitzung)",
+    "quelle_frisch_geladen": true,
+    "regel": "Eddie Sablah 2026-11-11 13:41Z: Freigabe nur, wenn zwei getrennte Sitzungen bestätigen (Zweite Sitzung + CI + 5 Fälle/Monat)",
+    "sitzung": "session_01JgcA7Tamxi4Cn8LEHHDz8t",
+    "urteil": "BESTAETIGT",
+    "ziel_id": "EK-CGNM-CGNM-UK",
+    "ziel_typ": "kante"
+   },
+   {
+    "abgleich": "49 % = 49 %",
+    "aussage": "CGNM UK Limited → Ortalyk LLP: 49 % (Kapital), Stand 2025-12-31",
+    "belege": [
+     {
+      "quelle": "rk-cgnm-fy-2025-s022",
+      "zitat": [
+       "held 100% equity interest in CGNM UK, through which it held 49% of the equity interest and off-take rights of products of Ortalyk"
+      ]
+     }
+    ],
+    "bericht": "analysis/rohstoffe/eigentum/zweitpruefung/Pruefbericht-Eigentuemerkette-Rohstoffe-Zweitpruefung-2026-11-16.pdf",
+    "erstpruefung_sitzung": "session_01JgcA7TdgLRrqKV9kyFuE5E",
+    "geprueft_am": "2026-11-16",
+    "pruef_id": "R8",
+    "pruefer": "Claude (Zweitprüfung, getrennte Sitzung)",
+    "quelle_frisch_geladen": true,
+    "regel": "Eddie Sablah 2026-11-11 13:41Z: Freigabe nur, wenn zwei getrennte Sitzungen bestätigen (Zweite Sitzung + CI + 5 Fälle/Monat)",
+    "sitzung": "session_01JgcA7Tamxi4Cn8LEHHDz8t",
+    "urteil": "BESTAETIGT",
+    "ziel_id": "EK-CGNM-UK-ORTALYK",
+    "ziel_typ": "kante"
+   },
+   {
+    "abgleich": "\"subsidiary\" = Tochtergesellschaft, Anteil nicht genannt",
+    "aussage": "China General Nuclear Power Corporation (CGNPC) → CGNPC Uranium Resources Co. Ltd. (CGNPC-URC): Tochtergesellschaft (Anteil nicht genannt), beherrschend, Stand 2025-12-31",
+    "belege": [
+     {
+      "quelle": "rk-cgnm-fy-2025-s006",
+      "zitat": [
+       "(CGNPC Uranium Resources Co. Ltd.) (“CGNPC-URC”), which is in turn a subsidiary of",
+       "CGNPC is the ultimate parent company of the Company."
+      ]
+     }
+    ],
+    "bericht": "analysis/rohstoffe/eigentum/zweitpruefung/Pruefbericht-Eigentuemerkette-Rohstoffe-Zweitpruefung-2026-11-16.pdf",
+    "erstpruefung_sitzung": "session_01JgcA7TdgLRrqKV9kyFuE5E",
+    "geprueft_am": "2026-11-16",
+    "pruef_id": "R9",
+    "pruefer": "Claude (Zweitprüfung, getrennte Sitzung)",
+    "quelle_frisch_geladen": true,
+    "regel": "Eddie Sablah 2026-11-11 13:41Z: Freigabe nur, wenn zwei getrennte Sitzungen bestätigen (Zweite Sitzung + CI + 5 Fälle/Monat)",
+    "sitzung": "session_01JgcA7Tamxi4Cn8LEHHDz8t",
+    "urteil": "BESTAETIGT",
+    "ziel_id": "EK-CGNPC-CGNPC-URC",
+    "ziel_typ": "kante"
+   },
+   {
+    "abgleich": "\"wholly-owned subsidiary\" = 100 %",
+    "aussage": "CGNPC Uranium Resources Co. Ltd. (CGNPC-URC) → China Uranium Development Company Limited: 100 % (Kapital), Stand 2025-12-31",
+    "belege": [
+     {
+      "quelle": "rk-cgnm-fy-2025-s006",
+      "zitat": [
+       "a company incorporated in Hong Kong and a wholly-owned subsidiary of (CGNPC Uranium Resources Co. Ltd.)"
+      ]
+     }
+    ],
+    "bericht": "analysis/rohstoffe/eigentum/zweitpruefung/Pruefbericht-Eigentuemerkette-Rohstoffe-Zweitpruefung-2026-11-16.pdf",
+    "erstpruefung_sitzung": "session_01JgcA7TdgLRrqKV9kyFuE5E",
+    "geprueft_am": "2026-11-16",
+    "pruef_id": "R10",
+    "pruefer": "Claude (Zweitprüfung, getrennte Sitzung)",
+    "quelle_frisch_geladen": true,
+    "regel": "Eddie Sablah 2026-11-11 13:41Z: Freigabe nur, wenn zwei getrennte Sitzungen bestätigen (Zweite Sitzung + CI + 5 Fälle/Monat)",
+    "sitzung": "session_01JgcA7Tamxi4Cn8LEHHDz8t",
+    "urteil": "BESTAETIGT",
+    "ziel_id": "EK-CGNPC-URC-CUD",
+    "ziel_typ": "kante"
+   },
+   {
+    "abgleich": "\"parent company\" = Muttergesellschaft, Anteil nicht genannt",
+    "aussage": "China Uranium Development Company Limited → CGN Mining Company Limited: Muttergesellschaft (Anteil nicht genannt), beherrschend, Stand 2025-12-31",
+    "belege": [
+     {
+      "quelle": "rk-cgnm-fy-2025-s006",
+      "zitat": [
+       "Its parent company is (China Uranium Development Company Limited) (“China Uranium Development”)"
+      ]
+     }
+    ],
+    "bericht": "analysis/rohstoffe/eigentum/zweitpruefung/Pruefbericht-Eigentuemerkette-Rohstoffe-Zweitpruefung-2026-11-16.pdf",
+    "erstpruefung_sitzung": "session_01JgcA7TdgLRrqKV9kyFuE5E",
+    "geprueft_am": "2026-11-16",
+    "pruef_id": "R14",
+    "pruefer": "Claude (Zweitprüfung, getrennte Sitzung)",
+    "quelle_frisch_geladen": true,
+    "regel": "Eddie Sablah 2026-11-11 13:41Z: Freigabe nur, wenn zwei getrennte Sitzungen bestätigen (Zweite Sitzung + CI + 5 Fälle/Monat)",
+    "sitzung": "session_01JgcA7Tamxi4Cn8LEHHDz8t",
+    "urteil": "BESTAETIGT",
+    "ziel_id": "EK-CUD-CGNM",
+    "ziel_typ": "kante"
+   },
+   {
+    "abgleich": "Ortalyk in der Tabelle der Kazatomprom-Gesellschaften; Anteil nicht genannt",
+    "aussage": "NAC Kazatomprom JSC → Ortalyk LLP: laut Tabelle Gesellschaft von Kazatomprom (Anteil nicht genannt), Stand 2026-11-16",
+    "belege": [
+     {
+      "quelle": "rk-wna-kazakhstan",
+      "zitat": [
+       "Zhalpak 15,000 Ortalyk LLP (K'prom)",
+       "Kazatomprom mining subsidiaries and joint ventures"
+      ]
+     }
+    ],
+    "bericht": "analysis/rohstoffe/eigentum/zweitpruefung/Pruefbericht-Eigentuemerkette-Rohstoffe-Zweitpruefung-2026-11-16.pdf",
+    "erstpruefung_sitzung": "session_01JgcA7TdgLRrqKV9kyFuE5E",
+    "geprueft_am": "2026-11-16",
+    "hinweis": "Kazatomprom hält nach dem Verkauf von 49 % an CGN (2021) den Rest; die Quelle nennt den Anteil nicht.",
+    "pruef_id": "R25",
+    "pruefer": "Claude (Zweitprüfung, getrennte Sitzung)",
+    "quelle_frisch_geladen": true,
+    "regel": "Eddie Sablah 2026-11-11 13:41Z: Freigabe nur, wenn zwei getrennte Sitzungen bestätigen (Zweite Sitzung + CI + 5 Fälle/Monat)",
+    "sitzung": "session_01JgcA7Tamxi4Cn8LEHHDz8t",
+    "urteil": "BESTAETIGT",
+    "ziel_id": "EK-KAZATOMPROM-ORTALYK",
+    "ziel_typ": "kante"
+   },
+   {
+    "abgleich": "25 % = 25 %",
+    "aussage": "Minderheitsgesellschafter von Langer Heinrich Holdings (nicht genannt) → Langer Heinrich (Uranmine): 25 % (Kapital), Stand 2026-06-30",
+    "belege": [
+     {
+      "quelle": "rk-pdn-ar-2026-s204",
+      "zitat": [
+       "The Company owns 75% of Langer Heinrich Holdings Ltd. The remaining 25% is held by non-controlling interests."
+      ]
+     }
+    ],
+    "bericht": "analysis/rohstoffe/eigentum/zweitpruefung/Pruefbericht-Eigentuemerkette-Rohstoffe-Zweitpruefung-2026-11-16.pdf",
+    "erstpruefung_sitzung": "session_01JgcA7TdgLRrqKV9kyFuE5E",
+    "geprueft_am": "2026-11-16",
+    "hinweis": "Gehalten an Langer Heinrich Holdings Ltd; die Minderheit wird nicht namentlich genannt.",
+    "pruef_id": "R30",
+    "pruefer": "Claude (Zweitprüfung, getrennte Sitzung)",
+    "quelle_frisch_geladen": true,
+    "regel": "Eddie Sablah 2026-11-11 13:41Z: Freigabe nur, wenn zwei getrennte Sitzungen bestätigen (Zweite Sitzung + CI + 5 Fälle/Monat)",
+    "sitzung": "session_01JgcA7Tamxi4Cn8LEHHDz8t",
+    "urteil": "BESTAETIGT",
+    "ziel_id": "EK-LH-MINDERHEIT-LANGER-HEINRICH",
+    "ziel_typ": "kante"
+   },
+   {
+    "abgleich": "75 % = 75 %",
+    "aussage": "Paladin Energy Ltd → Langer Heinrich (Uranmine): 75 % (Kapital), Stand 2026-06-30",
+    "belege": [
+     {
+      "quelle": "rk-pdn-ar-2026-s011",
+      "zitat": [
+       "with a 75% ownership interest in the Langer Heinrich Mine"
+      ]
+     },
+     {
+      "quelle": "rk-pdn-ar-2026-s204",
+      "zitat": [
+       "The Company owns 75% of Langer Heinrich Holdings Ltd."
+      ]
+     }
+    ],
+    "bericht": "analysis/rohstoffe/eigentum/zweitpruefung/Pruefbericht-Eigentuemerkette-Rohstoffe-Zweitpruefung-2026-11-16.pdf",
+    "erstpruefung_sitzung": "session_01JgcA7TdgLRrqKV9kyFuE5E",
+    "geprueft_am": "2026-11-16",
+    "pruef_id": "R34",
+    "pruefer": "Claude (Zweitprüfung, getrennte Sitzung)",
+    "quelle_frisch_geladen": true,
+    "regel": "Eddie Sablah 2026-11-11 13:41Z: Freigabe nur, wenn zwei getrennte Sitzungen bestätigen (Zweite Sitzung + CI + 5 Fälle/Monat)",
+    "sitzung": "session_01JgcA7Tamxi4Cn8LEHHDz8t",
+    "urteil": "BESTAETIGT",
+    "ziel_id": "EK-PALADIN-LANGER-HEINRICH",
+    "ziel_typ": "kante"
+   },
+   {
+    "abgleich": "IS_DIRECTLY_CONSOLIDATED_BY Samruk-Kazyna (213800N83GBAZJ4ER974)",
+    "aussage": "JSC Samruk-Kazyna (Staatsfonds) → NAC Kazatomprom JSC: konsolidiert laut LEI-Register (Anteil nicht genannt), beherrschend, Stand 2026-11-16",
+    "belege": [
+     {
+      "quelle": "rk-gleif-5493008JG5TXJP2JSY44-direkt",
+      "zitat": [
+       "\"startNode\":{\"id\":\"5493008JG5TXJP2JSY44\",\"type\":\"LEI\"},\"endNode\":{\"id\":\"213800N83GBAZJ4ER974\",\"type\":\"LEI\"},\"type\":\"IS_DIRECTLY_CONSOLIDATED_BY\",\"status\":\"ACTIVE\""
+      ]
+     }
+    ],
+    "bericht": "analysis/rohstoffe/eigentum/zweitpruefung/Pruefbericht-Eigentuemerkette-Rohstoffe-Zweitpruefung-2026-11-16.pdf",
+    "erstpruefung_sitzung": "session_01JgcA7TdgLRrqKV9kyFuE5E",
+    "geprueft_am": "2026-11-16",
+    "hinweis": "Der gemeldete Bilanzzeitraum endet am 07.04.2022; die Beziehung ist als ACTIVE geführt (nur Angabe der Gesellschaft).",
+    "pruef_id": "R39",
+    "pruefer": "Claude (Zweitprüfung, getrennte Sitzung)",
+    "quelle_frisch_geladen": true,
+    "regel": "Eddie Sablah 2026-11-11 13:41Z: Freigabe nur, wenn zwei getrennte Sitzungen bestätigen (Zweite Sitzung + CI + 5 Fälle/Monat)",
+    "sitzung": "session_01JgcA7Tamxi4Cn8LEHHDz8t",
+    "urteil": "BESTAETIGT",
+    "ziel_id": "EK-SAMRUK-KAZATOMPROM",
+    "ziel_typ": "kante"
+   },
+   {
+    "abgleich": "LEI 549300M44UTJAP8J6B37 = PALADIN ENERGY LTD, Eintrag ACTIVE/ISSUED; Ausnahme NO_KNOWN_PERSON (keine beherrschende Person oder Gesellschaft bekannt)",
+    "aussage": "Paladin Energy Ltd: Im LEI-Register ist keine Person oder Gesellschaft eingetragen, die die Gesellschaft beherrscht (Angabe der Gesellschaft; Großaktionäre unter der Beherrschungsschwelle sind damit nicht ausgeschlossen).",
+    "belege": [
+     {
+      "quelle": "rk-gleif-549300M44UTJAP8J6B37",
+      "zitat": [
+       "\"legalName\":{\"name\":\"PALADIN ENERGY LTD\""
+      ]
+     },
+     {
+      "quelle": "rk-gleif-549300M44UTJAP8J6B37-oben",
+      "zitat": [
+       "\"lei\":\"549300M44UTJAP8J6B37\",\"category\":\"ULTIMATE_ACCOUNTING_CONSOLIDATION_PARENT\",\"reason\":\"NO_KNOWN_PERSON\""
+      ]
+     }
+    ],
+    "bericht": "analysis/rohstoffe/eigentum/zweitpruefung/Pruefbericht-Eigentuemerkette-Rohstoffe-Zweitpruefung-2026-11-16.pdf",
+    "erstpruefung_sitzung": "session_01JgcA7TdgLRrqKV9kyFuE5E",
+    "geprueft_am": "2026-11-16",
+    "pruef_id": "R57",
+    "pruefer": "Claude (Zweitprüfung, getrennte Sitzung)",
+    "quelle_frisch_geladen": true,
+    "regel": "Eddie Sablah 2026-11-11 13:41Z: Freigabe nur, wenn zwei getrennte Sitzungen bestätigen (Zweite Sitzung + CI + 5 Fälle/Monat)",
+    "sitzung": "session_01JgcA7Tamxi4Cn8LEHHDz8t",
+    "urteil": "BESTAETIGT",
+    "ziel_id": "R-PALADIN",
+    "ziel_typ": "oberste"
+   },
+   {
+    "abgleich": "Central Mynkuduk ist Lagerstätte von Ortalyk",
+    "aussage": "uran-site-legacy-row-129 gehört laut Quelle zu Ortalyk LLP",
+    "belege": [
+     {
+      "quelle": "rk-cgnm-fy-2025-s028",
+      "zitat": [
+       "the volume of uranium extracted by Ortalyk aligned with the planned",
+       "including 1,633tU from Central Mynkuduk Deposit"
+      ]
+     }
+    ],
+    "bericht": "analysis/rohstoffe/eigentum/zweitpruefung/Pruefbericht-Eigentuemerkette-Rohstoffe-Zweitpruefung-2026-11-16.pdf",
+    "erstpruefung_sitzung": "session_01JgcA7TdgLRrqKV9kyFuE5E",
+    "geprueft_am": "2026-11-16",
+    "pruef_id": "R77",
+    "pruefer": "Claude (Zweitprüfung, getrennte Sitzung)",
+    "quelle_frisch_geladen": true,
+    "regel": "Eddie Sablah 2026-11-11 13:41Z: Freigabe nur, wenn zwei getrennte Sitzungen bestätigen (Zweite Sitzung + CI + 5 Fälle/Monat)",
+    "sitzung": "session_01JgcA7Tamxi4Cn8LEHHDz8t",
+    "urteil": "BESTAETIGT",
+    "ziel_id": "uran/uran-site-legacy-row-129",
+    "ziel_typ": "glied"
+   },
+   {
+    "abgleich": "Zhalpak ist Lagerstätte von Ortalyk",
+    "aussage": "uran-site-legacy-row-130 gehört laut Quelle zu Ortalyk LLP",
+    "belege": [
+     {
+      "quelle": "rk-cgnm-fy-2025-s028",
+      "zitat": [
+       "the volume of uranium extracted by Ortalyk aligned with the planned",
+       "202tU from Zhalpak Deposit"
+      ]
+     }
+    ],
+    "bericht": "analysis/rohstoffe/eigentum/zweitpruefung/Pruefbericht-Eigentuemerkette-Rohstoffe-Zweitpruefung-2026-11-16.pdf",
+    "erstpruefung_sitzung": "session_01JgcA7TdgLRrqKV9kyFuE5E",
+    "geprueft_am": "2026-11-16",
+    "pruef_id": "R78",
+    "pruefer": "Claude (Zweitprüfung, getrennte Sitzung)",
+    "quelle_frisch_geladen": true,
+    "regel": "Eddie Sablah 2026-11-11 13:41Z: Freigabe nur, wenn zwei getrennte Sitzungen bestätigen (Zweite Sitzung + CI + 5 Fälle/Monat)",
+    "sitzung": "session_01JgcA7Tamxi4Cn8LEHHDz8t",
+    "urteil": "BESTAETIGT",
+    "ziel_id": "uran/uran-site-legacy-row-130",
+    "ziel_typ": "glied"
+   }
+  ]
+ },
+ "eingaben": {
+  "analysis/rohstoffe/eigentum/eigentumskette.json": "58f2a733e79cd462062e351135d0aafb3e27494d28e47d4268dd26a0c6bd2371",
+  "analysis/rohstoffe/fluss-freigaben.jsonl": "7bcb03cd6f866779a996144af573a32a6723c19e37c1648f6b5dfbf2b642a149",
+  "analysis/rohstoffe/mengen/annahmen-snapshot.json": "5169bc01abcdff017b11b6e2e0bdb0abbc934a843f86a8fbbf4dbdd3585165b1",
+  "analysis/rohstoffe/mengen/mengen.json": "94e6e728b63635daef1ffe47c595cd03fd4f5644a158aa61f7605bbf497706b6",
+  "analysis/rohstoffe/mengen/zweitpruefung.jsonl": "fb323cf5f6ee23aa7b0f563979efed73dcdbbdd2cf0203a287013f000c7d6770",
+  "analysis/rohstoffe/uran/kandidaten.json": "11d15a665ba735e90f2b95f5c78921f67413244c684cadafba90f48fa7418b57",
+  "analysis/rohstoffe/uran/markt.json": "2041c8a09e8ee623ffc75d7495c78f6c01307a6257184939f41a5fc8d59367ef"
+ },
+ "erzeugt_von": "scripts/analysis/rohstoffe/rohstoffkette.py",
+ "kette": {
+  "glieder": [
+   "S2",
+   "S6"
+  ],
+  "stufen": 2,
+  "text": "Honeymoon → Honeywell Uranium Hexafluoride Process",
+  "verbindungen": [
+   "V2"
+  ]
+ },
+ "kundenfrage": {
+  "antwort": "Erfasst: Honeymoon → Honeywell Uranium Hexafluoride Process (1 Verbindung, alle freigegeben). Menge belegt auf 1 von 1. Ob die Kette weiter bis zu einem Endprodukt reicht, ist im Atlas nicht erfasst.",
+  "frage": "Woher kommt das Uran, das Honeywell Uranium Hexafluoride Process bezieht, über welche Glieder läuft es, in welcher Menge, und welche Glieder sind belegt?",
+  "kunde": "S6"
+ },
+ "preisbasis": null,
+ "preisbasis_grund": "Keine tägliche Notierung aus lesbarer, freigegebener Quelle: der U3O8-Spotpreis erscheint bei UxC und TradeTech nur für Abonnenten. Wert mit Annahmen nutzt den Durchschnittserlös Paladin GJ 2025/26.",
+ "regeln": [
+  "Nur freigegebene Flüsse (analysis/rohstoffe/fluss-freigaben.jsonl); jedes Zitat steht wörtlich in der gepinnten Textkopie.",
+  "Evidenzstatus wie im Generator-Datensatz: FACT nur für freigegebene Flüsse nach Eddies Entscheidung vom 2026-11-16 (fakt-entscheidung.json), nie VERIFIED oder APPROVED.",
+  "UNKNOWN bleibt UNKNOWN mit Grund; belegter Wert nur laut Quelle, Euro mit EZB-Jahresmittel. Ein Geldbetrag ist keine Menge.",
+  "Ebene „mit Annahmen“ getrennt: Menge aus dem Annahmen-Atlas (Snapshot je Fluss-ID), Wert = Menge × Preis der gelesenen Preisquelle ÷ EZB-Kurs (Tagespreis mit EZB-Tageskurs, wo eine lesbare tägliche Notierung vorliegt, sonst Jahrespreis mit EZB-Jahresmittel); zählt nie als belegt. Ausstoß und Obergrenze des liefernden Glieds werden gezeigt, zählen aber nicht als Menge der Verbindung.",
+  "Eigentümer je Glied nur mit gelesener Quelle (Zitat gegen Textkopie geprüft); freigegeben erst nach Zweitprüfung einer getrennten Sitzung. Eigentümer aus der Altliste sind Kandidaten und zählen nicht als belegt.",
+  "Ausfall = Folge im erfassten Netz; Tonnen und Mehrkosten nur, wenn eine Quelle sie nennt."
+ ],
+ "risikoebene": {
+  "kategorien": [
+   {
+    "id": "LAENDERRISIKO",
+    "text": "Länderrisiko"
+   },
+   {
+    "id": "SANKTIONEN",
+    "text": "Sanktionen und Handelsmaßnahmen"
+   },
+   {
+    "id": "NATURGEFAHREN",
+    "text": "Naturgefahren"
+   },
+   {
+    "id": "KONZENTRATION",
+    "text": "Konzentration"
+   }
+  ],
+  "messung": {
+   "anteil_belegt_prozent": 82.1,
+   "belegt": 23,
+   "belegt_nur_landesebene": 16,
+   "belegt_standort_oder_firma": 7,
+   "felder": 28,
+   "glieder": 7,
+   "je_glied": {
+    "S1": {
+     "KONZENTRATION": "BELEGT_LAND",
+     "LAENDERRISIKO": "BELEGT_LAND",
+     "NATURGEFAHREN": "BELEGT_LAND",
+     "SANKTIONEN": "BELEGT_STANDORT"
+    },
+    "S2": {
+     "KONZENTRATION": "BELEGT_LAND",
+     "LAENDERRISIKO": "BELEGT_LAND",
+     "NATURGEFAHREN": "BELEGT_LAND",
+     "SANKTIONEN": "BELEGT_STANDORT"
+    },
+    "S3": {
+     "KONZENTRATION": "BELEGT_LAND",
+     "LAENDERRISIKO": "BELEGT_LAND",
+     "NATURGEFAHREN": "UNBEKANNT",
+     "SANKTIONEN": "BELEGT_STANDORT"
+    },
+    "S4": {
+     "KONZENTRATION": "BELEGT_LAND",
+     "LAENDERRISIKO": "BELEGT_LAND",
+     "NATURGEFAHREN": "BELEGT_LAND",
+     "SANKTIONEN": "BELEGT_STANDORT"
+    },
+    "S5": {
+     "KONZENTRATION": "UNBEKANNT",
+     "LAENDERRISIKO": "BELEGT_LAND",
+     "NATURGEFAHREN": "BELEGT_LAND",
+     "SANKTIONEN": "BELEGT_STANDORT"
+    },
+    "S6": {
+     "KONZENTRATION": "UNBEKANNT",
+     "LAENDERRISIKO": "BELEGT_LAND",
+     "NATURGEFAHREN": "BELEGT_LAND",
+     "SANKTIONEN": "BELEGT_STANDORT"
+    },
+    "S7": {
+     "KONZENTRATION": "UNBEKANNT",
+     "LAENDERRISIKO": "BELEGT_LAND",
+     "NATURGEFAHREN": "UNBEKANNT",
+     "SANKTIONEN": "BELEGT_STANDORT"
+    }
+   },
+   "je_kategorie": {
+    "KONZENTRATION": {
+     "belegt": 4,
+     "belegt_nur_landesebene": 4,
+     "belegt_standort_oder_firma": 0,
+     "unbekannt": 3
+    },
+    "LAENDERRISIKO": {
+     "belegt": 7,
+     "belegt_nur_landesebene": 7,
+     "belegt_standort_oder_firma": 0,
+     "unbekannt": 0
+    },
+    "NATURGEFAHREN": {
+     "belegt": 5,
+     "belegt_nur_landesebene": 5,
+     "belegt_standort_oder_firma": 0,
+     "unbekannt": 2
+    },
+    "SANKTIONEN": {
+     "belegt": 7,
+     "belegt_nur_landesebene": 0,
+     "belegt_standort_oder_firma": 7,
+     "unbekannt": 0
+    }
+   },
+   "unbekannt": 5
+  },
+  "regeln": [
+   "Länderrisiko und Naturgefahren nur aus den Reisehinweisen des britischen Außenministeriums (FCDO), Antwort unverändert gespeichert; keine Punktzahl, keine Rangfolge.",
+   "Landesebene gilt für das Land, nicht nachweislich für den Standort.",
+   "Sanktionen: Länderprogramm und Namensabgleich mit den Listen EU und UK; kein Treffer ist kein Nachweis der Unbedenklichkeit; OFAC und UN nicht abgeglichen.",
+   "Konzentration nur aus der freigegebenen Weltreferenz (Förderstufe).",
+   "Land eines Glieds: Datensatz, sonst Sitz laut LEI-Register, sonst Lage der belegten Koordinate; sonst unbekannt."
+  ]
+ },
+ "rohstoff": "Uran",
+ "schema": "atlas.rohstoffkette/1",
+ "slug": "uran",
+ "stand": "2026-11-08",
+ "standorte": [
+  {
+   "alternativen": [
+    "S4"
+   ],
+   "eigentuemer": [
+    {
+     "anteil": null,
+     "hinweis": "Eigentümer laut Altliste, Quelle ungeprüft, Anteil unbekannt",
+     "name": "Ortalyk",
+     "status": "KANDIDAT",
+     "url": "https://world-nuclear.org/information-library/country-profiles/countries-g-n/kazakhstan"
+    }
+   ],
+   "eigentuemer_grund": null,
+   "entity_id": "uran-site-legacy-row-129",
+   "id": "S1",
+   "kurz": "Central Mynkuduk",
+   "land": "Kasachstan",
+   "name": "Central Mynkuduk",
+   "ort": {
+    "evidenz": "BELEGT",
+    "grund": null,
+    "lat": 45.598224,
+    "lon": 67.90974,
+    "quelle": "Koordinate: Mynkuduk (Wikidata, Uranlagerstätte), Genauigkeit OPERATION_SITE",
+    "status": "APPROVED (OPERATION_SITE)",
+    "url": "https://www.wikidata.org/wiki/Q28952483"
+   },
+   "risiko": [
+    {
+     "art": "LAENDERANTEIL",
+     "bezug": "LAND",
+     "evidenz": "BELEGT",
+     "quelle": "World Nuclear Association, World Uranium Mining Production (Updated Friday, 23 October 2026), Table 'Production from mines (tonnes U)', columns 2023 and 2024",
+     "text": "Kasachstan: 38,6 % der Weltförderung Uran 2024, unter der Schwelle 50 %",
+     "url": "https://world-nuclear.org/information-library/nuclear-fuel-cycle/mining-of-uranium/world-uranium-mining-production"
+    }
+   ],
+   "risiko_grund": null,
+   "risiko_land": {
+    "belege": [],
+    "herkunft": "Land des Glieds im Generator-Datensatz",
+    "iso2": "KZ",
+    "name": "Kasachstan"
+   },
+   "risikoebene": {
+    "KONZENTRATION": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "KZ",
+       "quellen": [
+        {
+         "fundstelle": "Weltreferenz (Zahl gegen Abschrift geprüft)",
+         "herausgeber": "World Nuclear Association, World Uranium Mining Production (Updated Friday, 23 October 2026), Table 'Production from mines (tonnes U)', columns 2023 and 2024",
+         "titel": "World Nuclear Association, World Uranium Mining Production (Updated Friday, 23 October 2026), Table 'Production from mines (tonnes U)', columns 2023 and 2024",
+         "url": "https://world-nuclear.org/information-library/nuclear-fuel-cycle/mining-of-uranium/world-uranium-mining-production",
+         "zitat": null
+        }
+       ],
+       "text": "Kasachstan: 38,6 % der Weltförderung Uran 2024, unter der Schwelle 50 %"
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    },
+    "LAENDERRISIKO": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "KZ",
+       "quellen": [
+        {
+         "abgerufen": "2026-11-16",
+         "api": "https://www.gov.uk/api/content/foreign-travel-advice/kazakhstan",
+         "fundstelle": "GOV.UK Content API (unveränderte Antwort), Feld alert_status und Teil \"Warnings and insurance\"",
+         "herausgeber": "Foreign, Commonwealth & Development Office (UK)",
+         "sha256": "d95fd769e61f222dbc15bbf2aad8a0227528e0d827e242197a64c46983ea65b1",
+         "stand": "2026-10-30",
+         "textkopie": "analysis/rohstoffe/risiko/raw/fcdo-kazakhstan.json",
+         "titel": "Foreign travel advice: Kazakhstan travel advice",
+         "url": "https://www.gov.uk/foreign-travel-advice/kazakhstan",
+         "zitat": "\"alert_status\":[]"
+        }
+       ],
+       "text": "Kasachstan: Reisehinweis FCDO (Stand 2026-10-30): keine Gebiete mit Reisewarnung (Warnstufe leer)."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    },
+    "NATURGEFAHREN": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "KZ",
+       "quellen": [
+        {
+         "abgerufen": "2026-11-16",
+         "api": "https://www.gov.uk/api/content/foreign-travel-advice/kazakhstan",
+         "fundstelle": "GOV.UK Content API (unveränderte Antwort), Teil \"Safety and security\", Abschnitt Naturgefahren",
+         "herausgeber": "Foreign, Commonwealth & Development Office (UK)",
+         "sha256": "d95fd769e61f222dbc15bbf2aad8a0227528e0d827e242197a64c46983ea65b1",
+         "stand": "2026-10-30",
+         "textkopie": "analysis/rohstoffe/risiko/raw/fcdo-kazakhstan.json",
+         "titel": "Foreign travel advice: Kazakhstan travel advice",
+         "url": "https://www.gov.uk/foreign-travel-advice/kazakhstan",
+         "zitat": "Extreme weather and natural disasters … Wildfires … Flooding and mudslides … Earthquakes"
+        }
+       ],
+       "text": "Kasachstan: FCDO nennt für das Land: Wald- und Flächenbrände, Überschwemmungen und Schlammlawinen, Erdbeben."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    },
+    "SANKTIONEN": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "ABGLEICH",
+       "land": "KZ",
+       "quellen": [
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "EU",
+         "stand": "2026-10-23",
+         "textkopie": "analysis/research/sanktionen-v1/listen/eu.json",
+         "titel": "EU Consolidated Financial Sanctions List (FSF), Stand 2026-10-23 (1779 Organisationen)",
+         "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+         "zitat": "\"stand\":\"2026-10-23\""
+        },
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "UK",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/research/sanktionen-v1/listen/uk.json",
+         "titel": "UK Sanctions List (FCDO), Stand 2026-11-10 (1667 Organisationen)",
+         "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv",
+         "zitat": "\"stand\":\"2026-11-10\""
+        }
+       ],
+       "text": "Kasachstan: die gelesenen Sanktionslisten EU (Stand 2026-10-23) und UK (Stand 2026-11-10) führen kein Länderprogramm. Nicht abgeglichen: OFAC, UN."
+      },
+      {
+       "bezug": "FIRMA",
+       "evidenz": "ABGLEICH",
+       "land": "KZ",
+       "quellen": [
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "EU",
+         "stand": "2026-10-23",
+         "textkopie": "analysis/research/sanktionen-v1/listen/eu.json",
+         "titel": "EU Consolidated Financial Sanctions List (FSF), Stand 2026-10-23 (1779 Organisationen)",
+         "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+         "zitat": "\"stand\":\"2026-10-23\""
+        },
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "UK",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/research/sanktionen-v1/listen/uk.json",
+         "titel": "UK Sanctions List (FCDO), Stand 2026-11-10 (1667 Organisationen)",
+         "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv",
+         "zitat": "\"stand\":\"2026-11-10\""
+        }
+       ],
+       "text": "Kein Namenstreffer für Ortalyk LLP, CGNM UK Limited, CGN Mining Company Limited, China Uranium Development Company Limited, CGNPC Uranium Resources Co. Ltd. (CGNPC-URC), China General Nuclear Power Corporation (CGNPC), NAC Kazatomprom JSC, JSC Samruk-Kazyna (Staatsfonds) auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    }
+   },
+   "rolle": "Mine",
+   "stufe": 1
+  },
+  {
+   "alternativen": [],
+   "eigentuemer": [
+    {
+     "anteil": null,
+     "hinweis": "Eigentümer laut Altliste, Quelle ungeprüft, Anteil unbekannt",
+     "name": "Boss Energy",
+     "status": "KANDIDAT",
+     "url": "https://bossenergy.com/honeymoon-project"
+    }
+   ],
+   "eigentuemer_grund": null,
+   "entity_id": "uran-site-legacy-row-117",
+   "id": "S2",
+   "kurz": "Honeymoon",
+   "land": "Australien",
+   "name": "Honeymoon",
+   "ort": {
+    "evidenz": "BELEGT",
+    "grund": null,
+    "lat": -31.96,
+    "lon": 140.7,
+    "quelle": "Altliste, Koordinate APPROXIMATE",
+    "status": "OFFEN",
+    "url": "https://bossenergy.com/honeymoon-project"
+   },
+   "risiko": [
+    {
+     "art": "LAENDERANTEIL",
+     "bezug": "LAND",
+     "evidenz": "BELEGT",
+     "quelle": "World Nuclear Association, World Uranium Mining Production (Updated Friday, 23 October 2026), Table 'Production from mines (tonnes U)', columns 2023 and 2024",
+     "text": "Australien: 7,6 % der Weltförderung Uran 2024, unter der Schwelle 50 %",
+     "url": "https://world-nuclear.org/information-library/nuclear-fuel-cycle/mining-of-uranium/world-uranium-mining-production"
+    }
+   ],
+   "risiko_grund": null,
+   "risiko_land": {
+    "belege": [],
+    "herkunft": "Land des Glieds im Generator-Datensatz",
+    "iso2": "AU",
+    "name": "Australien"
+   },
+   "risikoebene": {
+    "KONZENTRATION": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "AU",
+       "quellen": [
+        {
+         "fundstelle": "Weltreferenz (Zahl gegen Abschrift geprüft)",
+         "herausgeber": "World Nuclear Association, World Uranium Mining Production (Updated Friday, 23 October 2026), Table 'Production from mines (tonnes U)', columns 2023 and 2024",
+         "titel": "World Nuclear Association, World Uranium Mining Production (Updated Friday, 23 October 2026), Table 'Production from mines (tonnes U)', columns 2023 and 2024",
+         "url": "https://world-nuclear.org/information-library/nuclear-fuel-cycle/mining-of-uranium/world-uranium-mining-production",
+         "zitat": null
+        }
+       ],
+       "text": "Australien: 7,6 % der Weltförderung Uran 2024, unter der Schwelle 50 %"
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    },
+    "LAENDERRISIKO": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "AU",
+       "quellen": [
+        {
+         "abgerufen": "2026-11-16",
+         "api": "https://www.gov.uk/api/content/foreign-travel-advice/australia",
+         "fundstelle": "GOV.UK Content API (unveränderte Antwort), Feld alert_status und Teil \"Warnings and insurance\"",
+         "herausgeber": "Foreign, Commonwealth & Development Office (UK)",
+         "sha256": "018a991fa3ed890077bed81bb54c583b49cf3caf476ecca5d782faf50a9f3e56",
+         "stand": "2026-03-19",
+         "textkopie": "analysis/rohstoffe/risiko/raw/fcdo-australia.json",
+         "titel": "Foreign travel advice: Australia travel advice",
+         "url": "https://www.gov.uk/foreign-travel-advice/australia",
+         "zitat": "\"alert_status\":[]"
+        }
+       ],
+       "text": "Australien: Reisehinweis FCDO (Stand 2026-03-19): keine Gebiete mit Reisewarnung (Warnstufe leer)."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    },
+    "NATURGEFAHREN": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "AU",
+       "quellen": [
+        {
+         "abgerufen": "2026-11-16",
+         "api": "https://www.gov.uk/api/content/foreign-travel-advice/australia",
+         "fundstelle": "GOV.UK Content API (unveränderte Antwort), Teil \"Safety and security\", Abschnitt Naturgefahren",
+         "herausgeber": "Foreign, Commonwealth & Development Office (UK)",
+         "sha256": "018a991fa3ed890077bed81bb54c583b49cf3caf476ecca5d782faf50a9f3e56",
+         "stand": "2026-03-19",
+         "textkopie": "analysis/rohstoffe/risiko/raw/fcdo-australia.json",
+         "titel": "Foreign travel advice: Australia travel advice",
+         "url": "https://www.gov.uk/foreign-travel-advice/australia",
+         "zitat": "Extreme weather and natural disasters … Bushfires … Heatwaves … Flooding … Earthquakes … Tropical cyclones … Dust storms"
+        }
+       ],
+       "text": "Australien: FCDO nennt für das Land: Buschbrände, Hitzewellen, Überschwemmungen, Erdbeben, tropische Wirbelstürme, Staubstürme."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    },
+    "SANKTIONEN": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "ABGLEICH",
+       "land": "AU",
+       "quellen": [
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "EU",
+         "stand": "2026-10-23",
+         "textkopie": "analysis/research/sanktionen-v1/listen/eu.json",
+         "titel": "EU Consolidated Financial Sanctions List (FSF), Stand 2026-10-23 (1779 Organisationen)",
+         "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+         "zitat": "\"stand\":\"2026-10-23\""
+        },
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "UK",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/research/sanktionen-v1/listen/uk.json",
+         "titel": "UK Sanctions List (FCDO), Stand 2026-11-10 (1667 Organisationen)",
+         "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv",
+         "zitat": "\"stand\":\"2026-11-10\""
+        }
+       ],
+       "text": "Australien: die gelesenen Sanktionslisten EU (Stand 2026-10-23) und UK (Stand 2026-11-10) führen kein Länderprogramm. Nicht abgeglichen: OFAC, UN."
+      },
+      {
+       "bezug": "FIRMA",
+       "evidenz": "ABGLEICH",
+       "land": "AU",
+       "quellen": [
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "EU",
+         "stand": "2026-10-23",
+         "textkopie": "analysis/research/sanktionen-v1/listen/eu.json",
+         "titel": "EU Consolidated Financial Sanctions List (FSF), Stand 2026-10-23 (1779 Organisationen)",
+         "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+         "zitat": "\"stand\":\"2026-10-23\""
+        },
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "UK",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/research/sanktionen-v1/listen/uk.json",
+         "titel": "UK Sanctions List (FCDO), Stand 2026-11-10 (1667 Organisationen)",
+         "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv",
+         "zitat": "\"stand\":\"2026-11-10\""
+        }
+       ],
+       "text": "Kein Namenstreffer für Honeymoon (Uranmine), Boss Energy Ltd, Natürliche Person(en), im LEI-Register nicht namentlich genannt auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    }
+   },
+   "rolle": "Mine",
+   "stufe": 1
+  },
+  {
+   "alternativen": [],
+   "eigentuemer": [
+    {
+     "anteil": null,
+     "hinweis": "Eigentümer laut Altliste, Quelle ungeprüft, Anteil unbekannt",
+     "name": "Paladin Energy",
+     "status": "KANDIDAT",
+     "url": "https://world-nuclear.org/information-library/country-profiles/countries-g-n/namibia"
+    }
+   ],
+   "eigentuemer_grund": null,
+   "entity_id": "uran-site-legacy-row-115",
+   "id": "S3",
+   "kurz": "Langer Heinrich",
+   "land": "Namibia",
+   "name": "Langer Heinrich",
+   "ort": {
+    "evidenz": "BELEGT",
+    "grund": null,
+    "lat": -22.81,
+    "lon": 15.33,
+    "quelle": "Altliste, Koordinate APPROXIMATE",
+    "status": "OFFEN",
+    "url": "https://world-nuclear.org/information-library/country-profiles/countries-g-n/namibia"
+   },
+   "risiko": [
+    {
+     "art": "LAENDERANTEIL",
+     "bezug": "LAND",
+     "evidenz": "BELEGT",
+     "quelle": "World Nuclear Association, World Uranium Mining Production (Updated Friday, 23 October 2026), Table 'Production from mines (tonnes U)', columns 2023 and 2024",
+     "text": "Namibia: 12,2 % der Weltförderung Uran 2024, unter der Schwelle 50 %",
+     "url": "https://world-nuclear.org/information-library/nuclear-fuel-cycle/mining-of-uranium/world-uranium-mining-production"
+    }
+   ],
+   "risiko_grund": null,
+   "risiko_land": {
+    "belege": [],
+    "herkunft": "Land des Glieds im Generator-Datensatz",
+    "iso2": "NA",
+    "name": "Namibia"
+   },
+   "risikoebene": {
+    "KONZENTRATION": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "NA",
+       "quellen": [
+        {
+         "fundstelle": "Weltreferenz (Zahl gegen Abschrift geprüft)",
+         "herausgeber": "World Nuclear Association, World Uranium Mining Production (Updated Friday, 23 October 2026), Table 'Production from mines (tonnes U)', columns 2023 and 2024",
+         "titel": "World Nuclear Association, World Uranium Mining Production (Updated Friday, 23 October 2026), Table 'Production from mines (tonnes U)', columns 2023 and 2024",
+         "url": "https://world-nuclear.org/information-library/nuclear-fuel-cycle/mining-of-uranium/world-uranium-mining-production",
+         "zitat": null
+        }
+       ],
+       "text": "Namibia: 12,2 % der Weltförderung Uran 2024, unter der Schwelle 50 %"
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    },
+    "LAENDERRISIKO": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "NA",
+       "quellen": [
+        {
+         "abgerufen": "2026-11-16",
+         "api": "https://www.gov.uk/api/content/foreign-travel-advice/namibia",
+         "fundstelle": "GOV.UK Content API (unveränderte Antwort), Feld alert_status und Teil \"Warnings and insurance\"",
+         "herausgeber": "Foreign, Commonwealth & Development Office (UK)",
+         "sha256": "95bca61d258f6647f24c83c36d99371093c992770fbd7b250c582eb91d2af13a",
+         "stand": "2025-12-10",
+         "textkopie": "analysis/rohstoffe/risiko/raw/fcdo-namibia.json",
+         "titel": "Foreign travel advice: Namibia travel advice",
+         "url": "https://www.gov.uk/foreign-travel-advice/namibia",
+         "zitat": "\"alert_status\":[]"
+        }
+       ],
+       "text": "Namibia: Reisehinweis FCDO (Stand 2025-12-10): keine Gebiete mit Reisewarnung (Warnstufe leer)."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    },
+    "NATURGEFAHREN": {
+     "belegt": [],
+     "grund": "Der FCDO-Reisehinweis für Namibia hat keinen Abschnitt zu Naturgefahren; standortgenaue Angaben sind nicht erfasst.",
+     "status": "UNBEKANNT"
+    },
+    "SANKTIONEN": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "ABGLEICH",
+       "land": "NA",
+       "quellen": [
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "EU",
+         "stand": "2026-10-23",
+         "textkopie": "analysis/research/sanktionen-v1/listen/eu.json",
+         "titel": "EU Consolidated Financial Sanctions List (FSF), Stand 2026-10-23 (1779 Organisationen)",
+         "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+         "zitat": "\"stand\":\"2026-10-23\""
+        },
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "UK",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/research/sanktionen-v1/listen/uk.json",
+         "titel": "UK Sanctions List (FCDO), Stand 2026-11-10 (1667 Organisationen)",
+         "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv",
+         "zitat": "\"stand\":\"2026-11-10\""
+        }
+       ],
+       "text": "Namibia: die gelesenen Sanktionslisten EU (Stand 2026-10-23) und UK (Stand 2026-11-10) führen kein Länderprogramm. Nicht abgeglichen: OFAC, UN."
+      },
+      {
+       "bezug": "FIRMA",
+       "evidenz": "ABGLEICH",
+       "land": "NA",
+       "quellen": [
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "EU",
+         "stand": "2026-10-23",
+         "textkopie": "analysis/research/sanktionen-v1/listen/eu.json",
+         "titel": "EU Consolidated Financial Sanctions List (FSF), Stand 2026-10-23 (1779 Organisationen)",
+         "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+         "zitat": "\"stand\":\"2026-10-23\""
+        },
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "UK",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/research/sanktionen-v1/listen/uk.json",
+         "titel": "UK Sanctions List (FCDO), Stand 2026-11-10 (1667 Organisationen)",
+         "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv",
+         "zitat": "\"stand\":\"2026-11-10\""
+        }
+       ],
+       "text": "Kein Namenstreffer für Langer Heinrich (Uranmine), Paladin Energy Ltd, Minderheitsgesellschafter von Langer Heinrich Holdings (nicht genannt) auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    }
+   },
+   "rolle": "Mine",
+   "stufe": 1
+  },
+  {
+   "alternativen": [
+    "S1"
+   ],
+   "eigentuemer": [
+    {
+     "anteil": null,
+     "hinweis": "Eigentümer laut Altliste, Quelle ungeprüft, Anteil unbekannt",
+     "name": "Ortalyk",
+     "status": "KANDIDAT",
+     "url": "https://world-nuclear.org/information-library/country-profiles/countries-g-n/kazakhstan"
+    }
+   ],
+   "eigentuemer_grund": null,
+   "entity_id": "uran-site-legacy-row-130",
+   "id": "S4",
+   "kurz": "Zhalpak",
+   "land": "Kasachstan",
+   "name": "Zhalpak",
+   "ort": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine Koordinate mit Quelle; es wird kein Ersatzpunkt gesetzt.",
+    "lat": null,
+    "lon": null,
+    "quelle": null,
+    "status": null,
+    "url": null
+   },
+   "risiko": [
+    {
+     "art": "LAENDERANTEIL",
+     "bezug": "LAND",
+     "evidenz": "BELEGT",
+     "quelle": "World Nuclear Association, World Uranium Mining Production (Updated Friday, 23 October 2026), Table 'Production from mines (tonnes U)', columns 2023 and 2024",
+     "text": "Kasachstan: 38,6 % der Weltförderung Uran 2024, unter der Schwelle 50 %",
+     "url": "https://world-nuclear.org/information-library/nuclear-fuel-cycle/mining-of-uranium/world-uranium-mining-production"
+    }
+   ],
+   "risiko_grund": null,
+   "risiko_land": {
+    "belege": [],
+    "herkunft": "Land des Glieds im Generator-Datensatz",
+    "iso2": "KZ",
+    "name": "Kasachstan"
+   },
+   "risikoebene": {
+    "KONZENTRATION": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "KZ",
+       "quellen": [
+        {
+         "fundstelle": "Weltreferenz (Zahl gegen Abschrift geprüft)",
+         "herausgeber": "World Nuclear Association, World Uranium Mining Production (Updated Friday, 23 October 2026), Table 'Production from mines (tonnes U)', columns 2023 and 2024",
+         "titel": "World Nuclear Association, World Uranium Mining Production (Updated Friday, 23 October 2026), Table 'Production from mines (tonnes U)', columns 2023 and 2024",
+         "url": "https://world-nuclear.org/information-library/nuclear-fuel-cycle/mining-of-uranium/world-uranium-mining-production",
+         "zitat": null
+        }
+       ],
+       "text": "Kasachstan: 38,6 % der Weltförderung Uran 2024, unter der Schwelle 50 %"
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    },
+    "LAENDERRISIKO": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "KZ",
+       "quellen": [
+        {
+         "abgerufen": "2026-11-16",
+         "api": "https://www.gov.uk/api/content/foreign-travel-advice/kazakhstan",
+         "fundstelle": "GOV.UK Content API (unveränderte Antwort), Feld alert_status und Teil \"Warnings and insurance\"",
+         "herausgeber": "Foreign, Commonwealth & Development Office (UK)",
+         "sha256": "d95fd769e61f222dbc15bbf2aad8a0227528e0d827e242197a64c46983ea65b1",
+         "stand": "2026-10-30",
+         "textkopie": "analysis/rohstoffe/risiko/raw/fcdo-kazakhstan.json",
+         "titel": "Foreign travel advice: Kazakhstan travel advice",
+         "url": "https://www.gov.uk/foreign-travel-advice/kazakhstan",
+         "zitat": "\"alert_status\":[]"
+        }
+       ],
+       "text": "Kasachstan: Reisehinweis FCDO (Stand 2026-10-30): keine Gebiete mit Reisewarnung (Warnstufe leer)."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    },
+    "NATURGEFAHREN": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "KZ",
+       "quellen": [
+        {
+         "abgerufen": "2026-11-16",
+         "api": "https://www.gov.uk/api/content/foreign-travel-advice/kazakhstan",
+         "fundstelle": "GOV.UK Content API (unveränderte Antwort), Teil \"Safety and security\", Abschnitt Naturgefahren",
+         "herausgeber": "Foreign, Commonwealth & Development Office (UK)",
+         "sha256": "d95fd769e61f222dbc15bbf2aad8a0227528e0d827e242197a64c46983ea65b1",
+         "stand": "2026-10-30",
+         "textkopie": "analysis/rohstoffe/risiko/raw/fcdo-kazakhstan.json",
+         "titel": "Foreign travel advice: Kazakhstan travel advice",
+         "url": "https://www.gov.uk/foreign-travel-advice/kazakhstan",
+         "zitat": "Extreme weather and natural disasters … Wildfires … Flooding and mudslides … Earthquakes"
+        }
+       ],
+       "text": "Kasachstan: FCDO nennt für das Land: Wald- und Flächenbrände, Überschwemmungen und Schlammlawinen, Erdbeben."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    },
+    "SANKTIONEN": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "ABGLEICH",
+       "land": "KZ",
+       "quellen": [
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "EU",
+         "stand": "2026-10-23",
+         "textkopie": "analysis/research/sanktionen-v1/listen/eu.json",
+         "titel": "EU Consolidated Financial Sanctions List (FSF), Stand 2026-10-23 (1779 Organisationen)",
+         "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+         "zitat": "\"stand\":\"2026-10-23\""
+        },
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "UK",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/research/sanktionen-v1/listen/uk.json",
+         "titel": "UK Sanctions List (FCDO), Stand 2026-11-10 (1667 Organisationen)",
+         "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv",
+         "zitat": "\"stand\":\"2026-11-10\""
+        }
+       ],
+       "text": "Kasachstan: die gelesenen Sanktionslisten EU (Stand 2026-10-23) und UK (Stand 2026-11-10) führen kein Länderprogramm. Nicht abgeglichen: OFAC, UN."
+      },
+      {
+       "bezug": "FIRMA",
+       "evidenz": "ABGLEICH",
+       "land": "KZ",
+       "quellen": [
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "EU",
+         "stand": "2026-10-23",
+         "textkopie": "analysis/research/sanktionen-v1/listen/eu.json",
+         "titel": "EU Consolidated Financial Sanctions List (FSF), Stand 2026-10-23 (1779 Organisationen)",
+         "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+         "zitat": "\"stand\":\"2026-10-23\""
+        },
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "UK",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/research/sanktionen-v1/listen/uk.json",
+         "titel": "UK Sanctions List (FCDO), Stand 2026-11-10 (1667 Organisationen)",
+         "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv",
+         "zitat": "\"stand\":\"2026-11-10\""
+        }
+       ],
+       "text": "Kein Namenstreffer für Ortalyk LLP, CGNM UK Limited, CGN Mining Company Limited, China Uranium Development Company Limited, CGNPC Uranium Resources Co. Ltd. (CGNPC-URC), China General Nuclear Power Corporation (CGNPC), NAC Kazatomprom JSC, JSC Samruk-Kazyna (Staatsfonds) auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    }
+   },
+   "rolle": "Mine",
+   "stufe": 1
+  },
+  {
+   "alternativen": [],
+   "eigentuemer": [],
+   "eigentuemer_grund": "Kein Eigentümer mit gelesener Quelle erfasst.",
+   "entity_id": "uran-node-cgn-mining",
+   "id": "S5",
+   "kurz": "CGN Mining Company",
+   "land": "UNKNOWN",
+   "name": "CGN Mining Company Limited (Konzern)",
+   "ort": {
+    "evidenz": "BELEGT",
+    "grund": null,
+    "lat": 22.281388888889,
+    "lon": 114.1725,
+    "quelle": "Koordinate: Wan Chai (Wikidata, Bezirk von Hongkong), Genauigkeit HQ_CITY",
+    "status": "APPROVED (HQ_CITY)",
+    "url": "https://www.wikidata.org/wiki/Q281527"
+   },
+   "risiko": [],
+   "risiko_grund": "Länderanteil nur für Förderstufe",
+   "risiko_land": {
+    "belege": [
+     {
+      "fundstelle": "Lage",
+      "herausgeber": "Koordinate: Wan Chai (Wikidata, Bezirk von Hongkong), Genauigkeit HQ_CITY",
+      "titel": "Koordinate des Glieds",
+      "url": "https://www.wikidata.org/wiki/Q281527",
+      "zitat": null
+     }
+    ],
+    "herkunft": "Belegte Koordinate in Hongkong (22.28, 114.17)",
+    "iso2": "HK",
+    "name": "Hongkong"
+   },
+   "risikoebene": {
+    "KONZENTRATION": {
+     "belegt": [],
+     "grund": "Länderanteil der Weltreferenz gilt nur für die Förderstufe; für Verarbeitung und Handel ist keine Weltreferenz geladen.",
+     "status": "UNBEKANNT"
+    },
+    "LAENDERRISIKO": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "HK",
+       "quellen": [
+        {
+         "abgerufen": "2026-11-16",
+         "api": "https://www.gov.uk/api/content/foreign-travel-advice/hong-kong",
+         "fundstelle": "GOV.UK Content API (unveränderte Antwort), Feld alert_status und Teil \"Warnings and insurance\"",
+         "herausgeber": "Foreign, Commonwealth & Development Office (UK)",
+         "sha256": "4efde29d74531e084cf7dee061314f49f576084a0dd2ac5b8dc245bf6dfde8c9",
+         "stand": "2026-04-01",
+         "textkopie": "analysis/rohstoffe/risiko/raw/fcdo-hong-kong.json",
+         "titel": "Foreign travel advice: Hong Kong (SAR of China) travel advice",
+         "url": "https://www.gov.uk/foreign-travel-advice/hong-kong",
+         "zitat": "\"alert_status\":[]"
+        }
+       ],
+       "text": "Hongkong: Reisehinweis FCDO (Stand 2026-04-01): keine Gebiete mit Reisewarnung (Warnstufe leer)."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    },
+    "NATURGEFAHREN": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "HK",
+       "quellen": [
+        {
+         "abgerufen": "2026-11-16",
+         "api": "https://www.gov.uk/api/content/foreign-travel-advice/hong-kong",
+         "fundstelle": "GOV.UK Content API (unveränderte Antwort), Teil \"Safety and security\", Abschnitt Naturgefahren",
+         "herausgeber": "Foreign, Commonwealth & Development Office (UK)",
+         "sha256": "4efde29d74531e084cf7dee061314f49f576084a0dd2ac5b8dc245bf6dfde8c9",
+         "stand": "2026-04-01",
+         "textkopie": "analysis/rohstoffe/risiko/raw/fcdo-hong-kong.json",
+         "titel": "Foreign travel advice: Hong Kong (SAR of China) travel advice",
+         "url": "https://www.gov.uk/foreign-travel-advice/hong-kong",
+         "zitat": "Extreme weather and natural disasters … Typhoons"
+        }
+       ],
+       "text": "Hongkong: FCDO nennt für das Land: Taifune."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    },
+    "SANKTIONEN": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "ABGLEICH",
+       "land": "HK",
+       "quellen": [
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "EU",
+         "stand": "2026-10-23",
+         "textkopie": "analysis/research/sanktionen-v1/listen/eu.json",
+         "titel": "EU Consolidated Financial Sanctions List (FSF), Stand 2026-10-23 (1779 Organisationen)",
+         "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+         "zitat": "\"stand\":\"2026-10-23\""
+        },
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "UK",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/research/sanktionen-v1/listen/uk.json",
+         "titel": "UK Sanctions List (FCDO), Stand 2026-11-10 (1667 Organisationen)",
+         "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv",
+         "zitat": "\"stand\":\"2026-11-10\""
+        }
+       ],
+       "text": "Hongkong: die gelesenen Sanktionslisten EU (Stand 2026-10-23) und UK (Stand 2026-11-10) führen kein Länderprogramm. Nicht abgeglichen: OFAC, UN."
+      },
+      {
+       "bezug": "FIRMA",
+       "evidenz": "ABGLEICH",
+       "land": "HK",
+       "quellen": [
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "EU",
+         "stand": "2026-10-23",
+         "textkopie": "analysis/research/sanktionen-v1/listen/eu.json",
+         "titel": "EU Consolidated Financial Sanctions List (FSF), Stand 2026-10-23 (1779 Organisationen)",
+         "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+         "zitat": "\"stand\":\"2026-10-23\""
+        },
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "UK",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/research/sanktionen-v1/listen/uk.json",
+         "titel": "UK Sanctions List (FCDO), Stand 2026-11-10 (1667 Organisationen)",
+         "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv",
+         "zitat": "\"stand\":\"2026-11-10\""
+        }
+       ],
+       "text": "Kein Namenstreffer für CGN Mining Company Limited, China Uranium Development Company Limited, CGNPC Uranium Resources Co. Ltd. (CGNPC-URC), China General Nuclear Power Corporation (CGNPC) auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    }
+   },
+   "rolle": "Abnehmer",
+   "stufe": 2
+  },
+  {
+   "alternativen": [],
+   "eigentuemer": [],
+   "eigentuemer_grund": "Kein Eigentümer mit gelesener Quelle erfasst.",
+   "entity_id": "uran-node-honeywell-metropolis",
+   "id": "S6",
+   "kurz": "Honeywell Uranium Hexafluoride Process",
+   "land": "USA",
+   "name": "Honeywell Uranium Hexafluoride Processing Facility (Metropolis)",
+   "ort": {
+    "evidenz": "BELEGT",
+    "grund": null,
+    "lat": 37.171768,
+    "lon": -88.757039,
+    "quelle": "Koordinate: Honeywell Uranium Hexafluoride Processing Facility (Wikidata, Anlage), Genauigkeit FACILITY",
+    "status": "APPROVED (FACILITY)",
+    "url": "https://www.wikidata.org/wiki/Q14687563"
+   },
+   "risiko": [],
+   "risiko_grund": "Länderanteil nur für Förderstufe",
+   "risiko_land": {
+    "belege": [],
+    "herkunft": "Land des Glieds im Generator-Datensatz",
+    "iso2": "US",
+    "name": "USA"
+   },
+   "risikoebene": {
+    "KONZENTRATION": {
+     "belegt": [],
+     "grund": "Länderanteil der Weltreferenz gilt nur für die Förderstufe; für Verarbeitung und Handel ist keine Weltreferenz geladen.",
+     "status": "UNBEKANNT"
+    },
+    "LAENDERRISIKO": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "US",
+       "quellen": [
+        {
+         "abgerufen": "2026-11-16",
+         "api": "https://www.gov.uk/api/content/foreign-travel-advice/usa",
+         "fundstelle": "GOV.UK Content API (unveränderte Antwort), Feld alert_status und Teil \"Warnings and insurance\"",
+         "herausgeber": "Foreign, Commonwealth & Development Office (UK)",
+         "sha256": "7dc7b740316aeaaef46b658286517ba28674120721280dc667c7671f282a8f92",
+         "stand": "2026-11-14",
+         "textkopie": "analysis/rohstoffe/risiko/raw/fcdo-usa.json",
+         "titel": "Foreign travel advice: USA travel advice",
+         "url": "https://www.gov.uk/foreign-travel-advice/usa",
+         "zitat": "\"alert_status\":[]"
+        }
+       ],
+       "text": "USA: Reisehinweis FCDO (Stand 2026-11-14): keine Gebiete mit Reisewarnung (Warnstufe leer)."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    },
+    "NATURGEFAHREN": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "US",
+       "quellen": [
+        {
+         "abgerufen": "2026-11-16",
+         "api": "https://www.gov.uk/api/content/foreign-travel-advice/usa",
+         "fundstelle": "GOV.UK Content API (unveränderte Antwort), Teil \"Safety and security\", Abschnitt Naturgefahren",
+         "herausgeber": "Foreign, Commonwealth & Development Office (UK)",
+         "sha256": "7dc7b740316aeaaef46b658286517ba28674120721280dc667c7671f282a8f92",
+         "stand": "2026-11-14",
+         "textkopie": "analysis/rohstoffe/risiko/raw/fcdo-usa.json",
+         "titel": "Foreign travel advice: USA travel advice",
+         "url": "https://www.gov.uk/foreign-travel-advice/usa",
+         "zitat": "Extreme weather and natural disasters … Snowstorms … Hurricanes … Earthquakes … Tornadoes … Volcanic eruptions … Wildfires … Flash flooding"
+        }
+       ],
+       "text": "USA: FCDO nennt für das Land: Schneestürme, Hurrikane, Erdbeben, Tornados, Vulkanausbrüche, Wald- und Flächenbrände, Sturzfluten."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    },
+    "SANKTIONEN": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "ABGLEICH",
+       "land": "US",
+       "quellen": [
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "EU",
+         "stand": "2026-10-23",
+         "textkopie": "analysis/research/sanktionen-v1/listen/eu.json",
+         "titel": "EU Consolidated Financial Sanctions List (FSF), Stand 2026-10-23 (1779 Organisationen)",
+         "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+         "zitat": "\"stand\":\"2026-10-23\""
+        },
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "UK",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/research/sanktionen-v1/listen/uk.json",
+         "titel": "UK Sanctions List (FCDO), Stand 2026-11-10 (1667 Organisationen)",
+         "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv",
+         "zitat": "\"stand\":\"2026-11-10\""
+        }
+       ],
+       "text": "USA: die gelesenen Sanktionslisten EU (Stand 2026-10-23) und UK (Stand 2026-11-10) führen kein Länderprogramm. Nicht abgeglichen: OFAC, UN."
+      },
+      {
+       "bezug": "FIRMA",
+       "evidenz": "ABGLEICH",
+       "land": "US",
+       "quellen": [
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "EU",
+         "stand": "2026-10-23",
+         "textkopie": "analysis/research/sanktionen-v1/listen/eu.json",
+         "titel": "EU Consolidated Financial Sanctions List (FSF), Stand 2026-10-23 (1779 Organisationen)",
+         "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+         "zitat": "\"stand\":\"2026-10-23\""
+        },
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "UK",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/research/sanktionen-v1/listen/uk.json",
+         "titel": "UK Sanctions List (FCDO), Stand 2026-11-10 (1667 Organisationen)",
+         "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv",
+         "zitat": "\"stand\":\"2026-11-10\""
+        }
+       ],
+       "text": "Kein Namenstreffer für Honeywell Uranium Hexafluoride Process auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    }
+   },
+   "rolle": "Konversion",
+   "stufe": 2
+  },
+  {
+   "alternativen": [],
+   "eigentuemer": [],
+   "eigentuemer_grund": "Kein Eigentümer mit gelesener Quelle erfasst.",
+   "entity_id": "uran-node-walvis-bay",
+   "id": "S7",
+   "kurz": "Walvis Bay",
+   "land": "Namibia",
+   "name": "Walvis Bay (Exporthafen)",
+   "ort": {
+    "evidenz": "BELEGT",
+    "grund": null,
+    "lat": -22.949444444444,
+    "lon": 14.506944444444,
+    "quelle": "Koordinate: Walvis Bay (Wikidata, Stadt und Hafen), Genauigkeit LOCALITY",
+    "status": "APPROVED (LOCALITY)",
+    "url": "https://www.wikidata.org/wiki/Q220843"
+   },
+   "risiko": [],
+   "risiko_grund": "Länderanteil nur für Förderstufe",
+   "risiko_land": {
+    "belege": [],
+    "herkunft": "Land des Glieds im Generator-Datensatz",
+    "iso2": "NA",
+    "name": "Namibia"
+   },
+   "risikoebene": {
+    "KONZENTRATION": {
+     "belegt": [],
+     "grund": "Länderanteil der Weltreferenz gilt nur für die Förderstufe; für Verarbeitung und Handel ist keine Weltreferenz geladen.",
+     "status": "UNBEKANNT"
+    },
+    "LAENDERRISIKO": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "NA",
+       "quellen": [
+        {
+         "abgerufen": "2026-11-16",
+         "api": "https://www.gov.uk/api/content/foreign-travel-advice/namibia",
+         "fundstelle": "GOV.UK Content API (unveränderte Antwort), Feld alert_status und Teil \"Warnings and insurance\"",
+         "herausgeber": "Foreign, Commonwealth & Development Office (UK)",
+         "sha256": "95bca61d258f6647f24c83c36d99371093c992770fbd7b250c582eb91d2af13a",
+         "stand": "2025-12-10",
+         "textkopie": "analysis/rohstoffe/risiko/raw/fcdo-namibia.json",
+         "titel": "Foreign travel advice: Namibia travel advice",
+         "url": "https://www.gov.uk/foreign-travel-advice/namibia",
+         "zitat": "\"alert_status\":[]"
+        }
+       ],
+       "text": "Namibia: Reisehinweis FCDO (Stand 2025-12-10): keine Gebiete mit Reisewarnung (Warnstufe leer)."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    },
+    "NATURGEFAHREN": {
+     "belegt": [],
+     "grund": "Der FCDO-Reisehinweis für Namibia hat keinen Abschnitt zu Naturgefahren; standortgenaue Angaben sind nicht erfasst.",
+     "status": "UNBEKANNT"
+    },
+    "SANKTIONEN": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "ABGLEICH",
+       "land": "NA",
+       "quellen": [
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "EU",
+         "stand": "2026-10-23",
+         "textkopie": "analysis/research/sanktionen-v1/listen/eu.json",
+         "titel": "EU Consolidated Financial Sanctions List (FSF), Stand 2026-10-23 (1779 Organisationen)",
+         "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+         "zitat": "\"stand\":\"2026-10-23\""
+        },
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "UK",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/research/sanktionen-v1/listen/uk.json",
+         "titel": "UK Sanctions List (FCDO), Stand 2026-11-10 (1667 Organisationen)",
+         "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv",
+         "zitat": "\"stand\":\"2026-11-10\""
+        }
+       ],
+       "text": "Namibia: die gelesenen Sanktionslisten EU (Stand 2026-10-23) und UK (Stand 2026-11-10) führen kein Länderprogramm. Nicht abgeglichen: OFAC, UN."
+      },
+      {
+       "bezug": "FIRMA",
+       "evidenz": "ABGLEICH",
+       "land": "NA",
+       "quellen": [
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "EU",
+         "stand": "2026-10-23",
+         "textkopie": "analysis/research/sanktionen-v1/listen/eu.json",
+         "titel": "EU Consolidated Financial Sanctions List (FSF), Stand 2026-10-23 (1779 Organisationen)",
+         "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+         "zitat": "\"stand\":\"2026-10-23\""
+        },
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "UK",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/research/sanktionen-v1/listen/uk.json",
+         "titel": "UK Sanctions List (FCDO), Stand 2026-11-10 (1667 Organisationen)",
+         "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv",
+         "zitat": "\"stand\":\"2026-11-10\""
+        }
+       ],
+       "text": "Kein Namenstreffer für Walvis Bay auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    }
+   },
+   "rolle": "Hafen",
+   "stufe": 2
+  }
+ ],
+ "tiefe": {
+  "belegt": 24,
+  "dimensionen": [
+   "Eigentümer/Betreiber",
+   "Standort",
+   "Menge",
+   "Wert",
+   "Lieferbeziehung",
+   "Risiko"
+  ],
+  "gesamt": 42,
+  "mit_annahmen": 36,
+  "zeilen": [
+   {
+    "felder": {
+     "Eigentümer/Betreiber": "belegt",
+     "Lieferbeziehung": "belegt",
+     "Menge": "unbekannt",
+     "Risiko": "belegt",
+     "Standort": "belegt",
+     "Wert": "unbekannt"
+    },
+    "id": "S1"
+   },
+   {
+    "felder": {
+     "Eigentümer/Betreiber": "belegt",
+     "Lieferbeziehung": "belegt",
+     "Menge": "belegt",
+     "Risiko": "belegt",
+     "Standort": "belegt",
+     "Wert": "unbekannt"
+    },
+    "id": "S2"
+   },
+   {
+    "felder": {
+     "Eigentümer/Betreiber": "belegt",
+     "Lieferbeziehung": "belegt",
+     "Menge": "unbekannt",
+     "Risiko": "belegt",
+     "Standort": "belegt",
+     "Wert": "unbekannt"
+    },
+    "id": "S3"
+   },
+   {
+    "felder": {
+     "Eigentümer/Betreiber": "belegt",
+     "Lieferbeziehung": "belegt",
+     "Menge": "unbekannt",
+     "Risiko": "belegt",
+     "Standort": "unbekannt",
+     "Wert": "unbekannt"
+    },
+    "id": "S4"
+   },
+   {
+    "felder": {
+     "Eigentümer/Betreiber": "belegt",
+     "Lieferbeziehung": "belegt",
+     "Menge": "unbekannt",
+     "Risiko": "unbekannt",
+     "Standort": "belegt",
+     "Wert": "unbekannt"
+    },
+    "id": "S5"
+   },
+   {
+    "felder": {
+     "Eigentümer/Betreiber": "unbekannt",
+     "Lieferbeziehung": "belegt",
+     "Menge": "belegt",
+     "Risiko": "unbekannt",
+     "Standort": "belegt",
+     "Wert": "unbekannt"
+    },
+    "id": "S6"
+   },
+   {
+    "felder": {
+     "Eigentümer/Betreiber": "unbekannt",
+     "Lieferbeziehung": "belegt",
+     "Menge": "unbekannt",
+     "Risiko": "unbekannt",
+     "Standort": "belegt",
+     "Wert": "unbekannt"
+    },
+    "id": "S7"
+   }
+  ]
+ },
+ "verbindungen": [
+  {
+   "art": "TRANSPORT",
+   "art_atlas": "TRANSPORTS_TO",
+   "auf_globus": true,
+   "aussage": "Langer Heinrich (LHM) transportiert Container zum Hafen Walvis Bay zur Verschiffung; Walvis Bay ist der Exporthafen der Mine.",
+   "belege": [
+    {
+     "fundstelle": "Annual Report 2026, PDF-Seite 51",
+     "herausgeber": "Paladin Energy Ltd",
+     "textkopie": "analysis/research/uran-flows-v1/raw/pdn-ar-2026-p51.txt",
+     "url": "https://announcements.asx.com.au/asxpdf/20260826/pdf/07374q7yc9qjxs.pdf",
+     "zitat": "LHM has developed an emergency plan … during the transport of containers to Walvis Bay for shipment"
+    },
+    {
+     "fundstelle": "Annual Report 2026, PDF-Seite 142",
+     "herausgeber": "Paladin Energy Ltd",
+     "textkopie": "analysis/research/uran-flows-v1/raw/pdn-ar-2026-p142.txt",
+     "url": "https://announcements.asx.com.au/asxpdf/20260826/pdf/07374q7yc9qjxs.pdf",
+     "zitat": "Namibia: LHM, Walvis Bay export port"
+    },
+    {
+     "fundstelle": "Annual Report 2026, PDF-Seite 5",
+     "herausgeber": "Paladin Energy Ltd",
+     "textkopie": "analysis/research/uran-flows-v1/raw/pdn-ar-2026-p5.txt",
+     "url": "https://announcements.asx.com.au/asxpdf/20260826/pdf/07374q7yc9qjxs.pdf",
+     "zitat": "Langer Heinrich Mine (LHM)"
+    }
+   ],
+   "evidenz": "FACT",
+   "evidenz_basis": "Freigegebener Fluss; Entscheidung Eddie Sablah 2026-11-16 (analysis/rohstoffe/fakt-entscheidung.json)",
+   "flow_id": "URF-01",
+   "freigabe": "FREIGEGEBEN",
+   "freigabe_herkunft": "Claude (delegiert durch Eddie Sablah); Prüfbericht pruefbericht-2026-11-08.pdf",
+   "id": "V1",
+   "menge": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+    "pro_jahr": null,
+    "quelle_text": null,
+    "rechnung": "",
+    "t": null,
+    "text": "unbekannt"
+   },
+   "menge_annahme": {
+    "annahme_id": "A-U-MENGE",
+    "einheit": "t U",
+    "evidenz": "ANNAHME",
+    "grund": "Annahme A-U-MENGE: Förderung Langer Heinrich: 691 t U pro Jahr, Annahme: Rest Namibias nach WNA 2024 (7 333 t U Land minus Husab 4 437 und Rössing 2 205); die WNA nennt Langer Heinrich nicht einzeln; 5 Abnehmer, Anteil 20 % zu gleichen Teilen.",
+    "konfidenz_text": "0,35 (schwach)",
+    "pro_jahr": true,
+    "quelle": "Annahmen-Atlas Lendrot/atlaslendrot annahmen/uran-welt.json @ efe91bc",
+    "quelle_url": "https://github.com/Lendrot/atlaslendrot/blob/main/ANNAHMEN_WELT.md#uran",
+    "regel_text": "Jeder Standort bekommt seine Jahresförderung 2024 in Tonnen Uran (Tabelle mengen.quellen): die zehn größten Minen mit dem gelesenen WNA-Wert, die übrigen als gerundete Schätzung. Die Menge fließt durch das Netz und wird an Verzweigungen zu gleichen Teilen aufgeteilt. Summen je Land gegen die WNA-Landeswerte 2024 geprüft und notfalls gekürzt.",
+    "t": 138.2,
+    "text": "≈ 138,2 t U pro Jahr",
+    "welt": "uran"
+   },
+   "menge_bezug": [
+    {
+     "art": "AUSSTOSS",
+     "art_text": "Ausstoß des liefernden Glieds (alle Abnehmer), Anteil dieser Verbindung unbekannt",
+     "belege": [
+      {
+       "abgerufen": "2026-11-16",
+       "fundstelle": "Annual Report 2026, PDF-Seite 21",
+       "herausgeber": "Paladin Energy Ltd",
+       "textkopie": "analysis/rohstoffe/mengen/raw/pdn-ar-2026-p21.txt",
+       "url": "https://announcements.asx.com.au/asxpdf/20260826/pdf/07374q7yc9qjxs.pdf",
+       "zitat": "U₃O₈ produced Mlb 4.82"
+      }
+     ],
+     "freigabe": "FREIGEGEBEN",
+     "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
+     "hinweis": "Produktion der Mine; verkauft wurden 4,35 Mio. lb (mit Leih- und Tauschmengen), Lager einschließlich Ware unterwegs. Welche Menge im Jahr über Walvis Bay ging, nennt die Quelle nicht.",
+     "id": "M-URF-01",
+     "quelle_text": "4.820.000 lb U3O8 (Produktion Langer Heinrich, Geschäftsjahr 1.7.2025 bis 30.6.2026)",
+     "rechnung": "4.820.000 lb U3O8 = 2.186,315 t",
+     "t": 2186.3152234,
+     "text": "2.186 t U3O8 pro Jahr",
+     "zeitraum": "Geschäftsjahr 1.7.2025 bis 30.6.2026"
+    }
+   ],
+   "nach": "S7",
+   "stand": "Geschaeftsjahr 1.7.2025 bis 30.6.2026 (Berichtszeitraum)",
+   "von": "S3",
+   "ware": "Urankonzentrat (U3O8) in Containern",
+   "wert": {
+    "eur": null,
+    "evidenz": "UNKNOWN",
+    "grund": "Keine gelesene Quelle nennt einen Wert; Menge × Preis ist eine Rechnung und steht nur in der Ansicht „Mit Annahmen“.",
+    "quelle_text": null,
+    "rechnung": "",
+    "text": "unbekannt"
+   },
+   "wert_annahme": {
+    "annahme_art": "RECHNUNG",
+    "eur": 22256970.324516885,
+    "eur_spanne": [
+     22256970.324516885
+    ],
+    "evidenz": "ANNAHME",
+    "preis_basis": "uran_u",
+    "preis_datum": null,
+    "preis_quelle": "Paladin Energy Ltd, Annual Report 2026",
+    "preis_url": "https://announcements.asx.com.au/asxpdf/20260826/pdf/07374q7yc9qjxs.pdf",
+    "preis_zitat": "Average Realised Price5 US$/lb 70.0",
+    "rechnung": "138,2 t (Annahme A-U-MENGE, t U) × 181.985,358 US$ je t U (70,0 US$ je lb U3O8 × 2.204,62 lb/t ÷ 0,848 (U-Anteil von U3O8 nach Molmassen)) = 25,2 Mio. US$ ÷ EZB-Jahresmittel 2025: 1,1300 US$ je €",
+    "text": "≈ 22,3 Mio. € pro Jahr"
+   }
+  },
+  {
+   "art": "VERARBEITUNG",
+   "art_atlas": "PROCESSES_AT",
+   "auf_globus": true,
+   "aussage": "Erste Lieferung aus Honeymoon (57 klb U3O8) ist bei der Honeywell-Konversionsanlage in Metropolis (Illinois, USA) angekommen, weitere 78 klb unterwegs (Quartal Oktober bis Dezember 2024).",
+   "belege": [
+    {
+     "fundstelle": "December 2024 Quarterly Report, PDF-Seite 6",
+     "herausgeber": "Boss Energy Limited",
+     "textkopie": "analysis/research/uran-flows-v1/raw/boe-q-2024-12-p6.txt",
+     "url": "https://announcements.asx.com.au/asxpdf/20250129/pdf/06dxg8kfs900xh.pdf",
+     "zitat": "Honeymoon’s first shipment of 57Klbs U308 has arrived at, and 78Klbs are in transit to, the Honeywell … Uranium Hexafluoride Processing Facility in Metropolis, Illinois, USA"
+    }
+   ],
+   "evidenz": "FACT",
+   "evidenz_basis": "Freigegebener Fluss; Entscheidung Eddie Sablah 2026-11-16 (analysis/rohstoffe/fakt-entscheidung.json)",
+   "flow_id": "URF-02",
+   "freigabe": "FREIGEGEBEN",
+   "freigabe_herkunft": "Claude (delegiert durch Eddie Sablah); Prüfbericht pruefbericht-2026-11-08.pdf",
+   "id": "V2",
+   "menge": {
+    "evidenz": "BELEGT",
+    "grund": null,
+    "pro_jahr": false,
+    "quelle_text": "57.000 lb U3O8 (geliefert)",
+    "rechnung": "57.000 lb U3O8 = 25,855 t",
+    "t": 25.855,
+    "text": "25,9 t im genannten Zeitraum"
+   },
+   "menge_annahme": null,
+   "menge_bezug": [],
+   "nach": "S6",
+   "stand": "Quartal 1.10.2024 bis 31.12.2024 (Ereignisdatum)",
+   "von": "S2",
+   "ware": "Urankonzentrat (U3O8) zur Konversion",
+   "wert": {
+    "eur": null,
+    "evidenz": "UNKNOWN",
+    "grund": "Keine gelesene Quelle nennt einen Wert; Menge × Preis ist eine Rechnung und steht nur in der Ansicht „Mit Annahmen“.",
+    "quelle_text": null,
+    "rechnung": "",
+    "text": "unbekannt"
+   },
+   "wert_annahme": {
+    "annahme_art": "RECHNUNG",
+    "eur": 3531005.5328787677,
+    "eur_spanne": [
+     3531005.5328787677
+    ],
+    "evidenz": "ANNAHME",
+    "preis_basis": "uran_u3o8",
+    "preis_datum": null,
+    "preis_quelle": "Paladin Energy Ltd, Annual Report 2026",
+    "preis_url": "https://announcements.asx.com.au/asxpdf/20260826/pdf/07374q7yc9qjxs.pdf",
+    "preis_zitat": "Average Realised Price5 US$/lb 70.0",
+    "rechnung": "25,9 t (belegte Menge) × 154.323,584 US$ je t U3O8 (70,0 US$ je lb U3O8 (Durchschnittserlös Paladin GJ 2025/26) × 2.204,62 lb/t (einheit.py)) = 3,99 Mio. US$ ÷ EZB-Jahresmittel 2025: 1,1300 US$ je €",
+    "text": "≈ 3,53 Mio. € im genannten Zeitraum"
+   }
+  },
+  {
+   "art": "HANDEL",
+   "art_atlas": "OFFTAKE_AGREEMENT",
+   "auf_globus": true,
+   "aussage": "CGN Mining haelt 49 % an Ortalyk und die Abnahmerechte an dessen Produkten; Ortalyk foerdert in Central Mynkuduk (2025: 1.633 tU).",
+   "belege": [
+    {
+     "fundstelle": "Annual Results Announcement for the year ended 31 December 2025, PDF-Seite 22",
+     "herausgeber": "CGN Mining Company Limited (HKEX 1164)",
+     "textkopie": "analysis/research/uran-flows-v1/raw/cgnm-fy-2025-p22.txt",
+     "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0326/2026032603114.pdf",
+     "zitat": "through which it held 49% of the equity interest and off-take rights of products of Ortalyk"
+    },
+    {
+     "fundstelle": "Annual Results Announcement for the year ended 31 December 2025, PDF-Seite 28",
+     "herausgeber": "CGN Mining Company Limited (HKEX 1164)",
+     "textkopie": "analysis/research/uran-flows-v1/raw/cgnm-fy-2025-p28.txt",
+     "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0326/2026032603114.pdf",
+     "zitat": "Uranium mines under production – Central Mynkuduk Deposit and Zhalpak Deposit … the volume of uranium extracted by Ortalyk … including 1,633tU from Central Mynkuduk Deposit"
+    },
+    {
+     "fundstelle": "Annual Results Announcement for the year ended 31 December 2025, PDF-Seite 29",
+     "herausgeber": "CGN Mining Company Limited (HKEX 1164)",
+     "textkopie": "analysis/research/uran-flows-v1/raw/cgnm-fy-2025-p29.txt",
+     "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0326/2026032603114.pdf",
+     "zitat": "the Company purchased a total of 1,296tU of natural uranium products … from Semizbay-U and Ortalyk"
+    }
+   ],
+   "evidenz": "FACT",
+   "evidenz_basis": "Freigegebener Fluss; Entscheidung Eddie Sablah 2026-11-16 (analysis/rohstoffe/fakt-entscheidung.json)",
+   "flow_id": "URF-03",
+   "freigabe": "FREIGEGEBEN",
+   "freigabe_herkunft": "Claude (delegiert durch Eddie Sablah); Prüfbericht pruefbericht-2026-11-08.pdf",
+   "id": "V3",
+   "menge": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+    "pro_jahr": null,
+    "quelle_text": null,
+    "rechnung": "",
+    "t": null,
+    "text": "unbekannt"
+   },
+   "menge_annahme": {
+    "annahme_id": "A-U-MENGE",
+    "einheit": "t U",
+    "evidenz": "ANNAHME",
+    "grund": "Annahme A-U-MENGE: Förderung Central Mynkuduk: 1 700 t U pro Jahr, Kazatomprom-Förderung 2024 nach Betrieb auf 100-%-Basis, gerundet (Branchenwissen; Landessumme 23 270 t U); 2 Abnehmer, Anteil 50 % zu gleichen Teilen.",
+    "konfidenz_text": "0,35 (schwach)",
+    "pro_jahr": true,
+    "quelle": "Annahmen-Atlas Lendrot/atlaslendrot annahmen/uran-welt.json @ efe91bc",
+    "quelle_url": "https://github.com/Lendrot/atlaslendrot/blob/main/ANNAHMEN_WELT.md#uran",
+    "regel_text": "Jeder Standort bekommt seine Jahresförderung 2024 in Tonnen Uran (Tabelle mengen.quellen): die zehn größten Minen mit dem gelesenen WNA-Wert, die übrigen als gerundete Schätzung. Die Menge fließt durch das Netz und wird an Verzweigungen zu gleichen Teilen aufgeteilt. Summen je Land gegen die WNA-Landeswerte 2024 geprüft und notfalls gekürzt.",
+    "t": 850.0,
+    "text": "≈ 850 t U pro Jahr",
+    "welt": "uran"
+   },
+   "menge_bezug": [
+    {
+     "art": "AUSSTOSS",
+     "art_text": "Ausstoß des liefernden Glieds (alle Abnehmer), Anteil dieser Verbindung unbekannt",
+     "belege": [
+      {
+       "abgerufen": "2026-11-16",
+       "fundstelle": "Annual Results 2025 (HKEX), PDF-Seite 28",
+       "herausgeber": "CGN Mining Company Limited",
+       "textkopie": "analysis/research/uran-flows-v1/raw/cgnm-fy-2025-p28.txt",
+       "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0326/2026032603114.pdf",
+       "zitat": "including 1,633tU from Central Mynkuduk Deposit"
+      }
+     ],
+     "freigabe": "FREIGEGEBEN",
+     "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
+     "hinweis": "Förderung des Feldes; CGN kaufte 2025 von Semizbay-U und Ortalyk zusammen 1.296 tU, der Anteil aus Central Mynkuduk ist nicht genannt.",
+     "id": "M-URF-03",
+     "quelle_text": "1.633 t U (Förderung Central Mynkuduk (100 %), Kalenderjahr 2025)",
+     "rechnung": "",
+     "t": 1633.0,
+     "text": "1.633 t U pro Jahr",
+     "zeitraum": "Kalenderjahr 2025"
+    }
+   ],
+   "nach": "S5",
+   "stand": "Geschaeftsjahr 2025 (Berichtszeitraum)",
+   "von": "S1",
+   "ware": "Natururan (Urankonzentrat)",
+   "wert": {
+    "eur": null,
+    "evidenz": "UNKNOWN",
+    "grund": "Keine gelesene Quelle nennt einen Wert; Menge × Preis ist eine Rechnung und steht nur in der Ansicht „Mit Annahmen“.",
+    "quelle_text": null,
+    "rechnung": "",
+    "text": "unbekannt"
+   },
+   "wert_annahme": {
+    "annahme_art": "RECHNUNG",
+    "eur": 136891640.9250315,
+    "eur_spanne": [
+     136891640.9250315
+    ],
+    "evidenz": "ANNAHME",
+    "preis_basis": "uran_u",
+    "preis_datum": null,
+    "preis_quelle": "Paladin Energy Ltd, Annual Report 2026",
+    "preis_url": "https://announcements.asx.com.au/asxpdf/20260826/pdf/07374q7yc9qjxs.pdf",
+    "preis_zitat": "Average Realised Price5 US$/lb 70.0",
+    "rechnung": "850 t (Annahme A-U-MENGE, t U) × 181.985,358 US$ je t U (70,0 US$ je lb U3O8 × 2.204,62 lb/t ÷ 0,848 (U-Anteil von U3O8 nach Molmassen)) = 155 Mio. US$ ÷ EZB-Jahresmittel 2025: 1,1300 US$ je €",
+    "text": "≈ 137 Mio. € pro Jahr"
+   }
+  },
+  {
+   "art": "HANDEL",
+   "art_atlas": "OFFTAKE_AGREEMENT",
+   "auf_globus": false,
+   "aussage": "CGN Mining haelt 49 % an Ortalyk und die Abnahmerechte an dessen Produkten; Ortalyk foerdert in Zhalpak (2025: 202 tU).",
+   "belege": [
+    {
+     "fundstelle": "Annual Results Announcement for the year ended 31 December 2025, PDF-Seite 22",
+     "herausgeber": "CGN Mining Company Limited (HKEX 1164)",
+     "textkopie": "analysis/research/uran-flows-v1/raw/cgnm-fy-2025-p22.txt",
+     "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0326/2026032603114.pdf",
+     "zitat": "through which it held 49% of the equity interest and off-take rights of products of Ortalyk"
+    },
+    {
+     "fundstelle": "Annual Results Announcement for the year ended 31 December 2025, PDF-Seite 28",
+     "herausgeber": "CGN Mining Company Limited (HKEX 1164)",
+     "textkopie": "analysis/research/uran-flows-v1/raw/cgnm-fy-2025-p28.txt",
+     "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0326/2026032603114.pdf",
+     "zitat": "Uranium mines under production – Central Mynkuduk Deposit and Zhalpak Deposit … 202tU from Zhalpak Deposit"
+    }
+   ],
+   "evidenz": "FACT",
+   "evidenz_basis": "Freigegebener Fluss; Entscheidung Eddie Sablah 2026-11-16 (analysis/rohstoffe/fakt-entscheidung.json)",
+   "flow_id": "URF-04",
+   "freigabe": "FREIGEGEBEN",
+   "freigabe_herkunft": "Claude (delegiert durch Eddie Sablah); Prüfbericht pruefbericht-2026-11-08.pdf",
+   "id": "V4",
+   "menge": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+    "pro_jahr": null,
+    "quelle_text": null,
+    "rechnung": "",
+    "t": null,
+    "text": "unbekannt"
+   },
+   "menge_annahme": {
+    "annahme_id": "A-U-MENGE",
+    "einheit": "t U",
+    "evidenz": "ANNAHME",
+    "grund": "Annahme A-U-MENGE: Förderung Zhalpak: 300 t U pro Jahr, Kazatomprom-Förderung 2024 nach Betrieb auf 100-%-Basis, gerundet (Branchenwissen; Landessumme 23 270 t U); 2 Abnehmer, Anteil 50 % zu gleichen Teilen.",
+    "konfidenz_text": "0,35 (schwach)",
+    "pro_jahr": true,
+    "quelle": "Annahmen-Atlas Lendrot/atlaslendrot annahmen/uran-welt.json @ efe91bc",
+    "quelle_url": "https://github.com/Lendrot/atlaslendrot/blob/main/ANNAHMEN_WELT.md#uran",
+    "regel_text": "Jeder Standort bekommt seine Jahresförderung 2024 in Tonnen Uran (Tabelle mengen.quellen): die zehn größten Minen mit dem gelesenen WNA-Wert, die übrigen als gerundete Schätzung. Die Menge fließt durch das Netz und wird an Verzweigungen zu gleichen Teilen aufgeteilt. Summen je Land gegen die WNA-Landeswerte 2024 geprüft und notfalls gekürzt.",
+    "t": 150.0,
+    "text": "≈ 150 t U pro Jahr",
+    "welt": "uran"
+   },
+   "menge_bezug": [
+    {
+     "art": "AUSSTOSS",
+     "art_text": "Ausstoß des liefernden Glieds (alle Abnehmer), Anteil dieser Verbindung unbekannt",
+     "belege": [
+      {
+       "abgerufen": "2026-11-16",
+       "fundstelle": "Annual Results 2025 (HKEX), PDF-Seite 28",
+       "herausgeber": "CGN Mining Company Limited",
+       "textkopie": "analysis/research/uran-flows-v1/raw/cgnm-fy-2025-p28.txt",
+       "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0326/2026032603114.pdf",
+       "zitat": "202tU from Zhalpak Deposit"
+      }
+     ],
+     "freigabe": "FREIGEGEBEN",
+     "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
+     "hinweis": "Förderung des Feldes; der an CGN gelieferte Anteil ist nicht genannt.",
+     "id": "M-URF-04",
+     "quelle_text": "202 t U (Förderung Zhalpak (100 %), Kalenderjahr 2025)",
+     "rechnung": "",
+     "t": 202.0,
+     "text": "202 t U pro Jahr",
+     "zeitraum": "Kalenderjahr 2025"
+    }
+   ],
+   "nach": "S5",
+   "stand": null,
+   "von": "S4",
+   "ware": "Natururan (Urankonzentrat)",
+   "wert": {
+    "eur": null,
+    "evidenz": "UNKNOWN",
+    "grund": "Keine gelesene Quelle nennt einen Wert; Menge × Preis ist eine Rechnung und steht nur in der Ansicht „Mit Annahmen“.",
+    "quelle_text": null,
+    "rechnung": "",
+    "text": "unbekannt"
+   },
+   "wert_annahme": {
+    "annahme_art": "RECHNUNG",
+    "eur": 24157348.398534972,
+    "eur_spanne": [
+     24157348.398534972
+    ],
+    "evidenz": "ANNAHME",
+    "preis_basis": "uran_u",
+    "preis_datum": null,
+    "preis_quelle": "Paladin Energy Ltd, Annual Report 2026",
+    "preis_url": "https://announcements.asx.com.au/asxpdf/20260826/pdf/07374q7yc9qjxs.pdf",
+    "preis_zitat": "Average Realised Price5 US$/lb 70.0",
+    "rechnung": "150 t (Annahme A-U-MENGE, t U) × 181.985,358 US$ je t U (70,0 US$ je lb U3O8 × 2.204,62 lb/t ÷ 0,848 (U-Anteil von U3O8 nach Molmassen)) = 27,3 Mio. US$ ÷ EZB-Jahresmittel 2025: 1,1300 US$ je €",
+    "text": "≈ 24,2 Mio. € pro Jahr"
+   }
+  }
+ ],
+ "weltreferenz": {
+  "grund": null,
+  "quelle": "World Uranium Mining Production (Updated Friday, 23 October 2026)",
+  "status": "FREIGEGEBEN",
+  "url": "https://world-nuclear.org/information-library/nuclear-fuel-cycle/mining-of-uranium/world-uranium-mining-production"
+ },
+ "zaehler": {
+  "ausfall_mit_ausweich_menge": 4,
+  "belege": 9,
+  "eigentum_belegt": 5,
+  "eigentum_kandidaten": 4,
+  "eigentumskette_freigegeben": 2,
+  "eigentumskette_kanten": 11,
+  "eigentumskette_vollstaendig": 2,
+  "glieder_mit_ausweichquelle": 2,
+  "kette_stufen": 2,
+  "mengen_belegt": 1,
+  "mengen_bezug": 3,
+  "mengen_freigegeben": 0,
+  "mengen_in_tonnen": 1,
+  "mengen_mit_annahmen": 4,
+  "risiko_belegt": 4,
+  "risikoebene_belegt": 23,
+  "risikoebene_felder": 28,
+  "standorte": 7,
+  "standorte_mit_ort": 6,
+  "tiefe_belegt": 24,
+  "tiefe_gesamt": 42,
+  "tiefe_mit_annahmen": 36,
+  "verbindungen": 4,
+  "verbindungen_auf_globus": 3,
+  "verbindungen_freigegeben": 4,
+  "werte_belegt": 0,
+  "werte_in_euro": 0,
+  "werte_mit_annahmen": 4
+ }
+}
