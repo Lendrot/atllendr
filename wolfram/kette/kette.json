@@ -136,12 +136,12 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -161,8 +161,44 @@
     "S6"
    ],
    "tonnen": {
-    "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "evidenz": "ABGELEITET",
+    "grund": "Weitere 1 Bögen an diesem Glied ohne Menge: V3; die tatsächliche Menge kann größer sein.",
+    "hinweis": "Mengen verschiedener Waren oder Zeitbasen werden nicht addiert. Weitere 1 Bögen an diesem Glied ohne Menge: V3; die tatsächliche Menge kann größer sein.",
+    "ohne_menge": [
+     "V3"
+    ],
+    "posten": [
+     {
+      "art": "summe",
+      "eingaenge": [
+       {
+        "einheit": "t",
+        "freigabe": "FREIGEGEBEN",
+        "hoch": 1,
+        "name": "V4 Barruecopardo → Traxys Europe",
+        "quelle": "3.500 t WO3 gesamt (5 Jahre) (Vertragsmenge)",
+        "ref": "flow:WOF-04",
+        "wert": 700.0
+       }
+      ],
+      "einheit": "t",
+      "ergebnis": [
+       700.0
+      ],
+      "evidenz": "ABGELEITET",
+      "formel": "700 t",
+      "hinweis": "Menge laut Quelle je Bogen (Lieferung, Vertrag oder Kapazität wie dort angegeben); keine Lieferbestätigung.",
+      "pro_jahr": true,
+      "rechenweg": "belegte Menge des einzigen Bogens mit Tonnen in dieser Gruppe: 700 t (V4)",
+      "t": 700.0,
+      "text": "700 t Wolframkonzentrat (3.500 t WO3-Inhalt) pro Jahr",
+      "verbindungen": [
+       "V4"
+      ],
+      "ware": "Wolframkonzentrat (3.500 t WO3-Inhalt)"
+     }
+    ],
+    "text": "betroffen 700 t Wolframkonzentrat (3.500 t WO3-Inhalt) pro Jahr"
    },
    "verbindungen_weg": [
     "V3",
@@ -305,12 +341,12 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -331,7 +367,7 @@
    ],
    "tonnen": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "grund": "Kein Bogen an diesem Glied hat eine freigegebene Menge in Tonnen. Ohne Menge: 2 von 2 Bögen."
    },
    "verbindungen_weg": [
     "V1",
@@ -426,7 +462,7 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [
     {
@@ -439,7 +475,7 @@
    ],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -452,7 +488,7 @@
    "ohne_zufluss": [],
    "tonnen": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "grund": "Kein Bogen an diesem Glied hat eine freigegebene Menge in Tonnen. Ohne Menge: 1 von 1 Bögen."
    },
    "verbindungen_weg": [
     "V1"
@@ -546,7 +582,7 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [
     {
@@ -559,7 +595,7 @@
    ],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -572,7 +608,7 @@
    "ohne_zufluss": [],
    "tonnen": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "grund": "Kein Bogen an diesem Glied hat eine freigegebene Menge in Tonnen. Ohne Menge: 1 von 1 Bögen."
    },
    "verbindungen_weg": [
     "V3"
@@ -666,7 +702,7 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [
     {
@@ -679,7 +715,7 @@
    ],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -692,7 +728,7 @@
    "ohne_zufluss": [],
    "tonnen": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "grund": "Kein Bogen an diesem Glied hat eine freigegebene Menge in Tonnen. Ohne Menge: 1 von 1 Bögen."
    },
    "verbindungen_weg": [
     "V2"
@@ -786,7 +822,7 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [
     {
@@ -799,7 +835,7 @@
    ],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -811,8 +847,42 @@
    "ohne_abfluss": [],
    "ohne_zufluss": [],
    "tonnen": {
-    "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "evidenz": "ABGELEITET",
+    "grund": null,
+    "hinweis": "Mengen verschiedener Waren oder Zeitbasen werden nicht addiert.",
+    "ohne_menge": [],
+    "posten": [
+     {
+      "art": "summe",
+      "eingaenge": [
+       {
+        "einheit": "t",
+        "freigabe": "FREIGEGEBEN",
+        "hoch": 1,
+        "name": "V4 Barruecopardo → Traxys Europe",
+        "quelle": "3.500 t WO3 gesamt (5 Jahre) (Vertragsmenge)",
+        "ref": "flow:WOF-04",
+        "wert": 700.0
+       }
+      ],
+      "einheit": "t",
+      "ergebnis": [
+       700.0
+      ],
+      "evidenz": "ABGELEITET",
+      "formel": "700 t",
+      "hinweis": "Menge laut Quelle je Bogen (Lieferung, Vertrag oder Kapazität wie dort angegeben); keine Lieferbestätigung.",
+      "pro_jahr": true,
+      "rechenweg": "belegte Menge des einzigen Bogens mit Tonnen in dieser Gruppe: 700 t (V4)",
+      "t": 700.0,
+      "text": "700 t Wolframkonzentrat (3.500 t WO3-Inhalt) pro Jahr",
+      "verbindungen": [
+       "V4"
+      ],
+      "ware": "Wolframkonzentrat (3.500 t WO3-Inhalt)"
+     }
+    ],
+    "text": "betroffen 700 t Wolframkonzentrat (3.500 t WO3-Inhalt) pro Jahr"
    },
    "verbindungen_weg": [
     "V4"
@@ -1328,7 +1398,7 @@
   ]
  },
  "eingaben": {
-  "analysis/rohstoffe/eigentum/eigentumskette.json": "58f2a733e79cd462062e351135d0aafb3e27494d28e47d4268dd26a0c6bd2371",
+  "analysis/rohstoffe/eigentum/eigentumskette.json": "dc4e41fa1f2e547e39408fdc7c4a07cca001c0609181a7b1a7b0a12d8ef49bb6",
   "analysis/rohstoffe/fluss-freigaben.jsonl": "7bcb03cd6f866779a996144af573a32a6723c19e37c1648f6b5dfbf2b642a149",
   "analysis/rohstoffe/mengen/annahmen-snapshot.json": "5169bc01abcdff017b11b6e2e0bdb0abbc934a843f86a8fbbf4dbdd3585165b1",
   "analysis/rohstoffe/mengen/mengen.json": "94e6e728b63635daef1ffe47c595cd03fd4f5644a158aa61f7605bbf497706b6",
@@ -1361,7 +1431,7 @@
   "UNKNOWN bleibt UNKNOWN mit Grund; belegter Wert nur laut Quelle, Euro mit EZB-Jahresmittel. Ein Geldbetrag ist keine Menge.",
   "Ebene „mit Annahmen“ getrennt: Menge aus dem Annahmen-Atlas (Snapshot je Fluss-ID), Wert = Menge × Preis der gelesenen Preisquelle ÷ EZB-Kurs (Tagespreis mit EZB-Tageskurs, wo eine lesbare tägliche Notierung vorliegt, sonst Jahrespreis mit EZB-Jahresmittel); zählt nie als belegt. Ausstoß und Obergrenze des liefernden Glieds werden gezeigt, zählen aber nicht als Menge der Verbindung.",
   "Eigentümer je Glied nur mit gelesener Quelle (Zitat gegen Textkopie geprüft); freigegeben erst nach Zweitprüfung einer getrennten Sitzung. Eigentümer aus der Altliste sind Kandidaten und zählen nicht als belegt.",
-  "Ausfall = Folge im erfassten Netz; Tonnen und Mehrkosten nur, wenn eine Quelle sie nennt."
+  "Ausfall = Folge im erfassten Netz; Tonnen und Mehrkosten nur abgeleitet aus freigegebenen Mengen, Werten und Preisen (Rechenweg sichtbar, nie belegt); sonst unbekannt."
  ],
  "risikoebene": {
   "kategorien": [
@@ -2404,6 +2474,7 @@
     "rechnung": "",
     "text": "unbekannt"
    },
+   "wert_abgeleitet": null,
    "wert_annahme": {
     "evidenz": "UNKNOWN",
     "grund": "Keine Menge, auch keine Annahme.",
@@ -2453,6 +2524,7 @@
     "rechnung": "",
     "text": "unbekannt"
    },
+   "wert_abgeleitet": null,
    "wert_annahme": {
     "evidenz": "UNKNOWN",
     "grund": "Keine Menge, auch keine Annahme.",
@@ -2509,6 +2581,7 @@
     "rechnung": "30 Mio. A$ ÷ EZB-Jahresmittel 2024: 1,6397 A$ je €",
     "text": "18,3 Mio. €"
    },
+   "wert_abgeleitet": null,
    "wert_annahme": null
   },
   {
@@ -2554,6 +2627,7 @@
     "rechnung": "",
     "text": "unbekannt"
    },
+   "wert_abgeleitet": null,
    "wert_annahme": {
     "annahme_art": "RECHNUNG",
     "eur": 23539823.00884956,
@@ -2603,6 +2677,7 @@
   "verbindungen": 4,
   "verbindungen_auf_globus": 2,
   "verbindungen_freigegeben": 4,
+  "werte_abgeleitet": 0,
   "werte_belegt": 1,
   "werte_in_euro": 1,
   "werte_mit_annahmen": 2

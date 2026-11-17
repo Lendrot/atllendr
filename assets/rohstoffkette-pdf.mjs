@@ -71,6 +71,7 @@ function mengeLauf(v, an, qv) {
   else if (an && v.menge_annahme) out.push(T('Menge:', 'n', F.muted), T(v.menge_annahme.text), M('A'));
   else out.push(T('Menge:', 'n', F.muted), M('U'));
   if (w.evidenz !== 'UNKNOWN') out.push(T('Wert:', 'n', F.muted), B(w.text), M(w.freigabe ? fr(w) : 'B'), w.belege ? qv.ref(w.belege) : qv.ref(v.belege));
+  else if (v.wert_abgeleitet) out.push(T('Wert:', 'n', F.muted), T(v.wert_abgeleitet.text), I('(abgeleitet: Menge × Marktpreis ÷ EZB, kein Beleg)'), qv.ref([{url: v.wert_abgeleitet.preis_url, herausgeber: v.wert_abgeleitet.preis_quelle}]));
   else if (an && v.wert_annahme?.evidenz === 'ANNAHME') out.push(T('Wert:', 'n', F.muted), T(v.wert_annahme.text), M('A'), qv.ref([{url: v.wert_annahme.preis_url, herausgeber: v.wert_annahme.preis_quelle}]));
   else out.push(T('Wert:', 'n', F.muted), M('U'));
   for (const b of v.menge_bezug || []) out.push(I(`(${b.art === 'OBERGRENZE' ? 'Obergrenze' : 'Ausstoß des Lieferanten'} ${b.text}, zählt nicht)`), M(fr(b)), qv.ref(b.belege));
@@ -103,6 +104,11 @@ function zweiSpalten(seite, eintraege, x, y, w) {
 }
 
 // --- Seite 2: Ausfall ---------------------------------------------------------------------------------------------------------
+// Tonnen und Mehrkosten ABGELEITET (Regel 4 gelockert, Eddie 2026-11-16): Ergebnis, Marke R (Rechnung), Rechenweg; sonst Grund
+function abgeleitet(f, weg, ref = () => null) {
+  if (f.evidenz !== 'ABGELEITET') return [T(f.grund)];
+  return [B(f.text), T('(abgeleitet)', 'n', F.muted), ...f.posten.flatMap(p => [I(`= ${weg(p)}`), ref(p)])];
+}
 function ausfall(d, sid, qv) {
   const S = Object.fromEntries(d.standorte.map(s => [s.id, s])), V = Object.fromEntries(d.verbindungen.map(v => [v.id, v])), a = d.ausfall[sid];
   const name = id => `${nr(S[id])}. ${S[id].kurz}`, liste = ids => ids.length ? ids.map(name).join(', ') : 'keines';
@@ -117,8 +123,8 @@ function ausfall(d, sid, qv) {
   const folgen = [
     [[B('Abgeschnitten')], [T('Verlieren jeden erfassten Zufluss:', 'n', F.muted), T(liste(a.ohne_zufluss)), NL, T('Verlieren jeden erfassten Abnehmer:', 'n', F.muted), T(liste(a.ohne_abfluss))]],
     [[B('Mengen der Bögen'), I('(nicht addiert)')], mengen],
-    [[B('Fehlende Tonnen'), M('U')], [T(a.tonnen.grund)]],
-    [[B('Mehrkosten'), M('U')], [T(a.mehrkosten.grund)]],
+    [[B('Fehlende Tonnen'), M(a.tonnen.evidenz === 'ABGELEITET' ? 'R' : 'U')], abgeleitet(a.tonnen, p => p.formel)],
+    [[B('Mehrkosten'), M(a.mehrkosten.evidenz === 'ABGELEITET' ? 'R' : 'U')], abgeleitet(a.mehrkosten, p => `${p.formel} (Marktpreis minus Vertragspreis)`, p => qv.ref([{herausgeber: p.preis_quelle, url: p.preis_url}]))],
     [[B('Dauer'), M('U')], [T(a.dauer.grund)]],
     [[B('Ausweichquellen'), T(`${a.ausweich.mit_menge ?? 0} mit Menge`, 'n', F.muted)], [...aw, NL, I('Keine bestätigte Ersatzlieferung, freie Kapazität nie belegt.')]],
   ];

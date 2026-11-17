@@ -9,45 +9,45 @@
  "schema": "atlas.datenstand-kurz/1",
  "taeglich": {
   "kupfer": {
-   "abgerufen": "2026-11-16",
-   "datum": "2026-11-13",
-   "drei_monate_usd_t": 13545.0,
+   "abgerufen": "2026-11-17",
+   "datum": "2026-11-16",
+   "drei_monate_usd_t": 13305.0,
    "herausgeber": "London Metal Exchange (LME), wiedergegeben von Westmetall",
-   "kasse_eur_t": 12314.51,
-   "kasse_usd_t": 13610.0,
-   "kurs_datum": "2026-11-13",
-   "kurs_usd_je_eur": 1.1052,
-   "lagerbestand_t": 329100,
+   "kasse_eur_t": 12143.64,
+   "kasse_usd_t": 13375.0,
+   "kurs_datum": "2026-11-16",
+   "kurs_usd_je_eur": 1.1014,
+   "lagerbestand_t": 327475,
    "quelle_url": "https://www.westmetall.com/en/markdaten.php?action=table&field=LME_Cu_cash",
-   "veraenderung_kasse_pct": -0.74
+   "veraenderung_kasse_pct": -1.73
   },
   "meldungen": {
-   "abgerufen": "2026-11-16",
+   "abgerufen": "2026-11-17",
    "anzahl_14_tage": 0,
    "hinweis": "Presse-Meldungen, automatisch gefunden. Nur Hinweise auf moegliche Engpaesse, nie Fakten oder Freigaben.",
    "neueste": []
   },
   "quellen": [
    {
-    "abgerufen": "2026-11-16",
+    "abgerufen": "2026-11-17",
     "id": "ezb-referenzkurs-usd",
     "status": "GELADEN",
     "titel": "EZB-Referenzkurs US-Dollar je Euro (täglich, über Eurostat ert_bil_eur_d)"
    },
    {
-    "abgerufen": "2026-11-16",
+    "abgerufen": "2026-11-17",
     "id": "gdelt-engpass-meldungen",
     "status": "TEILWEISE",
     "titel": "Presse-Meldungen zu Lieferengpässen (täglich, GDELT, nur Hinweise)"
    },
    {
-    "abgerufen": "2026-11-16",
+    "abgerufen": "2026-11-17",
     "id": "lbma-gold-westmetall",
     "status": "GELADEN",
     "titel": "Gold London Fixing (LBMA), US$ je Feinunze (täglich, über Westmetall)"
    },
    {
-    "abgerufen": "2026-11-16",
+    "abgerufen": "2026-11-17",
     "id": "lme-kupfer-westmetall",
     "status": "GELADEN",
     "titel": "LME Kupfer: Kassakurs, 3-Monats-Kurs und Lagerbestand (täglich, über Westmetall)"

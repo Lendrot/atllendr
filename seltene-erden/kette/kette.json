@@ -130,18 +130,50 @@
       },
       "richtung": "HERKUNFT",
       "verbindung": null
+     },
+     {
+      "art": "STANDORT",
+      "freigabe": "FREIGEGEBEN",
+      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
+      "fuer": "S1",
+      "glied": null,
+      "hinweis": "Andere Seltene-Erden-Mine (Monazitkonzentrat, leichte SE, Beiprodukt der Ilmenit-Förderung); eine Lieferbeziehung ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt.",
+      "id": "AW-SE-MANDENA",
+      "lage": {
+       "genauigkeit": "A",
+       "lat": -24.953208,
+       "lon": 47.038549,
+       "quelle": "USGS-GIS 2021, AFR_Mineral_Facilities, FeatureUID MDG016"
+      },
+      "land": "MG",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": null,
+       "text": "Kapazität 6.700 t Seltenerdoxid-Inhalt im Monazitkonzentrat pro Jahr, geschätzt (USGS Minerals Yearbook 2024)"
+      },
+      "name": "Mine Mandena (Anosy, Madagaskar), QIT Madagascar Minerals",
+      "quelle": {
+       "fundstelle": "MYB-Zeile FAC_MDG0040_02 (Kapazität); GIS AFR_Mineral_Facilities MDG016 (Lage)",
+       "herausgeber": "U.S. Geological Survey",
+       "titel": "Minerals Yearbook 2024, Vol. III (Area Reports: International), Tabelle Facilities; Lage: Compilation of Geospatial Data (GIS) for the Mineral Industries and Related Infrastructure of Africa",
+       "url": "https://www.sciencebase.gov/catalog/item/6a8490171ba49b3133cd8055",
+       "zitat": "Mine in Mandena · Madagascar · Rare earths Mine Monazite concentrates · 6700 Metric tons (Oxide content) · Assumed active · QIT Madagascar Minerals S.A. · Mandena, Anosy Region | GIS: Mine at Mandena · Madagascar · Rare Earth elements (REE) <null> · 2200 Metric tons · Assumed Active · -24.953208, 47.038549 · QIT Madagascar Minerals S.A."
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
      }
     ],
-    "mit_menge": 4
+    "mit_menge": 5
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -156,7 +188,7 @@
    ],
    "tonnen": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "grund": "Kein Bogen an diesem Glied hat eine freigegebene Menge in Tonnen. Ohne Menge: 1 von 1 Bögen."
    },
    "verbindungen_weg": [
     "V3"
@@ -292,18 +324,50 @@
       },
       "richtung": "HERKUNFT",
       "verbindung": null
+     },
+     {
+      "art": "STANDORT",
+      "freigabe": "FREIGEGEBEN",
+      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
+      "fuer": "S2",
+      "glied": null,
+      "hinweis": "Andere Seltene-Erden-Mine (Monazitkonzentrat, leichte SE, Beiprodukt der Ilmenit-Förderung); eine Lieferbeziehung ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt.",
+      "id": "AW-SE-MANDENA",
+      "lage": {
+       "genauigkeit": "A",
+       "lat": -24.953208,
+       "lon": 47.038549,
+       "quelle": "USGS-GIS 2021, AFR_Mineral_Facilities, FeatureUID MDG016"
+      },
+      "land": "MG",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": null,
+       "text": "Kapazität 6.700 t Seltenerdoxid-Inhalt im Monazitkonzentrat pro Jahr, geschätzt (USGS Minerals Yearbook 2024)"
+      },
+      "name": "Mine Mandena (Anosy, Madagaskar), QIT Madagascar Minerals",
+      "quelle": {
+       "fundstelle": "MYB-Zeile FAC_MDG0040_02 (Kapazität); GIS AFR_Mineral_Facilities MDG016 (Lage)",
+       "herausgeber": "U.S. Geological Survey",
+       "titel": "Minerals Yearbook 2024, Vol. III (Area Reports: International), Tabelle Facilities; Lage: Compilation of Geospatial Data (GIS) for the Mineral Industries and Related Infrastructure of Africa",
+       "url": "https://www.sciencebase.gov/catalog/item/6a8490171ba49b3133cd8055",
+       "zitat": "Mine in Mandena · Madagascar · Rare earths Mine Monazite concentrates · 6700 Metric tons (Oxide content) · Assumed active · QIT Madagascar Minerals S.A. · Mandena, Anosy Region | GIS: Mine at Mandena · Madagascar · Rare Earth elements (REE) <null> · 2200 Metric tons · Assumed Active · -24.953208, 47.038549 · QIT Madagascar Minerals S.A."
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
      }
     ],
-    "mit_menge": 4
+    "mit_menge": 5
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -324,7 +388,7 @@
    ],
    "tonnen": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "grund": "Kein Bogen an diesem Glied hat eine freigegebene Menge in Tonnen. Ohne Menge: 2 von 2 Bögen."
    },
    "verbindungen_weg": [
     "V1",
@@ -404,12 +468,12 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -424,7 +488,7 @@
    "ohne_zufluss": [],
    "tonnen": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "grund": "Kein Bogen an diesem Glied hat eine freigegebene Menge in Tonnen. Ohne Menge: 1 von 1 Bögen."
    },
    "verbindungen_weg": [
     "V3"
@@ -518,7 +582,7 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [
     {
@@ -531,7 +595,7 @@
    ],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -544,7 +608,7 @@
    "ohne_zufluss": [],
    "tonnen": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "grund": "Kein Bogen an diesem Glied hat eine freigegebene Menge in Tonnen. Ohne Menge: 1 von 1 Bögen."
    },
    "verbindungen_weg": [
     "V1"
@@ -638,7 +702,7 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [
     {
@@ -651,7 +715,7 @@
    ],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -664,7 +728,7 @@
    "ohne_zufluss": [],
    "tonnen": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "grund": "Kein Bogen an diesem Glied hat eine freigegebene Menge in Tonnen. Ohne Menge: 1 von 1 Bögen."
    },
    "verbindungen_weg": [
     "V2"
@@ -1263,7 +1327,7 @@
   ]
  },
  "eingaben": {
-  "analysis/rohstoffe/eigentum/eigentumskette.json": "58f2a733e79cd462062e351135d0aafb3e27494d28e47d4268dd26a0c6bd2371",
+  "analysis/rohstoffe/eigentum/eigentumskette.json": "dc4e41fa1f2e547e39408fdc7c4a07cca001c0609181a7b1a7b0a12d8ef49bb6",
   "analysis/rohstoffe/fluss-freigaben.jsonl": "7bcb03cd6f866779a996144af573a32a6723c19e37c1648f6b5dfbf2b642a149",
   "analysis/rohstoffe/mengen/annahmen-snapshot.json": "5169bc01abcdff017b11b6e2e0bdb0abbc934a843f86a8fbbf4dbdd3585165b1",
   "analysis/rohstoffe/mengen/mengen.json": "94e6e728b63635daef1ffe47c595cd03fd4f5644a158aa61f7605bbf497706b6",
@@ -1296,7 +1360,7 @@
   "UNKNOWN bleibt UNKNOWN mit Grund; belegter Wert nur laut Quelle, Euro mit EZB-Jahresmittel. Ein Geldbetrag ist keine Menge.",
   "Ebene „mit Annahmen“ getrennt: Menge aus dem Annahmen-Atlas (Snapshot je Fluss-ID), Wert = Menge × Preis der gelesenen Preisquelle ÷ EZB-Kurs (Tagespreis mit EZB-Tageskurs, wo eine lesbare tägliche Notierung vorliegt, sonst Jahrespreis mit EZB-Jahresmittel); zählt nie als belegt. Ausstoß und Obergrenze des liefernden Glieds werden gezeigt, zählen aber nicht als Menge der Verbindung.",
   "Eigentümer je Glied nur mit gelesener Quelle (Zitat gegen Textkopie geprüft); freigegeben erst nach Zweitprüfung einer getrennten Sitzung. Eigentümer aus der Altliste sind Kandidaten und zählen nicht als belegt.",
-  "Ausfall = Folge im erfassten Netz; Tonnen und Mehrkosten nur, wenn eine Quelle sie nennt."
+  "Ausfall = Folge im erfassten Netz; Tonnen und Mehrkosten nur abgeleitet aus freigegebenen Mengen, Werten und Preisen (Rechenweg sichtbar, nie belegt); sonst unbekannt."
  ],
  "risikoebene": {
   "kategorien": [
@@ -2340,6 +2404,7 @@
     "rechnung": "",
     "text": "unbekannt"
    },
+   "wert_abgeleitet": null,
    "wert_annahme": {
     "evidenz": "UNKNOWN",
     "grund": "Kein gelesener Preis für diese Ware (Seltene Erden: kein Mischpreis; Petalit/Anodenmaterial/Antimon: kein Preis im Repo).",
@@ -2409,6 +2474,7 @@
     "rechnung": "",
     "text": "unbekannt"
    },
+   "wert_abgeleitet": null,
    "wert_annahme": {
     "evidenz": "UNKNOWN",
     "grund": "Kein gelesener Preis für diese Ware (Seltene Erden: kein Mischpreis; Petalit/Anodenmaterial/Antimon: kein Preis im Repo).",
@@ -2485,6 +2551,7 @@
     "rechnung": "9,42 Mrd. RMB ÷ EZB-Jahresmittel 2025: 8,1185 RMB je €",
     "text": "1,16 Mrd. €"
    },
+   "wert_abgeleitet": null,
    "wert_annahme": null
   }
  ],
@@ -2520,6 +2587,7 @@
   "verbindungen": 3,
   "verbindungen_auf_globus": 3,
   "verbindungen_freigegeben": 3,
+  "werte_abgeleitet": 0,
   "werte_belegt": 1,
   "werte_in_euro": 1,
   "werte_mit_annahmen": 1

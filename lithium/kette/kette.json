@@ -136,12 +136,12 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -156,7 +156,7 @@
    ],
    "tonnen": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "grund": "Kein Bogen an diesem Glied hat eine freigegebene Menge in Tonnen. Ohne Menge: 1 von 1 Bögen."
    },
    "verbindungen_weg": [
     "V16"
@@ -328,7 +328,7 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [
     {
@@ -342,7 +342,7 @@
    ],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -355,7 +355,7 @@
    "ohne_zufluss": [],
    "tonnen": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "grund": "Kein Bogen an diesem Glied hat eine freigegebene Menge in Tonnen. Ohne Menge: 1 von 1 Bögen."
    },
    "verbindungen_weg": [
     "V11"
@@ -497,12 +497,12 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -528,8 +528,62 @@
     "S22"
    ],
    "tonnen": {
-    "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "evidenz": "ABGELEITET",
+    "grund": null,
+    "hinweis": "Mengen verschiedener Waren oder Zeitbasen werden nicht addiert.",
+    "ohne_menge": [],
+    "posten": [
+     {
+      "art": "maximum",
+      "eingaenge": [
+       {
+        "einheit": "t",
+        "freigabe": "FREIGEGEBEN",
+        "hoch": 1,
+        "name": "V1 Pilgangoora → Port Hedland",
+        "quelle": "891.592 dmt (verschifft, Geschäftsjahr 1.7.2025 bis 30.6.2026)",
+        "ref": "M-LIF-01",
+        "wert": 891592.0
+       },
+       {
+        "einheit": "t",
+        "freigabe": "FREIGEGEBEN",
+        "hoch": 1,
+        "name": "V2 Pilgangoora → P-PLS Lithiumhydroxid-Anlage",
+        "quelle": "315.000 t/a (bis zu)",
+        "ref": "flow:LIF-02",
+        "wert": 315000.0
+       },
+       {
+        "einheit": "t",
+        "freigabe": "FREIGEGEBEN",
+        "hoch": 1,
+        "name": "V3 Pilgangoora → Canmax Technologies Co.",
+        "quelle": "150.000 t/a (Vertragsmenge)",
+        "ref": "flow:LIF-03",
+        "wert": 150000.0
+       }
+      ],
+      "einheit": "t",
+      "ergebnis": [
+       891592.0
+      ],
+      "evidenz": "ABGELEITET",
+      "formel": "max(891.592; 315.000; 150.000) t",
+      "hinweis": "Menge laut Quelle je Bogen (Lieferung, Vertrag oder Kapazität wie dort angegeben); keine Lieferbestätigung.",
+      "pro_jahr": true,
+      "rechenweg": "größte Bogenmenge, weil sich die Bögen überschneiden können (verschiedene Arten oder Richtungen): max(891.592 t (V1); 315.000 t (V2); 150.000 t (V3))",
+      "t": 891592.0,
+      "text": "891.592 t Spodumenkonzentrat pro Jahr",
+      "verbindungen": [
+       "V1",
+       "V2",
+       "V3"
+      ],
+      "ware": "Spodumenkonzentrat"
+     }
+    ],
+    "text": "betroffen 891.592 t Spodumenkonzentrat pro Jahr"
    },
    "verbindungen_weg": [
     "V1",
@@ -640,7 +694,7 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [
     {
@@ -654,7 +708,7 @@
    ],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -666,8 +720,42 @@
    "ohne_abfluss": [],
    "ohne_zufluss": [],
    "tonnen": {
-    "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "evidenz": "ABGELEITET",
+    "grund": null,
+    "hinweis": "Mengen verschiedener Waren oder Zeitbasen werden nicht addiert.",
+    "ohne_menge": [],
+    "posten": [
+     {
+      "art": "summe",
+      "eingaenge": [
+       {
+        "einheit": "t",
+        "freigabe": "FREIGEGEBEN",
+        "hoch": 1,
+        "name": "V17 Greenbushes → Albemarle",
+        "quelle": "744.630 t (tatsächliche Transaktionsmenge, Kalenderjahr 2025)",
+        "ref": "M-LIF-17",
+        "wert": 744630.0
+       }
+      ],
+      "einheit": "t",
+      "ergebnis": [
+       744630.0
+      ],
+      "evidenz": "ABGELEITET",
+      "formel": "744.630 t",
+      "hinweis": "Menge laut Quelle je Bogen (Lieferung, Vertrag oder Kapazität wie dort angegeben); keine Lieferbestätigung.",
+      "pro_jahr": true,
+      "rechenweg": "belegte Menge des einzigen Bogens mit Tonnen in dieser Gruppe: 744.630 t (V17)",
+      "t": 744630.0,
+      "text": "744.630 t Spodumenkonzentrat (chemical grade) pro Jahr",
+      "verbindungen": [
+       "V17"
+      ],
+      "ware": "Spodumenkonzentrat (chemical grade)"
+     }
+    ],
+    "text": "betroffen 744.630 t Spodumenkonzentrat (chemical grade) pro Jahr"
    },
    "verbindungen_weg": [
     "V17"
@@ -776,7 +864,7 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [
     {
@@ -790,7 +878,7 @@
    ],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -802,8 +890,42 @@
    "ohne_abfluss": [],
    "ohne_zufluss": [],
    "tonnen": {
-    "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "evidenz": "ABGELEITET",
+    "grund": null,
+    "hinweis": "Mengen verschiedener Waren oder Zeitbasen werden nicht addiert.",
+    "ohne_menge": [],
+    "posten": [
+     {
+      "art": "summe",
+      "eingaenge": [
+       {
+        "einheit": "t",
+        "freigabe": "FREIGEGEBEN",
+        "hoch": 1,
+        "name": "V3 Pilgangoora → Canmax Technologies Co.",
+        "quelle": "150.000 t/a (Vertragsmenge)",
+        "ref": "flow:LIF-03",
+        "wert": 150000.0
+       }
+      ],
+      "einheit": "t",
+      "ergebnis": [
+       150000.0
+      ],
+      "evidenz": "ABGELEITET",
+      "formel": "150.000 t",
+      "hinweis": "Menge laut Quelle je Bogen (Lieferung, Vertrag oder Kapazität wie dort angegeben); keine Lieferbestätigung.",
+      "pro_jahr": true,
+      "rechenweg": "belegte Menge des einzigen Bogens mit Tonnen in dieser Gruppe: 150.000 t (V3)",
+      "t": 150000.0,
+      "text": "150.000 t Spodumenkonzentrat pro Jahr",
+      "verbindungen": [
+       "V3"
+      ],
+      "ware": "Spodumenkonzentrat"
+     }
+    ],
+    "text": "betroffen 150.000 t Spodumenkonzentrat pro Jahr"
    },
    "verbindungen_weg": [
     "V3"
@@ -912,7 +1034,7 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [
     {
@@ -926,7 +1048,7 @@
    ],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -939,7 +1061,7 @@
    "ohne_zufluss": [],
    "tonnen": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "grund": "Kein Bogen an diesem Glied hat eine freigegebene Menge in Tonnen. Ohne Menge: 1 von 1 Bögen."
    },
    "verbindungen_weg": [
     "V18"
@@ -1018,12 +1140,12 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -1049,8 +1171,45 @@
    ],
    "ohne_zufluss": [],
    "tonnen": {
-    "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "evidenz": "ABGELEITET",
+    "grund": "Weitere 2 Bögen an diesem Glied ohne Menge: V8, V11; die tatsächliche Menge kann größer sein.",
+    "hinweis": "Mengen verschiedener Waren oder Zeitbasen werden nicht addiert. Weitere 2 Bögen an diesem Glied ohne Menge: V8, V11; die tatsächliche Menge kann größer sein.",
+    "ohne_menge": [
+     "V8",
+     "V11"
+    ],
+    "posten": [
+     {
+      "art": "summe",
+      "eingaenge": [
+       {
+        "einheit": "t",
+        "freigabe": "FREIGEGEBEN",
+        "hoch": 1,
+        "name": "V9 Cauchari-Olaroz → Ganfeng Lithium",
+        "quelle": "30.400 t LCE/a (abgeleitet (76 % von geplant 40.000))",
+        "ref": "flow:LIF-09",
+        "wert": 30400.0
+       }
+      ],
+      "einheit": "t",
+      "ergebnis": [
+       30400.0
+      ],
+      "evidenz": "ABGELEITET",
+      "formel": "30.400 t",
+      "hinweis": "Menge laut Quelle je Bogen (Lieferung, Vertrag oder Kapazität wie dort angegeben); keine Lieferbestätigung.",
+      "pro_jahr": true,
+      "rechenweg": "belegte Menge des einzigen Bogens mit Tonnen in dieser Gruppe: 30.400 t (V9)",
+      "t": 30400.0,
+      "text": "30.400 t Lithiumcarbonat (LCE) pro Jahr",
+      "verbindungen": [
+       "V9"
+      ],
+      "ware": "Lithiumcarbonat (LCE)"
+     }
+    ],
+    "text": "betroffen 30.400 t Lithiumcarbonat (LCE) pro Jahr"
    },
    "verbindungen_weg": [
     "V8",
@@ -1146,7 +1305,7 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [
     {
@@ -1159,7 +1318,7 @@
    ],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -1171,8 +1330,42 @@
    "ohne_abfluss": [],
    "ohne_zufluss": [],
    "tonnen": {
-    "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "evidenz": "ABGELEITET",
+    "grund": null,
+    "hinweis": "Mengen verschiedener Waren oder Zeitbasen werden nicht addiert.",
+    "ohne_menge": [],
+    "posten": [
+     {
+      "art": "summe",
+      "eingaenge": [
+       {
+        "einheit": "t",
+        "freigabe": "FREIGEGEBEN",
+        "hoch": 1,
+        "name": "V13 Bougouni → Hainan Mining",
+        "quelle": "10.000 t/Monat (Ziel, ca.)",
+        "ref": "flow:LIF-13",
+        "wert": 120000.0
+       }
+      ],
+      "einheit": "t",
+      "ergebnis": [
+       120000.0
+      ],
+      "evidenz": "ABGELEITET",
+      "formel": "120.000 t",
+      "hinweis": "Menge laut Quelle je Bogen (Lieferung, Vertrag oder Kapazität wie dort angegeben); keine Lieferbestätigung.",
+      "pro_jahr": true,
+      "rechenweg": "belegte Menge des einzigen Bogens mit Tonnen in dieser Gruppe: 120.000 t (V13)",
+      "t": 120000.0,
+      "text": "120.000 t Spodumenkonzentrat pro Jahr",
+      "verbindungen": [
+       "V13"
+      ],
+      "ware": "Spodumenkonzentrat"
+     }
+    ],
+    "text": "betroffen 120.000 t Spodumenkonzentrat pro Jahr"
    },
    "verbindungen_weg": [
     "V13"
@@ -1251,12 +1444,12 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -1271,7 +1464,7 @@
    "ohne_zufluss": [],
    "tonnen": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "grund": "Kein Bogen an diesem Glied hat eine freigegebene Menge in Tonnen. Ohne Menge: 1 von 1 Bögen."
    },
    "verbindungen_weg": [
     "V16"
@@ -1380,7 +1573,7 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [
     {
@@ -1394,7 +1587,7 @@
    ],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -1407,7 +1600,7 @@
    "ohne_zufluss": [],
    "tonnen": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "grund": "Kein Bogen an diesem Glied hat eine freigegebene Menge in Tonnen. Ohne Menge: 1 von 1 Bögen."
    },
    "verbindungen_weg": [
     "V4"
@@ -1486,12 +1679,12 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -1506,7 +1699,7 @@
    "ohne_zufluss": [],
    "tonnen": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "grund": "Kein Bogen an diesem Glied hat eine freigegebene Menge in Tonnen. Ohne Menge: 1 von 1 Bögen."
    },
    "verbindungen_weg": [
     "V5"
@@ -1648,12 +1841,12 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -1667,8 +1860,42 @@
     "S25"
    ],
    "tonnen": {
-    "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "evidenz": "ABGELEITET",
+    "grund": null,
+    "hinweis": "Mengen verschiedener Waren oder Zeitbasen werden nicht addiert.",
+    "ohne_menge": [],
+    "posten": [
+     {
+      "art": "summe",
+      "eingaenge": [
+       {
+        "einheit": "t",
+        "freigabe": "FREIGEGEBEN",
+        "hoch": 1,
+        "name": "V14 Bikita → Sinomine",
+        "quelle": "300.000 t/a (Kapazität)",
+        "ref": "flow:LIF-14",
+        "wert": 300000.0
+       }
+      ],
+      "einheit": "t",
+      "ergebnis": [
+       300000.0
+      ],
+      "evidenz": "ABGELEITET",
+      "formel": "300.000 t",
+      "hinweis": "Menge laut Quelle je Bogen (Lieferung, Vertrag oder Kapazität wie dort angegeben); keine Lieferbestätigung.",
+      "pro_jahr": true,
+      "rechenweg": "belegte Menge des einzigen Bogens mit Tonnen in dieser Gruppe: 300.000 t (V14)",
+      "t": 300000.0,
+      "text": "300.000 t Spodumen- und Petalitkonzentrat pro Jahr",
+      "verbindungen": [
+       "V14"
+      ],
+      "ware": "Spodumen- und Petalitkonzentrat"
+     }
+    ],
+    "text": "betroffen 300.000 t Spodumen- und Petalitkonzentrat pro Jahr"
    },
    "verbindungen_weg": [
     "V14"
@@ -1777,7 +2004,7 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [
     {
@@ -1791,7 +2018,7 @@
    ],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -1804,7 +2031,7 @@
    "ohne_zufluss": [],
    "tonnen": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "grund": "Kein Bogen an diesem Glied hat eine freigegebene Menge in Tonnen. Ohne Menge: 1 von 1 Bögen."
    },
    "verbindungen_weg": [
     "V7"
@@ -1913,7 +2140,7 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [
     {
@@ -1927,7 +2154,7 @@
    ],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -1939,8 +2166,42 @@
    "ohne_abfluss": [],
    "ohne_zufluss": [],
    "tonnen": {
-    "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "evidenz": "ABGELEITET",
+    "grund": null,
+    "hinweis": "Mengen verschiedener Waren oder Zeitbasen werden nicht addiert.",
+    "ohne_menge": [],
+    "posten": [
+     {
+      "art": "summe",
+      "eingaenge": [
+       {
+        "einheit": "t",
+        "freigabe": "FREIGEGEBEN",
+        "hoch": 1,
+        "name": "V2 Pilgangoora → P-PLS Lithiumhydroxid-Anlage",
+        "quelle": "315.000 t/a (bis zu)",
+        "ref": "flow:LIF-02",
+        "wert": 315000.0
+       }
+      ],
+      "einheit": "t",
+      "ergebnis": [
+       315000.0
+      ],
+      "evidenz": "ABGELEITET",
+      "formel": "315.000 t",
+      "hinweis": "Menge laut Quelle je Bogen (Lieferung, Vertrag oder Kapazität wie dort angegeben); keine Lieferbestätigung.",
+      "pro_jahr": true,
+      "rechenweg": "belegte Menge des einzigen Bogens mit Tonnen in dieser Gruppe: 315.000 t (V2)",
+      "t": 315000.0,
+      "text": "315.000 t Spodumenkonzentrat pro Jahr",
+      "verbindungen": [
+       "V2"
+      ],
+      "ware": "Spodumenkonzentrat"
+     }
+    ],
+    "text": "betroffen 315.000 t Spodumenkonzentrat pro Jahr"
    },
    "verbindungen_weg": [
     "V2"
@@ -1985,7 +2246,7 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [
     {
@@ -1999,7 +2260,7 @@
    ],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -2011,8 +2272,42 @@
    "ohne_abfluss": [],
    "ohne_zufluss": [],
    "tonnen": {
-    "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "evidenz": "ABGELEITET",
+    "grund": null,
+    "hinweis": "Mengen verschiedener Waren oder Zeitbasen werden nicht addiert.",
+    "ohne_menge": [],
+    "posten": [
+     {
+      "art": "summe",
+      "eingaenge": [
+       {
+        "einheit": "t",
+        "freigabe": "FREIGEGEBEN",
+        "hoch": 1,
+        "name": "V1 Pilgangoora → Port Hedland",
+        "quelle": "891.592 dmt (verschifft, Geschäftsjahr 1.7.2025 bis 30.6.2026)",
+        "ref": "M-LIF-01",
+        "wert": 891592.0
+       }
+      ],
+      "einheit": "t",
+      "ergebnis": [
+       891592.0
+      ],
+      "evidenz": "ABGELEITET",
+      "formel": "891.592 t",
+      "hinweis": "Menge laut Quelle je Bogen (Lieferung, Vertrag oder Kapazität wie dort angegeben); keine Lieferbestätigung.",
+      "pro_jahr": true,
+      "rechenweg": "belegte Menge des einzigen Bogens mit Tonnen in dieser Gruppe: 891.592 t (V1)",
+      "t": 891592.0,
+      "text": "891.592 t Spodumenkonzentrat pro Jahr",
+      "verbindungen": [
+       "V1"
+      ],
+      "ware": "Spodumenkonzentrat"
+     }
+    ],
+    "text": "betroffen 891.592 t Spodumenkonzentrat pro Jahr"
    },
    "verbindungen_weg": [
     "V1"
@@ -2057,7 +2352,7 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [
     {
@@ -2071,7 +2366,7 @@
    ],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -2083,8 +2378,42 @@
    "ohne_abfluss": [],
    "ohne_zufluss": [],
    "tonnen": {
-    "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "evidenz": "ABGELEITET",
+    "grund": null,
+    "hinweis": "Mengen verschiedener Waren oder Zeitbasen werden nicht addiert.",
+    "ohne_menge": [],
+    "posten": [
+     {
+      "art": "summe",
+      "eingaenge": [
+       {
+        "einheit": "t",
+        "freigabe": "FREIGEGEBEN",
+        "hoch": 1,
+        "name": "V6 Kathleen Valley → Port of Geraldton",
+        "quelle": "10.831 dmt (geliefert)",
+        "ref": "flow:LIF-06",
+        "wert": 10831.0
+       }
+      ],
+      "einheit": "t",
+      "ergebnis": [
+       10831.0
+      ],
+      "evidenz": "ABGELEITET",
+      "formel": "10.831 t",
+      "hinweis": "Menge laut Quelle je Bogen (Lieferung, Vertrag oder Kapazität wie dort angegeben); keine Lieferbestätigung.",
+      "pro_jahr": false,
+      "rechenweg": "belegte Menge des einzigen Bogens mit Tonnen in dieser Gruppe: 10.831 t (V6)",
+      "t": 10831.0,
+      "text": "10.831 t Spodumenkonzentrat im genannten Zeitraum",
+      "verbindungen": [
+       "V6"
+      ],
+      "ware": "Spodumenkonzentrat"
+     }
+    ],
+    "text": "betroffen 10.831 t Spodumenkonzentrat im genannten Zeitraum"
    },
    "verbindungen_weg": [
     "V6"
@@ -2114,7 +2443,7 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [
     {
@@ -2127,7 +2456,7 @@
    ],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -2139,8 +2468,42 @@
    "ohne_abfluss": [],
    "ohne_zufluss": [],
    "tonnen": {
-    "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "evidenz": "ABGELEITET",
+    "grund": null,
+    "hinweis": "Mengen verschiedener Waren oder Zeitbasen werden nicht addiert.",
+    "ohne_menge": [],
+    "posten": [
+     {
+      "art": "summe",
+      "eingaenge": [
+       {
+        "einheit": "t",
+        "freigabe": "FREIGEGEBEN",
+        "hoch": 1,
+        "name": "V12 Bougouni → Port of San Pedro",
+        "quelle": "28.735 t (geliefert)",
+        "ref": "flow:LIF-12",
+        "wert": 28735.0
+       }
+      ],
+      "einheit": "t",
+      "ergebnis": [
+       28735.0
+      ],
+      "evidenz": "ABGELEITET",
+      "formel": "28.735 t",
+      "hinweis": "Menge laut Quelle je Bogen (Lieferung, Vertrag oder Kapazität wie dort angegeben); keine Lieferbestätigung.",
+      "pro_jahr": false,
+      "rechenweg": "belegte Menge des einzigen Bogens mit Tonnen in dieser Gruppe: 28.735 t (V12)",
+      "t": 28735.0,
+      "text": "28.735 t Spodumenkonzentrat im genannten Zeitraum",
+      "verbindungen": [
+       "V12"
+      ],
+      "ware": "Spodumenkonzentrat"
+     }
+    ],
+    "text": "betroffen 28.735 t Spodumenkonzentrat im genannten Zeitraum"
    },
    "verbindungen_weg": [
     "V12"
@@ -2219,12 +2582,12 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -2238,8 +2601,42 @@
    ],
    "ohne_zufluss": [],
    "tonnen": {
-    "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "evidenz": "ABGELEITET",
+    "grund": null,
+    "hinweis": "Mengen verschiedener Waren oder Zeitbasen werden nicht addiert.",
+    "ohne_menge": [],
+    "posten": [
+     {
+      "art": "summe",
+      "eingaenge": [
+       {
+        "einheit": "t",
+        "freigabe": "FREIGEGEBEN",
+        "hoch": 1,
+        "name": "V14 Bikita → Sinomine",
+        "quelle": "300.000 t/a (Kapazität)",
+        "ref": "flow:LIF-14",
+        "wert": 300000.0
+       }
+      ],
+      "einheit": "t",
+      "ergebnis": [
+       300000.0
+      ],
+      "evidenz": "ABGELEITET",
+      "formel": "300.000 t",
+      "hinweis": "Menge laut Quelle je Bogen (Lieferung, Vertrag oder Kapazität wie dort angegeben); keine Lieferbestätigung.",
+      "pro_jahr": true,
+      "rechenweg": "belegte Menge des einzigen Bogens mit Tonnen in dieser Gruppe: 300.000 t (V14)",
+      "t": 300000.0,
+      "text": "300.000 t Spodumen- und Petalitkonzentrat pro Jahr",
+      "verbindungen": [
+       "V14"
+      ],
+      "ware": "Spodumen- und Petalitkonzentrat"
+     }
+    ],
+    "text": "betroffen 300.000 t Spodumen- und Petalitkonzentrat pro Jahr"
    },
    "verbindungen_weg": [
     "V14"
@@ -2348,7 +2745,7 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [
     {
@@ -2362,7 +2759,7 @@
    ],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -2375,7 +2772,7 @@
    "ohne_zufluss": [],
    "tonnen": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "grund": "Kein Bogen an diesem Glied hat eine freigegebene Menge in Tonnen. Ohne Menge: 1 von 1 Bögen."
    },
    "verbindungen_weg": [
     "V10"
@@ -2454,12 +2851,12 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -2473,8 +2870,42 @@
    ],
    "ohne_zufluss": [],
    "tonnen": {
-    "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "evidenz": "ABGELEITET",
+    "grund": null,
+    "hinweis": "Mengen verschiedener Waren oder Zeitbasen werden nicht addiert.",
+    "ohne_menge": [],
+    "posten": [
+     {
+      "art": "summe",
+      "eingaenge": [
+       {
+        "einheit": "t",
+        "freigabe": "FREIGEGEBEN",
+        "hoch": 1,
+        "name": "V15 Kamativi → Yahua",
+        "quelle": "350.000 t/a (Jahresleistung, ca.)",
+        "ref": "flow:LIF-15",
+        "wert": 350000.0
+       }
+      ],
+      "einheit": "t",
+      "ergebnis": [
+       350000.0
+      ],
+      "evidenz": "ABGELEITET",
+      "formel": "350.000 t",
+      "hinweis": "Menge laut Quelle je Bogen (Lieferung, Vertrag oder Kapazität wie dort angegeben); keine Lieferbestätigung.",
+      "pro_jahr": true,
+      "rechenweg": "belegte Menge des einzigen Bogens mit Tonnen in dieser Gruppe: 350.000 t (V15)",
+      "t": 350000.0,
+      "text": "350.000 t Lithiumkonzentrat pro Jahr",
+      "verbindungen": [
+       "V15"
+      ],
+      "ware": "Lithiumkonzentrat"
+     }
+    ],
+    "text": "betroffen 350.000 t Lithiumkonzentrat pro Jahr"
    },
    "verbindungen_weg": [
     "V15"
@@ -2616,12 +3047,12 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -2641,8 +3072,71 @@
     "S24"
    ],
    "tonnen": {
-    "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "evidenz": "ABGELEITET",
+    "grund": null,
+    "hinweis": "Mengen verschiedener Waren oder Zeitbasen werden nicht addiert.",
+    "ohne_menge": [],
+    "posten": [
+     {
+      "art": "summe",
+      "eingaenge": [
+       {
+        "einheit": "t",
+        "freigabe": "FREIGEGEBEN",
+        "hoch": 1,
+        "name": "V12 Bougouni → Port of San Pedro",
+        "quelle": "28.735 t (geliefert)",
+        "ref": "flow:LIF-12",
+        "wert": 28735.0
+       }
+      ],
+      "einheit": "t",
+      "ergebnis": [
+       28735.0
+      ],
+      "evidenz": "ABGELEITET",
+      "formel": "28.735 t",
+      "hinweis": "Menge laut Quelle je Bogen (Lieferung, Vertrag oder Kapazität wie dort angegeben); keine Lieferbestätigung.",
+      "pro_jahr": false,
+      "rechenweg": "belegte Menge des einzigen Bogens mit Tonnen in dieser Gruppe: 28.735 t (V12)",
+      "t": 28735.0,
+      "text": "28.735 t Spodumenkonzentrat im genannten Zeitraum",
+      "verbindungen": [
+       "V12"
+      ],
+      "ware": "Spodumenkonzentrat"
+     },
+     {
+      "art": "summe",
+      "eingaenge": [
+       {
+        "einheit": "t",
+        "freigabe": "FREIGEGEBEN",
+        "hoch": 1,
+        "name": "V13 Bougouni → Hainan Mining",
+        "quelle": "10.000 t/Monat (Ziel, ca.)",
+        "ref": "flow:LIF-13",
+        "wert": 120000.0
+       }
+      ],
+      "einheit": "t",
+      "ergebnis": [
+       120000.0
+      ],
+      "evidenz": "ABGELEITET",
+      "formel": "120.000 t",
+      "hinweis": "Menge laut Quelle je Bogen (Lieferung, Vertrag oder Kapazität wie dort angegeben); keine Lieferbestätigung.",
+      "pro_jahr": true,
+      "rechenweg": "belegte Menge des einzigen Bogens mit Tonnen in dieser Gruppe: 120.000 t (V13)",
+      "t": 120000.0,
+      "text": "120.000 t Spodumenkonzentrat pro Jahr",
+      "verbindungen": [
+       "V13"
+      ],
+      "ware": "Spodumenkonzentrat"
+     }
+    ],
+    "text": "betroffen 28.735 t Spodumenkonzentrat im genannten Zeitraum; 120.000 t Spodumenkonzentrat pro Jahr"
    },
    "verbindungen_weg": [
     "V12",
@@ -2815,7 +3309,7 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [
     {
@@ -2829,7 +3323,7 @@
    ],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -2841,8 +3335,42 @@
    "ohne_abfluss": [],
    "ohne_zufluss": [],
    "tonnen": {
-    "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "evidenz": "ABGELEITET",
+    "grund": null,
+    "hinweis": "Mengen verschiedener Waren oder Zeitbasen werden nicht addiert.",
+    "ohne_menge": [],
+    "posten": [
+     {
+      "art": "summe",
+      "eingaenge": [
+       {
+        "einheit": "t",
+        "freigabe": "FREIGEGEBEN",
+        "hoch": 1,
+        "name": "V9 Cauchari-Olaroz → Ganfeng Lithium",
+        "quelle": "30.400 t LCE/a (abgeleitet (76 % von geplant 40.000))",
+        "ref": "flow:LIF-09",
+        "wert": 30400.0
+       }
+      ],
+      "einheit": "t",
+      "ergebnis": [
+       30400.0
+      ],
+      "evidenz": "ABGELEITET",
+      "formel": "30.400 t",
+      "hinweis": "Menge laut Quelle je Bogen (Lieferung, Vertrag oder Kapazität wie dort angegeben); keine Lieferbestätigung.",
+      "pro_jahr": true,
+      "rechenweg": "belegte Menge des einzigen Bogens mit Tonnen in dieser Gruppe: 30.400 t (V9)",
+      "t": 30400.0,
+      "text": "30.400 t Lithiumcarbonat (LCE) pro Jahr",
+      "verbindungen": [
+       "V9"
+      ],
+      "ware": "Lithiumcarbonat (LCE)"
+     }
+    ],
+    "text": "betroffen 30.400 t Lithiumcarbonat (LCE) pro Jahr"
    },
    "verbindungen_weg": [
     "V9"
@@ -3014,7 +3542,7 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [
     {
@@ -3028,7 +3556,7 @@
    ],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -3041,7 +3569,7 @@
    "ohne_zufluss": [],
    "tonnen": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "grund": "Kein Bogen an diesem Glied hat eine freigegebene Menge in Tonnen. Ohne Menge: 1 von 1 Bögen."
    },
    "verbindungen_weg": [
     "V8"
@@ -3183,12 +3711,96 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [],
    "mehrkosten": {
-    "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "evidenz": "ABGELEITET",
+    "grund": null,
+    "kapazitaet": "2 Ausweichquellen mit belegter Menge oder Kapazität; Freie Kapazität ist für keine Ausweichquelle belegt; ob sie die Menge übernehmen kann, ist unbekannt.",
+    "posten": [
+     {
+      "art": "differenz",
+      "eingaenge": [
+       {
+        "einheit": "t",
+        "freigabe": "FREIGEGEBEN",
+        "hoch": 1,
+        "name": "Menge",
+        "quelle": "744.630 t (tatsächliche Transaktionsmenge, Kalenderjahr 2025)",
+        "ref": "M-LIF-17",
+        "term": 1,
+        "wert": 744630.0
+       },
+       {
+        "einheit": "US$ je t Spodumenkonzentrat (6 % Li2O)",
+        "freigabe": "FREIGEGEBEN",
+        "hoch": 1,
+        "name": "Marktpreis",
+        "quelle": "U.S. Geological Survey, Mineral Commodity Summaries 2026, Lithium",
+        "ref": "preis:spodumen",
+        "term": 1,
+        "wert": [
+         800.0,
+         970.0
+        ]
+       },
+       {
+        "einheit": "US$ je €",
+        "freigabe": "AMTLICH",
+        "hoch": -1,
+        "name": "Kurs US$",
+        "quelle": "EZB-Jahresmittel 2025: 1,1300 US$ je €",
+        "ref": "ezb:USD:2025",
+        "term": 1,
+        "wert": 1.13
+       },
+       {
+        "einheit": "RMB",
+        "freigabe": "FREIGEGEBEN",
+        "hoch": 1,
+        "name": "Vertragswert",
+        "quelle": "4,07 Mrd. RMB laut Quelle",
+        "ref": "M-LIF-17",
+        "term": 2,
+        "wert": 4070021000
+       },
+       {
+        "einheit": "RMB je €",
+        "freigabe": "AMTLICH",
+        "hoch": -1,
+        "name": "Kurs RMB",
+        "quelle": "EZB-Jahresmittel 2025: 8,1185 RMB je €",
+        "ref": "ezb:CNY:2025",
+        "term": 2,
+        "wert": 8.1185
+       }
+      ],
+      "einheit": "€",
+      "ergebnis": [
+       25844958.499134243,
+       137868940.80001915
+      ],
+      "eur": null,
+      "eur_spanne": [
+       25844958.499134243,
+       137868940.80001915
+      ],
+      "evidenz": "ABGELEITET",
+      "formel": "744.630 t × 800–970 US$/t ÷ 1,1300 US$/€ − 4,07 Mrd. RMB ÷ 8,1185 RMB/€",
+      "fuer": "S12",
+      "hinweis": "Ersatz der Menge von Albemarle zum Marktpreis statt zum bisherigen Vertragspreis; gilt nur, soweit Ausweichquellen die Menge liefern können (Freie Kapazität ist für keine Ausweichquelle belegt; ob sie die Menge übernehmen kann, ist unbekannt.) Sorte und Lieferbedingungen des Vertrags können vom Marktpreis abweichen.",
+      "preis_jahr": 2025,
+      "preis_quelle": "U.S. Geological Survey, Mineral Commodity Summaries 2026, Lithium",
+      "preis_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-lithium.pdf",
+      "preis_zitat": "Spodumene (6% lithium oxide) prices in Australia (f.o.b.) increased from approximately $800 per … ton in January to approximately $970 per ton in November.",
+      "pro_jahr": true,
+      "rechenweg": "744.630 t (V17) × Marktpreis 800 bis 970 US$ je t Spodumenkonzentrat (6 % Li2O) (Spanne Januar bis November 2025 (f.o.b. Australien)) ÷ EZB-Jahresmittel 2025: 1,1300 US$ je € minus Vertragswert 4,07 Mrd. RMB ÷ EZB-Jahresmittel 2025: 8,1185 RMB je € (Vertragspreis ≈ 673 € je t)",
+      "text": "25,8 Mio. € bis 138 Mio. € pro Jahr für Albemarle",
+      "verbindung": "V17"
+     }
+    ],
+    "text": "25,8 Mio. € bis 138 Mio. € pro Jahr für Albemarle"
    },
    "mengen": [
     {
@@ -3214,8 +3826,45 @@
     "S26"
    ],
    "tonnen": {
-    "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "evidenz": "ABGELEITET",
+    "grund": "Weitere 2 Bögen an diesem Glied ohne Menge: V4, V10; die tatsächliche Menge kann größer sein.",
+    "hinweis": "Mengen verschiedener Waren oder Zeitbasen werden nicht addiert. Weitere 2 Bögen an diesem Glied ohne Menge: V4, V10; die tatsächliche Menge kann größer sein.",
+    "ohne_menge": [
+     "V4",
+     "V10"
+    ],
+    "posten": [
+     {
+      "art": "summe",
+      "eingaenge": [
+       {
+        "einheit": "t",
+        "freigabe": "FREIGEGEBEN",
+        "hoch": 1,
+        "name": "V17 Greenbushes → Albemarle",
+        "quelle": "744.630 t (tatsächliche Transaktionsmenge, Kalenderjahr 2025)",
+        "ref": "M-LIF-17",
+        "wert": 744630.0
+       }
+      ],
+      "einheit": "t",
+      "ergebnis": [
+       744630.0
+      ],
+      "evidenz": "ABGELEITET",
+      "formel": "744.630 t",
+      "hinweis": "Menge laut Quelle je Bogen (Lieferung, Vertrag oder Kapazität wie dort angegeben); keine Lieferbestätigung.",
+      "pro_jahr": true,
+      "rechenweg": "belegte Menge des einzigen Bogens mit Tonnen in dieser Gruppe: 744.630 t (V17)",
+      "t": 744630.0,
+      "text": "744.630 t Spodumenkonzentrat (chemical grade) pro Jahr",
+      "verbindungen": [
+       "V17"
+      ],
+      "ware": "Spodumenkonzentrat (chemical grade)"
+     }
+    ],
+    "text": "betroffen 744.630 t Spodumenkonzentrat (chemical grade) pro Jahr"
    },
    "verbindungen_weg": [
     "V4",
@@ -3359,12 +4008,12 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -3378,8 +4027,42 @@
     "S27"
    ],
    "tonnen": {
-    "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "evidenz": "ABGELEITET",
+    "grund": null,
+    "hinweis": "Mengen verschiedener Waren oder Zeitbasen werden nicht addiert.",
+    "ohne_menge": [],
+    "posten": [
+     {
+      "art": "summe",
+      "eingaenge": [
+       {
+        "einheit": "t",
+        "freigabe": "FREIGEGEBEN",
+        "hoch": 1,
+        "name": "V15 Kamativi → Yahua",
+        "quelle": "350.000 t/a (Jahresleistung, ca.)",
+        "ref": "flow:LIF-15",
+        "wert": 350000.0
+       }
+      ],
+      "einheit": "t",
+      "ergebnis": [
+       350000.0
+      ],
+      "evidenz": "ABGELEITET",
+      "formel": "350.000 t",
+      "hinweis": "Menge laut Quelle je Bogen (Lieferung, Vertrag oder Kapazität wie dort angegeben); keine Lieferbestätigung.",
+      "pro_jahr": true,
+      "rechenweg": "belegte Menge des einzigen Bogens mit Tonnen in dieser Gruppe: 350.000 t (V15)",
+      "t": 350000.0,
+      "text": "350.000 t Lithiumkonzentrat pro Jahr",
+      "verbindungen": [
+       "V15"
+      ],
+      "ware": "Lithiumkonzentrat"
+     }
+    ],
+    "text": "betroffen 350.000 t Lithiumkonzentrat pro Jahr"
    },
    "verbindungen_weg": [
     "V15"
@@ -3521,12 +4204,12 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -3552,8 +4235,45 @@
     "S23"
    ],
    "tonnen": {
-    "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "evidenz": "ABGELEITET",
+    "grund": "Weitere 2 Bögen an diesem Glied ohne Menge: V7, V18; die tatsächliche Menge kann größer sein.",
+    "hinweis": "Mengen verschiedener Waren oder Zeitbasen werden nicht addiert. Weitere 2 Bögen an diesem Glied ohne Menge: V7, V18; die tatsächliche Menge kann größer sein.",
+    "ohne_menge": [
+     "V7",
+     "V18"
+    ],
+    "posten": [
+     {
+      "art": "summe",
+      "eingaenge": [
+       {
+        "einheit": "t",
+        "freigabe": "FREIGEGEBEN",
+        "hoch": 1,
+        "name": "V6 Kathleen Valley → Port of Geraldton",
+        "quelle": "10.831 dmt (geliefert)",
+        "ref": "flow:LIF-06",
+        "wert": 10831.0
+       }
+      ],
+      "einheit": "t",
+      "ergebnis": [
+       10831.0
+      ],
+      "evidenz": "ABGELEITET",
+      "formel": "10.831 t",
+      "hinweis": "Menge laut Quelle je Bogen (Lieferung, Vertrag oder Kapazität wie dort angegeben); keine Lieferbestätigung.",
+      "pro_jahr": false,
+      "rechenweg": "belegte Menge des einzigen Bogens mit Tonnen in dieser Gruppe: 10.831 t (V6)",
+      "t": 10831.0,
+      "text": "10.831 t Spodumenkonzentrat im genannten Zeitraum",
+      "verbindungen": [
+       "V6"
+      ],
+      "ware": "Spodumenkonzentrat"
+     }
+    ],
+    "text": "betroffen 10.831 t Spodumenkonzentrat im genannten Zeitraum"
    },
    "verbindungen_weg": [
     "V6",
@@ -3697,12 +4417,12 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -3717,7 +4437,7 @@
    ],
    "tonnen": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "grund": "Kein Bogen an diesem Glied hat eine freigegebene Menge in Tonnen. Ohne Menge: 1 von 1 Bögen."
    },
    "verbindungen_weg": [
     "V5"
@@ -7613,7 +8333,7 @@
   ]
  },
  "eingaben": {
-  "analysis/rohstoffe/eigentum/eigentumskette.json": "58f2a733e79cd462062e351135d0aafb3e27494d28e47d4268dd26a0c6bd2371",
+  "analysis/rohstoffe/eigentum/eigentumskette.json": "dc4e41fa1f2e547e39408fdc7c4a07cca001c0609181a7b1a7b0a12d8ef49bb6",
   "analysis/rohstoffe/fluss-freigaben.jsonl": "7bcb03cd6f866779a996144af573a32a6723c19e37c1648f6b5dfbf2b642a149",
   "analysis/rohstoffe/lithium/kandidaten.json": "f03037cc3e571b198fc0c3d19c39466ea62383fd895a9efcefafcb3c81751bf1",
   "analysis/rohstoffe/lithium/markt.json": "7a16c8ab88fda7ebdb65896703bbc07c8b47658a3f351d8c08df37313ea69303",
@@ -7646,7 +8366,7 @@
   "UNKNOWN bleibt UNKNOWN mit Grund; belegter Wert nur laut Quelle, Euro mit EZB-Jahresmittel. Ein Geldbetrag ist keine Menge.",
   "Ebene „mit Annahmen“ getrennt: Menge aus dem Annahmen-Atlas (Snapshot je Fluss-ID), Wert = Menge × Preis der gelesenen Preisquelle ÷ EZB-Kurs (Tagespreis mit EZB-Tageskurs, wo eine lesbare tägliche Notierung vorliegt, sonst Jahrespreis mit EZB-Jahresmittel); zählt nie als belegt. Ausstoß und Obergrenze des liefernden Glieds werden gezeigt, zählen aber nicht als Menge der Verbindung.",
   "Eigentümer je Glied nur mit gelesener Quelle (Zitat gegen Textkopie geprüft); freigegeben erst nach Zweitprüfung einer getrennten Sitzung. Eigentümer aus der Altliste sind Kandidaten und zählen nicht als belegt.",
-  "Ausfall = Folge im erfassten Netz; Tonnen und Mehrkosten nur, wenn eine Quelle sie nennt."
+  "Ausfall = Folge im erfassten Netz; Tonnen und Mehrkosten nur abgeleitet aus freigegebenen Mengen, Werten und Preisen (Rechenweg sichtbar, nie belegt); sonst unbekannt."
  ],
  "risikoebene": {
   "kategorien": [
@@ -12642,6 +13362,60 @@
     "rechnung": "",
     "text": "unbekannt"
    },
+   "wert_abgeleitet": {
+    "art": "produkt",
+    "eingaenge": [
+     {
+      "einheit": "t",
+      "freigabe": "FREIGEGEBEN",
+      "hoch": 1,
+      "name": "Menge",
+      "quelle": "891.592 dmt (verschifft, Geschäftsjahr 1.7.2025 bis 30.6.2026)",
+      "ref": "M-LIF-01",
+      "wert": 891592.0
+     },
+     {
+      "einheit": "US$ je t Spodumenkonzentrat (6 % Li2O)",
+      "freigabe": "FREIGEGEBEN",
+      "hoch": 1,
+      "name": "Preis",
+      "quelle": "U.S. Geological Survey, Mineral Commodity Summaries 2026, Lithium",
+      "ref": "preis:spodumen",
+      "wert": [
+       800.0,
+       970.0
+      ]
+     },
+     {
+      "einheit": "US$ je €",
+      "freigabe": "AMTLICH",
+      "hoch": -1,
+      "name": "Kurs",
+      "quelle": "EZB-Jahresmittel 2025: 1,1300 US$ je €",
+      "ref": "ezb:USD:2025",
+      "wert": 1.13
+     }
+    ],
+    "einheit": "€",
+    "ergebnis": [
+     631215575.221239,
+     765348884.9557523
+    ],
+    "eur": null,
+    "eur_spanne": [
+     631215575.221239,
+     765348884.9557523
+    ],
+    "evidenz": "ABGELEITET",
+    "hinweis": "Marktwert zum Jahrespreis; der tatsächliche Vertragspreis ist unbekannt.",
+    "preis_basis": "spodumen",
+    "preis_jahr": 2025,
+    "preis_quelle": "U.S. Geological Survey, Mineral Commodity Summaries 2026, Lithium",
+    "preis_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-lithium.pdf",
+    "preis_zitat": "Spodumene (6% lithium oxide) prices in Australia (f.o.b.) increased from approximately $800 per … ton in January to approximately $970 per ton in November.",
+    "rechenweg": "891.592 t (891.592 dmt (verschifft, Geschäftsjahr 1.7.2025 bis 30.6.2026)) × 800 bis 970 US$ je t Spodumenkonzentrat (6 % Li2O) (Spanne Januar bis November 2025 (f.o.b. Australien)) ÷ EZB-Jahresmittel 2025: 1,1300 US$ je €",
+    "text": "≈ 631 Mio. € bis 765 Mio. € pro Jahr"
+   },
    "wert_annahme": {
     "annahme_art": "RECHNUNG",
     "eur": null,
@@ -12702,6 +13476,60 @@
     "rechnung": "",
     "text": "unbekannt"
    },
+   "wert_abgeleitet": {
+    "art": "produkt",
+    "eingaenge": [
+     {
+      "einheit": "t",
+      "freigabe": "FREIGEGEBEN",
+      "hoch": 1,
+      "name": "Menge",
+      "quelle": "315.000 t/a (bis zu)",
+      "ref": "flow:LIF-02",
+      "wert": 315000.0
+     },
+     {
+      "einheit": "US$ je t Spodumenkonzentrat (6 % Li2O)",
+      "freigabe": "FREIGEGEBEN",
+      "hoch": 1,
+      "name": "Preis",
+      "quelle": "U.S. Geological Survey, Mineral Commodity Summaries 2026, Lithium",
+      "ref": "preis:spodumen",
+      "wert": [
+       800.0,
+       970.0
+      ]
+     },
+     {
+      "einheit": "US$ je €",
+      "freigabe": "AMTLICH",
+      "hoch": -1,
+      "name": "Kurs",
+      "quelle": "EZB-Jahresmittel 2025: 1,1300 US$ je €",
+      "ref": "ezb:USD:2025",
+      "wert": 1.13
+     }
+    ],
+    "einheit": "€",
+    "ergebnis": [
+     223008849.55752215,
+     270398230.0884956
+    ],
+    "eur": null,
+    "eur_spanne": [
+     223008849.55752215,
+     270398230.0884956
+    ],
+    "evidenz": "ABGELEITET",
+    "hinweis": "Marktwert zum Jahrespreis; der tatsächliche Vertragspreis ist unbekannt.",
+    "preis_basis": "spodumen",
+    "preis_jahr": 2025,
+    "preis_quelle": "U.S. Geological Survey, Mineral Commodity Summaries 2026, Lithium",
+    "preis_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-lithium.pdf",
+    "preis_zitat": "Spodumene (6% lithium oxide) prices in Australia (f.o.b.) increased from approximately $800 per … ton in January to approximately $970 per ton in November.",
+    "rechenweg": "315.000 t (315.000 t/a (bis zu)) × 800 bis 970 US$ je t Spodumenkonzentrat (6 % Li2O) (Spanne Januar bis November 2025 (f.o.b. Australien)) ÷ EZB-Jahresmittel 2025: 1,1300 US$ je €",
+    "text": "≈ 223 Mio. € bis 270 Mio. € pro Jahr"
+   },
    "wert_annahme": {
     "annahme_art": "RECHNUNG",
     "eur": null,
@@ -12761,6 +13589,60 @@
     "quelle_text": null,
     "rechnung": "",
     "text": "unbekannt"
+   },
+   "wert_abgeleitet": {
+    "art": "produkt",
+    "eingaenge": [
+     {
+      "einheit": "t",
+      "freigabe": "FREIGEGEBEN",
+      "hoch": 1,
+      "name": "Menge",
+      "quelle": "150.000 t/a (Vertragsmenge)",
+      "ref": "flow:LIF-03",
+      "wert": 150000.0
+     },
+     {
+      "einheit": "US$ je t Spodumenkonzentrat (6 % Li2O)",
+      "freigabe": "FREIGEGEBEN",
+      "hoch": 1,
+      "name": "Preis",
+      "quelle": "U.S. Geological Survey, Mineral Commodity Summaries 2026, Lithium",
+      "ref": "preis:spodumen",
+      "wert": [
+       800.0,
+       970.0
+      ]
+     },
+     {
+      "einheit": "US$ je €",
+      "freigabe": "AMTLICH",
+      "hoch": -1,
+      "name": "Kurs",
+      "quelle": "EZB-Jahresmittel 2025: 1,1300 US$ je €",
+      "ref": "ezb:USD:2025",
+      "wert": 1.13
+     }
+    ],
+    "einheit": "€",
+    "ergebnis": [
+     106194690.26548673,
+     128761061.94690266
+    ],
+    "eur": null,
+    "eur_spanne": [
+     106194690.26548673,
+     128761061.94690266
+    ],
+    "evidenz": "ABGELEITET",
+    "hinweis": "Marktwert zum Jahrespreis; der tatsächliche Vertragspreis ist unbekannt.",
+    "preis_basis": "spodumen",
+    "preis_jahr": 2025,
+    "preis_quelle": "U.S. Geological Survey, Mineral Commodity Summaries 2026, Lithium",
+    "preis_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-lithium.pdf",
+    "preis_zitat": "Spodumene (6% lithium oxide) prices in Australia (f.o.b.) increased from approximately $800 per … ton in January to approximately $970 per ton in November.",
+    "rechenweg": "150.000 t (150.000 t/a (Vertragsmenge)) × 800 bis 970 US$ je t Spodumenkonzentrat (6 % Li2O) (Spanne Januar bis November 2025 (f.o.b. Australien)) ÷ EZB-Jahresmittel 2025: 1,1300 US$ je €",
+    "text": "≈ 106 Mio. € bis 129 Mio. € pro Jahr"
    },
    "wert_annahme": {
     "annahme_art": "RECHNUNG",
@@ -12835,6 +13717,7 @@
     "rechnung": "",
     "text": "unbekannt"
    },
+   "wert_abgeleitet": null,
    "wert_annahme": {
     "annahme_art": "RECHNUNG",
     "eur": 360966749.27258587,
@@ -12938,6 +13821,7 @@
     "rechnung": "",
     "text": "unbekannt"
    },
+   "wert_abgeleitet": null,
    "wert_annahme": {
     "annahme_art": "RECHNUNG",
     "eur": 203876249.8639852,
@@ -12997,6 +13881,7 @@
     "rechnung": "",
     "text": "unbekannt"
    },
+   "wert_abgeleitet": null,
    "wert_annahme": {
     "annahme_art": "RECHNUNG",
     "eur": null,
@@ -13070,6 +13955,7 @@
     "rechnung": "",
     "text": "unbekannt"
    },
+   "wert_abgeleitet": null,
    "wert_annahme": {
     "annahme_art": "RECHNUNG",
     "eur": 76934432.63111237,
@@ -13166,6 +14052,7 @@
     "rechnung": "",
     "text": "unbekannt"
    },
+   "wert_abgeleitet": null,
    "wert_annahme": {
     "annahme_art": "RECHNUNG",
     "eur": 146817871.61240757,
@@ -13224,6 +14111,55 @@
     "quelle_text": null,
     "rechnung": "",
     "text": "unbekannt"
+   },
+   "wert_abgeleitet": {
+    "art": "produkt",
+    "eingaenge": [
+     {
+      "einheit": "t",
+      "freigabe": "FREIGEGEBEN",
+      "hoch": 1,
+      "name": "Menge",
+      "quelle": "30.400 t LCE/a (abgeleitet (76 % von geplant 40.000))",
+      "ref": "flow:LIF-09",
+      "wert": 30400.0
+     },
+     {
+      "einheit": "US$ je t Lithiumcarbonat (LCE)",
+      "freigabe": "FREIGEGEBEN",
+      "hoch": 1,
+      "name": "Preis",
+      "quelle": "U.S. Geological Survey, Mineral Commodity Summaries 2026, Lithium",
+      "ref": "preis:lithiumcarbonat",
+      "wert": 9000.0
+     },
+     {
+      "einheit": "US$ je €",
+      "freigabe": "AMTLICH",
+      "hoch": -1,
+      "name": "Kurs",
+      "quelle": "EZB-Jahresmittel 2025: 1,1300 US$ je €",
+      "ref": "ezb:USD:2025",
+      "wert": 1.13
+     }
+    ],
+    "einheit": "€",
+    "ergebnis": [
+     242123893.80530974
+    ],
+    "eur": 242123893.80530974,
+    "eur_spanne": [
+     242123893.80530974
+    ],
+    "evidenz": "ABGELEITET",
+    "hinweis": "Marktwert zum Jahrespreis; der tatsächliche Vertragspreis ist unbekannt.",
+    "preis_basis": "lithiumcarbonat",
+    "preis_jahr": 2025,
+    "preis_quelle": "U.S. Geological Survey, Mineral Commodity Summaries 2026, Lithium",
+    "preis_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-lithium.pdf",
+    "preis_zitat": "carbonate price was $9,000 per ton in 2025",
+    "rechenweg": "30.400 t (30.400 t LCE/a (abgeleitet (76 % von geplant 40.000))) × 9.000 US$ je t Lithiumcarbonat (LCE) (Jahresmittel 2025, Festverträge USA) ÷ EZB-Jahresmittel 2025: 1,1300 US$ je €",
+    "text": "≈ 242 Mio. € pro Jahr"
    },
    "wert_annahme": {
     "annahme_art": "RECHNUNG",
@@ -13297,6 +14233,7 @@
     "rechnung": "",
     "text": "unbekannt"
    },
+   "wert_abgeleitet": null,
    "wert_annahme": {
     "annahme_art": "RECHNUNG",
     "eur": 360966749.27258587,
@@ -13376,6 +14313,7 @@
     "rechnung": "",
     "text": "unbekannt"
    },
+   "wert_abgeleitet": null,
    "wert_annahme": {
     "annahme_art": "RECHNUNG",
     "eur": 246844133.8884778,
@@ -13435,6 +14373,7 @@
     "rechnung": "",
     "text": "unbekannt"
    },
+   "wert_abgeleitet": null,
    "wert_annahme": {
     "annahme_art": "RECHNUNG",
     "eur": null,
@@ -13495,6 +14434,7 @@
     "rechnung": "",
     "text": "unbekannt"
    },
+   "wert_abgeleitet": null,
    "wert_annahme": {
     "annahme_art": "RECHNUNG",
     "eur": null,
@@ -13555,6 +14495,7 @@
     "rechnung": "",
     "text": "unbekannt"
    },
+   "wert_abgeleitet": null,
    "wert_annahme": {
     "annahme_art": "RECHNUNG",
     "eur": 142444573.09257814,
@@ -13628,6 +14569,7 @@
     "rechnung": "",
     "text": "unbekannt"
    },
+   "wert_abgeleitet": null,
    "wert_annahme": {
     "annahme_art": "RECHNUNG",
     "eur": 71222286.54628907,
@@ -13700,6 +14642,7 @@
     "rechnung": "",
     "text": "unbekannt"
    },
+   "wert_abgeleitet": null,
    "wert_annahme": {
     "annahme_art": "RECHNUNG",
     "eur": 189926097.45677087,
@@ -13776,6 +14719,7 @@
     "rechnung": "4,07 Mrd. RMB ÷ EZB-Jahresmittel 2025: 8,1185 RMB je €",
     "text": "501 Mio. €"
    },
+   "wert_abgeleitet": null,
    "wert_annahme": null
   },
   {
@@ -13834,6 +14778,7 @@
     "rechnung": "",
     "text": "unbekannt"
    },
+   "wert_abgeleitet": null,
    "wert_annahme": {
     "annahme_art": "RECHNUNG",
     "eur": 76934432.63111237,
@@ -13883,6 +14828,7 @@
   "verbindungen": 18,
   "verbindungen_auf_globus": 11,
   "verbindungen_freigegeben": 18,
+  "werte_abgeleitet": 4,
   "werte_belegt": 1,
   "werte_in_euro": 1,
   "werte_mit_annahmen": 18

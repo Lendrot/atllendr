@@ -127,6 +127,7 @@ function mengeKurz(v) {
 }
 function wertKurz(v) {
   if (v.wert.evidenz !== 'UNKNOWN') return esc(v.wert.text);
+  if (v.wert_abgeleitet) return `${esc(v.wert_abgeleitet.text)} <i class="ab">(abgeleitet)</i>`;
   if (an() && v.wert_annahme?.evidenz === 'ANNAHME') return `${esc(v.wert_annahme.text)} <i class="am">(Annahme)</i>`;
   return '<span class="unbekannt">unbekannt</span>';
 }
@@ -140,6 +141,11 @@ function mengeWertDetail(v) {
   const m = v.menge, w = v.wert;
   let h = `<dt>Menge</dt><dd data-menge="${m.evidenz}">${m.evidenz === 'UNKNOWN' ? `<span class="unbekannt">unbekannt</span> – ${esc(m.grund)}` : `${esc(m.text)} <span class="chip f">belegt</span>${frChip(m, 'data-menge-freigabe')}${m.quelle_text && m.quelle_text !== m.text ? ` (Quelle: ${esc(m.quelle_text)})` : ''}${m.rechnung ? `<br><span class="hinweis">${esc(m.rechnung)}</span>` : ''}${m.hinweis ? `<br><span class="hinweis">${esc(m.hinweis)}</span>` : ''}`}</dd>`
     + `<dt>Wert</dt><dd data-wert="${w.evidenz}">${w.evidenz === 'UNKNOWN' ? `<span class="unbekannt">unbekannt</span> – ${esc(w.grund)}` : `${esc(w.text)} <span class="chip f">belegt</span>${w.quelle_text && w.quelle_text !== w.text ? ` (${esc(w.quelle_text)})` : ''}${w.rechnung ? `<br><span class="hinweis">${esc(w.rechnung)}</span>` : ''}`}</dd></dl>`;
+  // Regel 4 gelockert (Eddie 2026-11-16): Ableitung aus freigegebenen Werten, in beiden Ansichten, nie als belegt
+  const ab = v.wert_abgeleitet;
+  if (ab && w.evidenz === 'UNKNOWN') h += `<div class="abgeleitet-box" data-wert-abgeleitet><b>Wert (abgeleitet):</b> ${esc(ab.text)} <span class="chip d">abgeleitet · Menge × Preis ÷ EZB</span>`
+    + `<br><span class="hinweis">Rechenweg: ${esc(ab.rechenweg)}. ${esc(ab.hinweis || '')} Eingänge: ${ab.eingaenge.map(e => `${esc(e.name)} (${e.freigabe === 'AMTLICH' ? 'amtlich' : 'freigegeben'})`).join(', ')} · Preis: ${link(ab.preis_url, ab.preis_quelle)}</span>`
+    + `<blockquote>„${esc(ab.preis_zitat)}“</blockquote></div>`;
   if (m.belege?.length) h += `<details class="ek-belege" open><summary>Beleg Menge${w.beleg_id ? ' und Wert' : ''} (${m.belege.length})</summary>${belegeHtml(m.belege)}</details>`;
   for (const b of v.menge_bezug || [])
     h += `<div class="bezug-box" data-bezug="${b.art}"><b>${b.art === 'OBERGRENZE' ? 'Obergrenze' : 'Ausstoß des liefernden Glieds'}:</b> ${esc(b.text)} <span class="chip">${esc(b.art_text)}</span>${frChip(b, 'data-bezug-freigabe')}<br><span class="hinweis">${esc(b.quelle_text)}${b.rechnung ? ` · ${esc(b.rechnung)}` : ''}${b.hinweis ? ` · ${esc(b.hinweis)}` : ''}</span>`
@@ -147,7 +153,7 @@ function mengeWertDetail(v) {
   if (an()) {
     const am = v.menge_annahme, aw = v.wert_annahme;
     if (am) h += `<div class="annahme-box" data-annahme-menge><b>Menge (Annahme):</b> ${esc(am.text)} <span class="chip a">Annahme · ${esc(am.annahme_id)}${am.konfidenz_text ? ' · Konfidenz ' + esc(am.konfidenz_text) : ''}</span><br><span class="hinweis">${esc(am.grund)} · ${link(am.quelle_url, am.quelle)}</span></div>`;
-    if (aw?.evidenz === 'ANNAHME') h += `<div class="annahme-box" data-annahme-wert><b>Wert (Rechnung mit Annahme):</b> ${esc(aw.text)} <span class="chip a">Annahme · Menge × Preis ÷ EZB</span><br><span class="hinweis">${esc(aw.rechnung)} · Preis: ${link(aw.preis_url, aw.preis_quelle)}</span><blockquote class="annahme">„${esc(aw.preis_zitat)}“</blockquote></div>`;
+    if (aw?.evidenz === 'ANNAHME' && !ab) h += `<div class="annahme-box" data-annahme-wert><b>Wert (Rechnung mit Annahme):</b> ${esc(aw.text)} <span class="chip a">Annahme · Menge × Preis ÷ EZB</span><br><span class="hinweis">${esc(aw.rechnung)} · Preis: ${link(aw.preis_url, aw.preis_quelle)}</span><blockquote class="annahme">„${esc(aw.preis_zitat)}“</blockquote></div>`;
     else if (aw && w.evidenz === 'UNKNOWN') h += `<div class="annahme-box" data-annahme-wert="UNKNOWN"><b>Wert mit Annahmen:</b> <span class="unbekannt">unbekannt</span> – ${esc(aw.grund)}</div>`;
     if (!am && m.evidenz === 'UNKNOWN') h += `<div class="annahme-box" data-annahme-menge="UNKNOWN"><b>Menge mit Annahmen:</b> <span class="unbekannt">unbekannt</span> – keine Annahme im Annahmen-Atlas für diese Fluss-ID.</div>`;
   }
@@ -382,7 +388,16 @@ function render(d) {
       + `<p><b>Verlieren jeden erfassten Zufluss:</b> ${liste(a.ohne_zufluss)}</p><p><b>Verlieren jeden erfassten Abnehmer:</b> ${liste(a.ohne_abfluss)}</p>`
       + `<p><b>Mengen der betroffenen Bögen</b> (nicht addiert): ${a.mengen.map(m => `${name(d.verbindungen.find(v => v.id === m.verbindung).von)}→${name(d.verbindungen.find(v => v.id === m.verbindung).nach)}: ${m.evidenz === 'UNKNOWN' ? '<span class="unbekannt">unbekannt</span>' : esc(m.text)}`).join(' · ')}</p>`
       + ausweichHtml(d, a.ausweich, name)
-      + `<p class="hinweis">Tonnen: unbekannt – ${esc(a.tonnen.grund)} Mehrkosten: unbekannt – ${esc(a.mehrkosten.grund)} Dauer: unbekannt – ${esc(a.dauer.grund)}</p></div>`;
+      + ausfallRechnung('Fehlende Tonnen', 'tonnen', a.tonnen, p => `${esc(p.rechenweg)}. ${esc(p.hinweis || '')}`)
+      + ausfallRechnung('Mehrkosten', 'mehrkosten', a.mehrkosten, p => `${esc(p.rechenweg)}. ${esc(p.hinweis || '')} Preis: ${link(p.preis_url, p.preis_quelle)}<blockquote>„${esc(p.preis_zitat)}“</blockquote>`)
+      + `<p data-ausfall-feld="dauer" data-evidenz="${a.dauer.evidenz}"><b>Dauer:</b> <span class="unbekannt">unbekannt</span> – ${esc(a.dauer.grund)}</p></div>`;
+  }
+  // Regel 4 gelockert (Eddie 2026-11-16): Tonnen und Mehrkosten ABGELEITET aus freigegebenen Eingängen, Rechenweg sichtbar, nie belegt
+  function ausfallRechnung(titel, feld, f, weg) {
+    if (f.evidenz !== 'ABGELEITET') return `<p data-ausfall-feld="${feld}" data-evidenz="${f.evidenz}"><b>${titel}:</b> <span class="unbekannt">unbekannt</span> – ${esc(f.grund)}</p>`;
+    return `<div class="abgeleitet-box" data-ausfall-feld="${feld}" data-evidenz="ABGELEITET"><b>${titel} (abgeleitet):</b> ${esc(f.text)} <span class="chip d">abgeleitet</span>`
+      + f.posten.map(p => `<br><span class="hinweis">Rechenweg: ${weg(p)} Eingänge: ${p.eingaenge.map(e => `${esc(e.name)} (${e.freigabe === 'AMTLICH' ? 'amtlich' : 'freigegeben'})`).join(', ')}</span>`).join('')
+      + (f.kapazitaet ? `<br><span class="hinweis">${esc(f.kapazitaet)}</span>` : '') + (f.grund ? `<br><span class="hinweis">${esc(f.grund)}</span>` : '') + '</div>';
   }
   let globus = null;
   function waehle(a) {

@@ -151,7 +151,7 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [
     {
@@ -164,7 +164,7 @@
    ],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -177,7 +177,7 @@
    "ohne_zufluss": [],
    "tonnen": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "grund": "Kein Bogen an diesem Glied hat eine freigegebene Menge in Tonnen. Ohne Menge: 1 von 1 Bögen."
    },
    "verbindungen_weg": [
     "V2"
@@ -334,7 +334,7 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [
     {
@@ -347,7 +347,7 @@
    ],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -360,7 +360,7 @@
    "ohne_zufluss": [],
    "tonnen": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "grund": "Kein Bogen an diesem Glied hat eine freigegebene Menge in Tonnen. Ohne Menge: 1 von 1 Bögen."
    },
    "verbindungen_weg": [
     "V5"
@@ -502,12 +502,12 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -522,7 +522,7 @@
    ],
    "tonnen": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "grund": "Kein Bogen an diesem Glied hat eine freigegebene Menge in Tonnen. Ohne Menge: 1 von 1 Bögen."
    },
    "verbindungen_weg": [
     "V1"
@@ -679,7 +679,7 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [
     {
@@ -692,7 +692,7 @@
    ],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -705,7 +705,7 @@
    "ohne_zufluss": [],
    "tonnen": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "grund": "Kein Bogen an diesem Glied hat eine freigegebene Menge in Tonnen. Ohne Menge: 1 von 1 Bögen."
    },
    "verbindungen_weg": [
     "V4"
@@ -862,7 +862,7 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [
     {
@@ -875,7 +875,7 @@
    ],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -888,7 +888,7 @@
    "ohne_zufluss": [],
    "tonnen": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "grund": "Kein Bogen an diesem Glied hat eine freigegebene Menge in Tonnen. Ohne Menge: 1 von 1 Bögen."
    },
    "verbindungen_weg": [
     "V3"
@@ -967,12 +967,12 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -993,7 +993,7 @@
    "ohne_zufluss": [],
    "tonnen": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "grund": "Kein Bogen an diesem Glied hat eine freigegebene Menge in Tonnen. Ohne Menge: 2 von 2 Bögen."
    },
    "verbindungen_weg": [
     "V2",
@@ -1073,12 +1073,12 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -1093,7 +1093,7 @@
    "ohne_zufluss": [],
    "tonnen": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "grund": "Kein Bogen an diesem Glied hat eine freigegebene Menge in Tonnen. Ohne Menge: 1 von 1 Bögen."
    },
    "verbindungen_weg": [
     "V1"
@@ -1172,12 +1172,12 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -1198,7 +1198,7 @@
    "ohne_zufluss": [],
    "tonnen": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "grund": "Kein Bogen an diesem Glied hat eine freigegebene Menge in Tonnen. Ohne Menge: 2 von 2 Bögen."
    },
    "verbindungen_weg": [
     "V3",
@@ -2533,9 +2533,9 @@
   ]
  },
  "eingaben": {
-  "analysis/aktualitaet/stand/ezb-referenzkurs-usd.json": "03cf29682713d42617db0d52a98190c36d892c13dfada497b31e3342f474c27d",
-  "analysis/aktualitaet/stand/lbma-gold-westmetall.json": "2e7051e5da6d3be67ca5b888f0c17f0669316971415549bc93cfc09a7fa8661b",
-  "analysis/rohstoffe/eigentum/eigentumskette.json": "58f2a733e79cd462062e351135d0aafb3e27494d28e47d4268dd26a0c6bd2371",
+  "analysis/aktualitaet/stand/ezb-referenzkurs-usd.json": "acdbe624e3e09beedd0d4cd7f1d5888db6087248c71db762b749786b623e96b1",
+  "analysis/aktualitaet/stand/lbma-gold-westmetall.json": "51a70b5ce417c1e538183468e05d3d00949c3576767d46de9828d58fe4f479e6",
+  "analysis/rohstoffe/eigentum/eigentumskette.json": "dc4e41fa1f2e547e39408fdc7c4a07cca001c0609181a7b1a7b0a12d8ef49bb6",
   "analysis/rohstoffe/fluss-freigaben.jsonl": "7bcb03cd6f866779a996144af573a32a6723c19e37c1648f6b5dfbf2b642a149",
   "analysis/rohstoffe/gold/kandidaten.json": "7d8b994d076ff097b39d451ac16740343c087d7b655dc2b829ca87aaa1e20745",
   "analysis/rohstoffe/gold/markt.json": "dc2275d59aecfc3b064738b8f8324fc6ed655bc9ce444441d20c4a4f32b0bee8",
@@ -2562,30 +2562,30 @@
  },
  "preisbasis": {
   "ersetzt": "Jahrespreis U.S. Geological Survey, Mineral Commodity Summaries 2026, Gold: 3.300 US$ je Feinunze × 32.150,75 oz/t (einheit.py), 2025e",
-  "eur_je_t": 112305071.18,
+  "eur_je_t": 112508638.97,
   "formel": "Wert = Menge (t) × Gold London Fixing (LBMA) (US$/oz tr) × 32.150,75 oz tr je t (einheit.py) ÷ EZB-Referenzkurs",
   "kurs": {
-   "abgerufen": "2026-11-16",
+   "abgerufen": "2026-11-17",
    "art": "EZB-Referenzkurs",
-   "datum": "2026-11-13",
+   "datum": "2026-11-16",
    "einheit": "US$ je €",
    "herausgeber": "Europäische Zentralbank (EZB), Referenzkurs, wiedergegeben von Eurostat (ert_bil_eur_d)",
    "stand": "analysis/aktualitaet/stand/ezb-referenzkurs-usd.json",
    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ert_bil_eur_d?currency=USD&statinfo=AVG&lastTimePeriod=30&format=JSON&lang=EN",
-   "wert": 1.1052
+   "wert": 1.1014
   },
   "preis": {
-   "abgerufen": "2026-11-16",
+   "abgerufen": "2026-11-17",
    "art": "Gold London Fixing (LBMA)",
-   "datum": "2026-11-16",
+   "datum": "2026-11-17",
    "einheit": "US$/oz tr",
    "herausgeber": "Gold London Fixing (LBMA), wiedergegeben von Westmetall",
    "stand": "analysis/aktualitaet/stand/lbma-gold-westmetall.json",
    "url": "https://www.westmetall.com/en/markdaten.php?action=table&field=USD_ozt_London",
-   "veraenderung_pct": -0.96,
-   "wert": 3860.55
+   "veraenderung_pct": -0.16,
+   "wert": 3854.25
   },
-  "usd_je_t": 124119564.67
+  "usd_je_t": 123917014.96
  },
  "preisbasis_grund": null,
  "regeln": [
@@ -2594,7 +2594,7 @@
   "UNKNOWN bleibt UNKNOWN mit Grund; belegter Wert nur laut Quelle, Euro mit EZB-Jahresmittel. Ein Geldbetrag ist keine Menge.",
   "Ebene „mit Annahmen“ getrennt: Menge aus dem Annahmen-Atlas (Snapshot je Fluss-ID), Wert = Menge × Preis der gelesenen Preisquelle ÷ EZB-Kurs (Tagespreis mit EZB-Tageskurs, wo eine lesbare tägliche Notierung vorliegt, sonst Jahrespreis mit EZB-Jahresmittel); zählt nie als belegt. Ausstoß und Obergrenze des liefernden Glieds werden gezeigt, zählen aber nicht als Menge der Verbindung.",
   "Eigentümer je Glied nur mit gelesener Quelle (Zitat gegen Textkopie geprüft); freigegeben erst nach Zweitprüfung einer getrennten Sitzung. Eigentümer aus der Altliste sind Kandidaten und zählen nicht als belegt.",
-  "Ausfall = Folge im erfassten Netz; Tonnen und Mehrkosten nur, wenn eine Quelle sie nennt."
+  "Ausfall = Folge im erfassten Netz; Tonnen und Mehrkosten nur abgeleitet aus freigegebenen Mengen, Werten und Preisen (Rechenweg sichtbar, nie belegt); sonst unbekannt."
  ],
  "risikoebene": {
   "kategorien": [
@@ -4262,6 +4262,7 @@
     "rechnung": "2,42 Mrd. RMB ÷ EZB-Jahresmittel 2025: 8,1185 RMB je €",
     "text": "298 Mio. €"
    },
+   "wert_abgeleitet": null,
    "wert_annahme": null
   },
   {
@@ -4344,20 +4345,21 @@
     "rechnung": "",
     "text": "unbekannt"
    },
+   "wert_abgeleitet": null,
    "wert_annahme": {
     "annahme_art": "RECHNUNG",
-    "eur": 449220284.7105203,
+    "eur": 450034555.88209337,
     "eur_spanne": [
-     449220284.7105203
+     450034555.88209337
     ],
     "evidenz": "ANNAHME",
     "preis_basis": "gold",
-    "preis_datum": "2026-11-16",
-    "preis_quelle": "Gold London Fixing (LBMA), wiedergegeben von Westmetall, Gold London Fixing (LBMA), US$/oz tr, Handelstag 2026-11-16",
+    "preis_datum": "2026-11-17",
+    "preis_quelle": "Gold London Fixing (LBMA), wiedergegeben von Westmetall, Gold London Fixing (LBMA), US$/oz tr, Handelstag 2026-11-17",
     "preis_url": "https://www.westmetall.com/en/markdaten.php?action=table&field=USD_ozt_London",
-    "preis_zitat": "2026-11-16: 3.860,55 US$/oz tr",
-    "rechnung": "4 t (Annahme A-G-MENGE, t Au) × 124.119.564,666 US$ je t Au (3.860,55 US$/oz tr × 32.150,75 oz tr je t (einheit.py), Handelstag 2026-11-16) = 496 Mio. US$ ÷ EZB-Referenzkurs vom 2026-11-13: 1,1052 US$ je €",
-    "text": "≈ 449 Mio. € pro Jahr"
+    "preis_zitat": "2026-11-17: 3.854,25 US$/oz tr",
+    "rechnung": "4 t (Annahme A-G-MENGE, t Au) × 123.917.014,962 US$ je t Au (3.854,25 US$/oz tr × 32.150,75 oz tr je t (einheit.py), Handelstag 2026-11-17) = 496 Mio. US$ ÷ EZB-Referenzkurs vom 2026-11-16: 1,1014 US$ je €",
+    "text": "≈ 450 Mio. € pro Jahr"
    }
   },
   {
@@ -4416,6 +4418,7 @@
     "rechnung": "213 Mio. A$ ÷ EZB-Jahresmittel 2025: 1,7518 A$ je €",
     "text": "122 Mio. €"
    },
+   "wert_abgeleitet": null,
    "wert_annahme": null
   },
   {
@@ -4474,20 +4477,21 @@
     "rechnung": "",
     "text": "unbekannt"
    },
+   "wert_abgeleitet": null,
    "wert_annahme": {
     "annahme_art": "RECHNUNG",
-    "eur": 393067749.1217053,
+    "eur": 393780236.39683175,
     "eur_spanne": [
-     393067749.1217053
+     393780236.39683175
     ],
     "evidenz": "ANNAHME",
     "preis_basis": "gold",
-    "preis_datum": "2026-11-16",
-    "preis_quelle": "Gold London Fixing (LBMA), wiedergegeben von Westmetall, Gold London Fixing (LBMA), US$/oz tr, Handelstag 2026-11-16",
+    "preis_datum": "2026-11-17",
+    "preis_quelle": "Gold London Fixing (LBMA), wiedergegeben von Westmetall, Gold London Fixing (LBMA), US$/oz tr, Handelstag 2026-11-17",
     "preis_url": "https://www.westmetall.com/en/markdaten.php?action=table&field=USD_ozt_London",
-    "preis_zitat": "2026-11-16: 3.860,55 US$/oz tr",
-    "rechnung": "3,5 t (Annahme A-G-MENGE, t Au) × 124.119.564,666 US$ je t Au (3.860,55 US$/oz tr × 32.150,75 oz tr je t (einheit.py), Handelstag 2026-11-16) = 434 Mio. US$ ÷ EZB-Referenzkurs vom 2026-11-13: 1,1052 US$ je €",
-    "text": "≈ 393 Mio. € pro Jahr"
+    "preis_zitat": "2026-11-17: 3.854,25 US$/oz tr",
+    "rechnung": "3,5 t (Annahme A-G-MENGE, t Au) × 123.917.014,962 US$ je t Au (3.854,25 US$/oz tr × 32.150,75 oz tr je t (einheit.py), Handelstag 2026-11-17) = 434 Mio. US$ ÷ EZB-Referenzkurs vom 2026-11-16: 1,1014 US$ je €",
+    "text": "≈ 394 Mio. € pro Jahr"
    }
   },
   {
@@ -4546,20 +4550,21 @@
     "rechnung": "",
     "text": "unbekannt"
    },
+   "wert_abgeleitet": null,
    "wert_annahme": {
     "annahme_art": "RECHNUNG",
-    "eur": 56152535.58881504,
+    "eur": 56254319.48526167,
     "eur_spanne": [
-     56152535.58881504
+     56254319.48526167
     ],
     "evidenz": "ANNAHME",
     "preis_basis": "gold",
-    "preis_datum": "2026-11-16",
-    "preis_quelle": "Gold London Fixing (LBMA), wiedergegeben von Westmetall, Gold London Fixing (LBMA), US$/oz tr, Handelstag 2026-11-16",
+    "preis_datum": "2026-11-17",
+    "preis_quelle": "Gold London Fixing (LBMA), wiedergegeben von Westmetall, Gold London Fixing (LBMA), US$/oz tr, Handelstag 2026-11-17",
     "preis_url": "https://www.westmetall.com/en/markdaten.php?action=table&field=USD_ozt_London",
-    "preis_zitat": "2026-11-16: 3.860,55 US$/oz tr",
-    "rechnung": "0,5 t (Annahme A-G-MENGE, t Au) × 124.119.564,666 US$ je t Au (3.860,55 US$/oz tr × 32.150,75 oz tr je t (einheit.py), Handelstag 2026-11-16) = 62,1 Mio. US$ ÷ EZB-Referenzkurs vom 2026-11-13: 1,1052 US$ je €",
-    "text": "≈ 56,2 Mio. € pro Jahr"
+    "preis_zitat": "2026-11-17: 3.854,25 US$/oz tr",
+    "rechnung": "0,5 t (Annahme A-G-MENGE, t Au) × 123.917.014,962 US$ je t Au (3.854,25 US$/oz tr × 32.150,75 oz tr je t (einheit.py), Handelstag 2026-11-17) = 62 Mio. US$ ÷ EZB-Referenzkurs vom 2026-11-16: 1,1014 US$ je €",
+    "text": "≈ 56,3 Mio. € pro Jahr"
    }
   }
  ],
@@ -4595,6 +4600,7 @@
   "verbindungen": 5,
   "verbindungen_auf_globus": 5,
   "verbindungen_freigegeben": 5,
+  "werte_abgeleitet": 0,
   "werte_belegt": 2,
   "werte_in_euro": 2,
   "werte_mit_annahmen": 5

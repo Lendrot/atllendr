@@ -136,12 +136,12 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -198,8 +198,87 @@
     "S11"
    ],
    "tonnen": {
-    "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "evidenz": "ABGELEITET",
+    "grund": "Weitere 5 Bögen an diesem Glied ohne Menge: V1, V2, V7, V8, V10; die tatsächliche Menge kann größer sein.",
+    "hinweis": "Mengen verschiedener Waren oder Zeitbasen werden nicht addiert. Weitere 5 Bögen an diesem Glied ohne Menge: V1, V2, V7, V8, V10; die tatsächliche Menge kann größer sein.",
+    "ohne_menge": [
+     "V1",
+     "V2",
+     "V7",
+     "V8",
+     "V10"
+    ],
+    "posten": [
+     {
+      "art": "summe",
+      "eingaenge": [
+       {
+        "einheit": "t",
+        "freigabe": "FREIGEGEBEN",
+        "hoch": 1,
+        "name": "V3 Balama → Vidalia Active Anode Material Facility",
+        "quelle": "9.000 t (geliefert)",
+        "ref": "flow:GRF-03",
+        "wert": 9000.0
+       }
+      ],
+      "einheit": "t",
+      "ergebnis": [
+       9000.0
+      ],
+      "evidenz": "ABGELEITET",
+      "formel": "9.000 t",
+      "hinweis": "Menge laut Quelle je Bogen (Lieferung, Vertrag oder Kapazität wie dort angegeben); keine Lieferbestätigung.",
+      "pro_jahr": false,
+      "rechenweg": "belegte Menge des einzigen Bogens mit Tonnen in dieser Gruppe: 9.000 t (V3)",
+      "t": 9000.0,
+      "text": "9.000 t Naturgraphit (Ausgangsstoff fuer aktives Anodenmaterial) im genannten Zeitraum",
+      "verbindungen": [
+       "V3"
+      ],
+      "ware": "Naturgraphit (Ausgangsstoff fuer aktives Anodenmaterial)"
+     },
+     {
+      "art": "summe",
+      "eingaenge": [
+       {
+        "einheit": "t",
+        "freigabe": "FREIGEGEBEN",
+        "hoch": 1,
+        "name": "V4 Balama → POSCO Future M",
+        "quelle": "60.000 t/a (bis zu)",
+        "ref": "flow:GRF-04",
+        "wert": 60000.0
+       },
+       {
+        "einheit": "t",
+        "freigabe": "FREIGEGEBEN",
+        "hoch": 1,
+        "name": "V9 Balama → NextSource Materials",
+        "quelle": "68.000 t gesamt (7 Jahre) (bis zu)",
+        "ref": "flow:GRF-09",
+        "wert": 9714.286
+       }
+      ],
+      "einheit": "t",
+      "ergebnis": [
+       69714.286
+      ],
+      "evidenz": "ABGELEITET",
+      "formel": "60.000 + 9.714,286 t",
+      "hinweis": "Menge laut Quelle je Bogen (Lieferung, Vertrag oder Kapazität wie dort angegeben); keine Lieferbestätigung.",
+      "pro_jahr": true,
+      "rechenweg": "Summe getrennter Bögen gleicher Art (Abnahmevertrag) zu verschiedenen Gegenstellen: 60.000 t (V4) + 9.714 t (V9)",
+      "t": 69714.286,
+      "text": "69.714 t Naturgraphit (Feinflocken) pro Jahr",
+      "verbindungen": [
+       "V4",
+       "V9"
+      ],
+      "ware": "Naturgraphit (Feinflocken)"
+     }
+    ],
+    "text": "betroffen 9.000 t Naturgraphit (Ausgangsstoff fuer aktives Anodenmaterial) im genannten Zeitraum; 69.714 t Naturgraphit (Feinflocken) pro Jahr"
    },
    "verbindungen_weg": [
     "V1",
@@ -230,13 +309,67 @@
       "name": "Tesla",
       "richtung": "ABFLUSS",
       "verbindung": "V5"
+     },
+     {
+      "art": "STANDORT",
+      "freigabe": "FREIGEGEBEN",
+      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-17 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+      "fuer": "S10",
+      "glied": null,
+      "hinweis": "Anderer Hersteller von Anodenmaterial (BTR, Tochter von China Baoan); eine Lieferbeziehung zu Tesla oder Lucid ist nicht belegt. Lage: GLEIF meldet den Sitz der Tochter PT Indonesia BTR New Energy Material im Industriepark Kendal (Bezirk Kaliwungu). Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt. Ob das Material natürlichen oder synthetischen Graphit enthält, nennt die Quelle nicht.",
+      "id": "AW-GR-BTR-INDONESIEN",
+      "lage": null,
+      "land": "ID",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": null,
+       "text": "Kapazität 16 万吨 (160.000 t) Anodenmaterial gesamt am Standort Indonesien, Stand 2025 (Jahresbericht China Baoan 2025)"
+      },
+      "name": "Anodenwerke der BTR-Gruppe in Indonesien",
+      "quelle": {
+       "fundstelle": "PDF-Seite 13 (pdftotext -layout)",
+       "herausgeber": "China Baoan Group Co., Ltd. (中国宝安集团股份有限公司)",
+       "titel": "2025 年年度报告全文 (Jahresbericht 2025, SZSE 000009), Lagebericht BTR",
+       "url": "https://static.cninfo.com.cn/finalpage/2026-04-25/1225191885.PDF#page=13",
+       "zitat": "印尼基地已形成 16 万吨负极材料总产能"
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     },
+     {
+      "art": "STANDORT",
+      "freigabe": "FREIGEGEBEN",
+      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-17 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+      "fuer": "S10",
+      "glied": null,
+      "hinweis": "Anderer Hersteller von Anodenmaterial (künstlicher Graphit); eine Lieferbeziehung zu Tesla oder Lucid ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt. Künstlicher statt natürlicher Graphit: Ersatz setzt eine Freigabe des Abnehmers voraus.",
+      "id": "AW-GR-SHANGTAI-BEISU",
+      "lage": null,
+      "land": "CN",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": null,
+       "text": "Kapazität 10 万吨 (100.000 t) Anodenmaterial pro Jahr, Ausbaustufe Beisu II, 2025 voll ausgelastet (Jahresbericht Shangtai 2025)"
+      },
+      "name": "Anodenwerk Beisu (Wuji, Shijiazhuang, China), Shangtai Technology",
+      "quelle": {
+       "fundstelle": "PDF-Seiten 7 und 25 (pdftotext -layout, in einer Textkopie)",
+       "herausgeber": "Shijiazhuang Shangtai Technology Co., Ltd. (石家庄尚太科技股份有限公司)",
+       "titel": "2025 年年度报告全文 (Jahresbericht 2025, SZSE 001301), Begriffe und Lagebericht",
+       "url": "https://static.cninfo.com.cn/finalpage/2026-04-22/1225138388.PDF#page=25",
+       "zitat": "公司位于石家庄无极县北苏镇正在建 … 北苏二期 10 万吨产能已实现满"
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
      }
     ],
-    "mit_menge": 0
+    "mit_menge": 2
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [
     {
@@ -249,7 +382,7 @@
    ],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -262,7 +395,7 @@
    "ohne_zufluss": [],
    "tonnen": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "grund": "Kein Bogen an diesem Glied hat eine freigegebene Menge in Tonnen. Ohne Menge: 1 von 1 Bögen."
    },
    "verbindungen_weg": [
     "V6"
@@ -286,13 +419,67 @@
       "name": "Lucid Group",
       "richtung": "ABFLUSS",
       "verbindung": "V6"
+     },
+     {
+      "art": "STANDORT",
+      "freigabe": "FREIGEGEBEN",
+      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-17 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+      "fuer": "S11",
+      "glied": null,
+      "hinweis": "Anderer Hersteller von Anodenmaterial (BTR, Tochter von China Baoan); eine Lieferbeziehung zu Tesla oder Lucid ist nicht belegt. Lage: GLEIF meldet den Sitz der Tochter PT Indonesia BTR New Energy Material im Industriepark Kendal (Bezirk Kaliwungu). Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt. Ob das Material natürlichen oder synthetischen Graphit enthält, nennt die Quelle nicht.",
+      "id": "AW-GR-BTR-INDONESIEN",
+      "lage": null,
+      "land": "ID",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": null,
+       "text": "Kapazität 16 万吨 (160.000 t) Anodenmaterial gesamt am Standort Indonesien, Stand 2025 (Jahresbericht China Baoan 2025)"
+      },
+      "name": "Anodenwerke der BTR-Gruppe in Indonesien",
+      "quelle": {
+       "fundstelle": "PDF-Seite 13 (pdftotext -layout)",
+       "herausgeber": "China Baoan Group Co., Ltd. (中国宝安集团股份有限公司)",
+       "titel": "2025 年年度报告全文 (Jahresbericht 2025, SZSE 000009), Lagebericht BTR",
+       "url": "https://static.cninfo.com.cn/finalpage/2026-04-25/1225191885.PDF#page=13",
+       "zitat": "印尼基地已形成 16 万吨负极材料总产能"
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     },
+     {
+      "art": "STANDORT",
+      "freigabe": "FREIGEGEBEN",
+      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-17 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+      "fuer": "S11",
+      "glied": null,
+      "hinweis": "Anderer Hersteller von Anodenmaterial (künstlicher Graphit); eine Lieferbeziehung zu Tesla oder Lucid ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt. Künstlicher statt natürlicher Graphit: Ersatz setzt eine Freigabe des Abnehmers voraus.",
+      "id": "AW-GR-SHANGTAI-BEISU",
+      "lage": null,
+      "land": "CN",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": null,
+       "text": "Kapazität 10 万吨 (100.000 t) Anodenmaterial pro Jahr, Ausbaustufe Beisu II, 2025 voll ausgelastet (Jahresbericht Shangtai 2025)"
+      },
+      "name": "Anodenwerk Beisu (Wuji, Shijiazhuang, China), Shangtai Technology",
+      "quelle": {
+       "fundstelle": "PDF-Seiten 7 und 25 (pdftotext -layout, in einer Textkopie)",
+       "herausgeber": "Shijiazhuang Shangtai Technology Co., Ltd. (石家庄尚太科技股份有限公司)",
+       "titel": "2025 年年度报告全文 (Jahresbericht 2025, SZSE 001301), Begriffe und Lagebericht",
+       "url": "https://static.cninfo.com.cn/finalpage/2026-04-22/1225138388.PDF#page=25",
+       "zitat": "公司位于石家庄无极县北苏镇正在建 … 北苏二期 10 万吨产能已实现满"
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
      }
     ],
-    "mit_menge": 0
+    "mit_menge": 2
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [
     {
@@ -305,7 +492,7 @@
    ],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -318,7 +505,7 @@
    "ohne_zufluss": [],
    "tonnen": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "grund": "Kein Bogen an diesem Glied hat eine freigegebene Menge in Tonnen. Ohne Menge: 1 von 1 Bögen."
    },
    "verbindungen_weg": [
     "V5"
@@ -438,7 +625,7 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [
     {
@@ -457,7 +644,7 @@
    ],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -470,7 +657,7 @@
    "ohne_zufluss": [],
    "tonnen": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "grund": "Kein Bogen an diesem Glied hat eine freigegebene Menge in Tonnen. Ohne Menge: 1 von 1 Bögen."
    },
    "verbindungen_weg": [
     "V10"
@@ -590,7 +777,7 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [
     {
@@ -609,7 +796,7 @@
    ],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -622,7 +809,7 @@
    "ohne_zufluss": [],
    "tonnen": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "grund": "Kein Bogen an diesem Glied hat eine freigegebene Menge in Tonnen. Ohne Menge: 1 von 1 Bögen."
    },
    "verbindungen_weg": [
     "V8"
@@ -742,7 +929,7 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [
     {
@@ -761,7 +948,7 @@
    ],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -774,7 +961,7 @@
    "ohne_zufluss": [],
    "tonnen": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "grund": "Kein Bogen an diesem Glied hat eine freigegebene Menge in Tonnen. Ohne Menge: 1 von 1 Bögen."
    },
    "verbindungen_weg": [
     "V2"
@@ -894,7 +1081,7 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [
     {
@@ -913,7 +1100,7 @@
    ],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -926,7 +1113,7 @@
    "ohne_zufluss": [],
    "tonnen": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "grund": "Kein Bogen an diesem Glied hat eine freigegebene Menge in Tonnen. Ohne Menge: 1 von 1 Bögen."
    },
    "verbindungen_weg": [
     "V1"
@@ -1046,7 +1233,7 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [
     {
@@ -1065,7 +1252,7 @@
    ],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -1077,8 +1264,42 @@
    "ohne_abfluss": [],
    "ohne_zufluss": [],
    "tonnen": {
-    "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "evidenz": "ABGELEITET",
+    "grund": null,
+    "hinweis": "Mengen verschiedener Waren oder Zeitbasen werden nicht addiert.",
+    "ohne_menge": [],
+    "posten": [
+     {
+      "art": "summe",
+      "eingaenge": [
+       {
+        "einheit": "t",
+        "freigabe": "FREIGEGEBEN",
+        "hoch": 1,
+        "name": "V9 Balama → NextSource Materials",
+        "quelle": "68.000 t gesamt (7 Jahre) (bis zu)",
+        "ref": "flow:GRF-09",
+        "wert": 9714.286
+       }
+      ],
+      "einheit": "t",
+      "ergebnis": [
+       9714.286
+      ],
+      "evidenz": "ABGELEITET",
+      "formel": "9.714,286 t",
+      "hinweis": "Menge laut Quelle je Bogen (Lieferung, Vertrag oder Kapazität wie dort angegeben); keine Lieferbestätigung.",
+      "pro_jahr": true,
+      "rechenweg": "belegte Menge des einzigen Bogens mit Tonnen in dieser Gruppe: 9.714 t (V9)",
+      "t": 9714.286,
+      "text": "9.714 t Naturgraphit aus Balama pro Jahr",
+      "verbindungen": [
+       "V9"
+      ],
+      "ware": "Naturgraphit aus Balama"
+     }
+    ],
+    "text": "betroffen 9.714 t Naturgraphit aus Balama pro Jahr"
    },
    "verbindungen_weg": [
     "V9"
@@ -1198,7 +1419,7 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [
     {
@@ -1217,7 +1438,7 @@
    ],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -1229,8 +1450,42 @@
    "ohne_abfluss": [],
    "ohne_zufluss": [],
    "tonnen": {
-    "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "evidenz": "ABGELEITET",
+    "grund": null,
+    "hinweis": "Mengen verschiedener Waren oder Zeitbasen werden nicht addiert.",
+    "ohne_menge": [],
+    "posten": [
+     {
+      "art": "summe",
+      "eingaenge": [
+       {
+        "einheit": "t",
+        "freigabe": "FREIGEGEBEN",
+        "hoch": 1,
+        "name": "V4 Balama → POSCO Future M",
+        "quelle": "60.000 t/a (bis zu)",
+        "ref": "flow:GRF-04",
+        "wert": 60000.0
+       }
+      ],
+      "einheit": "t",
+      "ergebnis": [
+       60000.0
+      ],
+      "evidenz": "ABGELEITET",
+      "formel": "60.000 t",
+      "hinweis": "Menge laut Quelle je Bogen (Lieferung, Vertrag oder Kapazität wie dort angegeben); keine Lieferbestätigung.",
+      "pro_jahr": true,
+      "rechenweg": "belegte Menge des einzigen Bogens mit Tonnen in dieser Gruppe: 60.000 t (V4)",
+      "t": 60000.0,
+      "text": "60.000 t Naturgraphit (Feinflocken) pro Jahr",
+      "verbindungen": [
+       "V4"
+      ],
+      "ware": "Naturgraphit (Feinflocken)"
+     }
+    ],
+    "text": "betroffen 60.000 t Naturgraphit (Feinflocken) pro Jahr"
    },
    "verbindungen_weg": [
     "V4"
@@ -1344,13 +1599,67 @@
       "name": "Westwater Resources",
       "richtung": "ABFLUSS",
       "verbindung": "V7"
+     },
+     {
+      "art": "STANDORT",
+      "freigabe": "FREIGEGEBEN",
+      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-17 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+      "fuer": "S8",
+      "glied": null,
+      "hinweis": "Anderer Hersteller von Anodenmaterial (BTR, Tochter von China Baoan); eine Lieferbeziehung zu Tesla oder Lucid ist nicht belegt. Lage: GLEIF meldet den Sitz der Tochter PT Indonesia BTR New Energy Material im Industriepark Kendal (Bezirk Kaliwungu). Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt. Ob das Material natürlichen oder synthetischen Graphit enthält, nennt die Quelle nicht.",
+      "id": "AW-GR-BTR-INDONESIEN",
+      "lage": null,
+      "land": "ID",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": null,
+       "text": "Kapazität 16 万吨 (160.000 t) Anodenmaterial gesamt am Standort Indonesien, Stand 2025 (Jahresbericht China Baoan 2025)"
+      },
+      "name": "Anodenwerke der BTR-Gruppe in Indonesien",
+      "quelle": {
+       "fundstelle": "PDF-Seite 13 (pdftotext -layout)",
+       "herausgeber": "China Baoan Group Co., Ltd. (中国宝安集团股份有限公司)",
+       "titel": "2025 年年度报告全文 (Jahresbericht 2025, SZSE 000009), Lagebericht BTR",
+       "url": "https://static.cninfo.com.cn/finalpage/2026-04-25/1225191885.PDF#page=13",
+       "zitat": "印尼基地已形成 16 万吨负极材料总产能"
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     },
+     {
+      "art": "STANDORT",
+      "freigabe": "FREIGEGEBEN",
+      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-17 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+      "fuer": "S8",
+      "glied": null,
+      "hinweis": "Anderer Hersteller von Anodenmaterial (künstlicher Graphit); eine Lieferbeziehung zu Tesla oder Lucid ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt. Künstlicher statt natürlicher Graphit: Ersatz setzt eine Freigabe des Abnehmers voraus.",
+      "id": "AW-GR-SHANGTAI-BEISU",
+      "lage": null,
+      "land": "CN",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": null,
+       "text": "Kapazität 10 万吨 (100.000 t) Anodenmaterial pro Jahr, Ausbaustufe Beisu II, 2025 voll ausgelastet (Jahresbericht Shangtai 2025)"
+      },
+      "name": "Anodenwerk Beisu (Wuji, Shijiazhuang, China), Shangtai Technology",
+      "quelle": {
+       "fundstelle": "PDF-Seiten 7 und 25 (pdftotext -layout, in einer Textkopie)",
+       "herausgeber": "Shijiazhuang Shangtai Technology Co., Ltd. (石家庄尚太科技股份有限公司)",
+       "titel": "2025 年年度报告全文 (Jahresbericht 2025, SZSE 001301), Begriffe und Lagebericht",
+       "url": "https://static.cninfo.com.cn/finalpage/2026-04-22/1225138388.PDF#page=25",
+       "zitat": "公司位于石家庄无极县北苏镇正在建 … 北苏二期 10 万吨产能已实现满"
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
      }
     ],
-    "mit_menge": 3
+    "mit_menge": 5
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [
     {
@@ -1369,7 +1678,7 @@
    ],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -1394,8 +1703,45 @@
     "S11"
    ],
    "tonnen": {
-    "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "evidenz": "ABGELEITET",
+    "grund": "Weitere 2 Bögen an diesem Glied ohne Menge: V5, V6; die tatsächliche Menge kann größer sein.",
+    "hinweis": "Mengen verschiedener Waren oder Zeitbasen werden nicht addiert. Weitere 2 Bögen an diesem Glied ohne Menge: V5, V6; die tatsächliche Menge kann größer sein.",
+    "ohne_menge": [
+     "V5",
+     "V6"
+    ],
+    "posten": [
+     {
+      "art": "summe",
+      "eingaenge": [
+       {
+        "einheit": "t",
+        "freigabe": "FREIGEGEBEN",
+        "hoch": 1,
+        "name": "V3 Balama → Vidalia Active Anode Material Facility",
+        "quelle": "9.000 t (geliefert)",
+        "ref": "flow:GRF-03",
+        "wert": 9000.0
+       }
+      ],
+      "einheit": "t",
+      "ergebnis": [
+       9000.0
+      ],
+      "evidenz": "ABGELEITET",
+      "formel": "9.000 t",
+      "hinweis": "Menge laut Quelle je Bogen (Lieferung, Vertrag oder Kapazität wie dort angegeben); keine Lieferbestätigung.",
+      "pro_jahr": false,
+      "rechenweg": "belegte Menge des einzigen Bogens mit Tonnen in dieser Gruppe: 9.000 t (V3)",
+      "t": 9000.0,
+      "text": "9.000 t Naturgraphit (Ausgangsstoff fuer aktives Anodenmaterial) im genannten Zeitraum",
+      "verbindungen": [
+       "V3"
+      ],
+      "ware": "Naturgraphit (Ausgangsstoff fuer aktives Anodenmaterial)"
+     }
+    ],
+    "text": "betroffen 9.000 t Naturgraphit (Ausgangsstoff fuer aktives Anodenmaterial) im genannten Zeitraum"
    },
    "verbindungen_weg": [
     "V3",
@@ -1517,7 +1863,7 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine belegte Wiederanlaufzeit."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
    "ersatz": [
     {
@@ -1536,7 +1882,7 @@
    ],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein belegter Ersatzpreis oder Aufschlag."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
    },
    "mengen": [
     {
@@ -1549,7 +1895,7 @@
    "ohne_zufluss": [],
    "tonnen": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine Summe: Mengen der Bögen haben verschiedene Zeiträume und Arten (geliefert, Vertrag, Obergrenze)."
+    "grund": "Kein Bogen an diesem Glied hat eine freigegebene Menge in Tonnen. Ohne Menge: 1 von 1 Bögen."
    },
    "verbindungen_weg": [
     "V7"
@@ -1647,24 +1993,34 @@
     "baum": {
      "effektiv": 100.0,
      "kante": null,
-     "kinder": [],
+     "kinder": [
+      {
+       "effektiv": 66.22,
+       "kante": "EK-CHINA-BAOAN-BTR",
+       "kinder": [],
+       "knoten": "R-CHINA-BAOAN",
+       "pflicht": true,
+       "schluss": "OBERSTE",
+       "schluss_text": "oberste Gesellschaft"
+      }
+     ],
      "knoten": "R-BTR",
      "pflicht": true,
-     "schluss": "OFFEN",
-     "schluss_text": "endet ohne Beleg"
+     "schluss": "GESCHLOSSEN",
+     "schluss_text": "Eigentümer belegt"
     },
-    "belegt": false,
+    "belegt": true,
     "betreiber": null,
     "bezug": "IST",
     "bezug_belege": [],
     "bezug_freigabe": null,
     "bezug_herkunft": null,
     "bezug_text": "Das Glied ist diese Gesellschaft bzw. dieser Standort",
-    "ebenen": 0,
+    "ebenen": 1,
     "einschraenkung": null,
     "grund": null,
-    "status": "OFFEN",
-    "status_text": "Kette endet ohne Beleg",
+    "status": "VOLLSTAENDIG_FREIGEGEBEN",
+    "status_text": "bis oben belegt und freigegeben",
     "wurzel": "R-BTR"
    },
    "S3": {
@@ -1674,10 +2030,10 @@
      "kinder": [],
      "knoten": "R-GRAPHEX",
      "pflicht": true,
-     "schluss": "OFFEN",
-     "schluss_text": "endet ohne Beleg"
+     "schluss": "OBERSTE",
+     "schluss_text": "oberste Gesellschaft"
     },
-    "belegt": false,
+    "belegt": true,
     "betreiber": null,
     "bezug": "IST",
     "bezug_belege": [],
@@ -1687,8 +2043,8 @@
     "ebenen": 0,
     "einschraenkung": null,
     "grund": null,
-    "status": "OFFEN",
-    "status_text": "Kette endet ohne Beleg",
+    "status": "VOLLSTAENDIG_KANDIDAT",
+    "status_text": "bis oben belegt (Kandidat, Zweitprüfung offen)",
     "wurzel": "R-GRAPHEX"
    },
    "S4": {
@@ -1827,7 +2183,32 @@
     "wurzel": "R-WESTWATER"
    }
   },
-  "kanten": [],
+  "kanten": [
+   {
+    "an": "R-BTR",
+    "anteil": 66.22,
+    "atlas_id": null,
+    "beherrschend": true,
+    "belege": [
+     {
+      "fundstelle": "PDF-Seite 189 (pdftotext -layout)",
+      "quelle": "rk-baoan-ar-2025-s189",
+      "rolle": "hauptbeleg",
+      "zitat": "贝特瑞新材料集团 新材料开 深圳 112,733.86 深圳 23.67 42.55 66.22 控制合"
+     }
+    ],
+    "einschraenkung": null,
+    "evidenz": "FACT",
+    "freigabe": "FREIGEGEBEN",
+    "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-17 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+    "id": "EK-CHINA-BAOAN-BTR",
+    "mass": "STIMMRECHTE",
+    "mass_text": "Stimmrechte",
+    "stand": "2025-12-31",
+    "text": "direkt 23,67 %, indirekt 42,55 %, Stimmrechte 66,22 % (Tabelle Tochtergesellschaften China Baoan)",
+    "von": "R-CHINA-BAOAN"
+   }
+  ],
   "knoten": {
    "R-BTR": {
     "art": "GESELLSCHAFT",
@@ -1839,7 +2220,38 @@
     "lei": null,
     "name": "BTR New Materials Group Co Ltd",
     "oberste": null,
-    "offen": "Keine gelesene Quelle zu Eigentümern; Firmenseiten und Register sind aus der Cloud gesperrt oder ohne Eintrag."
+    "offen": null
+   },
+   "R-CHINA-BAOAN": {
+    "art": "GESELLSCHAFT",
+    "art_text": "Gesellschaft",
+    "atlas_id": null,
+    "belege": [],
+    "hinweis": null,
+    "land": "CN",
+    "lei": null,
+    "name": "China Baoan Group Co., Ltd. (中国宝安集团股份有限公司)",
+    "oberste": {
+     "belege": [
+      {
+       "fundstelle": "PDF-Seite 34 (pdftotext -layout)",
+       "quelle": "rk-baoan-ar-2025-s034",
+       "rolle": "hauptbeleg",
+       "zitat": "本集团无控股股东和实际控制人。"
+      },
+      {
+       "fundstelle": "PDF-Seite 56 (pdftotext -layout)",
+       "quelle": "rk-baoan-ar-2025-s056",
+       "rolle": "zusatzbeleg",
+       "zitat": "控股股东性质：无控股主体 … 实际控制人性质：无实际控制人"
+      }
+     ],
+     "freigabe": "FREIGEGEBEN",
+     "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-17 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+     "grund": "KEINE_MUTTER",
+     "text": "Laut Jahresbericht 2025 hat China Baoan keinen beherrschenden Gesellschafter und keinen tatsächlichen Kontrolleur. Größte Aktionäre zum 31.12.2025: Shenzhen Chengxing Investment mit verbundener Partei 19,95 %, Shaoguan Gaochuang 18,00 %."
+    },
+    "offen": null
    },
    "R-GRAPHEX": {
     "art": "GESELLSCHAFT",
@@ -1850,8 +2262,27 @@
     "land": "KY",
     "lei": null,
     "name": "Graphex Group Limited",
-    "oberste": null,
-    "offen": "Börsennotiert; der LEI-Eintrag ist abgelaufen (LAPSED) und keine gelesene Quelle nennt eine beherrschende Mutter oder belegt, dass es keine gibt."
+    "oberste": {
+     "belege": [
+      {
+       "fundstelle": "PDF-Seite 57 (pdftotext -layout)",
+       "quelle": "rk-gx-ar-2025-s057",
+       "rolle": "hauptbeleg",
+       "zitat": "Substantial shareholders’ interests and short positions in shares and underlying shares … Justin Yu Beneficial owner 92,500,000 9.83%"
+      },
+      {
+       "fundstelle": "PDF-Seite 56 (pdftotext -layout)",
+       "quelle": "rk-gx-ar-2025-s056",
+       "rolle": "zusatzbeleg",
+       "zitat": "Chan Yick Yan Andross Beneficial owner, … 34,722,177 3.69% … 28,945,089 3.07% … 136,000 0.01%"
+      }
+     ],
+     "freigabe": "KANDIDAT",
+     "freigabe_herkunft": "Zweitprüfung ABWEICHUNG 2026-11-17: Direktoren 3.69%, 3.07%, 0.01% und Justin Yu 9.83% stehen in den Quellen. Dass er der einzige gemeldete Aktionaer ist und niemand mit 10 % oder mehr gemeldet ist, sagt keine Quelle ausdruecklich; die Tabelle der Substantial Shareholders endet auf s057 mit Justin Yu ohne Aussage zur Vollstaendigkeit.",
+     "grund": "KEINE_MUTTER",
+     "text": "Im Aktionärsregister nach SFO Teil XV ist zum 31.12.2025 neben den Direktoren nur Justin Yu mit 9,83 % gemeldet; die Direktoren halten 3,69 %, 3,07 % und 0,01 %. Ein Aktionär mit 10 % oder mehr ist nicht gemeldet."
+    },
+    "offen": null
    },
    "R-LUCID": {
     "art": "GESELLSCHAFT",
@@ -1966,7 +2397,7 @@
   },
   "messung": {
    "glieder": 11,
-   "glieder_eigentum_belegt": 4,
+   "glieder_eigentum_belegt": 6,
    "glieder_unbekannt_mit_grund": 2,
    "je_glied": {
     "S1": {
@@ -1982,12 +2413,12 @@
      "status": "VOLLSTAENDIG_FREIGEGEBEN"
     },
     "S2": {
-     "ebenen": 0,
-     "status": "OFFEN"
+     "ebenen": 1,
+     "status": "VOLLSTAENDIG_FREIGEGEBEN"
     },
     "S3": {
      "ebenen": 0,
-     "status": "OFFEN"
+     "status": "VOLLSTAENDIG_KANDIDAT"
     },
     "S4": {
      "ebenen": 0,
@@ -2014,20 +2445,20 @@
      "status": "OFFEN"
     }
    },
-   "kanten": 0,
-   "kanten_freigegeben": 0,
+   "kanten": 1,
+   "kanten_freigegeben": 1,
    "kanten_kandidat": 0,
-   "kanten_mit_anteil": 0,
-   "knoten": 8,
+   "kanten_mit_anteil": 1,
+   "knoten": 9,
    "letzte_eigentuemer": [],
    "oberste_gesellschaften": [
+    "China Baoan Group Co., Ltd. (中国宝安集团股份有限公司)",
+    "Graphex Group Limited",
     "Lucid Group, Inc.",
     "Tesla, Inc."
    ],
-   "offen": 7,
+   "offen": 5,
    "offene_knoten": [
-    "BTR New Materials Group Co Ltd",
-    "Graphex Group Limited",
     "NextSource Materials Inc.",
     "POSCO Future M Co., Ltd.",
     "Syrah Resources Limited",
@@ -2035,12 +2466,42 @@
    ],
    "schwelle_prozent": 10.0,
    "unbekannt": 2,
-   "vollstaendig": 2,
-   "vollstaendig_freigegeben": 2,
-   "vollstaendig_kandidat": 0,
-   "zweitpruefung_offen": 0
+   "vollstaendig": 4,
+   "vollstaendig_freigegeben": 3,
+   "vollstaendig_kandidat": 1,
+   "zweitpruefung_offen": 1
   },
   "quellen": {
+   "rk-baoan-ar-2025-s034": {
+    "abgerufen": "2026-11-17",
+    "art": "COMPANY_PRIMARY",
+    "fundstelle": "PDF-Seite 34 (pdftotext -layout)",
+    "herausgeber": "China Baoan Group Co., Ltd. (中国宝安集团股份有限公司)",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/baoan-ar-2025-p034.txt",
+    "text_artifact_sha256": "6e903c3be798c04b86d50b8c641a41b76c81c69c71feeae6c0e0f877eade785c",
+    "titel": "2025 年年度报告全文 (Jahresbericht 2025, SZSE 000009), Unabhängigkeit gegenüber Großaktionären",
+    "url": "https://static.cninfo.com.cn/finalpage/2026-04-25/1225191885.PDF#page=34"
+   },
+   "rk-baoan-ar-2025-s056": {
+    "abgerufen": "2026-11-17",
+    "art": "COMPANY_PRIMARY",
+    "fundstelle": "PDF-Seite 56 (pdftotext -layout)",
+    "herausgeber": "China Baoan Group Co., Ltd. (中国宝安集团股份有限公司)",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/baoan-ar-2025-p056.txt",
+    "text_artifact_sha256": "1f522d028622f437948b241068c8fe4c1061cf51a4f853e7d69c044f8aa9abda",
+    "titel": "2025 年年度报告全文 (Jahresbericht 2025, SZSE 000009), Aktionäre und tatsächlicher Kontrolleur",
+    "url": "https://static.cninfo.com.cn/finalpage/2026-04-25/1225191885.PDF#page=56"
+   },
+   "rk-baoan-ar-2025-s189": {
+    "abgerufen": "2026-11-17",
+    "art": "COMPANY_PRIMARY",
+    "fundstelle": "PDF-Seite 189 (pdftotext -layout)",
+    "herausgeber": "China Baoan Group Co., Ltd. (中国宝安集团股份有限公司)",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/baoan-ar-2025-p189.txt",
+    "text_artifact_sha256": "e33bc556f400107298ad29f5c32167f9b75550971c38fd17757cd2c725f2cfbc",
+    "titel": "2025 年年度报告全文 (Jahresbericht 2025, SZSE 000009), Anhang: wesentliche Tochtergesellschaften",
+    "url": "https://static.cninfo.com.cn/finalpage/2026-04-25/1225191885.PDF#page=189"
+   },
    "rk-gleif-529900MRL9Z13ZCRVD74": {
     "abgerufen": "2026-11-16",
     "art": "REGISTER",
@@ -2080,6 +2541,26 @@
     "text_artifact_sha256": "af59ccdd3533c7776e77b763ac50349fc904d9ab2e1d9d27d4991a82ebfbfcdd",
     "titel": "Level-2 oberste Mutter 54930043XZGB27CTOV49",
     "url": "https://api.gleif.org/api/v1/lei-records/54930043XZGB27CTOV49/ultimate-parent-reporting-exception"
+   },
+   "rk-gx-ar-2025-s056": {
+    "abgerufen": "2026-11-17",
+    "art": "COMPANY_PRIMARY",
+    "fundstelle": "PDF-Seite 56 (pdftotext -layout)",
+    "herausgeber": "Graphex Group Limited",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/graphex-ar-2025-p056.txt",
+    "text_artifact_sha256": "c83712720dd25e3b132c7326c90b5ebd9f6eef894f1a93b2102514f76c94b2b8",
+    "titel": "Annual Report 2025 (HKEX 06128), Report of the Directors: Directors’ interests",
+    "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0430/2026043000565.pdf#page=56"
+   },
+   "rk-gx-ar-2025-s057": {
+    "abgerufen": "2026-11-17",
+    "art": "COMPANY_PRIMARY",
+    "fundstelle": "PDF-Seite 57 (pdftotext -layout)",
+    "herausgeber": "Graphex Group Limited",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/graphex-ar-2025-p057.txt",
+    "text_artifact_sha256": "1aed98ba8d91a69769e34fe6f33fd66295eb88cc8ccce6376d11b6391332211b",
+    "titel": "Annual Report 2025 (HKEX 06128), Report of the Directors: Substantial shareholders",
+    "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0430/2026043000565.pdf#page=57"
    },
    "rk-syr-ar-2023-s013": {
     "abgerufen": "2026-11-16",
@@ -2200,13 +2681,126 @@
     "urteil": "BESTAETIGT",
     "ziel_id": "graphit/graphit-site-legacy-row-85",
     "ziel_typ": "glied"
+   },
+   {
+    "abgleich": "",
+    "aufgabe": "Ziel oberste/R-CHINA-BAOAN. Frage: Belegt die Quelle diese Aussage über China Baoan Group Co., Ltd. (中国宝安集团股份有限公司): Laut Jahresbericht 2025 hat China Baoan keinen beherrschenden Gesellschafter und keinen tatsächlichen Kontrolleur. Größte Aktionäre zum 31.12.2025: Shenzhen Chengxing Investment mit verbundener Partei 19,95 %, Shaoguan Gaochuang 18,00 %.? Quellen: rk-baoan-ar-2025-s034 (PDF-Seite 34 (pdftotext -layout)); rk-baoan-ar-2025-s056 (PDF-Seite 56 (pdftotext -layout)).",
+    "aussage": "Belegt die Quelle diese Aussage über China Baoan Group Co., Ltd. (中国宝安集团股份有限公司): Laut Jahresbericht 2025 hat China Baoan keinen beherrschenden Gesellschafter und keinen tatsächlichen Kontrolleur. Größte Aktionäre zum 31.12.2025: Shenzhen Chengxing Investment mit verbundener Partei 19,95 %, Shaoguan Gaochuang 18,00 %.?",
+    "belege": [
+     {
+      "quelle": "rk-baoan-ar-2025-s034",
+      "zitat": [
+       "本集团无控股股东和实际控制人。截至 2025 年 12 月 31 日，公司第一大股东深圳市承兴投资有限公司及其一致行动",
+       "人深圳市鲲鹏新产业投资有限公司合计持有本集团股份总数的 19.95%，公司第二大股东韶关市高创企业管理有限公司持",
+       "有本集团股份总数的 18.00%。"
+      ]
+     }
+    ],
+    "blind": true,
+    "erstmodell": "claude-opus-5-5",
+    "erstpruefung_sitzung": "session_01JgcA7TdgLRrqKV9kyFuE5E",
+    "geprueft_am": "2026-11-17",
+    "hinweis": "Kein beherrschender Gesellschafter und kein Kontrolleur; 19,95 % (Chengxing mit Konzertpartei Kunpeng) und 18,00 % (Shaoguan Gaochuang) ausdruecklich genannt; s056 bestaetigt gleichlautend.",
+    "pruef_id": "AE6",
+    "pruefer": "auto-zweitpruefung (claude-sonnet-5-5, blind)",
+    "pruefmodell": "claude-sonnet-5-5",
+    "pruefweg": "subagent",
+    "quelle_frisch_geladen": false,
+    "regel": "Eddie Sablah 2026-11-16: Regel 3 automatisch, blinde Zweitprüfung durch ein zweites Modell + Programmprüfung; Stichprobe 5 Fälle/Monat bleibt",
+    "sitzung": "auto:claude-sonnet-5-5:2026-11-17",
+    "textkopie_geprueft": true,
+    "urteil": "BESTAETIGT",
+    "verfahren": "AUTO_ZWEITPRUEFUNG",
+    "wert": {
+     "einheit": "",
+     "zahl_text": ""
+    },
+    "ziel_id": "R-CHINA-BAOAN",
+    "ziel_typ": "oberste"
+   },
+   {
+    "abgleich": "",
+    "aufgabe": "Ziel oberste/R-GRAPHEX. Frage: Belegt die Quelle diese Aussage über Graphex Group Limited: Im Aktionärsregister nach SFO Teil XV ist zum 31.12.2025 neben den Direktoren nur Justin Yu mit 9,83 % gemeldet; die Direktoren halten 3,69 %, 3,07 % und 0,01 %. Ein Aktionär mit 10 % oder mehr ist nicht gemeldet.? Quellen: rk-gx-ar-2025-s056 (PDF-Seite 56 (pdftotext -layout)); rk-gx-ar-2025-s057 (PDF-Seite 57 (pdftotext -layout)).",
+    "aussage": "Belegt die Quelle diese Aussage über Graphex Group Limited: Im Aktionärsregister nach SFO Teil XV ist zum 31.12.2025 neben den Direktoren nur Justin Yu mit 9,83 % gemeldet; die Direktoren halten 3,69 %, 3,07 % und 0,01 %. Ein Aktionär mit 10 % oder mehr ist nicht gemeldet.?",
+    "belege": [
+     {
+      "quelle": "rk-gx-ar-2025-s056",
+      "zitat": [
+       "Chan Yick Yan Andross Beneficial owner, 978,800 – 33,743,3771 – – 34,722,177 3.69%",
+       "Lau Hing Tat Patrick Beneficial owner, interest of 4,744,400 – 24,200,6892 – – 28,945,089 3.07%",
+       "Qiu Bin Beneficial owner 136,000 – – – – 136,000 0.01%"
+      ]
+     },
+     {
+      "quelle": "rk-gx-ar-2025-s057",
+      "zitat": [
+       "Justin Yu Beneficial owner 92,500,000 9.83%"
+      ]
+     }
+    ],
+    "blind": true,
+    "erstmodell": "claude-opus-5-5",
+    "erstpruefung_sitzung": "session_01JgcA7TdgLRrqKV9kyFuE5E",
+    "geprueft_am": "2026-11-17",
+    "hinweis": "Direktoren 3.69%, 3.07%, 0.01% und Justin Yu 9.83% stehen in den Quellen. Dass er der einzige gemeldete Aktionaer ist und niemand mit 10 % oder mehr gemeldet ist, sagt keine Quelle ausdruecklich; die Tabelle der Substantial Shareholders endet auf s057 mit Justin Yu ohne Aussage zur Vollstaendigkeit.",
+    "pruef_id": "AE7",
+    "pruefer": "auto-zweitpruefung (claude-sonnet-5-5, blind)",
+    "pruefmodell": "claude-sonnet-5-5",
+    "pruefweg": "subagent",
+    "quelle_frisch_geladen": false,
+    "regel": "Eddie Sablah 2026-11-16: Regel 3 automatisch, blinde Zweitprüfung durch ein zweites Modell + Programmprüfung; Stichprobe 5 Fälle/Monat bleibt",
+    "sitzung": "auto:claude-sonnet-5-5:2026-11-17",
+    "textkopie_geprueft": true,
+    "urteil": "ABWEICHUNG",
+    "verfahren": "AUTO_ZWEITPRUEFUNG",
+    "wert": {
+     "einheit": "",
+     "zahl_text": ""
+    },
+    "ziel_id": "R-GRAPHEX",
+    "ziel_typ": "oberste"
+   },
+   {
+    "abgleich": "",
+    "aufgabe": "Ziel kante/EK-CHINA-BAOAN-BTR. Frage: Welchen Anteil (Stimmrechte) hält China Baoan Group Co., Ltd. (中国宝安集团股份有限公司) laut Quelle an BTR New Materials Group Co Ltd? Stand 2025-12-31. Quellen: rk-baoan-ar-2025-s189 (PDF-Seite 189 (pdftotext -layout)).",
+    "aussage": "Welchen Anteil (Stimmrechte) hält China Baoan Group Co., Ltd. (中国宝安集团股份有限公司) laut Quelle an BTR New Materials Group Co Ltd? Stand 2025-12-31.",
+    "belege": [
+     {
+      "quelle": "rk-baoan-ar-2025-s189",
+      "tabellenkopf": "持股比例(%) 表决",
+      "zitat": [
+       "深圳 112,733.86 深圳 23.67 42.55 66.22 控制合"
+      ]
+     }
+    ],
+    "blind": true,
+    "erstmodell": "claude-opus-5-5",
+    "erstpruefung_sitzung": "session_01JgcA7S1BLyBPZhExDcFF6C",
+    "geprueft_am": "2026-11-17",
+    "hinweis": "Zeile 贝特瑞新材料集团股份有限公司: direkt 23.67, indirekt 42.55, Stimmrechtsanteil 66.22 (Spalte 表决权比例(%)). Spaltenkopf im Text zerstueckelt; zitierter Kopf nur Teil davon.",
+    "pruef_id": "AE8",
+    "pruefer": "auto-zweitpruefung (claude-sonnet-5-5, blind)",
+    "pruefmodell": "claude-sonnet-5-5",
+    "pruefweg": "subagent",
+    "quelle_frisch_geladen": false,
+    "regel": "Eddie Sablah 2026-11-16: Regel 3 automatisch, blinde Zweitprüfung durch ein zweites Modell + Programmprüfung; Stichprobe 5 Fälle/Monat bleibt",
+    "sitzung": "auto:claude-sonnet-5-5:2026-11-17",
+    "textkopie_geprueft": true,
+    "urteil": "BESTAETIGT",
+    "verfahren": "AUTO_ZWEITPRUEFUNG",
+    "wert": {
+     "einheit": "%",
+     "zahl_text": "66.22"
+    },
+    "ziel_id": "EK-CHINA-BAOAN-BTR",
+    "ziel_typ": "kante"
    }
   ]
  },
  "eingaben": {
-  "analysis/rohstoffe/eigentum/eigentumskette.json": "58f2a733e79cd462062e351135d0aafb3e27494d28e47d4268dd26a0c6bd2371",
+  "analysis/rohstoffe/eigentum/eigentumskette.json": "dc4e41fa1f2e547e39408fdc7c4a07cca001c0609181a7b1a7b0a12d8ef49bb6",
   "analysis/rohstoffe/fluss-freigaben.jsonl": "7bcb03cd6f866779a996144af573a32a6723c19e37c1648f6b5dfbf2b642a149",
-  "analysis/rohstoffe/graphit/kandidaten.json": "56dd35fecbbd9f4d428ff44e58db99cf274413542c1933730f1dae7ed86403a3",
+  "analysis/rohstoffe/graphit/kandidaten.json": "82b42a882bd5a84fb26482c511e223c960d6729d3e4c5f3b495682bdfa6d109e",
   "analysis/rohstoffe/graphit/markt.json": "4278fd32ff895333b148c239d65e328c3c256f9123dcd28bbf7b32d2a540f896",
   "analysis/rohstoffe/mengen/annahmen-snapshot.json": "5169bc01abcdff017b11b6e2e0bdb0abbc934a843f86a8fbbf4dbdd3585165b1",
   "analysis/rohstoffe/mengen/mengen.json": "94e6e728b63635daef1ffe47c595cd03fd4f5644a158aa61f7605bbf497706b6",
@@ -2239,7 +2833,7 @@
   "UNKNOWN bleibt UNKNOWN mit Grund; belegter Wert nur laut Quelle, Euro mit EZB-Jahresmittel. Ein Geldbetrag ist keine Menge.",
   "Ebene „mit Annahmen“ getrennt: Menge aus dem Annahmen-Atlas (Snapshot je Fluss-ID), Wert = Menge × Preis der gelesenen Preisquelle ÷ EZB-Kurs (Tagespreis mit EZB-Tageskurs, wo eine lesbare tägliche Notierung vorliegt, sonst Jahrespreis mit EZB-Jahresmittel); zählt nie als belegt. Ausstoß und Obergrenze des liefernden Glieds werden gezeigt, zählen aber nicht als Menge der Verbindung.",
   "Eigentümer je Glied nur mit gelesener Quelle (Zitat gegen Textkopie geprüft); freigegeben erst nach Zweitprüfung einer getrennten Sitzung. Eigentümer aus der Altliste sind Kandidaten und zählen nicht als belegt.",
-  "Ausfall = Folge im erfassten Netz; Tonnen und Mehrkosten nur, wenn eine Quelle sie nennt."
+  "Ausfall = Folge im erfassten Netz; Tonnen und Mehrkosten nur abgeleitet aus freigegebenen Mengen, Werten und Preisen (Rechenweg sichtbar, nie belegt); sonst unbekannt."
  ],
  "risikoebene": {
   "kategorien": [
@@ -2573,13 +3167,13 @@
    "land": "Indonesien",
    "name": "BTR New Materials Group Co Ltd",
    "ort": {
-    "evidenz": "UNKNOWN",
-    "grund": "Keine Koordinate mit Quelle; es wird kein Ersatzpunkt gesetzt.",
-    "lat": null,
-    "lon": null,
-    "quelle": null,
-    "status": null,
-    "url": null
+    "evidenz": "BELEGT",
+    "grund": null,
+    "lat": -6.925,
+    "lon": 110.26222222222,
+    "quelle": "Koordinate: Wonorejo (Kaliwungu, Kendal) (Wikidata, Dorf), Genauigkeit HQ_CITY",
+    "status": "APPROVED (HQ_CITY)",
+    "url": "https://www.wikidata.org/wiki/Q3545984"
    },
    "risiko": [],
    "risiko_grund": "Länderanteil nur für Förderstufe",
@@ -2699,7 +3293,7 @@
          "zitat": "\"stand\":\"2026-11-10\""
         }
        ],
-       "text": "Kein Namenstreffer für BTR New Materials Group Co Ltd auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
+       "text": "Kein Namenstreffer für BTR New Materials Group Co Ltd, China Baoan Group Co., Ltd. (中国宝安集团股份有限公司) auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
       }
      ],
      "grund": null,
@@ -4147,7 +4741,7 @@
   }
  ],
  "tiefe": {
-  "belegt": 29,
+  "belegt": 32,
   "dimensionen": [
    "Eigentümer/Betreiber",
    "Standort",
@@ -4157,7 +4751,7 @@
    "Risiko"
   ],
   "gesamt": 66,
-  "mit_annahmen": 40,
+  "mit_annahmen": 43,
   "zeilen": [
    {
     "felder": {
@@ -4172,18 +4766,18 @@
    },
    {
     "felder": {
-     "Eigentümer/Betreiber": "unbekannt",
+     "Eigentümer/Betreiber": "belegt",
      "Lieferbeziehung": "belegt",
      "Menge": "unbekannt",
      "Risiko": "unbekannt",
-     "Standort": "unbekannt",
+     "Standort": "belegt",
      "Wert": "unbekannt"
     },
     "id": "S2"
    },
    {
     "felder": {
-     "Eigentümer/Betreiber": "unbekannt",
+     "Eigentümer/Betreiber": "belegt",
      "Lieferbeziehung": "belegt",
      "Menge": "unbekannt",
      "Risiko": "unbekannt",
@@ -4339,6 +4933,7 @@
     "rechnung": "",
     "text": "unbekannt"
    },
+   "wert_abgeleitet": null,
    "wert_annahme": {
     "annahme_art": "RECHNUNG",
     "eur": 8849557.522123894,
@@ -4411,6 +5006,7 @@
     "rechnung": "",
     "text": "unbekannt"
    },
+   "wert_abgeleitet": null,
    "wert_annahme": {
     "annahme_art": "RECHNUNG",
     "eur": 8849557.522123894,
@@ -4484,6 +5080,7 @@
     "rechnung": "",
     "text": "unbekannt"
    },
+   "wert_abgeleitet": null,
    "wert_annahme": {
     "annahme_art": "RECHNUNG",
     "eur": 7964601.769911505,
@@ -4543,6 +5140,7 @@
     "rechnung": "",
     "text": "unbekannt"
    },
+   "wert_abgeleitet": null,
    "wert_annahme": {
     "annahme_art": "RECHNUNG",
     "eur": 53097345.132743366,
@@ -4629,6 +5227,7 @@
     "rechnung": "",
     "text": "unbekannt"
    },
+   "wert_abgeleitet": null,
    "wert_annahme": {
     "annahme_art": "RECHNUNG",
     "eur": 4424778.761061947,
@@ -4715,6 +5314,7 @@
     "rechnung": "",
     "text": "unbekannt"
    },
+   "wert_abgeleitet": null,
    "wert_annahme": {
     "annahme_art": "RECHNUNG",
     "eur": 4424778.761061947,
@@ -4781,6 +5381,7 @@
     "rechnung": "",
     "text": "unbekannt"
    },
+   "wert_abgeleitet": null,
    "wert_annahme": {
     "evidenz": "UNKNOWN",
     "grund": "Keine Menge, auch keine Annahme.",
@@ -4830,6 +5431,7 @@
     "rechnung": "",
     "text": "unbekannt"
    },
+   "wert_abgeleitet": null,
    "wert_annahme": {
     "evidenz": "UNKNOWN",
     "grund": "Keine Menge, auch keine Annahme.",
@@ -4879,6 +5481,7 @@
     "rechnung": "",
     "text": "unbekannt"
    },
+   "wert_abgeleitet": null,
    "wert_annahme": {
     "annahme_art": "RECHNUNG",
     "eur": 8596713.274336284,
@@ -4898,7 +5501,7 @@
   {
    "art": "LIEFERUNG",
    "art_atlas": "SUPPLIES",
-   "auf_globus": false,
+   "auf_globus": true,
    "aussage": "Im Quartal 10-12/2025 verkaufte Syrah Naturgraphit im Spotgeschaeft an BTR (Werk in Indonesien); im selben Quartal gingen zwei grosse Massengut-Ladungen nach Indonesien zur AAM-Produktion. Menge an BTR: UNKNOWN.",
    "belege": [
     {
@@ -4927,7 +5530,7 @@
    "menge_annahme": null,
    "menge_bezug": [],
    "nach": "S2",
-   "stand": null,
+   "stand": "Quartal 1.10. bis 31.12.2025 (Berichtszeitraum)",
    "von": "S1",
    "ware": "Naturgraphit (Feinflocken) fuer AAM-Produktion",
    "wert": {
@@ -4938,6 +5541,7 @@
     "rechnung": "",
     "text": "unbekannt"
    },
+   "wert_abgeleitet": null,
    "wert_annahme": {
     "evidenz": "UNKNOWN",
     "grund": "Keine Menge, auch keine Annahme.",
@@ -4952,13 +5556,13 @@
   "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-graphite.pdf"
  },
  "zaehler": {
-  "ausfall_mit_ausweich_menge": 9,
+  "ausfall_mit_ausweich_menge": 11,
   "belege": 17,
-  "eigentum_belegt": 4,
+  "eigentum_belegt": 6,
   "eigentum_kandidaten": 1,
-  "eigentumskette_freigegeben": 2,
-  "eigentumskette_kanten": 0,
-  "eigentumskette_vollstaendig": 2,
+  "eigentumskette_freigegeben": 3,
+  "eigentumskette_kanten": 1,
+  "eigentumskette_vollstaendig": 4,
   "glieder_mit_ausweichquelle": 10,
   "kette_stufen": 3,
   "mengen_belegt": 4,
@@ -4970,13 +5574,14 @@
   "risikoebene_belegt": 34,
   "risikoebene_felder": 44,
   "standorte": 11,
-  "standorte_mit_ort": 8,
-  "tiefe_belegt": 29,
+  "standorte_mit_ort": 9,
+  "tiefe_belegt": 32,
   "tiefe_gesamt": 66,
-  "tiefe_mit_annahmen": 40,
+  "tiefe_mit_annahmen": 43,
   "verbindungen": 10,
-  "verbindungen_auf_globus": 7,
+  "verbindungen_auf_globus": 8,
   "verbindungen_freigegeben": 10,
+  "werte_abgeleitet": 0,
   "werte_belegt": 0,
   "werte_in_euro": 0,
   "werte_mit_annahmen": 7
