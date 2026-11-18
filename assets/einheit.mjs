@@ -116,7 +116,7 @@ export function preisEuroJeT(preis, waehrung, jeT, jahr) {
 // Masse-Schreibweisen der Quellen -> Tonnen je Einheit (wie SCHREIBWEISE/FAKTOR in einheit.py; CI vergleicht beide für jede Einheit der Daten)
 const MASSE = [['billion lb', LB_T * 1e9], ['1000 troy oz', OZ_T * 1e3], ['troy oz', OZ_T], ['oz tr', OZ_T], ['million tonnes', 1e6], ['million_tonnes', 1e6], ['万吨', 1e4],
   ['Mio. t', 1e6], ['1000 t', 1e3], ['1.000 t', 1e3], ['Mt', 1e6], ['kt', 1e3], ['kg', 1e-3], ['dmt', 1], ['lb', LB_T], ['mtu', 1e-2], ['t', 1], ['tonnes', 1], ['tonne', 1]];
-const NICHT_MASSE = /^(%|Stück$|Werke$|plants$|shipments$|Schiffsladungen\b|Ladungen zu je|Monate$|billion[ _]m3|Karat\b|UNKNOWN$|NA\b)/;
+const NICHT_MASSE = /^(%|Stück$|Werke$|plants$|shipments$|Schiffsladungen\b|Ladungen zu je|Monate$|wmt$|billion[ _]m3|Karat\b|UNKNOWN$|NA\b)/;
 const GELD_ANFANG = /^(Tsd\. |1\.?000 |Mio\. |Mrd\. )?(USD|US\$|US-\$|US-Dollar|EUR|€|RMB|CNY|AUD|A\$|CAD|INR|GBP|ZAR|CLP|JPY)(?=$|[\s/])/;
 
 /** Menge mit Einheit der Quelle -> {faktor (t je Einheit), einheit (Rest in t, z. B. "t Cu/Jahr"), bezug} oder null (keine Masse/unbekannt). */

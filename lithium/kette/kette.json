@@ -152,7 +152,7 @@
    ],
    "ohne_abfluss": [],
    "ohne_zufluss": [
-    "S17"
+    "S18"
    ],
    "tonnen": {
     "evidenz": "UNKNOWN",
@@ -168,7 +168,7 @@
     "liste": [
      {
       "art": "NETZ",
-      "fuer": "S15",
+      "fuer": "S16",
       "glied": "S4",
       "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
       "menge": {
@@ -183,7 +183,7 @@
      },
      {
       "art": "NETZ",
-      "fuer": "S15",
+      "fuer": "S16",
       "glied": "S5",
       "hinweis": null,
       "menge": {
@@ -332,7 +332,7 @@
    },
    "ersatz": [
     {
-     "fuer": "S15",
+     "fuer": "S16",
      "richtung": "ZUFLUSS",
      "weitere": [
       "S4",
@@ -365,6 +365,21 @@
    "ausweich": {
     "grund": null,
     "liste": [
+     {
+      "art": "NETZ",
+      "fuer": "S13",
+      "glied": "S8",
+      "hinweis": null,
+      "menge": {
+       "evidenz": "UNKNOWN",
+       "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+       "t": null,
+       "text": "unbekannt"
+      },
+      "name": "Kathleen Valley",
+      "richtung": "ZUFLUSS",
+      "verbindung": "V20"
+     },
      {
       "art": "LAND",
       "fuer": "S11",
@@ -499,7 +514,15 @@
     "evidenz": "UNKNOWN",
     "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
-   "ersatz": [],
+   "ersatz": [
+    {
+     "fuer": "S13",
+     "richtung": "ZUFLUSS",
+     "weitere": [
+      "S8"
+     ]
+    }
+   ],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
     "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
@@ -523,9 +546,8 @@
    ],
    "ohne_abfluss": [],
    "ohne_zufluss": [
-    "S13",
-    "S21",
-    "S22"
+    "S22",
+    "S23"
    ],
    "tonnen": {
     "evidenz": "ABGELEITET",
@@ -598,7 +620,7 @@
      {
       "art": "NETZ",
       "fuer": "S6",
-      "glied": "S18",
+      "glied": "S19",
       "hinweis": null,
       "menge": {
        "evidenz": "UNKNOWN",
@@ -613,7 +635,7 @@
      {
       "art": "NETZ",
       "fuer": "S6",
-      "glied": "S26",
+      "glied": "S27",
       "hinweis": null,
       "menge": {
        "evidenz": "UNKNOWN",
@@ -701,8 +723,8 @@
      "fuer": "S6",
      "richtung": "ABFLUSS",
      "weitere": [
-      "S18",
-      "S26"
+      "S19",
+      "S27"
      ]
     }
    ],
@@ -768,7 +790,7 @@
      {
       "art": "NETZ",
       "fuer": "S11",
-      "glied": "S21",
+      "glied": "S22",
       "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
       "menge": {
        "evidenz": "BELEGT",
@@ -783,7 +805,7 @@
      {
       "art": "NETZ",
       "fuer": "S11",
-      "glied": "S22",
+      "glied": "S23",
       "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
       "menge": {
        "evidenz": "BELEGT",
@@ -794,6 +816,66 @@
       "name": "Port Hedland",
       "richtung": "ABFLUSS",
       "verbindung": "V1"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S8",
+      "glied": "S14",
+      "hinweis": null,
+      "menge": {
+       "evidenz": "UNKNOWN",
+       "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+       "t": null,
+       "text": "unbekannt"
+      },
+      "name": "Chengxin Lithium",
+      "richtung": "ABFLUSS",
+      "verbindung": "V19"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S8",
+      "glied": "S15",
+      "hinweis": null,
+      "menge": {
+       "evidenz": "UNKNOWN",
+       "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+       "t": null,
+       "text": "unbekannt"
+      },
+      "name": "Ford",
+      "richtung": "ABFLUSS",
+      "verbindung": "V18"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S8",
+      "glied": "S21",
+      "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 150000.0,
+       "text": "150.000 t pro Jahr"
+      },
+      "name": "LG Energy Solution",
+      "richtung": "ABFLUSS",
+      "verbindung": "V7"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S8",
+      "glied": "S24",
+      "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 10831.0,
+       "text": "10.831 t im genannten Zeitraum"
+      },
+      "name": "Port of Geraldton",
+      "richtung": "ABFLUSS",
+      "verbindung": "V6"
      },
      {
       "art": "STANDORT",
@@ -832,6 +914,328 @@
       "freigabe": "FREIGEGEBEN",
       "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
       "fuer": "S13",
+      "glied": null,
+      "hinweis": "Anderes Lithiumcarbonat-Werk, das Konzentrat abnehmen könnte; Rohstoffbasis nennt die Quelle nicht; eine Lieferbeziehung ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt.",
+      "id": "AW-LI-WUDI",
+      "lage": {
+       "genauigkeit": "A",
+       "lat": 37.46,
+       "lon": 117.99,
+       "quelle": "USGS-GIS 2023, CHN_Mineral_Facilities, FeatureUID CHN1397"
+      },
+      "land": "CN",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": null,
+       "text": "Kapazität 26.000 t Lithiumcarbonat-Inhalt pro Jahr (USGS Minerals Yearbook 2024)"
+      },
+      "name": "Lithiumwerk Binzhou (Shandong, China), Wudi Jinhaiwan",
+      "quelle": {
+       "fundstelle": "MYB-Zeile FAC_CHN0540_01 (Kapazität); GIS CHN_Mineral_Facilities CHN1397 (Lage)",
+       "herausgeber": "U.S. Geological Survey",
+       "titel": "Minerals Yearbook 2024, Vol. III (Area Reports: International), Tabelle Facilities; Lage: Compilation of Geospatial Data (GIS) for the Mineral Industries and Related Infrastructure of the People's Republic of China",
+       "url": "https://www.sciencebase.gov/catalog/item/6a8490171ba49b3133cd8055",
+       "zitat": "Site in Binzhou · China · Lithium Refinery Lithium carbonate · 26000 Metric tons (Li2CO3 content) · Assumed active · Wudi Jinhaiwan Lithium Technology Co. Ltd. · Binzhou, Shandong Province | GIS: Plant in Binzhou · China · Lithium Lithium carbonate equivalent · 25 kmt · Assumed Active · 37.46, 117.99 · Wudi Golden Bay Lithium Technology Co., Ltd."
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     }
+    ],
+    "mit_menge": 6
+   },
+   "dauer": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+   },
+   "ersatz": [
+    {
+     "fuer": "S11",
+     "richtung": "ABFLUSS",
+     "weitere": [
+      "S22",
+      "S23"
+     ]
+    },
+    {
+     "fuer": "S8",
+     "richtung": "ABFLUSS",
+     "weitere": [
+      "S14",
+      "S15",
+      "S21",
+      "S24"
+     ]
+    }
+   ],
+   "mehrkosten": {
+    "evidenz": "UNKNOWN",
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
+   },
+   "mengen": [
+    {
+     "evidenz": "BELEGT",
+     "text": "150.000 t pro Jahr",
+     "verbindung": "V3"
+    },
+    {
+     "evidenz": "UNKNOWN",
+     "text": "unbekannt",
+     "verbindung": "V20"
+    }
+   ],
+   "ohne_abfluss": [],
+   "ohne_zufluss": [],
+   "tonnen": {
+    "evidenz": "ABGELEITET",
+    "grund": "Weitere 1 Bögen an diesem Glied ohne Menge: V20; die tatsächliche Menge kann größer sein.",
+    "hinweis": "Mengen verschiedener Waren oder Zeitbasen werden nicht addiert. Weitere 1 Bögen an diesem Glied ohne Menge: V20; die tatsächliche Menge kann größer sein.",
+    "ohne_menge": [
+     "V20"
+    ],
+    "posten": [
+     {
+      "art": "summe",
+      "eingaenge": [
+       {
+        "einheit": "t",
+        "freigabe": "FREIGEGEBEN",
+        "hoch": 1,
+        "name": "V3 Pilgangoora → Canmax Technologies Co.",
+        "quelle": "150.000 t/a (Vertragsmenge)",
+        "ref": "flow:LIF-03",
+        "wert": 150000.0
+       }
+      ],
+      "einheit": "t",
+      "ergebnis": [
+       150000.0
+      ],
+      "evidenz": "ABGELEITET",
+      "formel": "150.000 t",
+      "hinweis": "Menge laut Quelle je Bogen (Lieferung, Vertrag oder Kapazität wie dort angegeben); keine Lieferbestätigung.",
+      "pro_jahr": true,
+      "rechenweg": "belegte Menge des einzigen Bogens mit Tonnen in dieser Gruppe: 150.000 t (V3)",
+      "t": 150000.0,
+      "text": "150.000 t Spodumenkonzentrat pro Jahr",
+      "verbindungen": [
+       "V3"
+      ],
+      "ware": "Spodumenkonzentrat"
+     }
+    ],
+    "text": "betroffen 150.000 t Spodumenkonzentrat pro Jahr"
+   },
+   "verbindungen_weg": [
+    "V3",
+    "V20"
+   ]
+  },
+  "S14": {
+   "ausweich": {
+    "grund": null,
+    "liste": [
+     {
+      "art": "NETZ",
+      "fuer": "S8",
+      "glied": "S13",
+      "hinweis": null,
+      "menge": {
+       "evidenz": "UNKNOWN",
+       "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+       "t": null,
+       "text": "unbekannt"
+      },
+      "name": "Canmax Technologies Co.",
+      "richtung": "ABFLUSS",
+      "verbindung": "V20"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S8",
+      "glied": "S15",
+      "hinweis": null,
+      "menge": {
+       "evidenz": "UNKNOWN",
+       "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+       "t": null,
+       "text": "unbekannt"
+      },
+      "name": "Ford",
+      "richtung": "ABFLUSS",
+      "verbindung": "V18"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S8",
+      "glied": "S21",
+      "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 150000.0,
+       "text": "150.000 t pro Jahr"
+      },
+      "name": "LG Energy Solution",
+      "richtung": "ABFLUSS",
+      "verbindung": "V7"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S8",
+      "glied": "S24",
+      "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 10831.0,
+       "text": "10.831 t im genannten Zeitraum"
+      },
+      "name": "Port of Geraldton",
+      "richtung": "ABFLUSS",
+      "verbindung": "V6"
+     }
+    ],
+    "mit_menge": 2
+   },
+   "dauer": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+   },
+   "ersatz": [
+    {
+     "fuer": "S8",
+     "richtung": "ABFLUSS",
+     "weitere": [
+      "S13",
+      "S15",
+      "S21",
+      "S24"
+     ]
+    }
+   ],
+   "mehrkosten": {
+    "evidenz": "UNKNOWN",
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
+   },
+   "mengen": [
+    {
+     "evidenz": "UNKNOWN",
+     "text": "unbekannt",
+     "verbindung": "V19"
+    }
+   ],
+   "ohne_abfluss": [],
+   "ohne_zufluss": [],
+   "tonnen": {
+    "evidenz": "UNKNOWN",
+    "grund": "Kein Bogen an diesem Glied hat eine freigegebene Menge in Tonnen. Ohne Menge: 1 von 1 Bögen."
+   },
+   "verbindungen_weg": [
+    "V19"
+   ]
+  },
+  "S15": {
+   "ausweich": {
+    "grund": null,
+    "liste": [
+     {
+      "art": "NETZ",
+      "fuer": "S8",
+      "glied": "S13",
+      "hinweis": null,
+      "menge": {
+       "evidenz": "UNKNOWN",
+       "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+       "t": null,
+       "text": "unbekannt"
+      },
+      "name": "Canmax Technologies Co.",
+      "richtung": "ABFLUSS",
+      "verbindung": "V20"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S8",
+      "glied": "S14",
+      "hinweis": null,
+      "menge": {
+       "evidenz": "UNKNOWN",
+       "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+       "t": null,
+       "text": "unbekannt"
+      },
+      "name": "Chengxin Lithium",
+      "richtung": "ABFLUSS",
+      "verbindung": "V19"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S8",
+      "glied": "S21",
+      "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 150000.0,
+       "text": "150.000 t pro Jahr"
+      },
+      "name": "LG Energy Solution",
+      "richtung": "ABFLUSS",
+      "verbindung": "V7"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S8",
+      "glied": "S24",
+      "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 10831.0,
+       "text": "10.831 t im genannten Zeitraum"
+      },
+      "name": "Port of Geraldton",
+      "richtung": "ABFLUSS",
+      "verbindung": "V6"
+     },
+     {
+      "art": "STANDORT",
+      "freigabe": "FREIGEGEBEN",
+      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
+      "fuer": "S15",
+      "glied": null,
+      "hinweis": "Anderes Lithiumcarbonat-Werk, das Konzentrat abnehmen könnte; Rohstoffbasis (Spodumen oder Lepidolith) nennt die Quelle nicht; eine Lieferbeziehung ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt.",
+      "id": "AW-LI-NANSHI",
+      "lage": {
+       "genauigkeit": "A",
+       "lat": 28.12,
+       "lon": 114.49,
+       "quelle": "USGS-GIS 2023, CHN_Mineral_Facilities, FeatureUID CHN0909"
+      },
+      "land": "CN",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": null,
+       "text": "Kapazität 60.000 t Lithiumcarbonat-Inhalt pro Jahr (USGS Minerals Yearbook 2024)"
+      },
+      "name": "Lithiumwerk Yichun (Jiangxi, China), Jiangxi Nanshi",
+      "quelle": {
+       "fundstelle": "MYB-Zeile FAC_CHN0521_01 (Kapazität); GIS CHN_Mineral_Facilities CHN0909 (Lage)",
+       "herausgeber": "U.S. Geological Survey",
+       "titel": "Minerals Yearbook 2024, Vol. III (Area Reports: International), Tabelle Facilities; Lage: Compilation of Geospatial Data (GIS) for the Mineral Industries and Related Infrastructure of the People's Republic of China",
+       "url": "https://www.sciencebase.gov/catalog/item/6a8490171ba49b3133cd8055",
+       "zitat": "Site in Yichun · China · Lithium Refinery Lithium carbonate · 60000 Metric tons (Li2CO3 content) · Assumed active · Jiangxi Nanshi Lithium New Materials Co. Ltd. · Yichun, Jiangxi Province | GIS: Plant in Yichun · China · Lithium Lithium carbonate equivalent · 60 kmt · Assumed Active · 28.12, 114.49 · Jiangxi Nanshi Lithium Battery New Materials Co., Ltd."
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     },
+     {
+      "art": "STANDORT",
+      "freigabe": "FREIGEGEBEN",
+      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
+      "fuer": "S15",
       "glied": null,
       "hinweis": "Anderes Lithiumcarbonat-Werk, das Konzentrat abnehmen könnte; Rohstoffbasis nennt die Quelle nicht; eine Lieferbeziehung ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt.",
       "id": "AW-LI-WUDI",
@@ -868,181 +1272,13 @@
    },
    "ersatz": [
     {
-     "fuer": "S11",
-     "richtung": "ABFLUSS",
-     "weitere": [
-      "S21",
-      "S22"
-     ]
-    }
-   ],
-   "mehrkosten": {
-    "evidenz": "UNKNOWN",
-    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
-   },
-   "mengen": [
-    {
-     "evidenz": "BELEGT",
-     "text": "150.000 t pro Jahr",
-     "verbindung": "V3"
-    }
-   ],
-   "ohne_abfluss": [],
-   "ohne_zufluss": [],
-   "tonnen": {
-    "evidenz": "ABGELEITET",
-    "grund": null,
-    "hinweis": "Mengen verschiedener Waren oder Zeitbasen werden nicht addiert.",
-    "ohne_menge": [],
-    "posten": [
-     {
-      "art": "summe",
-      "eingaenge": [
-       {
-        "einheit": "t",
-        "freigabe": "FREIGEGEBEN",
-        "hoch": 1,
-        "name": "V3 Pilgangoora → Canmax Technologies Co.",
-        "quelle": "150.000 t/a (Vertragsmenge)",
-        "ref": "flow:LIF-03",
-        "wert": 150000.0
-       }
-      ],
-      "einheit": "t",
-      "ergebnis": [
-       150000.0
-      ],
-      "evidenz": "ABGELEITET",
-      "formel": "150.000 t",
-      "hinweis": "Menge laut Quelle je Bogen (Lieferung, Vertrag oder Kapazität wie dort angegeben); keine Lieferbestätigung.",
-      "pro_jahr": true,
-      "rechenweg": "belegte Menge des einzigen Bogens mit Tonnen in dieser Gruppe: 150.000 t (V3)",
-      "t": 150000.0,
-      "text": "150.000 t Spodumenkonzentrat pro Jahr",
-      "verbindungen": [
-       "V3"
-      ],
-      "ware": "Spodumenkonzentrat"
-     }
-    ],
-    "text": "betroffen 150.000 t Spodumenkonzentrat pro Jahr"
-   },
-   "verbindungen_weg": [
-    "V3"
-   ]
-  },
-  "S14": {
-   "ausweich": {
-    "grund": null,
-    "liste": [
-     {
-      "art": "NETZ",
-      "fuer": "S8",
-      "glied": "S20",
-      "hinweis": null,
-      "menge": {
-       "evidenz": "UNKNOWN",
-       "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
-       "t": null,
-       "text": "unbekannt"
-      },
-      "name": "LG Energy Solution",
-      "richtung": "ABFLUSS",
-      "verbindung": "V7"
-     },
-     {
-      "art": "NETZ",
-      "fuer": "S8",
-      "glied": "S23",
-      "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
-      "menge": {
-       "evidenz": "BELEGT",
-       "grund": null,
-       "t": 10831.0,
-       "text": "10.831 t im genannten Zeitraum"
-      },
-      "name": "Port of Geraldton",
-      "richtung": "ABFLUSS",
-      "verbindung": "V6"
-     },
-     {
-      "art": "STANDORT",
-      "freigabe": "FREIGEGEBEN",
-      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
-      "fuer": "S14",
-      "glied": null,
-      "hinweis": "Anderes Lithiumcarbonat-Werk, das Konzentrat abnehmen könnte; Rohstoffbasis (Spodumen oder Lepidolith) nennt die Quelle nicht; eine Lieferbeziehung ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt.",
-      "id": "AW-LI-NANSHI",
-      "lage": {
-       "genauigkeit": "A",
-       "lat": 28.12,
-       "lon": 114.49,
-       "quelle": "USGS-GIS 2023, CHN_Mineral_Facilities, FeatureUID CHN0909"
-      },
-      "land": "CN",
-      "menge": {
-       "evidenz": "BELEGT",
-       "grund": null,
-       "t": null,
-       "text": "Kapazität 60.000 t Lithiumcarbonat-Inhalt pro Jahr (USGS Minerals Yearbook 2024)"
-      },
-      "name": "Lithiumwerk Yichun (Jiangxi, China), Jiangxi Nanshi",
-      "quelle": {
-       "fundstelle": "MYB-Zeile FAC_CHN0521_01 (Kapazität); GIS CHN_Mineral_Facilities CHN0909 (Lage)",
-       "herausgeber": "U.S. Geological Survey",
-       "titel": "Minerals Yearbook 2024, Vol. III (Area Reports: International), Tabelle Facilities; Lage: Compilation of Geospatial Data (GIS) for the Mineral Industries and Related Infrastructure of the People's Republic of China",
-       "url": "https://www.sciencebase.gov/catalog/item/6a8490171ba49b3133cd8055",
-       "zitat": "Site in Yichun · China · Lithium Refinery Lithium carbonate · 60000 Metric tons (Li2CO3 content) · Assumed active · Jiangxi Nanshi Lithium New Materials Co. Ltd. · Yichun, Jiangxi Province | GIS: Plant in Yichun · China · Lithium Lithium carbonate equivalent · 60 kmt · Assumed Active · 28.12, 114.49 · Jiangxi Nanshi Lithium Battery New Materials Co., Ltd."
-      },
-      "richtung": "HERKUNFT",
-      "verbindung": null
-     },
-     {
-      "art": "STANDORT",
-      "freigabe": "FREIGEGEBEN",
-      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
-      "fuer": "S14",
-      "glied": null,
-      "hinweis": "Anderes Lithiumcarbonat-Werk, das Konzentrat abnehmen könnte; Rohstoffbasis nennt die Quelle nicht; eine Lieferbeziehung ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt.",
-      "id": "AW-LI-WUDI",
-      "lage": {
-       "genauigkeit": "A",
-       "lat": 37.46,
-       "lon": 117.99,
-       "quelle": "USGS-GIS 2023, CHN_Mineral_Facilities, FeatureUID CHN1397"
-      },
-      "land": "CN",
-      "menge": {
-       "evidenz": "BELEGT",
-       "grund": null,
-       "t": null,
-       "text": "Kapazität 26.000 t Lithiumcarbonat-Inhalt pro Jahr (USGS Minerals Yearbook 2024)"
-      },
-      "name": "Lithiumwerk Binzhou (Shandong, China), Wudi Jinhaiwan",
-      "quelle": {
-       "fundstelle": "MYB-Zeile FAC_CHN0540_01 (Kapazität); GIS CHN_Mineral_Facilities CHN1397 (Lage)",
-       "herausgeber": "U.S. Geological Survey",
-       "titel": "Minerals Yearbook 2024, Vol. III (Area Reports: International), Tabelle Facilities; Lage: Compilation of Geospatial Data (GIS) for the Mineral Industries and Related Infrastructure of the People's Republic of China",
-       "url": "https://www.sciencebase.gov/catalog/item/6a8490171ba49b3133cd8055",
-       "zitat": "Site in Binzhou · China · Lithium Refinery Lithium carbonate · 26000 Metric tons (Li2CO3 content) · Assumed active · Wudi Jinhaiwan Lithium Technology Co. Ltd. · Binzhou, Shandong Province | GIS: Plant in Binzhou · China · Lithium Lithium carbonate equivalent · 25 kmt · Assumed Active · 37.46, 117.99 · Wudi Golden Bay Lithium Technology Co., Ltd."
-      },
-      "richtung": "HERKUNFT",
-      "verbindung": null
-     }
-    ],
-    "mit_menge": 3
-   },
-   "dauer": {
-    "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
-   },
-   "ersatz": [
-    {
      "fuer": "S8",
      "richtung": "ABFLUSS",
      "weitere": [
-      "S20",
-      "S23"
+      "S13",
+      "S14",
+      "S21",
+      "S24"
      ]
     }
    ],
@@ -1067,7 +1303,7 @@
     "V18"
    ]
   },
-  "S15": {
+  "S16": {
    "ausweich": {
     "grund": null,
     "liste": [
@@ -1075,7 +1311,7 @@
       "art": "STANDORT",
       "freigabe": "FREIGEGEBEN",
       "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
-      "fuer": "S15",
+      "fuer": "S16",
       "glied": null,
       "hinweis": "Anderes Lithiumcarbonat-Werk, das Konzentrat abnehmen könnte; Rohstoffbasis (Spodumen oder Lepidolith) nennt die Quelle nicht; eine Lieferbeziehung ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt.",
       "id": "AW-LI-NANSHI",
@@ -1107,7 +1343,7 @@
       "art": "STANDORT",
       "freigabe": "FREIGEGEBEN",
       "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
-      "fuer": "S15",
+      "fuer": "S16",
       "glied": null,
       "hinweis": "Anderes Lithiumcarbonat-Werk, das Konzentrat abnehmen könnte; Rohstoffbasis nennt die Quelle nicht; eine Lieferbeziehung ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt.",
       "id": "AW-LI-WUDI",
@@ -1217,14 +1453,14 @@
     "V11"
    ]
   },
-  "S16": {
+  "S17": {
    "ausweich": {
     "grund": null,
     "liste": [
      {
       "art": "NETZ",
       "fuer": "S3",
-      "glied": "S24",
+      "glied": "S25",
       "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
       "menge": {
        "evidenz": "BELEGT",
@@ -1240,7 +1476,7 @@
       "art": "STANDORT",
       "freigabe": "FREIGEGEBEN",
       "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
-      "fuer": "S16",
+      "fuer": "S17",
       "glied": null,
       "hinweis": "Anderes Lithiumcarbonat-Werk, das Konzentrat abnehmen könnte; Rohstoffbasis (Spodumen oder Lepidolith) nennt die Quelle nicht; eine Lieferbeziehung ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt.",
       "id": "AW-LI-NANSHI",
@@ -1272,7 +1508,7 @@
       "art": "STANDORT",
       "freigabe": "FREIGEGEBEN",
       "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
-      "fuer": "S16",
+      "fuer": "S17",
       "glied": null,
       "hinweis": "Anderes Lithiumcarbonat-Werk, das Konzentrat abnehmen könnte; Rohstoffbasis nennt die Quelle nicht; eine Lieferbeziehung ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt.",
       "id": "AW-LI-WUDI",
@@ -1312,7 +1548,7 @@
      "fuer": "S3",
      "richtung": "ABFLUSS",
      "weitere": [
-      "S24"
+      "S25"
      ]
     }
    ],
@@ -1343,7 +1579,7 @@
         "freigabe": "FREIGEGEBEN",
         "hoch": 1,
         "name": "V13 Bougouni → Hainan Mining",
-        "quelle": "10.000 t/Monat (Ziel, ca.)",
+        "quelle": "10.000 t/Monat (Zielwert, ca.)",
         "ref": "flow:LIF-13",
         "wert": 120000.0
        }
@@ -1371,7 +1607,7 @@
     "V13"
    ]
   },
-  "S17": {
+  "S18": {
    "ausweich": {
     "grund": null,
     "liste": [
@@ -1379,7 +1615,7 @@
       "art": "STANDORT",
       "freigabe": "FREIGEGEBEN",
       "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
-      "fuer": "S17",
+      "fuer": "S18",
       "glied": null,
       "hinweis": "Anderes Lithiumcarbonat-Werk, das Konzentrat abnehmen könnte; Rohstoffbasis (Spodumen oder Lepidolith) nennt die Quelle nicht; eine Lieferbeziehung ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt.",
       "id": "AW-LI-NANSHI",
@@ -1411,7 +1647,7 @@
       "art": "STANDORT",
       "freigabe": "FREIGEGEBEN",
       "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
-      "fuer": "S17",
+      "fuer": "S18",
       "glied": null,
       "hinweis": "Anderes Lithiumcarbonat-Werk, das Konzentrat abnehmen könnte; Rohstoffbasis nennt die Quelle nicht; eine Lieferbeziehung ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt.",
       "id": "AW-LI-WUDI",
@@ -1470,7 +1706,7 @@
     "V16"
    ]
   },
-  "S18": {
+  "S19": {
    "ausweich": {
     "grund": null,
     "liste": [
@@ -1492,7 +1728,7 @@
      {
       "art": "NETZ",
       "fuer": "S6",
-      "glied": "S26",
+      "glied": "S27",
       "hinweis": null,
       "menge": {
        "evidenz": "UNKNOWN",
@@ -1508,7 +1744,7 @@
       "art": "STANDORT",
       "freigabe": "FREIGEGEBEN",
       "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
-      "fuer": "S18",
+      "fuer": "S19",
       "glied": null,
       "hinweis": "Anderes Lithiumcarbonat-Werk, das Konzentrat abnehmen könnte; Rohstoffbasis (Spodumen oder Lepidolith) nennt die Quelle nicht; eine Lieferbeziehung ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt.",
       "id": "AW-LI-NANSHI",
@@ -1540,7 +1776,7 @@
       "art": "STANDORT",
       "freigabe": "FREIGEGEBEN",
       "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
-      "fuer": "S18",
+      "fuer": "S19",
       "glied": null,
       "hinweis": "Anderes Lithiumcarbonat-Werk, das Konzentrat abnehmen könnte; Rohstoffbasis nennt die Quelle nicht; eine Lieferbeziehung ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt.",
       "id": "AW-LI-WUDI",
@@ -1581,7 +1817,7 @@
      "richtung": "ABFLUSS",
      "weitere": [
       "S12",
-      "S26"
+      "S27"
      ]
     }
    ],
@@ -1604,105 +1840,6 @@
    },
    "verbindungen_weg": [
     "V4"
-   ]
-  },
-  "S19": {
-   "ausweich": {
-    "grund": null,
-    "liste": [
-     {
-      "art": "STANDORT",
-      "freigabe": "FREIGEGEBEN",
-      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
-      "fuer": "S19",
-      "glied": null,
-      "hinweis": "Anderes Lithiumcarbonat-Werk, das Konzentrat abnehmen könnte; Rohstoffbasis (Spodumen oder Lepidolith) nennt die Quelle nicht; eine Lieferbeziehung ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt.",
-      "id": "AW-LI-NANSHI",
-      "lage": {
-       "genauigkeit": "A",
-       "lat": 28.12,
-       "lon": 114.49,
-       "quelle": "USGS-GIS 2023, CHN_Mineral_Facilities, FeatureUID CHN0909"
-      },
-      "land": "CN",
-      "menge": {
-       "evidenz": "BELEGT",
-       "grund": null,
-       "t": null,
-       "text": "Kapazität 60.000 t Lithiumcarbonat-Inhalt pro Jahr (USGS Minerals Yearbook 2024)"
-      },
-      "name": "Lithiumwerk Yichun (Jiangxi, China), Jiangxi Nanshi",
-      "quelle": {
-       "fundstelle": "MYB-Zeile FAC_CHN0521_01 (Kapazität); GIS CHN_Mineral_Facilities CHN0909 (Lage)",
-       "herausgeber": "U.S. Geological Survey",
-       "titel": "Minerals Yearbook 2024, Vol. III (Area Reports: International), Tabelle Facilities; Lage: Compilation of Geospatial Data (GIS) for the Mineral Industries and Related Infrastructure of the People's Republic of China",
-       "url": "https://www.sciencebase.gov/catalog/item/6a8490171ba49b3133cd8055",
-       "zitat": "Site in Yichun · China · Lithium Refinery Lithium carbonate · 60000 Metric tons (Li2CO3 content) · Assumed active · Jiangxi Nanshi Lithium New Materials Co. Ltd. · Yichun, Jiangxi Province | GIS: Plant in Yichun · China · Lithium Lithium carbonate equivalent · 60 kmt · Assumed Active · 28.12, 114.49 · Jiangxi Nanshi Lithium Battery New Materials Co., Ltd."
-      },
-      "richtung": "HERKUNFT",
-      "verbindung": null
-     },
-     {
-      "art": "STANDORT",
-      "freigabe": "FREIGEGEBEN",
-      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
-      "fuer": "S19",
-      "glied": null,
-      "hinweis": "Anderes Lithiumcarbonat-Werk, das Konzentrat abnehmen könnte; Rohstoffbasis nennt die Quelle nicht; eine Lieferbeziehung ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt.",
-      "id": "AW-LI-WUDI",
-      "lage": {
-       "genauigkeit": "A",
-       "lat": 37.46,
-       "lon": 117.99,
-       "quelle": "USGS-GIS 2023, CHN_Mineral_Facilities, FeatureUID CHN1397"
-      },
-      "land": "CN",
-      "menge": {
-       "evidenz": "BELEGT",
-       "grund": null,
-       "t": null,
-       "text": "Kapazität 26.000 t Lithiumcarbonat-Inhalt pro Jahr (USGS Minerals Yearbook 2024)"
-      },
-      "name": "Lithiumwerk Binzhou (Shandong, China), Wudi Jinhaiwan",
-      "quelle": {
-       "fundstelle": "MYB-Zeile FAC_CHN0540_01 (Kapazität); GIS CHN_Mineral_Facilities CHN1397 (Lage)",
-       "herausgeber": "U.S. Geological Survey",
-       "titel": "Minerals Yearbook 2024, Vol. III (Area Reports: International), Tabelle Facilities; Lage: Compilation of Geospatial Data (GIS) for the Mineral Industries and Related Infrastructure of the People's Republic of China",
-       "url": "https://www.sciencebase.gov/catalog/item/6a8490171ba49b3133cd8055",
-       "zitat": "Site in Binzhou · China · Lithium Refinery Lithium carbonate · 26000 Metric tons (Li2CO3 content) · Assumed active · Wudi Jinhaiwan Lithium Technology Co. Ltd. · Binzhou, Shandong Province | GIS: Plant in Binzhou · China · Lithium Lithium carbonate equivalent · 25 kmt · Assumed Active · 37.46, 117.99 · Wudi Golden Bay Lithium Technology Co., Ltd."
-      },
-      "richtung": "HERKUNFT",
-      "verbindung": null
-     }
-    ],
-    "mit_menge": 2
-   },
-   "dauer": {
-    "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
-   },
-   "ersatz": [],
-   "mehrkosten": {
-    "evidenz": "UNKNOWN",
-    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
-   },
-   "mengen": [
-    {
-     "evidenz": "UNKNOWN",
-     "text": "unbekannt",
-     "verbindung": "V5"
-    }
-   ],
-   "ohne_abfluss": [
-    "S9"
-   ],
-   "ohne_zufluss": [],
-   "tonnen": {
-    "evidenz": "UNKNOWN",
-    "grund": "Kein Bogen an diesem Glied hat eine freigegebene Menge in Tonnen. Ohne Menge: 1 von 1 Bögen."
-   },
-   "verbindungen_weg": [
-    "V5"
    ]
   },
   "S2": {
@@ -1857,7 +1994,7 @@
    ],
    "ohne_abfluss": [],
    "ohne_zufluss": [
-    "S25"
+    "S26"
    ],
    "tonnen": {
     "evidenz": "ABGELEITET",
@@ -1906,36 +2043,6 @@
     "grund": null,
     "liste": [
      {
-      "art": "NETZ",
-      "fuer": "S8",
-      "glied": "S14",
-      "hinweis": null,
-      "menge": {
-       "evidenz": "UNKNOWN",
-       "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
-       "t": null,
-       "text": "unbekannt"
-      },
-      "name": "Ford",
-      "richtung": "ABFLUSS",
-      "verbindung": "V18"
-     },
-     {
-      "art": "NETZ",
-      "fuer": "S8",
-      "glied": "S23",
-      "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
-      "menge": {
-       "evidenz": "BELEGT",
-       "grund": null,
-       "t": 10831.0,
-       "text": "10.831 t im genannten Zeitraum"
-      },
-      "name": "Port of Geraldton",
-      "richtung": "ABFLUSS",
-      "verbindung": "V6"
-     },
-     {
       "art": "STANDORT",
       "freigabe": "FREIGEGEBEN",
       "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
@@ -2000,22 +2107,13 @@
       "verbindung": null
      }
     ],
-    "mit_menge": 3
+    "mit_menge": 2
    },
    "dauer": {
     "evidenz": "UNKNOWN",
     "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
-   "ersatz": [
-    {
-     "fuer": "S8",
-     "richtung": "ABFLUSS",
-     "weitere": [
-      "S14",
-      "S23"
-     ]
-    }
-   ],
+   "ersatz": [],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
     "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
@@ -2024,17 +2122,19 @@
     {
      "evidenz": "UNKNOWN",
      "text": "unbekannt",
-     "verbindung": "V7"
+     "verbindung": "V5"
     }
    ],
-   "ohne_abfluss": [],
+   "ohne_abfluss": [
+    "S9"
+   ],
    "ohne_zufluss": [],
    "tonnen": {
     "evidenz": "UNKNOWN",
     "grund": "Kein Bogen an diesem Glied hat eine freigegebene Menge in Tonnen. Ohne Menge: 1 von 1 Bögen."
    },
    "verbindungen_weg": [
-    "V7"
+    "V5"
    ]
   },
   "S21": {
@@ -2043,33 +2143,63 @@
     "liste": [
      {
       "art": "NETZ",
-      "fuer": "S11",
+      "fuer": "S8",
       "glied": "S13",
-      "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
+      "hinweis": null,
       "menge": {
-       "evidenz": "BELEGT",
-       "grund": null,
-       "t": 150000.0,
-       "text": "150.000 t pro Jahr"
+       "evidenz": "UNKNOWN",
+       "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+       "t": null,
+       "text": "unbekannt"
       },
       "name": "Canmax Technologies Co.",
       "richtung": "ABFLUSS",
-      "verbindung": "V3"
+      "verbindung": "V20"
      },
      {
       "art": "NETZ",
-      "fuer": "S11",
-      "glied": "S22",
+      "fuer": "S8",
+      "glied": "S14",
+      "hinweis": null,
+      "menge": {
+       "evidenz": "UNKNOWN",
+       "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+       "t": null,
+       "text": "unbekannt"
+      },
+      "name": "Chengxin Lithium",
+      "richtung": "ABFLUSS",
+      "verbindung": "V19"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S8",
+      "glied": "S15",
+      "hinweis": null,
+      "menge": {
+       "evidenz": "UNKNOWN",
+       "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+       "t": null,
+       "text": "unbekannt"
+      },
+      "name": "Ford",
+      "richtung": "ABFLUSS",
+      "verbindung": "V18"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S8",
+      "glied": "S24",
       "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
       "menge": {
        "evidenz": "BELEGT",
        "grund": null,
-       "t": 891592.0,
-       "text": "891.592 t pro Jahr"
+       "t": 10831.0,
+       "text": "10.831 t im genannten Zeitraum"
       },
-      "name": "Port Hedland",
+      "name": "Port of Geraldton",
       "richtung": "ABFLUSS",
-      "verbindung": "V1"
+      "verbindung": "V6"
      },
      {
       "art": "STANDORT",
@@ -2108,6 +2238,178 @@
       "freigabe": "FREIGEGEBEN",
       "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
       "fuer": "S21",
+      "glied": null,
+      "hinweis": "Anderes Lithiumcarbonat-Werk, das Konzentrat abnehmen könnte; Rohstoffbasis nennt die Quelle nicht; eine Lieferbeziehung ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt.",
+      "id": "AW-LI-WUDI",
+      "lage": {
+       "genauigkeit": "A",
+       "lat": 37.46,
+       "lon": 117.99,
+       "quelle": "USGS-GIS 2023, CHN_Mineral_Facilities, FeatureUID CHN1397"
+      },
+      "land": "CN",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": null,
+       "text": "Kapazität 26.000 t Lithiumcarbonat-Inhalt pro Jahr (USGS Minerals Yearbook 2024)"
+      },
+      "name": "Lithiumwerk Binzhou (Shandong, China), Wudi Jinhaiwan",
+      "quelle": {
+       "fundstelle": "MYB-Zeile FAC_CHN0540_01 (Kapazität); GIS CHN_Mineral_Facilities CHN1397 (Lage)",
+       "herausgeber": "U.S. Geological Survey",
+       "titel": "Minerals Yearbook 2024, Vol. III (Area Reports: International), Tabelle Facilities; Lage: Compilation of Geospatial Data (GIS) for the Mineral Industries and Related Infrastructure of the People's Republic of China",
+       "url": "https://www.sciencebase.gov/catalog/item/6a8490171ba49b3133cd8055",
+       "zitat": "Site in Binzhou · China · Lithium Refinery Lithium carbonate · 26000 Metric tons (Li2CO3 content) · Assumed active · Wudi Jinhaiwan Lithium Technology Co. Ltd. · Binzhou, Shandong Province | GIS: Plant in Binzhou · China · Lithium Lithium carbonate equivalent · 25 kmt · Assumed Active · 37.46, 117.99 · Wudi Golden Bay Lithium Technology Co., Ltd."
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     }
+    ],
+    "mit_menge": 3
+   },
+   "dauer": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+   },
+   "ersatz": [
+    {
+     "fuer": "S8",
+     "richtung": "ABFLUSS",
+     "weitere": [
+      "S13",
+      "S14",
+      "S15",
+      "S24"
+     ]
+    }
+   ],
+   "mehrkosten": {
+    "evidenz": "UNKNOWN",
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
+   },
+   "mengen": [
+    {
+     "evidenz": "BELEGT",
+     "text": "150.000 t pro Jahr",
+     "verbindung": "V7"
+    }
+   ],
+   "ohne_abfluss": [],
+   "ohne_zufluss": [],
+   "tonnen": {
+    "evidenz": "ABGELEITET",
+    "grund": null,
+    "hinweis": "Mengen verschiedener Waren oder Zeitbasen werden nicht addiert.",
+    "ohne_menge": [],
+    "posten": [
+     {
+      "art": "summe",
+      "eingaenge": [
+       {
+        "einheit": "t",
+        "freigabe": "FREIGEGEBEN",
+        "hoch": 1,
+        "name": "V7 Kathleen Valley → LG Energy Solution",
+        "quelle": "150 kt (Vertragsmenge Spodumenkonzentrat SC6, keine Liefermenge, Vertragsjahre 2 bis 5 (Jahr 1: 100 kt; Jahre 6 bis 10: 160 kt; 11 bis 15: 140 kt))",
+        "ref": "M-LIF-07",
+        "wert": 150000.0
+       }
+      ],
+      "einheit": "t",
+      "ergebnis": [
+       150000.0
+      ],
+      "evidenz": "ABGELEITET",
+      "formel": "150.000 t",
+      "hinweis": "Menge laut Quelle je Bogen (Lieferung, Vertrag oder Kapazität wie dort angegeben); keine Lieferbestätigung.",
+      "pro_jahr": true,
+      "rechenweg": "belegte Menge des einzigen Bogens mit Tonnen in dieser Gruppe: 150.000 t (V7)",
+      "t": 150000.0,
+      "text": "150.000 t Spodumenkonzentrat pro Jahr",
+      "verbindungen": [
+       "V7"
+      ],
+      "ware": "Spodumenkonzentrat"
+     }
+    ],
+    "text": "betroffen 150.000 t Spodumenkonzentrat pro Jahr"
+   },
+   "verbindungen_weg": [
+    "V7"
+   ]
+  },
+  "S22": {
+   "ausweich": {
+    "grund": null,
+    "liste": [
+     {
+      "art": "NETZ",
+      "fuer": "S11",
+      "glied": "S13",
+      "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 150000.0,
+       "text": "150.000 t pro Jahr"
+      },
+      "name": "Canmax Technologies Co.",
+      "richtung": "ABFLUSS",
+      "verbindung": "V3"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S11",
+      "glied": "S23",
+      "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 891592.0,
+       "text": "891.592 t pro Jahr"
+      },
+      "name": "Port Hedland",
+      "richtung": "ABFLUSS",
+      "verbindung": "V1"
+     },
+     {
+      "art": "STANDORT",
+      "freigabe": "FREIGEGEBEN",
+      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
+      "fuer": "S22",
+      "glied": null,
+      "hinweis": "Anderes Lithiumcarbonat-Werk, das Konzentrat abnehmen könnte; Rohstoffbasis (Spodumen oder Lepidolith) nennt die Quelle nicht; eine Lieferbeziehung ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt.",
+      "id": "AW-LI-NANSHI",
+      "lage": {
+       "genauigkeit": "A",
+       "lat": 28.12,
+       "lon": 114.49,
+       "quelle": "USGS-GIS 2023, CHN_Mineral_Facilities, FeatureUID CHN0909"
+      },
+      "land": "CN",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": null,
+       "text": "Kapazität 60.000 t Lithiumcarbonat-Inhalt pro Jahr (USGS Minerals Yearbook 2024)"
+      },
+      "name": "Lithiumwerk Yichun (Jiangxi, China), Jiangxi Nanshi",
+      "quelle": {
+       "fundstelle": "MYB-Zeile FAC_CHN0521_01 (Kapazität); GIS CHN_Mineral_Facilities CHN0909 (Lage)",
+       "herausgeber": "U.S. Geological Survey",
+       "titel": "Minerals Yearbook 2024, Vol. III (Area Reports: International), Tabelle Facilities; Lage: Compilation of Geospatial Data (GIS) for the Mineral Industries and Related Infrastructure of the People's Republic of China",
+       "url": "https://www.sciencebase.gov/catalog/item/6a8490171ba49b3133cd8055",
+       "zitat": "Site in Yichun · China · Lithium Refinery Lithium carbonate · 60000 Metric tons (Li2CO3 content) · Assumed active · Jiangxi Nanshi Lithium New Materials Co. Ltd. · Yichun, Jiangxi Province | GIS: Plant in Yichun · China · Lithium Lithium carbonate equivalent · 60 kmt · Assumed Active · 28.12, 114.49 · Jiangxi Nanshi Lithium Battery New Materials Co., Ltd."
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     },
+     {
+      "art": "STANDORT",
+      "freigabe": "FREIGEGEBEN",
+      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
+      "fuer": "S22",
       "glied": null,
       "hinweis": "Anderes Lithiumcarbonat-Werk, das Konzentrat abnehmen könnte; Rohstoffbasis nennt die Quelle nicht; eine Lieferbeziehung ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt.",
       "id": "AW-LI-WUDI",
@@ -2148,7 +2450,7 @@
      "richtung": "ABFLUSS",
      "weitere": [
       "S13",
-      "S22"
+      "S23"
      ]
     }
    ],
@@ -2207,7 +2509,7 @@
     "V2"
    ]
   },
-  "S22": {
+  "S23": {
    "ausweich": {
     "grund": null,
     "liste": [
@@ -2229,7 +2531,7 @@
      {
       "art": "NETZ",
       "fuer": "S11",
-      "glied": "S21",
+      "glied": "S22",
       "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
       "menge": {
        "evidenz": "BELEGT",
@@ -2254,7 +2556,7 @@
      "richtung": "ABFLUSS",
      "weitere": [
       "S13",
-      "S21"
+      "S22"
      ]
     }
    ],
@@ -2313,14 +2615,44 @@
     "V1"
    ]
   },
-  "S23": {
+  "S24": {
    "ausweich": {
     "grund": null,
     "liste": [
      {
       "art": "NETZ",
       "fuer": "S8",
+      "glied": "S13",
+      "hinweis": null,
+      "menge": {
+       "evidenz": "UNKNOWN",
+       "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+       "t": null,
+       "text": "unbekannt"
+      },
+      "name": "Canmax Technologies Co.",
+      "richtung": "ABFLUSS",
+      "verbindung": "V20"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S8",
       "glied": "S14",
+      "hinweis": null,
+      "menge": {
+       "evidenz": "UNKNOWN",
+       "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+       "t": null,
+       "text": "unbekannt"
+      },
+      "name": "Chengxin Lithium",
+      "richtung": "ABFLUSS",
+      "verbindung": "V19"
+     },
+     {
+      "art": "NETZ",
+      "fuer": "S8",
+      "glied": "S15",
       "hinweis": null,
       "menge": {
        "evidenz": "UNKNOWN",
@@ -2335,20 +2667,20 @@
      {
       "art": "NETZ",
       "fuer": "S8",
-      "glied": "S20",
-      "hinweis": null,
+      "glied": "S21",
+      "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
       "menge": {
-       "evidenz": "UNKNOWN",
-       "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
-       "t": null,
-       "text": "unbekannt"
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 150000.0,
+       "text": "150.000 t pro Jahr"
       },
       "name": "LG Energy Solution",
       "richtung": "ABFLUSS",
       "verbindung": "V7"
      }
     ],
-    "mit_menge": 0
+    "mit_menge": 1
    },
    "dauer": {
     "evidenz": "UNKNOWN",
@@ -2359,8 +2691,10 @@
      "fuer": "S8",
      "richtung": "ABFLUSS",
      "weitere": [
+      "S13",
       "S14",
-      "S20"
+      "S15",
+      "S21"
      ]
     }
    ],
@@ -2419,14 +2753,14 @@
     "V6"
    ]
   },
-  "S24": {
+  "S25": {
    "ausweich": {
     "grund": null,
     "liste": [
      {
       "art": "NETZ",
       "fuer": "S3",
-      "glied": "S16",
+      "glied": "S17",
       "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
       "menge": {
        "evidenz": "BELEGT",
@@ -2450,7 +2784,7 @@
      "fuer": "S3",
      "richtung": "ABFLUSS",
      "weitere": [
-      "S16"
+      "S17"
      ]
     }
    ],
@@ -2509,7 +2843,7 @@
     "V12"
    ]
   },
-  "S25": {
+  "S26": {
    "ausweich": {
     "grund": null,
     "liste": [
@@ -2517,7 +2851,7 @@
       "art": "STANDORT",
       "freigabe": "FREIGEGEBEN",
       "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
-      "fuer": "S25",
+      "fuer": "S26",
       "glied": null,
       "hinweis": "Anderes Lithiumcarbonat-Werk, das Konzentrat abnehmen könnte; Rohstoffbasis (Spodumen oder Lepidolith) nennt die Quelle nicht; eine Lieferbeziehung ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt.",
       "id": "AW-LI-NANSHI",
@@ -2549,7 +2883,7 @@
       "art": "STANDORT",
       "freigabe": "FREIGEGEBEN",
       "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
-      "fuer": "S25",
+      "fuer": "S26",
       "glied": null,
       "hinweis": "Anderes Lithiumcarbonat-Werk, das Konzentrat abnehmen könnte; Rohstoffbasis nennt die Quelle nicht; eine Lieferbeziehung ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt.",
       "id": "AW-LI-WUDI",
@@ -2642,7 +2976,7 @@
     "V14"
    ]
   },
-  "S26": {
+  "S27": {
    "ausweich": {
     "grund": null,
     "liste": [
@@ -2664,7 +2998,7 @@
      {
       "art": "NETZ",
       "fuer": "S6",
-      "glied": "S18",
+      "glied": "S19",
       "hinweis": null,
       "menge": {
        "evidenz": "UNKNOWN",
@@ -2680,7 +3014,7 @@
       "art": "STANDORT",
       "freigabe": "FREIGEGEBEN",
       "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
-      "fuer": "S26",
+      "fuer": "S27",
       "glied": null,
       "hinweis": "Anderes Lithiumcarbonat-Werk, das Konzentrat abnehmen könnte; Rohstoffbasis (Spodumen oder Lepidolith) nennt die Quelle nicht; eine Lieferbeziehung ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt.",
       "id": "AW-LI-NANSHI",
@@ -2712,7 +3046,7 @@
       "art": "STANDORT",
       "freigabe": "FREIGEGEBEN",
       "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
-      "fuer": "S26",
+      "fuer": "S27",
       "glied": null,
       "hinweis": "Anderes Lithiumcarbonat-Werk, das Konzentrat abnehmen könnte; Rohstoffbasis nennt die Quelle nicht; eine Lieferbeziehung ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt.",
       "id": "AW-LI-WUDI",
@@ -2753,7 +3087,7 @@
      "richtung": "ABFLUSS",
      "weitere": [
       "S12",
-      "S18"
+      "S19"
      ]
     }
    ],
@@ -2778,7 +3112,7 @@
     "V10"
    ]
   },
-  "S27": {
+  "S28": {
    "ausweich": {
     "grund": null,
     "liste": [
@@ -2786,7 +3120,7 @@
       "art": "STANDORT",
       "freigabe": "FREIGEGEBEN",
       "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
-      "fuer": "S27",
+      "fuer": "S28",
       "glied": null,
       "hinweis": "Anderes Lithiumcarbonat-Werk, das Konzentrat abnehmen könnte; Rohstoffbasis (Spodumen oder Lepidolith) nennt die Quelle nicht; eine Lieferbeziehung ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt.",
       "id": "AW-LI-NANSHI",
@@ -2818,7 +3152,7 @@
       "art": "STANDORT",
       "freigabe": "FREIGEGEBEN",
       "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
-      "fuer": "S27",
+      "fuer": "S28",
       "glied": null,
       "hinweis": "Anderes Lithiumcarbonat-Werk, das Konzentrat abnehmen könnte; Rohstoffbasis nennt die Quelle nicht; eine Lieferbeziehung ist nicht belegt. Kapazität ist keine freie Menge: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt.",
       "id": "AW-LI-WUDI",
@@ -3068,8 +3402,8 @@
    ],
    "ohne_abfluss": [],
    "ohne_zufluss": [
-    "S16",
-    "S24"
+    "S17",
+    "S25"
    ],
    "tonnen": {
     "evidenz": "ABGELEITET",
@@ -3114,7 +3448,7 @@
         "freigabe": "FREIGEGEBEN",
         "hoch": 1,
         "name": "V13 Bougouni → Hainan Mining",
-        "quelle": "10.000 t/Monat (Ziel, ca.)",
+        "quelle": "10.000 t/Monat (Zielwert, ca.)",
         "ref": "flow:LIF-13",
         "wert": 120000.0
        }
@@ -3149,7 +3483,7 @@
     "liste": [
      {
       "art": "NETZ",
-      "fuer": "S15",
+      "fuer": "S16",
       "glied": "S10",
       "hinweis": null,
       "menge": {
@@ -3164,7 +3498,7 @@
      },
      {
       "art": "NETZ",
-      "fuer": "S15",
+      "fuer": "S16",
       "glied": "S5",
       "hinweis": null,
       "menge": {
@@ -3313,7 +3647,7 @@
    },
    "ersatz": [
     {
-     "fuer": "S15",
+     "fuer": "S16",
      "richtung": "ZUFLUSS",
      "weitere": [
       "S10",
@@ -3382,7 +3716,7 @@
     "liste": [
      {
       "art": "NETZ",
-      "fuer": "S15",
+      "fuer": "S16",
       "glied": "S10",
       "hinweis": null,
       "menge": {
@@ -3397,7 +3731,7 @@
      },
      {
       "art": "NETZ",
-      "fuer": "S15",
+      "fuer": "S16",
       "glied": "S4",
       "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
       "menge": {
@@ -3546,7 +3880,7 @@
    },
    "ersatz": [
     {
-     "fuer": "S15",
+     "fuer": "S16",
      "richtung": "ZUFLUSS",
      "weitere": [
       "S10",
@@ -3822,8 +4156,8 @@
    "ohne_abfluss": [],
    "ohne_zufluss": [
     "S12",
-    "S18",
-    "S26"
+    "S19",
+    "S27"
    ],
    "tonnen": {
     "evidenz": "ABGELEITET",
@@ -4024,7 +4358,7 @@
    ],
    "ohne_abfluss": [],
    "ohne_zufluss": [
-    "S27"
+    "S28"
    ],
    "tonnen": {
     "evidenz": "ABGELEITET",
@@ -4072,6 +4406,21 @@
    "ausweich": {
     "grund": null,
     "liste": [
+     {
+      "art": "NETZ",
+      "fuer": "S13",
+      "glied": "S11",
+      "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 150000.0,
+       "text": "150.000 t pro Jahr"
+      },
+      "name": "Pilgangoora",
+      "richtung": "ZUFLUSS",
+      "verbindung": "V3"
+     },
      {
       "art": "LAND",
       "fuer": "S8",
@@ -4200,13 +4549,21 @@
       "verbindung": null
      }
     ],
-    "mit_menge": 5
+    "mit_menge": 6
    },
    "dauer": {
     "evidenz": "UNKNOWN",
     "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
    },
-   "ersatz": [],
+   "ersatz": [
+    {
+     "fuer": "S13",
+     "richtung": "ZUFLUSS",
+     "weitere": [
+      "S11"
+     ]
+    }
+   ],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
     "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
@@ -4218,29 +4575,41 @@
      "verbindung": "V6"
     },
     {
-     "evidenz": "UNKNOWN",
-     "text": "unbekannt",
+     "evidenz": "BELEGT",
+     "text": "150.000 t pro Jahr",
      "verbindung": "V7"
     },
     {
      "evidenz": "UNKNOWN",
      "text": "unbekannt",
      "verbindung": "V18"
+    },
+    {
+     "evidenz": "UNKNOWN",
+     "text": "unbekannt",
+     "verbindung": "V19"
+    },
+    {
+     "evidenz": "UNKNOWN",
+     "text": "unbekannt",
+     "verbindung": "V20"
     }
    ],
    "ohne_abfluss": [],
    "ohne_zufluss": [
     "S14",
-    "S20",
-    "S23"
+    "S15",
+    "S21",
+    "S24"
    ],
    "tonnen": {
     "evidenz": "ABGELEITET",
-    "grund": "Weitere 2 Bögen an diesem Glied ohne Menge: V7, V18; die tatsächliche Menge kann größer sein.",
-    "hinweis": "Mengen verschiedener Waren oder Zeitbasen werden nicht addiert. Weitere 2 Bögen an diesem Glied ohne Menge: V7, V18; die tatsächliche Menge kann größer sein.",
+    "grund": "Weitere 3 Bögen an diesem Glied ohne Menge: V18, V19, V20; die tatsächliche Menge kann größer sein.",
+    "hinweis": "Mengen verschiedener Waren oder Zeitbasen werden nicht addiert. Weitere 3 Bögen an diesem Glied ohne Menge: V18, V19, V20; die tatsächliche Menge kann größer sein.",
     "ohne_menge": [
-     "V7",
-     "V18"
+     "V18",
+     "V19",
+     "V20"
     ],
     "posten": [
      {
@@ -4271,14 +4640,45 @@
        "V6"
       ],
       "ware": "Spodumenkonzentrat"
+     },
+     {
+      "art": "summe",
+      "eingaenge": [
+       {
+        "einheit": "t",
+        "freigabe": "FREIGEGEBEN",
+        "hoch": 1,
+        "name": "V7 Kathleen Valley → LG Energy Solution",
+        "quelle": "150 kt (Vertragsmenge Spodumenkonzentrat SC6, keine Liefermenge, Vertragsjahre 2 bis 5 (Jahr 1: 100 kt; Jahre 6 bis 10: 160 kt; 11 bis 15: 140 kt))",
+        "ref": "M-LIF-07",
+        "wert": 150000.0
+       }
+      ],
+      "einheit": "t",
+      "ergebnis": [
+       150000.0
+      ],
+      "evidenz": "ABGELEITET",
+      "formel": "150.000 t",
+      "hinweis": "Menge laut Quelle je Bogen (Lieferung, Vertrag oder Kapazität wie dort angegeben); keine Lieferbestätigung.",
+      "pro_jahr": true,
+      "rechenweg": "belegte Menge des einzigen Bogens mit Tonnen in dieser Gruppe: 150.000 t (V7)",
+      "t": 150000.0,
+      "text": "150.000 t Spodumenkonzentrat pro Jahr",
+      "verbindungen": [
+       "V7"
+      ],
+      "ware": "Spodumenkonzentrat"
      }
     ],
-    "text": "betroffen 10.831 t Spodumenkonzentrat im genannten Zeitraum"
+    "text": "betroffen 10.831 t Spodumenkonzentrat im genannten Zeitraum; 150.000 t Spodumenkonzentrat pro Jahr"
    },
    "verbindungen_weg": [
     "V6",
     "V7",
-    "V18"
+    "V18",
+    "V19",
+    "V20"
    ]
   },
   "S9": {
@@ -4433,7 +4833,7 @@
    ],
    "ohne_abfluss": [],
    "ohne_zufluss": [
-    "S19"
+    "S20"
    ],
    "tonnen": {
     "evidenz": "UNKNOWN",
@@ -4620,27 +5020,53 @@
     "baum": {
      "effektiv": 100.0,
      "kante": null,
-     "kinder": [],
+     "kinder": [
+      {
+       "effektiv": null,
+       "kante": "EK-CANMAX-PERSONEN-CANMAX",
+       "kinder": [],
+       "knoten": "R-CANMAX-PERSONEN",
+       "pflicht": true,
+       "schluss": "ENDE",
+       "schluss_text": "letzter Eigentümer"
+      }
+     ],
      "knoten": "R-CANMAX",
      "pflicht": true,
-     "schluss": "OFFEN",
-     "schluss_text": "endet ohne Beleg"
+     "schluss": "GESCHLOSSEN",
+     "schluss_text": "Eigentümer belegt"
     },
-    "belegt": false,
+    "belegt": true,
     "betreiber": null,
     "bezug": "IST",
     "bezug_belege": [],
     "bezug_freigabe": null,
     "bezug_herkunft": null,
     "bezug_text": "Das Glied ist diese Gesellschaft bzw. dieser Standort",
-    "ebenen": 0,
+    "ebenen": 1,
     "einschraenkung": null,
     "grund": null,
-    "status": "OFFEN",
-    "status_text": "Kette endet ohne Beleg",
+    "status": "VOLLSTAENDIG_FREIGEGEBEN",
+    "status_text": "bis oben belegt und freigegeben",
     "wurzel": "R-CANMAX"
    },
    "S14": {
+    "baum": null,
+    "belegt": false,
+    "betreiber": null,
+    "bezug": null,
+    "bezug_belege": [],
+    "bezug_freigabe": null,
+    "bezug_herkunft": null,
+    "bezug_text": null,
+    "ebenen": 0,
+    "einschraenkung": null,
+    "grund": "Quelle (Liontown ASX-Mitteilung 9.10.2025) nennt nur „Chengxin“, ohne vollen Firmennamen und Land; Eigentümer daher nicht zuordenbar, keine Gleichsetzung mit Chengxin Lithium Group ohne Beleg.",
+    "status": "UNBEKANNT",
+    "status_text": "Eigentümer unbekannt",
+    "wurzel": null
+   },
+   "S15": {
     "baum": {
      "effektiv": 100.0,
      "kante": null,
@@ -4664,7 +5090,7 @@
     "status_text": "Kette endet ohne Beleg",
     "wurzel": "R-FORD"
    },
-   "S15": {
+   "S16": {
     "baum": {
      "effektiv": 100.0,
      "kante": null,
@@ -4698,31 +5124,41 @@
     "status_text": "bis oben belegt und freigegeben",
     "wurzel": "R-GANFENG"
    },
-   "S16": {
+   "S17": {
     "baum": {
      "effektiv": 100.0,
      "kante": null,
-     "kinder": [],
+     "kinder": [
+      {
+       "effektiv": null,
+       "kante": "EK-HAINAN-PERSON-HAINAN",
+       "kinder": [],
+       "knoten": "R-HAINAN-PERSON",
+       "pflicht": true,
+       "schluss": "ENDE",
+       "schluss_text": "letzter Eigentümer"
+      }
+     ],
      "knoten": "R-HAINAN",
      "pflicht": true,
-     "schluss": "OFFEN",
-     "schluss_text": "endet ohne Beleg"
+     "schluss": "GESCHLOSSEN",
+     "schluss_text": "Eigentümer belegt"
     },
-    "belegt": false,
+    "belegt": true,
     "betreiber": null,
     "bezug": "IST",
     "bezug_belege": [],
     "bezug_freigabe": null,
     "bezug_herkunft": null,
     "bezug_text": "Das Glied ist diese Gesellschaft bzw. dieser Standort",
-    "ebenen": 0,
+    "ebenen": 1,
     "einschraenkung": null,
     "grund": null,
-    "status": "OFFEN",
-    "status_text": "Kette endet ohne Beleg",
+    "status": "VOLLSTAENDIG_FREIGEGEBEN",
+    "status_text": "bis oben belegt und freigegeben",
     "wurzel": "R-HAINAN"
    },
-   "S17": {
+   "S18": {
     "baum": {
      "effektiv": 100.0,
      "kante": null,
@@ -4766,7 +5202,7 @@
     "status_text": "bis oben belegt und freigegeben",
     "wurzel": "R-HUAYOU"
    },
-   "S18": {
+   "S19": {
     "baum": {
      "effektiv": 100.0,
      "kante": null,
@@ -4848,56 +5284,6 @@
     "status_text": "bis oben belegt und freigegeben",
     "wurzel": "R-KWINANA-TLEA"
    },
-   "S19": {
-    "baum": {
-     "effektiv": 100.0,
-     "kante": null,
-     "kinder": [
-      {
-       "effektiv": 50.0,
-       "kante": "EK-WESFARMERS-COVALENT",
-       "kinder": [],
-       "knoten": "R-WESFARMERS",
-       "pflicht": true,
-       "schluss": "OBERSTE",
-       "schluss_text": "oberste Gesellschaft"
-      },
-      {
-       "effektiv": null,
-       "kante": "EK-SQM-COVALENT",
-       "kinder": [],
-       "knoten": "R-SQM",
-       "pflicht": true,
-       "schluss": "OFFEN",
-       "schluss_text": "endet ohne Beleg"
-      }
-     ],
-     "knoten": "R-COVALENT",
-     "pflicht": true,
-     "schluss": "OFFEN",
-     "schluss_text": "endet ohne Beleg"
-    },
-    "belegt": true,
-    "betreiber": null,
-    "bezug": "ZUGEHOERIG",
-    "bezug_belege": [
-     {
-      "fundstelle": "PDF-Seite 40 (pdftotext ohne -layout)",
-      "quelle": "rk-wes-ar-2026-s040",
-      "rolle": "hauptbeleg",
-      "zitat": "Covalent Lithium, Wesfarmers’ 50 per cent joint venture with Sociedad Química y Minera (SQM), is a vertically integrated operation in Western Australia comprising a mine and concentrator at Mt Holland producing spodumene concentrate, and a refinery in Kwinana producing lithium hydroxide."
-     }
-    ],
-    "bezug_freigabe": "FREIGEGEBEN",
-    "bezug_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
-    "bezug_text": "Das Glied gehört laut Quelle zu",
-    "ebenen": 1,
-    "einschraenkung": null,
-    "grund": null,
-    "status": "OFFEN",
-    "status_text": "Kette endet ohne Beleg",
-    "wurzel": "R-COVALENT"
-   },
    "S2": {
     "baum": {
      "effektiv": 100.0,
@@ -4955,6 +5341,56 @@
      "kante": null,
      "kinder": [
       {
+       "effektiv": 50.0,
+       "kante": "EK-WESFARMERS-COVALENT",
+       "kinder": [],
+       "knoten": "R-WESFARMERS",
+       "pflicht": true,
+       "schluss": "OBERSTE",
+       "schluss_text": "oberste Gesellschaft"
+      },
+      {
+       "effektiv": null,
+       "kante": "EK-SQM-COVALENT",
+       "kinder": [],
+       "knoten": "R-SQM",
+       "pflicht": true,
+       "schluss": "OFFEN",
+       "schluss_text": "endet ohne Beleg"
+      }
+     ],
+     "knoten": "R-COVALENT",
+     "pflicht": true,
+     "schluss": "OFFEN",
+     "schluss_text": "endet ohne Beleg"
+    },
+    "belegt": true,
+    "betreiber": null,
+    "bezug": "ZUGEHOERIG",
+    "bezug_belege": [
+     {
+      "fundstelle": "PDF-Seite 40 (pdftotext ohne -layout)",
+      "quelle": "rk-wes-ar-2026-s040",
+      "rolle": "hauptbeleg",
+      "zitat": "Covalent Lithium, Wesfarmers’ 50 per cent joint venture with Sociedad Química y Minera (SQM), is a vertically integrated operation in Western Australia comprising a mine and concentrator at Mt Holland producing spodumene concentrate, and a refinery in Kwinana producing lithium hydroxide."
+     }
+    ],
+    "bezug_freigabe": "FREIGEGEBEN",
+    "bezug_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
+    "bezug_text": "Das Glied gehört laut Quelle zu",
+    "ebenen": 1,
+    "einschraenkung": null,
+    "grund": null,
+    "status": "OFFEN",
+    "status_text": "Kette endet ohne Beleg",
+    "wurzel": "R-COVALENT"
+   },
+   "S21": {
+    "baum": {
+     "effektiv": 100.0,
+     "kante": null,
+     "kinder": [
+      {
        "effektiv": null,
        "kante": "EK-LGCHEM-LGES",
        "kinder": [],
@@ -4983,7 +5419,7 @@
     "status_text": "bis oben belegt und freigegeben",
     "wurzel": "R-LGES"
    },
-   "S21": {
+   "S22": {
     "baum": {
      "effektiv": 100.0,
      "kante": null,
@@ -5036,22 +5472,6 @@
     "status_text": "Kette endet ohne Beleg",
     "wurzel": "R-P-PLS"
    },
-   "S22": {
-    "baum": null,
-    "belegt": false,
-    "betreiber": null,
-    "bezug": null,
-    "bezug_belege": [],
-    "bezug_freigabe": null,
-    "bezug_herkunft": null,
-    "bezug_text": null,
-    "ebenen": 0,
-    "einschraenkung": null,
-    "grund": "Eigentümer des Hafens ist mit keiner gelesenen Quelle belegt; Hafen- und Behördenseiten sind aus der Cloud gesperrt.",
-    "status": "UNBEKANNT",
-    "status_text": "Eigentümer unbekannt",
-    "wurzel": null
-   },
    "S23": {
     "baum": null,
     "belegt": false,
@@ -5085,6 +5505,22 @@
     "wurzel": null
    },
    "S25": {
+    "baum": null,
+    "belegt": false,
+    "betreiber": null,
+    "bezug": null,
+    "bezug_belege": [],
+    "bezug_freigabe": null,
+    "bezug_herkunft": null,
+    "bezug_text": null,
+    "ebenen": 0,
+    "einschraenkung": null,
+    "grund": "Eigentümer des Hafens ist mit keiner gelesenen Quelle belegt; Hafen- und Behördenseiten sind aus der Cloud gesperrt.",
+    "status": "UNBEKANNT",
+    "status_text": "Eigentümer unbekannt",
+    "wurzel": null
+   },
+   "S26": {
     "baum": {
      "effektiv": 100.0,
      "kante": null,
@@ -5128,7 +5564,7 @@
     "status_text": "bis oben belegt und freigegeben",
     "wurzel": "R-SINOMINE"
    },
-   "S26": {
+   "S27": {
     "baum": {
      "effektiv": 100.0,
      "kante": null,
@@ -5181,7 +5617,7 @@
     "status_text": "bis oben belegt und freigegeben",
     "wurzel": "R-TIANQI"
    },
-   "S27": {
+   "S28": {
     "baum": {
      "effektiv": 100.0,
      "kante": null,
@@ -5231,11 +5667,21 @@
           {
            "effektiv": null,
            "kante": "EK-HAINAN-KMUK",
-           "kinder": [],
+           "kinder": [
+            {
+             "effektiv": null,
+             "kante": "EK-HAINAN-PERSON-HAINAN",
+             "kinder": [],
+             "knoten": "R-HAINAN-PERSON",
+             "pflicht": true,
+             "schluss": "ENDE",
+             "schluss_text": "letzter Eigentümer"
+            }
+           ],
            "knoten": "R-HAINAN",
            "pflicht": true,
-           "schluss": "OFFEN",
-           "schluss_text": "endet ohne Beleg"
+           "schluss": "GESCHLOSSEN",
+           "schluss_text": "Eigentümer belegt"
           },
           {
            "effektiv": null,
@@ -5280,7 +5726,7 @@
     "bezug_freigabe": null,
     "bezug_herkunft": null,
     "bezug_text": "Das Glied ist diese Gesellschaft bzw. dieser Standort",
-    "ebenen": 3,
+    "ebenen": 4,
     "einschraenkung": null,
     "grund": null,
     "status": "OFFEN",
@@ -5514,8 +5960,8 @@
      "kinder": [],
      "knoten": "R-LIONTOWN",
      "pflicht": true,
-     "schluss": "OFFEN",
-     "schluss_text": "endet ohne Beleg"
+     "schluss": "OBERSTE",
+     "schluss_text": "oberste Gesellschaft"
     },
     "belegt": true,
     "betreiber": null,
@@ -5534,8 +5980,8 @@
     "ebenen": 0,
     "einschraenkung": null,
     "grund": null,
-    "status": "OFFEN",
-    "status_text": "Kette endet ohne Beleg",
+    "status": "VOLLSTAENDIG_FREIGEGEBEN",
+    "status_text": "bis oben belegt und freigegeben",
     "wurzel": "R-LIONTOWN"
    },
    "S9": {
@@ -5613,6 +6059,30 @@
     "stand": "2026-06-30",
     "text": null,
     "von": "R-ALBEMARLE"
+   },
+   {
+    "an": "R-CANMAX",
+    "anteil": null,
+    "atlas_id": null,
+    "beherrschend": true,
+    "belege": [
+     {
+      "fundstelle": "PDF-Seite 79 (pdftotext ohne -layout)",
+      "quelle": "rk-thxn-ar-2025-s079",
+      "rolle": "hauptbeleg",
+      "zitat": "实际控制人性质：境内自然人 实际控制人类型：自然人 实际控制人姓名 裴振华 容建芬"
+     }
+    ],
+    "einschraenkung": null,
+    "evidenz": "FACT",
+    "freigabe": "FREIGEGEBEN",
+    "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-17 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+    "id": "EK-CANMAX-PERSONEN-CANMAX",
+    "mass": "KONTROLLE",
+    "mass_text": "Kontrolle",
+    "stand": "2025-12-31",
+    "text": "tatsächliche Kontrolle (实际控制人), zugleich Mehrheitsaktionäre (控股股东); Anteile nicht genannt",
+    "von": "R-CANMAX-PERSONEN"
    },
    {
     "an": "R-HUAYOU-HOLDING",
@@ -5763,6 +6233,30 @@
     "stand": "2025-12-31",
     "text": null,
     "von": "R-HAINAN"
+   },
+   {
+    "an": "R-HAINAN",
+    "anteil": null,
+    "atlas_id": null,
+    "beherrschend": true,
+    "belege": [
+     {
+      "fundstelle": "PDF-Seite 100 (pdftotext ohne -layout)",
+      "quelle": "rk-hnky-ar-2025-s100",
+      "rolle": "hauptbeleg",
+      "zitat": "(二) 实际控制人情况 … 2、 自然人 √适用 □不适用 姓名 … 郭广昌 中国 是 复星国际执行董事兼董事长，复星创始人"
+     }
+    ],
+    "einschraenkung": null,
+    "evidenz": "FACT",
+    "freigabe": "FREIGEGEBEN",
+    "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-17 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+    "id": "EK-HAINAN-PERSON-HAINAN",
+    "mass": "KONTROLLE",
+    "mass_text": "Kontrolle",
+    "stand": "2025-12-31",
+    "text": "tatsächliche Kontrolle (实际控制人), über den Mehrheitsaktionär Shanghai Fosun High Technology; Anteil nicht genannt",
+    "von": "R-HAINAN-PERSON"
    },
    {
     "an": "R-HUAYOU",
@@ -6329,13 +6823,32 @@
     "art": "GESELLSCHAFT",
     "art_text": "Gesellschaft",
     "atlas_id": null,
+    "belege": [
+     {
+      "fundstelle": "PDF-Seite 7 (pdftotext ohne -layout)",
+      "quelle": "rk-thxn-ar-2025-s007",
+      "rolle": "hauptbeleg",
+      "zitat": "公司的中文名称 苏州天华新能源科技股份有限公司 … 公司的外文名称（如有） Canmax Technologies Co., Ltd."
+     }
+    ],
+    "hinweis": null,
+    "land": "CN",
+    "lei": null,
+    "name": "Canmax Technologies Co. Ltd (苏州天华新能源科技股份有限公司)",
+    "oberste": null,
+    "offen": null
+   },
+   "R-CANMAX-PERSONEN": {
+    "art": "PERSON",
+    "art_text": "natürliche Person",
+    "atlas_id": null,
     "belege": [],
     "hinweis": null,
     "land": "CN",
     "lei": null,
-    "name": "Canmax Technologies Co. Ltd",
+    "name": "裴振华, 容建芬 (tatsächliche Kontrolle, 实际控制人)",
     "oberste": null,
-    "offen": "Keine gelesene Quelle zu Eigentümern; Firmenseiten und Register sind aus der Cloud gesperrt oder ohne Eintrag."
+    "offen": null
    },
    "R-CAUCHARI": {
     "art": "STANDORT",
@@ -6463,7 +6976,19 @@
     "lei": null,
     "name": "Hainan Mining Co., Ltd. (海南矿业股份有限公司)",
     "oberste": null,
-    "offen": "Eigentümer von Hainan Mining nennt keine gelesene Quelle; LEI-Eintrag abgelaufen."
+    "offen": null
+   },
+   "R-HAINAN-PERSON": {
+    "art": "PERSON",
+    "art_text": "natürliche Person",
+    "atlas_id": null,
+    "belege": [],
+    "hinweis": "Kontrolle laut Jahresbericht über den Mehrheitsaktionär 上海复星高科技（集团）有限公司 (Shanghai Fosun High Technology); Zwischenstufen und Anteile nennt die gelesene Seite nicht.",
+    "land": "CN",
+    "lei": null,
+    "name": "郭广昌 (Guo Guangchang, tatsächliche Kontrolle, 实际控制人)",
+    "oberste": null,
+    "offen": null
    },
    "R-HUAYOU": {
     "art": "GESELLSCHAFT",
@@ -6622,13 +7147,45 @@
     "art": "GESELLSCHAFT",
     "art_text": "Gesellschaft",
     "atlas_id": null,
-    "belege": [],
-    "hinweis": null,
+    "belege": [
+     {
+      "fundstelle": "JSON (Golden Copy 2026-11-17)",
+      "quelle": "rk-gleif-529900LT0V2IEL7WZY56",
+      "rolle": "hauptbeleg",
+      "zitat": "\"lei\":\"529900LT0V2IEL7WZY56\" … \"legalName\":{\"name\":\"LIONTOWN LIMITED\" … \"otherNames\":[{\"name\":\"LIONTOWN RESOURCES LIMITED\",\"language\":\"en\",\"type\":\"PREVIOUS_LEGAL_NAME\"}] … \"registeredAs\":\"118 153 825\""
+     },
+     {
+      "fundstelle": "PDF-Seite 1 (pdftotext ohne -layout)",
+      "quelle": "rk-ltr-hy-2026-s001",
+      "rolle": "zusatzbeleg",
+      "zitat": "Liontown Limited ABN: 39 118 153 825"
+     }
+    ],
+    "hinweis": "Gleichheit belegt: LEI-Eintrag \"LIONTOWN LIMITED\" führt \"LIONTOWN RESOURCES LIMITED\" als früheren Namen und die Registernummer 118 153 825, die auch die ABN der Gesellschaft im Halbjahresbericht trägt.",
     "land": "AU",
-    "lei": null,
+    "lei": "529900LT0V2IEL7WZY56",
     "name": "Liontown Resources Limited",
-    "oberste": null,
-    "offen": "Börsennotiert (ASX: LTR); keine gelesene Quelle nennt eine beherrschende Mutter. Der LEI-Eintrag \"LIONTOWN LIMITED\" trägt einen anderen Namen und wird ohne Beleg der Gleichheit nicht verwendet."
+    "oberste": {
+     "belege": [
+      {
+       "fundstelle": "JSON (Golden Copy 2026-11-17)",
+       "quelle": "rk-gleif-529900LT0V2IEL7WZY56-oben",
+       "rolle": "hauptbeleg",
+       "zitat": "\"lei\":\"529900LT0V2IEL7WZY56\",\"category\":\"ULTIMATE_ACCOUNTING_CONSOLIDATION_PARENT\",\"reason\":\"NO_KNOWN_PERSON\""
+      },
+      {
+       "fundstelle": "JSON (Golden Copy 2026-11-17)",
+       "quelle": "rk-gleif-529900LT0V2IEL7WZY56",
+       "rolle": "zusatzbeleg",
+       "zitat": "\"lei\":\"529900LT0V2IEL7WZY56\" … \"legalName\":{\"name\":\"LIONTOWN LIMITED\""
+      }
+     ],
+     "freigabe": "FREIGEGEBEN",
+     "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-17 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+     "grund": "KEINE_MUTTER",
+     "text": "Im LEI-Register ist keine Person oder Gesellschaft eingetragen, die die Gesellschaft beherrscht (Angabe der Gesellschaft; Großaktionäre unter der Beherrschungsschwelle sind damit nicht ausgeschlossen)."
+    },
+    "offen": null
    },
    "R-LMLB": {
     "art": "GESELLSCHAFT",
@@ -6888,9 +7445,9 @@
    }
   },
   "messung": {
-   "glieder": 27,
-   "glieder_eigentum_belegt": 20,
-   "glieder_unbekannt_mit_grund": 3,
+   "glieder": 28,
+   "glieder_eigentum_belegt": 22,
+   "glieder_unbekannt_mit_grund": 4,
    "je_glied": {
     "S1": {
      "ebenen": 0,
@@ -6909,32 +7466,32 @@
      "status": "OFFEN"
     },
     "S13": {
-     "ebenen": 0,
-     "status": "OFFEN"
+     "ebenen": 1,
+     "status": "VOLLSTAENDIG_FREIGEGEBEN"
     },
     "S14": {
      "ebenen": 0,
-     "status": "OFFEN"
+     "status": "UNBEKANNT"
     },
     "S15": {
-     "ebenen": 1,
-     "status": "VOLLSTAENDIG_FREIGEGEBEN"
-    },
-    "S16": {
      "ebenen": 0,
      "status": "OFFEN"
     },
+    "S16": {
+     "ebenen": 1,
+     "status": "VOLLSTAENDIG_FREIGEGEBEN"
+    },
     "S17": {
-     "ebenen": 2,
+     "ebenen": 1,
      "status": "VOLLSTAENDIG_FREIGEGEBEN"
     },
     "S18": {
-     "ebenen": 4,
+     "ebenen": 2,
      "status": "VOLLSTAENDIG_FREIGEGEBEN"
     },
     "S19": {
-     "ebenen": 1,
-     "status": "OFFEN"
+     "ebenen": 4,
+     "status": "VOLLSTAENDIG_FREIGEGEBEN"
     },
     "S2": {
      "ebenen": 2,
@@ -6942,15 +7499,15 @@
     },
     "S20": {
      "ebenen": 1,
-     "status": "VOLLSTAENDIG_FREIGEGEBEN"
-    },
-    "S21": {
-     "ebenen": 2,
      "status": "OFFEN"
     },
+    "S21": {
+     "ebenen": 1,
+     "status": "VOLLSTAENDIG_FREIGEGEBEN"
+    },
     "S22": {
-     "ebenen": 0,
-     "status": "UNBEKANNT"
+     "ebenen": 2,
+     "status": "OFFEN"
     },
     "S23": {
      "ebenen": 0,
@@ -6961,19 +7518,23 @@
      "status": "UNBEKANNT"
     },
     "S25": {
-     "ebenen": 2,
-     "status": "VOLLSTAENDIG_FREIGEGEBEN"
+     "ebenen": 0,
+     "status": "UNBEKANNT"
     },
     "S26": {
      "ebenen": 2,
      "status": "VOLLSTAENDIG_FREIGEGEBEN"
     },
     "S27": {
+     "ebenen": 2,
+     "status": "VOLLSTAENDIG_FREIGEGEBEN"
+    },
+    "S28": {
      "ebenen": 1,
      "status": "VOLLSTAENDIG_FREIGEGEBEN"
     },
     "S3": {
-     "ebenen": 3,
+     "ebenen": 4,
      "status": "OFFEN"
     },
     "S4": {
@@ -6994,47 +7555,47 @@
     },
     "S8": {
      "ebenen": 0,
-     "status": "OFFEN"
+     "status": "VOLLSTAENDIG_FREIGEGEBEN"
     },
     "S9": {
      "ebenen": 1,
      "status": "OFFEN"
     }
    },
-   "kanten": 28,
-   "kanten_freigegeben": 28,
+   "kanten": 30,
+   "kanten_freigegeben": 30,
    "kanten_kandidat": 0,
    "kanten_mit_anteil": 16,
-   "knoten": 40,
+   "knoten": 42,
    "letzte_eigentuemer": [
     "Jiang Weiping",
     "Natürliche Person(en), im LEI-Register nicht namentlich genannt",
     "Regierung von Mali",
     "Zhang Jing",
     "刘新国, 王平卫, 欧学钢, 汪芳淼, 魏云峰, 吴志华, 陈海舟 (tatsächliche Kontrolle, 实际控制人)",
+    "裴振华, 容建芬 (tatsächliche Kontrolle, 实际控制人)",
     "郑戎, 张婷, 孟岩 (tatsächliche Kontrolle, 实际控制人)",
+    "郭广昌 (Guo Guangchang, tatsächliche Kontrolle, 实际控制人)",
     "陈雪华 (Chen Xuehua)"
    ],
    "oberste_gesellschaften": [
     "IGO Limited",
     "LG Chem, Ltd. ((주) 엘지화학)",
+    "Liontown Resources Limited",
     "Wesfarmers Limited"
    ],
-   "offen": 12,
+   "offen": 9,
    "offene_knoten": [
     "Albemarle Corporation",
-    "Canmax Technologies Co. Ltd",
     "Ford Motor Company",
-    "Hainan Mining Co., Ltd. (海南矿业股份有限公司)",
     "Kodal Minerals plc",
-    "Liontown Resources Limited",
     "POSCO Holdings Inc.",
     "Sociedad Química y Minera (SQM)"
    ],
    "schwelle_prozent": 10.0,
-   "unbekannt": 4,
-   "vollstaendig": 11,
-   "vollstaendig_freigegeben": 11,
+   "unbekannt": 5,
+   "vollstaendig": 14,
+   "vollstaendig_freigegeben": 14,
    "vollstaendig_kandidat": 0,
    "zweitpruefung_offen": 0
   },
@@ -7149,6 +7710,26 @@
     "titel": "Level-2 oberste Mutter 5299000VV1CZVF5K9C16",
     "url": "https://api.gleif.org/api/v1/lei-records/5299000VV1CZVF5K9C16/ultimate-parent-reporting-exception"
    },
+   "rk-gleif-529900LT0V2IEL7WZY56": {
+    "abgerufen": "2026-11-17",
+    "art": "REGISTER",
+    "fundstelle": "JSON (Golden Copy 2026-11-17)",
+    "herausgeber": "Global Legal Entity Identifier Foundation (GLEIF)",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/gleif-529900LT0V2IEL7WZY56-eintrag.json",
+    "text_artifact_sha256": "20471d770b1cadd3993944ca7fcbefbaf59ed88e8ff163b8a4ee02fea4e7dd69",
+    "titel": "LEI-Eintrag 529900LT0V2IEL7WZY56",
+    "url": "https://api.gleif.org/api/v1/lei-records/529900LT0V2IEL7WZY56"
+   },
+   "rk-gleif-529900LT0V2IEL7WZY56-oben": {
+    "abgerufen": "2026-11-17",
+    "art": "REGISTER",
+    "fundstelle": "JSON (Golden Copy 2026-11-17)",
+    "herausgeber": "Global Legal Entity Identifier Foundation (GLEIF)",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/gleif-529900LT0V2IEL7WZY56-ultimate-ausnahme.json",
+    "text_artifact_sha256": "03d9a7e3929c0ba4304f68a87e16d90a9c08bd3f54a07c91b54036101184b1fe",
+    "titel": "Level-2 oberste Mutter 529900LT0V2IEL7WZY56",
+    "url": "https://api.gleif.org/api/v1/lei-records/529900LT0V2IEL7WZY56/ultimate-parent-reporting-exception"
+   },
    "rk-gleif-5493003L32ZX9557ST85": {
     "abgerufen": "2026-11-16",
     "art": "REGISTER",
@@ -7229,6 +7810,16 @@
     "titel": "Level-2 oberste Mutter HDBLS2Q6GV1LSKQPBS54",
     "url": "https://api.gleif.org/api/v1/lei-records/HDBLS2Q6GV1LSKQPBS54/ultimate-parent-reporting-exception"
    },
+   "rk-hnky-ar-2025-s100": {
+    "abgerufen": "2026-11-17",
+    "art": "COMPANY_PRIMARY",
+    "fundstelle": "PDF-Seite 100 (pdftotext ohne -layout)",
+    "herausgeber": "Hainan Mining Co., Ltd. (海南矿业, SSE 601969)",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/hnky-ar-2025-p100.txt",
+    "text_artifact_sha256": "32fb3ccfb6a1cca139898e0bc37b4a41c1d241e78eeb93bf4c72e7ed9006c2e2",
+    "titel": "2025年年度报告 (Jahresbericht 2025, cninfo)",
+    "url": "https://static.cninfo.com.cn/finalpage/2026-03-25/1225027875.PDF#page=100"
+   },
    "rk-huayou-ar-2025-s011": {
     "abgerufen": "2026-11-08",
     "art": "COMPANY_PRIMARY",
@@ -7289,6 +7880,16 @@
     "titel": "Final Results for the 9 months to 31 December 2025 (RNS, AIM)",
     "url": "https://www.investegate.co.uk/announcement/rns/kodal-minerals--kod/final-results-for-the-9-months-to-31-december-2025/9632769"
    },
+   "rk-ltr-hy-2026-s001": {
+    "abgerufen": "2026-11-17",
+    "art": "COMPANY_PRIMARY",
+    "fundstelle": "PDF-Seite 1 (pdftotext ohne -layout)",
+    "herausgeber": "Liontown Limited",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/ltr-hy-2026-p001.txt",
+    "text_artifact_sha256": "d9d12d620891c60875dd3a27c8a2761ddf25d8ebd3b80b4d52b43e9654abc0c5",
+    "titel": "Financial Report Half year ended 31 December 2025",
+    "url": "https://announcements.asx.com.au/asxpdf/20260312/pdf/06xbbdv7pppvv3.pdf"
+   },
    "rk-ltr-q-2024-09-s001": {
     "abgerufen": "2026-11-16",
     "art": "COMPANY_PRIMARY",
@@ -7338,6 +7939,26 @@
     "text_artifact_sha256": "c47a38c7818cb5fa58a42a052b6fa26fe9cc8c682cf34e14ad9618f558f539c5",
     "titel": "2025年年度报告 (Jahresbericht 2025, cninfo)",
     "url": "https://static.cninfo.com.cn/finalpage/2026-04-10/1225089391.PDF#page=99"
+   },
+   "rk-thxn-ar-2025-s007": {
+    "abgerufen": "2026-11-17",
+    "art": "COMPANY_PRIMARY",
+    "fundstelle": "PDF-Seite 7 (pdftotext ohne -layout)",
+    "herausgeber": "Suzhou TA&A / Canmax Technologies Co., Ltd. (天华新能, SZSE 300390)",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/thxn-ar-2025-p007.txt",
+    "text_artifact_sha256": "8c29088843247cf484314229152f2d4ee443f4031a64e9947e383c3ac599945f",
+    "titel": "2025年年度报告（更正后） (Jahresbericht 2025, korrigierte Fassung, cninfo)",
+    "url": "https://static.cninfo.com.cn/finalpage/2026-04-02/1225077003.PDF#page=7"
+   },
+   "rk-thxn-ar-2025-s079": {
+    "abgerufen": "2026-11-17",
+    "art": "COMPANY_PRIMARY",
+    "fundstelle": "PDF-Seite 79 (pdftotext ohne -layout)",
+    "herausgeber": "Suzhou TA&A / Canmax Technologies Co., Ltd. (天华新能, SZSE 300390)",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/thxn-ar-2025-p079.txt",
+    "text_artifact_sha256": "3ff50f885cec19f60c12181fc535b901be76be7b0ee6bccde90c746c5ce7d099",
+    "titel": "2025年年度报告（更正后） (Jahresbericht 2025, korrigierte Fassung, cninfo)",
+    "url": "https://static.cninfo.com.cn/finalpage/2026-04-02/1225077003.PDF#page=79"
    },
    "rk-tqi-ar-2025-s015": {
     "abgerufen": "2026-11-16",
@@ -8329,23 +8950,136 @@
     "urteil": "BESTAETIGT",
     "ziel_id": "lithium/lithium-site-legacy-row-161",
     "ziel_typ": "glied"
+   },
+   {
+    "abgleich": "",
+    "aufgabe": "Ziel kante/EK-HAINAN-PERSON-HAINAN. Frage: Belegt die Quelle, dass 郭广昌 (Guo Guangchang, tatsächliche Kontrolle, 实际控制人) an Hainan Mining Co., Ltd. (海南矿业股份有限公司) beteiligt ist (ohne genannten Anteil)? Stand 2025-12-31. Quellen: rk-hnky-ar-2025-s100 (PDF-Seite 100 (pdftotext ohne -layout)).",
+    "aussage": "Belegt die Quelle, dass 郭广昌 (Guo Guangchang, tatsächliche Kontrolle, 实际控制人) an Hainan Mining Co., Ltd. (海南矿业股份有限公司) beteiligt ist (ohne genannten Anteil)? Stand 2025-12-31.",
+    "belege": [
+     {
+      "quelle": "rk-hnky-ar-2025-s100",
+      "zitat": [
+       "海南矿业股份有限公司2025 年年度报告",
+       "实际控制人情况 1、 法人 □适用 √不适用 2、 自然人 √适用 □不适用",
+       "郭广昌 中国 是 复星国际执行董事兼董事长，复星创始人"
+      ]
+     }
+    ],
+    "blind": true,
+    "erstmodell": "claude-opus-5-5",
+    "erstpruefung_sitzung": "session_01JgcA7Sp8c3GDTrC8rh3xk7",
+    "geprueft_am": "2026-11-17",
+    "hinweis": "Seitenkopf: Jahresbericht 2025 der 海南矿业股份有限公司; Abschnitt 实际控制人情况 nennt als natürliche Person 郭广昌. Kein Anteil genannt.",
+    "pruef_id": "AE9",
+    "pruefer": "auto-zweitpruefung (claude-sonnet-5-5, blind)",
+    "pruefmodell": "claude-sonnet-5-5",
+    "pruefweg": "subagent",
+    "quelle_frisch_geladen": false,
+    "regel": "Eddie Sablah 2026-11-16: Regel 3 automatisch, blinde Zweitprüfung durch ein zweites Modell + Programmprüfung; Stichprobe 5 Fälle/Monat bleibt",
+    "sitzung": "auto:claude-sonnet-5-5:2026-11-17",
+    "textkopie_geprueft": true,
+    "urteil": "BESTAETIGT",
+    "verfahren": "AUTO_ZWEITPRUEFUNG",
+    "wert": {
+     "einheit": "",
+     "zahl_text": ""
+    },
+    "ziel_id": "EK-HAINAN-PERSON-HAINAN",
+    "ziel_typ": "kante"
+   },
+   {
+    "abgleich": "",
+    "aufgabe": "Ziel oberste/R-LIONTOWN. Frage: Belegt die Quelle diese Aussage über Liontown Resources Limited: Im LEI-Register ist keine Person oder Gesellschaft eingetragen, die die Gesellschaft beherrscht (Angabe der Gesellschaft; Großaktionäre unter der Beherrschungsschwelle sind damit nicht ausgeschlossen).? Quellen: rk-gleif-529900LT0V2IEL7WZY56 (JSON (Golden Copy 2026-11-17)); rk-gleif-529900LT0V2IEL7WZY56-oben (JSON (Golden Copy 2026-11-17)).",
+    "aussage": "Belegt die Quelle diese Aussage über Liontown Resources Limited: Im LEI-Register ist keine Person oder Gesellschaft eingetragen, die die Gesellschaft beherrscht (Angabe der Gesellschaft; Großaktionäre unter der Beherrschungsschwelle sind damit nicht ausgeschlossen).?",
+    "belege": [
+     {
+      "quelle": "rk-gleif-529900LT0V2IEL7WZY56",
+      "zitat": [
+       "\"name\":\"LIONTOWN RESOURCES LIMITED\""
+      ]
+     },
+     {
+      "quelle": "rk-gleif-529900LT0V2IEL7WZY56-oben",
+      "zitat": [
+       "\"category\":\"ULTIMATE_ACCOUNTING_CONSOLIDATION_PARENT\"",
+       "\"reason\":\"NO_KNOWN_PERSON\""
+      ]
+     }
+    ],
+    "blind": true,
+    "erstmodell": "claude-opus-5-5",
+    "erstpruefung_sitzung": "session_01JgcA7TdgLRrqKV9kyFuE5E",
+    "geprueft_am": "2026-11-17",
+    "hinweis": "GLEIF-Berichtsausnahme fuer den ultimativen Konsolidierungsmutter-Eintrag mit Grund NO_KNOWN_PERSON; LIONTOWN RESOURCES LIMITED ist als frueherer Rechtsname des Eintrags (jetzt LIONTOWN LIMITED) gefuehrt. Angabe der Gesellschaft, Grossaktionaere unter der Schwelle nicht ausgeschlossen.",
+    "pruef_id": "AE10",
+    "pruefer": "auto-zweitpruefung (claude-sonnet-5-5, blind)",
+    "pruefmodell": "claude-sonnet-5-5",
+    "pruefweg": "subagent",
+    "quelle_frisch_geladen": false,
+    "regel": "Eddie Sablah 2026-11-16: Regel 3 automatisch, blinde Zweitprüfung durch ein zweites Modell + Programmprüfung; Stichprobe 5 Fälle/Monat bleibt",
+    "sitzung": "auto:claude-sonnet-5-5:2026-11-17",
+    "textkopie_geprueft": true,
+    "urteil": "BESTAETIGT",
+    "verfahren": "AUTO_ZWEITPRUEFUNG",
+    "wert": {
+     "einheit": "",
+     "zahl_text": ""
+    },
+    "ziel_id": "R-LIONTOWN",
+    "ziel_typ": "oberste"
+   },
+   {
+    "abgleich": "",
+    "aufgabe": "Ziel kante/EK-CANMAX-PERSONEN-CANMAX. Frage: Belegt die Quelle, dass 裴振华, 容建芬 (tatsächliche Kontrolle, 实际控制人) an Canmax Technologies Co. Ltd (苏州天华新能源科技股份有限公司) beteiligt ist (ohne genannten Anteil)? Stand 2025-12-31. Quellen: rk-thxn-ar-2025-s079 (PDF-Seite 79 (pdftotext ohne -layout)).",
+    "aussage": "Belegt die Quelle, dass 裴振华, 容建芬 (tatsächliche Kontrolle, 实际控制人) an Canmax Technologies Co. Ltd (苏州天华新能源科技股份有限公司) beteiligt ist (ohne genannten Anteil)? Stand 2025-12-31.",
+    "belege": [
+     {
+      "quelle": "rk-thxn-ar-2025-s079",
+      "zitat": [
+       "苏州天华新能源科技股份有限公司 2025 年年度报告全文",
+       "控股股东姓名 国籍 裴振华 容建芬",
+       "实际控制人姓名 裴振华 容建芬"
+      ]
+     }
+    ],
+    "blind": true,
+    "erstmodell": "claude-opus-5-5",
+    "erstpruefung_sitzung": "session_01JgcA7Sp8c3GDTrC8rh3xk7",
+    "geprueft_am": "2026-11-17",
+    "hinweis": "Seite 79 des Jahresberichts 2025 von 苏州天华新能源科技股份有限公司 nennt 裴振华 und 容建芬 als Kontrollaktionäre (控股股东) und tatsächliche Kontrolleure (实际控制人); ein Anteil wird auf dieser Seite nicht genannt. Der englische Name Canmax steht nicht im Text, der chinesische Firmenname im Kopf.",
+    "pruef_id": "AE11",
+    "pruefer": "auto-zweitpruefung (claude-sonnet-5-5, blind)",
+    "pruefmodell": "claude-sonnet-5-5",
+    "pruefweg": "subagent",
+    "quelle_frisch_geladen": false,
+    "regel": "Eddie Sablah 2026-11-16: Regel 3 automatisch, blinde Zweitprüfung durch ein zweites Modell + Programmprüfung; Stichprobe 5 Fälle/Monat bleibt",
+    "sitzung": "auto:claude-sonnet-5-5:2026-11-17",
+    "textkopie_geprueft": true,
+    "urteil": "BESTAETIGT",
+    "verfahren": "AUTO_ZWEITPRUEFUNG",
+    "wert": {
+     "einheit": "",
+     "zahl_text": ""
+    },
+    "ziel_id": "EK-CANMAX-PERSONEN-CANMAX",
+    "ziel_typ": "kante"
    }
   ]
  },
  "eingaben": {
-  "analysis/rohstoffe/eigentum/eigentumskette.json": "dc4e41fa1f2e547e39408fdc7c4a07cca001c0609181a7b1a7b0a12d8ef49bb6",
-  "analysis/rohstoffe/fluss-freigaben.jsonl": "7bcb03cd6f866779a996144af573a32a6723c19e37c1648f6b5dfbf2b642a149",
-  "analysis/rohstoffe/lithium/kandidaten.json": "f03037cc3e571b198fc0c3d19c39466ea62383fd895a9efcefafcb3c81751bf1",
+  "analysis/rohstoffe/eigentum/eigentumskette.json": "6d0a735986003d2f59a6eeedb6ba08e69ea4ee7d910ccab607eb8bf20c92aae0",
+  "analysis/rohstoffe/fluss-freigaben.jsonl": "aaabbdac9c8a96ba0a688d2348a9b29df912fd5f6d05c9915280d05f3e396d66",
+  "analysis/rohstoffe/lithium/kandidaten.json": "f5c23d3ae23edae33a67eeac555ca8336c0df5385e471aaeb5d7bac5880de53c",
   "analysis/rohstoffe/lithium/markt.json": "7a16c8ab88fda7ebdb65896703bbc07c8b47658a3f351d8c08df37313ea69303",
   "analysis/rohstoffe/mengen/annahmen-snapshot.json": "5169bc01abcdff017b11b6e2e0bdb0abbc934a843f86a8fbbf4dbdd3585165b1",
-  "analysis/rohstoffe/mengen/mengen.json": "94e6e728b63635daef1ffe47c595cd03fd4f5644a158aa61f7605bbf497706b6",
-  "analysis/rohstoffe/mengen/zweitpruefung.jsonl": "fb323cf5f6ee23aa7b0f563979efed73dcdbbdd2cf0203a287013f000c7d6770"
+  "analysis/rohstoffe/mengen/mengen.json": "e3cf36b504d52d37e77dfe24088ea1175213209c2f3448b9288da24bc3b4cc6b",
+  "analysis/rohstoffe/mengen/zweitpruefung.jsonl": "e093861fa8ba9484dafa843cac1e2e03d7c05dc79a1909e4e29a39985fbe865b"
  },
  "erzeugt_von": "scripts/analysis/rohstoffe/rohstoffkette.py",
  "kette": {
   "glieder": [
    "S2",
-   "S25"
+   "S26"
   ],
   "stufen": 2,
   "text": "Bikita → Sinomine",
@@ -8356,7 +9090,7 @@
  "kundenfrage": {
   "antwort": "Erfasst: Bikita → Sinomine (1 Verbindung, alle freigegeben). Menge belegt auf 1 von 1. Ob die Kette weiter bis zu einem Endprodukt reicht, ist im Atlas nicht erfasst.",
   "frage": "Woher kommt das Lithium, das Sinomine bezieht, über welche Glieder läuft es, in welcher Menge, und welche Glieder sind belegt?",
-  "kunde": "S25"
+  "kunde": "S26"
  },
  "preisbasis": null,
  "preisbasis_grund": "Keine tägliche Notierung aus lesbarer, freigegebener Quelle: Lithiumcarbonat, -hydroxid und Spodumen notieren täglich nur bei Preisagenturen und Börsen (lizenzpflichtig, Hosts nicht freigegeben). Wert mit Annahmen nutzt den Jahrespreis 2025 (USGS MCS 2026).",
@@ -8388,12 +9122,12 @@
    }
   ],
   "messung": {
-   "anteil_belegt_prozent": 83.3,
-   "belegt": 90,
-   "belegt_nur_landesebene": 63,
-   "belegt_standort_oder_firma": 27,
-   "felder": 108,
-   "glieder": 27,
+   "anteil_belegt_prozent": 84.8,
+   "belegt": 95,
+   "belegt_nur_landesebene": 67,
+   "belegt_standort_oder_firma": 28,
+   "felder": 112,
+   "glieder": 28,
    "je_glied": {
     "S1": {
      "KONZENTRATION": "BELEGT_LAND",
@@ -8499,8 +9233,8 @@
     },
     "S25": {
      "KONZENTRATION": "UNBEKANNT",
-     "LAENDERRISIKO": "UNBEKANNT",
-     "NATURGEFAHREN": "UNBEKANNT",
+     "LAENDERRISIKO": "BELEGT_LAND",
+     "NATURGEFAHREN": "BELEGT_LAND",
      "SANKTIONEN": "BELEGT_STANDORT"
     },
     "S26": {
@@ -8510,6 +9244,12 @@
      "SANKTIONEN": "BELEGT_STANDORT"
     },
     "S27": {
+     "KONZENTRATION": "UNBEKANNT",
+     "LAENDERRISIKO": "BELEGT_LAND",
+     "NATURGEFAHREN": "BELEGT_LAND",
+     "SANKTIONEN": "BELEGT_STANDORT"
+    },
+    "S28": {
      "KONZENTRATION": "UNBEKANNT",
      "LAENDERRISIKO": "BELEGT_LAND",
      "NATURGEFAHREN": "BELEGT_LAND",
@@ -8563,28 +9303,28 @@
      "belegt": 11,
      "belegt_nur_landesebene": 11,
      "belegt_standort_oder_firma": 0,
-     "unbekannt": 16
+     "unbekannt": 17
     },
     "LAENDERRISIKO": {
-     "belegt": 26,
-     "belegt_nur_landesebene": 26,
+     "belegt": 28,
+     "belegt_nur_landesebene": 28,
      "belegt_standort_oder_firma": 0,
-     "unbekannt": 1
+     "unbekannt": 0
     },
     "NATURGEFAHREN": {
-     "belegt": 26,
-     "belegt_nur_landesebene": 26,
+     "belegt": 28,
+     "belegt_nur_landesebene": 28,
      "belegt_standort_oder_firma": 0,
-     "unbekannt": 1
+     "unbekannt": 0
     },
     "SANKTIONEN": {
-     "belegt": 27,
+     "belegt": 28,
      "belegt_nur_landesebene": 0,
-     "belegt_standort_oder_firma": 27,
+     "belegt_standort_oder_firma": 28,
      "unbekannt": 0
     }
    },
-   "unbekannt": 18
+   "unbekannt": 17
   },
   "regeln": [
    "Länderrisiko und Naturgefahren nur aus den Reisehinweisen des britischen Außenministeriums (FCDO), Antwort unverändert gespeichert; keine Punktzahl, keine Rangfolge.",
@@ -8597,7 +9337,7 @@
  "rohstoff": "Lithium",
  "schema": "atlas.rohstoffkette/1",
  "slug": "lithium",
- "stand": "2026-11-08",
+ "stand": "2026-11-17",
  "standorte": [
   {
    "alternativen": [],
@@ -8975,13 +9715,13 @@
    "land": "Mali",
    "name": "Bougouni",
    "ort": {
-    "evidenz": "UNKNOWN",
-    "grund": "Keine Koordinate mit Quelle; es wird kein Ersatzpunkt gesetzt.",
-    "lat": null,
-    "lon": null,
-    "quelle": null,
-    "status": null,
-    "url": null
+    "evidenz": "BELEGT",
+    "grund": null,
+    "lat": 11.35266,
+    "lon": -7.495678,
+    "quelle": "Koordinate: Bohrloch MT001 (Kodal Minerals, RNS 31.5.2023, Lagerstätte Ngoualana), WGS84 UTM Zone 29N, Genauigkeit OPERATION_SITE",
+    "status": "APPROVED (OPERATION_SITE)",
+    "url": "https://www.investegate.co.uk/announcement/rns/kodal-minerals--kod/bougouni-assay-results-funding-package-update-/7551547"
    },
    "risiko": [
     {
@@ -9126,7 +9866,7 @@
          "zitat": "\"stand\":\"2026-11-10\""
         }
        ],
-       "text": "Kein Namenstreffer für Bougouni (Lithiummine), Les Mines de Lithium de Bougouni SA (LMLB), Kodal Mining UK Limited (KMUK), Hainan Mining Co., Ltd. (海南矿业股份有限公司), Kodal Minerals plc, Regierung von Mali auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
+       "text": "Kein Namenstreffer für Bougouni (Lithiummine), Les Mines de Lithium de Bougouni SA (LMLB), Kodal Mining UK Limited (KMUK), Hainan Mining Co., Ltd. (海南矿业股份有限公司), 郭广昌 (Guo Guangchang, tatsächliche Kontrolle, 实际控制人), Kodal Minerals plc, Regierung von Mali auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
       }
      ],
      "grund": null,
@@ -9859,7 +10599,9 @@
    "stufe": 1
   },
   {
-   "alternativen": [],
+   "alternativen": [
+    "S11"
+   ],
    "eigentuemer": [
     {
      "anteil": null,
@@ -9876,13 +10618,13 @@
    "land": "Australien",
    "name": "Kathleen Valley",
    "ort": {
-    "evidenz": "UNKNOWN",
-    "grund": "Keine Koordinate mit Quelle; es wird kein Ersatzpunkt gesetzt.",
-    "lat": null,
-    "lon": null,
-    "quelle": null,
-    "status": null,
-    "url": null
+    "evidenz": "BELEGT",
+    "grund": null,
+    "lat": -27.473442,
+    "lon": 120.554043,
+    "quelle": "Koordinate: Bohrloch KVRC0001 (Liontown, ASX-Mitteilung 16.12.2019, Bohrlochtabelle), GDA94 Zone 51, Genauigkeit OPERATION_SITE",
+    "status": "APPROVED (OPERATION_SITE)",
+    "url": "https://announcements.asx.com.au/asxpdf/20191216/pdf/44clw7ljcvyds4.pdf"
    },
    "risiko": [
     {
@@ -10237,13 +10979,13 @@
    "land": "Australien",
    "name": "Mt Marion",
    "ort": {
-    "evidenz": "UNKNOWN",
-    "grund": "Keine Koordinate mit Quelle; es wird kein Ersatzpunkt gesetzt.",
-    "lat": null,
-    "lon": null,
-    "quelle": null,
-    "status": null,
-    "url": null
+    "evidenz": "BELEGT",
+    "grund": null,
+    "lat": -31.07398,
+    "lon": 121.4489,
+    "quelle": "Koordinate: Mount Marion (Wikidata, Mine in Western Australia), Genauigkeit OPERATION_SITE",
+    "status": "APPROVED (OPERATION_SITE)",
+    "url": "https://www.wikidata.org/wiki/Q21958605"
    },
    "risiko": [
     {
@@ -10399,7 +11141,9 @@
    "stufe": 1
   },
   {
-   "alternativen": [],
+   "alternativen": [
+    "S8"
+   ],
    "eigentuemer": [
     {
      "anteil": null,
@@ -10579,8 +11323,8 @@
   },
   {
    "alternativen": [
-    "S18",
-    "S26"
+    "S19",
+    "S27"
    ],
    "eigentuemer": [],
    "eigentuemer_grund": "Kein Eigentümer mit gelesener Quelle erfasst.",
@@ -10737,8 +11481,12 @@
   },
   {
    "alternativen": [
+    "S14",
+    "S15",
     "S21",
-    "S22"
+    "S22",
+    "S23",
+    "S24"
    ],
    "eigentuemer": [],
    "eigentuemer_grund": "Kein Eigentümer mit gelesener Quelle erfasst.",
@@ -10882,7 +11630,7 @@
          "zitat": "\"stand\":\"2026-11-10\""
         }
        ],
-       "text": "Kein Namenstreffer für Canmax Technologies Co. Ltd auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
+       "text": "Kein Namenstreffer für Canmax Technologies Co. Ltd (苏州天华新能源科技股份有限公司), 裴振华, 容建芬 (tatsächliche Kontrolle, 实际控制人) auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
       }
      ],
      "grund": null,
@@ -10894,24 +11642,177 @@
   },
   {
    "alternativen": [
-    "S20",
-    "S23"
+    "S13",
+    "S15",
+    "S21",
+    "S24"
+   ],
+   "eigentuemer": [],
+   "eigentuemer_grund": "Kein Eigentümer mit gelesener Quelle erfasst.",
+   "entity_id": "lithium-node-chengxin",
+   "id": "S14",
+   "kurz": "Chengxin Lithium",
+   "land": "CN",
+   "name": "Chengxin Lithium Group (盛新锂能集团)",
+   "ort": {
+    "evidenz": "BELEGT",
+    "grund": null,
+    "lat": 30.57582,
+    "lon": 103.91531,
+    "quelle": "Koordinate: Shuangliu (Wikidata, Bezirk von Chengdu), Genauigkeit HQ_CITY",
+    "status": "APPROVED (HQ_CITY)",
+    "url": "https://www.wikidata.org/wiki/Q1339981"
+   },
+   "risiko": [],
+   "risiko_grund": "Länderanteil nur für Förderstufe",
+   "risiko_land": {
+    "belege": [],
+    "herkunft": "Land des Glieds im Generator-Datensatz",
+    "iso2": "CN",
+    "name": "China"
+   },
+   "risikoebene": {
+    "KONZENTRATION": {
+     "belegt": [],
+     "grund": "Länderanteil der Weltreferenz gilt nur für die Förderstufe; für Verarbeitung und Handel ist keine Weltreferenz geladen.",
+     "status": "UNBEKANNT"
+    },
+    "LAENDERRISIKO": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "CN",
+       "quellen": [
+        {
+         "abgerufen": "2026-11-16",
+         "api": "https://www.gov.uk/api/content/foreign-travel-advice/china",
+         "fundstelle": "GOV.UK Content API (unveränderte Antwort), Feld alert_status und Teil \"Warnings and insurance\"",
+         "herausgeber": "Foreign, Commonwealth & Development Office (UK)",
+         "sha256": "c39c91b45d09b24e36ba17ccdd7da5d94e1b5a36cd15e3363e7ce69d0363a523",
+         "stand": "2026-08-27",
+         "textkopie": "analysis/rohstoffe/risiko/raw/fcdo-china.json",
+         "titel": "Foreign travel advice: China travel advice",
+         "url": "https://www.gov.uk/foreign-travel-advice/china",
+         "zitat": "\"alert_status\":[]"
+        }
+       ],
+       "text": "China: Reisehinweis FCDO (Stand 2026-08-27): keine Gebiete mit Reisewarnung (Warnstufe leer)."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    },
+    "NATURGEFAHREN": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "CN",
+       "quellen": [
+        {
+         "abgerufen": "2026-11-16",
+         "api": "https://www.gov.uk/api/content/foreign-travel-advice/china",
+         "fundstelle": "GOV.UK Content API (unveränderte Antwort), Teil \"Safety and security\", Abschnitt Naturgefahren",
+         "herausgeber": "Foreign, Commonwealth & Development Office (UK)",
+         "sha256": "c39c91b45d09b24e36ba17ccdd7da5d94e1b5a36cd15e3363e7ce69d0363a523",
+         "stand": "2026-08-27",
+         "textkopie": "analysis/rohstoffe/risiko/raw/fcdo-china.json",
+         "titel": "Foreign travel advice: China travel advice",
+         "url": "https://www.gov.uk/foreign-travel-advice/china",
+         "zitat": "Extreme weather and natural disasters … Earthquakes … Typhoons … Flooding"
+        }
+       ],
+       "text": "China: FCDO nennt für das Land: Erdbeben, Taifune, Überschwemmungen."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    },
+    "SANKTIONEN": {
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "ABGLEICH",
+       "land": "CN",
+       "quellen": [
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "EU",
+         "stand": "2026-10-23",
+         "textkopie": "analysis/research/sanktionen-v1/listen/eu.json",
+         "titel": "EU Consolidated Financial Sanctions List (FSF), Stand 2026-10-23 (1779 Organisationen)",
+         "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+         "zitat": "\"stand\":\"2026-10-23\""
+        },
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "UK",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/research/sanktionen-v1/listen/uk.json",
+         "titel": "UK Sanctions List (FCDO), Stand 2026-11-10 (1667 Organisationen)",
+         "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv",
+         "zitat": "\"stand\":\"2026-11-10\""
+        }
+       ],
+       "text": "China: die gelesenen Sanktionslisten EU (Stand 2026-10-23) und UK (Stand 2026-11-10) führen kein Länderprogramm. Nicht abgeglichen: OFAC, UN."
+      },
+      {
+       "bezug": "FIRMA",
+       "evidenz": "ABGLEICH",
+       "land": "CN",
+       "quellen": [
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "EU",
+         "stand": "2026-10-23",
+         "textkopie": "analysis/research/sanktionen-v1/listen/eu.json",
+         "titel": "EU Consolidated Financial Sanctions List (FSF), Stand 2026-10-23 (1779 Organisationen)",
+         "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+         "zitat": "\"stand\":\"2026-10-23\""
+        },
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "UK",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/research/sanktionen-v1/listen/uk.json",
+         "titel": "UK Sanctions List (FCDO), Stand 2026-11-10 (1667 Organisationen)",
+         "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv",
+         "zitat": "\"stand\":\"2026-11-10\""
+        }
+       ],
+       "text": "Kein Namenstreffer für Chengxin Lithium auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
+    }
+   },
+   "rolle": "Abnehmer",
+   "stufe": 2
+  },
+  {
+   "alternativen": [
+    "S13",
+    "S14",
+    "S21",
+    "S24"
    ],
    "eigentuemer": [],
    "eigentuemer_grund": "Kein Eigentümer mit gelesener Quelle erfasst.",
    "entity_id": "lithium-node-ford",
-   "id": "S14",
+   "id": "S15",
    "kurz": "Ford",
    "land": "UNKNOWN",
    "name": "Ford (Abnehmer)",
    "ort": {
-    "evidenz": "UNKNOWN",
-    "grund": "Keine Koordinate mit Quelle; es wird kein Ersatzpunkt gesetzt.",
-    "lat": null,
-    "lon": null,
-    "quelle": null,
-    "status": null,
-    "url": null
+    "evidenz": "BELEGT",
+    "grund": null,
+    "lat": 42.311330555556,
+    "lon": -83.213480555556,
+    "quelle": "Koordinate: Dearborn (Wikidata, Stadt), Genauigkeit HQ_CITY",
+    "status": "APPROVED (HQ_CITY)",
+    "url": "https://www.wikidata.org/wiki/Q430464"
    },
    "risiko": [],
    "risiko_grund": "Länderanteil nur für Förderstufe",
@@ -11055,7 +11956,7 @@
    "eigentuemer": [],
    "eigentuemer_grund": "Kein Eigentümer mit gelesener Quelle erfasst.",
    "entity_id": "lithium-node-ganfeng",
-   "id": "S15",
+   "id": "S16",
    "kurz": "Ganfeng Lithium",
    "land": "UNKNOWN",
    "name": "Ganfeng Lithium (Konzern)",
@@ -11207,12 +12108,12 @@
   },
   {
    "alternativen": [
-    "S24"
+    "S25"
    ],
    "eigentuemer": [],
    "eigentuemer_grund": "Kein Eigentümer mit gelesener Quelle erfasst.",
    "entity_id": "lithium-node-hainan-mining",
-   "id": "S16",
+   "id": "S17",
    "kurz": "Hainan Mining",
    "land": "UNKNOWN",
    "name": "Hainan Mining (Abnehmer und Betriebspartner)",
@@ -11351,7 +12252,7 @@
          "zitat": "\"stand\":\"2026-11-10\""
         }
        ],
-       "text": "Kein Namenstreffer für Hainan Mining Co., Ltd. (海南矿业股份有限公司) auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
+       "text": "Kein Namenstreffer für Hainan Mining Co., Ltd. (海南矿业股份有限公司), 郭广昌 (Guo Guangchang, tatsächliche Kontrolle, 实际控制人) auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
       }
      ],
      "grund": null,
@@ -11366,7 +12267,7 @@
    "eigentuemer": [],
    "eigentuemer_grund": "Kein Eigentümer mit gelesener Quelle erfasst.",
    "entity_id": "lithium-node-huayou",
-   "id": "S17",
+   "id": "S18",
    "kurz": "Huayou Cobalt",
    "land": "UNKNOWN",
    "name": "Huayou Cobalt (华友钴业, nachgelagerte Lithiumprodukte)",
@@ -11518,12 +12419,12 @@
   {
    "alternativen": [
     "S12",
-    "S26"
+    "S27"
    ],
    "eigentuemer": [],
    "eigentuemer_grund": "Kein Eigentümer mit gelesener Quelle erfasst.",
    "entity_id": "lithium-node-tlea-kwinana",
-   "id": "S18",
+   "id": "S19",
    "kurz": "Kwinana Refinery",
    "land": "Australien",
    "name": "Kwinana Refinery (TLEA)",
@@ -11669,7 +12570,7 @@
    "eigentuemer": [],
    "eigentuemer_grund": "Kein Eigentümer mit gelesener Quelle erfasst.",
    "entity_id": "lithium-node-covalent-kwinana",
-   "id": "S19",
+   "id": "S20",
    "kurz": "Kwinana-Raffinerie",
    "land": "Australien",
    "name": "Kwinana-Raffinerie (Covalent Lithium)",
@@ -11812,13 +12713,15 @@
   },
   {
    "alternativen": [
+    "S13",
     "S14",
-    "S23"
+    "S15",
+    "S24"
    ],
    "eigentuemer": [],
    "eigentuemer_grund": "Kein Eigentümer mit gelesener Quelle erfasst.",
    "entity_id": "lithium-node-lges",
-   "id": "S20",
+   "id": "S21",
    "kurz": "LG Energy Solution",
    "land": "UNKNOWN",
    "name": "LG Energy Solution",
@@ -11971,12 +12874,12 @@
   {
    "alternativen": [
     "S13",
-    "S22"
+    "S23"
    ],
    "eigentuemer": [],
    "eigentuemer_grund": "Kein Eigentümer mit gelesener Quelle erfasst.",
    "entity_id": "lithium-node-p-pls",
-   "id": "S21",
+   "id": "S22",
    "kurz": "P-PLS Lithiumhydroxid-Anlage",
    "land": "Südkorea",
    "name": "P-PLS Lithiumhydroxid-Anlage (POSCO Pilbara Lithium Solution)",
@@ -12120,12 +13023,12 @@
   {
    "alternativen": [
     "S13",
-    "S21"
+    "S22"
    ],
    "eigentuemer": [],
    "eigentuemer_grund": "Kein Eigentümer mit gelesener Quelle erfasst.",
    "entity_id": "lithium-node-port-hedland",
-   "id": "S22",
+   "id": "S23",
    "kurz": "Port Hedland",
    "land": "Australien",
    "name": "Port Hedland (Hafen)",
@@ -12268,13 +13171,15 @@
   },
   {
    "alternativen": [
+    "S13",
     "S14",
-    "S20"
+    "S15",
+    "S21"
    ],
    "eigentuemer": [],
    "eigentuemer_grund": "Kein Eigentümer mit gelesener Quelle erfasst.",
    "entity_id": "lithium-node-port-geraldton",
-   "id": "S23",
+   "id": "S24",
    "kurz": "Port of Geraldton",
    "land": "UNKNOWN",
    "name": "Port of Geraldton (Hafen)",
@@ -12425,12 +13330,12 @@
   },
   {
    "alternativen": [
-    "S16"
+    "S17"
    ],
    "eigentuemer": [],
    "eigentuemer_grund": "Kein Eigentümer mit gelesener Quelle erfasst.",
    "entity_id": "lithium-node-port-san-pedro",
-   "id": "S24",
+   "id": "S25",
    "kurz": "Port of San Pedro",
    "land": "Côte d'Ivoire",
    "name": "Port of San Pedro (Hafen)",
@@ -12576,26 +13481,34 @@
    "eigentuemer": [],
    "eigentuemer_grund": "Kein Eigentümer mit gelesener Quelle erfasst.",
    "entity_id": "lithium-node-sinomine",
-   "id": "S25",
+   "id": "S26",
    "kurz": "Sinomine",
    "land": "UNKNOWN",
    "name": "Sinomine (中矿资源, Lithiumsalz-Geschäft)",
    "ort": {
-    "evidenz": "UNKNOWN",
-    "grund": "Keine Koordinate mit Quelle; es wird kein Ersatzpunkt gesetzt.",
-    "lat": null,
-    "lon": null,
-    "quelle": null,
-    "status": null,
-    "url": null
+    "evidenz": "BELEGT",
+    "grund": null,
+    "lat": 39.85717,
+    "lon": 116.2803,
+    "quelle": "Koordinate: Fengtai (Wikidata, Bezirk von Peking), Genauigkeit HQ_CITY",
+    "status": "APPROVED (HQ_CITY)",
+    "url": "https://www.wikidata.org/wiki/Q393831"
    },
    "risiko": [],
    "risiko_grund": "Länderanteil nur für Förderstufe",
    "risiko_land": {
-    "belege": [],
-    "herkunft": "Land des Glieds nicht erfasst (kein Land im Datensatz, kein gültiger LEI-Eintrag, keine Koordinate mit Quelle).",
-    "iso2": null,
-    "name": null
+    "belege": [
+     {
+      "fundstelle": "Lage",
+      "herausgeber": "Koordinate: Fengtai (Wikidata, Bezirk von Peking), Genauigkeit HQ_CITY",
+      "titel": "Koordinate des Glieds",
+      "url": "https://www.wikidata.org/wiki/Q393831",
+      "zitat": null
+     }
+    ],
+    "herkunft": "Belegte Koordinate in Peking (Bezirk Fengtai, Sitz laut Jahresbericht 2025) (39.86, 116.28)",
+    "iso2": "CN",
+    "name": "China"
    },
    "risikoebene": {
     "KONZENTRATION": {
@@ -12604,21 +13517,89 @@
      "status": "UNBEKANNT"
     },
     "LAENDERRISIKO": {
-     "belegt": [],
-     "grund": "Land des Glieds nicht erfasst (kein Land im Datensatz, kein gültiger LEI-Eintrag, keine Koordinate mit Quelle).",
-     "status": "UNBEKANNT"
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "CN",
+       "quellen": [
+        {
+         "abgerufen": "2026-11-16",
+         "api": "https://www.gov.uk/api/content/foreign-travel-advice/china",
+         "fundstelle": "GOV.UK Content API (unveränderte Antwort), Feld alert_status und Teil \"Warnings and insurance\"",
+         "herausgeber": "Foreign, Commonwealth & Development Office (UK)",
+         "sha256": "c39c91b45d09b24e36ba17ccdd7da5d94e1b5a36cd15e3363e7ce69d0363a523",
+         "stand": "2026-08-27",
+         "textkopie": "analysis/rohstoffe/risiko/raw/fcdo-china.json",
+         "titel": "Foreign travel advice: China travel advice",
+         "url": "https://www.gov.uk/foreign-travel-advice/china",
+         "zitat": "\"alert_status\":[]"
+        }
+       ],
+       "text": "China: Reisehinweis FCDO (Stand 2026-08-27): keine Gebiete mit Reisewarnung (Warnstufe leer)."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
     },
     "NATURGEFAHREN": {
-     "belegt": [],
-     "grund": "Land des Glieds nicht erfasst (kein Land im Datensatz, kein gültiger LEI-Eintrag, keine Koordinate mit Quelle).",
-     "status": "UNBEKANNT"
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "CN",
+       "quellen": [
+        {
+         "abgerufen": "2026-11-16",
+         "api": "https://www.gov.uk/api/content/foreign-travel-advice/china",
+         "fundstelle": "GOV.UK Content API (unveränderte Antwort), Teil \"Safety and security\", Abschnitt Naturgefahren",
+         "herausgeber": "Foreign, Commonwealth & Development Office (UK)",
+         "sha256": "c39c91b45d09b24e36ba17ccdd7da5d94e1b5a36cd15e3363e7ce69d0363a523",
+         "stand": "2026-08-27",
+         "textkopie": "analysis/rohstoffe/risiko/raw/fcdo-china.json",
+         "titel": "Foreign travel advice: China travel advice",
+         "url": "https://www.gov.uk/foreign-travel-advice/china",
+         "zitat": "Extreme weather and natural disasters … Earthquakes … Typhoons … Flooding"
+        }
+       ],
+       "text": "China: FCDO nennt für das Land: Erdbeben, Taifune, Überschwemmungen."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
     },
     "SANKTIONEN": {
      "belegt": [
       {
+       "bezug": "LAND",
+       "evidenz": "ABGLEICH",
+       "land": "CN",
+       "quellen": [
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "EU",
+         "stand": "2026-10-23",
+         "textkopie": "analysis/research/sanktionen-v1/listen/eu.json",
+         "titel": "EU Consolidated Financial Sanctions List (FSF), Stand 2026-10-23 (1779 Organisationen)",
+         "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+         "zitat": "\"stand\":\"2026-10-23\""
+        },
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "UK",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/research/sanktionen-v1/listen/uk.json",
+         "titel": "UK Sanctions List (FCDO), Stand 2026-11-10 (1667 Organisationen)",
+         "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv",
+         "zitat": "\"stand\":\"2026-11-10\""
+        }
+       ],
+       "text": "China: die gelesenen Sanktionslisten EU (Stand 2026-10-23) und UK (Stand 2026-11-10) führen kein Länderprogramm. Nicht abgeglichen: OFAC, UN."
+      },
+      {
        "bezug": "FIRMA",
        "evidenz": "ABGLEICH",
-       "land": null,
+       "land": "CN",
        "quellen": [
         {
          "fundstelle": "Kopf der umgewandelten Liste",
@@ -12652,12 +13633,12 @@
   {
    "alternativen": [
     "S12",
-    "S18"
+    "S19"
    ],
    "eigentuemer": [],
    "eigentuemer_grund": "Kein Eigentümer mit gelesener Quelle erfasst.",
    "entity_id": "lithium-node-tianqi",
-   "id": "S26",
+   "id": "S27",
    "kurz": "Tianqi Lithium",
    "land": "UNKNOWN",
    "name": "Tianqi Lithium (Konzern)",
@@ -12812,7 +13793,7 @@
    "eigentuemer": [],
    "eigentuemer_grund": "Kein Eigentümer mit gelesener Quelle erfasst.",
    "entity_id": "lithium-node-yahua",
-   "id": "S27",
+   "id": "S28",
    "kurz": "Yahua",
    "land": "UNKNOWN",
    "name": "Yahua Group (雅化集团, Lithiumsalz-Produktion)",
@@ -12963,7 +13944,7 @@
   }
  ],
  "tiefe": {
-  "belegt": 99,
+  "belegt": 109,
   "dimensionen": [
    "Eigentümer/Betreiber",
    "Standort",
@@ -12972,8 +13953,8 @@
    "Lieferbeziehung",
    "Risiko"
   ],
-  "gesamt": 162,
-  "mit_annahmen": 134,
+  "gesamt": 168,
+  "mit_annahmen": 145,
   "zeilen": [
    {
     "felder": {
@@ -13003,7 +13984,7 @@
      "Lieferbeziehung": "belegt",
      "Menge": "belegt",
      "Risiko": "belegt",
-     "Standort": "unbekannt",
+     "Standort": "belegt",
      "Wert": "unbekannt"
     },
     "id": "S3"
@@ -13058,7 +14039,7 @@
      "Lieferbeziehung": "belegt",
      "Menge": "belegt",
      "Risiko": "belegt",
-     "Standort": "unbekannt",
+     "Standort": "belegt",
      "Wert": "unbekannt"
     },
     "id": "S8"
@@ -13080,7 +14061,7 @@
      "Lieferbeziehung": "belegt",
      "Menge": "unbekannt",
      "Risiko": "belegt",
-     "Standort": "unbekannt",
+     "Standort": "belegt",
      "Wert": "unbekannt"
     },
     "id": "S10"
@@ -13109,7 +14090,7 @@
    },
    {
     "felder": {
-     "Eigentümer/Betreiber": "unbekannt",
+     "Eigentümer/Betreiber": "belegt",
      "Lieferbeziehung": "belegt",
      "Menge": "belegt",
      "Risiko": "unbekannt",
@@ -13124,16 +14105,16 @@
      "Lieferbeziehung": "belegt",
      "Menge": "unbekannt",
      "Risiko": "unbekannt",
-     "Standort": "unbekannt",
+     "Standort": "belegt",
      "Wert": "unbekannt"
     },
     "id": "S14"
    },
    {
     "felder": {
-     "Eigentümer/Betreiber": "belegt",
+     "Eigentümer/Betreiber": "unbekannt",
      "Lieferbeziehung": "belegt",
-     "Menge": "belegt",
+     "Menge": "unbekannt",
      "Risiko": "unbekannt",
      "Standort": "belegt",
      "Wert": "unbekannt"
@@ -13142,7 +14123,7 @@
    },
    {
     "felder": {
-     "Eigentümer/Betreiber": "unbekannt",
+     "Eigentümer/Betreiber": "belegt",
      "Lieferbeziehung": "belegt",
      "Menge": "belegt",
      "Risiko": "unbekannt",
@@ -13155,7 +14136,7 @@
     "felder": {
      "Eigentümer/Betreiber": "belegt",
      "Lieferbeziehung": "belegt",
-     "Menge": "unbekannt",
+     "Menge": "belegt",
      "Risiko": "unbekannt",
      "Standort": "belegt",
      "Wert": "unbekannt"
@@ -13208,7 +14189,7 @@
    },
    {
     "felder": {
-     "Eigentümer/Betreiber": "unbekannt",
+     "Eigentümer/Betreiber": "belegt",
      "Lieferbeziehung": "belegt",
      "Menge": "belegt",
      "Risiko": "unbekannt",
@@ -13241,11 +14222,11 @@
    },
    {
     "felder": {
-     "Eigentümer/Betreiber": "belegt",
+     "Eigentümer/Betreiber": "unbekannt",
      "Lieferbeziehung": "belegt",
      "Menge": "belegt",
      "Risiko": "unbekannt",
-     "Standort": "unbekannt",
+     "Standort": "belegt",
      "Wert": "unbekannt"
     },
     "id": "S25"
@@ -13254,7 +14235,7 @@
     "felder": {
      "Eigentümer/Betreiber": "belegt",
      "Lieferbeziehung": "belegt",
-     "Menge": "unbekannt",
+     "Menge": "belegt",
      "Risiko": "unbekannt",
      "Standort": "belegt",
      "Wert": "unbekannt"
@@ -13265,12 +14246,23 @@
     "felder": {
      "Eigentümer/Betreiber": "belegt",
      "Lieferbeziehung": "belegt",
-     "Menge": "belegt",
+     "Menge": "unbekannt",
      "Risiko": "unbekannt",
      "Standort": "belegt",
      "Wert": "unbekannt"
     },
     "id": "S27"
+   },
+   {
+    "felder": {
+     "Eigentümer/Betreiber": "belegt",
+     "Lieferbeziehung": "belegt",
+     "Menge": "belegt",
+     "Risiko": "unbekannt",
+     "Standort": "belegt",
+     "Wert": "unbekannt"
+    },
+    "id": "S28"
    }
   ]
  },
@@ -13348,9 +14340,10 @@
     "t": 891592.0,
     "text": "891.592 t pro Jahr"
    },
+   "menge_abgeleitet": null,
    "menge_annahme": null,
    "menge_bezug": [],
-   "nach": "S22",
+   "nach": "S23",
    "stand": "Geschaeftsjahr 1.7.2025 bis 30.6.2026 (Berichtszeitraum)",
    "von": "S11",
    "ware": "Spodumenkonzentrat",
@@ -13462,9 +14455,10 @@
     "t": 315000.0,
     "text": "315.000 t pro Jahr"
    },
+   "menge_abgeleitet": null,
    "menge_annahme": null,
    "menge_bezug": [],
-   "nach": "S21",
+   "nach": "S22",
    "stand": "Geschaeftsjahr 1.7.2025 bis 30.6.2026 (Vertrag laut Quelle in Kraft)",
    "von": "S11",
    "ware": "Spodumenkonzentrat",
@@ -13576,6 +14570,7 @@
     "t": 150000.0,
     "text": "150.000 t pro Jahr"
    },
+   "menge_abgeleitet": null,
    "menge_annahme": null,
    "menge_bezug": [],
    "nach": "S13",
@@ -13690,6 +14685,7 @@
     "t": null,
     "text": "unbekannt"
    },
+   "menge_abgeleitet": null,
    "menge_annahme": {
     "annahme_id": "A-LI-MENGE",
     "einheit": "t Li-Inhalt",
@@ -13705,7 +14701,7 @@
     "welt": "lithium"
    },
    "menge_bezug": [],
-   "nach": "S18",
+   "nach": "S19",
    "stand": "Geschaeftsjahr 1.7.2025 bis 30.6.2026 (Berichtszeitraum)",
    "von": "S6",
    "ware": "Spodumenkonzentrat",
@@ -13770,6 +14766,7 @@
     "t": null,
     "text": "unbekannt"
    },
+   "menge_abgeleitet": null,
    "menge_annahme": {
     "annahme_id": "A-LI-MENGE",
     "einheit": "t Li-Inhalt",
@@ -13809,7 +14806,7 @@
      "zeitraum": "Geschäftsjahr 1.7.2025 bis 30.6.2026"
     }
    ],
-   "nach": "S19",
+   "nach": "S20",
    "stand": "Geschaeftsjahr 1.7.2025 bis 30.6.2026 (Berichtszeitraum)",
    "von": "S9",
    "ware": "Spodumenkonzentrat",
@@ -13841,7 +14838,7 @@
   {
    "art": "TRANSPORT",
    "art_atlas": "TRANSPORTS_TO",
-   "auf_globus": false,
+   "auf_globus": true,
    "aussage": "Erste Lieferung Kathleen Valley über Port of Geraldton (27.9.2024).",
    "belege": [
     {
@@ -13867,10 +14864,11 @@
     "t": 10831.0,
     "text": "10.831 t im genannten Zeitraum"
    },
+   "menge_abgeleitet": null,
    "menge_annahme": null,
    "menge_bezug": [],
-   "nach": "S23",
-   "stand": null,
+   "nach": "S24",
+   "stand": "Quartal 1.7.2024 bis 30.9.2024 (Ereignisdatum)",
    "von": "S8",
    "ware": "Spodumenkonzentrat",
    "wert": {
@@ -13902,7 +14900,7 @@
   {
    "art": "HANDEL",
    "art_atlas": "OFFTAKE_AGREEMENT",
-   "auf_globus": false,
+   "auf_globus": true,
    "aussage": "Abnahmevertrag Liontown -> LG Energy Solution, um zehn Jahre verlängert (Quartal Juli bis September 2024).",
    "belege": [
     {
@@ -13920,31 +14918,33 @@
    "freigabe_herkunft": "Eddie Sablah; Prüfbericht pruefbericht-2026-11-07.pdf",
    "id": "V7",
    "menge": {
-    "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
-    "pro_jahr": null,
-    "quelle_text": null,
-    "rechnung": "",
-    "t": null,
-    "text": "unbekannt"
-   },
-   "menge_annahme": {
-    "annahme_id": "A-LI-MENGE",
-    "einheit": "t Li-Inhalt",
-    "evidenz": "ANNAHME",
-    "grund": "Annahme A-LI-MENGE: Förderung Kathleen Valley: 7 260 t Li pro Jahr, Tabelle Standorte: Annahme (USGS-Landessumme nach Leistung verteilt; Leistung geschätzt) (A-LI-MENGE); 4 Abnehmer, Anteil 25 % zu gleichen Teilen.",
-    "konfidenz_text": "0,40 (schwach)",
+    "beleg_id": "M-LIF-07",
+    "belege": [
+     {
+      "abgerufen": "2026-11-17",
+      "fundstelle": "Strategic partnership with LG Energy Solution (ASX-Mitteilung 2.7.2024), PDF-Seite 3",
+      "herausgeber": "Liontown Resources Limited",
+      "textkopie": "analysis/rohstoffe/mengen/raw/ltr-2024-07-02-p3.txt",
+      "url": "https://announcements.asx.com.au/asxpdf/20240702/pdf/0655lybd50tx26.pdf",
+      "zitat": "In conjunction with LG Energy Solution’s investment, Liontown has extended the existing five-year offtake … agreement by an additional 10 years, maintaining the same terms and conditions. … 100ktpa in year one, to 150ktpa in years two to five, rising to 160ktpa SC6 in years six to 10, and subsequently"
+     }
+    ],
+    "evidenz": "BELEGT",
+    "freigabe": "FREIGEGEBEN",
+    "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-17 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+    "grund": null,
+    "hinweis": "Abnahmevertrag Liontown -> LG Energy Solution nach der Verlängerung vom Juli 2024 (gleiche Bedingungen, Laufzeit 15 Jahre). Die Quelle nennt Vertragsjahre ab Lieferbeginn, keine Kalenderjahre; geliefert werden kann weniger. Dazu bis zu 250 kt zusätzlich in den ersten 10 Jahren (nicht eingerechnet).",
     "pro_jahr": true,
-    "quelle": "Annahmen-Atlas Lendrot/atlaslendrot annahmen/lithium-welt.json @ efe91bc",
-    "quelle_url": "https://github.com/Lendrot/atlaslendrot/blob/main/ANNAHMEN_WELT.md#lithium",
-    "regel_text": "Die USGS-Foerderung 2025 eines Landes wird auf seine Standorte im Verhaeltnis zu deren Jahresleistung verteilt (Tabelle leistung_t_li, Lithiuminhalt). Belegt ist die Leistung fuer Greenbushes, Pilgangoora, Mt Marion, Fenix und Olaroz (USGS Minerals Yearbook 2022, Foerderung 2022, Tabelle leistung_quelle); fuer die uebrigen, meist nach 2022 angelaufenen Standorte ist sie ein gerundeter Branchenwert. China: der Atlas kennt nur 3 von rund 15 Betrieben; die drei bekommen ihren Tabellenwert, der Rest steht als Sammelknoten. USA: USGS haelt den Wert zurueck (W); Silver Peak bekommt den Tabellenwert. Firmenwege: die Standortmenge fließt durch das Firmennetz und wird an Verzweigungen zu gleichen Teilen aufgeteilt; Lithiumwelt-Standorte ohne Atlas-Eintrag bekommen eine eigene Förderung (Tabelle mengen.quellen). Neue argentinische Betriebe (Mariana, Sal de Oro, Tres Quebradas) liegen über der USGS-Landessumme 2025 und werden als Abweichung ausgewiesen, nicht gekürzt.",
-    "t": 1814.7388,
-    "text": "≈ 1.815 t Li-Inhalt pro Jahr",
-    "welt": "lithium"
+    "quelle_text": "150 kt (Vertragsmenge Spodumenkonzentrat SC6, keine Liefermenge, Vertragsjahre 2 bis 5 (Jahr 1: 100 kt; Jahre 6 bis 10: 160 kt; 11 bis 15: 140 kt))",
+    "rechnung": "150 kt = 150.000 t",
+    "t": 150000.0,
+    "text": "150.000 t pro Jahr"
    },
+   "menge_abgeleitet": null,
+   "menge_annahme": null,
    "menge_bezug": [],
-   "nach": "S20",
-   "stand": null,
+   "nach": "S21",
+   "stand": "Quartal 1.7.2024 bis 30.9.2024 (Vertrag laut Quelle in Kraft)",
    "von": "S8",
    "ware": "Spodumenkonzentrat",
    "wert": {
@@ -13958,18 +14958,19 @@
    "wert_abgeleitet": null,
    "wert_annahme": {
     "annahme_art": "RECHNUNG",
-    "eur": 76934432.63111237,
+    "eur": null,
     "eur_spanne": [
-     76934432.63111237
+     106194690.26548673,
+     128761061.94690266
     ],
     "evidenz": "ANNAHME",
-    "preis_basis": "lithium",
+    "preis_basis": "spodumen",
     "preis_datum": null,
     "preis_quelle": "U.S. Geological Survey, Mineral Commodity Summaries 2026, Lithium",
     "preis_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-lithium.pdf",
-    "preis_zitat": "carbonate price was $9,000 per ton in 2025",
-    "rechnung": "1.815 t (Annahme A-LI-MENGE, t Li-Inhalt) × 47.905,467 US$ je t Lithium-Inhalt (9.000 US$/t Lithiumcarbonat ÷ 0,18787 (Li-Anteil von Li2CO3 nach Molmassen, wie menge-wert.mjs)) = 86,9 Mio. US$ ÷ EZB-Jahresmittel 2025: 1,1300 US$ je €",
-    "text": "≈ 76,9 Mio. € pro Jahr"
+    "preis_zitat": "Spodumene (6% lithium oxide) prices in Australia (f.o.b.) increased from approximately $800 per … ton in January to approximately $970 per ton in November.",
+    "rechnung": "150.000 t (belegte Menge) × 800 bis 970 US$ je t Spodumenkonzentrat (6 % Li2O) (Spanne Januar bis November 2025 (f.o.b. Australien)) = 120 Mio. US$ bis 146 Mio. US$ ÷ EZB-Jahresmittel 2025: 1,1300 US$ je €",
+    "text": "≈ 106 Mio. € bis 129 Mio. € pro Jahr"
    }
   },
   {
@@ -14001,6 +15002,7 @@
     "t": null,
     "text": "unbekannt"
    },
+   "menge_abgeleitet": null,
    "menge_annahme": {
     "annahme_id": "A-LI-MENGE",
     "einheit": "t Li-Inhalt",
@@ -14040,7 +15042,7 @@
      "zeitraum": "Kalenderjahr 2025"
     }
    ],
-   "nach": "S15",
+   "nach": "S16",
    "stand": "Kalenderjahr 2025 (Berichtszeitraum)",
    "von": "S5",
    "ware": "Spodumenkonzentrat",
@@ -14098,9 +15100,10 @@
     "t": 30400.0,
     "text": "30.400 t pro Jahr"
    },
+   "menge_abgeleitet": null,
    "menge_annahme": null,
    "menge_bezug": [],
-   "nach": "S15",
+   "nach": "S16",
    "stand": "Kalenderjahr 2025 (Vertrag laut Quelle in Kraft)",
    "von": "S4",
    "ware": "Lithiumcarbonat (LCE)",
@@ -14206,6 +15209,7 @@
     "t": null,
     "text": "unbekannt"
    },
+   "menge_abgeleitet": null,
    "menge_annahme": {
     "annahme_id": "A-LI-MENGE",
     "einheit": "t Li-Inhalt",
@@ -14221,7 +15225,7 @@
     "welt": "lithium"
    },
    "menge_bezug": [],
-   "nach": "S26",
+   "nach": "S27",
    "stand": "Kalenderjahr 2025 (Berichtszeitraum)",
    "von": "S6",
    "ware": "Spodumenkonzentrat",
@@ -14253,7 +15257,7 @@
   {
    "art": "LIEFERUNG",
    "art_atlas": "SUPPLIES",
-   "auf_globus": false,
+   "auf_globus": true,
    "aussage": "Ganfeng bezieht seinen Lithiumrohstoff derzeit hauptsächlich aus Mount Marion (Spodumen-Projekt, 50 % Beteiligung).",
    "belege": [
     {
@@ -14286,6 +15290,7 @@
     "t": null,
     "text": "unbekannt"
    },
+   "menge_abgeleitet": null,
    "menge_annahme": {
     "annahme_id": "A-LI-MENGE",
     "einheit": "t Li-Inhalt",
@@ -14301,8 +15306,8 @@
     "welt": "lithium"
    },
    "menge_bezug": [],
-   "nach": "S15",
-   "stand": null,
+   "nach": "S16",
+   "stand": "Kalenderjahr 2025 (Berichtszeitraum)",
    "von": "S10",
    "ware": "Spodumen (Lithiumrohstoff)",
    "wert": {
@@ -14333,7 +15338,7 @@
   {
    "art": "TRANSPORT",
    "art_atlas": "TRANSPORTS_TO",
-   "auf_globus": false,
+   "auf_globus": true,
    "aussage": "Spodumenkonzentrat aus Bougouni wird per Lkw zum Hafen San Pedro (Côte d'Ivoire) gebracht und dort verschifft (erste Ladung 30.11.2025).",
    "belege": [
     {
@@ -14359,10 +15364,11 @@
     "t": 28735.0,
     "text": "28.735 t im genannten Zeitraum"
    },
+   "menge_abgeleitet": null,
    "menge_annahme": null,
    "menge_bezug": [],
-   "nach": "S24",
-   "stand": null,
+   "nach": "S25",
+   "stand": "9 Monate 1.4.2025 bis 31.12.2025 (Berichtszeitraum)",
    "von": "S3",
    "ware": "Spodumenkonzentrat",
    "wert": {
@@ -14373,7 +15379,60 @@
     "rechnung": "",
     "text": "unbekannt"
    },
-   "wert_abgeleitet": null,
+   "wert_abgeleitet": {
+    "art": "produkt",
+    "eingaenge": [
+     {
+      "einheit": "t",
+      "freigabe": "FREIGEGEBEN",
+      "hoch": 1,
+      "name": "Menge",
+      "quelle": "28.735 t (geliefert)",
+      "ref": "flow:LIF-12",
+      "wert": 28735.0
+     },
+     {
+      "einheit": "US$ je t Spodumenkonzentrat (6 % Li2O)",
+      "freigabe": "FREIGEGEBEN",
+      "hoch": 1,
+      "name": "Preis",
+      "quelle": "U.S. Geological Survey, Mineral Commodity Summaries 2026, Lithium",
+      "ref": "preis:spodumen",
+      "wert": [
+       800.0,
+       970.0
+      ]
+     },
+     {
+      "einheit": "US$ je €",
+      "freigabe": "AMTLICH",
+      "hoch": -1,
+      "name": "Kurs",
+      "quelle": "EZB-Jahresmittel 2025: 1,1300 US$ je €",
+      "ref": "ezb:USD:2025",
+      "wert": 1.13
+     }
+    ],
+    "einheit": "€",
+    "ergebnis": [
+     20343362.831858408,
+     24666327.43362832
+    ],
+    "eur": null,
+    "eur_spanne": [
+     20343362.831858408,
+     24666327.43362832
+    ],
+    "evidenz": "ABGELEITET",
+    "hinweis": "Marktwert zum Jahrespreis; der tatsächliche Vertragspreis ist unbekannt.",
+    "preis_basis": "spodumen",
+    "preis_jahr": 2025,
+    "preis_quelle": "U.S. Geological Survey, Mineral Commodity Summaries 2026, Lithium",
+    "preis_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-lithium.pdf",
+    "preis_zitat": "Spodumene (6% lithium oxide) prices in Australia (f.o.b.) increased from approximately $800 per … ton in January to approximately $970 per ton in November.",
+    "rechenweg": "28.735 t (28.735 t (geliefert)) × 800 bis 970 US$ je t Spodumenkonzentrat (6 % Li2O) (Spanne Januar bis November 2025 (f.o.b. Australien)) ÷ EZB-Jahresmittel 2025: 1,1300 US$ je €",
+    "text": "≈ 20,3 Mio. € bis 24,7 Mio. € im genannten Zeitraum"
+   },
    "wert_annahme": {
     "annahme_art": "RECHNUNG",
     "eur": null,
@@ -14394,7 +15453,7 @@
   {
    "art": "HANDEL",
    "art_atlas": "OFFTAKE_AGREEMENT",
-   "auf_globus": false,
+   "auf_globus": true,
    "aussage": "Abnahmevertrag mit Hainan über 100 % des Spodumenprodukts von Bougouni (unterzeichnet 30.6.2025).",
    "belege": [
     {
@@ -14415,15 +15474,16 @@
     "evidenz": "BELEGT",
     "grund": null,
     "pro_jahr": true,
-    "quelle_text": "10.000 t/Monat (Ziel, ca.)",
+    "quelle_text": "10.000 t/Monat (Zielwert, ca.)",
     "rechnung": "je Monat (Durchschnitt) × 12 = 120.000 t pro Jahr",
     "t": 120000.0,
     "text": "120.000 t pro Jahr"
    },
+   "menge_abgeleitet": null,
    "menge_annahme": null,
    "menge_bezug": [],
-   "nach": "S16",
-   "stand": null,
+   "nach": "S17",
+   "stand": "9 Monate 1.4.2025 bis 31.12.2025 (Vertrag laut Quelle in Kraft)",
    "von": "S3",
    "ware": "Spodumenkonzentrat",
    "wert": {
@@ -14434,7 +15494,60 @@
     "rechnung": "",
     "text": "unbekannt"
    },
-   "wert_abgeleitet": null,
+   "wert_abgeleitet": {
+    "art": "produkt",
+    "eingaenge": [
+     {
+      "einheit": "t",
+      "freigabe": "FREIGEGEBEN",
+      "hoch": 1,
+      "name": "Menge",
+      "quelle": "10.000 t/Monat (Zielwert, ca.)",
+      "ref": "flow:LIF-13",
+      "wert": 120000.0
+     },
+     {
+      "einheit": "US$ je t Spodumenkonzentrat (6 % Li2O)",
+      "freigabe": "FREIGEGEBEN",
+      "hoch": 1,
+      "name": "Preis",
+      "quelle": "U.S. Geological Survey, Mineral Commodity Summaries 2026, Lithium",
+      "ref": "preis:spodumen",
+      "wert": [
+       800.0,
+       970.0
+      ]
+     },
+     {
+      "einheit": "US$ je €",
+      "freigabe": "AMTLICH",
+      "hoch": -1,
+      "name": "Kurs",
+      "quelle": "EZB-Jahresmittel 2025: 1,1300 US$ je €",
+      "ref": "ezb:USD:2025",
+      "wert": 1.13
+     }
+    ],
+    "einheit": "€",
+    "ergebnis": [
+     84955752.2123894,
+     103008849.55752213
+    ],
+    "eur": null,
+    "eur_spanne": [
+     84955752.2123894,
+     103008849.55752213
+    ],
+    "evidenz": "ABGELEITET",
+    "hinweis": "Marktwert zum Jahrespreis; der tatsächliche Vertragspreis ist unbekannt.",
+    "preis_basis": "spodumen",
+    "preis_jahr": 2025,
+    "preis_quelle": "U.S. Geological Survey, Mineral Commodity Summaries 2026, Lithium",
+    "preis_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-lithium.pdf",
+    "preis_zitat": "Spodumene (6% lithium oxide) prices in Australia (f.o.b.) increased from approximately $800 per … ton in January to approximately $970 per ton in November.",
+    "rechenweg": "120.000 t (10.000 t/Monat (Zielwert, ca.)) × 800 bis 970 US$ je t Spodumenkonzentrat (6 % Li2O) (Spanne Januar bis November 2025 (f.o.b. Australien)) ÷ EZB-Jahresmittel 2025: 1,1300 US$ je €",
+    "text": "≈ 85 Mio. € bis 103 Mio. € pro Jahr"
+   },
    "wert_annahme": {
     "annahme_art": "RECHNUNG",
     "eur": null,
@@ -14455,7 +15568,7 @@
   {
    "art": "LIEFERUNG",
    "art_atlas": "SUPPLIES",
-   "auf_globus": false,
+   "auf_globus": true,
    "aussage": "Bikita (Simbabwe) liefert Spodumen- und Petalitkonzentrat für das eigene Lithiumsalz-Geschäft von Sinomine (Kapazität je etwa 300 kt/a).",
    "belege": [
     {
@@ -14481,10 +15594,11 @@
     "t": 300000.0,
     "text": "300.000 t pro Jahr"
    },
+   "menge_abgeleitet": null,
    "menge_annahme": null,
    "menge_bezug": [],
-   "nach": "S25",
-   "stand": null,
+   "nach": "S26",
+   "stand": "Kalenderjahr 2025 (Berichtszeitraum)",
    "von": "S2",
    "ware": "Spodumen- und Petalitkonzentrat",
    "wert": {
@@ -14555,9 +15669,10 @@
     "t": 350000.0,
     "text": "350.000 t pro Jahr"
    },
+   "menge_abgeleitet": null,
    "menge_annahme": null,
    "menge_bezug": [],
-   "nach": "S27",
+   "nach": "S28",
    "stand": "Kalenderjahr 2025 (Berichtszeitraum)",
    "von": "S7",
    "ware": "Lithiumkonzentrat",
@@ -14615,6 +15730,7 @@
     "t": null,
     "text": "unbekannt"
    },
+   "menge_abgeleitet": null,
    "menge_annahme": {
     "annahme_id": "A-LI-MENGE",
     "einheit": "t Li-Inhalt",
@@ -14630,7 +15746,7 @@
     "welt": "lithium"
    },
    "menge_bezug": [],
-   "nach": "S17",
+   "nach": "S18",
    "stand": "Kalenderjahr 2025 (Berichtszeitraum)",
    "von": "S1",
    "ware": "Lithiumrohstoff",
@@ -14702,6 +15818,7 @@
     "t": 744630.0,
     "text": "744.630 t pro Jahr"
    },
+   "menge_abgeleitet": null,
    "menge_annahme": null,
    "menge_bezug": [],
    "nach": "S12",
@@ -14725,9 +15842,23 @@
   {
    "art": "HANDEL",
    "art_atlas": "OFFTAKE_AGREEMENT",
-   "auf_globus": false,
-   "aussage": "Abnahmevertrag Liontown -> Ford; Lieferbeginn vereinbart ab 1. Juli 2025 (Quartal Juli bis September 2024).",
+   "auf_globus": true,
+   "aussage": "Abnahmevertrag Liontown -> Ford, geändert am 9.10.2025: keine Lieferung an Ford in den Kalenderjahren 2027 und 2028; die Menge ab 1.1.2027 sinkt von 512.500 dmt auf insgesamt 256.250 dmt (Restmenge), Ford kann sich von der Abnahmepflicht für die ganze Restmenge lösen. Die Mengen vom 1.7.2025 bis 31.12.2026 sind im Back-to-back-Geschäft an Chengxin verkauft (LIF-19). Ursprünglich vereinbarter Lieferbeginn 1.7.2025 (Quartalsbericht 9/2024).",
    "belege": [
+    {
+     "fundstelle": "Amended debt and offtake arrangements (ASX-Mitteilung 9.10.2025), PDF-Seite 1",
+     "herausgeber": "Liontown Resources Limited",
+     "textkopie": "analysis/research/lithium-flows-v1/raw/ltr-asx-2025-10-09-p1.txt",
+     "url": "https://announcements.asx.com.au/asxpdf/20251009/pdf/06q9vd6qc4xdlh.pdf",
+     "zitat": "The 512,500 dmt to be delivered to Ford under the Offtake Agreement from 1 January 2027 onwards … are reduced to a total of 256,250 dmt (Remaining Volume). No volumes will be delivered to Ford in calendar years 2027 and 2028. … Ford has the option to elect to be released from its take-or-pay obligations over all the Remaining Volume."
+    },
+    {
+     "fundstelle": "Financial Report Half year ended 31 December 2025, PDF-Seite 9",
+     "herausgeber": "Liontown Limited",
+     "textkopie": "analysis/research/lithium-flows-v1/raw/ltr-hy-2026-p9.txt",
+     "url": "https://announcements.asx.com.au/asxpdf/20260312/pdf/06xbbdv7pppvv3.pdf",
+     "zitat": "a reduction in committed offtake volumes to nil in CY2027 and CY2028"
+    },
     {
      "fundstelle": "Quarterly Activities Report September 2024, PDF-Seite 8",
      "herausgeber": "Liontown Resources Limited",
@@ -14740,7 +15871,7 @@
    "evidenz_basis": "Freigegebener Fluss; Entscheidung Eddie Sablah 2026-11-16 (analysis/rohstoffe/fakt-entscheidung.json)",
    "flow_id": "LIF-18",
    "freigabe": "FREIGEGEBEN",
-   "freigabe_herkunft": "Claude (delegiert durch Eddie Sablah); Prüfbericht pruefbericht-2026-11-08c.pdf",
+   "freigabe_herkunft": "Claude (delegiert durch Eddie Sablah); Prüfbericht pruefbericht-2026-11-17.pdf",
    "id": "V18",
    "menge": {
     "evidenz": "UNKNOWN",
@@ -14751,6 +15882,7 @@
     "t": null,
     "text": "unbekannt"
    },
+   "menge_abgeleitet": null,
    "menge_annahme": {
     "annahme_id": "A-LI-MENGE",
     "einheit": "t Li-Inhalt",
@@ -14766,8 +15898,8 @@
     "welt": "lithium"
    },
    "menge_bezug": [],
-   "nach": "S14",
-   "stand": null,
+   "nach": "S15",
+   "stand": "Mitteilung vom 9.10.2025 (Vertrag laut Quelle geändert)",
    "von": "S8",
    "ware": "Spodumenkonzentrat",
    "wert": {
@@ -14794,6 +15926,312 @@
     "rechnung": "1.815 t (Annahme A-LI-MENGE, t Li-Inhalt) × 47.905,467 US$ je t Lithium-Inhalt (9.000 US$/t Lithiumcarbonat ÷ 0,18787 (Li-Anteil von Li2CO3 nach Molmassen, wie menge-wert.mjs)) = 86,9 Mio. US$ ÷ EZB-Jahresmittel 2025: 1,1300 US$ je €",
     "text": "≈ 76,9 Mio. € pro Jahr"
    }
+  },
+  {
+   "art": "HANDEL",
+   "art_atlas": "OFFTAKE_AGREEMENT",
+   "auf_globus": true,
+   "aussage": "Mengen aus dem Ford-Abnahmevertrag (Kathleen Valley) sind vom 1.7.2025 bis 31.12.2026 im bestehenden Back-to-back-Geschäft an Chengxin verkauft. Menge und Verkäufer (Liontown oder Ford) nennt die Quelle nicht.",
+   "belege": [
+    {
+     "fundstelle": "Amended debt and offtake arrangements (ASX-Mitteilung 9.10.2025), PDF-Seite 1",
+     "herausgeber": "Liontown Resources Limited",
+     "textkopie": "analysis/research/lithium-flows-v1/raw/ltr-asx-2025-10-09-p1.txt",
+     "url": "https://announcements.asx.com.au/asxpdf/20251009/pdf/06q9vd6qc4xdlh.pdf",
+     "zitat": "those volumes not already committed to be sold to Chengxin between 1 July 2025 and 31 December 2026 under the existing back-to-back deal"
+    }
+   ],
+   "evidenz": "FACT",
+   "evidenz_basis": "Freigegebener Fluss; Entscheidung Eddie Sablah 2026-11-16 (analysis/rohstoffe/fakt-entscheidung.json)",
+   "flow_id": "LIF-19",
+   "freigabe": "FREIGEGEBEN",
+   "freigabe_herkunft": "Claude (delegiert durch Eddie Sablah); Prüfbericht pruefbericht-2026-11-17.pdf",
+   "id": "V19",
+   "menge": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+    "pro_jahr": null,
+    "quelle_text": null,
+    "rechnung": "",
+    "t": null,
+    "text": "unbekannt"
+   },
+   "menge_abgeleitet": {
+    "art": "bilanz",
+    "belege": [
+     {
+      "abgerufen": "2026-11-17",
+      "fundstelle": "Liontown executes Binding Offtake Agreement with Ford (ASX-Mitteilung 29.6.2022), PDF-Seite 5",
+      "herausgeber": "Liontown Resources Limited",
+      "textkopie": "analysis/rohstoffe/mengen/raw/ltr-2022-06-29-p5.txt",
+      "url": "https://announcements.asx.com.au/asxpdf/20220629/pdf/45bbkj2qt4jfng.pdf",
+      "zitat": "Year 1 – 75,000 DMT (+/- 10%),"
+     },
+     {
+      "abgerufen": "2026-11-17",
+      "fundstelle": "Liontown executes Binding Offtake Agreement with Ford (ASX-Mitteilung 29.6.2022), PDF-Seite 5",
+      "herausgeber": "Liontown Resources Limited",
+      "textkopie": "analysis/rohstoffe/mengen/raw/ltr-2022-06-29-p5.txt",
+      "url": "https://announcements.asx.com.au/asxpdf/20220629/pdf/45bbkj2qt4jfng.pdf",
+      "zitat": "Year 2 – 125,000 DMT (+/- 10%)"
+     },
+     {
+      "abgerufen": "2026-11-17",
+      "fundstelle": "Liontown executes Binding Offtake Agreement with Ford (ASX-Mitteilung 29.6.2022), PDF-Seite 5",
+      "herausgeber": "Liontown Resources Limited",
+      "textkopie": "analysis/rohstoffe/mengen/raw/ltr-2022-06-29-p5.txt",
+      "url": "https://announcements.asx.com.au/asxpdf/20220629/pdf/45bbkj2qt4jfng.pdf",
+      "zitat": "Years 3 to 5 – 150,000 DMT (+/- 10%)"
+     },
+     {
+      "abgerufen": "2026-11-17",
+      "fundstelle": "Amended debt and offtake arrangements (ASX-Mitteilung 9.10.2025), PDF-Seite 1",
+      "herausgeber": "Liontown Resources Limited",
+      "textkopie": "analysis/research/lithium-flows-v1/raw/ltr-asx-2025-10-09-p1.txt",
+      "url": "https://announcements.asx.com.au/asxpdf/20251009/pdf/06q9vd6qc4xdlh.pdf",
+      "zitat": "The 512,500 dmt to be delivered to Ford under the Offtake Agreement from 1 January 2027 onwards (i.e., … those volumes not already committed to be sold to Chengxin between 1 July 2025 and 31 December 2026"
+     }
+    ],
+    "eingaenge": [
+     {
+      "anzahl": 1,
+      "einheit": "dmt",
+      "freigabe": "FREIGEGEBEN",
+      "hoch": 1,
+      "name": "Ford-Vertrag Jahr 1",
+      "quelle": "Liontown Resources Limited, Liontown executes Binding Offtake Agreement with Ford (ASX-Mitteilung 29.6.2022), PDF-Seite 5",
+      "ref": "MA-LIF-19/Ford-Vertrag Jahr 1",
+      "wert": 75000.0
+     },
+     {
+      "anzahl": 1,
+      "einheit": "dmt",
+      "freigabe": "FREIGEGEBEN",
+      "hoch": 1,
+      "name": "Ford-Vertrag Jahr 2",
+      "quelle": "Liontown Resources Limited, Liontown executes Binding Offtake Agreement with Ford (ASX-Mitteilung 29.6.2022), PDF-Seite 5",
+      "ref": "MA-LIF-19/Ford-Vertrag Jahr 2",
+      "wert": 125000.0
+     },
+     {
+      "anzahl": 3,
+      "einheit": "dmt",
+      "freigabe": "FREIGEGEBEN",
+      "hoch": 1,
+      "name": "Ford-Vertrag Jahre 3 bis 5 (je Jahr)",
+      "quelle": "Liontown Resources Limited, Liontown executes Binding Offtake Agreement with Ford (ASX-Mitteilung 29.6.2022), PDF-Seite 5",
+      "ref": "MA-LIF-19/Ford-Vertrag Jahre 3 bis 5 (je Jahr)",
+      "wert": 150000.0
+     },
+     {
+      "anzahl": -1,
+      "einheit": "dmt",
+      "freigabe": "FREIGEGEBEN",
+      "hoch": 1,
+      "name": "Restmenge Ford ab 1.1.2027 vor der Änderung",
+      "quelle": "Liontown Resources Limited, Amended debt and offtake arrangements (ASX-Mitteilung 9.10.2025), PDF-Seite 1",
+      "ref": "MA-LIF-19/Restmenge Ford ab 1.1.2027 vor der Änderung",
+      "wert": 512500.0
+     }
+    ],
+    "einheit": "dmt",
+    "ergebnis": [
+     137500.0
+    ],
+    "evidenz": "ABGELEITET",
+    "freigabe_eingaenge": [
+     {
+      "freigabe": "FREIGEGEBEN",
+      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-17 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+      "name": "Ford-Vertrag Jahr 1"
+     },
+     {
+      "freigabe": "FREIGEGEBEN",
+      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-17 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+      "name": "Ford-Vertrag Jahr 2"
+     },
+     {
+      "freigabe": "FREIGEGEBEN",
+      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-17 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+      "name": "Ford-Vertrag Jahre 3 bis 5 (je Jahr)"
+     },
+     {
+      "freigabe": "FREIGEGEBEN",
+      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-17 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+      "name": "Restmenge Ford ab 1.1.2027 vor der Änderung"
+     }
+    ],
+    "hinweis": "Vertragsmenge ±10 %, keine Liefermenge. Lieferbeginn Ford 1.7.2025 (Liontown-Quartalsbericht 9/2024, S. 8). Gegenprobe: Jahr 1 (75.000) plus halbes Jahr 2 (62.500) ergibt ebenfalls 137.500 dmt. Die Quelle nennt keine Liefermenge an Chengxin; die Höchstmenge im Quartalsbericht 6/2025 ist aus der Cloud nicht lesbar.",
+    "id": "MA-LIF-19",
+    "pro_jahr": false,
+    "qualifier": "Vertragsmenge Spodumenkonzentrat, keine Liefermenge",
+    "quelle_text": "137.500 dmt (Vertragsmenge Spodumenkonzentrat, keine Liefermenge, 1.7.2025 bis 31.12.2026)",
+    "rechenweg": "Ford-Vertragsmenge über 5 Jahre (75.000 + 125.000 + 3 × 150.000 dmt) minus die Menge ab 1.1.2027 (512.500 dmt); die Differenz ist laut Liontown die an Chengxin verkaufte Menge 1.7.2025 bis 31.12.2026",
+    "t": 137500.0,
+    "text": "137.500 t im genannten Zeitraum",
+    "umrechnung": "",
+    "zeitraum": "1.7.2025 bis 31.12.2026"
+   },
+   "menge_annahme": null,
+   "menge_bezug": [],
+   "nach": "S14",
+   "stand": "Mitteilung vom 9.10.2025 (Vertrag laut Quelle in Kraft)",
+   "von": "S8",
+   "ware": "Spodumenkonzentrat",
+   "wert": {
+    "eur": null,
+    "evidenz": "UNKNOWN",
+    "grund": "Keine gelesene Quelle nennt einen Wert; Menge × Preis ist eine Rechnung und steht nur in der Ansicht „Mit Annahmen“.",
+    "quelle_text": null,
+    "rechnung": "",
+    "text": "unbekannt"
+   },
+   "wert_abgeleitet": null,
+   "wert_annahme": {
+    "annahme_art": "RECHNUNG",
+    "eur": null,
+    "eur_spanne": [
+     97345132.74336284,
+     118030973.45132744
+    ],
+    "evidenz": "ANNAHME",
+    "preis_basis": "spodumen",
+    "preis_datum": null,
+    "preis_quelle": "U.S. Geological Survey, Mineral Commodity Summaries 2026, Lithium",
+    "preis_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-lithium.pdf",
+    "preis_zitat": "Spodumene (6% lithium oxide) prices in Australia (f.o.b.) increased from approximately $800 per … ton in January to approximately $970 per ton in November.",
+    "rechnung": "137.500 t (abgeleitete Menge MA-LIF-19) × 800 bis 970 US$ je t Spodumenkonzentrat (6 % Li2O) (Spanne Januar bis November 2025 (f.o.b. Australien)) = 110 Mio. US$ bis 133 Mio. US$ ÷ EZB-Jahresmittel 2025: 1,1300 US$ je €",
+    "text": "≈ 97,3 Mio. € bis 118 Mio. € im genannten Zeitraum"
+   }
+  },
+  {
+   "art": "HANDEL",
+   "art_atlas": "OFFTAKE_AGREEMENT",
+   "auf_globus": true,
+   "aussage": "Verbindlicher Abnahmevertrag Liontown -> Canmax (Dezember 2025) über 150.000 wmt pro Jahr in den Kalenderjahren 2027 und 2028, abgeschlossen mit der durch die Ford-Änderung frei gewordenen Menge. Feuchttonnen (wmt), keine Umrechnung in Trockentonnen ohne Feuchtegehalt.",
+   "belege": [
+    {
+     "fundstelle": "Financial Report Half year ended 31 December 2025, PDF-Seite 9",
+     "herausgeber": "Liontown Limited",
+     "textkopie": "analysis/research/lithium-flows-v1/raw/ltr-hy-2026-p9.txt",
+     "url": "https://announcements.asx.com.au/asxpdf/20260312/pdf/06xbbdv7pppvv3.pdf",
+     "zitat": "Utilising this capacity, the Company executed a binding offtake agreement with Canmax Technologies Co. Ltd in December 2025 for 150,000 wmt per annum in CY2027 and CY2028"
+    }
+   ],
+   "evidenz": "FACT",
+   "evidenz_basis": "Freigegebener Fluss; Entscheidung Eddie Sablah 2026-11-16 (analysis/rohstoffe/fakt-entscheidung.json)",
+   "flow_id": "LIF-20",
+   "freigabe": "FREIGEGEBEN",
+   "freigabe_herkunft": "Claude (delegiert durch Eddie Sablah); Prüfbericht pruefbericht-2026-11-17.pdf",
+   "id": "V20",
+   "menge": {
+    "evidenz": "UNKNOWN",
+    "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
+    "pro_jahr": null,
+    "quelle_text": null,
+    "rechnung": "",
+    "t": null,
+    "text": "unbekannt"
+   },
+   "menge_abgeleitet": {
+    "art": "trockenmasse",
+    "belege": [
+     {
+      "abgerufen": "2026-11-17",
+      "fundstelle": "Financial Report Half year ended 31 December 2025, PDF-Seite 9",
+      "herausgeber": "Liontown Limited",
+      "textkopie": "analysis/research/lithium-flows-v1/raw/ltr-hy-2026-p9.txt",
+      "url": "https://announcements.asx.com.au/asxpdf/20260312/pdf/06xbbdv7pppvv3.pdf",
+      "zitat": "the Company executed a binding offtake agreement with Canmax Technologies Co. Ltd in December 2025 for 150,000 wmt per annum in … CY2027 and CY2028"
+     },
+     {
+      "abgerufen": "2026-11-17",
+      "fundstelle": "June Quarter FY25 Presentation (ASX 29.7.2025), PDF-Seite 3",
+      "herausgeber": "Liontown Resources Limited",
+      "textkopie": "analysis/rohstoffe/mengen/raw/ltr-2025-07-29-p3.txt",
+      "url": "https://announcements.asx.com.au/asxpdf/20250729/pdf/06m7xwlkt10swp.pdf",
+      "zitat": "Over 294,000 dmt concentrate produced at 5.2% (>320,000 wmt at 8% moisture)"
+     }
+    ],
+    "eingaenge": [
+     {
+      "einheit": "wmt",
+      "freigabe": "FREIGEGEBEN",
+      "hoch": 1,
+      "name": "Canmax-Vertrag je Jahr (Feuchttonnen)",
+      "quelle": "Liontown Limited, Financial Report Half year ended 31 December 2025, PDF-Seite 9",
+      "ref": "MA-LIF-20/Canmax-Vertrag je Jahr (Feuchttonnen)",
+      "wert": 150000.0
+     },
+     {
+      "einheit": "%",
+      "freigabe": "FREIGEGEBEN",
+      "hoch": 1,
+      "name": "Feuchtegehalt Liontown-Konzentrat",
+      "quelle": "Liontown Resources Limited, June Quarter FY25 Presentation (ASX 29.7.2025), PDF-Seite 3",
+      "ref": "MA-LIF-20/Feuchtegehalt Liontown-Konzentrat",
+      "wert": 8.0
+     }
+    ],
+    "einheit": "dmt",
+    "ergebnis": [
+     138000.0
+    ],
+    "evidenz": "ABGELEITET",
+    "freigabe_eingaenge": [
+     {
+      "freigabe": "FREIGEGEBEN",
+      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-17 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+      "name": "Canmax-Vertrag je Jahr (Feuchttonnen)"
+     },
+     {
+      "freigabe": "FREIGEGEBEN",
+      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-17 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+      "name": "Feuchtegehalt Liontown-Konzentrat"
+     }
+    ],
+    "hinweis": "Feuchtegehalt 8 % nennt Liontown für das im Geschäftsjahr 2024/25 erzeugte Konzentrat (320.000 wmt ≈ 294.000 dmt); der Vertrag selbst nennt keinen Feuchtegehalt. Vertragsmenge, keine Liefermenge.",
+    "id": "MA-LIF-20",
+    "pro_jahr": true,
+    "qualifier": "Vertragsmenge Spodumenkonzentrat, keine Liefermenge",
+    "quelle_text": "138.000 dmt (Vertragsmenge Spodumenkonzentrat, keine Liefermenge, Kalenderjahre 2027 und 2028)",
+    "rechenweg": "150.000 wmt je Jahr × (1 − 8 % Feuchte)",
+    "t": 138000.0,
+    "text": "138.000 t pro Jahr",
+    "umrechnung": "",
+    "zeitraum": "Kalenderjahre 2027 und 2028"
+   },
+   "menge_annahme": null,
+   "menge_bezug": [],
+   "nach": "S13",
+   "stand": "Halbjahr 1.7.2025 bis 31.12.2025 (Vertrag laut Quelle in Kraft)",
+   "von": "S8",
+   "ware": "Spodumenkonzentrat",
+   "wert": {
+    "eur": null,
+    "evidenz": "UNKNOWN",
+    "grund": "Keine gelesene Quelle nennt einen Wert; Menge × Preis ist eine Rechnung und steht nur in der Ansicht „Mit Annahmen“.",
+    "quelle_text": null,
+    "rechnung": "",
+    "text": "unbekannt"
+   },
+   "wert_abgeleitet": null,
+   "wert_annahme": {
+    "annahme_art": "RECHNUNG",
+    "eur": null,
+    "eur_spanne": [
+     97699115.04424779,
+     118460176.99115045
+    ],
+    "evidenz": "ANNAHME",
+    "preis_basis": "spodumen",
+    "preis_datum": null,
+    "preis_quelle": "U.S. Geological Survey, Mineral Commodity Summaries 2026, Lithium",
+    "preis_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-lithium.pdf",
+    "preis_zitat": "Spodumene (6% lithium oxide) prices in Australia (f.o.b.) increased from approximately $800 per … ton in January to approximately $970 per ton in November.",
+    "rechnung": "138.000 t (abgeleitete Menge MA-LIF-20) × 800 bis 970 US$ je t Spodumenkonzentrat (6 % Li2O) (Spanne Januar bis November 2025 (f.o.b. Australien)) = 110 Mio. US$ bis 134 Mio. US$ ÷ EZB-Jahresmittel 2025: 1,1300 US$ je €",
+    "text": "≈ 97,7 Mio. € bis 118 Mio. € pro Jahr"
+   }
   }
  ],
  "weltreferenz": {
@@ -14803,34 +16241,35 @@
   "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-lithium.pdf"
  },
  "zaehler": {
-  "ausfall_mit_ausweich_menge": 26,
-  "belege": 24,
-  "eigentum_belegt": 20,
+  "ausfall_mit_ausweich_menge": 28,
+  "belege": 28,
+  "eigentum_belegt": 22,
   "eigentum_kandidaten": 11,
-  "eigentumskette_freigegeben": 11,
-  "eigentumskette_kanten": 28,
-  "eigentumskette_vollstaendig": 11,
-  "glieder_mit_ausweichquelle": 14,
+  "eigentumskette_freigegeben": 14,
+  "eigentumskette_kanten": 30,
+  "eigentumskette_vollstaendig": 14,
+  "glieder_mit_ausweichquelle": 17,
   "kette_stufen": 2,
-  "mengen_belegt": 10,
+  "mengen_abgeleitet": 2,
+  "mengen_belegt": 11,
   "mengen_bezug": 2,
-  "mengen_freigegeben": 2,
-  "mengen_in_tonnen": 10,
-  "mengen_mit_annahmen": 18,
+  "mengen_freigegeben": 3,
+  "mengen_in_tonnen": 11,
+  "mengen_mit_annahmen": 20,
   "risiko_belegt": 11,
-  "risikoebene_belegt": 90,
-  "risikoebene_felder": 108,
-  "standorte": 27,
-  "standorte_mit_ort": 22,
-  "tiefe_belegt": 99,
-  "tiefe_gesamt": 162,
-  "tiefe_mit_annahmen": 134,
-  "verbindungen": 18,
-  "verbindungen_auf_globus": 11,
-  "verbindungen_freigegeben": 18,
-  "werte_abgeleitet": 4,
+  "risikoebene_belegt": 95,
+  "risikoebene_felder": 112,
+  "standorte": 28,
+  "standorte_mit_ort": 28,
+  "tiefe_belegt": 109,
+  "tiefe_gesamt": 168,
+  "tiefe_mit_annahmen": 145,
+  "verbindungen": 20,
+  "verbindungen_auf_globus": 20,
+  "verbindungen_freigegeben": 20,
+  "werte_abgeleitet": 6,
   "werte_belegt": 1,
   "werte_in_euro": 1,
-  "werte_mit_annahmen": 18
+  "werte_mit_annahmen": 20
  }
 }

@@ -68,6 +68,7 @@ function ekQuellen(ek, b, out = []) {
 function mengeLauf(v, an, qv) {
   const m = v.menge, w = v.wert, out = [];
   if (m.evidenz !== 'UNKNOWN') out.push(T('Menge:', 'n', F.muted), B(m.text), M(fr(m)), qv.ref(m.belege || []));
+  else if (v.menge_abgeleitet) out.push(T('Menge:', 'n', F.muted), T(v.menge_abgeleitet.text), M('R'));
   else if (an && v.menge_annahme) out.push(T('Menge:', 'n', F.muted), T(v.menge_annahme.text), M('A'));
   else out.push(T('Menge:', 'n', F.muted), M('U'));
   if (w.evidenz !== 'UNKNOWN') out.push(T('Wert:', 'n', F.muted), B(w.text), M(w.freigabe ? fr(w) : 'B'), w.belege ? qv.ref(w.belege) : qv.ref(v.belege));
@@ -93,15 +94,34 @@ function preisLauf(d, qv) {
 
 // zwei Spalten, erst links, dann rechts; liefert Höhe
 function zweiSpalten(seite, eintraege, x, y, w) {
-  const vw = (w - 12) / 2, hs = eintraege.map(l => fluss(null, l, 0, 0, vw, GR) + 2), haelfte = hs.reduce((n, h) => n + h, 0) / 2;
-  let cy = y, spalte = 0, hoch = 0, summe = 0;
+  // Teilung, bei der die höhere Spalte am niedrigsten ist (Reihenfolge bleibt erhalten)
+  const vw = (w - 12) / 2, hs = eintraege.map(l => fluss(null, l, 0, 0, vw, GR) + 2), ges = hs.reduce((n, h) => n + h, 0);
+  let teil = hs.length, best = ges, links = 0;
+  hs.forEach((h, i) => { const m = Math.max(links, ges - links); if (i > 0 && m < best) { best = m; teil = i; } links += h; });
+  let cy = y, spalte = 0, hoch = 0;
   eintraege.forEach((l, i) => {
-    if (spalte === 0 && summe > 0 && summe + hs[i] / 2 > haelfte) { spalte = 1; hoch = cy - y; cy = y; }
+    if (i === teil) { spalte = 1; hoch = cy - y; cy = y; }
     if (seite) fluss(seite, l, x + spalte * (vw + 12), cy, vw, GR);
-    cy += hs[i]; summe += hs[i];
+    cy += hs[i];
   });
   return Math.max(hoch, cy - y);
 }
+
+// k Spalten (2 oder 3), Einträge der Reihe nach; Teilung, bei der die höchste Spalte am niedrigsten ist; liefert Höhe
+function spaltenSatz(seite, eintraege, x, y, w, k = 2) {
+  if (k === 2) return zweiSpalten(seite, eintraege, x, y, w);
+  const vw = (w - 12 * (k - 1)) / k, hs = eintraege.map(l => fluss(null, l, 0, 0, vw, GR) + 2), sum = (a, b) => hs.slice(a, b).reduce((n, h) => n + h, 0);
+  let best = [Infinity, hs.length, hs.length];
+  for (let i = 0; i <= hs.length; i++) for (let j = i; j <= hs.length; j++) {
+    const m = Math.max(sum(0, i), sum(i, j), sum(j, hs.length));
+    if (m < best[0]) best = [m, i, j];
+  }
+  const grenzen = [0, best[1], best[2], hs.length];
+  if (seite) for (let sp = 0; sp < k; sp++) { let cy = y; for (let i = grenzen[sp]; i < grenzen[sp + 1]; i++) { fluss(seite, eintraege[i], x + sp * (vw + 12), cy, vw, GR); cy += hs[i]; } }
+  return best[0];
+}
+// Spalten der Verbindungen: Seite 1 immer zwei, Seite 2 in Stufe 3 drei
+const vSpalten = (I, seite) => seite === 2 && I.kompakt >= 3 ? 3 : 2;
 
 // --- Seite 2: Ausfall ---------------------------------------------------------------------------------------------------------
 // Tonnen und Mehrkosten ABGELEITET (Regel 4 gelockert, Eddie 2026-11-16): Ergebnis, Marke R (Rechnung), Rechenweg; sonst Grund
@@ -109,14 +129,21 @@ function abgeleitet(f, weg, ref = () => null) {
   if (f.evidenz !== 'ABGELEITET') return [T(f.grund)];
   return [B(f.text), T('(abgeleitet)', 'n', F.muted), ...f.posten.flatMap(p => [I(`= ${weg(p)}`), ref(p)])];
 }
-function ausfall(d, sid, qv) {
+function ausfall(d, sid, qv, kompakt = false) {
   const S = Object.fromEntries(d.standorte.map(s => [s.id, s])), V = Object.fromEntries(d.verbindungen.map(v => [v.id, v])), a = d.ausfall[sid];
   const name = id => `${nr(S[id])}. ${S[id].kurz}`, liste = ids => ids.length ? ids.map(name).join(', ') : 'keines';
-  const aw = a.ausweich.liste.length ? a.ausweich.liste.flatMap((x, i) => [i ? NL : null, B(x.glied ? name(x.glied) : x.name),
-    T(`(${AW_ART[x.art]}${x.art === 'NETZ' ? `, ${x.richtung === 'ZUFLUSS' ? 'weiterer Zufluss' : 'weiterer Abnehmer'} für ${name(x.fuer)}` : ''})`, 'n', F.muted),
-    x.menge.evidenz === 'UNKNOWN' ? T('Menge') : T(x.menge.text), M(x.menge.evidenz === 'UNKNOWN' ? 'U' : x.art === 'LAND' ? 'L' : 'B'),
-    x.freigabe ? M(fr(x)) : null, x.quelle ? qv.ref([x.quelle]) : null])
-    : [M('U'), T(a.ausweich.grund || 'Keine Ausweichquelle erfasst.')];
+  // Kompakt (Seitenplanung Stufe 1): Fliesstext; aufeinanderfolgende Ausweichen gleicher Art (bei Netz: gleiche Richtung, gleiches
+  // Glied) stehen unter einer gemeinsamen Angabe statt der Art in Klammern je Eintrag (gleiche Einträge, Mengen, Marken, Quellen).
+  const gruppe = x => x.art === 'NETZ' ? `${x.richtung}|${x.fuer}` : x.art;
+  const gkopf = x => x.art === 'NETZ' ? [B(`${x.richtung === 'ZUFLUSS' ? 'Weitere Zuflüsse' : 'Weitere Abnehmer'} für ${name(x.fuer)}`), T('(weitere erfasste Verbindungen):', 'n', F.muted)]
+    : x.art === 'LAND' ? [B('Andere Förderländer'), T('(Landesebene):', 'n', F.muted)] : [B('Andere Standorte:')];
+  const aw = a.ausweich.liste.length ? a.ausweich.liste.flatMap((x, i, l) => {
+    const art = `(${AW_ART[x.art]}${x.art === 'NETZ' ? `, ${x.richtung === 'ZUFLUSS' ? 'weiterer Zufluss' : 'weiterer Abnehmer'} für ${name(x.fuer)}` : ''})`;
+    const neu = i === 0 || gruppe(l[i - 1]) !== gruppe(x), nm = B(x.glied ? name(x.glied) : x.name);
+    return [...(kompakt ? [i ? T(neu ? ';' : ',') : null, ...(neu ? gkopf(x) : []), nm] : [i ? NL : null, nm, T(art, 'n', F.muted)]),
+      x.menge.evidenz === 'UNKNOWN' ? T('Menge') : T(x.menge.text), M(x.menge.evidenz === 'UNKNOWN' ? 'U' : x.art === 'LAND' ? 'L' : 'B'),
+      x.freigabe ? M(fr(x)) : null, x.quelle ? qv.ref([x.quelle]) : null];
+  }) : [M('U'), T(a.ausweich.grund || 'Keine Ausweichquelle erfasst.')];
   const mengen = a.mengen.length ? a.mengen.flatMap((m, i) => { const v = V[m.verbindung];
     return [i ? T(';') : null, T(`${v.id} ${S[v.von].kurz} -> ${S[v.nach].kurz}:`), m.evidenz === 'UNKNOWN' ? M('U') : T(m.text), m.evidenz === 'UNKNOWN' ? null : M(fr(v.menge))]; })
     : [T('keine')];
@@ -126,7 +153,7 @@ function ausfall(d, sid, qv) {
     [[B('Fehlende Tonnen'), M(a.tonnen.evidenz === 'ABGELEITET' ? 'R' : 'U')], abgeleitet(a.tonnen, p => p.formel)],
     [[B('Mehrkosten'), M(a.mehrkosten.evidenz === 'ABGELEITET' ? 'R' : 'U')], abgeleitet(a.mehrkosten, p => `${p.formel} (Marktpreis minus Vertragspreis)`, p => qv.ref([{herausgeber: p.preis_quelle, url: p.preis_url}]))],
     [[B('Dauer'), M('U')], [T(a.dauer.grund)]],
-    [[B('Ausweichquellen'), T(`${a.ausweich.mit_menge ?? 0} mit Menge`, 'n', F.muted)], [...aw, NL, I('Keine bestätigte Ersatzlieferung, freie Kapazität nie belegt.')]],
+    [[B('Ausweichquellen'), T(`${a.ausweich.mit_menge ?? 0} mit Menge`, 'n', F.muted)], [...aw, kompakt ? T('.') : NL, I('Keine bestätigte Ersatzlieferung, freie Kapazität nie belegt.')]],
   ];
   const weg = a.verbindungen_weg.map(id => `${id} ${S[V[id].von].kurz} -> ${S[V[id].nach].kurz}`).join('; ') || 'keine';
   return {folgen, weg, a};
@@ -164,18 +191,85 @@ function antwort(d, an, qv) {
 }
 
 // --- Seitenaufbau ---------------------------------------------------------------------------------------------------------------
-// Feste Schrift 8 pt; passt Seite 1 nicht, wird erst die Karte flacher (bis 110 pt), dann wandern die Verbindungen auf Seite 2.
+// Inhalt einmal in Lesereihenfolge (Quellennummern nach erster Nennung: Antwort, Glieder, Verbindungen, Ausfall); Planung und
+// Satz nutzen dasselbe Ergebnis, damit gemessene und gesetzte Höhen übereinstimmen.
+function inhalt(d, o, kompakt = 0) {
+  const an = o.ansicht === 'annahmen', qv = verzeichnis();
+  const ant = antwort(d, an, qv), gl = glieder(d, qv), vz = verbindungen(d, an, qv), z2 = ausfall(d, o.ausfall, qv, kompakt >= 1);
+  const betroffen = [B(`Betroffene Verbindungen: `), T(z2.weg), I(' Strukturfolge im erfassten Netz, Schlussfolgerung aus der Datenbank, kein Fakt.')];
+  return {an, qv, ant, gl, vz, z2, betroffen, kompakt};
+}
+const FOLGE_SPALTEN = [{t: 'Folge', w: BR * 0.2}, {t: 'Ergebnis', w: BR * 0.8}];
+const Y2 = 70;   // Oberkante Inhalt Seite 2
+// Folgen des Ausfalls: Tabelle; in Stufe 2 als Fliesstext in zwei Spalten (spart die Bezeichnungsspalte, gleicher Inhalt), die
+// Ausweichquellen (längster Eintrag) je nachdem, was flacher ist, in der Spalte oder darunter in voller Breite
+function folgenSatz(seite, I, y) {
+  if (I.kompakt < 2) return tabelle(seite, L, y, FOLGE_SPALTEN, I.z2.folgen, GR);
+  const laeufe = I.z2.folgen.map(([bez, erg]) => [...bez, T(':'), ...erg]);
+  const alle = sx => zweiSpalten(sx, laeufe, L, y, BR);
+  const breit = sx => { const h = zweiSpalten(sx, laeufe.slice(0, -1), L, y, BR); return h + fluss(sx, laeufe.at(-1), L, y + h, BR, GR) + 2; };
+  return (alle(null) <= breit(null) ? alle : breit)(seite);
+}
+// Seite 2 bis zur Überschrift der Quellenliste; k = Zahl der Verbindungen auf Seite 1
+function hoeheSeite2(I, k, verbH) {
+  return Y2 + fluss(null, I.betroffen, L, Y2, BR, GR) + 4 + folgenSatz(null, I, 0) + 6
+    + (k < I.vz.length ? verbH(k, I.vz.length, 2) + 6 : 0) + 13;
+}
+
+// Quellenliste: 2 Spalten mit bis zu 3, 2, 1 Zeilen je Eintrag; reicht das nicht, 3 Spalten zu je 1 Zeile. Jede Quelle bleibt
+// mit Nummer und Link gelistet; nur überlange Titel werden mit … gekürzt (voller Titel in kette.json).
+const Q_STUFEN = [[3, 2], [2, 2], [1, 2], [1, 3]];
+function quellenSatz(liste, platz, cache = new Map()) {
+  const lh = GR * 1.28;
+  let erg = null;
+  for (const [n, k] of Q_STUFEN) {
+    const sw = (BR - 12 * (k - 1)) / k, key = `${n}/${k}`;
+    if (!cache.has(key)) cache.set(key, liste.map((q, i) => {
+      const laeufe = tt => [B(`[${i + 1}]`), T(tt, 'n', '#1d5f8f'), q.stand ? I(`· ${q.stand}`) : null];
+      let t = `${q.herausgeber}${q.titel ? ': ' + q.titel : ''}`;
+      if (fluss(null, laeufe(t), 0, 0, sw, GR) > n * lh + 0.1) {
+        while (t.length > 4 && fluss(null, laeufe(t + '…'), 0, 0, sw, GR) > n * lh + 0.1) t = t.slice(0, -1);
+        t = t.trimEnd() + '…';
+      }
+      return {laeufe: laeufe(t), h: fluss(null, laeufe(t), 0, 0, sw, GR) + 1, url: q.url};
+    }));
+    const zeilen = cache.get(key), spalten = Array.from({length: k}, () => []);
+    let sp = 0, hoehe = 0;
+    for (const e of zeilen) { if (hoehe + e.h > platz) { if (sp === k - 1) break; sp += 1; hoehe = 0; } if (hoehe + e.h > platz) break; spalten[sp].push(e); hoehe += e.h; }
+    erg = {sw, zeilen, spalten, alle: spalten.flat().length === zeilen.length};
+    if (erg.alle) break;
+  }
+  return erg;
+}
+
+// Feste Schrift 8 pt, genau 2 Seiten, für jedes wählbare Ausfallglied. Geplant wird mit beiden Seiten (Seite 2 hängt vom
+// Ausfallglied ab: Folgen, Ausweichquellen, Quellen). Reihenfolge je Kartenbreite (100 %, 90 %, 80 %):
+//   1. alle Verbindungen auf Seite 1, Karte so hoch wie möglich (bis 110 pt);
+//   2. so viele Verbindungen auf Seite 1 wie passen, der Rest folgt auf Seite 2 (Karte so hoch wie möglich).
+// Passt keine Variante, wird Seite 2 verdichtet und die Suche wiederholt: Stufe 1 setzt die Ausweichquellen im Fliesstext statt
+// je Zeile, Stufe 2 zusätzlich die Folgen in zwei Spalten statt als Tabelle, Stufe 3 zusätzlich die Verbindungen auf Seite 2 in
+// drei statt zwei Spalten. Inhalt, Marken und Quellen bleiben gleich.
 function plan(d, o) {
-  const an = o.ansicht === 'annahmen', qv = verzeichnis(), kw = Math.round(BR * KARTE_ANTEIL);
-  const yk = 69 + legende(null, 69, an) + 5, rw = BR - kw - 10, hr = fluss(null, antwort(d, an, qv), 0, 0, rw, GR);
-  const hg = 13 + zweiSpalten(null, glieder(d, qv), 0, 0, BR) + 6, hv = 13 + zweiSpalten(null, verbindungen(d, an, qv), 0, 0, BR);
-  const passt = (kh, mitV) => yk + Math.max(kh + 18, hr + 8) + hg + (mitV ? hv : 0) <= UNTEN;
-  for (const mitV of [true, false])
-    for (let kh = Math.round(kw / 1.5); kh >= KARTE_MIN; kh -= 8) if (passt(kh, mitV)) return {kw, kh, verbS2: !mitV};
-  return {kw, kh: KARTE_MIN, verbS2: true};
+  for (const kompakt of [0, 1, 2, 3]) {
+    const I = inhalt(d, o, kompakt), n = I.vz.length, yk = 69 + legende(null, 69, I.an) + 5, hg = 13 + zweiSpalten(null, I.gl, 0, 0, BR) + 6;
+    const vh = new Map(), verbH = (a, b, sn = 1) => { const k = `${a}-${b}-${sn}`; if (!vh.has(k)) vh.set(k, 13 + spaltenSatz(null, I.vz.slice(a, b), 0, 0, BR, vSpalten(I, sn))); return vh.get(k); };
+    const qc = new Map(), s2passt = k => quellenSatz(I.qv.liste, UNTEN - hoeheSeite2(I, k, verbH), qc).alle;
+    for (const anteil of [1, 0.9, 0.8]) {
+      const kw = Math.round(BR * KARTE_ANTEIL * anteil), hr = fluss(null, I.ant, 0, 0, BR - kw - 10, GR), khs = [];
+      for (let kh = Math.round(kw / 1.5); kh >= KARTE_MIN; kh -= 8) khs.push(kh);
+      const oben = kh => yk + Math.max(kh + 18, hr + 8) + hg;
+      for (const kh of khs) if (oben(kh) + verbH(0, n) <= UNTEN && s2passt(n)) return {kw, kh, k: n, kompakt};
+      for (const kh of khs) {
+        if (oben(kh) > UNTEN) continue;
+        let k = n - 1; while (k > 0 && oben(kh) + verbH(0, k) > UNTEN) k--;
+        if (s2passt(k)) return {kw, kh, k, kompakt};
+      }
+    }
+  }
+  return {kw: Math.round(BR * KARTE_ANTEIL * 0.8), kh: KARTE_MIN, k: 0, kompakt: 3};   // meldet ueberlauf
 }
 function baue(d, o, p, rahmen, bild) {
-  const an = o.ansicht === 'annahmen', qv = verzeichnis(), S = Object.fromEntries(d.standorte.map(s => [s.id, s]));
+  const I = inhalt(d, o, p.kompakt), {an, qv, vz} = I, S = Object.fromEntries(d.standorte.map(s => [s.id, s]));
   const s1 = new Seite();
   kopf(s1, d, o, 1, `${d.rohstoff}: ${d.kette.text}`);
   let y = 69;
@@ -183,46 +277,27 @@ function baue(d, o, p, rahmen, bild) {
   const kd = {...d, standorte: d.standorte.map(s => ({...s, kurz: sauber(s.kurz), ort: {...s.ort, freigabe: s.ort.evidenz === 'BELEGT' ? 'FREIGEGEBEN' : null}}))};
   const nahe = st => `${st.map(nr).join(', ')}. ${kurz(st[0].kurz, 20)} u. a.`;
   karte(s1, kd, o, L, y, p.kw, p.kh, rahmen, bild, {nr, ballung: nahe, linien: LINIEN});
-  const hr = fluss(s1, antwort(d, an, qv), L + p.kw + 10, y, BR - p.kw - 10, GR);
+  const hr = fluss(s1, I.ant, L + p.kw + 10, y, BR - p.kw - 10, GR);
   y += Math.max(p.kh + 18, hr + 8);
   s1.text(L, y + 9, 'Glieder: Eigentümer bis oben und Risiko-Ebene', {gr: H2, f: 'b'}); y += 13;
-  y += zweiSpalten(s1, glieder(d, qv), L, y, BR) + 6;
-  const vz = verbindungen(d, an, qv);
-  const verb = (seite, yy) => {
-    seite.text(L, yy + 9, `Verbindungen: Menge und Wert${an ? ' (mit Annahmen)' : ''}`, {gr: H2, f: 'b'});
-    return 13 + zweiSpalten(seite, vz, L, yy + 13, BR);
-  };
-  if (!p.verbS2) y += verb(s1, y);
+  y += zweiSpalten(s1, I.gl, L, y, BR) + 6;
+  const titel = `Verbindungen: Menge und Wert${an ? ' (mit Annahmen)' : ''}`;
+  const verb = (seite, yy, a, b, t, sn) => { seite.text(L, yy + 9, t, {gr: H2, f: 'b'}); return 13 + spaltenSatz(seite, vz.slice(a, b), L, yy + 13, BR, vSpalten(I, sn)); };
+  if (p.k > 0) y += verb(s1, y, 0, p.k, p.k < vz.length ? `${titel}, ${vz.length - p.k} weitere auf Seite 2` : titel, 1);
   const ueber1 = y > UNTEN, y1 = y;
   fuss(s1, d, o);
   // Seite 2
-  const s2 = new Seite(), aus = S[o.ausfall], z2 = ausfall(d, o.ausfall, qv);
+  const s2 = new Seite(), aus = S[o.ausfall], z2 = I.z2;
   kopf(s2, d, o, 2, `Ausfallszenario: ${nr(aus)}. ${aus.kurz} fällt aus`);
-  y = 70;
-  y += fluss(s2, [B(`Betroffene Verbindungen: `), T(z2.weg), I(' Strukturfolge im erfassten Netz, Schlussfolgerung aus der Datenbank, kein Fakt.')], L, y, BR, GR) + 4;
-  y += tabelle(s2, L, y, [{t: 'Folge', w: BR * 0.2}, {t: 'Ergebnis', w: BR * 0.8}], z2.folgen, GR) + 6;
-  if (p.verbS2) y += verb(s2, y) + 6;
+  y = Y2;
+  y += fluss(s2, I.betroffen, L, y, BR, GR) + 4;
+  y += folgenSatz(s2, I, y) + 6;
+  if (p.k < vz.length) y += verb(s2, y, p.k, vz.length, p.k ? `${titel} (Fortsetzung von Seite 1)` : titel, 2) + 6;
   s2.text(L, y + 9, `Quellenliste (${qv.liste.length} Quellen, Nummern wie im Text; Zeile anklicken öffnet die Quelle)`, {gr: H2, f: 'b'}); y += 13;
-  const sw = (BR - 12) / 2, lh = GR * 1.28, platz = UNTEN - y;
-  const eintrag = (q, i, n) => {
-    const laeufe = tt => [B(`[${i + 1}]`), T(tt, 'n', '#1d5f8f'), q.stand ? I(`· ${q.stand}`) : null];
-    let t = `${q.herausgeber}${q.titel ? ': ' + q.titel : ''}`;
-    if (fluss(null, laeufe(t), 0, 0, sw, GR) > n * lh + 0.1) {
-      while (t.length > 4 && fluss(null, laeufe(t + '…'), 0, 0, sw, GR) > n * lh + 0.1) t = t.slice(0, -1);
-      t = t.trimEnd() + '…';
-    }
-    return {laeufe: laeufe(t), h: fluss(null, laeufe(t), 0, 0, sw, GR) + 1, url: q.url};
-  };
-  let zeilen = [], spalten = [[], []];
-  for (const n of [3, 2, 1]) {
-    zeilen = qv.liste.map((q, i) => eintrag(q, i, n));
-    spalten = [[], []]; let sp = 0, hoehe = 0;
-    for (const e of zeilen) { if (hoehe + e.h > platz) { if (sp === 1) break; sp = 1; hoehe = 0; } if (hoehe + e.h > platz) break; spalten[sp].push(e); hoehe += e.h; }
-    if (spalten[0].length + spalten[1].length === zeilen.length) break;
-  }
-  spalten.forEach((liste, sp) => { let cy = y; for (const e of liste) { const qx = L + sp * (sw + 12); fluss(s2, e.laeufe, qx, cy, sw, GR); if (e.url) s2.link(qx, cy, sw, e.h, e.url); cy += e.h; } });
-  const gezeigt = spalten[0].length + spalten[1].length, ueber2 = gezeigt < zeilen.length || y > UNTEN;
-  if (gezeigt < zeilen.length) s2.text(L, UNTEN + 2, `… ${zeilen.length - gezeigt} weitere Quellen in /${d.slug}/kette/kette.json`, {gr: GR, f: 'i', c: F.muted});
+  const q = quellenSatz(qv.liste, UNTEN - y);
+  q.spalten.forEach((liste, sp) => { let cy = y; for (const e of liste) { const qx = L + sp * (q.sw + 12); fluss(s2, e.laeufe, qx, cy, q.sw, GR); if (e.url) s2.link(qx, cy, q.sw, e.h, e.url); cy += e.h; } });
+  const gezeigt = q.spalten.flat().length, ueber2 = gezeigt < q.zeilen.length || y > UNTEN;
+  if (gezeigt < q.zeilen.length) s2.text(L, UNTEN + 2, `… ${q.zeilen.length - gezeigt} weitere Quellen in /${d.slug}/kette/kette.json`, {gr: GR, f: 'i', c: F.muted});
   fuss(s2, d, o);
   return {seiten: [s1, s2], y1, ueberlauf: ueber1 || ueber2, quellen: qv.liste.length, quellen_gezeigt: gezeigt};
 }
@@ -249,6 +324,6 @@ export async function gespraechsausdruck(d, opt = {}) {
   const sicher = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^A-Za-z0-9]+/g, '-').replace(/^-|-$/g, '');
   const name = `Rohstoffkette-${d.slug}-${sicher(kunde)}-${o.ansicht === 'annahmen' ? 'mit-Annahmen' : 'belegt'}-Ausfall-${o.ausfall}-${d.stand}.pdf`;
   return {bytes, name, seiten: erg.seiten.length, schrift_min: MINDESTSCHRIFT, ueberlauf: erg.ueberlauf, quellen: erg.quellen, quellen_gezeigt: erg.quellen_gezeigt,
-    karte: !!bild, karte_hoehe: p.kh, verbindungen_seite: p.verbS2 ? 2 : 1, ansicht: o.ansicht, ausfall: o.ausfall, y1: Math.round(erg.y1), unten: Math.round(UNTEN),
+    karte: !!bild, karte_hoehe: p.kh, verbindungen_seite: p.k < d.verbindungen.length ? 2 : 1, verbindungen_seite1: p.k, kompakt: p.kompakt, ansicht: o.ansicht, ausfall: o.ausfall, y1: Math.round(erg.y1), unten: Math.round(UNTEN),
     texte: erg.seiten.map(s => s.texte.join(' '))};
 }

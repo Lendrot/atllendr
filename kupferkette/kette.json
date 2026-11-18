@@ -6,7 +6,7 @@
  "kette": "Kamoa-Kakula -> Aurubis -> Prysmian",
  "auftrag": "Eddie Sablah 2026-11-11: exakt ein Rohstoff, exakt eine Lieferkette, komplettes Ende-zu-Ende-System von der Datenbank bis zum 3D-Globus.",
  "begruendung": "Pilotkette Prysmian (Projektschwerpunkt seit 2026-11-04). Einzige Kupferkette im Hauptatlas, die von der Mine bis zu einem europäischen Kabelhersteller reicht und deren Glieder im Freigabe-Ledger stehen (7 von 8 Verbindungen APPROVED). Alle Werte, Zitate und Freigaben stammen aus den Quell-Datensätzen der Datenbank.",
- "stand": "2026-11-17",
+ "stand": "2026-11-18",
  "kundenfrage": {
   "kette_id": "K-KAMOA-KAKULA-AURUBIS-PRYSMIAN",
   "kunde": "Prysmian",
@@ -139,7 +139,7 @@
    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ert_bil_eur_d?currency=USD&statinfo=AVG&lastTimePeriod=30&format=JSON&lang=EN",
    "art": "TAGESKURS",
    "veroeffentlicht": "2026-11-16",
-   "abgerufen": "2026-11-17",
+   "abgerufen": "2026-11-18",
    "textkopie": "analysis/aktualitaet/stand/ezb-referenzkurs-usd.json",
    "textkopie_sha256": null
   },
@@ -799,7 +799,7 @@
    "url": "https://www.westmetall.com/en/markdaten.php?action=table&field=LME_Cu_cash",
    "art": "TAGESPREIS",
    "veroeffentlicht": "2026-11-16",
-   "abgerufen": "2026-11-17",
+   "abgerufen": "2026-11-18",
    "textkopie": "analysis/aktualitaet/stand/lme-kupfer-westmetall.json",
    "textkopie_sha256": null
   },
@@ -6258,7 +6258,7 @@
    "eur_je_t": 12143.64,
    "formel": "Lieferwert (Mio. €/Jahr) = Liefermenge (kt/Jahr) × 1.000 × LME-Kasse (US$/t) ÷ EZB-Referenzkurs (US$ je €) ÷ 1.000.000",
    "kurs": {
-    "abgerufen": "2026-11-17",
+    "abgerufen": "2026-11-18",
     "art": "EZB-Referenzkurs",
     "datum": "2026-11-16",
     "einheit": "US$ je €",
@@ -6281,7 +6281,7 @@
     ]
    },
    "preis": {
-    "abgerufen": "2026-11-17",
+    "abgerufen": "2026-11-18",
     "art": "LME Kupfer Kasse (Grade A)",
     "datum": "2026-11-16",
     "einheit": "US$/t",

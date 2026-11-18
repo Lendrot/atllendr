@@ -118,10 +118,12 @@ export const status = {geladen: false, knoten: 0, boegen: 0, auswahl: null, ausf
 // Menge und Wert je Bogen (Paket 5): "Belegt" zeigt nur Angaben laut Quelle, "Mit Annahmen" zusätzlich die Annahmen-Ebene,
 // immer als Annahme markiert (wie /kupferkette/). Ausstoß und Obergrenze des liefernden Glieds stehen in beiden Ansichten daneben.
 const an = () => status.ansicht === 'annahmen';
-function schildArt(v) { return v.menge.evidenz !== 'UNKNOWN' ? 'B' : an() && v.menge_annahme ? 'A' : 'U'; }
-function schildText(v) { return v.menge.evidenz !== 'UNKNOWN' ? v.menge.text : an() && v.menge_annahme ? v.menge_annahme.text : '? t'; }
+// Abgeleitete Menge (Regel 4 gelockert): Rechnung aus freigegebenen Zitat-Zahlen, in beiden Ansichten, nie als belegt.
+function schildArt(v) { return v.menge.evidenz !== 'UNKNOWN' ? 'B' : v.menge_abgeleitet ? 'D' : an() && v.menge_annahme ? 'A' : 'U'; }
+function schildText(v) { return v.menge.evidenz !== 'UNKNOWN' ? v.menge.text : v.menge_abgeleitet ? v.menge_abgeleitet.text : an() && v.menge_annahme ? v.menge_annahme.text : '? t'; }
 function mengeKurz(v) {
   if (v.menge.evidenz !== 'UNKNOWN') return esc(v.menge.text);
+  if (v.menge_abgeleitet) return `${esc(v.menge_abgeleitet.text)} <i class="ab">(abgeleitet)</i>`;
   if (an() && v.menge_annahme) return `${esc(v.menge_annahme.text)} <i class="am">(Annahme)</i>`;
   return '<span class="unbekannt">unbekannt</span>';
 }
@@ -146,6 +148,10 @@ function mengeWertDetail(v) {
   if (ab && w.evidenz === 'UNKNOWN') h += `<div class="abgeleitet-box" data-wert-abgeleitet><b>Wert (abgeleitet):</b> ${esc(ab.text)} <span class="chip d">abgeleitet · Menge × Preis ÷ EZB</span>`
     + `<br><span class="hinweis">Rechenweg: ${esc(ab.rechenweg)}. ${esc(ab.hinweis || '')} Eingänge: ${ab.eingaenge.map(e => `${esc(e.name)} (${e.freigabe === 'AMTLICH' ? 'amtlich' : 'freigegeben'})`).join(', ')} · Preis: ${link(ab.preis_url, ab.preis_quelle)}</span>`
     + `<blockquote>„${esc(ab.preis_zitat)}“</blockquote></div>`;
+  const ma = v.menge_abgeleitet;
+  if (ma && m.evidenz === 'UNKNOWN') h += `<div class="abgeleitet-box" data-menge-abgeleitet><b>Menge (abgeleitet):</b> ${esc(ma.text)} <span class="chip d">abgeleitet · ${esc(ma.qualifier)}</span>`
+    + `<br><span class="hinweis">Rechenweg: ${esc(ma.rechenweg)} = ${esc(ma.quelle_text)}. ${esc(ma.hinweis || '')} Eingänge: ${ma.eingaenge.map(e => `${esc(e.name)} (freigegeben)`).join(', ')}</span>`
+    + `<details class="ek-belege"><summary>Belege der Eingänge (${ma.belege.length})</summary>${belegeHtml(ma.belege)}</details></div>`;
   if (m.belege?.length) h += `<details class="ek-belege" open><summary>Beleg Menge${w.beleg_id ? ' und Wert' : ''} (${m.belege.length})</summary>${belegeHtml(m.belege)}</details>`;
   for (const b of v.menge_bezug || [])
     h += `<div class="bezug-box" data-bezug="${b.art}"><b>${b.art === 'OBERGRENZE' ? 'Obergrenze' : 'Ausstoß des liefernden Glieds'}:</b> ${esc(b.text)} <span class="chip">${esc(b.art_text)}</span>${frChip(b, 'data-bezug-freigabe')}<br><span class="hinweis">${esc(b.quelle_text)}${b.rechnung ? ` · ${esc(b.rechnung)}` : ''}${b.hinweis ? ` · ${esc(b.hinweis)}` : ''}</span>`
@@ -155,7 +161,7 @@ function mengeWertDetail(v) {
     if (am) h += `<div class="annahme-box" data-annahme-menge><b>Menge (Annahme):</b> ${esc(am.text)} <span class="chip a">Annahme · ${esc(am.annahme_id)}${am.konfidenz_text ? ' · Konfidenz ' + esc(am.konfidenz_text) : ''}</span><br><span class="hinweis">${esc(am.grund)} · ${link(am.quelle_url, am.quelle)}</span></div>`;
     if (aw?.evidenz === 'ANNAHME' && !ab) h += `<div class="annahme-box" data-annahme-wert><b>Wert (Rechnung mit Annahme):</b> ${esc(aw.text)} <span class="chip a">Annahme · Menge × Preis ÷ EZB</span><br><span class="hinweis">${esc(aw.rechnung)} · Preis: ${link(aw.preis_url, aw.preis_quelle)}</span><blockquote class="annahme">„${esc(aw.preis_zitat)}“</blockquote></div>`;
     else if (aw && w.evidenz === 'UNKNOWN') h += `<div class="annahme-box" data-annahme-wert="UNKNOWN"><b>Wert mit Annahmen:</b> <span class="unbekannt">unbekannt</span> – ${esc(aw.grund)}</div>`;
-    if (!am && m.evidenz === 'UNKNOWN') h += `<div class="annahme-box" data-annahme-menge="UNKNOWN"><b>Menge mit Annahmen:</b> <span class="unbekannt">unbekannt</span> – keine Annahme im Annahmen-Atlas für diese Fluss-ID.</div>`;
+    if (!am && !ma && m.evidenz === 'UNKNOWN') h += `<div class="annahme-box" data-annahme-menge="UNKNOWN"><b>Menge mit Annahmen:</b> <span class="unbekannt">unbekannt</span> – keine Annahme im Annahmen-Atlas für diese Fluss-ID.</div>`;
   }
   return h;
 }
@@ -228,7 +234,7 @@ function baueGlobus(d, waehle) {
     const sch = document.createElement('button');
     sch.className = 'schild'; sch.type = 'button'; sch.dataset.schild = v.id; sch.dataset.art = schildArt(v);
     sch.textContent = schildText(v);
-    sch.title = `${S[v.von].kurz} → ${S[v.nach].kurz}: ${schildText(v)}${schildArt(v) === 'A' ? ' (Annahme)' : ''}`;
+    sch.title = `${S[v.von].kurz} → ${S[v.nach].kurz}: ${schildText(v)}${schildArt(v) === 'A' ? ' (Annahme)' : schildArt(v) === 'D' ? ' (abgeleitet)' : ''}`;
     sch.addEventListener('click', () => waehle({typ: 'verbindung', id: v.id}));
     host.append(sch); schilder.push({el: sch, pos: pts[32].clone(), id: v.id});
   }
@@ -302,7 +308,7 @@ function baueGlobus(d, waehle) {
       for (const s of schilder) {
         const v = d.verbindungen.find(x => x.id === s.id);
         s.el.setAttribute('aria-pressed', String(!!a && a.id === s.id)); s.el.dataset.art = schildArt(v); s.el.textContent = schildText(v);
-        s.el.title = `${S[v.von].kurz} → ${S[v.nach].kurz}: ${schildText(v)}${schildArt(v) === 'A' ? ' (Annahme)' : ''}`;
+        s.el.title = `${S[v.von].kurz} → ${S[v.nach].kurz}: ${schildText(v)}${schildArt(v) === 'A' ? ' (Annahme)' : schildArt(v) === 'D' ? ' (abgeleitet)' : ''}`;
       }
       neu();
     },

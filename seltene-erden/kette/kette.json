@@ -1327,11 +1327,11 @@
   ]
  },
  "eingaben": {
-  "analysis/rohstoffe/eigentum/eigentumskette.json": "dc4e41fa1f2e547e39408fdc7c4a07cca001c0609181a7b1a7b0a12d8ef49bb6",
-  "analysis/rohstoffe/fluss-freigaben.jsonl": "7bcb03cd6f866779a996144af573a32a6723c19e37c1648f6b5dfbf2b642a149",
+  "analysis/rohstoffe/eigentum/eigentumskette.json": "6d0a735986003d2f59a6eeedb6ba08e69ea4ee7d910ccab607eb8bf20c92aae0",
+  "analysis/rohstoffe/fluss-freigaben.jsonl": "aaabbdac9c8a96ba0a688d2348a9b29df912fd5f6d05c9915280d05f3e396d66",
   "analysis/rohstoffe/mengen/annahmen-snapshot.json": "5169bc01abcdff017b11b6e2e0bdb0abbc934a843f86a8fbbf4dbdd3585165b1",
-  "analysis/rohstoffe/mengen/mengen.json": "94e6e728b63635daef1ffe47c595cd03fd4f5644a158aa61f7605bbf497706b6",
-  "analysis/rohstoffe/mengen/zweitpruefung.jsonl": "fb323cf5f6ee23aa7b0f563979efed73dcdbbdd2cf0203a287013f000c7d6770",
+  "analysis/rohstoffe/mengen/mengen.json": "e3cf36b504d52d37e77dfe24088ea1175213209c2f3448b9288da24bc3b4cc6b",
+  "analysis/rohstoffe/mengen/zweitpruefung.jsonl": "e093861fa8ba9484dafa843cac1e2e03d7c05dc79a1909e4e29a39985fbe865b",
   "analysis/rohstoffe/seltene-erden/kandidaten.json": "a5202855d2bd42654475a6577d173498a3f1da70f754c76f6cb54e1772e1648b",
   "analysis/rohstoffe/seltene-erden/markt.json": "d8c04d2dd60eb2cf0200450597debce98f8fc4d602063b8b6757a4e79a469d9e"
  },
@@ -2377,6 +2377,7 @@
     "t": null,
     "text": "unbekannt"
    },
+   "menge_abgeleitet": null,
    "menge_annahme": {
     "annahme_id": "A-SE-MENGE",
     "einheit": "t SEO",
@@ -2447,6 +2448,7 @@
     "t": null,
     "text": "unbekannt"
    },
+   "menge_abgeleitet": null,
    "menge_annahme": {
     "annahme_id": "A-SE-MENGE",
     "einheit": "t SEO",
@@ -2524,6 +2526,7 @@
     "t": null,
     "text": "unbekannt"
    },
+   "menge_abgeleitet": null,
    "menge_annahme": {
     "annahme_id": "A-SE-MENGE",
     "einheit": "t SEO",
@@ -2571,6 +2574,7 @@
   "eigentumskette_vollstaendig": 2,
   "glieder_mit_ausweichquelle": 2,
   "kette_stufen": 2,
+  "mengen_abgeleitet": 0,
   "mengen_belegt": 0,
   "mengen_bezug": 0,
   "mengen_freigegeben": 0,

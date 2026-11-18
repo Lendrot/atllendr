@@ -1398,11 +1398,11 @@
   ]
  },
  "eingaben": {
-  "analysis/rohstoffe/eigentum/eigentumskette.json": "dc4e41fa1f2e547e39408fdc7c4a07cca001c0609181a7b1a7b0a12d8ef49bb6",
-  "analysis/rohstoffe/fluss-freigaben.jsonl": "7bcb03cd6f866779a996144af573a32a6723c19e37c1648f6b5dfbf2b642a149",
+  "analysis/rohstoffe/eigentum/eigentumskette.json": "6d0a735986003d2f59a6eeedb6ba08e69ea4ee7d910ccab607eb8bf20c92aae0",
+  "analysis/rohstoffe/fluss-freigaben.jsonl": "aaabbdac9c8a96ba0a688d2348a9b29df912fd5f6d05c9915280d05f3e396d66",
   "analysis/rohstoffe/mengen/annahmen-snapshot.json": "5169bc01abcdff017b11b6e2e0bdb0abbc934a843f86a8fbbf4dbdd3585165b1",
-  "analysis/rohstoffe/mengen/mengen.json": "94e6e728b63635daef1ffe47c595cd03fd4f5644a158aa61f7605bbf497706b6",
-  "analysis/rohstoffe/mengen/zweitpruefung.jsonl": "fb323cf5f6ee23aa7b0f563979efed73dcdbbdd2cf0203a287013f000c7d6770",
+  "analysis/rohstoffe/mengen/mengen.json": "e3cf36b504d52d37e77dfe24088ea1175213209c2f3448b9288da24bc3b4cc6b",
+  "analysis/rohstoffe/mengen/zweitpruefung.jsonl": "e093861fa8ba9484dafa843cac1e2e03d7c05dc79a1909e4e29a39985fbe865b",
   "analysis/rohstoffe/wolfram/kandidaten.json": "7160b56628f84b169b4de4aa4ef1f2a7a41dbcc2921c7e0aa7c428167d7d97ca",
   "analysis/rohstoffe/wolfram/markt.json": "2c55a7bff2ec69921bea2e3e8d3f549c7aaeed67705b81adb8b446028df1111c"
  },
@@ -1453,9 +1453,9 @@
    }
   ],
   "messung": {
-   "anteil_belegt_prozent": 62.5,
-   "belegt": 15,
-   "belegt_nur_landesebene": 9,
+   "anteil_belegt_prozent": 70.8,
+   "belegt": 17,
+   "belegt_nur_landesebene": 11,
    "belegt_standort_oder_firma": 6,
    "felder": 24,
    "glieder": 6,
@@ -1486,8 +1486,8 @@
     },
     "S5": {
      "KONZENTRATION": "UNBEKANNT",
-     "LAENDERRISIKO": "UNBEKANNT",
-     "NATURGEFAHREN": "UNBEKANNT",
+     "LAENDERRISIKO": "BELEGT_LAND",
+     "NATURGEFAHREN": "BELEGT_LAND",
      "SANKTIONEN": "BELEGT_STANDORT"
     },
     "S6": {
@@ -1505,16 +1505,16 @@
      "unbekannt": 4
     },
     "LAENDERRISIKO": {
+     "belegt": 5,
+     "belegt_nur_landesebene": 5,
+     "belegt_standort_oder_firma": 0,
+     "unbekannt": 1
+    },
+    "NATURGEFAHREN": {
      "belegt": 4,
      "belegt_nur_landesebene": 4,
      "belegt_standort_oder_firma": 0,
      "unbekannt": 2
-    },
-    "NATURGEFAHREN": {
-     "belegt": 3,
-     "belegt_nur_landesebene": 3,
-     "belegt_standort_oder_firma": 0,
-     "unbekannt": 3
     },
     "SANKTIONEN": {
      "belegt": 6,
@@ -1523,7 +1523,7 @@
      "unbekannt": 0
     }
    },
-   "unbekannt": 9
+   "unbekannt": 7
   },
   "regeln": [
    "Länderrisiko und Naturgefahren nur aus den Reisehinweisen des britischen Außenministeriums (FCDO), Antwort unverändert gespeichert; keine Punktzahl, keine Rangfolge.",
@@ -2144,21 +2144,29 @@
    "land": "UNKNOWN",
    "name": "Masan High-Tech Materials Corporation",
    "ort": {
-    "evidenz": "UNKNOWN",
-    "grund": "Keine Koordinate mit Quelle; es wird kein Ersatzpunkt gesetzt.",
-    "lat": null,
-    "lon": null,
-    "quelle": null,
-    "status": null,
-    "url": null
+    "evidenz": "BELEGT",
+    "grund": null,
+    "lat": 21.6411,
+    "lon": 105.6638,
+    "quelle": "Koordinate: USGS-GIS Indopazifik VNM168, APT-Werk Nui Phao (Masan Tungsten), Lage exakt (LocConf E), Genauigkeit FACILITY",
+    "status": "APPROVED (FACILITY)",
+    "url": "https://www.sciencebase.gov/catalog/item/65caa1aed34ef4b119cb3427"
    },
    "risiko": [],
    "risiko_grund": "Länderanteil nur für Förderstufe",
    "risiko_land": {
-    "belege": [],
-    "herkunft": "Land des Glieds nicht erfasst (kein Land im Datensatz, kein gültiger LEI-Eintrag, keine Koordinate mit Quelle).",
-    "iso2": null,
-    "name": null
+    "belege": [
+     {
+      "fundstelle": "Lage",
+      "herausgeber": "Koordinate: USGS-GIS Indopazifik VNM168, APT-Werk Nui Phao (Masan Tungsten), Lage exakt (LocConf E), Genauigkeit FACILITY",
+      "titel": "Koordinate des Glieds",
+      "url": "https://www.sciencebase.gov/catalog/item/65caa1aed34ef4b119cb3427",
+      "zitat": null
+     }
+    ],
+    "herkunft": "Belegte Koordinate in Nui Phao (Dai Tu, Thai Nguyen), APT-Werk der Tochter Masan Tungsten (21.64, 105.66)",
+    "iso2": "VN",
+    "name": "Vietnam"
    },
    "risikoebene": {
     "KONZENTRATION": {
@@ -2167,21 +2175,89 @@
      "status": "UNBEKANNT"
     },
     "LAENDERRISIKO": {
-     "belegt": [],
-     "grund": "Land des Glieds nicht erfasst (kein Land im Datensatz, kein gültiger LEI-Eintrag, keine Koordinate mit Quelle).",
-     "status": "UNBEKANNT"
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "VN",
+       "quellen": [
+        {
+         "abgerufen": "2026-11-16",
+         "api": "https://www.gov.uk/api/content/foreign-travel-advice/vietnam",
+         "fundstelle": "GOV.UK Content API (unveränderte Antwort), Feld alert_status und Teil \"Warnings and insurance\"",
+         "herausgeber": "Foreign, Commonwealth & Development Office (UK)",
+         "sha256": "5ec63c8c95e608009d232d631ede7ad9cae193b8dc50db3e64f7e574b0e37575",
+         "stand": "2026-09-21",
+         "textkopie": "analysis/rohstoffe/risiko/raw/fcdo-vietnam.json",
+         "titel": "Foreign travel advice: Vietnam travel advice",
+         "url": "https://www.gov.uk/foreign-travel-advice/vietnam",
+         "zitat": "\"alert_status\":[]"
+        }
+       ],
+       "text": "Vietnam: Reisehinweis FCDO (Stand 2026-09-21): keine Gebiete mit Reisewarnung (Warnstufe leer)."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
     },
     "NATURGEFAHREN": {
-     "belegt": [],
-     "grund": "Land des Glieds nicht erfasst (kein Land im Datensatz, kein gültiger LEI-Eintrag, keine Koordinate mit Quelle).",
-     "status": "UNBEKANNT"
+     "belegt": [
+      {
+       "bezug": "LAND",
+       "evidenz": "FACT",
+       "land": "VN",
+       "quellen": [
+        {
+         "abgerufen": "2026-11-16",
+         "api": "https://www.gov.uk/api/content/foreign-travel-advice/vietnam",
+         "fundstelle": "GOV.UK Content API (unveränderte Antwort), Teil \"Safety and security\", Abschnitt Naturgefahren",
+         "herausgeber": "Foreign, Commonwealth & Development Office (UK)",
+         "sha256": "5ec63c8c95e608009d232d631ede7ad9cae193b8dc50db3e64f7e574b0e37575",
+         "stand": "2026-09-21",
+         "textkopie": "analysis/rohstoffe/risiko/raw/fcdo-vietnam.json",
+         "titel": "Foreign travel advice: Vietnam travel advice",
+         "url": "https://www.gov.uk/foreign-travel-advice/vietnam",
+         "zitat": "Extreme weather and natural disasters … Tropical cyclones … Rain season … Heat waves"
+        }
+       ],
+       "text": "Vietnam: FCDO nennt für das Land: tropische Wirbelstürme, Regenzeit, Hitzewellen."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
     },
     "SANKTIONEN": {
      "belegt": [
       {
+       "bezug": "LAND",
+       "evidenz": "ABGLEICH",
+       "land": "VN",
+       "quellen": [
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "EU",
+         "stand": "2026-10-23",
+         "textkopie": "analysis/research/sanktionen-v1/listen/eu.json",
+         "titel": "EU Consolidated Financial Sanctions List (FSF), Stand 2026-10-23 (1779 Organisationen)",
+         "url": "https://webgate.ec.europa.eu/fsd/fsf/public/files/csvFullSanctionsList_1_1/content?token=dG9rZW4tMjAxNw",
+         "zitat": "\"stand\":\"2026-10-23\""
+        },
+        {
+         "fundstelle": "Kopf der umgewandelten Liste",
+         "herausgeber": "UK",
+         "stand": "2026-11-10",
+         "textkopie": "analysis/research/sanktionen-v1/listen/uk.json",
+         "titel": "UK Sanctions List (FCDO), Stand 2026-11-10 (1667 Organisationen)",
+         "url": "https://sanctionslist.fcdo.gov.uk/docs/UK-Sanctions-List.csv",
+         "zitat": "\"stand\":\"2026-11-10\""
+        }
+       ],
+       "text": "Vietnam: die gelesenen Sanktionslisten EU (Stand 2026-10-23) und UK (Stand 2026-11-10) führen kein Länderprogramm. Nicht abgeglichen: OFAC, UN."
+      },
+      {
        "bezug": "FIRMA",
        "evidenz": "ABGLEICH",
-       "land": null,
+       "land": "VN",
        "quellen": [
         {
          "fundstelle": "Kopf der umgewandelten Liste",
@@ -2350,7 +2426,7 @@
   }
  ],
  "tiefe": {
-  "belegt": 18,
+  "belegt": 19,
   "dimensionen": [
    "Eigentümer/Betreiber",
    "Standort",
@@ -2360,7 +2436,7 @@
    "Risiko"
   ],
   "gesamt": 36,
-  "mit_annahmen": 19,
+  "mit_annahmen": 20,
   "zeilen": [
    {
     "felder": {
@@ -2412,7 +2488,7 @@
      "Lieferbeziehung": "belegt",
      "Menge": "unbekannt",
      "Risiko": "unbekannt",
-     "Standort": "unbekannt",
+     "Standort": "belegt",
      "Wert": "unbekannt"
     },
     "id": "S5"
@@ -2460,10 +2536,11 @@
     "t": null,
     "text": "unbekannt"
    },
+   "menge_abgeleitet": null,
    "menge_annahme": null,
    "menge_bezug": [],
    "nach": "S3",
-   "stand": null,
+   "stand": "Geschaeftsjahr 1.7.2022 bis 30.6.2023 (Berichtszeitraum)",
    "von": "S2",
    "ware": "Wolframkonzentrat",
    "wert": {
@@ -2484,7 +2561,7 @@
   {
    "art": "HANDEL",
    "art_atlas": "OFFTAKE_AGREEMENT",
-   "auf_globus": false,
+   "auf_globus": true,
    "aussage": "Ueber einen langfristigen Abnahmevertrag der CRONIMET-Gruppe mit Masan sind rund 70 % der Mt-Carbine-Produktion fuer die naechsten vier Jahre (ab Jahresbericht 2023) Masan zugeteilt. Liefermenge in t: UNKNOWN; ob geliefert wurde, steht in keiner gelesenen Quelle.",
    "belege": [
     {
@@ -2510,10 +2587,11 @@
     "t": null,
     "text": "unbekannt"
    },
+   "menge_abgeleitet": null,
    "menge_annahme": null,
    "menge_bezug": [],
    "nach": "S5",
-   "stand": null,
+   "stand": "Geschaeftsjahr 1.7.2022 bis 30.6.2023 (Vertrag laut Quelle in Kraft)",
    "von": "S2",
    "ware": "Wolframkonzentrat",
    "wert": {
@@ -2567,6 +2645,7 @@
     "t": null,
     "text": "unbekannt"
    },
+   "menge_abgeleitet": null,
    "menge_annahme": null,
    "menge_bezug": [],
    "nach": "S4",
@@ -2613,6 +2692,7 @@
     "t": 700.0,
     "text": "700 t pro Jahr"
    },
+   "menge_abgeleitet": null,
    "menge_annahme": null,
    "menge_bezug": [],
    "nach": "S6",
@@ -2661,21 +2741,22 @@
   "eigentumskette_vollstaendig": 2,
   "glieder_mit_ausweichquelle": 4,
   "kette_stufen": 2,
+  "mengen_abgeleitet": 0,
   "mengen_belegt": 1,
   "mengen_bezug": 0,
   "mengen_freigegeben": 0,
   "mengen_in_tonnen": 1,
   "mengen_mit_annahmen": 1,
   "risiko_belegt": 2,
-  "risikoebene_belegt": 15,
+  "risikoebene_belegt": 17,
   "risikoebene_felder": 24,
   "standorte": 6,
-  "standorte_mit_ort": 4,
-  "tiefe_belegt": 18,
+  "standorte_mit_ort": 5,
+  "tiefe_belegt": 19,
   "tiefe_gesamt": 36,
-  "tiefe_mit_annahmen": 19,
+  "tiefe_mit_annahmen": 20,
   "verbindungen": 4,
-  "verbindungen_auf_globus": 2,
+  "verbindungen_auf_globus": 3,
   "verbindungen_freigegeben": 4,
   "werte_abgeleitet": 0,
   "werte_belegt": 1,

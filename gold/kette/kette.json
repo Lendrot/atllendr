@@ -2533,15 +2533,15 @@
   ]
  },
  "eingaben": {
-  "analysis/aktualitaet/stand/ezb-referenzkurs-usd.json": "acdbe624e3e09beedd0d4cd7f1d5888db6087248c71db762b749786b623e96b1",
-  "analysis/aktualitaet/stand/lbma-gold-westmetall.json": "51a70b5ce417c1e538183468e05d3d00949c3576767d46de9828d58fe4f479e6",
-  "analysis/rohstoffe/eigentum/eigentumskette.json": "dc4e41fa1f2e547e39408fdc7c4a07cca001c0609181a7b1a7b0a12d8ef49bb6",
-  "analysis/rohstoffe/fluss-freigaben.jsonl": "7bcb03cd6f866779a996144af573a32a6723c19e37c1648f6b5dfbf2b642a149",
+  "analysis/aktualitaet/stand/ezb-referenzkurs-usd.json": "657a4410f12aa9a6b894637209e1e3d9342f93016c2b6b20427136e1515aab1f",
+  "analysis/aktualitaet/stand/lbma-gold-westmetall.json": "b8000f191798c77c8365793e4d0a000c9e3a40191ac13553ac1899a30ecedb2b",
+  "analysis/rohstoffe/eigentum/eigentumskette.json": "6d0a735986003d2f59a6eeedb6ba08e69ea4ee7d910ccab607eb8bf20c92aae0",
+  "analysis/rohstoffe/fluss-freigaben.jsonl": "aaabbdac9c8a96ba0a688d2348a9b29df912fd5f6d05c9915280d05f3e396d66",
   "analysis/rohstoffe/gold/kandidaten.json": "7d8b994d076ff097b39d451ac16740343c087d7b655dc2b829ca87aaa1e20745",
   "analysis/rohstoffe/gold/markt.json": "dc2275d59aecfc3b064738b8f8324fc6ed655bc9ce444441d20c4a4f32b0bee8",
   "analysis/rohstoffe/mengen/annahmen-snapshot.json": "5169bc01abcdff017b11b6e2e0bdb0abbc934a843f86a8fbbf4dbdd3585165b1",
-  "analysis/rohstoffe/mengen/mengen.json": "94e6e728b63635daef1ffe47c595cd03fd4f5644a158aa61f7605bbf497706b6",
-  "analysis/rohstoffe/mengen/zweitpruefung.jsonl": "fb323cf5f6ee23aa7b0f563979efed73dcdbbdd2cf0203a287013f000c7d6770"
+  "analysis/rohstoffe/mengen/mengen.json": "e3cf36b504d52d37e77dfe24088ea1175213209c2f3448b9288da24bc3b4cc6b",
+  "analysis/rohstoffe/mengen/zweitpruefung.jsonl": "e093861fa8ba9484dafa843cac1e2e03d7c05dc79a1909e4e29a39985fbe865b"
  },
  "erzeugt_von": "scripts/analysis/rohstoffe/rohstoffkette.py",
  "kette": {
@@ -2565,7 +2565,7 @@
   "eur_je_t": 112508638.97,
   "formel": "Wert = Menge (t) × Gold London Fixing (LBMA) (US$/oz tr) × 32.150,75 oz tr je t (einheit.py) ÷ EZB-Referenzkurs",
   "kurs": {
-   "abgerufen": "2026-11-17",
+   "abgerufen": "2026-11-18",
    "art": "EZB-Referenzkurs",
    "datum": "2026-11-16",
    "einheit": "US$ je €",
@@ -2575,7 +2575,7 @@
    "wert": 1.1014
   },
   "preis": {
-   "abgerufen": "2026-11-17",
+   "abgerufen": "2026-11-18",
    "art": "Gold London Fixing (LBMA)",
    "datum": "2026-11-17",
    "einheit": "US$/oz tr",
@@ -4211,6 +4211,7 @@
     "t": null,
     "text": "unbekannt"
    },
+   "menge_abgeleitet": null,
    "menge_annahme": {
     "annahme_id": "A-G-MENGE",
     "einheit": "t Au",
@@ -4294,6 +4295,7 @@
     "t": null,
     "text": "unbekannt"
    },
+   "menge_abgeleitet": null,
    "menge_annahme": {
     "annahme_id": "A-G-MENGE",
     "einheit": "t Au",
@@ -4391,6 +4393,7 @@
     "t": null,
     "text": "unbekannt"
    },
+   "menge_abgeleitet": null,
    "menge_annahme": {
     "annahme_id": "A-G-MENGE",
     "einheit": "t Au",
@@ -4450,6 +4453,7 @@
     "t": null,
     "text": "unbekannt"
    },
+   "menge_abgeleitet": null,
    "menge_annahme": {
     "annahme_id": "A-G-MENGE",
     "einheit": "t Au",
@@ -4523,6 +4527,7 @@
     "t": null,
     "text": "unbekannt"
    },
+   "menge_abgeleitet": null,
    "menge_annahme": {
     "annahme_id": "A-G-MENGE",
     "einheit": "t Au",
@@ -4584,6 +4589,7 @@
   "eigentumskette_vollstaendig": 6,
   "glieder_mit_ausweichquelle": 4,
   "kette_stufen": 2,
+  "mengen_abgeleitet": 0,
   "mengen_belegt": 0,
   "mengen_bezug": 2,
   "mengen_freigegeben": 0,

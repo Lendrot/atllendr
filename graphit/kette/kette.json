@@ -2798,13 +2798,13 @@
   ]
  },
  "eingaben": {
-  "analysis/rohstoffe/eigentum/eigentumskette.json": "dc4e41fa1f2e547e39408fdc7c4a07cca001c0609181a7b1a7b0a12d8ef49bb6",
-  "analysis/rohstoffe/fluss-freigaben.jsonl": "7bcb03cd6f866779a996144af573a32a6723c19e37c1648f6b5dfbf2b642a149",
+  "analysis/rohstoffe/eigentum/eigentumskette.json": "6d0a735986003d2f59a6eeedb6ba08e69ea4ee7d910ccab607eb8bf20c92aae0",
+  "analysis/rohstoffe/fluss-freigaben.jsonl": "aaabbdac9c8a96ba0a688d2348a9b29df912fd5f6d05c9915280d05f3e396d66",
   "analysis/rohstoffe/graphit/kandidaten.json": "82b42a882bd5a84fb26482c511e223c960d6729d3e4c5f3b495682bdfa6d109e",
   "analysis/rohstoffe/graphit/markt.json": "4278fd32ff895333b148c239d65e328c3c256f9123dcd28bbf7b32d2a540f896",
   "analysis/rohstoffe/mengen/annahmen-snapshot.json": "5169bc01abcdff017b11b6e2e0bdb0abbc934a843f86a8fbbf4dbdd3585165b1",
-  "analysis/rohstoffe/mengen/mengen.json": "94e6e728b63635daef1ffe47c595cd03fd4f5644a158aa61f7605bbf497706b6",
-  "analysis/rohstoffe/mengen/zweitpruefung.jsonl": "fb323cf5f6ee23aa7b0f563979efed73dcdbbdd2cf0203a287013f000c7d6770"
+  "analysis/rohstoffe/mengen/mengen.json": "e3cf36b504d52d37e77dfe24088ea1175213209c2f3448b9288da24bc3b4cc6b",
+  "analysis/rohstoffe/mengen/zweitpruefung.jsonl": "e093861fa8ba9484dafa843cac1e2e03d7c05dc79a1909e4e29a39985fbe865b"
  },
  "erzeugt_von": "scripts/analysis/rohstoffe/rohstoffkette.py",
  "kette": {
@@ -4906,6 +4906,7 @@
     "t": null,
     "text": "4 Ladungen zu je ca. 10 kt (geliefert)"
    },
+   "menge_abgeleitet": null,
    "menge_annahme": {
     "annahme_id": "A-GR-MENGE",
     "einheit": "t Graphit",
@@ -4979,6 +4980,7 @@
     "t": null,
     "text": "unbekannt"
    },
+   "menge_abgeleitet": null,
    "menge_annahme": {
     "annahme_id": "A-GR-MENGE",
     "einheit": "t Graphit",
@@ -5066,6 +5068,7 @@
     "t": 9000.0,
     "text": "9.000 t im genannten Zeitraum"
    },
+   "menge_abgeleitet": null,
    "menge_annahme": null,
    "menge_bezug": [],
    "nach": "S8",
@@ -5126,10 +5129,11 @@
     "t": 60000.0,
     "text": "60.000 t pro Jahr"
    },
+   "menge_abgeleitet": null,
    "menge_annahme": null,
    "menge_bezug": [],
    "nach": "S7",
-   "stand": null,
+   "stand": "Mitteilung vom 1.3.2024 (Vertrag laut Quelle in Kraft)",
    "von": "S1",
    "ware": "Naturgraphit (Feinflocken)",
    "wert": {
@@ -5200,6 +5204,7 @@
     "t": null,
     "text": "unbekannt"
    },
+   "menge_abgeleitet": null,
    "menge_annahme": {
     "annahme_id": "A-GR-MENGE",
     "einheit": "t Graphit",
@@ -5287,6 +5292,7 @@
     "t": null,
     "text": "unbekannt"
    },
+   "menge_abgeleitet": null,
    "menge_annahme": {
     "annahme_id": "A-GR-MENGE",
     "einheit": "t Graphit",
@@ -5367,6 +5373,7 @@
     "t": null,
     "text": "unbekannt"
    },
+   "menge_abgeleitet": null,
    "menge_annahme": null,
    "menge_bezug": [],
    "nach": "S9",
@@ -5417,10 +5424,11 @@
     "t": null,
     "text": "unbekannt"
    },
+   "menge_abgeleitet": null,
    "menge_annahme": null,
    "menge_bezug": [],
    "nach": "S3",
-   "stand": null,
+   "stand": "Quartal 1.7. bis 30.9.2023 (Vertrag laut Quelle in Kraft)",
    "von": "S1",
    "ware": "Naturgraphit fuer AAM-Werk",
    "wert": {
@@ -5467,6 +5475,7 @@
     "t": 9714.286,
     "text": "9.714 t pro Jahr"
    },
+   "menge_abgeleitet": null,
    "menge_annahme": null,
    "menge_bezug": [],
    "nach": "S6",
@@ -5527,6 +5536,7 @@
     "t": null,
     "text": "unbekannt"
    },
+   "menge_abgeleitet": null,
    "menge_annahme": null,
    "menge_bezug": [],
    "nach": "S2",
@@ -5565,6 +5575,7 @@
   "eigentumskette_vollstaendig": 4,
   "glieder_mit_ausweichquelle": 10,
   "kette_stufen": 3,
+  "mengen_abgeleitet": 0,
   "mengen_belegt": 4,
   "mengen_bezug": 0,
   "mengen_freigegeben": 0,

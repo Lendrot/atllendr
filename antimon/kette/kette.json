@@ -491,14 +491,26 @@
     "bezug": "ZUGEHOERIG",
     "bezug_belege": [
      {
+      "fundstelle": "PDF-Seite 15 (pdftotext ohne -layout)",
+      "quelle": "rk-alk-gm-2025-06-s015",
+      "rolle": "hauptbeleg",
+      "zitat": "Mandalay currently owns 100% interests in two material producing assets – Costerfield, Australia"
+     },
+     {
       "fundstelle": "PDF-Seite 13 (pdftotext ohne -layout)",
       "quelle": "rk-alk-gm-2025-06-s013",
-      "rolle": "hauptbeleg",
+      "rolle": "zusatzbeleg",
       "zitat": "Mandalay’s core assets and operations, including the Costerfield Mine in Victoria"
+     },
+     {
+      "fundstelle": "PDF-Seite 1 (pdftotext ohne -layout)",
+      "quelle": "rk-alk-merger-2025-08-s001",
+      "rolle": "zusatzbeleg",
+      "zitat": "whereby Alkane acquired all of the issued and outstanding common shares of Mandalay … operating in premier jurisdictions – Costerfield (Victoria, Australia)"
      }
     ],
-    "bezug_freigabe": "KANDIDAT",
-    "bezug_herkunft": "Zweitprüfung ABWEICHUNG 2026-11-16: Abweichung: Die Zugehörigkeit zu Mandalay gilt nur zum Stand 25.06.2025 (Einladung zur Hauptversammlung vor dem Zusammenschluss). Ob und wann der Zusammenschluss vollzogen wurde, belegt die Quelle nicht; ohne Beleg des aktuellen Eigentümers keine Freigabe.",
+    "bezug_freigabe": "FREIGEGEBEN",
+    "bezug_herkunft": "Zweitprüfung BESTAETIGT 2026-11-17 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
     "bezug_text": "Das Glied gehört laut Quelle zu",
     "ebenen": 1,
     "einschraenkung": null,
@@ -515,7 +527,17 @@
       {
        "effektiv": 100.0,
        "kante": "EK-LARVOTTO-HILLGROVE",
-       "kinder": [],
+       "kinder": [
+        {
+         "effektiv": 10.0,
+         "kante": "EK-USAC-LARVOTTO",
+         "kinder": [],
+         "knoten": "R-USAC",
+         "pflicht": true,
+         "schluss": "OFFEN",
+         "schluss_text": "endet ohne Beleg"
+        }
+       ],
        "knoten": "R-LARVOTTO",
        "pflicht": true,
        "schluss": "OFFEN",
@@ -534,7 +556,7 @@
     "bezug_freigabe": null,
     "bezug_herkunft": null,
     "bezug_text": "Das Glied ist diese Gesellschaft bzw. dieser Standort",
-    "ebenen": 1,
+    "ebenen": 2,
     "einschraenkung": null,
     "grund": null,
     "status": "OFFEN",
@@ -630,6 +652,30 @@
     "stand": "2024-12-31",
     "text": null,
     "von": "R-LARVOTTO"
+   },
+   {
+    "an": "R-LARVOTTO",
+    "anteil": 10.0,
+    "atlas_id": null,
+    "beherrschend": false,
+    "belege": [
+     {
+      "fundstelle": "PDF-Seite 1 (pdftotext ohne -layout)",
+      "quelle": "rk-lrv-usac-2025-10-s001",
+      "rolle": "hauptbeleg",
+      "zitat": "notifying that USAC has acquired a 10.0% shareholding in Larvotto"
+     }
+    ],
+    "einschraenkung": null,
+    "evidenz": "FACT",
+    "freigabe": "FREIGEGEBEN",
+    "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-17 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+    "id": "EK-USAC-LARVOTTO",
+    "mass": "KAPITAL",
+    "mass_text": "Kapital",
+    "stand": "2025-10-17",
+    "text": null,
+    "von": "R-USAC"
    }
   ],
   "knoten": {
@@ -694,6 +740,18 @@
     "oberste": null,
     "offen": null
    },
+   "R-USAC": {
+    "art": "GESELLSCHAFT",
+    "art_text": "Gesellschaft",
+    "atlas_id": null,
+    "belege": [],
+    "hinweis": null,
+    "land": "US",
+    "lei": null,
+    "name": "United States Antimony Corporation",
+    "oberste": null,
+    "offen": "Kein LEI-Eintrag gefunden (GLEIF-Abfrage 2026-11-17); Eigentümer und Börsenstatus nur bei der SEC, die aus der Cloud gesperrt ist."
+   },
    "R-WOGEN": {
     "art": "GESELLSCHAFT",
     "art_text": "Gesellschaft",
@@ -730,7 +788,7 @@
      "status": "OFFEN"
     },
     "S2": {
-     "ebenen": 1,
+     "ebenen": 2,
      "status": "OFFEN"
     },
     "S3": {
@@ -742,17 +800,18 @@
      "status": "OFFEN"
     }
    },
-   "kanten": 2,
-   "kanten_freigegeben": 2,
+   "kanten": 3,
+   "kanten_freigegeben": 3,
    "kanten_kandidat": 0,
-   "kanten_mit_anteil": 2,
-   "knoten": 5,
+   "kanten_mit_anteil": 3,
+   "knoten": 6,
    "letzte_eigentuemer": [],
    "oberste_gesellschaften": [],
    "offen": 3,
    "offene_knoten": [
     "Alkane Resources Ltd",
     "Larvotto Resources Limited",
+    "United States Antimony Corporation",
     "Wogen Resources Limited"
    ],
    "schwelle_prozent": 10.0,
@@ -760,7 +819,7 @@
    "vollstaendig": 0,
    "vollstaendig_freigegeben": 0,
    "vollstaendig_kandidat": 0,
-   "zweitpruefung_offen": 1
+   "zweitpruefung_offen": 0
   },
   "quellen": {
    "rk-alk-gm-2025-06-s013": {
@@ -772,6 +831,16 @@
     "text_artifact_sha256": "e1e84cc04d198eed59f571b579b635fe073531694fd2ad1bccc6a4b56e6b48e3",
     "titel": "Notice of General Meeting and Explanatory Memorandum (Zusammenschluss mit Mandalay Resources)",
     "url": "https://announcements.asx.com.au/asxpdf/20250625/pdf/06l3b4v699n4mj.pdf#page=13"
+   },
+   "rk-alk-gm-2025-06-s015": {
+    "abgerufen": "2026-11-17",
+    "art": "COMPANY_PRIMARY",
+    "fundstelle": "PDF-Seite 15 (pdftotext ohne -layout)",
+    "herausgeber": "Alkane Resources Ltd",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/alk-gm-2025-06-p015.txt",
+    "text_artifact_sha256": "faaf44fa77dc5e9e493e9f2ef102aacd5ab54985f067ad1db5e930a1a0ba386b",
+    "titel": "Notice of General Meeting and Explanatory Memorandum (Zusammenschluss mit Mandalay Resources)",
+    "url": "https://announcements.asx.com.au/asxpdf/20250625/pdf/06l3b4v699n4mj.pdf#page=15"
    },
    "rk-alk-merger-2025-08-s001": {
     "abgerufen": "2026-11-16",
@@ -832,6 +901,16 @@
     "text_artifact_sha256": "38078d5f377debb1b3ea57a5ffc8be3cf98bff59bf6abdab8c860606a8fee3d0",
     "titel": "Annual Report 31 December 2024",
     "url": "https://announcements.asx.com.au/asxpdf/20250331/pdf/06h5x2c31wcsl9.pdf#page=4"
+   },
+   "rk-lrv-usac-2025-10-s001": {
+    "abgerufen": "2026-11-17",
+    "art": "COMPANY_PRIMARY",
+    "fundstelle": "PDF-Seite 1 (pdftotext ohne -layout)",
+    "herausgeber": "Larvotto Resources Limited",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/lrv-usac-2025-10-p001.txt",
+    "text_artifact_sha256": "491bd325dd92c715e8af693d26f565b8c702b83893e75631cfc5871bf7eb80ad",
+    "titel": "Receipt of Non-Binding Indicative Offer (ASX-Mitteilung 20.10.2025)",
+    "url": "https://announcements.asx.com.au/asxpdf/20251020/pdf/06qrs5sr1trb48.pdf#page=1"
    }
   },
   "schwelle_prozent": 10.0,
@@ -908,17 +987,97 @@
     "urteil": "BESTAETIGT",
     "ziel_id": "EK-ALKANE-MANDALAY",
     "ziel_typ": "kante"
+   },
+   {
+    "abgleich": "",
+    "aufgabe": "Ziel kante/EK-USAC-LARVOTTO. Frage: Welchen Anteil (Kapital) hält United States Antimony Corporation laut Quelle an Larvotto Resources Limited? Stand 2025-10-17. Quellen: rk-lrv-usac-2025-10-s001 (PDF-Seite 1 (pdftotext ohne -layout)).",
+    "aussage": "Welchen Anteil (Kapital) hält United States Antimony Corporation laut Quelle an Larvotto Resources Limited? Stand 2025-10-17.",
+    "belege": [
+     {
+      "quelle": "rk-lrv-usac-2025-10-s001",
+      "zitat": [
+       "USAC has acquired a 10.0% shareholding in Larvotto."
+      ]
+     }
+    ],
+    "blind": true,
+    "erstmodell": "claude-opus-5-5",
+    "erstpruefung_sitzung": "session_01JgcA7QpKiaxrPGjM4vgLyg",
+    "geprueft_am": "2026-11-17",
+    "hinweis": "Stand 17 October 2025 (Substantial-Shareholder-Notice). Die Quelle nennt 10.0% Beteiligung an Larvotto; die Art (Kapital/Stimmrechte) wird nur als 'shareholding' bezeichnet. Zusaetzlich unverbindliches Angebot fuer 100%, nicht vollzogen.",
+    "pruef_id": "AE12",
+    "pruefer": "auto-zweitpruefung (claude-sonnet-5-5, blind)",
+    "pruefmodell": "claude-sonnet-5-5",
+    "pruefweg": "subagent",
+    "quelle_frisch_geladen": false,
+    "regel": "Eddie Sablah 2026-11-16: Regel 3 automatisch, blinde Zweitprüfung durch ein zweites Modell + Programmprüfung; Stichprobe 5 Fälle/Monat bleibt",
+    "sitzung": "auto:claude-sonnet-5-5:2026-11-17",
+    "textkopie_geprueft": true,
+    "urteil": "BESTAETIGT",
+    "verfahren": "AUTO_ZWEITPRUEFUNG",
+    "wert": {
+     "einheit": "%",
+     "zahl_text": "10.0"
+    },
+    "ziel_id": "EK-USAC-LARVOTTO",
+    "ziel_typ": "kante"
+   },
+   {
+    "abgleich": "",
+    "aufgabe": "Ziel glied/antimon/antimon-site-legacy-row-111. Frage: Gehört der Standort Costerfield laut Quelle zu Mandalay Resources Corporation? Quellen: rk-alk-gm-2025-06-s013 (PDF-Seite 13 (pdftotext ohne -layout)); rk-alk-gm-2025-06-s015 (PDF-Seite 15 (pdftotext ohne -layout)); rk-alk-merger-2025-08-s001 (PDF-Seite 1 (pdftotext ohne -layout)).",
+    "aussage": "Gehört der Standort Costerfield laut Quelle zu Mandalay Resources Corporation?",
+    "belege": [
+     {
+      "quelle": "rk-alk-gm-2025-06-s015",
+      "zitat": [
+       "Mandalay currently owns 100% interests in two material producing assets – Costerfield, Australia"
+      ]
+     },
+     {
+      "quelle": "rk-alk-gm-2025-06-s013",
+      "zitat": [
+       "Mandalay Resources Costerfield Operations Pty Ltd"
+      ]
+     },
+     {
+      "quelle": "rk-alk-merger-2025-08-s001",
+      "zitat": [
+       "Alkane acquired all of the issued and outstanding common shares of Mandalay"
+      ]
+     }
+    ],
+    "blind": true,
+    "erstmodell": "claude-opus-5-5",
+    "erstpruefung_sitzung": "session_01JgcA7TdgLRrqKV9kyFuE5E",
+    "geprueft_am": "2026-11-17",
+    "hinweis": "Gilt zum Stand der Explanatory Memorandum (Juni 2025, Berichtsstand 'currently owns 100%'). Spaeterer Vorgang: Laut Mitteilung vom 05.08.2025 hat Alkane alle Mandalay-Aktien erworben (Mandalay nun Tochter von Alkane); die Explanatory Memorandum plant zudem eine Ausschuettung der australischen Mandalay-Gesellschaften (inkl. Costerfield Operations Pty Ltd) an Alkane. Dass diese Ausschuettung vollzogen wurde, belegen die Quellen nicht; die Eigentuemerschaft ab 08/2025 liegt aber letztlich bei Alkane, was der Zuordnung zu Mandalay Resources Corporation als oberster Gesellschaft widerspricht bzw. sie ueberholt.",
+    "pruef_id": "AE13",
+    "pruefer": "auto-zweitpruefung (claude-sonnet-5-5, blind)",
+    "pruefmodell": "claude-sonnet-5-5",
+    "pruefweg": "subagent",
+    "quelle_frisch_geladen": false,
+    "regel": "Eddie Sablah 2026-11-16: Regel 3 automatisch, blinde Zweitprüfung durch ein zweites Modell + Programmprüfung; Stichprobe 5 Fälle/Monat bleibt",
+    "sitzung": "auto:claude-sonnet-5-5:2026-11-17",
+    "textkopie_geprueft": true,
+    "urteil": "BESTAETIGT",
+    "verfahren": "AUTO_ZWEITPRUEFUNG",
+    "wert": {
+     "einheit": "",
+     "zahl_text": ""
+    },
+    "ziel_id": "antimon/antimon-site-legacy-row-111",
+    "ziel_typ": "glied"
    }
   ]
  },
  "eingaben": {
   "analysis/rohstoffe/antimon/kandidaten.json": "955d4a3a4c2bcd286394a8f8747c4f2c3eb18dd34d2bf839b0c23177c2349ce7",
   "analysis/rohstoffe/antimon/markt.json": "1ce538ffabf9d98288f1fe28d373d9eba5b97d2b11a3ce5ee5abdacfaa84d616",
-  "analysis/rohstoffe/eigentum/eigentumskette.json": "dc4e41fa1f2e547e39408fdc7c4a07cca001c0609181a7b1a7b0a12d8ef49bb6",
-  "analysis/rohstoffe/fluss-freigaben.jsonl": "7bcb03cd6f866779a996144af573a32a6723c19e37c1648f6b5dfbf2b642a149",
+  "analysis/rohstoffe/eigentum/eigentumskette.json": "6d0a735986003d2f59a6eeedb6ba08e69ea4ee7d910ccab607eb8bf20c92aae0",
+  "analysis/rohstoffe/fluss-freigaben.jsonl": "aaabbdac9c8a96ba0a688d2348a9b29df912fd5f6d05c9915280d05f3e396d66",
   "analysis/rohstoffe/mengen/annahmen-snapshot.json": "5169bc01abcdff017b11b6e2e0bdb0abbc934a843f86a8fbbf4dbdd3585165b1",
-  "analysis/rohstoffe/mengen/mengen.json": "94e6e728b63635daef1ffe47c595cd03fd4f5644a158aa61f7605bbf497706b6",
-  "analysis/rohstoffe/mengen/zweitpruefung.jsonl": "fb323cf5f6ee23aa7b0f563979efed73dcdbbdd2cf0203a287013f000c7d6770"
+  "analysis/rohstoffe/mengen/mengen.json": "e3cf36b504d52d37e77dfe24088ea1175213209c2f3448b9288da24bc3b4cc6b",
+  "analysis/rohstoffe/mengen/zweitpruefung.jsonl": "e093861fa8ba9484dafa843cac1e2e03d7c05dc79a1909e4e29a39985fbe865b"
  },
  "erzeugt_von": "scripts/analysis/rohstoffe/rohstoffkette.py",
  "kette": {
@@ -1388,7 +1547,7 @@
          "zitat": "\"stand\":\"2026-11-10\""
         }
        ],
-       "text": "Kein Namenstreffer für Hillgrove (Antimon-Gold-Projekt), Larvotto Resources Limited auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
+       "text": "Kein Namenstreffer für Hillgrove (Antimon-Gold-Projekt), Larvotto Resources Limited, United States Antimony Corporation auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
       }
      ],
      "grund": null,
@@ -1762,6 +1921,7 @@
     "t": null,
     "text": "unbekannt"
    },
+   "menge_abgeleitet": null,
    "menge_annahme": null,
    "menge_bezug": [],
    "nach": "S4",
@@ -1812,6 +1972,7 @@
     "t": null,
     "text": "unbekannt"
    },
+   "menge_abgeleitet": null,
    "menge_annahme": null,
    "menge_bezug": [],
    "nach": "S3",
@@ -1846,10 +2007,11 @@
   "eigentum_belegt": 2,
   "eigentum_kandidaten": 2,
   "eigentumskette_freigegeben": 0,
-  "eigentumskette_kanten": 2,
+  "eigentumskette_kanten": 3,
   "eigentumskette_vollstaendig": 0,
   "glieder_mit_ausweichquelle": 0,
   "kette_stufen": 2,
+  "mengen_abgeleitet": 0,
   "mengen_belegt": 0,
   "mengen_bezug": 0,
   "mengen_freigegeben": 0,
