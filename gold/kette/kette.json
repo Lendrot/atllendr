@@ -2533,8 +2533,8 @@
   ]
  },
  "eingaben": {
-  "analysis/aktualitaet/stand/ezb-referenzkurs-usd.json": "657a4410f12aa9a6b894637209e1e3d9342f93016c2b6b20427136e1515aab1f",
-  "analysis/aktualitaet/stand/lbma-gold-westmetall.json": "b8000f191798c77c8365793e4d0a000c9e3a40191ac13553ac1899a30ecedb2b",
+  "analysis/aktualitaet/stand/ezb-referenzkurs-usd.json": "c3ebb6dbe8808234a0eceed6464aa26752f500d66d863ee6f06445df22df1729",
+  "analysis/aktualitaet/stand/lbma-gold-westmetall.json": "61a324d0f8ba7130efea481156b9512c79149c9c6b89ba8f6efed8d097ded777",
   "analysis/rohstoffe/eigentum/eigentumskette.json": "6d0a735986003d2f59a6eeedb6ba08e69ea4ee7d910ccab607eb8bf20c92aae0",
   "analysis/rohstoffe/fluss-freigaben.jsonl": "aaabbdac9c8a96ba0a688d2348a9b29df912fd5f6d05c9915280d05f3e396d66",
   "analysis/rohstoffe/gold/kandidaten.json": "7d8b994d076ff097b39d451ac16740343c087d7b655dc2b829ca87aaa1e20745",
@@ -2562,20 +2562,20 @@
  },
  "preisbasis": {
   "ersetzt": "Jahrespreis U.S. Geological Survey, Mineral Commodity Summaries 2026, Gold: 3.300 US$ je Feinunze × 32.150,75 oz/t (einheit.py), 2025e",
-  "eur_je_t": 112508638.97,
+  "eur_je_t": 112764596.38,
   "formel": "Wert = Menge (t) × Gold London Fixing (LBMA) (US$/oz tr) × 32.150,75 oz tr je t (einheit.py) ÷ EZB-Referenzkurs",
   "kurs": {
-   "abgerufen": "2026-11-18",
+   "abgerufen": "2026-11-19",
    "art": "EZB-Referenzkurs",
-   "datum": "2026-11-16",
+   "datum": "2026-11-17",
    "einheit": "US$ je €",
    "herausgeber": "Europäische Zentralbank (EZB), Referenzkurs, wiedergegeben von Eurostat (ert_bil_eur_d)",
    "stand": "analysis/aktualitaet/stand/ezb-referenzkurs-usd.json",
    "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ert_bil_eur_d?currency=USD&statinfo=AVG&lastTimePeriod=30&format=JSON&lang=EN",
-   "wert": 1.1014
+   "wert": 1.0989
   },
   "preis": {
-   "abgerufen": "2026-11-18",
+   "abgerufen": "2026-11-19",
    "art": "Gold London Fixing (LBMA)",
    "datum": "2026-11-17",
    "einheit": "US$/oz tr",
@@ -4350,9 +4350,9 @@
    "wert_abgeleitet": null,
    "wert_annahme": {
     "annahme_art": "RECHNUNG",
-    "eur": 450034555.88209337,
+    "eur": 451058385.5205548,
     "eur_spanne": [
-     450034555.88209337
+     451058385.5205548
     ],
     "evidenz": "ANNAHME",
     "preis_basis": "gold",
@@ -4360,8 +4360,8 @@
     "preis_quelle": "Gold London Fixing (LBMA), wiedergegeben von Westmetall, Gold London Fixing (LBMA), US$/oz tr, Handelstag 2026-11-17",
     "preis_url": "https://www.westmetall.com/en/markdaten.php?action=table&field=USD_ozt_London",
     "preis_zitat": "2026-11-17: 3.854,25 US$/oz tr",
-    "rechnung": "4 t (Annahme A-G-MENGE, t Au) × 123.917.014,962 US$ je t Au (3.854,25 US$/oz tr × 32.150,75 oz tr je t (einheit.py), Handelstag 2026-11-17) = 496 Mio. US$ ÷ EZB-Referenzkurs vom 2026-11-16: 1,1014 US$ je €",
-    "text": "≈ 450 Mio. € pro Jahr"
+    "rechnung": "4 t (Annahme A-G-MENGE, t Au) × 123.917.014,962 US$ je t Au (3.854,25 US$/oz tr × 32.150,75 oz tr je t (einheit.py), Handelstag 2026-11-17) = 496 Mio. US$ ÷ EZB-Referenzkurs vom 2026-11-17: 1,0989 US$ je €",
+    "text": "≈ 451 Mio. € pro Jahr"
    }
   },
   {
@@ -4484,9 +4484,9 @@
    "wert_abgeleitet": null,
    "wert_annahme": {
     "annahme_art": "RECHNUNG",
-    "eur": 393780236.39683175,
+    "eur": 394676087.33048546,
     "eur_spanne": [
-     393780236.39683175
+     394676087.33048546
     ],
     "evidenz": "ANNAHME",
     "preis_basis": "gold",
@@ -4494,8 +4494,8 @@
     "preis_quelle": "Gold London Fixing (LBMA), wiedergegeben von Westmetall, Gold London Fixing (LBMA), US$/oz tr, Handelstag 2026-11-17",
     "preis_url": "https://www.westmetall.com/en/markdaten.php?action=table&field=USD_ozt_London",
     "preis_zitat": "2026-11-17: 3.854,25 US$/oz tr",
-    "rechnung": "3,5 t (Annahme A-G-MENGE, t Au) × 123.917.014,962 US$ je t Au (3.854,25 US$/oz tr × 32.150,75 oz tr je t (einheit.py), Handelstag 2026-11-17) = 434 Mio. US$ ÷ EZB-Referenzkurs vom 2026-11-16: 1,1014 US$ je €",
-    "text": "≈ 394 Mio. € pro Jahr"
+    "rechnung": "3,5 t (Annahme A-G-MENGE, t Au) × 123.917.014,962 US$ je t Au (3.854,25 US$/oz tr × 32.150,75 oz tr je t (einheit.py), Handelstag 2026-11-17) = 434 Mio. US$ ÷ EZB-Referenzkurs vom 2026-11-17: 1,0989 US$ je €",
+    "text": "≈ 395 Mio. € pro Jahr"
    }
   },
   {
@@ -4558,9 +4558,9 @@
    "wert_abgeleitet": null,
    "wert_annahme": {
     "annahme_art": "RECHNUNG",
-    "eur": 56254319.48526167,
+    "eur": 56382298.19006935,
     "eur_spanne": [
-     56254319.48526167
+     56382298.19006935
     ],
     "evidenz": "ANNAHME",
     "preis_basis": "gold",
@@ -4568,8 +4568,8 @@
     "preis_quelle": "Gold London Fixing (LBMA), wiedergegeben von Westmetall, Gold London Fixing (LBMA), US$/oz tr, Handelstag 2026-11-17",
     "preis_url": "https://www.westmetall.com/en/markdaten.php?action=table&field=USD_ozt_London",
     "preis_zitat": "2026-11-17: 3.854,25 US$/oz tr",
-    "rechnung": "0,5 t (Annahme A-G-MENGE, t Au) × 123.917.014,962 US$ je t Au (3.854,25 US$/oz tr × 32.150,75 oz tr je t (einheit.py), Handelstag 2026-11-17) = 62 Mio. US$ ÷ EZB-Referenzkurs vom 2026-11-16: 1,1014 US$ je €",
-    "text": "≈ 56,3 Mio. € pro Jahr"
+    "rechnung": "0,5 t (Annahme A-G-MENGE, t Au) × 123.917.014,962 US$ je t Au (3.854,25 US$/oz tr × 32.150,75 oz tr je t (einheit.py), Handelstag 2026-11-17) = 62 Mio. US$ ÷ EZB-Referenzkurs vom 2026-11-17: 1,0989 US$ je €",
+    "text": "≈ 56,4 Mio. € pro Jahr"
    }
   }
  ],
