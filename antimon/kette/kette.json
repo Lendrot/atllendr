@@ -136,7 +136,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [],
    "mehrkosten": {
@@ -332,7 +333,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [],
    "mehrkosten": {
@@ -366,7 +368,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [],
    "mehrkosten": {
@@ -499,7 +502,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [],
    "mehrkosten": {
@@ -695,7 +699,8 @@
     "mass_text": "Kapital",
     "stand": "2025-08-05",
     "text": null,
-    "von": "R-ALKANE"
+    "von": "R-ALKANE",
+    "zu_pruefen": false
    },
    {
     "an": "R-HILLGROVE",
@@ -719,7 +724,8 @@
     "mass_text": "Kapital",
     "stand": "2024-12-31",
     "text": null,
-    "von": "R-LARVOTTO"
+    "von": "R-LARVOTTO",
+    "zu_pruefen": true
    },
    {
     "an": "R-LARVOTTO",
@@ -743,7 +749,8 @@
     "mass_text": "Kapital",
     "stand": "2025-10-17",
     "text": null,
-    "von": "R-USAC"
+    "von": "R-USAC",
+    "zu_pruefen": false
    }
   ],
   "knoten": {
@@ -778,9 +785,63 @@
       }
      ],
      "freigabe": "FREIGEGEBEN",
-     "freigabe_herkunft": "ABGELEITET: größter gemeldeter Großaktionär 6,4 % < 10 % (Regel Eddie Sablah 2026-11-23: Großaktionärsliste als Beleg für die oberste Gesellschaft (ABGELEITET)); Liste und 4 Zahlen Zweitprüfung BESTAETIGT 2026-11-23 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+     "freigabe_herkunft": "ABGELEITET: größter gemeldeter Großaktionär ohne eigene Kette 6,4 % < 10 % (Regel Eddie Sablah 2026-11-23: Großaktionärsliste als Beleg für die oberste Gesellschaft (ABGELEITET)); Liste und 4 Zahlen Zweitprüfung BESTAETIGT 2026-11-23 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+     "geschlossen": {
+      "gilt": true,
+      "praemissen": [
+       {
+        "aussage": "Liste der gemeldeten Großaktionäre von Alkane Resources Ltd",
+        "freigabe": "FREIGEGEBEN",
+        "quelle": "rk-alk-ar-2026-s191",
+        "ref": "oberste:R-ALKANE",
+        "rolle": "liste_vollstaendig"
+       },
+       {
+        "aussage": "Aktien gesamt: 1,366,204,821",
+        "freigabe": "FREIGEGEBEN",
+        "quelle": "rk-alk-ar-2026-s190",
+        "ref": "eingang:R-ALKANE/gesamt",
+        "rolle": "halter_unter_schwelle"
+       },
+       {
+        "aussage": "CE Mining III MND Limited: 76,538,135",
+        "freigabe": "FREIGEGEBEN",
+        "quelle": "rk-alk-ar-2026-s191",
+        "ref": "eingang:R-ALKANE/halter-1",
+        "rolle": "halter_unter_schwelle"
+       },
+       {
+        "aussage": "Ian Jeffrey Gandel: 87,228,277",
+        "freigabe": "FREIGEGEBEN",
+        "quelle": "rk-alk-ar-2026-s191",
+        "ref": "eingang:R-ALKANE/halter-2",
+        "rolle": "halter_unter_schwelle"
+       },
+       {
+        "aussage": "Gardenway Pty Ltd: 72,175,000",
+        "freigabe": "FREIGEGEBEN",
+        "quelle": "rk-alk-ar-2026-s191",
+        "ref": "eingang:R-ALKANE/halter-3",
+        "rolle": "halter_unter_schwelle"
+       }
+      ],
+      "schluss": "Kein beherrschender Aktionär (ABGELEITET, Regel 2026-11-23): Der Jahresbericht nennt die Großaktionäre, die ihre Beteiligung nach Section 671B Corporations Act gemeldet haben; der größte hält 87.228.277 von 1.366.204.821 Aktien (gerechnet 6,4 %, unter der Schwelle 10 %), Stand 04.09.2026. Der LEI-Eintrag ist abgelaufen (LAPSED) und wird nicht genutzt.",
+      "schlussart": "KEINE_BEHERRSCHUNG",
+      "schlussart_text": "Vollständige Großaktionärsliste, jeder Halter < 10 %.",
+      "schlusspruefung": {
+       "aufgabe": "Ziel oberste/R-ALKANE. Frage: Enthält die Quelle eine Liste der Großaktionäre von Alkane Resources Ltd, die der Gesellschaft ihre Beteiligung gemeldet haben (substantial shareholders)? Quellen: rk-alk-ar-2026-s191 (PDF-Seite 191 (pdftotext -layout, Tabellenzeilen)).",
+       "blind": true,
+       "erstmodell": "claude-opus-5-5",
+       "geprueft_am": "2026-11-23",
+       "pruefmodell": "claude-sonnet-5-5",
+       "urteil": "BESTAETIGT"
+      },
+      "wissen": "GESCHLOSSEN",
+      "zeitraum": null
+     },
      "grund": "GROSSAKTIONAERE_UNTER_SCHWELLE",
-     "text": "Kein beherrschender Aktionär (ABGELEITET, Regel 2026-11-23): Der Jahresbericht nennt die Großaktionäre, die ihre Beteiligung nach Section 671B Corporations Act gemeldet haben; der größte hält 87.228.277 von 1.366.204.821 Aktien (gerechnet 6,4 %, unter der Schwelle 10 %), Stand 04.09.2026. Der LEI-Eintrag ist abgelaufen (LAPSED) und wird nicht genutzt."
+     "text": "Kein beherrschender Aktionär (ABGELEITET, Regel 2026-11-23): Der Jahresbericht nennt die Großaktionäre, die ihre Beteiligung nach Section 671B Corporations Act gemeldet haben; der größte hält 87.228.277 von 1.366.204.821 Aktien (gerechnet 6,4 %, unter der Schwelle 10 %), Stand 04.09.2026. Der LEI-Eintrag ist abgelaufen (LAPSED) und wird nicht genutzt.",
+     "wissen": "GESCHLOSSEN"
     },
     "offen": null
    },
@@ -897,6 +958,7 @@
    "kanten_freigegeben": 3,
    "kanten_kandidat": 0,
    "kanten_mit_anteil": 3,
+   "kanten_zu_pruefen_r8": 1,
    "knoten": 6,
    "letzte_eigentuemer": [],
    "oberste_gesellschaften": [
@@ -1196,7 +1258,7 @@
  "eingaben": {
   "analysis/rohstoffe/antimon/kandidaten.json": "955d4a3a4c2bcd286394a8f8747c4f2c3eb18dd34d2bf839b0c23177c2349ce7",
   "analysis/rohstoffe/antimon/markt.json": "1ce538ffabf9d98288f1fe28d373d9eba5b97d2b11a3ce5ee5abdacfaa84d616",
-  "analysis/rohstoffe/eigentum/eigentumskette.json": "74d2ea759f73ced09161ecbfb9bdc830636d18d945d979507263cabc58c15903",
+  "analysis/rohstoffe/eigentum/eigentumskette.json": "e720e088c7aaef44b687807f1d394c2b7ce8a4cf4fe74833e4d6035898f24135",
   "analysis/rohstoffe/fluss-freigaben.jsonl": "aaabbdac9c8a96ba0a688d2348a9b29df912fd5f6d05c9915280d05f3e396d66",
   "analysis/rohstoffe/mengen/annahmen-snapshot.json": "5169bc01abcdff017b11b6e2e0bdb0abbc934a843f86a8fbbf4dbdd3585165b1",
   "analysis/rohstoffe/mengen/mengen.json": "83eb82f85ec56a551a01ebaf57c79d4b74add31b00a61c29c297c7b171af3cc8",
@@ -2164,6 +2226,7 @@
  "zaehler": {
   "ausfall_mit_ausweich_menge": 3,
   "belege": 3,
+  "dauer_geschaetzt": 0,
   "eigentum_belegt": 2,
   "eigentum_kandidaten": 2,
   "eigentumskette_freigegeben": 1,

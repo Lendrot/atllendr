@@ -34,9 +34,10 @@ function ekBaumHtml(ek, b, stufe = 0) {
     + (e ? ` <span data-ek-anteil>${anteil}</span>${eff}` : '') + ` <span class="chip ${EK_SCHLUSS_CHIP[b.schluss]}" data-ek-schluss="${esc(b.schluss)}">${esc(b.schluss_text)}</span>`
     + (e ? ` <span class="chip ${e.freigabe === 'FREIGEGEBEN' ? 'f' : 'k'}">${esc(FREIGABE_TEXT[e.freigabe])}</span>` : '');
   const infos = [];
-  if (e) infos.push(`<div class="hinweis">${e.text && e.anteil !== null ? esc(e.text) + ' · ' : ''}Stand ${esc(e.stand)} · ${esc(e.freigabe_herkunft)}${e.einschraenkung ? ` · ${esc(e.einschraenkung)}` : ''}</div>`
+  if (e) infos.push(`<div class="hinweis">${e.text && e.anteil !== null ? esc(e.text) + ' · ' : ''}Stand ${esc(e.stand)}${e.zu_pruefen ? ' <span class="chip k" data-r8="zu-pruefen" title="Datenregel R8: Eigentümer-Angabe älter als 18 Monate; wird nicht gelöscht oder herabgestuft">zu prüfen (älter als 18 Monate)</span>' : ''} · ${esc(e.freigabe_herkunft)}${e.einschraenkung ? ` · ${esc(e.einschraenkung)}` : ''}</div>`
     + `<details class="ek-belege"><summary>Beleg Anteil (${e.belege.length})</summary>${ekBelege(e.belege, Q)}</details>`);
-  if (k.oberste) infos.push(`<div class="hinweis"><b>Oberste Gesellschaft:</b> ${esc(k.oberste.text)} <span class="chip ${k.oberste.freigabe === 'FREIGEGEBEN' ? 'f' : 'k'}" data-ek-oberste-freigabe>${esc(FREIGABE_TEXT[k.oberste.freigabe])}</span></div>`
+  if (k.oberste) infos.push(`<div class="hinweis"><b>Oberste Gesellschaft:</b> ${esc(k.oberste.text)} <span class="chip ${k.oberste.freigabe === 'FREIGEGEBEN' ? 'f' : 'k'}" data-ek-oberste-freigabe>${esc(FREIGABE_TEXT[k.oberste.freigabe])}</span>`
+    + (k.oberste.geschlossen ? ` <span class="chip d" data-ek-geschlossen="${esc(k.oberste.geschlossen.schlussart)}" title="${esc(k.oberste.geschlossen.schlussart_text)}">${k.oberste.geschlossen.gilt ? 'geschlossen' : 'Schluss offen'}: ${esc(k.oberste.geschlossen.schlussart_text)}</span>` : '') + '</div>'
     + `<details class="ek-belege"><summary>Beleg oberste Gesellschaft (${k.oberste.belege.length})</summary>${ekBelege(k.oberste.belege, Q)}</details>`);
   if (k.belege.length) infos.push(`<details class="ek-belege"><summary>Beleg ${esc(k.art_text)} (${k.belege.length})</summary>${ekBelege(k.belege, Q)}</details>`);
   if (k.hinweis) infos.push(`<div class="hinweis">${esc(k.hinweis)}</div>`);
@@ -111,6 +112,7 @@ function ausweichHtml(d, a, name) {
       + (x.quelle ? ` · ${link(x.quelle.url, x.quelle.herausgeber)}${x.quelle.zitat ? `<blockquote data-beleg>„${esc(x.quelle.zitat)}“</blockquote>` : ''}` : '')
       + (x.hinweis ? `<br><span class="hinweis">${esc(x.hinweis)}</span>` : '') + '</li>').join('') + '</ul>';
 }
+const SUCHSTELLE = {jahresbericht: 'Jahresbericht', quartalsberichte_4: '4 Quartalsberichte', boersenmitteilungen_12_monate: 'Börsenmitteilungen 12 Monate', behoerde_register: 'Behörde/Register'};
 const lageText = l => `${Math.abs(l.lat).toFixed(2).replace('.', ',')}° ${l.lat < 0 ? 'S' : 'N'}, ${Math.abs(l.lon).toFixed(2).replace('.', ',')}° ${l.lon < 0 ? 'W' : 'O'}`;
 const link = (url, text) => url ? `<a href="${esc(url)}" target="_blank" rel="noopener">${esc(text || 'Quelle')}</a>` : esc(text || '');
 export const status = {geladen: false, knoten: 0, boegen: 0, auswahl: null, ausfall: null, rot: [], schilder: 0, ansicht: 'belegt',
@@ -118,6 +120,9 @@ export const status = {geladen: false, knoten: 0, boegen: 0, auswahl: null, ausf
 // Menge und Wert je Bogen (Paket 5): "Belegt" zeigt nur Angaben laut Quelle, "Mit Annahmen" zusätzlich die Annahmen-Ebene,
 // immer als Annahme markiert (wie /kupferkette/). Ausstoß und Obergrenze des liefernden Glieds stehen in beiden Ansichten daneben.
 const an = () => status.ansicht === 'annahmen';
+// Datenregel R5 (Eddie 2026-11-24): Schätzungen (GESCHAETZT) nur in der Ansicht „Mit Schätzungen“, nie als belegt, nie mit Annahmen gemischt.
+const sch = () => status.ansicht === 'schaetzungen';
+const ANSICHT_NAME = {belegt: 'Belegt', annahmen: 'Mit Annahmen', schaetzungen: 'Mit Schätzungen'};
 // Abgeleitete Menge (Regel 4 gelockert): Rechnung aus freigegebenen Zitat-Zahlen, in beiden Ansichten, nie als belegt.
 function schildArt(v) { return v.menge.evidenz !== 'UNKNOWN' ? 'B' : v.menge_abgeleitet ? 'D' : an() && v.menge_annahme ? 'A' : 'U'; }
 function schildText(v) { return v.menge.evidenz !== 'UNKNOWN' ? v.menge.text : v.menge_abgeleitet ? v.menge_abgeleitet.text : an() && v.menge_annahme ? v.menge_annahme.text : '? t'; }
@@ -406,7 +411,18 @@ function render(d) {
       + ausweichHtml(d, a.ausweich, name)
       + ausfallRechnung('Fehlende Tonnen', 'tonnen', a.tonnen, p => `${esc(p.rechenweg)}. ${esc(p.hinweis || '')}`)
       + ausfallRechnung('Mehrkosten', 'mehrkosten', a.mehrkosten, p => `${esc(p.rechenweg)}. ${esc(p.hinweis || '')} Preis: ${link(p.preis_url, p.preis_quelle)}<blockquote>„${esc(p.preis_zitat)}“</blockquote>`)
-      + `<p data-ausfall-feld="dauer" data-evidenz="${a.dauer.evidenz}"><b>Dauer:</b> <span class="unbekannt">unbekannt</span> – ${esc(a.dauer.grund)}</p></div>`;
+      + dauerHtml(a.dauer) + '</div>';
+  }
+  function dauerHtml(f) {
+    const s = f.schaetzung;
+    if (!s || !sch()) return `<p data-ausfall-feld="dauer" data-evidenz="UNKNOWN" data-wissen="${f.evidenz}" data-luecke-grund="${esc(f.luecke_grund || '')}"><b>Dauer:</b> <span class="unbekannt">unbekannt</span> – ${esc(f.grund)}`
+      + (s ? ' <span class="hinweis">Schätzung vorhanden: Ansicht „Mit Schätzungen“.</span>' : '') + '</p>';
+    const z = x => String(x).replace('.', ',');
+    return `<div class="schaetz-box" data-ausfall-feld="dauer" data-evidenz="GESCHAETZT" data-methode="${esc(s.methode)}"><b>Dauer (geschätzt):</b> ${z(s.spanne[0])}–${z(s.spanne[1])} ${esc(s.einheit)} <span class="chip g">geschätzt</span>`
+      + `<br><span class="hinweis">Ursache: ${esc(s.ursache_text || s.ursache)} · Methode: Vergleichsfall (${esc(s.methode)}) · Konfidenz ${esc(s.konfidenz.toLowerCase())} · erneut suchen ab ${esc(s.pruefen_ab)}. Nie belegt, nie freigegeben, kein Eingang einer Rechnung.</span>`
+      + `<br><span class="hinweis">Rechenweg: ${esc(s.rechenweg)}</span>`
+      + s.anker.map(x => `<br><span class="hinweis">Anker: ${esc(x.name)} · ${link(x.url, x.quelle)} · blind zweitgeprüft (${esc(x.zweitpruefung?.pruefmodell || '')}, ${esc(x.zweitpruefung?.geprueft_am || '')})</span><blockquote data-beleg>„${esc(x.zitat)}“</blockquote>`).join('')
+      + `<br><span class="hinweis">Suchprotokoll (Lückengrund nicht veröffentlicht): ${Object.entries(f.suchprotokoll || {}).map(([k, v]) => `${link(v.url, SUCHSTELLE[k] || k)} (${esc(v.abgerufen)})`).join(' · ')}</span></div>`;
   }
   // Regel 4 gelockert (Eddie 2026-11-16): Tonnen und Mehrkosten ABGELEITET aus freigegebenen Eingängen, Rechenweg sichtbar, nie belegt
   function ausfallRechnung(titel, feld, f, weg) {
@@ -435,8 +451,10 @@ function render(d) {
     if (status.risiko) u.searchParams.set('risiko', status.risikoKat); else u.searchParams.delete('risiko');
     history.replaceState(null, '', u);
   }
-  const ansichtText = () => { $('ansicht-text').textContent = an()
-    ? `Mit Annahmen: Bögen ohne belegte Menge zeigen die Menge des Annahmen-Atlas (≈, gestrichelt), Wert = Menge × Preis ÷ EZB-Jahresmittel. Annahmen zählen nie als belegt. Menge mit Annahmen ${z.mengen_mit_annahmen}/${z.verbindungen}, Wert ${z.werte_mit_annahmen}/${z.verbindungen}.`
+  const nGesch = Object.values(d.ausfall).filter(a => a.dauer.evidenz === 'GESCHAETZT').length;
+  const ansichtText = () => { $('ansicht-text').textContent = sch()
+    ? `Mit Schätzungen: zusätzlich zu den belegten Angaben verankerte Schätzungen (Spanne, Methode aus festem Katalog, gelesene und blind zweitgeprüfte Anker-Quelle, nur wo das Suchprotokoll keinen veröffentlichten Wert fand). Schätzungen zählen nie als belegt. Wiederanlaufdauer geschätzt bei ${nGesch} von ${Object.keys(d.ausfall).length} Gliedern.`
+    : an() ? `Mit Annahmen: Bögen ohne belegte Menge zeigen die Menge des Annahmen-Atlas (≈, gestrichelt), Wert = Menge × Preis ÷ EZB-Jahresmittel. Annahmen zählen nie als belegt. Menge mit Annahmen ${z.mengen_mit_annahmen}/${z.verbindungen}, Wert ${z.werte_mit_annahmen}/${z.verbindungen}.`
     : `Belegt: nur Mengen und Werte laut gelesener Quelle (${z.mengen_in_tonnen}/${z.verbindungen} Bögen mit Tonnen, ${z.werte_in_euro}/${z.verbindungen} mit Euro). Ausstoß oder Obergrenze des liefernden Glieds steht daneben und zählt nicht.`;
     $('legende-annahme').hidden = !an(); };
   ansichtText();
@@ -444,8 +462,8 @@ function render(d) {
     const b = e.target.closest('button[data-ansicht]'); if (!b || b.dataset.ansicht === status.ansicht) return;
     status.ansicht = b.dataset.ansicht;
     for (const x of $('umschalter').querySelectorAll('button')) x.setAttribute('aria-pressed', String(x.dataset.ansicht === status.ansicht));
-    kpis(); liste(); ansichtText(); waehle(status.auswahl); $('ausdruck-ansicht').textContent = an() ? 'Mit Annahmen' : 'Belegt';
-    const u = new URL(location.href); an() ? u.searchParams.set('ansicht', 'annahmen') : u.searchParams.delete('ansicht'); history.replaceState(null, '', u);
+    kpis(); liste(); ansichtText(); waehle(status.auswahl); $('ausdruck-ansicht').textContent = an() ? 'Mit Annahmen' : 'Belegt' + (sch() ? ' (Schätzungen stehen nicht im PDF)' : '');
+    const u = new URL(location.href); status.ansicht !== 'belegt' ? u.searchParams.set('ansicht', status.ansicht) : u.searchParams.delete('ansicht'); history.replaceState(null, '', u);
   });
   const risikoAn = (ein, kat = status.risikoKat) => { status.risiko = ein; status.risikoKat = kat; risikoPanel(); globus?.risiko(); waehle(status.auswahl); };
   risikoPanel();
@@ -455,7 +473,7 @@ function render(d) {
   $('legende-knopf').addEventListener('click', () => { const o = $('globus').classList.toggle('legende-offen'); $('legende-knopf').setAttribute('aria-expanded', String(o)); });
   try { globus = baueGlobus(d, waehle); } catch (e) { $('globus').insertAdjacentHTML('beforeend', `<p class="fehler">3D-Ansicht nicht verfügbar: ${esc(e.message)}</p>`); }
   const p = new URLSearchParams(location.search);
-  if (p.get('ansicht') === 'annahmen') $('umschalter').querySelector('[data-ansicht=annahmen]').click();
+  if (['annahmen', 'schaetzungen'].includes(p.get('ansicht'))) $('umschalter').querySelector(`[data-ansicht=${p.get('ansicht')}]`).click();
   const rk = p.get('risiko'), w = p.get('w');
   if (rk) risikoAn(true, d.risikoebene.kategorien.some(k => k.id === rk) ? rk : 'ALLE');
   if (w && S[w.split(':')[0]] && d.risikoebene.kategorien.some(k => k.id === w.split(':')[1])) waehle({typ: 'risiko', id: w});

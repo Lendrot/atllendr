@@ -11,7 +11,7 @@
   "umfang": "Gezählt: auf dem Hauptglobus gezeichnete Verbindungen und alle Firmenverbindungen auf /verbindungen/. Nicht gezeichnete Verbindungen (ohne Koordinate) und der Annahmen-Atlas zählen nicht.",
   "stand": "2026-11-11",
   "inputs_sha256": {
-   "dist/assets/globe-sites.json": "2f378251533015030b89ac387559809af22a705853ea76199112e761e64f76a5",
+   "dist/assets/globe-sites.json": "1ff163a90fcf405bb2ee40ad4b86ae6c880702e9515884bdf16608086f30f19d",
    "analysis/company-connections.json": "154041bea38376890f09b6d27405d6a021fe3df359b1a5f0e8dccf84bad9b43c",
    "analysis/approval-ledger.jsonl": "f797611a62385d7abb9a822a24922c49701df68fe39f06de4ff1e213633c5ea6"
   }

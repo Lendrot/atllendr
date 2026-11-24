@@ -7,8 +7,8 @@
     ['/atlas/', 'Globus', ['/atlas/', '/minen/', '/logistik/', '/verarbeitung/', '/indien/', '/karte/', '/deutschland/']],
     ['/themen/', 'Rohstoffe', ['/themen/', '/kupfer/', '/lithium/', '/gold/', '/graphit/', '/weitere-rohstoffe/', '/uran/', '/seltene-erden/', '/wolfram/', '/antimon/', '/abfall/', '/anlagen/', '/quellen/', '/recherche/']],
     ['/unternehmen/', 'Unternehmen', ['/unternehmen/', '/uebernahmen/', '/verbindungen/']],
-    ['/analysen/', 'Analysen', ['/analysen/', '/datenluecken/']],
-    ['/daten/', 'Quellen', ['/daten/', '/produktion/', '/audit/', '/foundation/', '/schnittstelle/', '/begriffe/']]
+    ['/analysen/', 'Analysen', ['/analysen/', '/luecken/', '/datenluecken/']],
+    ['/daten/', 'Quellen', ['/daten/', '/produktion/', '/pruefstand/', '/audit/', '/foundation/', '/schnittstelle/', '/begriffe/']]
   ];
   var ANNAHMEN_ATLAS = 'https://lendrot.github.io/atlaslendrot/';
   // Bereichsleiste: der längste passende Pfad gewinnt (Rohstoffseiten zeigen ihre eigenen Seiten), sonst die Leiste des Menüpunkts.
@@ -27,8 +27,8 @@
     '/antimon/': [['/antimon/', 'Antimon-Standorte'], ['/antimon/markt/', 'Antimonmarkt']],
     '/abfall/': [['/abfall/', 'Abfallanlagen Europa'], ['/anlagen/', 'EPA-Anlagen USA'], ['/quellen/', 'Abfallquellen'], ['/recherche/', 'Stoff- und Geldströme']],
     '/unternehmen/': [['/unternehmen/', 'Übersicht'], ['/uebernahmen/', 'Übernahmen 2026'], ['/verbindungen/', 'Verbindungen zwischen Unternehmen']],
-    '/analysen/': [['/analysen/', 'Übersicht'], ['/datenluecken/', 'Datenlücken']],
-    '/daten/': [['/daten/', 'Daten & Quellen'], ['/produktion/', 'Produktion'], ['/audit/', 'Methodik: Prüfbericht'], ['/foundation/', 'Methodik: Datenfundament'], ['/schnittstelle/', 'Schnittstelle'], ['/begriffe/', 'Begriffe']]
+    '/analysen/': [['/analysen/', 'Übersicht'], ['/luecken/', 'Datenlücken'], ['/datenluecken/', 'Standortregister (alt)']],
+    '/daten/': [['/daten/', 'Daten & Quellen'], ['/produktion/', 'Produktion'], ['/pruefstand/', 'Prüfstand'], ['/audit/', 'Archiv: Prüfbericht V28'], ['/foundation/', 'Methodik: Datenfundament'], ['/schnittstelle/', 'Schnittstelle'], ['/begriffe/', 'Begriffe']]
   };
   // Pfade, die zu einer Rohstoff-Leiste gehören, ohne mit ihr zu beginnen
   var UNTER_ZU = {'/anlagen/': '/abfall/', '/quellen/': '/abfall/', '/recherche/': '/abfall/'};

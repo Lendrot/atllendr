@@ -136,7 +136,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [],
    "mehrkosten": {
@@ -369,7 +370,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [
     {
@@ -479,7 +481,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [
     {
@@ -625,7 +628,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [
     {
@@ -777,7 +781,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [
     {
@@ -929,7 +934,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [
     {
@@ -1081,7 +1087,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [
     {
@@ -1233,7 +1240,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [
     {
@@ -1419,7 +1427,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [
     {
@@ -1659,7 +1668,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [
     {
@@ -1863,7 +1873,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [
     {
@@ -2216,7 +2227,8 @@
     "mass_text": "Stimmrechte",
     "stand": "2025-12-31",
     "text": "direkt 23,67 %, indirekt 42,55 %, Stimmrechte 66,22 % (Tabelle Tochtergesellschaften China Baoan)",
-    "von": "R-CHINA-BAOAN"
+    "von": "R-CHINA-BAOAN",
+    "zu_pruefen": false
    },
    {
     "an": "R-POSCO-FUTURE-M",
@@ -2240,7 +2252,8 @@
     "mass_text": "Kapital",
     "stand": "2025-12-31",
     "text": null,
-    "von": "R-POSCO-HOLDINGS"
+    "von": "R-POSCO-HOLDINGS",
+    "zu_pruefen": false
    }
   ],
   "knoten": {
@@ -2330,9 +2343,49 @@
       }
      ],
      "freigabe": "FREIGEGEBEN",
-     "freigabe_herkunft": "ABGELEITET: größter gemeldeter Großaktionär 9,8 % < 10 % (Regel Eddie Sablah 2026-11-23: Großaktionärsliste als Beleg für die oberste Gesellschaft (ABGELEITET)); Liste und 2 Zahlen Zweitprüfung BESTAETIGT 2026-11-24 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+     "freigabe_herkunft": "ABGELEITET: größter gemeldeter Großaktionär ohne eigene Kette 9,8 % < 10 % (Regel Eddie Sablah 2026-11-23: Großaktionärsliste als Beleg für die oberste Gesellschaft (ABGELEITET)); Liste und 2 Zahlen Zweitprüfung BESTAETIGT 2026-11-24 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+     "geschlossen": {
+      "gilt": true,
+      "praemissen": [
+       {
+        "aussage": "Liste der gemeldeten Großaktionäre von Graphex Group Limited",
+        "freigabe": "FREIGEGEBEN",
+        "quelle": "rk-gx-ar-2025-s057",
+        "ref": "oberste:R-GRAPHEX",
+        "rolle": "liste_vollstaendig"
+       },
+       {
+        "aussage": "Aktien gesamt: 941,313,336",
+        "freigabe": "FREIGEGEBEN",
+        "quelle": "rk-gx-ar-2025-s017",
+        "ref": "eingang:R-GRAPHEX/gesamt",
+        "rolle": "halter_unter_schwelle"
+       },
+       {
+        "aussage": "Justin Yu: 92,500,000",
+        "freigabe": "FREIGEGEBEN",
+        "quelle": "rk-gx-ar-2025-s057",
+        "ref": "eingang:R-GRAPHEX/halter-1",
+        "rolle": "halter_unter_schwelle"
+       }
+      ],
+      "schluss": "Kein beherrschender Aktionär (ABGELEITET, Regel 2026-11-23): Die Liste der nach SFO Teil XV gemeldeten Großaktionäre nennt zum 31.12.2025 nur einen Halter mit 92.500.000 von 941.313.336 Stammaktien (gerechnet 9,8 %, unter der Schwelle 10 %); die Direktoren halten 3,69 % und weniger. Die 323.657.534 Vorzugsaktien geben kein Recht zur Teilnahme an der Hauptversammlung und zählen nicht.",
+      "schlussart": "KEINE_BEHERRSCHUNG",
+      "schlussart_text": "Vollständige Großaktionärsliste, jeder Halter < 10 %.",
+      "schlusspruefung": {
+       "aufgabe": "Ziel oberste/R-GRAPHEX. Frage: Enthält die Quelle eine Liste der Großaktionäre von Graphex Group Limited, die der Gesellschaft ihre Beteiligung gemeldet haben (substantial shareholders) bzw. der größten Aktionäre (Form 20-F Item 7.A \"Major Shareholders\")? Quellen: rk-gx-ar-2025-s057 (PDF-Seite 57 (pdftotext -layout)).",
+       "blind": true,
+       "erstmodell": "claude-opus-5-5",
+       "geprueft_am": "2026-11-24",
+       "pruefmodell": "claude-sonnet-5-5",
+       "urteil": "BESTAETIGT"
+      },
+      "wissen": "GESCHLOSSEN",
+      "zeitraum": null
+     },
      "grund": "GROSSAKTIONAERE_UNTER_SCHWELLE",
-     "text": "Kein beherrschender Aktionär (ABGELEITET, Regel 2026-11-23): Die Liste der nach SFO Teil XV gemeldeten Großaktionäre nennt zum 31.12.2025 nur einen Halter mit 92.500.000 von 941.313.336 Stammaktien (gerechnet 9,8 %, unter der Schwelle 10 %); die Direktoren halten 3,69 % und weniger. Die 323.657.534 Vorzugsaktien geben kein Recht zur Teilnahme an der Hauptversammlung und zählen nicht."
+     "text": "Kein beherrschender Aktionär (ABGELEITET, Regel 2026-11-23): Die Liste der nach SFO Teil XV gemeldeten Großaktionäre nennt zum 31.12.2025 nur einen Halter mit 92.500.000 von 941.313.336 Stammaktien (gerechnet 9,8 %, unter der Schwelle 10 %); die Direktoren halten 3,69 % und weniger. Die 323.657.534 Vorzugsaktien geben kein Recht zur Teilnahme an der Hauptversammlung und zählen nicht.",
+     "wissen": "GESCHLOSSEN"
     },
     "offen": null
    },
@@ -2422,9 +2475,77 @@
       }
      ],
      "freigabe": "FREIGEGEBEN",
-     "freigabe_herkunft": "ABGELEITET: größter gemeldeter Großaktionär 8,0 % < 10 % (Regel Eddie Sablah 2026-11-23: Großaktionärsliste als Beleg für die oberste Gesellschaft (ABGELEITET)); Liste und 6 Zahlen Zweitprüfung BESTAETIGT 2026-11-24 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+     "freigabe_herkunft": "ABGELEITET: größter gemeldeter Großaktionär ohne eigene Kette 8,0 % < 10 % (Regel Eddie Sablah 2026-11-23: Großaktionärsliste als Beleg für die oberste Gesellschaft (ABGELEITET)); Liste und 6 Zahlen Zweitprüfung BESTAETIGT 2026-11-24 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+     "geschlossen": {
+      "gilt": true,
+      "praemissen": [
+       {
+        "aussage": "Liste der gemeldeten Großaktionäre von POSCO Holdings Inc.",
+        "freigabe": "FREIGEGEBEN",
+        "quelle": "rk-posco-20f-2025-item7a",
+        "ref": "oberste:R-POSCO-HOLDINGS",
+        "rolle": "liste_vollstaendig"
+       },
+       {
+        "aussage": "Aktien gesamt: 80,932,952",
+        "freigabe": "FREIGEGEBEN",
+        "quelle": "rk-posco-20f-2025-item7a",
+        "ref": "eingang:R-POSCO-HOLDINGS/gesamt",
+        "rolle": "halter_unter_schwelle"
+       },
+       {
+        "aussage": "National Pension Service: 6,441,610",
+        "freigabe": "FREIGEGEBEN",
+        "quelle": "rk-posco-20f-2025-item7a",
+        "ref": "eingang:R-POSCO-HOLDINGS/halter-1",
+        "rolle": "halter_unter_schwelle"
+       },
+       {
+        "aussage": "BlackRock Fund Advisors: 4,206,522",
+        "freigabe": "FREIGEGEBEN",
+        "quelle": "rk-posco-20f-2025-item7a",
+        "ref": "eingang:R-POSCO-HOLDINGS/halter-2",
+        "rolle": "halter_unter_schwelle"
+       },
+       {
+        "aussage": "Citibank N.A. (Depotbank der ADR): 2,289,755",
+        "freigabe": "FREIGEGEBEN",
+        "quelle": "rk-posco-20f-2025-item7a",
+        "ref": "eingang:R-POSCO-HOLDINGS/halter-3",
+        "rolle": "halter_unter_schwelle"
+       },
+       {
+        "aussage": "Pohang University of Science and Technology: 1,981,047",
+        "freigabe": "FREIGEGEBEN",
+        "quelle": "rk-posco-20f-2025-item7a",
+        "ref": "eingang:R-POSCO-HOLDINGS/halter-4",
+        "rolle": "halter_unter_schwelle"
+       },
+       {
+        "aussage": "Samsung Group: 1,861,979",
+        "freigabe": "FREIGEGEBEN",
+        "quelle": "rk-posco-20f-2025-item7a",
+        "ref": "eingang:R-POSCO-HOLDINGS/halter-5",
+        "rolle": "halter_unter_schwelle"
+       }
+      ],
+      "schluss": "Kein beherrschender Aktionär (ABGELEITET, Regel 2026-11-23): Der Jahresbericht Form 20-F nennt unter Item 7.A „Major Shareholders“ die größten Aktionäre; der größte hält 6.441.610 von 80.932.952 ausgegebenen Aktien (gerechnet 8,0 %, unter der Schwelle 10 %), Stand 31.12.2025. Eigene Aktien (6,56 %) und Streubesitz (72,70 %) sind keine Halter.",
+      "schlussart": "KEINE_BEHERRSCHUNG",
+      "schlussart_text": "Vollständige Großaktionärsliste, jeder Halter < 10 %.",
+      "schlusspruefung": {
+       "aufgabe": "Ziel oberste/R-POSCO-HOLDINGS. Frage: Enthält die Quelle eine Liste der Großaktionäre von POSCO Holdings Inc., die der Gesellschaft ihre Beteiligung gemeldet haben (substantial shareholders) bzw. der größten Aktionäre (Form 20-F Item 7.A \"Major Shareholders\")? Quellen: rk-posco-20f-2025-item7a (HTML, Text ohne Tags (Tabellenzellen je Zeile), Abschnitt Item 7.A Major Shareholders).",
+       "blind": true,
+       "erstmodell": "claude-opus-5-5",
+       "geprueft_am": "2026-11-24",
+       "pruefmodell": "claude-sonnet-5-5",
+       "urteil": "BESTAETIGT"
+      },
+      "wissen": "GESCHLOSSEN",
+      "zeitraum": null
+     },
      "grund": "GROSSAKTIONAERE_UNTER_SCHWELLE",
-     "text": "Kein beherrschender Aktionär (ABGELEITET, Regel 2026-11-23): Der Jahresbericht Form 20-F nennt unter Item 7.A „Major Shareholders“ die größten Aktionäre; der größte hält 6.441.610 von 80.932.952 ausgegebenen Aktien (gerechnet 8,0 %, unter der Schwelle 10 %), Stand 31.12.2025. Eigene Aktien (6,56 %) und Streubesitz (72,70 %) sind keine Halter."
+     "text": "Kein beherrschender Aktionär (ABGELEITET, Regel 2026-11-23): Der Jahresbericht Form 20-F nennt unter Item 7.A „Major Shareholders“ die größten Aktionäre; der größte hält 6.441.610 von 80.932.952 ausgegebenen Aktien (gerechnet 8,0 %, unter der Schwelle 10 %), Stand 31.12.2025. Eigene Aktien (6,56 %) und Streubesitz (72,70 %) sind keine Halter.",
+     "wissen": "GESCHLOSSEN"
     },
     "offen": null
    },
@@ -2538,6 +2659,7 @@
    "kanten_freigegeben": 2,
    "kanten_kandidat": 0,
    "kanten_mit_anteil": 2,
+   "kanten_zu_pruefen_r8": 0,
    "knoten": 10,
    "letzte_eigentuemer": [],
    "oberste_gesellschaften": [
@@ -2987,7 +3109,7 @@
   ]
  },
  "eingaben": {
-  "analysis/rohstoffe/eigentum/eigentumskette.json": "74d2ea759f73ced09161ecbfb9bdc830636d18d945d979507263cabc58c15903",
+  "analysis/rohstoffe/eigentum/eigentumskette.json": "e720e088c7aaef44b687807f1d394c2b7ce8a4cf4fe74833e4d6035898f24135",
   "analysis/rohstoffe/fluss-freigaben.jsonl": "aaabbdac9c8a96ba0a688d2348a9b29df912fd5f6d05c9915280d05f3e396d66",
   "analysis/rohstoffe/graphit/kandidaten.json": "82b42a882bd5a84fb26482c511e223c960d6729d3e4c5f3b495682bdfa6d109e",
   "analysis/rohstoffe/graphit/markt.json": "4278fd32ff895333b148c239d65e328c3c256f9123dcd28bbf7b32d2a540f896",
@@ -5872,6 +5994,7 @@
  "zaehler": {
   "ausfall_mit_ausweich_menge": 11,
   "belege": 17,
+  "dauer_geschaetzt": 0,
   "eigentum_belegt": 7,
   "eigentum_kandidaten": 1,
   "eigentumskette_freigegeben": 5,

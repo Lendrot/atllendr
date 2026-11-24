@@ -136,7 +136,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [],
    "mehrkosten": {
@@ -341,7 +342,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [],
    "mehrkosten": {
@@ -498,7 +500,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [
     {
@@ -652,7 +655,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [
     {
@@ -772,7 +776,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [
     {
@@ -892,7 +897,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [
     {
@@ -1175,7 +1181,8 @@
     "mass_text": "Kontrolle",
     "stand": "2026-11-16",
     "text": "beherrscht laut LEI-Register (Namen nicht genannt)",
-    "von": "R-EQR-PERSONEN"
+    "von": "R-EQR-PERSONEN",
+    "zu_pruefen": false
    }
   ],
   "knoten": {
@@ -1306,6 +1313,7 @@
    "kanten_freigegeben": 1,
    "kanten_kandidat": 0,
    "kanten_mit_anteil": 0,
+   "kanten_zu_pruefen_r8": 0,
    "knoten": 6,
    "letzte_eigentuemer": [
     "Natürliche Person(en), im LEI-Register nicht namentlich genannt"
@@ -1468,7 +1476,7 @@
   ]
  },
  "eingaben": {
-  "analysis/rohstoffe/eigentum/eigentumskette.json": "74d2ea759f73ced09161ecbfb9bdc830636d18d945d979507263cabc58c15903",
+  "analysis/rohstoffe/eigentum/eigentumskette.json": "e720e088c7aaef44b687807f1d394c2b7ce8a4cf4fe74833e4d6035898f24135",
   "analysis/rohstoffe/fluss-freigaben.jsonl": "aaabbdac9c8a96ba0a688d2348a9b29df912fd5f6d05c9915280d05f3e396d66",
   "analysis/rohstoffe/mengen/annahmen-snapshot.json": "5169bc01abcdff017b11b6e2e0bdb0abbc934a843f86a8fbbf4dbdd3585165b1",
   "analysis/rohstoffe/mengen/mengen.json": "83eb82f85ec56a551a01ebaf57c79d4b74add31b00a61c29c297c7b171af3cc8",
@@ -2865,6 +2873,7 @@
  "zaehler": {
   "ausfall_mit_ausweich_menge": 6,
   "belege": 5,
+  "dauer_geschaetzt": 0,
   "eigentum_belegt": 2,
   "eigentum_kandidaten": 2,
   "eigentumskette_freigegeben": 2,

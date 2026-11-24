@@ -151,7 +151,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [
     {
@@ -334,7 +335,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [
     {
@@ -502,7 +504,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [],
    "mehrkosten": {
@@ -679,7 +682,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [
     {
@@ -862,7 +866,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [
     {
@@ -967,7 +972,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [],
    "mehrkosten": {
@@ -1073,7 +1079,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [],
    "mehrkosten": {
@@ -1172,7 +1179,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [],
    "mehrkosten": {
@@ -1565,7 +1573,8 @@
     "mass_text": "Kapital",
     "stand": "2025-12-31",
     "text": null,
-    "von": "R-CGI"
+    "von": "R-CGI",
+    "zu_pruefen": false
    },
    {
     "an": "R-CNG-HK",
@@ -1589,7 +1598,8 @@
     "mass_text": "Kapital",
     "stand": "2025-12-31",
     "text": null,
-    "von": "R-CNG"
+    "von": "R-CNG",
+    "zu_pruefen": false
    },
    {
     "an": "R-CGI",
@@ -1613,7 +1623,8 @@
     "mass_text": "Kapital",
     "stand": "2025-12-31",
     "text": null,
-    "von": "R-CNG-HK"
+    "von": "R-CNG-HK",
+    "zu_pruefen": false
    },
    {
     "an": "R-IMP",
@@ -1637,7 +1648,8 @@
     "mass_text": "Kapital",
     "stand": "2025-12-31",
     "text": null,
-    "von": "R-NINGXIA"
+    "von": "R-NINGXIA",
+    "zu_pruefen": false
    },
    {
     "an": "R-ABC",
@@ -1667,7 +1679,8 @@
     "mass_text": "Kontrolle",
     "stand": "2026-11-16",
     "text": "konsolidiert laut LEI-Register (Anteil nicht genannt)",
-    "von": "R-PALLION"
+    "von": "R-PALLION",
+    "zu_pruefen": false
    },
    {
     "an": "R-CNG",
@@ -1691,7 +1704,8 @@
     "mass_text": "Kontrolle",
     "stand": "2025-12-31",
     "text": "kontrolliert (Anteil nicht genannt)",
-    "von": "R-SASAC"
+    "von": "R-SASAC",
+    "zu_pruefen": false
    }
   ],
   "knoten": {
@@ -2016,6 +2030,7 @@
    "kanten_freigegeben": 6,
    "kanten_kandidat": 0,
    "kanten_mit_anteil": 4,
+   "kanten_zu_pruefen_r8": 0,
    "knoten": 13,
    "letzte_eigentuemer": [
     "China National Gold Group Co., Ltd. (CNG)",
@@ -2683,7 +2698,7 @@
  "eingaben": {
   "analysis/aktualitaet/stand/ezb-referenzkurs-usd.json": "c3ebb6dbe8808234a0eceed6464aa26752f500d66d863ee6f06445df22df1729",
   "analysis/aktualitaet/stand/lbma-gold-westmetall.json": "61a324d0f8ba7130efea481156b9512c79149c9c6b89ba8f6efed8d097ded777",
-  "analysis/rohstoffe/eigentum/eigentumskette.json": "74d2ea759f73ced09161ecbfb9bdc830636d18d945d979507263cabc58c15903",
+  "analysis/rohstoffe/eigentum/eigentumskette.json": "e720e088c7aaef44b687807f1d394c2b7ce8a4cf4fe74833e4d6035898f24135",
   "analysis/rohstoffe/fluss-freigaben.jsonl": "aaabbdac9c8a96ba0a688d2348a9b29df912fd5f6d05c9915280d05f3e396d66",
   "analysis/rohstoffe/gold/kandidaten.json": "7d8b994d076ff097b39d451ac16740343c087d7b655dc2b829ca87aaa1e20745",
   "analysis/rohstoffe/gold/markt.json": "dc2275d59aecfc3b064738b8f8324fc6ed655bc9ce444441d20c4a4f32b0bee8",
@@ -4730,6 +4745,7 @@
  "zaehler": {
   "ausfall_mit_ausweich_menge": 8,
   "belege": 7,
+  "dauer_geschaetzt": 0,
   "eigentum_belegt": 8,
   "eigentum_kandidaten": 5,
   "eigentumskette_freigegeben": 7,

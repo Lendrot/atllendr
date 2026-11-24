@@ -168,7 +168,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [],
    "mehrkosten": {
@@ -362,7 +363,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [],
    "mehrkosten": {
@@ -468,7 +470,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [],
    "mehrkosten": {
@@ -582,7 +585,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [
     {
@@ -702,7 +706,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [
     {
@@ -948,7 +953,8 @@
     "mass_text": "Kontrolle",
     "stand": "2025-12-31",
     "text": "hält das alleinige Abbaurecht (独家开采权)",
-    "von": "R-BAOTOU"
+    "von": "R-BAOTOU",
+    "zu_pruefen": false
    },
    {
     "an": "R-NR",
@@ -972,7 +978,8 @@
     "mass_text": "Kapital",
     "stand": "2025-12-31",
     "text": null,
-    "von": "R-BAOTOU"
+    "von": "R-BAOTOU",
+    "zu_pruefen": false
    },
    {
     "an": "R-BAOTOU",
@@ -996,7 +1003,8 @@
     "mass_text": "Kontrolle",
     "stand": "2025-12-31",
     "text": "oberste Kontrolle (最终控制方) der Gruppe laut Quelle",
-    "von": "R-IM-SASAC"
+    "von": "R-IM-SASAC",
+    "zu_pruefen": false
    }
   ],
   "knoten": {
@@ -1092,9 +1100,77 @@
       }
      ],
      "freigabe": "FREIGEGEBEN",
-     "freigabe_herkunft": "ABGELEITET: größter gemeldeter Großaktionär 9,7 % < 10 % (Regel Eddie Sablah 2026-11-23: Großaktionärsliste als Beleg für die oberste Gesellschaft (ABGELEITET)); Liste und 6 Zahlen Zweitprüfung BESTAETIGT 2026-11-23 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+     "freigabe_herkunft": "ABGELEITET: größter gemeldeter Großaktionär ohne eigene Kette 9,7 % < 10 % (Regel Eddie Sablah 2026-11-23: Großaktionärsliste als Beleg für die oberste Gesellschaft (ABGELEITET)); Liste und 6 Zahlen Zweitprüfung BESTAETIGT 2026-11-23 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+     "geschlossen": {
+      "gilt": true,
+      "praemissen": [
+       {
+        "aussage": "Liste der gemeldeten Großaktionäre von Lynas Rare Earths Limited",
+        "freigabe": "FREIGEGEBEN",
+        "quelle": "rk-lyc-ar-2026-s139",
+        "ref": "oberste:R-LYNAS",
+        "rolle": "liste_vollstaendig"
+       },
+       {
+        "aussage": "Aktien gesamt: 1,006,502,577",
+        "freigabe": "FREIGEGEBEN",
+        "quelle": "rk-lyc-ar-2026-s138",
+        "ref": "eingang:R-LYNAS/gesamt",
+        "rolle": "halter_unter_schwelle"
+       },
+       {
+        "aussage": "UBS Group AG: 98,107,131",
+        "freigabe": "FREIGEGEBEN",
+        "quelle": "rk-lyc-ar-2026-s139",
+        "ref": "eingang:R-LYNAS/halter-1",
+        "rolle": "halter_unter_schwelle"
+       },
+       {
+        "aussage": "State Street Corporation: 96,082,792",
+        "freigabe": "FREIGEGEBEN",
+        "quelle": "rk-lyc-ar-2026-s139",
+        "ref": "eingang:R-LYNAS/halter-2",
+        "rolle": "halter_unter_schwelle"
+       },
+       {
+        "aussage": "Australian Super Pty Ltd: 94,292,123",
+        "freigabe": "FREIGEGEBEN",
+        "quelle": "rk-lyc-ar-2026-s139",
+        "ref": "eingang:R-LYNAS/halter-3",
+        "rolle": "halter_unter_schwelle"
+       },
+       {
+        "aussage": "G. H. Rinehart, Hancock Prospecting Pty Ltd und Töchter: 76,764,078",
+        "freigabe": "FREIGEGEBEN",
+        "quelle": "rk-lyc-ar-2026-s139",
+        "ref": "eingang:R-LYNAS/halter-4",
+        "rolle": "halter_unter_schwelle"
+       },
+       {
+        "aussage": "BlackRock Group: 66,432,006",
+        "freigabe": "FREIGEGEBEN",
+        "quelle": "rk-lyc-ar-2026-s139",
+        "ref": "eingang:R-LYNAS/halter-5",
+        "rolle": "halter_unter_schwelle"
+       }
+      ],
+      "schluss": "Kein beherrschender Aktionär (ABGELEITET, Regel 2026-11-23): Der Jahresbericht nennt die Großaktionäre, die ihre Beteiligung nach Section 671B Corporations Act gemeldet haben; der größte hält 98.107.131 von 1.006.502.577 Aktien (gerechnet 9,7 %, unter der Schwelle 10 %), Stand 31.07.2026. Das LEI-Register nennt keine Mutter (Ausnahme NON_CONSOLIDATING).",
+      "schlussart": "KEINE_BEHERRSCHUNG",
+      "schlussart_text": "Vollständige Großaktionärsliste, jeder Halter < 10 %.",
+      "schlusspruefung": {
+       "aufgabe": "Ziel oberste/R-LYNAS. Frage: Enthält die Quelle eine Liste der Großaktionäre von Lynas Rare Earths Limited, die der Gesellschaft ihre Beteiligung gemeldet haben (substantial shareholders)? Quellen: rk-lyc-ar-2026-s139 (PDF-Seite 139 (pdftotext -layout, Tabellenzeilen)).",
+       "blind": true,
+       "erstmodell": "claude-opus-5-5",
+       "geprueft_am": "2026-11-23",
+       "pruefmodell": "claude-sonnet-5-5",
+       "urteil": "BESTAETIGT"
+      },
+      "wissen": "GESCHLOSSEN",
+      "zeitraum": null
+     },
      "grund": "GROSSAKTIONAERE_UNTER_SCHWELLE",
-     "text": "Kein beherrschender Aktionär (ABGELEITET, Regel 2026-11-23): Der Jahresbericht nennt die Großaktionäre, die ihre Beteiligung nach Section 671B Corporations Act gemeldet haben; der größte hält 98.107.131 von 1.006.502.577 Aktien (gerechnet 9,7 %, unter der Schwelle 10 %), Stand 31.07.2026. Das LEI-Register nennt keine Mutter (Ausnahme NON_CONSOLIDATING)."
+     "text": "Kein beherrschender Aktionär (ABGELEITET, Regel 2026-11-23): Der Jahresbericht nennt die Großaktionäre, die ihre Beteiligung nach Section 671B Corporations Act gemeldet haben; der größte hält 98.107.131 von 1.006.502.577 Aktien (gerechnet 9,7 %, unter der Schwelle 10 %), Stand 31.07.2026. Das LEI-Register nennt keine Mutter (Ausnahme NON_CONSOLIDATING).",
+     "wissen": "GESCHLOSSEN"
     },
     "offen": null
    },
@@ -1141,6 +1217,7 @@
    "kanten_freigegeben": 3,
    "kanten_kandidat": 0,
    "kanten_mit_anteil": 1,
+   "kanten_zu_pruefen_r8": 0,
    "knoten": 5,
    "letzte_eigentuemer": [
     "Kommission für Staatsvermögen der Inneren Mongolei (内蒙古自治区人民政府国有资产监督管理委员会)"
@@ -1418,7 +1495,7 @@
   ]
  },
  "eingaben": {
-  "analysis/rohstoffe/eigentum/eigentumskette.json": "74d2ea759f73ced09161ecbfb9bdc830636d18d945d979507263cabc58c15903",
+  "analysis/rohstoffe/eigentum/eigentumskette.json": "e720e088c7aaef44b687807f1d394c2b7ce8a4cf4fe74833e4d6035898f24135",
   "analysis/rohstoffe/fluss-freigaben.jsonl": "aaabbdac9c8a96ba0a688d2348a9b29df912fd5f6d05c9915280d05f3e396d66",
   "analysis/rohstoffe/mengen/annahmen-snapshot.json": "5169bc01abcdff017b11b6e2e0bdb0abbc934a843f86a8fbbf4dbdd3585165b1",
   "analysis/rohstoffe/mengen/mengen.json": "83eb82f85ec56a551a01ebaf57c79d4b74add31b00a61c29c297c7b171af3cc8",
@@ -2728,6 +2805,7 @@
  "zaehler": {
   "ausfall_mit_ausweich_menge": 5,
   "belege": 7,
+  "dauer_geschaetzt": 0,
   "eigentum_belegt": 5,
   "eigentum_kandidaten": 2,
   "eigentumskette_freigegeben": 5,

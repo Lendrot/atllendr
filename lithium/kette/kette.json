@@ -136,7 +136,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [],
    "mehrkosten": {
@@ -328,7 +329,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [
     {
@@ -512,7 +514,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [
     {
@@ -716,7 +719,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [
     {
@@ -946,7 +950,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [
     {
@@ -1100,7 +1105,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [
     {
@@ -1268,7 +1274,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [
     {
@@ -1376,7 +1383,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [],
    "mehrkosten": {
@@ -1541,7 +1549,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [
     {
@@ -1680,7 +1689,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [],
    "mehrkosten": {
@@ -1809,7 +1819,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [
     {
@@ -1978,7 +1989,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [],
    "mehrkosten": {
@@ -2111,7 +2123,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [],
    "mehrkosten": {
@@ -2270,7 +2283,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [
     {
@@ -2442,7 +2456,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [
     {
@@ -2548,7 +2563,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [
     {
@@ -2684,7 +2700,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [
     {
@@ -2809,7 +2826,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [
     {
@@ -2948,7 +2966,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [],
    "mehrkosten": {
@@ -3111,7 +3130,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [
     {
@@ -3217,7 +3237,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [],
    "mehrkosten": {
@@ -3412,8 +3433,97 @@
     "mit_menge": 5
    },
    "dauer": {
-    "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "evidenz": "GESCHAETZT",
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied. Suchprotokoll abgearbeitet; Schätzung nur in der Ansicht „Mit Schätzungen“.",
+    "luecke_grund": "NICHT_VEROEFFENTLICHT",
+    "schaetzung": {
+     "anker": [
+      {
+       "freigabe": "FREIGEGEBEN",
+       "gliedart": "MINE_TAGEBAU",
+       "name": "Bougouni, Regenzeit 2025: Grube geflutet, Abbau ab November 2025 wieder aufgenommen",
+       "quelle": "Kodal Minerals plc, Final Results for the 9 months to 31 December 2025 (RNS, 23 June 2026)",
+       "sha256": "cb13e8de21f840a4e3a8aaf0c1c87e41d90afa5136dd2b90da28c62baac2f123",
+       "textkopie": "analysis/research/wiederanlauf-v1/raw/kod-final-results-2025.txt",
+       "url": "https://www.investegate.co.uk/announcement/rns/kodal-minerals--kod/final-results-for-the-9-months-to-31-december-2025/9632769",
+       "ursache": "GRUBENFLUTUNG_REGENZEIT",
+       "wert_text": "November 2025",
+       "zitat": "During the 2025 wet season the pit filled with water, as was expected, and the mining fleet was unable to access the base of the pit. … Mining operations recommenced in November 2025 … (which usually occurs from July to September)",
+       "zweitpruefung": {
+        "geprueft_am": "2026-11-24",
+        "pruefmodell": "claude-sonnet-5-5",
+        "urteil": "BESTAETIGT",
+        "verfahren": "AUTO_ZWEITPRUEFUNG"
+       }
+      },
+      {
+       "freigabe": "FREIGEGEBEN",
+       "gliedart": "MINE_TAGEBAU",
+       "name": "Bougouni, Regenzeit 2026: eine Woche ohne Zugang zur Grubensohle",
+       "quelle": "Kodal Minerals plc, Bougouni Lithium Project Quarterly Update (RNS, 13 October 2026)",
+       "sha256": "f71eba487291d39449b5149ceffc14e702c2286c27cd8aa1c38d4b0ec7e924c8",
+       "textkopie": "analysis/research/wiederanlauf-v1/raw/kod-q3-2026-quarterly.txt",
+       "url": "https://www.investegate.co.uk/announcement/rns/kodal-minerals--kod/bougouni-lithium-project-quarterly-update-/9819140",
+       "ursache": "GRUBENFLUTUNG_REGENZEIT",
+       "wert_text": "one week",
+       "zitat": "This resulted in one week of lost access to the pit floor before de-watering restored normal conditions.",
+       "zweitpruefung": {
+        "geprueft_am": "2026-11-24",
+        "pruefmodell": "claude-sonnet-5-5",
+        "urteil": "BESTAETIGT",
+        "verfahren": "AUTO_ZWEITPRUEFUNG"
+       }
+      }
+     ],
+     "anzeige": "geschätzt 1–22 Wochen (Tatsächliche Dauer oder Kosten realer Störungen gleicher Gliedart und Ursache; Konfidenz niedrig)",
+     "einheit": "Wochen",
+     "erstellt": "2026-11-24",
+     "gliedart": "MINE_TAGEBAU",
+     "konfidenz": "NIEDRIG",
+     "luecke_grund": "NICHT_VEROEFFENTLICHT",
+     "methode": "VERGLEICHSFALL",
+     "pruefen_ab": "2027-11-24",
+     "rechenweg": "Untergrenze 1 Woche: Regenzeit 2026 mit Entwässerung (Sümpfe, feste Bohrlöcher), laut Q3-Meldung eine Woche ohne Zugang zur Grubensohle. Obergrenze 22 Wochen: Regenzeit 2025 ohne ausreichende Entwässerung; die Regenzeit beginnt laut Betreiber üblicherweise im Juli, der Abbau wurde im November 2025 wieder aufgenommen; der Beginn des Stillstands ist nicht datiert, also höchstens Anfang Juli bis Ende November ≈ 22 Wochen. Gilt nur für diese Ursache; Ausfälle aus anderen Gründen (Sicherheitslage, Anlage, Export) sind nicht geschätzt.",
+     "spanne": [
+      1,
+      22
+     ],
+     "ursache": "GRUBENFLUTUNG_REGENZEIT",
+     "ursache_text": "Grubenflutung durch Starkregen in der westafrikanischen Regenzeit",
+     "wissen": "GESCHAETZT"
+    },
+    "suchprotokoll": {
+     "behoerde_register": {
+      "abgerufen": "2026-11-24",
+      "befund": "EITI-Länderseite Mali gelesen (Sektoraufsicht DNGM unter dem Bergbauministerium): keine Angaben zu Bougouni oder zu Wiederanlaufzeiten. Die Seiten des Bergbauministeriums (mines.gouv.ml) und der DNGM sind aus der Cloud gesperrt; ob sie Betriebsunterbrechungen melden, ist nicht geprüft.",
+      "quelle": "eiti-mali",
+      "url": "https://eiti.org/countries/mali"
+     },
+     "boersenmitteilungen_12_monate": {
+      "abgerufen": "2026-11-24",
+      "befund": "Alle 50 gelisteten RNS-Titel durchgesehen; die Betriebsmeldungen der letzten 12 Monate (Operations Update, Quarterly Updates, Project Update 5.5.2026, Interim Results 30.9.2026) gelesen. Keine nennt eine Wiederanlaufzeit.",
+      "quelle": "kod-mitteilungen-liste",
+      "url": "https://www.investegate.co.uk/company/KOD"
+     },
+     "jahresbericht": {
+      "abgerufen": "2026-11-24",
+      "befund": "Jahresabschluss (9 Monate bis 31.12.2025) gelesen: beschreibt den Stillstand der Grube in der Regenzeit 2025 und die Wiederaufnahme im November 2025, nennt aber keine Wiederanlaufzeit für künftige Ausfälle.",
+      "quelle": "kod-final-results-2025",
+      "url": "https://www.investegate.co.uk/announcement/rns/kodal-minerals--kod/final-results-for-the-9-months-to-31-december-2025/9632769"
+     },
+     "quartalsberichte_4": {
+      "abgerufen": "2026-11-24",
+      "befund": "Vier Quartalsmeldungen (Q4 2025 bis Q3 2026) gelesen: Q3 2026 nennt eine Woche ohne Zugang zur Grubensohle nach Starkregen; keine allgemeine Wiederanlaufzeit.",
+      "quellen": [
+       "kod-q4-2025-operations-update",
+       "kod-q1-2026-quarterly",
+       "kod-q2-2026-quarterly",
+       "kod-q3-2026-quarterly"
+      ],
+      "url": "https://www.investegate.co.uk/announcement/rns/kodal-minerals--kod/bougouni-lithium-project-quarterly-update-/9819140"
+     }
+    },
+    "wissen": "GESCHAETZT"
    },
    "ersatz": [],
    "mehrkosten": {
@@ -3675,7 +3785,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [
     {
@@ -3908,7 +4019,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [
     {
@@ -4077,7 +4189,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [],
    "mehrkosten": {
@@ -4374,7 +4487,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [],
    "mehrkosten": {
@@ -4585,7 +4699,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [
     {
@@ -4849,7 +4964,8 @@
    },
    "dauer": {
     "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied."
+    "grund": "Keine gelesene Quelle nennt eine Wiederanlauf- oder Ersatzzeit für dieses Glied.",
+    "luecke_grund": "NICHT_GESUCHT"
    },
    "ersatz": [],
    "mehrkosten": {
@@ -4962,12 +5078,31 @@
        "pflicht": true,
        "schluss": "GESCHLOSSEN",
        "schluss_text": "Eigentümer belegt"
+      },
+      {
+       "effektiv": 50.0,
+       "kante": "EK-MINRES-MT-MARION",
+       "kinder": [
+        {
+         "effektiv": 5.27,
+         "kante": "EK-ELLISON-MINRES",
+         "kinder": [],
+         "knoten": "R-ELLISON",
+         "pflicht": false,
+         "schluss": "ENDE",
+         "schluss_text": "letzter Eigentümer"
+        }
+       ],
+       "knoten": "R-MINRES",
+       "pflicht": true,
+       "schluss": "OBERSTE",
+       "schluss_text": "oberste Gesellschaft"
       }
      ],
      "knoten": "R-MT-MARION",
      "pflicht": true,
-     "schluss": "OFFEN",
-     "schluss_text": "endet ohne Beleg"
+     "schluss": "GESCHLOSSEN",
+     "schluss_text": "Eigentümer belegt"
     },
     "belegt": true,
     "betreiber": null,
@@ -4979,8 +5114,8 @@
     "ebenen": 2,
     "einschraenkung": null,
     "grund": null,
-    "status": "OFFEN",
-    "status_text": "Kette endet ohne Beleg",
+    "status": "VOLLSTAENDIG_FREIGEGEBEN",
+    "status_text": "bis oben belegt und freigegeben",
     "wurzel": "R-MT-MARION"
    },
    "S11": {
@@ -6099,7 +6234,8 @@
     "mass_text": "Kapital",
     "stand": "2026-06-30",
     "text": null,
-    "von": "R-ALBEMARLE"
+    "von": "R-ALBEMARLE",
+    "zu_pruefen": false
    },
    {
     "an": "R-CANMAX",
@@ -6123,7 +6259,8 @@
     "mass_text": "Kontrolle",
     "stand": "2025-12-31",
     "text": "tatsächliche Kontrolle (实际控制人), zugleich Mehrheitsaktionäre (控股股东); Anteile nicht genannt",
-    "von": "R-CANMAX-PERSONEN"
+    "von": "R-CANMAX-PERSONEN",
+    "zu_pruefen": false
    },
    {
     "an": "R-HUAYOU-HOLDING",
@@ -6147,7 +6284,33 @@
     "mass_text": "Kontrolle",
     "stand": "2025-12-31",
     "text": "tatsächliche Kontrolle (实际控制人) über Huayou, Anteil nicht genannt",
-    "von": "R-CHEN-XUEHUA"
+    "von": "R-CHEN-XUEHUA",
+    "zu_pruefen": false
+   },
+   {
+    "an": "R-MINRES",
+    "anteil": 10.54,
+    "atlas_id": null,
+    "beherrschend": false,
+    "belege": [
+     {
+      "fundstelle": "PDF-Seite 170 (pdftotext -layout, Tabellenzeilen)",
+      "quelle": "rk-min-ar-2026-s170",
+      "rolle": "hauptbeleg",
+      "zitat": "CHRIS ELLISON 11/05/2026 10.54%"
+     }
+    ],
+    "einschraenkung": "Anteil laut Liste der gemeldeten Großaktionäre (Spalte \"Percentage of capital\"), Stand der letzten Meldung 11.5.2026.",
+    "evidenz": "FACT",
+    "freigabe": "FREIGEGEBEN",
+    "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-24 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+    "id": "EK-ELLISON-MINRES",
+    "mass": "KAPITAL",
+    "mass_text": "Kapital",
+    "stand": "2026-05-11",
+    "text": null,
+    "von": "R-ELLISON",
+    "zu_pruefen": false
    },
    {
     "an": "R-CAUCHARI",
@@ -6171,7 +6334,8 @@
     "mass_text": "Kapital",
     "stand": "2026-04-30",
     "text": null,
-    "von": "R-GANFENG"
+    "von": "R-GANFENG",
+    "zu_pruefen": false
    },
    {
     "an": "R-GOULAMINA",
@@ -6195,7 +6359,8 @@
     "mass_text": "Kapital",
     "stand": "2026-04-30",
     "text": null,
-    "von": "R-GANFENG"
+    "von": "R-GANFENG",
+    "zu_pruefen": false
    },
    {
     "an": "R-MT-MARION",
@@ -6219,7 +6384,8 @@
     "mass_text": "Kapital",
     "stand": "2026-04-30",
     "text": null,
-    "von": "R-GANFENG"
+    "von": "R-GANFENG",
+    "zu_pruefen": false
    },
    {
     "an": "R-GANFENG",
@@ -6249,7 +6415,8 @@
     "mass_text": "Kontrolle",
     "stand": "2026-11-16",
     "text": "beherrscht laut LEI-Register (Namen nicht genannt)",
-    "von": "R-GANFENG-PERSONEN"
+    "von": "R-GANFENG-PERSONEN",
+    "zu_pruefen": false
    },
    {
     "an": "R-KMUK",
@@ -6273,7 +6440,8 @@
     "mass_text": "Kapital",
     "stand": "2025-12-31",
     "text": null,
-    "von": "R-HAINAN"
+    "von": "R-HAINAN",
+    "zu_pruefen": false
    },
    {
     "an": "R-HAINAN",
@@ -6297,7 +6465,8 @@
     "mass_text": "Kontrolle",
     "stand": "2025-12-31",
     "text": "tatsächliche Kontrolle (实际控制人), über den Mehrheitsaktionär Shanghai Fosun High Technology; Anteil nicht genannt",
-    "von": "R-HAINAN-PERSON"
+    "von": "R-HAINAN-PERSON",
+    "zu_pruefen": false
    },
    {
     "an": "R-HUAYOU",
@@ -6321,7 +6490,8 @@
     "mass_text": "Kontrolle",
     "stand": "2025-12-31",
     "text": "Mehrheitsaktionär (控股股东), Anteil hier nicht genannt",
-    "von": "R-HUAYOU-HOLDING"
+    "von": "R-HUAYOU-HOLDING",
+    "zu_pruefen": false
    },
    {
     "an": "R-TLEA",
@@ -6345,7 +6515,8 @@
     "mass_text": "Kapital",
     "stand": "2026-06-30",
     "text": null,
-    "von": "R-IGO"
+    "von": "R-IGO",
+    "zu_pruefen": false
    },
    {
     "an": "R-TIANQI-GROUP",
@@ -6369,7 +6540,8 @@
     "mass_text": "Kapital",
     "stand": "2025-12-31",
     "text": null,
-    "von": "R-JIANG-WEIPING"
+    "von": "R-JIANG-WEIPING",
+    "zu_pruefen": false
    },
    {
     "an": "R-LMLB",
@@ -6393,7 +6565,8 @@
     "mass_text": "Kapital",
     "stand": "2025-12-31",
     "text": null,
-    "von": "R-KMUK"
+    "von": "R-KMUK",
+    "zu_pruefen": false
    },
    {
     "an": "R-KMUK",
@@ -6417,7 +6590,8 @@
     "mass_text": "Kapital",
     "stand": "2025-12-31",
     "text": null,
-    "von": "R-KODAL"
+    "von": "R-KODAL",
+    "zu_pruefen": false
    },
    {
     "an": "R-LGES",
@@ -6447,7 +6621,8 @@
     "mass_text": "Kontrolle",
     "stand": "2026-11-16",
     "text": "konsolidiert laut LEI-Register (Anteil nicht genannt)",
-    "von": "R-LGCHEM"
+    "von": "R-LGCHEM",
+    "zu_pruefen": false
    },
    {
     "an": "R-BOUGOUNI",
@@ -6471,7 +6646,8 @@
     "mass_text": "Kontrolle",
     "stand": "2025-12-31",
     "text": "Eigentümerin des Projekts",
-    "von": "R-LMLB"
+    "von": "R-LMLB",
+    "zu_pruefen": false
    },
    {
     "an": "R-GOULAMINA",
@@ -6501,7 +6677,8 @@
     "mass_text": "Kapital",
     "stand": "2024-12-05",
     "text": null,
-    "von": "R-MALI"
+    "von": "R-MALI",
+    "zu_pruefen": true
    },
    {
     "an": "R-LMLB",
@@ -6525,7 +6702,33 @@
     "mass_text": "Kapital",
     "stand": "2025-12-31",
     "text": "Partner der Eigentümerin (Anteil nicht genannt)",
-    "von": "R-MALI"
+    "von": "R-MALI",
+    "zu_pruefen": false
+   },
+   {
+    "an": "R-MT-MARION",
+    "anteil": 50.0,
+    "atlas_id": null,
+    "beherrschend": false,
+    "belege": [
+     {
+      "fundstelle": "PDF-Seite 154 (pdftotext ohne -layout)",
+      "quelle": "rk-min-ar-2026-s154",
+      "rolle": "hauptbeleg",
+      "zitat": "has been incorporated to hold the Group’s 50% ownership interests in the Mt Marion and Wodgina mines … the transfer of the Group’s existing equity interests in WLPL and MML to Li Holdco had not occurred by 30 June 2026."
+     }
+    ],
+    "einschraenkung": "Stand 30.6.2026. Vereinbart ist der Verkauf von 30 % der Zwischengesellschaft Li Holdco (hält die 50 %) an POSCO Holdings; bis 30.6.2026 nicht vollzogen.",
+    "evidenz": "FACT",
+    "freigabe": "FREIGEGEBEN",
+    "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-24 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+    "id": "EK-MINRES-MT-MARION",
+    "mass": "KAPITAL",
+    "mass_text": "Kapital",
+    "stand": "2026-06-30",
+    "text": null,
+    "von": "R-MINRES",
+    "zu_pruefen": false
    },
    {
     "an": "R-P-PLS",
@@ -6549,7 +6752,8 @@
     "mass_text": "Kapital",
     "stand": "2026-06-30",
     "text": null,
-    "von": "R-PLS"
+    "von": "R-PLS",
+    "zu_pruefen": false
    },
    {
     "an": "R-PLS",
@@ -6579,7 +6783,8 @@
     "mass_text": "Kontrolle",
     "stand": "2026-11-16",
     "text": "beherrscht laut LEI-Register (Namen nicht genannt)",
-    "von": "R-PLS-PERSONEN"
+    "von": "R-PLS-PERSONEN",
+    "zu_pruefen": false
    },
    {
     "an": "R-P-PLS",
@@ -6609,7 +6814,8 @@
     "mass_text": "Kapital",
     "stand": "2025-12-31",
     "text": null,
-    "von": "R-POSCO-HOLDINGS"
+    "von": "R-POSCO-HOLDINGS",
+    "zu_pruefen": false
    },
    {
     "an": "R-ZHONGSE",
@@ -6633,7 +6839,8 @@
     "mass_text": "Kontrolle",
     "stand": "2025-12-31",
     "text": "tatsächliche Kontrolle (实际控制人) über Sinomine; die Quelle nennt die Personen als Kontrollgruppe, Anteile nicht",
-    "von": "R-SINOMINE-PERSONEN"
+    "von": "R-SINOMINE-PERSONEN",
+    "zu_pruefen": false
    },
    {
     "an": "R-COVALENT",
@@ -6657,7 +6864,8 @@
     "mass_text": "Kapital",
     "stand": "2026-06-30",
     "text": "Joint-Venture-Partner (Anteil nicht genannt)",
-    "von": "R-SQM"
+    "von": "R-SQM",
+    "zu_pruefen": false
    },
    {
     "an": "R-TIANQI",
@@ -6687,7 +6895,8 @@
     "mass_text": "Kapital",
     "stand": "2025-12-31",
     "text": null,
-    "von": "R-TIANQI-GROUP"
+    "von": "R-TIANQI-GROUP",
+    "zu_pruefen": false
    },
    {
     "an": "R-TLEA",
@@ -6711,7 +6920,8 @@
     "mass_text": "Kapital",
     "stand": "2026-06-30",
     "text": null,
-    "von": "R-TIANQI"
+    "von": "R-TIANQI",
+    "zu_pruefen": false
    },
    {
     "an": "R-GREENBUSHES",
@@ -6735,7 +6945,8 @@
     "mass_text": "Kapital",
     "stand": "2026-06-30",
     "text": null,
-    "von": "R-TLEA"
+    "von": "R-TLEA",
+    "zu_pruefen": false
    },
    {
     "an": "R-KWINANA-TLEA",
@@ -6759,7 +6970,8 @@
     "mass_text": "Kapital",
     "stand": "2026-06-30",
     "text": null,
-    "von": "R-TLEA"
+    "von": "R-TLEA",
+    "zu_pruefen": false
    },
    {
     "an": "R-COVALENT",
@@ -6783,7 +6995,8 @@
     "mass_text": "Kapital",
     "stand": "2026-06-30",
     "text": null,
-    "von": "R-WESFARMERS"
+    "von": "R-WESFARMERS",
+    "zu_pruefen": false
    },
    {
     "an": "R-YAHUA",
@@ -6807,7 +7020,8 @@
     "mass_text": "Kontrolle",
     "stand": "2025-12-31",
     "text": "tatsächliche Kontrolle (实际控制人), Anteile nicht genannt",
-    "von": "R-YAHUA-PERSONEN"
+    "von": "R-YAHUA-PERSONEN",
+    "zu_pruefen": false
    },
    {
     "an": "R-TIANQI-GROUP",
@@ -6831,7 +7045,8 @@
     "mass_text": "Kapital",
     "stand": "2025-12-31",
     "text": null,
-    "von": "R-ZHANG-JING"
+    "von": "R-ZHANG-JING",
+    "zu_pruefen": false
    },
    {
     "an": "R-SINOMINE",
@@ -6855,7 +7070,8 @@
     "mass_text": "Kontrolle",
     "stand": "2025-12-31",
     "text": "Mehrheitsaktionär (控股股东), Anteil hier nicht genannt",
-    "von": "R-ZHONGSE"
+    "von": "R-ZHONGSE",
+    "zu_pruefen": false
    }
   ],
   "knoten": {
@@ -6960,6 +7176,25 @@
     "land": "AU",
     "lei": null,
     "name": "Covalent Lithium (Joint Venture)",
+    "oberste": null,
+    "offen": null
+   },
+   "R-ELLISON": {
+    "art": "PERSON",
+    "art_text": "natürliche Person",
+    "atlas_id": null,
+    "belege": [
+     {
+      "fundstelle": "PDF-Seite 170 (pdftotext -layout, Tabellenzeilen)",
+      "quelle": "rk-min-ar-2026-s170",
+      "rolle": "hauptbeleg",
+      "zitat": "CHRIS ELLISON 11/05/2026 10.54%"
+     }
+    ],
+    "hinweis": "Gründer und Managing Director von MinRes; Anteil laut Großaktionärsliste, gehalten über eigene Gesellschaften.",
+    "land": "AU",
+    "lei": null,
+    "name": "Chris Ellison",
     "oberste": null,
     "offen": null
    },
@@ -7295,6 +7530,91 @@
     "oberste": null,
     "offen": null
    },
+   "R-MINRES": {
+    "art": "GESELLSCHAFT",
+    "art_text": "Gesellschaft",
+    "atlas_id": null,
+    "belege": [],
+    "hinweis": null,
+    "land": "AU",
+    "lei": null,
+    "name": "Mineral Resources Limited (MinRes)",
+    "oberste": {
+     "belege": [
+      {
+       "fundstelle": "PDF-Seite 170 (pdftotext ohne -layout)",
+       "quelle": "rk-min-ar-2026-s170t",
+       "rolle": "hauptbeleg",
+       "zitat": "The shareholder information set out below was applicable as at 6 August 2026. … Substantial shareholders Name Date of change Percentage of capital"
+      },
+      {
+       "fundstelle": "PDF-Seite 170 (pdftotext -layout, Tabellenzeilen)",
+       "quelle": "rk-min-ar-2026-s170",
+       "rolle": "zusatzbeleg",
+       "zitat": "CHRIS ELLISON 11/05/2026 10.54% … AUSTRALIANSUPER 03/02/2026 9.34% … L1 CAPITAL 21/07/2026 5.38% … STATE STREET 10/12/2025 6.32% … VANGUARD GROUP 07/03/2025 5.006%"
+      }
+     ],
+     "freigabe": "FREIGEGEBEN",
+     "freigabe_herkunft": "ABGELEITET: größter gemeldeter Großaktionär ohne eigene Kette 9,3 % < 10 % (Regel Eddie Sablah 2026-11-23: Großaktionärsliste als Beleg für die oberste Gesellschaft (ABGELEITET)); Halter ab 10 % mit eigener Kette: 1 (Erweiterung Eddie Sablah 2026-11-24: Halter ab der Schwelle werden bis oben verfolgt); Liste und 5 Zahlen Zweitprüfung BESTAETIGT 2026-11-24 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+     "geschlossen": {
+      "gilt": true,
+      "praemissen": [
+       {
+        "aussage": "AustralianSuper: 9.34%",
+        "freigabe": "FREIGEGEBEN",
+        "quelle": "rk-min-ar-2026-s170",
+        "ref": "eingang:R-MINRES/halter-2",
+        "rolle": "rest_unter_schwelle"
+       },
+       {
+        "aussage": "L1 Capital: 5.38%",
+        "freigabe": "FREIGEGEBEN",
+        "quelle": "rk-min-ar-2026-s170",
+        "ref": "eingang:R-MINRES/halter-3",
+        "rolle": "rest_unter_schwelle"
+       },
+       {
+        "aussage": "State Street: 6.32%",
+        "freigabe": "FREIGEGEBEN",
+        "quelle": "rk-min-ar-2026-s170",
+        "ref": "eingang:R-MINRES/halter-4",
+        "rolle": "rest_unter_schwelle"
+       },
+       {
+        "aussage": "Vanguard Group: 5.006%",
+        "freigabe": "FREIGEGEBEN",
+        "quelle": "rk-min-ar-2026-s170",
+        "ref": "eingang:R-MINRES/halter-5",
+        "rolle": "rest_unter_schwelle"
+       },
+       {
+        "aussage": "Kante EK-ELLISON-MINRES mit eigener Kette bis oben",
+        "freigabe": "FREIGEGEBEN",
+        "quelle": "rk-min-ar-2026-s170",
+        "ref": "kante:EK-ELLISON-MINRES",
+        "rolle": "halter_ab_schwelle_belegt"
+       }
+      ],
+      "schluss": "Kein beherrschender Aktionär (ABGELEITET, Regel 2026-11-23 mit Erweiterung 2026-11-24): Der Jahresbericht nennt die gemeldeten Großaktionäre mit Anteil am Kapital, Stand 6.8.2026. Der einzige Halter ab 10 % ist der Gründer und Vorstand mit 10,54 % (natürliche Person, eigene Kante); alle übrigen liegen darunter, der größte bei 9,34 %.",
+      "schlussart": "KETTE_GESCHLOSSEN",
+      "schlussart_text": "Jeder Halter ab 10 % selbst bis oben belegt, übrige < 10 %.",
+      "schlusspruefung": {
+       "aufgabe": "Ziel oberste/R-MINRES. Frage: Enthält die Quelle eine Liste der Großaktionäre von Mineral Resources Limited (MinRes), die der Gesellschaft ihre Beteiligung gemeldet haben (substantial shareholders) bzw. der größten Aktionäre (Form 20-F Item 7.A \"Major Shareholders\")? Quellen: rk-min-ar-2026-s170t (PDF-Seite 170 (pdftotext ohne -layout)).",
+       "blind": true,
+       "erstmodell": "claude-opus-5-5",
+       "geprueft_am": "2026-11-24",
+       "pruefmodell": "claude-sonnet-5-5",
+       "urteil": "BESTAETIGT"
+      },
+      "wissen": "GESCHLOSSEN",
+      "zeitraum": null
+     },
+     "grund": "GROSSAKTIONAERE_UNTER_SCHWELLE",
+     "text": "Kein beherrschender Aktionär (ABGELEITET, Regel 2026-11-23 mit Erweiterung 2026-11-24): Der Jahresbericht nennt die gemeldeten Großaktionäre mit Anteil am Kapital, Stand 6.8.2026. Der einzige Halter ab 10 % ist der Gründer und Vorstand mit 10,54 % (natürliche Person, eigene Kante); alle übrigen liegen darunter, der größte bei 9,34 %.",
+     "wissen": "GESCHLOSSEN"
+    },
+    "offen": null
+   },
    "R-MT-MARION": {
     "art": "STANDORT",
     "art_text": "Standort",
@@ -7381,9 +7701,77 @@
       }
      ],
      "freigabe": "FREIGEGEBEN",
-     "freigabe_herkunft": "ABGELEITET: größter gemeldeter Großaktionär 8,0 % < 10 % (Regel Eddie Sablah 2026-11-23: Großaktionärsliste als Beleg für die oberste Gesellschaft (ABGELEITET)); Liste und 6 Zahlen Zweitprüfung BESTAETIGT 2026-11-24 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+     "freigabe_herkunft": "ABGELEITET: größter gemeldeter Großaktionär ohne eigene Kette 8,0 % < 10 % (Regel Eddie Sablah 2026-11-23: Großaktionärsliste als Beleg für die oberste Gesellschaft (ABGELEITET)); Liste und 6 Zahlen Zweitprüfung BESTAETIGT 2026-11-24 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+     "geschlossen": {
+      "gilt": true,
+      "praemissen": [
+       {
+        "aussage": "Liste der gemeldeten Großaktionäre von POSCO Holdings Inc.",
+        "freigabe": "FREIGEGEBEN",
+        "quelle": "rk-posco-20f-2025-item7a",
+        "ref": "oberste:R-POSCO-HOLDINGS",
+        "rolle": "liste_vollstaendig"
+       },
+       {
+        "aussage": "Aktien gesamt: 80,932,952",
+        "freigabe": "FREIGEGEBEN",
+        "quelle": "rk-posco-20f-2025-item7a",
+        "ref": "eingang:R-POSCO-HOLDINGS/gesamt",
+        "rolle": "halter_unter_schwelle"
+       },
+       {
+        "aussage": "National Pension Service: 6,441,610",
+        "freigabe": "FREIGEGEBEN",
+        "quelle": "rk-posco-20f-2025-item7a",
+        "ref": "eingang:R-POSCO-HOLDINGS/halter-1",
+        "rolle": "halter_unter_schwelle"
+       },
+       {
+        "aussage": "BlackRock Fund Advisors: 4,206,522",
+        "freigabe": "FREIGEGEBEN",
+        "quelle": "rk-posco-20f-2025-item7a",
+        "ref": "eingang:R-POSCO-HOLDINGS/halter-2",
+        "rolle": "halter_unter_schwelle"
+       },
+       {
+        "aussage": "Citibank N.A. (Depotbank der ADR): 2,289,755",
+        "freigabe": "FREIGEGEBEN",
+        "quelle": "rk-posco-20f-2025-item7a",
+        "ref": "eingang:R-POSCO-HOLDINGS/halter-3",
+        "rolle": "halter_unter_schwelle"
+       },
+       {
+        "aussage": "Pohang University of Science and Technology: 1,981,047",
+        "freigabe": "FREIGEGEBEN",
+        "quelle": "rk-posco-20f-2025-item7a",
+        "ref": "eingang:R-POSCO-HOLDINGS/halter-4",
+        "rolle": "halter_unter_schwelle"
+       },
+       {
+        "aussage": "Samsung Group: 1,861,979",
+        "freigabe": "FREIGEGEBEN",
+        "quelle": "rk-posco-20f-2025-item7a",
+        "ref": "eingang:R-POSCO-HOLDINGS/halter-5",
+        "rolle": "halter_unter_schwelle"
+       }
+      ],
+      "schluss": "Kein beherrschender Aktionär (ABGELEITET, Regel 2026-11-23): Der Jahresbericht Form 20-F nennt unter Item 7.A „Major Shareholders“ die größten Aktionäre; der größte hält 6.441.610 von 80.932.952 ausgegebenen Aktien (gerechnet 8,0 %, unter der Schwelle 10 %), Stand 31.12.2025. Eigene Aktien (6,56 %) und Streubesitz (72,70 %) sind keine Halter.",
+      "schlussart": "KEINE_BEHERRSCHUNG",
+      "schlussart_text": "Vollständige Großaktionärsliste, jeder Halter < 10 %.",
+      "schlusspruefung": {
+       "aufgabe": "Ziel oberste/R-POSCO-HOLDINGS. Frage: Enthält die Quelle eine Liste der Großaktionäre von POSCO Holdings Inc., die der Gesellschaft ihre Beteiligung gemeldet haben (substantial shareholders) bzw. der größten Aktionäre (Form 20-F Item 7.A \"Major Shareholders\")? Quellen: rk-posco-20f-2025-item7a (HTML, Text ohne Tags (Tabellenzellen je Zeile), Abschnitt Item 7.A Major Shareholders).",
+       "blind": true,
+       "erstmodell": "claude-opus-5-5",
+       "geprueft_am": "2026-11-24",
+       "pruefmodell": "claude-sonnet-5-5",
+       "urteil": "BESTAETIGT"
+      },
+      "wissen": "GESCHLOSSEN",
+      "zeitraum": null
+     },
      "grund": "GROSSAKTIONAERE_UNTER_SCHWELLE",
-     "text": "Kein beherrschender Aktionär (ABGELEITET, Regel 2026-11-23): Der Jahresbericht Form 20-F nennt unter Item 7.A „Major Shareholders“ die größten Aktionäre; der größte hält 6.441.610 von 80.932.952 ausgegebenen Aktien (gerechnet 8,0 %, unter der Schwelle 10 %), Stand 31.12.2025. Eigene Aktien (6,56 %) und Streubesitz (72,70 %) sind keine Halter."
+     "text": "Kein beherrschender Aktionär (ABGELEITET, Regel 2026-11-23): Der Jahresbericht Form 20-F nennt unter Item 7.A „Major Shareholders“ die größten Aktionäre; der größte hält 6.441.610 von 80.932.952 ausgegebenen Aktien (gerechnet 8,0 %, unter der Schwelle 10 %), Stand 31.12.2025. Eigene Aktien (6,56 %) und Streubesitz (72,70 %) sind keine Halter.",
+     "wissen": "GESCHLOSSEN"
     },
     "offen": null
    },
@@ -7557,7 +7945,7 @@
     },
     "S10": {
      "ebenen": 2,
-     "status": "OFFEN"
+     "status": "VOLLSTAENDIG_FREIGEGEBEN"
     },
     "S11": {
      "ebenen": 1,
@@ -7664,12 +8052,14 @@
      "status": "OFFEN"
     }
    },
-   "kanten": 31,
-   "kanten_freigegeben": 31,
+   "kanten": 33,
+   "kanten_freigegeben": 33,
    "kanten_kandidat": 0,
-   "kanten_mit_anteil": 18,
-   "knoten": 42,
+   "kanten_mit_anteil": 20,
+   "kanten_zu_pruefen_r8": 1,
+   "knoten": 44,
    "letzte_eigentuemer": [
+    "Chris Ellison",
     "Jiang Weiping",
     "Natürliche Person(en), im LEI-Register nicht namentlich genannt",
     "Regierung von Mali",
@@ -7684,10 +8074,11 @@
     "IGO Limited",
     "LG Chem, Ltd. ((주) 엘지화학)",
     "Liontown Resources Limited",
+    "Mineral Resources Limited (MinRes)",
     "POSCO Holdings Inc.",
     "Wesfarmers Limited"
    ],
-   "offen": 7,
+   "offen": 6,
    "offene_knoten": [
     "Albemarle Corporation",
     "Ford Motor Company",
@@ -7696,8 +8087,8 @@
    ],
    "schwelle_prozent": 10.0,
    "unbekannt": 5,
-   "vollstaendig": 16,
-   "vollstaendig_freigegeben": 16,
+   "vollstaendig": 17,
+   "vollstaendig_freigegeben": 17,
    "vollstaendig_kandidat": 0,
    "zweitpruefung_offen": 0
   },
@@ -8021,6 +8412,36 @@
     "text_artifact_sha256": "6644d4790399f153084f1bfb7c3df2fc83065f9e7baf73551674f9e257f93a38",
     "titel": "Quarterly Activities Report September 2024",
     "url": "https://announcements.asx.com.au/asxpdf/20241030/pdf/069rx2plkp6nc8.pdf#page=1"
+   },
+   "rk-min-ar-2026-s154": {
+    "abgerufen": "2026-11-24",
+    "art": "COMPANY_PRIMARY",
+    "fundstelle": "PDF-Seite 154 (pdftotext ohne -layout)",
+    "herausgeber": "Mineral Resources Limited",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/min-ar-2026-p154.txt",
+    "text_artifact_sha256": "5d53ed6441b565ee5246611937dc11557d6650516f8ce2095f79d90771370705",
+    "titel": "Appendix 4E and 2026 Annual Report",
+    "url": "https://announcements.asx.com.au/asxpdf/20260827/pdf/0738vgtql2pnvs.pdf#page=154"
+   },
+   "rk-min-ar-2026-s170": {
+    "abgerufen": "2026-11-24",
+    "art": "COMPANY_PRIMARY",
+    "fundstelle": "PDF-Seite 170 (pdftotext -layout, Tabellenzeilen)",
+    "herausgeber": "Mineral Resources Limited",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/min-ar-2026-p170.txt",
+    "text_artifact_sha256": "c5df06077a58efb4514dbbe29f3050f34721e8c35ac8875f66e8adfe62e55041",
+    "titel": "Appendix 4E and 2026 Annual Report",
+    "url": "https://announcements.asx.com.au/asxpdf/20260827/pdf/0738vgtql2pnvs.pdf#page=170"
+   },
+   "rk-min-ar-2026-s170t": {
+    "abgerufen": "2026-11-24",
+    "art": "COMPANY_PRIMARY",
+    "fundstelle": "PDF-Seite 170 (pdftotext ohne -layout)",
+    "herausgeber": "Mineral Resources Limited",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/min-ar-2026-p170-text.txt",
+    "text_artifact_sha256": "0fb935938a637c825960133de5873dca970b0b3fe142bca4ee190f73e397daae",
+    "titel": "Appendix 4E and 2026 Annual Report",
+    "url": "https://announcements.asx.com.au/asxpdf/20260827/pdf/0738vgtql2pnvs.pdf#page=170"
    },
    "rk-pls-ar-2026-s099": {
     "abgerufen": "2026-11-16",
@@ -9284,11 +9705,113 @@
     },
     "ziel_id": "R-POSCO-HOLDINGS",
     "ziel_typ": "oberste"
+   },
+   {
+    "abgleich": "",
+    "aufgabe": "Ziel kante/EK-ELLISON-MINRES. Frage: Welchen Anteil (Kapital) hält Chris Ellison laut Quelle an Mineral Resources Limited (MinRes)? Stand 2026-05-11. Quellen: rk-min-ar-2026-s170 (PDF-Seite 170 (pdftotext -layout, Tabellenzeilen)).",
+    "aussage": "Welchen Anteil (Kapital) hält Chris Ellison laut Quelle an Mineral Resources Limited (MinRes)? Stand 2026-05-11.",
+    "belege": [
+     {
+      "quelle": "rk-min-ar-2026-s170",
+      "zitat": [
+       "CHRIS ELLISON 11/05/2026 10.54%"
+      ]
+     }
+    ],
+    "blind": true,
+    "erstmodell": "claude-opus-5-5",
+    "erstpruefung_sitzung": "session_01JgcA7QCmoZYLcPhvk6mJbe",
+    "geprueft_am": "2026-11-24",
+    "hinweis": "Substantial shareholders, Percentage of capital",
+    "pruef_id": "AE44",
+    "pruefer": "auto-zweitpruefung (claude-sonnet-5-5, blind)",
+    "pruefmodell": "claude-sonnet-5-5",
+    "pruefweg": "subagent",
+    "quelle_frisch_geladen": false,
+    "regel": "Eddie Sablah 2026-11-16: Regel 3 automatisch, blinde Zweitprüfung durch ein zweites Modell + Programmprüfung; Stichprobe 5 Fälle/Monat bleibt",
+    "sitzung": "auto:claude-sonnet-5-5:2026-11-24",
+    "textkopie_geprueft": true,
+    "urteil": "BESTAETIGT",
+    "verfahren": "AUTO_ZWEITPRUEFUNG",
+    "wert": {
+     "einheit": "%",
+     "zahl_text": "10.54"
+    },
+    "ziel_id": "EK-ELLISON-MINRES",
+    "ziel_typ": "kante"
+   },
+   {
+    "abgleich": "",
+    "aufgabe": "Ziel kante/EK-MINRES-MT-MARION. Frage: Welchen Anteil (Kapital) hält Mineral Resources Limited (MinRes) laut Quelle an Mt Marion (Lithiummine)? Stand 2026-06-30. Quellen: rk-min-ar-2026-s154 (PDF-Seite 154 (pdftotext ohne -layout)).",
+    "aussage": "Welchen Anteil (Kapital) hält Mineral Resources Limited (MinRes) laut Quelle an Mt Marion (Lithiummine)? Stand 2026-06-30.",
+    "belege": [
+     {
+      "quelle": "rk-min-ar-2026-s154",
+      "zitat": [
+       "recognising its 50% share of jointly controlled assets"
+      ]
+     }
+    ],
+    "blind": true,
+    "erstmodell": "claude-opus-5-5",
+    "erstpruefung_sitzung": "session_01JgcA7QCmoZYLcPhvk6mJbe",
+    "geprueft_am": "2026-11-24",
+    "hinweis": "MinRes bilanziert 50% Anteil an MML (Mt Marion)",
+    "pruef_id": "AE45",
+    "pruefer": "auto-zweitpruefung (claude-sonnet-5-5, blind)",
+    "pruefmodell": "claude-sonnet-5-5",
+    "pruefweg": "subagent",
+    "quelle_frisch_geladen": false,
+    "regel": "Eddie Sablah 2026-11-16: Regel 3 automatisch, blinde Zweitprüfung durch ein zweites Modell + Programmprüfung; Stichprobe 5 Fälle/Monat bleibt",
+    "sitzung": "auto:claude-sonnet-5-5:2026-11-24",
+    "textkopie_geprueft": true,
+    "urteil": "BESTAETIGT",
+    "verfahren": "AUTO_ZWEITPRUEFUNG",
+    "wert": {
+     "einheit": "%",
+     "zahl_text": "50"
+    },
+    "ziel_id": "EK-MINRES-MT-MARION",
+    "ziel_typ": "kante"
+   },
+   {
+    "abgleich": "",
+    "aufgabe": "Ziel oberste/R-MINRES. Frage: Enthält die Quelle eine Liste der Großaktionäre von Mineral Resources Limited (MinRes), die der Gesellschaft ihre Beteiligung gemeldet haben (substantial shareholders) bzw. der größten Aktionäre (Form 20-F Item 7.A \"Major Shareholders\")? Quellen: rk-min-ar-2026-s170t (PDF-Seite 170 (pdftotext ohne -layout)).",
+    "aussage": "Enthält die Quelle eine Liste der Großaktionäre von Mineral Resources Limited (MinRes), die der Gesellschaft ihre Beteiligung gemeldet haben (substantial shareholders) bzw. der größten Aktionäre (Form 20-F Item 7.A \"Major Shareholders\")?",
+    "belege": [
+     {
+      "quelle": "rk-min-ar-2026-s170t",
+      "zitat": [
+       "Substantial shareholders Name Date of change Percentage of capital"
+      ]
+     }
+    ],
+    "blind": true,
+    "erstmodell": "claude-opus-5-5",
+    "erstpruefung_sitzung": "session_01JgcA7TdgLRrqKV9kyFuE5E",
+    "geprueft_am": "2026-11-24",
+    "hinweis": "Liste Substantial shareholders mit Name, Date of change, Percentage of capital",
+    "pruef_id": "AE51",
+    "pruefer": "auto-zweitpruefung (claude-sonnet-5-5, blind)",
+    "pruefmodell": "claude-sonnet-5-5",
+    "pruefweg": "subagent",
+    "quelle_frisch_geladen": false,
+    "regel": "Eddie Sablah 2026-11-16: Regel 3 automatisch, blinde Zweitprüfung durch ein zweites Modell + Programmprüfung; Stichprobe 5 Fälle/Monat bleibt",
+    "sitzung": "auto:claude-sonnet-5-5:2026-11-24",
+    "textkopie_geprueft": true,
+    "urteil": "BESTAETIGT",
+    "verfahren": "AUTO_ZWEITPRUEFUNG",
+    "wert": {
+     "einheit": "",
+     "zahl_text": ""
+    },
+    "ziel_id": "R-MINRES",
+    "ziel_typ": "oberste"
    }
   ]
  },
  "eingaben": {
-  "analysis/rohstoffe/eigentum/eigentumskette.json": "74d2ea759f73ced09161ecbfb9bdc830636d18d945d979507263cabc58c15903",
+  "analysis/rohstoffe/eigentum/eigentumskette.json": "e720e088c7aaef44b687807f1d394c2b7ce8a4cf4fe74833e4d6035898f24135",
   "analysis/rohstoffe/fluss-freigaben.jsonl": "aaabbdac9c8a96ba0a688d2348a9b29df912fd5f6d05c9915280d05f3e396d66",
   "analysis/rohstoffe/lithium/kandidaten.json": "f5c23d3ae23edae33a67eeac555ca8336c0df5385e471aaeb5d7bac5880de53c",
   "analysis/rohstoffe/lithium/markt.json": "7a16c8ab88fda7ebdb65896703bbc07c8b47658a3f351d8c08df37313ea69303",
@@ -11351,7 +11874,7 @@
          "zitat": "\"stand\":\"2026-11-10\""
         }
        ],
-       "text": "Kein Namenstreffer für Mt Marion (Lithiummine), Ganfeng Lithium Group Co., Ltd., Natürliche Person(en), im LEI-Register nicht namentlich genannt auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
+       "text": "Kein Namenstreffer für Mt Marion (Lithiummine), Ganfeng Lithium Group Co., Ltd., Natürliche Person(en), im LEI-Register nicht namentlich genannt, Mineral Resources Limited (MinRes), Chris Ellison auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
       }
      ],
      "grund": null,
@@ -16533,11 +17056,12 @@
  "zaehler": {
   "ausfall_mit_ausweich_menge": 28,
   "belege": 28,
+  "dauer_geschaetzt": 1,
   "eigentum_belegt": 22,
   "eigentum_kandidaten": 11,
-  "eigentumskette_freigegeben": 16,
-  "eigentumskette_kanten": 31,
-  "eigentumskette_vollstaendig": 16,
+  "eigentumskette_freigegeben": 17,
+  "eigentumskette_kanten": 33,
+  "eigentumskette_vollstaendig": 17,
   "glieder_mit_ausweichquelle": 17,
   "kette_stufen": 2,
   "mengen_abgeleitet": 2,

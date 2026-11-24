@@ -1,13 +1,23 @@
 {
- "groesste_luecke": "Gold",
+ "groesste_luecke": "Antimon",
  "mit_mengenabdeckung": 1,
- "rohstoffe_erfasst": 17,
+ "rohstoffe_erfasst": 25,
  "rohstoffe_gesamt": 25,
- "rohstoffe_nicht_erfasst": 8,
+ "rohstoffe_nicht_erfasst": 0,
  "schema": "atlas.marktabdeckung-kurz/1",
  "seite": "/abdeckung/",
  "stand_referenz": "USGS MCS 2026 (2025e), EIA 2024, WNA 2024 (Uran)",
  "zeilen": [
+  {
+   "id": "gold",
+   "laender_pct": 59.4,
+   "menge_pct": null,
+   "prioritaet": null,
+   "rohstoff": "Gold",
+   "standorte": 265,
+   "status": "erfasst",
+   "stufe": "Bergbau"
+  },
   {
    "id": "aluminium",
    "laender_pct": 89.9,
@@ -39,6 +49,16 @@
    "stufe": "Bergbau"
   },
   {
+   "id": "tonerde",
+   "laender_pct": 93.6,
+   "menge_pct": null,
+   "prioritaet": null,
+   "rohstoff": "Tonerde",
+   "standorte": 39,
+   "status": "erfasst",
+   "stufe": "Raffinerie"
+  },
+  {
    "id": "nickel",
    "laender_pct": 90.1,
    "menge_pct": null,
@@ -59,12 +79,32 @@
    "stufe": "Bergbau"
   },
   {
+   "id": "silber",
+   "laender_pct": 74.7,
+   "menge_pct": null,
+   "prioritaet": null,
+   "rohstoff": "Silber",
+   "standorte": 83,
+   "status": "erfasst",
+   "stufe": "Bergbau"
+  },
+  {
    "id": "kobalt",
    "laender_pct": 98.5,
    "menge_pct": null,
    "prioritaet": null,
    "rohstoff": "Kobalt",
    "standorte": 44,
+   "status": "erfasst",
+   "stufe": "Bergbau"
+  },
+  {
+   "id": "bauxit",
+   "laender_pct": 94.9,
+   "menge_pct": null,
+   "prioritaet": null,
+   "rohstoff": "Bauxit",
+   "standorte": 37,
    "status": "erfasst",
    "stufe": "Bergbau"
   },
@@ -79,12 +119,62 @@
    "stufe": "Bergbau"
   },
   {
+   "id": "molybdaen",
+   "laender_pct": 78.2,
+   "menge_pct": null,
+   "prioritaet": null,
+   "rohstoff": "Molybdän",
+   "standorte": 17,
+   "status": "erfasst",
+   "stufe": "Bergbau"
+  },
+  {
    "id": "blei",
    "laender_pct": 72.4,
    "menge_pct": null,
    "prioritaet": null,
    "rohstoff": "Blei",
    "standorte": 33,
+   "status": "erfasst",
+   "stufe": "Bergbau"
+  },
+  {
+   "id": "zinn",
+   "laender_pct": 75.4,
+   "menge_pct": null,
+   "prioritaet": null,
+   "rohstoff": "Zinn",
+   "standorte": 25,
+   "status": "erfasst",
+   "stufe": "Bergbau"
+  },
+  {
+   "id": "mangan",
+   "laender_pct": 92.5,
+   "menge_pct": null,
+   "prioritaet": null,
+   "rohstoff": "Mangan",
+   "standorte": 37,
+   "status": "erfasst",
+   "stufe": "Bergbau"
+  },
+  {
+   "id": "palladium",
+   "laender_pct": 81.1,
+   "menge_pct": null,
+   "prioritaet": null,
+   "rohstoff": "Palladium",
+   "standorte": 17,
+   "status": "erfasst",
+   "stufe": "Bergbau"
+  },
+  {
+   "id": "platin",
+   "laender_pct": 92.9,
+   "menge_pct": null,
+   "prioritaet": null,
+   "rohstoff": "Platin",
+   "standorte": 20,
    "status": "erfasst",
    "stufe": "Bergbau"
   },
@@ -159,103 +249,13 @@
    "stufe": "Bergbau"
   },
   {
-   "id": "gold",
-   "laender_pct": 20.0,
-   "menge_pct": null,
-   "prioritaet": 1,
-   "rohstoff": "Gold",
-   "standorte": 5,
-   "status": "nur Kandidaten",
-   "stufe": "Bergbau"
-  },
-  {
    "id": "antimon",
    "laender_pct": 37.5,
    "menge_pct": null,
-   "prioritaet": 10,
+   "prioritaet": 1,
    "rohstoff": "Antimon",
    "standorte": 10,
    "status": "nur Kandidaten",
-   "stufe": "Bergbau"
-  },
-  {
-   "id": "tonerde",
-   "laender_pct": 0.0,
-   "menge_pct": null,
-   "prioritaet": 2,
-   "rohstoff": "Tonerde",
-   "standorte": 0,
-   "status": "nicht erfasst",
-   "stufe": "Raffinerie"
-  },
-  {
-   "id": "silber",
-   "laender_pct": 0.0,
-   "menge_pct": null,
-   "prioritaet": 3,
-   "rohstoff": "Silber",
-   "standorte": 0,
-   "status": "nicht erfasst",
-   "stufe": "Bergbau"
-  },
-  {
-   "id": "bauxit",
-   "laender_pct": 0.0,
-   "menge_pct": null,
-   "prioritaet": 4,
-   "rohstoff": "Bauxit",
-   "standorte": 0,
-   "status": "nicht erfasst",
-   "stufe": "Bergbau"
-  },
-  {
-   "id": "molybdaen",
-   "laender_pct": 0.0,
-   "menge_pct": null,
-   "prioritaet": 5,
-   "rohstoff": "Molybdän",
-   "standorte": 0,
-   "status": "nicht erfasst",
-   "stufe": "Bergbau"
-  },
-  {
-   "id": "zinn",
-   "laender_pct": 0.0,
-   "menge_pct": null,
-   "prioritaet": 6,
-   "rohstoff": "Zinn",
-   "standorte": 0,
-   "status": "nicht erfasst",
-   "stufe": "Bergbau"
-  },
-  {
-   "id": "mangan",
-   "laender_pct": 0.0,
-   "menge_pct": null,
-   "prioritaet": 7,
-   "rohstoff": "Mangan",
-   "standorte": 0,
-   "status": "nicht erfasst",
-   "stufe": "Bergbau"
-  },
-  {
-   "id": "palladium",
-   "laender_pct": 0.0,
-   "menge_pct": null,
-   "prioritaet": 8,
-   "rohstoff": "Palladium",
-   "standorte": 0,
-   "status": "nicht erfasst",
-   "stufe": "Bergbau"
-  },
-  {
-   "id": "platin",
-   "laender_pct": 0.0,
-   "menge_pct": null,
-   "prioritaet": 9,
-   "rohstoff": "Platin",
-   "standorte": 0,
-   "status": "nicht erfasst",
    "stufe": "Bergbau"
   }
  ]
