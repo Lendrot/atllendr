@@ -145,8 +145,8 @@
    },
    "mengen": [
     {
-     "evidenz": "UNKNOWN",
-     "text": "unbekannt",
+     "evidenz": "BELEGT",
+     "text": "1.364 t Sb pro Jahr",
      "verbindung": "V2"
     }
    ],
@@ -155,8 +155,42 @@
     "S3"
    ],
    "tonnen": {
-    "evidenz": "UNKNOWN",
-    "grund": "Kein Bogen an diesem Glied hat eine freigegebene Menge in Tonnen. Ohne Menge: 1 von 1 Bögen."
+    "evidenz": "ABGELEITET",
+    "grund": null,
+    "hinweis": "Mengen verschiedener Waren oder Zeitbasen werden nicht addiert.",
+    "ohne_menge": [],
+    "posten": [
+     {
+      "art": "summe",
+      "eingaenge": [
+       {
+        "einheit": "t",
+        "freigabe": "FREIGEGEBEN",
+        "hoch": 1,
+        "name": "V2 Costerfield → Hafen Melbourne",
+        "quelle": "1.364 t Sb (verkauft, Antimon-Inhalt, Geschäftsjahr 1.7.2025 bis 30.6.2026)",
+        "ref": "M-ANF-02",
+        "wert": 1364.0
+       }
+      ],
+      "einheit": "t",
+      "ergebnis": [
+       1364.0
+      ],
+      "evidenz": "ABGELEITET",
+      "formel": "1.364 t",
+      "hinweis": "Menge laut Quelle je Bogen (Lieferung, Vertrag oder Kapazität wie dort angegeben); keine Lieferbestätigung.",
+      "pro_jahr": true,
+      "rechenweg": "belegte Menge des einzigen Bogens mit Tonnen in dieser Gruppe: 1.364 t (V2)",
+      "t": 1364.0,
+      "text": "1.364 t Gold-Antimon-Flotationskonzentrat pro Jahr",
+      "verbindungen": [
+       "V2"
+      ],
+      "ware": "Gold-Antimon-Flotationskonzentrat"
+     }
+    ],
+    "text": "betroffen 1.364 t Gold-Antimon-Flotationskonzentrat pro Jahr"
    },
    "verbindungen_weg": [
     "V2"
@@ -341,8 +375,8 @@
    },
    "mengen": [
     {
-     "evidenz": "UNKNOWN",
-     "text": "unbekannt",
+     "evidenz": "BELEGT",
+     "text": "1.364 t Sb pro Jahr",
      "verbindung": "V2"
     }
    ],
@@ -351,8 +385,42 @@
    ],
    "ohne_zufluss": [],
    "tonnen": {
-    "evidenz": "UNKNOWN",
-    "grund": "Kein Bogen an diesem Glied hat eine freigegebene Menge in Tonnen. Ohne Menge: 1 von 1 Bögen."
+    "evidenz": "ABGELEITET",
+    "grund": null,
+    "hinweis": "Mengen verschiedener Waren oder Zeitbasen werden nicht addiert.",
+    "ohne_menge": [],
+    "posten": [
+     {
+      "art": "summe",
+      "eingaenge": [
+       {
+        "einheit": "t",
+        "freigabe": "FREIGEGEBEN",
+        "hoch": 1,
+        "name": "V2 Costerfield → Hafen Melbourne",
+        "quelle": "1.364 t Sb (verkauft, Antimon-Inhalt, Geschäftsjahr 1.7.2025 bis 30.6.2026)",
+        "ref": "M-ANF-02",
+        "wert": 1364.0
+       }
+      ],
+      "einheit": "t",
+      "ergebnis": [
+       1364.0
+      ],
+      "evidenz": "ABGELEITET",
+      "formel": "1.364 t",
+      "hinweis": "Menge laut Quelle je Bogen (Lieferung, Vertrag oder Kapazität wie dort angegeben); keine Lieferbestätigung.",
+      "pro_jahr": true,
+      "rechenweg": "belegte Menge des einzigen Bogens mit Tonnen in dieser Gruppe: 1.364 t (V2)",
+      "t": 1364.0,
+      "text": "1.364 t Gold-Antimon-Flotationskonzentrat pro Jahr",
+      "verbindungen": [
+       "V2"
+      ],
+      "ware": "Gold-Antimon-Flotationskonzentrat"
+     }
+    ],
+    "text": "betroffen 1.364 t Gold-Antimon-Flotationskonzentrat pro Jahr"
    },
    "verbindungen_weg": [
     "V2"
@@ -477,14 +545,14 @@
        "kinder": [],
        "knoten": "R-ALKANE",
        "pflicht": true,
-       "schluss": "OFFEN",
-       "schluss_text": "endet ohne Beleg"
+       "schluss": "OBERSTE",
+       "schluss_text": "oberste Gesellschaft"
       }
      ],
      "knoten": "R-MANDALAY",
      "pflicht": true,
-     "schluss": "OFFEN",
-     "schluss_text": "endet ohne Beleg"
+     "schluss": "GESCHLOSSEN",
+     "schluss_text": "Eigentümer belegt"
     },
     "belegt": true,
     "betreiber": null,
@@ -515,8 +583,8 @@
     "ebenen": 1,
     "einschraenkung": null,
     "grund": null,
-    "status": "OFFEN",
-    "status_text": "Kette endet ohne Beleg",
+    "status": "VOLLSTAENDIG_FREIGEGEBEN",
+    "status_text": "bis oben belegt und freigegeben",
     "wurzel": "R-MANDALAY"
    },
    "S2": {
@@ -688,8 +756,33 @@
     "land": "AU",
     "lei": null,
     "name": "Alkane Resources Ltd",
-    "oberste": null,
-    "offen": "Oberste Gesellschaft nicht belegt: LEI 529900R65IIVLPW4ZS42 ist abgelaufen (LAPSED, Abruf 2026-11-16) und wird nicht genutzt; keine gelesene Quelle nennt einen beherrschenden Aktionär."
+    "oberste": {
+     "belege": [
+      {
+       "fundstelle": "PDF-Seite 191 (pdftotext -layout, Tabellenzeilen)",
+       "quelle": "rk-alk-ar-2026-s191",
+       "rolle": "hauptbeleg",
+       "zitat": "The names of substantial shareholders who have notified the company in accordance with section 671B of the Corporations Act 2001 are:"
+      },
+      {
+       "fundstelle": "PDF-Seite 191 (pdftotext -layout, Tabellenzeilen)",
+       "quelle": "rk-alk-ar-2026-s191",
+       "rolle": "zusatzbeleg",
+       "zitat": "CE Mining III MND Limited 76,538,135 … Ian Jeffrey Gandel 87,228,277 … Gardenway Pty Ltd 72,175,000"
+      },
+      {
+       "fundstelle": "PDF-Seite 190 (pdftotext -layout, Tabellenzeilen)",
+       "quelle": "rk-alk-ar-2026-s190",
+       "rolle": "zusatzbeleg",
+       "zitat": "The information is current as at 4 September 2026. … Total 10,830 1,366,204,821 100.00"
+      }
+     ],
+     "freigabe": "FREIGEGEBEN",
+     "freigabe_herkunft": "ABGELEITET: größter gemeldeter Großaktionär 6,4 % < 10 % (Regel Eddie Sablah 2026-11-23: Großaktionärsliste als Beleg für die oberste Gesellschaft (ABGELEITET)); Liste und 4 Zahlen Zweitprüfung BESTAETIGT 2026-11-23 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+     "grund": "GROSSAKTIONAERE_UNTER_SCHWELLE",
+     "text": "Kein beherrschender Aktionär (ABGELEITET, Regel 2026-11-23): Der Jahresbericht nennt die Großaktionäre, die ihre Beteiligung nach Section 671B Corporations Act gemeldet haben; der größte hält 87.228.277 von 1.366.204.821 Aktien (gerechnet 6,4 %, unter der Schwelle 10 %), Stand 04.09.2026. Der LEI-Eintrag ist abgelaufen (LAPSED) und wird nicht genutzt."
+    },
+    "offen": null
    },
    "R-HILLGROVE": {
     "art": "STANDORT",
@@ -785,7 +878,7 @@
    "je_glied": {
     "S1": {
      "ebenen": 1,
-     "status": "OFFEN"
+     "status": "VOLLSTAENDIG_FREIGEGEBEN"
     },
     "S2": {
      "ebenen": 2,
@@ -806,22 +899,43 @@
    "kanten_mit_anteil": 3,
    "knoten": 6,
    "letzte_eigentuemer": [],
-   "oberste_gesellschaften": [],
-   "offen": 3,
+   "oberste_gesellschaften": [
+    "Alkane Resources Ltd"
+   ],
+   "offen": 2,
    "offene_knoten": [
-    "Alkane Resources Ltd",
     "Larvotto Resources Limited",
     "United States Antimony Corporation",
     "Wogen Resources Limited"
    ],
    "schwelle_prozent": 10.0,
    "unbekannt": 1,
-   "vollstaendig": 0,
-   "vollstaendig_freigegeben": 0,
+   "vollstaendig": 1,
+   "vollstaendig_freigegeben": 1,
    "vollstaendig_kandidat": 0,
    "zweitpruefung_offen": 0
   },
   "quellen": {
+   "rk-alk-ar-2026-s190": {
+    "abgerufen": "2026-11-23",
+    "art": "COMPANY_PRIMARY",
+    "fundstelle": "PDF-Seite 190 (pdftotext -layout, Tabellenzeilen)",
+    "herausgeber": "Alkane Resources Ltd",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/alk-ar-2026-p190.txt",
+    "text_artifact_sha256": "882679f248b6b01af3ca9d1e9905b4c3ed45415d8d724ddc7333e96b946da32b",
+    "titel": "Annual Report 2026",
+    "url": "https://announcements.asx.com.au/asxpdf/20261002/pdf/074w1jc6sy437y.pdf#page=190"
+   },
+   "rk-alk-ar-2026-s191": {
+    "abgerufen": "2026-11-23",
+    "art": "COMPANY_PRIMARY",
+    "fundstelle": "PDF-Seite 191 (pdftotext -layout, Tabellenzeilen)",
+    "herausgeber": "Alkane Resources Ltd",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/alk-ar-2026-p191.txt",
+    "text_artifact_sha256": "4ebfed5a80a375a228a6457c72a9ce9e4faa74f186c3b7b89d7cd0c6fad3b5e1",
+    "titel": "Annual Report 2026",
+    "url": "https://announcements.asx.com.au/asxpdf/20261002/pdf/074w1jc6sy437y.pdf#page=191"
+   },
    "rk-alk-gm-2025-06-s013": {
     "abgerufen": "2026-11-16",
     "art": "COMPANY_PRIMARY",
@@ -1067,17 +1181,51 @@
     },
     "ziel_id": "antimon/antimon-site-legacy-row-111",
     "ziel_typ": "glied"
+   },
+   {
+    "abgleich": "",
+    "aufgabe": "Ziel oberste/R-ALKANE. Frage: Enthält die Quelle eine Liste der Großaktionäre von Alkane Resources Ltd, die der Gesellschaft ihre Beteiligung gemeldet haben (substantial shareholders)? Quellen: rk-alk-ar-2026-s191 (PDF-Seite 191 (pdftotext -layout, Tabellenzeilen)).",
+    "aussage": "Enthält die Quelle eine Liste der Großaktionäre von Alkane Resources Ltd, die der Gesellschaft ihre Beteiligung gemeldet haben (substantial shareholders)?",
+    "belege": [
+     {
+      "quelle": "rk-alk-ar-2026-s191",
+      "zitat": [
+       "The names of substantial shareholders who have notified the company in accordance with section 671B of the Corporations Act 2001 are:"
+      ]
+     }
+    ],
+    "blind": true,
+    "erstmodell": "claude-opus-5-5",
+    "erstpruefung_sitzung": "session_01JgcA7TdgLRrqKV9kyFuE5E",
+    "geprueft_am": "2026-11-23",
+    "hinweis": "Liste mit drei Namen vorhanden.",
+    "pruef_id": "AE15",
+    "pruefer": "auto-zweitpruefung (claude-sonnet-5-5, blind)",
+    "pruefmodell": "claude-sonnet-5-5",
+    "pruefweg": "subagent",
+    "quelle_frisch_geladen": false,
+    "regel": "Eddie Sablah 2026-11-16: Regel 3 automatisch, blinde Zweitprüfung durch ein zweites Modell + Programmprüfung; Stichprobe 5 Fälle/Monat bleibt",
+    "sitzung": "auto:claude-sonnet-5-5:2026-11-23",
+    "textkopie_geprueft": true,
+    "urteil": "BESTAETIGT",
+    "verfahren": "AUTO_ZWEITPRUEFUNG",
+    "wert": {
+     "einheit": "",
+     "zahl_text": ""
+    },
+    "ziel_id": "R-ALKANE",
+    "ziel_typ": "oberste"
    }
   ]
  },
  "eingaben": {
   "analysis/rohstoffe/antimon/kandidaten.json": "955d4a3a4c2bcd286394a8f8747c4f2c3eb18dd34d2bf839b0c23177c2349ce7",
   "analysis/rohstoffe/antimon/markt.json": "1ce538ffabf9d98288f1fe28d373d9eba5b97d2b11a3ce5ee5abdacfaa84d616",
-  "analysis/rohstoffe/eigentum/eigentumskette.json": "6d0a735986003d2f59a6eeedb6ba08e69ea4ee7d910ccab607eb8bf20c92aae0",
+  "analysis/rohstoffe/eigentum/eigentumskette.json": "5d02f341354c9ed186ce2c189b9619b8061fdb5d2739fbfa3688764f32e1b9ba",
   "analysis/rohstoffe/fluss-freigaben.jsonl": "aaabbdac9c8a96ba0a688d2348a9b29df912fd5f6d05c9915280d05f3e396d66",
   "analysis/rohstoffe/mengen/annahmen-snapshot.json": "5169bc01abcdff017b11b6e2e0bdb0abbc934a843f86a8fbbf4dbdd3585165b1",
-  "analysis/rohstoffe/mengen/mengen.json": "e3cf36b504d52d37e77dfe24088ea1175213209c2f3448b9288da24bc3b4cc6b",
-  "analysis/rohstoffe/mengen/zweitpruefung.jsonl": "e093861fa8ba9484dafa843cac1e2e03d7c05dc79a1909e4e29a39985fbe865b"
+  "analysis/rohstoffe/mengen/mengen.json": "a9c63566dfea221b1a79b37c3a5e4279c95da48436d5d005c1c924156ccb0db3",
+  "analysis/rohstoffe/mengen/zweitpruefung.jsonl": "65e79d9b6e01f162ee1d6274df6ad52c3f25a75345c5dc532269828f56622c7f"
  },
  "erzeugt_von": "scripts/analysis/rohstoffe/rohstoffkette.py",
  "kette": {
@@ -1097,7 +1245,7 @@
   "kunde": "S4"
  },
  "preisbasis": null,
- "preisbasis_grund": "Keine tägliche Notierung aus lesbarer, freigegebener Quelle: Antimonpreise nur bei Preisagenturen (lizenzpflichtig); auch kein Jahrespreis im Repo, Wert bleibt unbekannt.",
+ "preisbasis_grund": "Keine tägliche Notierung aus lesbarer, freigegebener Quelle: Antimonpreise nur bei Preisagenturen (lizenzpflichtig). Wert mit Annahmen nutzt den Jahresmittelpreis 2025 für Antimon-Metall (USGS MCS 2026), nur für Mengen als Antimon-Inhalt.",
  "regeln": [
   "Nur freigegebene Flüsse (analysis/rohstoffe/fluss-freigaben.jsonl); jedes Zitat steht wörtlich in der gepinnten Textkopie.",
   "Evidenzstatus wie im Generator-Datensatz: FACT nur für freigegebene Flüsse nach Eddies Entscheidung vom 2026-11-16 (fakt-entscheidung.json), nie VERIFIED oder APPROVED.",
@@ -1826,7 +1974,7 @@
   }
  ],
  "tiefe": {
-  "belegt": 12,
+  "belegt": 14,
   "dimensionen": [
    "Eigentümer/Betreiber",
    "Standort",
@@ -1836,13 +1984,13 @@
    "Risiko"
   ],
   "gesamt": 24,
-  "mit_annahmen": 12,
+  "mit_annahmen": 16,
   "zeilen": [
    {
     "felder": {
      "Eigentümer/Betreiber": "belegt",
      "Lieferbeziehung": "belegt",
-     "Menge": "unbekannt",
+     "Menge": "belegt",
      "Risiko": "belegt",
      "Standort": "belegt",
      "Wert": "unbekannt"
@@ -1864,7 +2012,7 @@
     "felder": {
      "Eigentümer/Betreiber": "unbekannt",
      "Lieferbeziehung": "belegt",
-     "Menge": "unbekannt",
+     "Menge": "belegt",
      "Risiko": "unbekannt",
      "Standort": "belegt",
      "Wert": "unbekannt"
@@ -1964,13 +2112,43 @@
    "freigabe_herkunft": "Claude (delegiert durch Eddie Sablah); Prüfbericht pruefbericht-2026-11-10.pdf",
    "id": "V2",
    "menge": {
-    "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
-    "pro_jahr": null,
-    "quelle_text": null,
+    "beleg_id": "M-ANF-02",
+    "belege": [
+     {
+      "abgerufen": "2026-11-24",
+      "fundstelle": "Production in Top Half of FY2026 Guidance (ASX-Mitteilung 8.7.2026), PDF-Seite 1",
+      "herausgeber": "Alkane Resources Ltd",
+      "textkopie": "analysis/rohstoffe/mengen/raw/alk-prod-2026-07-08-p1.txt",
+      "url": "https://announcements.asx.com.au/asxpdf/20260708/pdf/071h99ysrcmhn2.pdf",
+      "zitat": "Costerfield 10,117 Au oz 40,103 Au oz … 456 Sb t 1,298 Sb t … Sales … Consolidated 45,600 Au oz 165,196 Au oz … 535 Sb t 1,364 Sb t"
+     },
+     {
+      "abgerufen": "2026-11-24",
+      "fundstelle": "Annual Report 2026, PDF-Seite 111",
+      "herausgeber": "Alkane Resources Ltd",
+      "textkopie": "analysis/rohstoffe/mengen/raw/alk-ar-2026-p111.txt",
+      "url": "https://announcements.asx.com.au/asxpdf/20261002/pdf/074w1jc6sy437y.pdf",
+      "zitat": "Units Tomingley Costerfield Björkdal FY2026 FY2025(3) … Antimony produced t - 1,298 - 1,298 - … Average realised antimony price $/t - 33,357 - 33,357 -"
+     },
+     {
+      "abgerufen": "2026-11-10",
+      "fundstelle": "Notice of General Meeting (Zusammenschluss mit Mandalay Resources), 25.6.2025, PDF-Seite 15",
+      "herausgeber": "Alkane Resources Ltd",
+      "textkopie": "analysis/research/antimon-flows-v1/raw/alk-gm-2025-06-p15.txt",
+      "url": "https://announcements.asx.com.au/asxpdf/20250625/pdf/06l3b4v699n4mj.pdf",
+      "zitat": "gold-antimony flotation concentrate is trucked to the port of Melbourne and … shipped to international trader and smelting customers."
+     }
+    ],
+    "evidenz": "BELEGT",
+    "freigabe": "FREIGEGEBEN",
+    "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-24 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+    "grund": null,
+    "hinweis": "Verkaufte Antimonmenge des Konzerns im Geschäftsjahr; im Konzern fördert nur Costerfield Antimon (Tomingley und Björkdal ohne Antimon, Jahresbericht PDF-Seite 111). Das Gold-Antimon-Flotationskonzentrat geht laut Alkane per Lkw zum Hafen Melbourne, ein anderer Weg ist nicht genannt. Zahl ist Antimon-Inhalt vor Abzug der Bezahlbarkeit (Alkane rechnet mit 70 %), nicht die Konzentrat-Tonnage. Wert mit Annahmen rechnet mit dem USGS-Metallpreis und liegt damit über dem Erlös: Alkane nennt einen Durchschnittserlös von 33,357 A$ je t Antimon (PDF-Seite 111).",
+    "pro_jahr": true,
+    "quelle_text": "1.364 t Sb (verkauft, Antimon-Inhalt, Geschäftsjahr 1.7.2025 bis 30.6.2026)",
     "rechnung": "",
-    "t": null,
-    "text": "unbekannt"
+    "t": 1364.0,
+    "text": "1.364 t Sb pro Jahr"
    },
    "menge_abgeleitet": null,
    "menge_annahme": null,
@@ -1987,11 +2165,69 @@
     "rechnung": "",
     "text": "unbekannt"
    },
-   "wert_abgeleitet": null,
+   "wert_abgeleitet": {
+    "art": "produkt",
+    "eingaenge": [
+     {
+      "einheit": "t",
+      "freigabe": "FREIGEGEBEN",
+      "hoch": 1,
+      "name": "Menge",
+      "quelle": "1.364 t Sb (verkauft, Antimon-Inhalt, Geschäftsjahr 1.7.2025 bis 30.6.2026)",
+      "ref": "M-ANF-02",
+      "wert": 1364.0
+     },
+     {
+      "einheit": "US$ je t Sb (Metallpreis)",
+      "freigabe": "FREIGEGEBEN",
+      "hoch": 1,
+      "name": "Preis",
+      "quelle": "U.S. Geological Survey, Mineral Commodity Summaries 2026, Antimony",
+      "ref": "preis:antimon",
+      "wert": 55115.5655462194
+     },
+     {
+      "einheit": "US$ je €",
+      "freigabe": "AMTLICH",
+      "hoch": -1,
+      "name": "Kurs",
+      "quelle": "EZB-Jahresmittel 2025: 1,1300 US$ je €",
+      "ref": "ezb:USD:2025",
+      "wert": 1.13
+     }
+    ],
+    "einheit": "€",
+    "ergebnis": [
+     66528877.34959581
+    ],
+    "eur": 66528877.34959581,
+    "eur_spanne": [
+     66528877.34959581
+    ],
+    "evidenz": "ABGELEITET",
+    "hinweis": "Marktwert zum Jahrespreis; der tatsächliche Vertragspreis ist unbekannt.",
+    "preis_basis": "antimon",
+    "preis_jahr": 2025,
+    "preis_quelle": "U.S. Geological Survey, Mineral Commodity Summaries 2026, Antimony",
+    "preis_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-antimony.pdf",
+    "preis_zitat": "The average antimony price in 2025 was $25 per pound",
+    "rechenweg": "1.364 t (1.364 t Sb (verkauft, Antimon-Inhalt, Geschäftsjahr 1.7.2025 bis 30.6.2026)) × 55.115,566 US$ je t Sb (Metallpreis) (25 US$ je lb Antimon (Jahresmittel 2025) × 2.204,62 lb/t (einheit.py); Metallpreis, Konzentrat wird mit Abschlag bezahlt) ÷ EZB-Jahresmittel 2025: 1,1300 US$ je €",
+    "text": "≈ 66,5 Mio. € pro Jahr"
+   },
    "wert_annahme": {
-    "evidenz": "UNKNOWN",
-    "grund": "Keine Menge, auch keine Annahme.",
-    "text": "unbekannt"
+    "annahme_art": "RECHNUNG",
+    "eur": 66528877.34959581,
+    "eur_spanne": [
+     66528877.34959581
+    ],
+    "evidenz": "ANNAHME",
+    "preis_basis": "antimon",
+    "preis_datum": null,
+    "preis_quelle": "U.S. Geological Survey, Mineral Commodity Summaries 2026, Antimony",
+    "preis_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-antimony.pdf",
+    "preis_zitat": "The average antimony price in 2025 was $25 per pound",
+    "rechnung": "1.364 t (belegte Menge) × 55.115,566 US$ je t Sb (Metallpreis) (25 US$ je lb Antimon (Jahresmittel 2025) × 2.204,62 lb/t (einheit.py); Metallpreis, Konzentrat wird mit Abschlag bezahlt) = 75,2 Mio. US$ ÷ EZB-Jahresmittel 2025: 1,1300 US$ je €",
+    "text": "≈ 66,5 Mio. € pro Jahr"
    }
   }
  ],
@@ -2006,31 +2242,31 @@
   "belege": 3,
   "eigentum_belegt": 2,
   "eigentum_kandidaten": 2,
-  "eigentumskette_freigegeben": 0,
+  "eigentumskette_freigegeben": 1,
   "eigentumskette_kanten": 3,
-  "eigentumskette_vollstaendig": 0,
+  "eigentumskette_vollstaendig": 1,
   "glieder_mit_ausweichquelle": 0,
   "kette_stufen": 2,
   "mengen_abgeleitet": 0,
-  "mengen_belegt": 0,
+  "mengen_belegt": 1,
   "mengen_bezug": 0,
-  "mengen_freigegeben": 0,
-  "mengen_in_tonnen": 0,
-  "mengen_mit_annahmen": 0,
+  "mengen_freigegeben": 1,
+  "mengen_in_tonnen": 1,
+  "mengen_mit_annahmen": 1,
   "risiko_belegt": 2,
   "risikoebene_belegt": 12,
   "risikoebene_felder": 16,
   "standorte": 4,
   "standorte_mit_ort": 4,
-  "tiefe_belegt": 12,
+  "tiefe_belegt": 14,
   "tiefe_gesamt": 24,
-  "tiefe_mit_annahmen": 12,
+  "tiefe_mit_annahmen": 16,
   "verbindungen": 2,
   "verbindungen_auf_globus": 2,
   "verbindungen_freigegeben": 2,
-  "werte_abgeleitet": 0,
+  "werte_abgeleitet": 1,
   "werte_belegt": 0,
   "werte_in_euro": 0,
-  "werte_mit_annahmen": 0
+  "werte_mit_annahmen": 1
  }
 }

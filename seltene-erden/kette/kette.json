@@ -794,8 +794,8 @@
      "kinder": [],
      "knoten": "R-LYNAS",
      "pflicht": true,
-     "schluss": "OFFEN",
-     "schluss_text": "endet ohne Beleg"
+     "schluss": "OBERSTE",
+     "schluss_text": "oberste Gesellschaft"
     },
     "belegt": true,
     "betreiber": null,
@@ -814,8 +814,8 @@
     "ebenen": 0,
     "einschraenkung": "Die Seite \"Our Operations\" des Lynas-Jahresberichts führt den Standort als eigenen Betrieb; einen Anteil nennt sie nicht.",
     "grund": null,
-    "status": "OFFEN",
-    "status_text": "Kette endet ohne Beleg",
+    "status": "VOLLSTAENDIG_FREIGEGEBEN",
+    "status_text": "bis oben belegt und freigegeben",
     "wurzel": "R-LYNAS"
    },
    "S3": {
@@ -869,8 +869,8 @@
      "kinder": [],
      "knoten": "R-LYNAS",
      "pflicht": true,
-     "schluss": "OFFEN",
-     "schluss_text": "endet ohne Beleg"
+     "schluss": "OBERSTE",
+     "schluss_text": "oberste Gesellschaft"
     },
     "belegt": true,
     "betreiber": null,
@@ -889,8 +889,8 @@
     "ebenen": 0,
     "einschraenkung": "Die Seite \"Our Operations\" des Lynas-Jahresberichts führt den Standort als eigenen Betrieb; einen Anteil nennt sie nicht.",
     "grund": null,
-    "status": "OFFEN",
-    "status_text": "Kette endet ohne Beleg",
+    "status": "VOLLSTAENDIG_FREIGEGEBEN",
+    "status_text": "bis oben belegt und freigegeben",
     "wurzel": "R-LYNAS"
    },
    "S5": {
@@ -900,8 +900,8 @@
      "kinder": [],
      "knoten": "R-LYNAS",
      "pflicht": true,
-     "schluss": "OFFEN",
-     "schluss_text": "endet ohne Beleg"
+     "schluss": "OBERSTE",
+     "schluss_text": "oberste Gesellschaft"
     },
     "belegt": true,
     "betreiber": null,
@@ -920,8 +920,8 @@
     "ebenen": 0,
     "einschraenkung": "Die Seite \"Our Operations\" des Lynas-Jahresberichts führt den Standort als eigenen Betrieb; einen Anteil nennt sie nicht.",
     "grund": null,
-    "status": "OFFEN",
-    "status_text": "Kette endet ohne Beleg",
+    "status": "VOLLSTAENDIG_FREIGEGEBEN",
+    "status_text": "bis oben belegt und freigegeben",
     "wurzel": "R-LYNAS"
    }
   },
@@ -1058,8 +1058,45 @@
     "land": "AU",
     "lei": "529900SGT9M1FJPXXI35",
     "name": "Lynas Rare Earths Limited",
-    "oberste": null,
-    "offen": "Im LEI-Register steht als Ausnahme NON_CONSOLIDATING (Mutter erstellt keinen Konzernabschluss); das belegt weder eine Mutter noch ihr Fehlen. Keine weitere gelesene Quelle."
+    "oberste": {
+     "belege": [
+      {
+       "fundstelle": "PDF-Seite 139 (pdftotext -layout, Tabellenzeilen)",
+       "quelle": "rk-lyc-ar-2026-s139",
+       "rolle": "hauptbeleg",
+       "zitat": "The names of substantial shareholders who have notified the Company in accordance with section 671B of the Corporations Act 2001 are:"
+      },
+      {
+       "fundstelle": "PDF-Seite 139 (pdftotext -layout, Tabellenzeilen)",
+       "quelle": "rk-lyc-ar-2026-s139",
+       "rolle": "zusatzbeleg",
+       "zitat": "1 UBS Group AG 98,107,131 … 2 State Street Corporation 96,082,792 … 3 Australian Super Pty Ltd 94,292,123 … subsidiaries of HPPL1 76,764,078 … 5 BlackRock Group 66,432,006"
+      },
+      {
+       "fundstelle": "PDF-Seite 138 (pdftotext -layout, Tabellenzeilen)",
+       "quelle": "rk-lyc-ar-2026-s138",
+       "rolle": "zusatzbeleg",
+       "zitat": "The information is current as at 31 July 2026. … Total 52,794 1,006,502,577 100.000"
+      },
+      {
+       "fundstelle": "JSON (Golden Copy 2026-11-16)",
+       "quelle": "rk-gleif-529900SGT9M1FJPXXI35-oben",
+       "rolle": "zusatzbeleg",
+       "zitat": "\"lei\":\"529900SGT9M1FJPXXI35\",\"category\":\"ULTIMATE_ACCOUNTING_CONSOLIDATION_PARENT\",\"reason\":\"NON_CONSOLIDATING\""
+      },
+      {
+       "fundstelle": "JSON (Golden Copy 2026-11-16)",
+       "quelle": "rk-gleif-529900SGT9M1FJPXXI35",
+       "rolle": "zusatzbeleg",
+       "zitat": "\"lei\":\"529900SGT9M1FJPXXI35\" … \"legalName\":{\"name\":\"LYNAS RARE EARTHS LIMITED\""
+      }
+     ],
+     "freigabe": "FREIGEGEBEN",
+     "freigabe_herkunft": "ABGELEITET: größter gemeldeter Großaktionär 9,7 % < 10 % (Regel Eddie Sablah 2026-11-23: Großaktionärsliste als Beleg für die oberste Gesellschaft (ABGELEITET)); Liste und 6 Zahlen Zweitprüfung BESTAETIGT 2026-11-23 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+     "grund": "GROSSAKTIONAERE_UNTER_SCHWELLE",
+     "text": "Kein beherrschender Aktionär (ABGELEITET, Regel 2026-11-23): Der Jahresbericht nennt die Großaktionäre, die ihre Beteiligung nach Section 671B Corporations Act gemeldet haben; der größte hält 98.107.131 von 1.006.502.577 Aktien (gerechnet 9,7 %, unter der Schwelle 10 %), Stand 31.07.2026. Das LEI-Register nennt keine Mutter (Ausnahme NON_CONSOLIDATING)."
+    },
+    "offen": null
    },
    "R-NR": {
     "art": "GESELLSCHAFT",
@@ -1085,7 +1122,7 @@
     },
     "S2": {
      "ebenen": 0,
-     "status": "OFFEN"
+     "status": "VOLLSTAENDIG_FREIGEGEBEN"
     },
     "S3": {
      "ebenen": 2,
@@ -1093,11 +1130,11 @@
     },
     "S4": {
      "ebenen": 0,
-     "status": "OFFEN"
+     "status": "VOLLSTAENDIG_FREIGEGEBEN"
     },
     "S5": {
      "ebenen": 0,
-     "status": "OFFEN"
+     "status": "VOLLSTAENDIG_FREIGEGEBEN"
     }
    },
    "kanten": 3,
@@ -1108,15 +1145,15 @@
    "letzte_eigentuemer": [
     "Kommission für Staatsvermögen der Inneren Mongolei (内蒙古自治区人民政府国有资产监督管理委员会)"
    ],
-   "oberste_gesellschaften": [],
-   "offen": 3,
-   "offene_knoten": [
+   "oberste_gesellschaften": [
     "Lynas Rare Earths Limited"
    ],
+   "offen": 0,
+   "offene_knoten": [],
    "schwelle_prozent": 10.0,
    "unbekannt": 0,
-   "vollstaendig": 2,
-   "vollstaendig_freigegeben": 2,
+   "vollstaendig": 5,
+   "vollstaendig_freigegeben": 5,
    "vollstaendig_kandidat": 0,
    "zweitpruefung_offen": 0
   },
@@ -1150,6 +1187,26 @@
     "text_artifact_sha256": "1b203c21dc0b07ac0444f0a52a552b090c5ff34566ad6600d1559ca848737479",
     "titel": "2026 Annual Report (mit Appendix 4E)",
     "url": "https://announcements.asx.com.au/asxpdf/20260826/pdf/0737nx07s3tnf7.pdf"
+   },
+   "rk-lyc-ar-2026-s138": {
+    "abgerufen": "2026-11-23",
+    "art": "COMPANY_PRIMARY",
+    "fundstelle": "PDF-Seite 138 (pdftotext -layout, Tabellenzeilen)",
+    "herausgeber": "Lynas Rare Earths Limited",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/lyc-ar-2026-p138.txt",
+    "text_artifact_sha256": "ecb8fa741ccb69f305fb87fa1394d080a4214cdcaee05c056789ff9cce18c3fe",
+    "titel": "2026 Annual Report (mit Appendix 4E)",
+    "url": "https://announcements.asx.com.au/asxpdf/20260826/pdf/0737nx07s3tnf7.pdf#page=138"
+   },
+   "rk-lyc-ar-2026-s139": {
+    "abgerufen": "2026-11-23",
+    "art": "COMPANY_PRIMARY",
+    "fundstelle": "PDF-Seite 139 (pdftotext -layout, Tabellenzeilen)",
+    "herausgeber": "Lynas Rare Earths Limited",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/lyc-ar-2026-p139.txt",
+    "text_artifact_sha256": "96a63c2b911800306b1b2d38a738c8127841873e83d90f26258d56e434b31c08",
+    "titel": "2026 Annual Report (mit Appendix 4E)",
+    "url": "https://announcements.asx.com.au/asxpdf/20260826/pdf/0737nx07s3tnf7.pdf#page=139"
    },
    "rk-nr-ar-2025-s019": {
     "abgerufen": "2026-11-08",
@@ -1323,15 +1380,49 @@
     "urteil": "BESTAETIGT",
     "ziel_id": "seltene-erden/seltene-erden-site-legacy-row-62",
     "ziel_typ": "glied"
+   },
+   {
+    "abgleich": "",
+    "aufgabe": "Ziel oberste/R-LYNAS. Frage: Enthält die Quelle eine Liste der Großaktionäre von Lynas Rare Earths Limited, die der Gesellschaft ihre Beteiligung gemeldet haben (substantial shareholders)? Quellen: rk-lyc-ar-2026-s139 (PDF-Seite 139 (pdftotext -layout, Tabellenzeilen)).",
+    "aussage": "Enthält die Quelle eine Liste der Großaktionäre von Lynas Rare Earths Limited, die der Gesellschaft ihre Beteiligung gemeldet haben (substantial shareholders)?",
+    "belege": [
+     {
+      "quelle": "rk-lyc-ar-2026-s139",
+      "zitat": [
+       "The names of substantial shareholders who have notified the Company in accordance with section 671B of the Corporations Act 2001 are:"
+      ]
+     }
+    ],
+    "blind": true,
+    "erstmodell": "claude-opus-5-5",
+    "erstpruefung_sitzung": "session_01JgcA7TdgLRrqKV9kyFuE5E",
+    "geprueft_am": "2026-11-23",
+    "hinweis": "Liste mit fünf Namen vorhanden.",
+    "pruef_id": "AE16",
+    "pruefer": "auto-zweitpruefung (claude-sonnet-5-5, blind)",
+    "pruefmodell": "claude-sonnet-5-5",
+    "pruefweg": "subagent",
+    "quelle_frisch_geladen": false,
+    "regel": "Eddie Sablah 2026-11-16: Regel 3 automatisch, blinde Zweitprüfung durch ein zweites Modell + Programmprüfung; Stichprobe 5 Fälle/Monat bleibt",
+    "sitzung": "auto:claude-sonnet-5-5:2026-11-23",
+    "textkopie_geprueft": true,
+    "urteil": "BESTAETIGT",
+    "verfahren": "AUTO_ZWEITPRUEFUNG",
+    "wert": {
+     "einheit": "",
+     "zahl_text": ""
+    },
+    "ziel_id": "R-LYNAS",
+    "ziel_typ": "oberste"
    }
   ]
  },
  "eingaben": {
-  "analysis/rohstoffe/eigentum/eigentumskette.json": "6d0a735986003d2f59a6eeedb6ba08e69ea4ee7d910ccab607eb8bf20c92aae0",
+  "analysis/rohstoffe/eigentum/eigentumskette.json": "5d02f341354c9ed186ce2c189b9619b8061fdb5d2739fbfa3688764f32e1b9ba",
   "analysis/rohstoffe/fluss-freigaben.jsonl": "aaabbdac9c8a96ba0a688d2348a9b29df912fd5f6d05c9915280d05f3e396d66",
   "analysis/rohstoffe/mengen/annahmen-snapshot.json": "5169bc01abcdff017b11b6e2e0bdb0abbc934a843f86a8fbbf4dbdd3585165b1",
-  "analysis/rohstoffe/mengen/mengen.json": "e3cf36b504d52d37e77dfe24088ea1175213209c2f3448b9288da24bc3b4cc6b",
-  "analysis/rohstoffe/mengen/zweitpruefung.jsonl": "e093861fa8ba9484dafa843cac1e2e03d7c05dc79a1909e4e29a39985fbe865b",
+  "analysis/rohstoffe/mengen/mengen.json": "a9c63566dfea221b1a79b37c3a5e4279c95da48436d5d005c1c924156ccb0db3",
+  "analysis/rohstoffe/mengen/zweitpruefung.jsonl": "65e79d9b6e01f162ee1d6274df6ad52c3f25a75345c5dc532269828f56622c7f",
   "analysis/rohstoffe/seltene-erden/kandidaten.json": "a5202855d2bd42654475a6577d173498a3f1da70f754c76f6cb54e1772e1648b",
   "analysis/rohstoffe/seltene-erden/markt.json": "d8c04d2dd60eb2cf0200450597debce98f8fc4d602063b8b6757a4e79a469d9e"
  },
@@ -2281,7 +2372,7 @@
    "Risiko"
   ],
   "gesamt": 30,
-  "mit_annahmen": 24,
+  "mit_annahmen": 27,
   "zeilen": [
    {
     "felder": {
@@ -2407,9 +2498,19 @@
    },
    "wert_abgeleitet": null,
    "wert_annahme": {
-    "evidenz": "UNKNOWN",
-    "grund": "Kein gelesener Preis für diese Ware (Seltene Erden: kein Mischpreis; Petalit/Anodenmaterial/Antimon: kein Preis im Repo).",
-    "text": "unbekannt"
+    "annahme_art": "RECHNUNG",
+    "eur": 24986985.944820408,
+    "eur_spanne": [
+     24986985.944820408
+    ],
+    "evidenz": "ANNAHME",
+    "preis_basis": "seo_konzentrat",
+    "preis_datum": null,
+    "preis_quelle": "U.S. Geological Survey, Mineral Commodity Summaries 2026, Rare Earths",
+    "preis_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rare-earths.pdf",
+    "preis_zitat": "51,000 tons of REO in mineral concentrates was produced and was valued at $240 million",
+    "rechnung": "6.000 t (Annahme A-SE-MENGE, t SEO) × 4.705,882 US$ je t SEO im Konzentrat (Wert der US-Förderung 2025e (Seltenerd-Konzentrat, Mountain Pass u. a.) ÷ Menge SEO im Konzentrat = Durchschnittswert je t SEO im Konzentrat; kein Marktpreis, US-Durchschnitt) = 28,2 Mio. US$ ÷ EZB-Jahresmittel 2025: 1,1300 US$ je €",
+    "text": "≈ 25 Mio. € pro Jahr"
    }
   },
   {
@@ -2478,9 +2579,19 @@
    },
    "wert_abgeleitet": null,
    "wert_annahme": {
-    "evidenz": "UNKNOWN",
-    "grund": "Kein gelesener Preis für diese Ware (Seltene Erden: kein Mischpreis; Petalit/Anodenmaterial/Antimon: kein Preis im Repo).",
-    "text": "unbekannt"
+    "annahme_art": "RECHNUNG",
+    "eur": 24986985.944820408,
+    "eur_spanne": [
+     24986985.944820408
+    ],
+    "evidenz": "ANNAHME",
+    "preis_basis": "seo_konzentrat",
+    "preis_datum": null,
+    "preis_quelle": "U.S. Geological Survey, Mineral Commodity Summaries 2026, Rare Earths",
+    "preis_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rare-earths.pdf",
+    "preis_zitat": "51,000 tons of REO in mineral concentrates was produced and was valued at $240 million",
+    "rechnung": "6.000 t (Annahme A-SE-MENGE, t SEO) × 4.705,882 US$ je t SEO im Konzentrat (Wert der US-Förderung 2025e (Seltenerd-Konzentrat, Mountain Pass u. a.) ÷ Menge SEO im Konzentrat = Durchschnittswert je t SEO im Konzentrat; kein Marktpreis, US-Durchschnitt) = 28,2 Mio. US$ ÷ EZB-Jahresmittel 2025: 1,1300 US$ je €",
+    "text": "≈ 25 Mio. € pro Jahr"
    }
   },
   {
@@ -2569,9 +2680,9 @@
   "belege": 7,
   "eigentum_belegt": 5,
   "eigentum_kandidaten": 2,
-  "eigentumskette_freigegeben": 2,
+  "eigentumskette_freigegeben": 5,
   "eigentumskette_kanten": 3,
-  "eigentumskette_vollstaendig": 2,
+  "eigentumskette_vollstaendig": 5,
   "glieder_mit_ausweichquelle": 2,
   "kette_stufen": 2,
   "mengen_abgeleitet": 0,
@@ -2587,13 +2698,13 @@
   "standorte_mit_ort": 5,
   "tiefe_belegt": 19,
   "tiefe_gesamt": 30,
-  "tiefe_mit_annahmen": 24,
+  "tiefe_mit_annahmen": 27,
   "verbindungen": 3,
   "verbindungen_auf_globus": 3,
   "verbindungen_freigegeben": 3,
   "werte_abgeleitet": 0,
   "werte_belegt": 1,
   "werte_in_euro": 1,
-  "werte_mit_annahmen": 1
+  "werte_mit_annahmen": 3
  }
 }

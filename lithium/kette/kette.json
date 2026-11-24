@@ -2771,9 +2771,41 @@
       "name": "Hainan Mining",
       "richtung": "ABFLUSS",
       "verbindung": "V13"
+     },
+     {
+      "art": "STANDORT",
+      "freigabe": "KANDIDAT",
+      "freigabe_herkunft": "USGS-Zeile gelesen, Kapazität und Lage gegen den Auszug geprüft; Zweitprüfung offen",
+      "fuer": "S25",
+      "glied": null,
+      "hinweis": "Anderer ivorischer Seehafen mit Umschlag für Mineralprodukte (Stückgut); dass Bougouni-Konzentrat über Abidjan verschifft würde, ist nicht belegt. Kapazität ist keine freie Menge; die Warengruppe ist unspezifisch (Mineralprodukte), Spodumen ist nicht eigens genannt.",
+      "id": "AW-LI-ABIDJAN",
+      "lage": {
+       "genauigkeit": "E",
+       "lat": 5.301891,
+       "lon": -4.021116,
+       "quelle": "USGS-GIS 2021, AFR_Infra_Transport_Ports, CIp01e"
+      },
+      "land": "CI",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": null,
+       "text": "Umschlagkapazität 15.000 t pro Tag Mineralprodukte (Stückgut), USGS-GIS Afrika 2021, Datenstand nicht genannt"
+      },
+      "name": "Hafen Abidjan (Côte d'Ivoire), Stückgut Mineralprodukte",
+      "quelle": {
+       "fundstelle": "AFR_Infra_Transport_Ports CIp01e (Kapazität und Lage; Quelle laut Zeile: NGA-WPI-Pub150, CIp001; Datenstand nicht genannt)",
+       "herausgeber": "U.S. Geological Survey",
+       "titel": "Compilation of Geospatial Data (GIS) for the Mineral Industries and Related Infrastructure of Africa",
+       "url": "https://www.sciencebase.gov/catalog/item/607611a9d34e018b3201cbbf",
+       "zitat": "GIS: Abidjan · Côte d’Ivoire · General Cargo Port · Mineral Products Unspecified · 15000 Metric tons per day · 5.301891, -4.021116 · Port Automome d'Abidjan"
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
      }
     ],
-    "mit_menge": 1
+    "mit_menge": 2
    },
    "dauer": {
     "evidenz": "UNKNOWN",
@@ -9067,13 +9099,13 @@
   ]
  },
  "eingaben": {
-  "analysis/rohstoffe/eigentum/eigentumskette.json": "6d0a735986003d2f59a6eeedb6ba08e69ea4ee7d910ccab607eb8bf20c92aae0",
+  "analysis/rohstoffe/eigentum/eigentumskette.json": "5d02f341354c9ed186ce2c189b9619b8061fdb5d2739fbfa3688764f32e1b9ba",
   "analysis/rohstoffe/fluss-freigaben.jsonl": "aaabbdac9c8a96ba0a688d2348a9b29df912fd5f6d05c9915280d05f3e396d66",
   "analysis/rohstoffe/lithium/kandidaten.json": "f5c23d3ae23edae33a67eeac555ca8336c0df5385e471aaeb5d7bac5880de53c",
   "analysis/rohstoffe/lithium/markt.json": "7a16c8ab88fda7ebdb65896703bbc07c8b47658a3f351d8c08df37313ea69303",
   "analysis/rohstoffe/mengen/annahmen-snapshot.json": "5169bc01abcdff017b11b6e2e0bdb0abbc934a843f86a8fbbf4dbdd3585165b1",
-  "analysis/rohstoffe/mengen/mengen.json": "e3cf36b504d52d37e77dfe24088ea1175213209c2f3448b9288da24bc3b4cc6b",
-  "analysis/rohstoffe/mengen/zweitpruefung.jsonl": "e093861fa8ba9484dafa843cac1e2e03d7c05dc79a1909e4e29a39985fbe865b"
+  "analysis/rohstoffe/mengen/mengen.json": "a9c63566dfea221b1a79b37c3a5e4279c95da48436d5d005c1c924156ccb0db3",
+  "analysis/rohstoffe/mengen/zweitpruefung.jsonl": "65e79d9b6e01f162ee1d6274df6ad52c3f25a75345c5dc532269828f56622c7f"
  },
  "erzeugt_von": "scripts/analysis/rohstoffe/rohstoffkette.py",
  "kette": {

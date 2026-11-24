@@ -2798,13 +2798,13 @@
   ]
  },
  "eingaben": {
-  "analysis/rohstoffe/eigentum/eigentumskette.json": "6d0a735986003d2f59a6eeedb6ba08e69ea4ee7d910ccab607eb8bf20c92aae0",
+  "analysis/rohstoffe/eigentum/eigentumskette.json": "5d02f341354c9ed186ce2c189b9619b8061fdb5d2739fbfa3688764f32e1b9ba",
   "analysis/rohstoffe/fluss-freigaben.jsonl": "aaabbdac9c8a96ba0a688d2348a9b29df912fd5f6d05c9915280d05f3e396d66",
   "analysis/rohstoffe/graphit/kandidaten.json": "82b42a882bd5a84fb26482c511e223c960d6729d3e4c5f3b495682bdfa6d109e",
   "analysis/rohstoffe/graphit/markt.json": "4278fd32ff895333b148c239d65e328c3c256f9123dcd28bbf7b32d2a540f896",
   "analysis/rohstoffe/mengen/annahmen-snapshot.json": "5169bc01abcdff017b11b6e2e0bdb0abbc934a843f86a8fbbf4dbdd3585165b1",
-  "analysis/rohstoffe/mengen/mengen.json": "e3cf36b504d52d37e77dfe24088ea1175213209c2f3448b9288da24bc3b4cc6b",
-  "analysis/rohstoffe/mengen/zweitpruefung.jsonl": "e093861fa8ba9484dafa843cac1e2e03d7c05dc79a1909e4e29a39985fbe865b"
+  "analysis/rohstoffe/mengen/mengen.json": "a9c63566dfea221b1a79b37c3a5e4279c95da48436d5d005c1c924156ccb0db3",
+  "analysis/rohstoffe/mengen/zweitpruefung.jsonl": "65e79d9b6e01f162ee1d6274df6ad52c3f25a75345c5dc532269828f56622c7f"
  },
  "erzeugt_von": "scripts/analysis/rohstoffe/rohstoffkette.py",
  "kette": {
@@ -4751,7 +4751,7 @@
    "Risiko"
   ],
   "gesamt": 66,
-  "mit_annahmen": 43,
+  "mit_annahmen": 45,
   "zeilen": [
    {
     "felder": {
@@ -5536,7 +5536,53 @@
     "t": null,
     "text": "unbekannt"
    },
-   "menge_abgeleitet": null,
+   "menge_abgeleitet": {
+    "art": "bilanz",
+    "belege": [
+     {
+      "abgerufen": "2026-11-24",
+      "fundstelle": "Annual Report 2025, PDF-Seite 37",
+      "herausgeber": "Syrah Resources Limited",
+      "textkopie": "analysis/rohstoffe/mengen/raw/syr-ar-2025-p37.txt",
+      "url": "https://announcements.asx.com.au/asxpdf/20260326/pdf/06xv29j0wp3tr8.pdf",
+      "zitat": "Syrah completed three 10kt breakbulk fines shipments … from Pemba port to a battery supply chain participant … in Indonesia for AAM production."
+     }
+    ],
+    "eingaenge": [
+     {
+      "anzahl": 3,
+      "einheit": "kt",
+      "freigabe": "FREIGEGEBEN",
+      "hoch": 1,
+      "name": "Breakbulk-Ladung Feinflocken nach Indonesien 2025 (Größe je Ladung)",
+      "quelle": "Syrah Resources Limited, Annual Report 2025, PDF-Seite 37",
+      "ref": "MA-GRF-10/Breakbulk-Ladung Feinflocken nach Indonesien 2025 (Größe je Ladung)",
+      "wert": 10.0
+     }
+    ],
+    "einheit": "kt",
+    "ergebnis": [
+     30.0
+    ],
+    "evidenz": "ABGELEITET",
+    "freigabe_eingaenge": [
+     {
+      "freigabe": "FREIGEGEBEN",
+      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-24 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+      "name": "Breakbulk-Ladung Feinflocken nach Indonesien 2025 (Größe je Ladung)"
+     }
+    ],
+    "hinweis": "Der Jahresbericht nennt den Abnehmer nicht beim Namen („a battery supply chain participant in Indonesia“); auf PDF-Seite 12 steht „~10kt“, also ungefähr. Syrah nennt BTR als Spot-Kunden in Indonesien (Quartalsbericht 10–12/2025, S. 3, analysis/research/graphit-flows-v1/raw/syr-q4-2025-p3.txt: zwei Breakbulk-Ladungen nach Indonesien im Quartal, „spot sales to BTR“) und hatte schon 2024 weitere Breakbulk-Verkäufe an PT Indonesia BTR New Energy Materials angekündigt (Quartalsbericht 7–9/2024). Zuordnung zu BTR ist deshalb ein Schluss, keine Angabe der Quelle; Menge bleibt ABGELEITET.",
+    "id": "MA-GRF-10",
+    "pro_jahr": true,
+    "qualifier": "Breakbulk-Lieferungen Feinflocken über Pemba an den Batterie-Abnehmer in Indonesien",
+    "quelle_text": "30 kt (Breakbulk-Lieferungen Feinflocken über Pemba an den Batterie-Abnehmer in Indonesien, Kalenderjahr 2025)",
+    "rechenweg": "3 Ladungen × 10 kt",
+    "t": 30000.0,
+    "text": "30.000 t pro Jahr",
+    "umrechnung": "30 kt = 30.000 t",
+    "zeitraum": "Kalenderjahr 2025"
+   },
    "menge_annahme": null,
    "menge_bezug": [],
    "nach": "S2",
@@ -5553,9 +5599,19 @@
    },
    "wert_abgeleitet": null,
    "wert_annahme": {
-    "evidenz": "UNKNOWN",
-    "grund": "Keine Menge, auch keine Annahme.",
-    "text": "unbekannt"
+    "annahme_art": "RECHNUNG",
+    "eur": 26548672.566371683,
+    "eur_spanne": [
+     26548672.566371683
+    ],
+    "evidenz": "ANNAHME",
+    "preis_basis": "graphit",
+    "preis_datum": null,
+    "preis_quelle": "U.S. Geological Survey, Mineral Commodity Summaries 2026, Graphite (Natural)",
+    "preis_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-graphite.pdf",
+    "preis_zitat": "Price, average unit value of imports, dollars per metric ton at … Flake 1,330 1,200 1,080 1,050 1,000",
+    "rechnung": "30.000 t (abgeleitete Menge MA-GRF-10) × 1.000 US$ je t Naturgraphit (Flocken) (Importwert Flocken USA 2025e) = 30 Mio. US$ ÷ EZB-Jahresmittel 2025: 1,1300 US$ je €",
+    "text": "≈ 26,5 Mio. € pro Jahr"
    }
   }
  ],
@@ -5575,12 +5631,12 @@
   "eigentumskette_vollstaendig": 4,
   "glieder_mit_ausweichquelle": 10,
   "kette_stufen": 3,
-  "mengen_abgeleitet": 0,
+  "mengen_abgeleitet": 1,
   "mengen_belegt": 4,
   "mengen_bezug": 0,
   "mengen_freigegeben": 0,
   "mengen_in_tonnen": 3,
-  "mengen_mit_annahmen": 7,
+  "mengen_mit_annahmen": 8,
   "risiko_belegt": 1,
   "risikoebene_belegt": 34,
   "risikoebene_felder": 44,
@@ -5588,13 +5644,13 @@
   "standorte_mit_ort": 9,
   "tiefe_belegt": 32,
   "tiefe_gesamt": 66,
-  "tiefe_mit_annahmen": 43,
+  "tiefe_mit_annahmen": 45,
   "verbindungen": 10,
   "verbindungen_auf_globus": 8,
   "verbindungen_freigegeben": 10,
   "werte_abgeleitet": 0,
   "werte_belegt": 0,
   "werte_in_euro": 0,
-  "werte_mit_annahmen": 7
+  "werte_mit_annahmen": 8
  }
 }

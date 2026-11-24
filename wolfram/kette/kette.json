@@ -346,12 +346,12 @@
    "ersatz": [],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen. V1: kein freigegebener Marktpreis für Wolframkonzentrat."
    },
    "mengen": [
     {
-     "evidenz": "UNKNOWN",
-     "text": "unbekannt",
+     "evidenz": "BELEGT",
+     "text": "285,9 t WO3 pro Jahr",
      "verbindung": "V1"
     },
     {
@@ -366,8 +366,44 @@
     "S5"
    ],
    "tonnen": {
-    "evidenz": "UNKNOWN",
-    "grund": "Kein Bogen an diesem Glied hat eine freigegebene Menge in Tonnen. Ohne Menge: 2 von 2 Bögen."
+    "evidenz": "ABGELEITET",
+    "grund": "Weitere 1 Bögen an diesem Glied ohne Menge: V2; die tatsächliche Menge kann größer sein.",
+    "hinweis": "Mengen verschiedener Waren oder Zeitbasen werden nicht addiert. Weitere 1 Bögen an diesem Glied ohne Menge: V2; die tatsächliche Menge kann größer sein.",
+    "ohne_menge": [
+     "V2"
+    ],
+    "posten": [
+     {
+      "art": "summe",
+      "eingaenge": [
+       {
+        "einheit": "t",
+        "freigabe": "FREIGEGEBEN",
+        "hoch": 1,
+        "name": "V1 Mt Carbine → CRONIMET Asia Pte",
+        "quelle": "28.588 mtu WO3 (verkauft, Geschäftsjahr 1.7.2025 bis 30.6.2026)",
+        "ref": "M-WOF-01",
+        "wert": 285.88
+       }
+      ],
+      "einheit": "t",
+      "ergebnis": [
+       285.88
+      ],
+      "evidenz": "ABGELEITET",
+      "formel": "285,88 t",
+      "hinweis": "Menge laut Quelle je Bogen (Lieferung, Vertrag oder Kapazität wie dort angegeben); keine Lieferbestätigung.",
+      "pro_jahr": true,
+      "rechenweg": "belegte Menge des einzigen Bogens mit Tonnen in dieser Gruppe: 285,9 t (V1)",
+      "t": 285.88,
+      "text": "285,9 t Wolframkonzentrat pro Jahr",
+      "verbindungen": [
+       "V1"
+      ],
+      "ware": "Wolframkonzentrat"
+     }
+    ],
+    "text": "betroffen 285,9 t Wolframkonzentrat pro Jahr"
    },
    "verbindungen_weg": [
     "V1",
@@ -479,16 +515,50 @@
    },
    "mengen": [
     {
-     "evidenz": "UNKNOWN",
-     "text": "unbekannt",
+     "evidenz": "BELEGT",
+     "text": "285,9 t WO3 pro Jahr",
      "verbindung": "V1"
     }
    ],
    "ohne_abfluss": [],
    "ohne_zufluss": [],
    "tonnen": {
-    "evidenz": "UNKNOWN",
-    "grund": "Kein Bogen an diesem Glied hat eine freigegebene Menge in Tonnen. Ohne Menge: 1 von 1 Bögen."
+    "evidenz": "ABGELEITET",
+    "grund": null,
+    "hinweis": "Mengen verschiedener Waren oder Zeitbasen werden nicht addiert.",
+    "ohne_menge": [],
+    "posten": [
+     {
+      "art": "summe",
+      "eingaenge": [
+       {
+        "einheit": "t",
+        "freigabe": "FREIGEGEBEN",
+        "hoch": 1,
+        "name": "V1 Mt Carbine → CRONIMET Asia Pte",
+        "quelle": "28.588 mtu WO3 (verkauft, Geschäftsjahr 1.7.2025 bis 30.6.2026)",
+        "ref": "M-WOF-01",
+        "wert": 285.88
+       }
+      ],
+      "einheit": "t",
+      "ergebnis": [
+       285.88
+      ],
+      "evidenz": "ABGELEITET",
+      "formel": "285,88 t",
+      "hinweis": "Menge laut Quelle je Bogen (Lieferung, Vertrag oder Kapazität wie dort angegeben); keine Lieferbestätigung.",
+      "pro_jahr": true,
+      "rechenweg": "belegte Menge des einzigen Bogens mit Tonnen in dieser Gruppe: 285,9 t (V1)",
+      "t": 285.88,
+      "text": "285,9 t Wolframkonzentrat pro Jahr",
+      "verbindungen": [
+       "V1"
+      ],
+      "ware": "Wolframkonzentrat"
+     }
+    ],
+    "text": "betroffen 285,9 t Wolframkonzentrat pro Jahr"
    },
    "verbindungen_weg": [
     "V1"
@@ -622,12 +692,12 @@
       "art": "NETZ",
       "fuer": "S2",
       "glied": "S3",
-      "hinweis": null,
+      "hinweis": "Belegte Menge dieser weiteren Verbindung (Vertrag oder Lieferung), keine freie Kapazität.",
       "menge": {
-       "evidenz": "UNKNOWN",
-       "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
-       "t": null,
-       "text": "unbekannt"
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": 285.88,
+       "text": "285,9 t WO3 pro Jahr"
       },
       "name": "CRONIMET Asia Pte",
       "richtung": "ABFLUSS",
@@ -698,7 +768,7 @@
       "verbindung": null
      }
     ],
-    "mit_menge": 2
+    "mit_menge": 3
    },
    "dauer": {
     "evidenz": "UNKNOWN",
@@ -1398,11 +1468,11 @@
   ]
  },
  "eingaben": {
-  "analysis/rohstoffe/eigentum/eigentumskette.json": "6d0a735986003d2f59a6eeedb6ba08e69ea4ee7d910ccab607eb8bf20c92aae0",
+  "analysis/rohstoffe/eigentum/eigentumskette.json": "5d02f341354c9ed186ce2c189b9619b8061fdb5d2739fbfa3688764f32e1b9ba",
   "analysis/rohstoffe/fluss-freigaben.jsonl": "aaabbdac9c8a96ba0a688d2348a9b29df912fd5f6d05c9915280d05f3e396d66",
   "analysis/rohstoffe/mengen/annahmen-snapshot.json": "5169bc01abcdff017b11b6e2e0bdb0abbc934a843f86a8fbbf4dbdd3585165b1",
-  "analysis/rohstoffe/mengen/mengen.json": "e3cf36b504d52d37e77dfe24088ea1175213209c2f3448b9288da24bc3b4cc6b",
-  "analysis/rohstoffe/mengen/zweitpruefung.jsonl": "e093861fa8ba9484dafa843cac1e2e03d7c05dc79a1909e4e29a39985fbe865b",
+  "analysis/rohstoffe/mengen/mengen.json": "a9c63566dfea221b1a79b37c3a5e4279c95da48436d5d005c1c924156ccb0db3",
+  "analysis/rohstoffe/mengen/zweitpruefung.jsonl": "65e79d9b6e01f162ee1d6274df6ad52c3f25a75345c5dc532269828f56622c7f",
   "analysis/rohstoffe/wolfram/kandidaten.json": "7160b56628f84b169b4de4aa4ef1f2a7a41dbcc2921c7e0aa7c428167d7d97ca",
   "analysis/rohstoffe/wolfram/markt.json": "2c55a7bff2ec69921bea2e3e8d3f549c7aaeed67705b81adb8b446028df1111c"
  },
@@ -2426,7 +2496,7 @@
   }
  ],
  "tiefe": {
-  "belegt": 19,
+  "belegt": 23,
   "dimensionen": [
    "Eigentümer/Betreiber",
    "Standort",
@@ -2436,7 +2506,7 @@
    "Risiko"
   ],
   "gesamt": 36,
-  "mit_annahmen": 20,
+  "mit_annahmen": 24,
   "zeilen": [
    {
     "felder": {
@@ -2453,10 +2523,10 @@
     "felder": {
      "Eigentümer/Betreiber": "belegt",
      "Lieferbeziehung": "belegt",
-     "Menge": "unbekannt",
+     "Menge": "belegt",
      "Risiko": "belegt",
      "Standort": "belegt",
-     "Wert": "unbekannt"
+     "Wert": "belegt"
     },
     "id": "S2"
    },
@@ -2464,10 +2534,10 @@
     "felder": {
      "Eigentümer/Betreiber": "unbekannt",
      "Lieferbeziehung": "belegt",
-     "Menge": "unbekannt",
+     "Menge": "belegt",
      "Risiko": "unbekannt",
      "Standort": "unbekannt",
-     "Wert": "unbekannt"
+     "Wert": "belegt"
     },
     "id": "S3"
    },
@@ -2528,13 +2598,43 @@
    "freigabe_herkunft": "Claude (delegiert durch Eddie Sablah); Prüfbericht pruefbericht-2026-11-10.pdf",
    "id": "V1",
    "menge": {
-    "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt eine Menge für diese Verbindung.",
-    "pro_jahr": null,
-    "quelle_text": null,
-    "rechnung": "",
-    "t": null,
-    "text": "unbekannt"
+    "beleg_id": "M-WOF-01",
+    "belege": [
+     {
+      "abgerufen": "2026-11-24",
+      "fundstelle": "Annual Report 2026, PDF-Seite 16",
+      "herausgeber": "EQ Resources Limited",
+      "textkopie": "analysis/rohstoffe/mengen/raw/eqr-ar-2026-p16.txt",
+      "url": "https://announcements.asx.com.au/asxpdf/20260930/pdf/074px4sgpjwyz2.pdf",
+      "zitat": "Mt Carbine UoM 2026 2025 % Change … WO3 sold mtu 28,588 50,040 (43%)"
+     },
+     {
+      "abgerufen": "2026-11-24",
+      "fundstelle": "Annual Report 2026, PDF-Seite 70",
+      "herausgeber": "EQ Resources Limited",
+      "textkopie": "analysis/rohstoffe/mengen/raw/eqr-ar-2026-p70.txt",
+      "url": "https://announcements.asx.com.au/asxpdf/20260930/pdf/074px4sgpjwyz2.pdf",
+      "zitat": "Australia Spain Elimination Consolidated … 2026 A$'000 A$'000 A$'000 A$'000 … Sale Revenue 53,784 111,655 - 165,439"
+     },
+     {
+      "abgerufen": "2026-11-24",
+      "fundstelle": "Annual Report 2026, PDF-Seite 71",
+      "herausgeber": "EQ Resources Limited",
+      "textkopie": "analysis/rohstoffe/mengen/raw/eqr-ar-2026-p71.txt",
+      "url": "https://announcements.asx.com.au/asxpdf/20260930/pdf/074px4sgpjwyz2.pdf",
+      "zitat": "During the year, revenue attributable to the Australia segment is derived from the sale of tungsten concentrate … produced at Mt Carbine to Cronimet Aisa Pte. Ltd., which took 100% of initial production under an offtake and"
+     }
+    ],
+    "evidenz": "BELEGT",
+    "freigabe": "FREIGEGEBEN",
+    "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-24 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+    "grund": null,
+    "hinweis": "Verkaufte WO3-Menge von Mt Carbine im Geschäftsjahr (PDF-Seite 16). Laut Segmentangabe (PDF-Seite 71) stammt der Umsatz des Segments Australien aus dem Verkauf des Mt-Carbine-Konzentrats an Cronimet Asia; Wert = Verkaufsumsatz Segment Australien (PDF-Seite 70). Euro mit EZB-Jahresmittel 2025, weil für 2026 noch kein Jahresmittel veröffentlicht ist (Geschäftsjahr halb 2025, halb 2026).",
+    "pro_jahr": true,
+    "quelle_text": "28.588 mtu WO3 (verkauft, Geschäftsjahr 1.7.2025 bis 30.6.2026)",
+    "rechnung": "28.588 mtu WO3 = 285,88 t",
+    "t": 285.88,
+    "text": "285,9 t WO3 pro Jahr"
    },
    "menge_abgeleitet": null,
    "menge_annahme": null,
@@ -2544,19 +2644,18 @@
    "von": "S2",
    "ware": "Wolframkonzentrat",
    "wert": {
-    "eur": null,
-    "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt einen Wert; Menge × Preis ist eine Rechnung und steht nur in der Ansicht „Mit Annahmen“.",
-    "quelle_text": null,
-    "rechnung": "",
-    "text": "unbekannt"
+    "beleg_id": "M-WOF-01",
+    "eur": 30702134.94691175,
+    "evidenz": "BELEGT",
+    "freigabe": "FREIGEGEBEN",
+    "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-24 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+    "grund": null,
+    "quelle_text": "53,8 Mio. A$ laut Quelle",
+    "rechnung": "53,8 Mio. A$ ÷ EZB-Jahresmittel 2025: 1,7518 A$ je €",
+    "text": "30,7 Mio. €"
    },
    "wert_abgeleitet": null,
-   "wert_annahme": {
-    "evidenz": "UNKNOWN",
-    "grund": "Keine Menge, auch keine Annahme.",
-    "text": "unbekannt"
-   }
+   "wert_annahme": null
   },
   {
    "art": "HANDEL",
@@ -2647,7 +2746,39 @@
    },
    "menge_abgeleitet": null,
    "menge_annahme": null,
-   "menge_bezug": [],
+   "menge_bezug": [
+    {
+     "art": "AUSSTOSS",
+     "art_text": "Ausstoß des liefernden Glieds (alle Abnehmer), Anteil dieser Verbindung unbekannt",
+     "belege": [
+      {
+       "abgerufen": "2026-11-24",
+       "fundstelle": "Annual Report 2026, PDF-Seite 12",
+       "herausgeber": "EQ Resources Limited",
+       "textkopie": "analysis/rohstoffe/mengen/raw/eqr-ar-2026-p12.txt",
+       "url": "https://announcements.asx.com.au/asxpdf/20260930/pdf/074px4sgpjwyz2.pdf",
+       "zitat": "Barruecopardo Mine UoM 2026 2025 % Change … WO3 sold mtu 89,087 116,586 (24%)"
+      },
+      {
+       "abgerufen": "2026-11-24",
+       "fundstelle": "Annual Report 2026, PDF-Seite 71",
+       "herausgeber": "EQ Resources Limited",
+       "textkopie": "analysis/rohstoffe/mengen/raw/eqr-ar-2026-p71.txt",
+       "url": "https://announcements.asx.com.au/asxpdf/20260930/pdf/074px4sgpjwyz2.pdf",
+       "zitat": "During the year, revenue attributable to the Spain segment is derived from the sale of tungsten concentrate … produced at Barruecopardo, sold under offtake and marketing arrangements with established refineries and"
+      }
+     ],
+     "freigabe": "FREIGEGEBEN",
+     "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-24 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+     "hinweis": "Verkaufte WO3-Menge von Barruecopardo im Geschäftsjahr an Raffinerien und Händler (Elmet, ab Februar 2026 auch Traxys). Welcher Teil an Elmet ging, nennt der Bericht nicht.",
+     "id": "M-WOF-03",
+     "quelle_text": "89.087 mtu WO3 (Verkauf Barruecopardo, alle Abnehmer, Geschäftsjahr 1.7.2025 bis 30.6.2026)",
+     "rechnung": "89.087 mtu WO3 = 890,87 t",
+     "t": 890.87,
+     "text": "890,9 t WO3 pro Jahr",
+     "zeitraum": "Geschäftsjahr 1.7.2025 bis 30.6.2026"
+    }
+   ],
    "nach": "S4",
    "stand": "Vertrag November 2024, 5 Jahre",
    "von": "S1",
@@ -2742,25 +2873,25 @@
   "glieder_mit_ausweichquelle": 4,
   "kette_stufen": 2,
   "mengen_abgeleitet": 0,
-  "mengen_belegt": 1,
-  "mengen_bezug": 0,
-  "mengen_freigegeben": 0,
-  "mengen_in_tonnen": 1,
-  "mengen_mit_annahmen": 1,
+  "mengen_belegt": 2,
+  "mengen_bezug": 1,
+  "mengen_freigegeben": 1,
+  "mengen_in_tonnen": 2,
+  "mengen_mit_annahmen": 2,
   "risiko_belegt": 2,
   "risikoebene_belegt": 17,
   "risikoebene_felder": 24,
   "standorte": 6,
   "standorte_mit_ort": 5,
-  "tiefe_belegt": 19,
+  "tiefe_belegt": 23,
   "tiefe_gesamt": 36,
-  "tiefe_mit_annahmen": 20,
+  "tiefe_mit_annahmen": 24,
   "verbindungen": 4,
   "verbindungen_auf_globus": 3,
   "verbindungen_freigegeben": 4,
   "werte_abgeleitet": 0,
-  "werte_belegt": 1,
-  "werte_in_euro": 1,
-  "werte_mit_annahmen": 2
+  "werte_belegt": 2,
+  "werte_in_euro": 2,
+  "werte_mit_annahmen": 3
  }
 }

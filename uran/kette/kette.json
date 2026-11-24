@@ -780,9 +780,64 @@
   },
   "S5": {
    "ausweich": {
-    "grund": "Glied ohne weiteren erfassten Zu- oder Abfluss bei den Nachbarn; keine Weltreferenz für diese Stufe.",
-    "liste": [],
-    "mit_menge": 0
+    "grund": null,
+    "liste": [
+     {
+      "art": "STANDORT",
+      "freigabe": "FREIGEGEBEN",
+      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-24 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+      "fuer": "S5",
+      "glied": null,
+      "hinweis": "Andere Uranförderung (Mine McArthur River, Aufbereitung Key Lake); eine Lieferbeziehung zu CGN Mining ist nicht belegt. Förderung ist keine freie Kapazität: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt.",
+      "id": "AW-U-MCARTHUR",
+      "lage": null,
+      "land": "CA",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": null,
+       "text": "7.808 t U Förderung 2024 (13 % der Welt, WNA)"
+      },
+      "name": "McArthur River / Key Lake (Saskatchewan, Kanada), Cameco",
+      "quelle": {
+       "fundstelle": "HTML, Text ohne Tags; Tabelle \"The largest-producing uranium mines in 2024\"",
+       "herausgeber": "World Nuclear Association",
+       "titel": "World Uranium Mining Production",
+       "url": "https://world-nuclear.org/information-library/nuclear-fuel-cycle/mining-of-uranium/world-uranium-mining-production",
+       "zitat": "McCarthur River/Key Lake Canada Cameco underground 7808 13"
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     },
+     {
+      "art": "STANDORT",
+      "freigabe": "FREIGEGEBEN",
+      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-24 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+      "fuer": "S5",
+      "glied": null,
+      "hinweis": "Andere Uranmine; eine Lieferbeziehung zu CGN Mining ist nicht belegt. Förderung ist keine freie Kapazität: wie viel davon ohne bestehende Verträge verfügbar wäre, ist unbekannt.",
+      "id": "AW-U-CIGARLAKE",
+      "lage": null,
+      "land": "CA",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": null,
+       "text": "6.501 t U Förderung 2024 (11 % der Welt, WNA)"
+      },
+      "name": "Cigar Lake (Saskatchewan, Kanada), Cameco/Orano",
+      "quelle": {
+       "fundstelle": "HTML, Text ohne Tags; Tabelle \"The largest-producing uranium mines in 2024\"",
+       "herausgeber": "World Nuclear Association",
+       "titel": "World Uranium Mining Production",
+       "url": "https://world-nuclear.org/information-library/nuclear-fuel-cycle/mining-of-uranium/world-uranium-mining-production",
+       "zitat": "Cigar Lake Canada Cameco/Orano underground 6501 11"
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     }
+    ],
+    "mit_menge": 2
    },
    "dauer": {
     "evidenz": "UNKNOWN",
@@ -821,9 +876,64 @@
   },
   "S6": {
    "ausweich": {
-    "grund": "Glied ohne weiteren erfassten Zu- oder Abfluss bei den Nachbarn; keine Weltreferenz für diese Stufe.",
-    "liste": [],
-    "mit_menge": 0
+    "grund": null,
+    "liste": [
+     {
+      "art": "STANDORT",
+      "freigabe": "FREIGEGEBEN",
+      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-24 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+      "fuer": "S6",
+      "glied": null,
+      "hinweis": "Anderes Konversionswerk (U3O8 zu UF6); eine Lieferbeziehung zu Honeymoon oder den Kunden von Metropolis ist nicht belegt. Kapazität ist keine freie Menge: 2024 lag die Produktion bei 91 % der Lizenz, wie viel ohne bestehende Verträge verfügbar wäre, ist unbekannt.",
+      "id": "AW-U-PORTHOPE",
+      "lage": null,
+      "land": "CA",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": null,
+       "text": "Lizenzierte Konversionskapazität 12.500 t U pro Jahr, UF6-Produktion 2024 11.375 t U (WNA nach Nuclear Fuel Report 2025)"
+      },
+      "name": "Konversionswerk Port Hope (Ontario, Kanada), Cameco",
+      "quelle": {
+       "fundstelle": "HTML, Text ohne Tags; Tabelle \"Estimated world primary conversion capacity and UF6 production 2024\" (Quelle laut Seite: WNA Nuclear Fuel Report 2025)",
+       "herausgeber": "World Nuclear Association",
+       "titel": "Conversion and Deconversion",
+       "url": "https://world-nuclear.org/information-library/nuclear-fuel-cycle/conversion-enrichment-and-fabrication/conversion-and-deconversion",
+       "zitat": "Cameco Canada Port Hope 12,500 11,375"
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     },
+     {
+      "art": "STANDORT",
+      "freigabe": "FREIGEGEBEN",
+      "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-24 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+      "fuer": "S6",
+      "glied": null,
+      "hinweis": "Andere Konversion (U3O8 zu UF6) in zwei Schritten an zwei Standorten derselben Kette; eine Lieferbeziehung zu Honeymoon oder den Kunden von Metropolis ist nicht belegt. Kapazität ist keine freie Menge: 2024 lag die Produktion bei 91 % der Lizenz, wie viel ohne bestehende Verträge verfügbar wäre, ist unbekannt. Die Quelle nennt die Kapazität für beide Standorte gemeinsam.",
+      "id": "AW-U-ORANO-KONVERSION",
+      "lage": null,
+      "land": "FR",
+      "menge": {
+       "evidenz": "BELEGT",
+       "grund": null,
+       "t": null,
+       "text": "Lizenzierte Konversionskapazität 15.000 t U pro Jahr für Pierrelatte und Malvesi zusammen, UF6-Produktion 2024 13.650 t U (WNA nach Nuclear Fuel Report 2025)"
+      },
+      "name": "Konversionswerke Malvesi (Narbonne) und Pierrelatte (Tricastin), Frankreich, Orano",
+      "quelle": {
+       "fundstelle": "HTML, Text ohne Tags; Tabelle \"Estimated world primary conversion capacity and UF6 production 2024\" (Quelle laut Seite: WNA Nuclear Fuel Report 2025)",
+       "herausgeber": "World Nuclear Association",
+       "titel": "Conversion and Deconversion",
+       "url": "https://world-nuclear.org/information-library/nuclear-fuel-cycle/conversion-enrichment-and-fabrication/conversion-and-deconversion",
+       "zitat": "Orano France Pierrelatte, Malvesi 15,000 13,650"
+      },
+      "richtung": "HERKUNFT",
+      "verbindung": null
+     }
+    ],
+    "mit_menge": 2
    },
    "dauer": {
     "evidenz": "UNKNOWN",
@@ -2352,11 +2462,11 @@
   ]
  },
  "eingaben": {
-  "analysis/rohstoffe/eigentum/eigentumskette.json": "6d0a735986003d2f59a6eeedb6ba08e69ea4ee7d910ccab607eb8bf20c92aae0",
+  "analysis/rohstoffe/eigentum/eigentumskette.json": "5d02f341354c9ed186ce2c189b9619b8061fdb5d2739fbfa3688764f32e1b9ba",
   "analysis/rohstoffe/fluss-freigaben.jsonl": "aaabbdac9c8a96ba0a688d2348a9b29df912fd5f6d05c9915280d05f3e396d66",
   "analysis/rohstoffe/mengen/annahmen-snapshot.json": "5169bc01abcdff017b11b6e2e0bdb0abbc934a843f86a8fbbf4dbdd3585165b1",
-  "analysis/rohstoffe/mengen/mengen.json": "e3cf36b504d52d37e77dfe24088ea1175213209c2f3448b9288da24bc3b4cc6b",
-  "analysis/rohstoffe/mengen/zweitpruefung.jsonl": "e093861fa8ba9484dafa843cac1e2e03d7c05dc79a1909e4e29a39985fbe865b",
+  "analysis/rohstoffe/mengen/mengen.json": "a9c63566dfea221b1a79b37c3a5e4279c95da48436d5d005c1c924156ccb0db3",
+  "analysis/rohstoffe/mengen/zweitpruefung.jsonl": "65e79d9b6e01f162ee1d6274df6ad52c3f25a75345c5dc532269828f56622c7f",
   "analysis/rohstoffe/uran/kandidaten.json": "11d15a665ba735e90f2b95f5c78921f67413244c684cadafba90f48fa7418b57",
   "analysis/rohstoffe/uran/markt.json": "2041c8a09e8ee623ffc75d7495c78f6c01307a6257184939f41a5fc8d59367ef"
  },
@@ -4114,7 +4224,7 @@
   "url": "https://world-nuclear.org/information-library/nuclear-fuel-cycle/mining-of-uranium/world-uranium-mining-production"
  },
  "zaehler": {
-  "ausfall_mit_ausweich_menge": 4,
+  "ausfall_mit_ausweich_menge": 6,
   "belege": 9,
   "eigentum_belegt": 5,
   "eigentum_kandidaten": 4,

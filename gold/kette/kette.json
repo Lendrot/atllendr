@@ -1215,7 +1215,15 @@
   },
   "glieder": {
    "S1": {
-    "baum": null,
+    "baum": {
+     "effektiv": 100.0,
+     "kante": null,
+     "kinder": [],
+     "knoten": "R-BELLEVUE",
+     "pflicht": true,
+     "schluss": "OBERSTE",
+     "schluss_text": "oberste Gesellschaft"
+    },
     "belegt": true,
     "betreiber": {
      "baum": {
@@ -1237,17 +1245,24 @@
      ],
      "text": "betreibt das Projekt (Haupttätigkeit der Gruppe laut Jahresbericht)"
     },
-    "bezug": null,
-    "bezug_belege": [],
-    "bezug_freigabe": null,
-    "bezug_herkunft": null,
-    "bezug_text": null,
+    "bezug": "ZUGEHOERIG",
+    "bezug_belege": [
+     {
+      "fundstelle": "PDF-Seite 3 (pdftotext ohne -layout)",
+      "quelle": "rk-bgl-q-2026-06-s003",
+      "rolle": "hauptbeleg",
+      "zitat": "Bellevue Gold Limited (Bellevue or Company) (ASX: BGL) is pleased to present its Quarterly Activities … for operations at its 100% owned Bellevue Gold Project"
+     }
+    ],
+    "bezug_freigabe": "FREIGEGEBEN",
+    "bezug_herkunft": "Zweitprüfung BESTAETIGT 2026-11-23 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+    "bezug_text": "Das Glied gehört laut Quelle zu",
     "ebenen": 0,
     "einschraenkung": null,
-    "grund": "Einen Eigentumsanteil am Projekt nennt die gelesene Quelle nicht; sie nennt den Betrieb durch die Bellevue-Gruppe.",
-    "status": "UNBEKANNT",
-    "status_text": "Eigentümer unbekannt",
-    "wurzel": null
+    "grund": null,
+    "status": "VOLLSTAENDIG_FREIGEGEBEN",
+    "status_text": "bis oben belegt und freigegeben",
+    "wurzel": "R-BELLEVUE"
    },
    "S2": {
     "baum": {
@@ -1361,20 +1376,41 @@
     "wurzel": "R-IMP"
    },
    "S4": {
-    "baum": null,
-    "belegt": false,
+    "baum": {
+     "effektiv": 100.0,
+     "kante": null,
+     "kinder": [],
+     "knoten": "R-GENESIS",
+     "pflicht": true,
+     "schluss": "OFFEN",
+     "schluss_text": "endet ohne Beleg"
+    },
+    "belegt": true,
     "betreiber": null,
-    "bezug": null,
-    "bezug_belege": [],
-    "bezug_freigabe": null,
-    "bezug_herkunft": null,
-    "bezug_text": null,
+    "bezug": "ZUGEHOERIG",
+    "bezug_belege": [
+     {
+      "fundstelle": "PDF-Seite 64 (pdftotext ohne -layout)",
+      "quelle": "rk-gmd-ar-2026-s064",
+      "rolle": "hauptbeleg",
+      "zitat": "following the Company’s acquisition of Dacian Gold Ltd and the St Barbara Leonora"
+     },
+     {
+      "fundstelle": "PDF-Seite 11 (pdftotext ohne -layout)",
+      "quelle": "rk-gmd-ar-2026-s011",
+      "rolle": "zusatzbeleg",
+      "zitat": "In FY26, the key enabling projects completed for the Gwalia mine included the"
+     }
+    ],
+    "bezug_freigabe": "KANDIDAT",
+    "bezug_herkunft": "Quelle gelesen, Zitat gegen Textkopie geprüft; Zweitprüfung offen",
+    "bezug_text": "Das Glied gehört laut Quelle zu",
     "ebenen": 0,
-    "einschraenkung": null,
-    "grund": "Die gelesene Quelle (St Barbara, Stand 31.12.2022) ist für den heutigen Eigentümer zu alt; ein späterer Wechsel ist mit keiner gelesenen Quelle geprüft.",
-    "status": "UNBEKANNT",
-    "status_text": "Eigentümer unbekannt",
-    "wurzel": null
+    "einschraenkung": "Der Jahresbericht 2026 nennt den Kauf der Leonora-Anlagen von St Barbara und führt Gwalia als eigenen Betrieb; einen Anteil oder die haltende Gesellschaft nennt er an diesen Stellen nicht.",
+    "grund": null,
+    "status": "OFFEN",
+    "status_text": "Kette endet ohne Beleg",
+    "wurzel": "R-GENESIS"
    },
    "S5": {
     "baum": {
@@ -1752,6 +1788,31 @@
     "oberste": null,
     "offen": null
    },
+   "R-GENESIS": {
+    "art": "GESELLSCHAFT",
+    "art_text": "Gesellschaft",
+    "atlas_id": null,
+    "belege": [
+     {
+      "fundstelle": "JSON (Golden Copy 2026-11-23)",
+      "quelle": "rk-gleif-894500AK5BVRCNP0FP48",
+      "rolle": "hauptbeleg",
+      "zitat": "\"lei\":\"894500AK5BVRCNP0FP48\" … \"legalName\":{\"name\":\"GENESIS MINERALS LIMITED\""
+     },
+     {
+      "fundstelle": "JSON (Golden Copy 2026-11-23)",
+      "quelle": "rk-gleif-894500AK5BVRCNP0FP48-oben",
+      "rolle": "zusatzbeleg",
+      "zitat": "\"lei\":\"894500AK5BVRCNP0FP48\",\"category\":\"ULTIMATE_ACCOUNTING_CONSOLIDATION_PARENT\",\"reason\":\"NATURAL_PERSONS\""
+     }
+    ],
+    "hinweis": null,
+    "land": "AU",
+    "lei": "894500AK5BVRCNP0FP48",
+    "name": "Genesis Minerals Limited",
+    "oberste": null,
+    "offen": "Im LEI-Register steht als Ausnahme NATURAL_PERSONS (beherrscht von natürlichen Personen, die das Register nicht nennt); keine gelesene Quelle nennt diese Personen oder belegt, dass es keinen Beherrscher gibt."
+   },
    "R-GOLDCORP": {
     "art": "GESELLSCHAFT",
     "art_text": "Gesellschaft",
@@ -1915,12 +1976,12 @@
   },
   "messung": {
    "glieder": 8,
-   "glieder_eigentum_belegt": 7,
-   "glieder_unbekannt_mit_grund": 1,
+   "glieder_eigentum_belegt": 8,
+   "glieder_unbekannt_mit_grund": 0,
    "je_glied": {
     "S1": {
      "ebenen": 0,
-     "status": "UNBEKANNT"
+     "status": "VOLLSTAENDIG_FREIGEGEBEN"
     },
     "S2": {
      "ebenen": 0,
@@ -1932,7 +1993,7 @@
     },
     "S4": {
      "ebenen": 0,
-     "status": "UNBEKANNT"
+     "status": "OFFEN"
     },
     "S5": {
      "ebenen": 0,
@@ -1955,7 +2016,7 @@
    "kanten_freigegeben": 6,
    "kanten_kandidat": 0,
    "kanten_mit_anteil": 4,
-   "knoten": 12,
+   "knoten": 13,
    "letzte_eigentuemer": [
     "China National Gold Group Co., Ltd. (CNG)",
     "Kommission für Staatsvermögen beim Staatsrat der VR China (SASAC)"
@@ -1967,14 +2028,16 @@
     "Pallion Group Pty Limited",
     "Pantoro Gold Limited"
    ],
-   "offen": 0,
-   "offene_knoten": [],
+   "offen": 1,
+   "offene_knoten": [
+    "Genesis Minerals Limited"
+   ],
    "schwelle_prozent": 10.0,
-   "unbekannt": 2,
-   "vollstaendig": 6,
-   "vollstaendig_freigegeben": 6,
+   "unbekannt": 0,
+   "vollstaendig": 7,
+   "vollstaendig_freigegeben": 7,
    "vollstaendig_kandidat": 0,
-   "zweitpruefung_offen": 0
+   "zweitpruefung_offen": 1
   },
   "quellen": {
    "rk-bgl-ar-2025-s032": {
@@ -1986,6 +2049,16 @@
     "text_artifact_sha256": "b6396dcec5bffbf759951aa53049d6136184d25c99cb2ca7dfc9a46aafa81460",
     "titel": "Annual Report 2025",
     "url": "https://announcements.asx.com.au/asxpdf/20250828/pdf/06ngc77zh6h74b.pdf#page=32"
+   },
+   "rk-bgl-q-2026-06-s003": {
+    "abgerufen": "2026-11-23",
+    "art": "COMPANY_PRIMARY",
+    "fundstelle": "PDF-Seite 3 (pdftotext ohne -layout)",
+    "herausgeber": "Bellevue Gold Limited",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/bgl-q-2026-06-p003.txt",
+    "text_artifact_sha256": "df4bc84760c4512eaa135e98a13b70790a665423601b45d4a9a9c04943f4f887",
+    "titel": "June 2026 Quarterly Report (ASX-Mitteilung 28.7.2026)",
+    "url": "https://announcements.asx.com.au/asxpdf/20260728/pdf/0723jfgnhznrpv.pdf#page=3"
    },
    "rk-cgi-ar-2025-s002": {
     "abgerufen": "2026-11-16",
@@ -2146,6 +2219,46 @@
     "text_artifact_sha256": "ffaa3d8970d3623bb734bf39585aa097fcdd8023b242f02613a68bba54958319",
     "titel": "Level-2 oberste Mutter 549300B5KC6G1P0XME28",
     "url": "https://api.gleif.org/api/v1/lei-records/549300B5KC6G1P0XME28/ultimate-parent-reporting-exception"
+   },
+   "rk-gleif-894500AK5BVRCNP0FP48": {
+    "abgerufen": "2026-11-23",
+    "art": "REGISTER",
+    "fundstelle": "JSON (Golden Copy 2026-11-23)",
+    "herausgeber": "Global Legal Entity Identifier Foundation (GLEIF)",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/gleif-894500AK5BVRCNP0FP48-eintrag.json",
+    "text_artifact_sha256": "72169261f45cd646ae13185665adc58d4c18f24521cdfc0edf95612b38ced264",
+    "titel": "LEI-Eintrag 894500AK5BVRCNP0FP48",
+    "url": "https://api.gleif.org/api/v1/lei-records/894500AK5BVRCNP0FP48"
+   },
+   "rk-gleif-894500AK5BVRCNP0FP48-oben": {
+    "abgerufen": "2026-11-23",
+    "art": "REGISTER",
+    "fundstelle": "JSON (Golden Copy 2026-11-23)",
+    "herausgeber": "Global Legal Entity Identifier Foundation (GLEIF)",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/gleif-894500AK5BVRCNP0FP48-ultimate-ausnahme.json",
+    "text_artifact_sha256": "1400fd844b5bf37d2c88c966ce66e5d3515f992f1755bb3e848646bfdee515af",
+    "titel": "Level-2 oberste Mutter 894500AK5BVRCNP0FP48",
+    "url": "https://api.gleif.org/api/v1/lei-records/894500AK5BVRCNP0FP48/ultimate-parent-reporting-exception"
+   },
+   "rk-gmd-ar-2026-s011": {
+    "abgerufen": "2026-11-23",
+    "art": "COMPANY_PRIMARY",
+    "fundstelle": "PDF-Seite 11 (pdftotext ohne -layout)",
+    "herausgeber": "Genesis Minerals Limited",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/gmd-ar-2026-p011.txt",
+    "text_artifact_sha256": "56205a78c685eb1e4bca86d6a2a4901c0711e5d050efb4168702ca3870782b7d",
+    "titel": "2026 Annual Report",
+    "url": "https://announcements.asx.com.au/asxpdf/20260820/pdf/07302jhwsyphfj.pdf#page=11"
+   },
+   "rk-gmd-ar-2026-s064": {
+    "abgerufen": "2026-11-23",
+    "art": "COMPANY_PRIMARY",
+    "fundstelle": "PDF-Seite 64 (pdftotext ohne -layout)",
+    "herausgeber": "Genesis Minerals Limited",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/gmd-ar-2026-p064.txt",
+    "text_artifact_sha256": "418dccf0463657cdd508f2ca4b61c6103a6760cfdb2e59a4e60789a5ccf2b933",
+    "titel": "2026 Annual Report",
+    "url": "https://announcements.asx.com.au/asxpdf/20260820/pdf/07302jhwsyphfj.pdf#page=64"
    },
    "rk-nmr-2025-07-31-s001": {
     "abgerufen": "2026-11-16",
@@ -2529,19 +2642,54 @@
     "urteil": "BESTAETIGT",
     "ziel_id": "gold/gold-site-quelle-norseman",
     "ziel_typ": "glied"
+   },
+   {
+    "abgleich": "",
+    "aufgabe": "Ziel glied/gold/gold-site-quelle-bellevue. Frage: Gehört der Standort Bellevue Gold Project laut Quelle zu Bellevue Gold Limited? Quellen: rk-bgl-q-2026-06-s003 (PDF-Seite 3 (pdftotext ohne -layout)).",
+    "aussage": "Gehört der Standort Bellevue Gold Project laut Quelle zu Bellevue Gold Limited?",
+    "belege": [
+     {
+      "quelle": "rk-bgl-q-2026-06-s003",
+      "zitat": [
+       "Bellevue Gold Limited (Bellevue or Company) (ASX: BGL)",
+       "its 100% owned Bellevue Gold Project"
+      ]
+     }
+    ],
+    "blind": true,
+    "erstmodell": "claude-opus-5-5",
+    "erstpruefung_sitzung": "session_01JgcA7TdgLRrqKV9kyFuE5E",
+    "geprueft_am": "2026-11-23",
+    "hinweis": "Bellevue Gold Limited berichtet über den Betrieb seines 100% eigenen Bellevue Gold Project.",
+    "pruef_id": "AE14",
+    "pruefer": "auto-zweitpruefung (claude-sonnet-5-5, blind)",
+    "pruefmodell": "claude-sonnet-5-5",
+    "pruefweg": "subagent",
+    "quelle_frisch_geladen": false,
+    "regel": "Eddie Sablah 2026-11-16: Regel 3 automatisch, blinde Zweitprüfung durch ein zweites Modell + Programmprüfung; Stichprobe 5 Fälle/Monat bleibt",
+    "sitzung": "auto:claude-sonnet-5-5:2026-11-23",
+    "textkopie_geprueft": true,
+    "urteil": "BESTAETIGT",
+    "verfahren": "AUTO_ZWEITPRUEFUNG",
+    "wert": {
+     "einheit": "",
+     "zahl_text": ""
+    },
+    "ziel_id": "gold/gold-site-quelle-bellevue",
+    "ziel_typ": "glied"
    }
   ]
  },
  "eingaben": {
   "analysis/aktualitaet/stand/ezb-referenzkurs-usd.json": "c3ebb6dbe8808234a0eceed6464aa26752f500d66d863ee6f06445df22df1729",
   "analysis/aktualitaet/stand/lbma-gold-westmetall.json": "61a324d0f8ba7130efea481156b9512c79149c9c6b89ba8f6efed8d097ded777",
-  "analysis/rohstoffe/eigentum/eigentumskette.json": "6d0a735986003d2f59a6eeedb6ba08e69ea4ee7d910ccab607eb8bf20c92aae0",
+  "analysis/rohstoffe/eigentum/eigentumskette.json": "5d02f341354c9ed186ce2c189b9619b8061fdb5d2739fbfa3688764f32e1b9ba",
   "analysis/rohstoffe/fluss-freigaben.jsonl": "aaabbdac9c8a96ba0a688d2348a9b29df912fd5f6d05c9915280d05f3e396d66",
   "analysis/rohstoffe/gold/kandidaten.json": "7d8b994d076ff097b39d451ac16740343c087d7b655dc2b829ca87aaa1e20745",
   "analysis/rohstoffe/gold/markt.json": "dc2275d59aecfc3b064738b8f8324fc6ed655bc9ce444441d20c4a4f32b0bee8",
   "analysis/rohstoffe/mengen/annahmen-snapshot.json": "5169bc01abcdff017b11b6e2e0bdb0abbc934a843f86a8fbbf4dbdd3585165b1",
-  "analysis/rohstoffe/mengen/mengen.json": "e3cf36b504d52d37e77dfe24088ea1175213209c2f3448b9288da24bc3b4cc6b",
-  "analysis/rohstoffe/mengen/zweitpruefung.jsonl": "e093861fa8ba9484dafa843cac1e2e03d7c05dc79a1909e4e29a39985fbe865b"
+  "analysis/rohstoffe/mengen/mengen.json": "a9c63566dfea221b1a79b37c3a5e4279c95da48436d5d005c1c924156ccb0db3",
+  "analysis/rohstoffe/mengen/zweitpruefung.jsonl": "65e79d9b6e01f162ee1d6274df6ad52c3f25a75345c5dc532269828f56622c7f"
  },
  "erzeugt_von": "scripts/analysis/rohstoffe/rohstoffkette.py",
  "kette": {
@@ -2884,7 +3032,7 @@
          "zitat": "\"stand\":\"2026-11-10\""
         }
        ],
-       "text": "Kein Namenstreffer für Bellevue Gold Project auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
+       "text": "Kein Namenstreffer für Bellevue Gold Limited auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
       }
      ],
      "grund": null,
@@ -3425,7 +3573,7 @@
          "zitat": "\"stand\":\"2026-11-10\""
         }
        ],
-       "text": "Kein Namenstreffer für Gwalia auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
+       "text": "Kein Namenstreffer für Genesis Minerals Limited auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
       }
      ],
      "grund": null,
@@ -4065,7 +4213,7 @@
   }
  ],
  "tiefe": {
-  "belegt": 32,
+  "belegt": 33,
   "dimensionen": [
    "Eigentümer/Betreiber",
    "Standort",
@@ -4075,7 +4223,7 @@
    "Risiko"
   ],
   "gesamt": 48,
-  "mit_annahmen": 44,
+  "mit_annahmen": 45,
   "zeilen": [
    {
     "felder": {
@@ -4112,7 +4260,7 @@
    },
    {
     "felder": {
-     "Eigentümer/Betreiber": "kandidat",
+     "Eigentümer/Betreiber": "belegt",
      "Lieferbeziehung": "belegt",
      "Menge": "unbekannt",
      "Risiko": "belegt",
@@ -4582,11 +4730,11 @@
  "zaehler": {
   "ausfall_mit_ausweich_menge": 8,
   "belege": 7,
-  "eigentum_belegt": 7,
+  "eigentum_belegt": 8,
   "eigentum_kandidaten": 5,
-  "eigentumskette_freigegeben": 6,
+  "eigentumskette_freigegeben": 7,
   "eigentumskette_kanten": 6,
-  "eigentumskette_vollstaendig": 6,
+  "eigentumskette_vollstaendig": 7,
   "glieder_mit_ausweichquelle": 4,
   "kette_stufen": 2,
   "mengen_abgeleitet": 0,
@@ -4600,9 +4748,9 @@
   "risikoebene_felder": 32,
   "standorte": 8,
   "standorte_mit_ort": 8,
-  "tiefe_belegt": 32,
+  "tiefe_belegt": 33,
   "tiefe_gesamt": 48,
-  "tiefe_mit_annahmen": 44,
+  "tiefe_mit_annahmen": 45,
   "verbindungen": 5,
   "verbindungen_auf_globus": 5,
   "verbindungen_freigegeben": 5,
