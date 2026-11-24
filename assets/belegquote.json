@@ -11,7 +11,7 @@
   "umfang": "Gezählt: auf dem Hauptglobus gezeichnete Verbindungen und alle Firmenverbindungen auf /verbindungen/. Nicht gezeichnete Verbindungen (ohne Koordinate) und der Annahmen-Atlas zählen nicht.",
   "stand": "2026-11-11",
   "inputs_sha256": {
-   "dist/assets/globe-sites.json": "1886a7d5e1a09bdd0e03f75a4aae1b19eb49228f27bf83159cb4dabcc5f59881",
+   "dist/assets/globe-sites.json": "2f378251533015030b89ac387559809af22a705853ea76199112e761e64f76a5",
    "analysis/company-connections.json": "154041bea38376890f09b6d27405d6a021fe3df359b1a5f0e8dccf84bad9b43c",
    "analysis/approval-ledger.jsonl": "f797611a62385d7abb9a822a24922c49701df68fe39f06de4ff1e213633c5ea6"
   }
@@ -23,8 +23,8 @@
   "wo": "Hauptatlas",
   "gesamt": 5401,
   "freigegeben": 229,
-  "ungeprueft": 5171,
-  "offen": 1,
+  "ungeprueft": 5062,
+  "offen": 110,
   "quote_pct": 4.2,
   "quote_text": "229 von 5.401 (4 %)",
   "freigegeben_quelle": {
@@ -277,8 +277,8 @@
    "wo": "Hauptglobus (gezeichnete Bögen)",
    "gesamt": 5104,
    "freigegeben": 0,
-   "ungeprueft": 5104,
-   "offen": 0,
+   "ungeprueft": 4995,
+   "offen": 109,
    "quote_pct": 0.0,
    "quote_text": "0 von 5.104 (0 %)",
    "freigegeben_quelle": {
