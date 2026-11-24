@@ -216,9 +216,9 @@ function hoeheSeite2(I, k, verbH) {
     + (k < I.vz.length ? verbH(k, I.vz.length, 2) + 6 : 0) + 13;
 }
 
-// Quellenliste: 2 Spalten mit bis zu 3, 2, 1 Zeilen je Eintrag; reicht das nicht, 3 Spalten zu je 1 Zeile. Jede Quelle bleibt
+// Quellenliste: 2 Spalten mit bis zu 3, 2, 1 Zeilen je Eintrag; reicht das nicht, 3, dann 4 Spalten zu je 1 Zeile. Jede Quelle bleibt
 // mit Nummer und Link gelistet; nur überlange Titel werden mit … gekürzt (voller Titel in kette.json).
-const Q_STUFEN = [[3, 2], [2, 2], [1, 2], [1, 3]];
+const Q_STUFEN = [[3, 2], [2, 2], [1, 2], [1, 3], [1, 4]];
 function quellenSatz(liste, platz, cache = new Map()) {
   const lh = GR * 1.28;
   let erg = null;

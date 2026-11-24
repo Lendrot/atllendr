@@ -2043,8 +2043,8 @@
     "ebenen": 0,
     "einschraenkung": null,
     "grund": null,
-    "status": "VOLLSTAENDIG_KANDIDAT",
-    "status_text": "bis oben belegt (Kandidat, Zweitprüfung offen)",
+    "status": "VOLLSTAENDIG_FREIGEGEBEN",
+    "status_text": "bis oben belegt und freigegeben",
     "wurzel": "R-GRAPHEX"
    },
    "S4": {
@@ -2107,24 +2107,34 @@
     "baum": {
      "effektiv": 100.0,
      "kante": null,
-     "kinder": [],
+     "kinder": [
+      {
+       "effektiv": 58.2,
+       "kante": "EK-POSCO-HOLDINGS-POSCO-FUTURE-M",
+       "kinder": [],
+       "knoten": "R-POSCO-HOLDINGS",
+       "pflicht": true,
+       "schluss": "OBERSTE",
+       "schluss_text": "oberste Gesellschaft"
+      }
+     ],
      "knoten": "R-POSCO-FUTURE-M",
      "pflicht": true,
-     "schluss": "OFFEN",
-     "schluss_text": "endet ohne Beleg"
+     "schluss": "GESCHLOSSEN",
+     "schluss_text": "Eigentümer belegt"
     },
-    "belegt": false,
+    "belegt": true,
     "betreiber": null,
     "bezug": "IST",
     "bezug_belege": [],
     "bezug_freigabe": null,
     "bezug_herkunft": null,
     "bezug_text": "Das Glied ist diese Gesellschaft bzw. dieser Standort",
-    "ebenen": 0,
+    "ebenen": 1,
     "einschraenkung": null,
     "grund": null,
-    "status": "OFFEN",
-    "status_text": "Kette endet ohne Beleg",
+    "status": "VOLLSTAENDIG_FREIGEGEBEN",
+    "status_text": "bis oben belegt und freigegeben",
     "wurzel": "R-POSCO-FUTURE-M"
    },
    "S8": {
@@ -2207,6 +2217,30 @@
     "stand": "2025-12-31",
     "text": "direkt 23,67 %, indirekt 42,55 %, Stimmrechte 66,22 % (Tabelle Tochtergesellschaften China Baoan)",
     "von": "R-CHINA-BAOAN"
+   },
+   {
+    "an": "R-POSCO-FUTURE-M",
+    "anteil": 58.2,
+    "atlas_id": null,
+    "beherrschend": true,
+    "belege": [
+     {
+      "fundstelle": "HTML, Text ohne Tags (Tabellenzellen je Zeile), Abschnitt Item 4.C Organizational Structure",
+      "quelle": "rk-posco-20f-2025-item4c",
+      "rolle": "hauptbeleg",
+      "zitat": "The following table sets out the jurisdiction of incorporation and our ownership interests of our significant subsidiaries as of December 31, 2025: … POSCO Future M Co., Ltd. Korea 58.2 %"
+     }
+    ],
+    "einschraenkung": "Die Quelle führt POSCO Future M in der Tabelle der wesentlichen Tochtergesellschaften (significant subsidiaries); deshalb beherrschend.",
+    "evidenz": "FACT",
+    "freigabe": "FREIGEGEBEN",
+    "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-24 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+    "id": "EK-POSCO-HOLDINGS-POSCO-FUTURE-M",
+    "mass": "KAPITAL",
+    "mass_text": "Kapital",
+    "stand": "2025-12-31",
+    "text": null,
+    "von": "R-POSCO-HOLDINGS"
    }
   ],
   "knoten": {
@@ -2268,19 +2302,37 @@
        "fundstelle": "PDF-Seite 57 (pdftotext -layout)",
        "quelle": "rk-gx-ar-2025-s057",
        "rolle": "hauptbeleg",
-       "zitat": "Substantial shareholders’ interests and short positions in shares and underlying shares … Justin Yu Beneficial owner 92,500,000 9.83%"
+       "zitat": "Substantial shareholders’ interests and short positions in shares and underlying shares"
+      },
+      {
+       "fundstelle": "PDF-Seite 57 (pdftotext -layout)",
+       "quelle": "rk-gx-ar-2025-s057",
+       "rolle": "zusatzbeleg",
+       "zitat": "Justin Yu Beneficial owner 92,500,000 9.83%"
+      },
+      {
+       "fundstelle": "PDF-Seite 17 (pdftotext ohne -layout)",
+       "quelle": "rk-gx-ar-2025-s017",
+       "rolle": "zusatzbeleg",
+       "zitat": "941,313,336 ordinary shares and 323,657,534 preference shares in issue."
       },
       {
        "fundstelle": "PDF-Seite 56 (pdftotext -layout)",
        "quelle": "rk-gx-ar-2025-s056",
        "rolle": "zusatzbeleg",
        "zitat": "Chan Yick Yan Andross Beneficial owner, … 34,722,177 3.69% … 28,945,089 3.07% … 136,000 0.01%"
+      },
+      {
+       "fundstelle": "PDF-Seite 207 (pdftotext ohne -layout)",
+       "quelle": "rk-gx-ar-2025-s207",
+       "rolle": "zusatzbeleg",
+       "zitat": "The holders of the preference shares have no participating right to attend the general meetings of the Company."
       }
      ],
-     "freigabe": "KANDIDAT",
-     "freigabe_herkunft": "Zweitprüfung ABWEICHUNG 2026-11-17: Direktoren 3.69%, 3.07%, 0.01% und Justin Yu 9.83% stehen in den Quellen. Dass er der einzige gemeldete Aktionaer ist und niemand mit 10 % oder mehr gemeldet ist, sagt keine Quelle ausdruecklich; die Tabelle der Substantial Shareholders endet auf s057 mit Justin Yu ohne Aussage zur Vollstaendigkeit.",
-     "grund": "KEINE_MUTTER",
-     "text": "Im Aktionärsregister nach SFO Teil XV ist zum 31.12.2025 neben den Direktoren nur Justin Yu mit 9,83 % gemeldet; die Direktoren halten 3,69 %, 3,07 % und 0,01 %. Ein Aktionär mit 10 % oder mehr ist nicht gemeldet."
+     "freigabe": "FREIGEGEBEN",
+     "freigabe_herkunft": "ABGELEITET: größter gemeldeter Großaktionär 9,8 % < 10 % (Regel Eddie Sablah 2026-11-23: Großaktionärsliste als Beleg für die oberste Gesellschaft (ABGELEITET)); Liste und 2 Zahlen Zweitprüfung BESTAETIGT 2026-11-24 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+     "grund": "GROSSAKTIONAERE_UNTER_SCHWELLE",
+     "text": "Kein beherrschender Aktionär (ABGELEITET, Regel 2026-11-23): Die Liste der nach SFO Teil XV gemeldeten Großaktionäre nennt zum 31.12.2025 nur einen Halter mit 92.500.000 von 941.313.336 Stammaktien (gerechnet 9,8 %, unter der Schwelle 10 %); die Direktoren halten 3,69 % und weniger. Die 323.657.534 Vorzugsaktien geben kein Recht zur Teilnahme an der Hauptversammlung und zählen nicht."
     },
     "offen": null
    },
@@ -2337,7 +2389,44 @@
     "lei": null,
     "name": "POSCO Future M Co., Ltd.",
     "oberste": null,
-    "offen": "Keine gelesene Quelle zu Eigentümern; Firmenseiten und Register sind aus der Cloud gesperrt oder ohne Eintrag."
+    "offen": null
+   },
+   "R-POSCO-HOLDINGS": {
+    "art": "GESELLSCHAFT",
+    "art_text": "Gesellschaft",
+    "atlas_id": null,
+    "belege": [],
+    "hinweis": null,
+    "land": "KR",
+    "lei": null,
+    "name": "POSCO Holdings Inc.",
+    "oberste": {
+     "belege": [
+      {
+       "fundstelle": "HTML, Text ohne Tags (Tabellenzellen je Zeile), Abschnitt Item 7.A Major Shareholders",
+       "quelle": "rk-posco-20f-2025-item7a",
+       "rolle": "hauptbeleg",
+       "zitat": "Item 7.A. Major Shareholders … The following table sets forth certain information relating to the shareholders of our common stock issued as of December 31, 2025."
+      },
+      {
+       "fundstelle": "HTML, Text ohne Tags (Tabellenzellen je Zeile), Abschnitt Item 7.A Major Shareholders",
+       "quelle": "rk-posco-20f-2025-item7a",
+       "rolle": "zusatzbeleg",
+       "zitat": "National Pension Service 6,441,610 7.96 … BlackRock Fund Advisors (1) (2) (3) 4,206,522 5.20 … CITIBANK N.A. (4) 2,289,755 2.83 … Pohang University of Science and Technology 1,981,047 2.45 … Samsung Group (5) 1,861,979 2.30"
+      },
+      {
+       "fundstelle": "HTML, Text ohne Tags (Tabellenzellen je Zeile), Abschnitt Item 7.A Major Shareholders",
+       "quelle": "rk-posco-20f-2025-item7a",
+       "rolle": "zusatzbeleg",
+       "zitat": "Total issued shares of common stock 80,932,952 100.00"
+      }
+     ],
+     "freigabe": "FREIGEGEBEN",
+     "freigabe_herkunft": "ABGELEITET: größter gemeldeter Großaktionär 8,0 % < 10 % (Regel Eddie Sablah 2026-11-23: Großaktionärsliste als Beleg für die oberste Gesellschaft (ABGELEITET)); Liste und 6 Zahlen Zweitprüfung BESTAETIGT 2026-11-24 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+     "grund": "GROSSAKTIONAERE_UNTER_SCHWELLE",
+     "text": "Kein beherrschender Aktionär (ABGELEITET, Regel 2026-11-23): Der Jahresbericht Form 20-F nennt unter Item 7.A „Major Shareholders“ die größten Aktionäre; der größte hält 6.441.610 von 80.932.952 ausgegebenen Aktien (gerechnet 8,0 %, unter der Schwelle 10 %), Stand 31.12.2025. Eigene Aktien (6,56 %) und Streubesitz (72,70 %) sind keine Halter."
+    },
+    "offen": null
    },
    "R-SYRAH": {
     "art": "GESELLSCHAFT",
@@ -2397,7 +2486,7 @@
   },
   "messung": {
    "glieder": 11,
-   "glieder_eigentum_belegt": 6,
+   "glieder_eigentum_belegt": 7,
    "glieder_unbekannt_mit_grund": 2,
    "je_glied": {
     "S1": {
@@ -2418,7 +2507,7 @@
     },
     "S3": {
      "ebenen": 0,
-     "status": "VOLLSTAENDIG_KANDIDAT"
+     "status": "VOLLSTAENDIG_FREIGEGEBEN"
     },
     "S4": {
      "ebenen": 0,
@@ -2433,8 +2522,8 @@
      "status": "OFFEN"
     },
     "S7": {
-     "ebenen": 0,
-     "status": "OFFEN"
+     "ebenen": 1,
+     "status": "VOLLSTAENDIG_FREIGEGEBEN"
     },
     "S8": {
      "ebenen": 0,
@@ -2445,31 +2534,31 @@
      "status": "OFFEN"
     }
    },
-   "kanten": 1,
-   "kanten_freigegeben": 1,
+   "kanten": 2,
+   "kanten_freigegeben": 2,
    "kanten_kandidat": 0,
-   "kanten_mit_anteil": 1,
-   "knoten": 9,
+   "kanten_mit_anteil": 2,
+   "knoten": 10,
    "letzte_eigentuemer": [],
    "oberste_gesellschaften": [
     "China Baoan Group Co., Ltd. (中国宝安集团股份有限公司)",
     "Graphex Group Limited",
     "Lucid Group, Inc.",
+    "POSCO Holdings Inc.",
     "Tesla, Inc."
    ],
-   "offen": 5,
+   "offen": 4,
    "offene_knoten": [
     "NextSource Materials Inc.",
-    "POSCO Future M Co., Ltd.",
     "Syrah Resources Limited",
     "Westwater Resources, Inc."
    ],
    "schwelle_prozent": 10.0,
    "unbekannt": 2,
-   "vollstaendig": 4,
-   "vollstaendig_freigegeben": 3,
-   "vollstaendig_kandidat": 1,
-   "zweitpruefung_offen": 1
+   "vollstaendig": 5,
+   "vollstaendig_freigegeben": 5,
+   "vollstaendig_kandidat": 0,
+   "zweitpruefung_offen": 0
   },
   "quellen": {
    "rk-baoan-ar-2025-s034": {
@@ -2542,6 +2631,16 @@
     "titel": "Level-2 oberste Mutter 54930043XZGB27CTOV49",
     "url": "https://api.gleif.org/api/v1/lei-records/54930043XZGB27CTOV49/ultimate-parent-reporting-exception"
    },
+   "rk-gx-ar-2025-s017": {
+    "abgerufen": "2026-11-24",
+    "art": "COMPANY_PRIMARY",
+    "fundstelle": "PDF-Seite 17 (pdftotext ohne -layout)",
+    "herausgeber": "Graphex Group Limited",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/graphex-ar-2025-p017.txt",
+    "text_artifact_sha256": "9bcb358613f1c4409580dbaacded9e5476e7792d36933f57bc60a64f9b57d2af",
+    "titel": "Annual Report 2025 (HKEX 06128), Management Discussion and Analysis: capital structure",
+    "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0430/2026043000565.pdf#page=17"
+   },
    "rk-gx-ar-2025-s056": {
     "abgerufen": "2026-11-17",
     "art": "COMPANY_PRIMARY",
@@ -2561,6 +2660,36 @@
     "text_artifact_sha256": "1aed98ba8d91a69769e34fe6f33fd66295eb88cc8ccce6376d11b6391332211b",
     "titel": "Annual Report 2025 (HKEX 06128), Report of the Directors: Substantial shareholders",
     "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0430/2026043000565.pdf#page=57"
+   },
+   "rk-gx-ar-2025-s207": {
+    "abgerufen": "2026-11-24",
+    "art": "COMPANY_PRIMARY",
+    "fundstelle": "PDF-Seite 207 (pdftotext ohne -layout)",
+    "herausgeber": "Graphex Group Limited",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/graphex-ar-2025-p207.txt",
+    "text_artifact_sha256": "536c3c9735ad89d43d1d8ab2ae794b6b340bf17a4e34b71a1d8d983bbf0493a0",
+    "titel": "Annual Report 2025 (HKEX 06128), Notes: preference shares",
+    "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0430/2026043000565.pdf#page=207"
+   },
+   "rk-posco-20f-2025-item4c": {
+    "abgerufen": "2026-11-24",
+    "art": "COMPANY_PRIMARY",
+    "fundstelle": "HTML, Text ohne Tags (Tabellenzellen je Zeile), Abschnitt Item 4.C Organizational Structure",
+    "herausgeber": "POSCO HOLDINGS INC.",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/posco-20f-2025-item4c.txt",
+    "text_artifact_sha256": "a2cefd9a4d2c0d836ee888e720bf382dddbdfbb24d8c2ab93aebaa8f7c1ed9d1",
+    "titel": "Annual Report Form 20-F for the fiscal year ended December 31, 2025 (SEC EDGAR, eingereicht 29.4.2026)",
+    "url": "https://www.sec.gov/Archives/edgar/data/889132/000119312526188766/d26797d20f.htm"
+   },
+   "rk-posco-20f-2025-item7a": {
+    "abgerufen": "2026-11-24",
+    "art": "COMPANY_PRIMARY",
+    "fundstelle": "HTML, Text ohne Tags (Tabellenzellen je Zeile), Abschnitt Item 7.A Major Shareholders",
+    "herausgeber": "POSCO HOLDINGS INC.",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/posco-20f-2025-item7a.txt",
+    "text_artifact_sha256": "db7947782c05d399fea3494ed6b08a8ec55bf923c1083392ca1c4ba84a9944d7",
+    "titel": "Annual Report Form 20-F for the fiscal year ended December 31, 2025 (SEC EDGAR, eingereicht 29.4.2026)",
+    "url": "https://www.sec.gov/Archives/edgar/data/889132/000119312526188766/d26797d20f.htm"
    },
    "rk-syr-ar-2023-s013": {
     "abgerufen": "2026-11-16",
@@ -2720,48 +2849,6 @@
    },
    {
     "abgleich": "",
-    "aufgabe": "Ziel oberste/R-GRAPHEX. Frage: Belegt die Quelle diese Aussage über Graphex Group Limited: Im Aktionärsregister nach SFO Teil XV ist zum 31.12.2025 neben den Direktoren nur Justin Yu mit 9,83 % gemeldet; die Direktoren halten 3,69 %, 3,07 % und 0,01 %. Ein Aktionär mit 10 % oder mehr ist nicht gemeldet.? Quellen: rk-gx-ar-2025-s056 (PDF-Seite 56 (pdftotext -layout)); rk-gx-ar-2025-s057 (PDF-Seite 57 (pdftotext -layout)).",
-    "aussage": "Belegt die Quelle diese Aussage über Graphex Group Limited: Im Aktionärsregister nach SFO Teil XV ist zum 31.12.2025 neben den Direktoren nur Justin Yu mit 9,83 % gemeldet; die Direktoren halten 3,69 %, 3,07 % und 0,01 %. Ein Aktionär mit 10 % oder mehr ist nicht gemeldet.?",
-    "belege": [
-     {
-      "quelle": "rk-gx-ar-2025-s056",
-      "zitat": [
-       "Chan Yick Yan Andross Beneficial owner, 978,800 – 33,743,3771 – – 34,722,177 3.69%",
-       "Lau Hing Tat Patrick Beneficial owner, interest of 4,744,400 – 24,200,6892 – – 28,945,089 3.07%",
-       "Qiu Bin Beneficial owner 136,000 – – – – 136,000 0.01%"
-      ]
-     },
-     {
-      "quelle": "rk-gx-ar-2025-s057",
-      "zitat": [
-       "Justin Yu Beneficial owner 92,500,000 9.83%"
-      ]
-     }
-    ],
-    "blind": true,
-    "erstmodell": "claude-opus-5-5",
-    "erstpruefung_sitzung": "session_01JgcA7TdgLRrqKV9kyFuE5E",
-    "geprueft_am": "2026-11-17",
-    "hinweis": "Direktoren 3.69%, 3.07%, 0.01% und Justin Yu 9.83% stehen in den Quellen. Dass er der einzige gemeldete Aktionaer ist und niemand mit 10 % oder mehr gemeldet ist, sagt keine Quelle ausdruecklich; die Tabelle der Substantial Shareholders endet auf s057 mit Justin Yu ohne Aussage zur Vollstaendigkeit.",
-    "pruef_id": "AE7",
-    "pruefer": "auto-zweitpruefung (claude-sonnet-5-5, blind)",
-    "pruefmodell": "claude-sonnet-5-5",
-    "pruefweg": "subagent",
-    "quelle_frisch_geladen": false,
-    "regel": "Eddie Sablah 2026-11-16: Regel 3 automatisch, blinde Zweitprüfung durch ein zweites Modell + Programmprüfung; Stichprobe 5 Fälle/Monat bleibt",
-    "sitzung": "auto:claude-sonnet-5-5:2026-11-17",
-    "textkopie_geprueft": true,
-    "urteil": "ABWEICHUNG",
-    "verfahren": "AUTO_ZWEITPRUEFUNG",
-    "wert": {
-     "einheit": "",
-     "zahl_text": ""
-    },
-    "ziel_id": "R-GRAPHEX",
-    "ziel_typ": "oberste"
-   },
-   {
-    "abgleich": "",
     "aufgabe": "Ziel kante/EK-CHINA-BAOAN-BTR. Frage: Welchen Anteil (Stimmrechte) hält China Baoan Group Co., Ltd. (中国宝安集团股份有限公司) laut Quelle an BTR New Materials Group Co Ltd? Stand 2025-12-31. Quellen: rk-baoan-ar-2025-s189 (PDF-Seite 189 (pdftotext -layout)).",
     "aussage": "Welchen Anteil (Stimmrechte) hält China Baoan Group Co., Ltd. (中国宝安集团股份有限公司) laut Quelle an BTR New Materials Group Co Ltd? Stand 2025-12-31.",
     "belege": [
@@ -2794,17 +2881,119 @@
     },
     "ziel_id": "EK-CHINA-BAOAN-BTR",
     "ziel_typ": "kante"
+   },
+   {
+    "abgleich": "",
+    "aufgabe": "Ziel kante/EK-POSCO-HOLDINGS-POSCO-FUTURE-M. Frage: Welchen Anteil (Kapital) hält POSCO Holdings Inc. laut Quelle an POSCO Future M Co., Ltd.? Stand 2025-12-31. Quellen: rk-posco-20f-2025-item4c (HTML, Text ohne Tags (Tabellenzellen je Zeile), Abschnitt Item 4.C Organizational Structure).",
+    "aussage": "Welchen Anteil (Kapital) hält POSCO Holdings Inc. laut Quelle an POSCO Future M Co., Ltd.? Stand 2025-12-31.",
+    "belege": [
+     {
+      "quelle": "rk-posco-20f-2025-item4c",
+      "zitat": [
+       "POSCO Future M Co., Ltd. Korea 58.2 %"
+      ]
+     }
+    ],
+    "blind": true,
+    "erstmodell": "claude-opus-5-5",
+    "erstpruefung_sitzung": "session_01JgcA7QCmoZYLcPhvk6mJbe",
+    "geprueft_am": "2026-11-24",
+    "hinweis": "",
+    "pruef_id": "AE31",
+    "pruefer": "auto-zweitpruefung (claude-sonnet-5-5, blind)",
+    "pruefmodell": "claude-sonnet-5-5",
+    "pruefweg": "subagent",
+    "quelle_frisch_geladen": false,
+    "regel": "Eddie Sablah 2026-11-16: Regel 3 automatisch, blinde Zweitprüfung durch ein zweites Modell + Programmprüfung; Stichprobe 5 Fälle/Monat bleibt",
+    "sitzung": "auto:claude-sonnet-5-5:2026-11-24",
+    "textkopie_geprueft": true,
+    "urteil": "BESTAETIGT",
+    "verfahren": "AUTO_ZWEITPRUEFUNG",
+    "wert": {
+     "einheit": "%",
+     "zahl_text": "58.2"
+    },
+    "ziel_id": "EK-POSCO-HOLDINGS-POSCO-FUTURE-M",
+    "ziel_typ": "kante"
+   },
+   {
+    "abgleich": "",
+    "aufgabe": "Ziel oberste/R-GRAPHEX. Frage: Enthält die Quelle eine Liste der Großaktionäre von Graphex Group Limited, die der Gesellschaft ihre Beteiligung gemeldet haben (substantial shareholders) bzw. der größten Aktionäre (Form 20-F Item 7.A \"Major Shareholders\")? Quellen: rk-gx-ar-2025-s057 (PDF-Seite 57 (pdftotext -layout)).",
+    "aussage": "Enthält die Quelle eine Liste der Großaktionäre von Graphex Group Limited, die der Gesellschaft ihre Beteiligung gemeldet haben (substantial shareholders) bzw. der größten Aktionäre (Form 20-F Item 7.A \"Major Shareholders\")?",
+    "belege": [
+     {
+      "quelle": "rk-gx-ar-2025-s057",
+      "zitat": [
+       "Substantial shareholders’ interests and short positions in shares and underlying shares"
+      ]
+     }
+    ],
+    "blind": true,
+    "erstmodell": "claude-opus-5-5",
+    "erstpruefung_sitzung": "session_01JgcA7TdgLRrqKV9kyFuE5E",
+    "geprueft_am": "2026-11-24",
+    "hinweis": "Liste mit Justin Yu folgt.",
+    "pruef_id": "AE32",
+    "pruefer": "auto-zweitpruefung (claude-sonnet-5-5, blind)",
+    "pruefmodell": "claude-sonnet-5-5",
+    "pruefweg": "subagent",
+    "quelle_frisch_geladen": false,
+    "regel": "Eddie Sablah 2026-11-16: Regel 3 automatisch, blinde Zweitprüfung durch ein zweites Modell + Programmprüfung; Stichprobe 5 Fälle/Monat bleibt",
+    "sitzung": "auto:claude-sonnet-5-5:2026-11-24",
+    "textkopie_geprueft": true,
+    "urteil": "BESTAETIGT",
+    "verfahren": "AUTO_ZWEITPRUEFUNG",
+    "wert": {
+     "einheit": "",
+     "zahl_text": ""
+    },
+    "ziel_id": "R-GRAPHEX",
+    "ziel_typ": "oberste"
+   },
+   {
+    "abgleich": "",
+    "aufgabe": "Ziel oberste/R-POSCO-HOLDINGS. Frage: Enthält die Quelle eine Liste der Großaktionäre von POSCO Holdings Inc., die der Gesellschaft ihre Beteiligung gemeldet haben (substantial shareholders) bzw. der größten Aktionäre (Form 20-F Item 7.A \"Major Shareholders\")? Quellen: rk-posco-20f-2025-item7a (HTML, Text ohne Tags (Tabellenzellen je Zeile), Abschnitt Item 7.A Major Shareholders).",
+    "aussage": "Enthält die Quelle eine Liste der Großaktionäre von POSCO Holdings Inc., die der Gesellschaft ihre Beteiligung gemeldet haben (substantial shareholders) bzw. der größten Aktionäre (Form 20-F Item 7.A \"Major Shareholders\")?",
+    "belege": [
+     {
+      "quelle": "rk-posco-20f-2025-item7a",
+      "zitat": [
+       "The following table sets forth certain information relating to the shareholders of our common stock issued as of December 31, 2025."
+      ]
+     }
+    ],
+    "blind": true,
+    "erstmodell": "claude-opus-5-5",
+    "erstpruefung_sitzung": "session_01JgcA7TdgLRrqKV9kyFuE5E",
+    "geprueft_am": "2026-11-24",
+    "hinweis": "",
+    "pruef_id": "AE35",
+    "pruefer": "auto-zweitpruefung (claude-sonnet-5-5, blind)",
+    "pruefmodell": "claude-sonnet-5-5",
+    "pruefweg": "subagent",
+    "quelle_frisch_geladen": false,
+    "regel": "Eddie Sablah 2026-11-16: Regel 3 automatisch, blinde Zweitprüfung durch ein zweites Modell + Programmprüfung; Stichprobe 5 Fälle/Monat bleibt",
+    "sitzung": "auto:claude-sonnet-5-5:2026-11-24",
+    "textkopie_geprueft": true,
+    "urteil": "BESTAETIGT",
+    "verfahren": "AUTO_ZWEITPRUEFUNG",
+    "wert": {
+     "einheit": "",
+     "zahl_text": ""
+    },
+    "ziel_id": "R-POSCO-HOLDINGS",
+    "ziel_typ": "oberste"
    }
   ]
  },
  "eingaben": {
-  "analysis/rohstoffe/eigentum/eigentumskette.json": "5d02f341354c9ed186ce2c189b9619b8061fdb5d2739fbfa3688764f32e1b9ba",
+  "analysis/rohstoffe/eigentum/eigentumskette.json": "74d2ea759f73ced09161ecbfb9bdc830636d18d945d979507263cabc58c15903",
   "analysis/rohstoffe/fluss-freigaben.jsonl": "aaabbdac9c8a96ba0a688d2348a9b29df912fd5f6d05c9915280d05f3e396d66",
   "analysis/rohstoffe/graphit/kandidaten.json": "82b42a882bd5a84fb26482c511e223c960d6729d3e4c5f3b495682bdfa6d109e",
   "analysis/rohstoffe/graphit/markt.json": "4278fd32ff895333b148c239d65e328c3c256f9123dcd28bbf7b32d2a540f896",
   "analysis/rohstoffe/mengen/annahmen-snapshot.json": "5169bc01abcdff017b11b6e2e0bdb0abbc934a843f86a8fbbf4dbdd3585165b1",
-  "analysis/rohstoffe/mengen/mengen.json": "a9c63566dfea221b1a79b37c3a5e4279c95da48436d5d005c1c924156ccb0db3",
-  "analysis/rohstoffe/mengen/zweitpruefung.jsonl": "65e79d9b6e01f162ee1d6274df6ad52c3f25a75345c5dc532269828f56622c7f"
+  "analysis/rohstoffe/mengen/mengen.json": "83eb82f85ec56a551a01ebaf57c79d4b74add31b00a61c29c297c7b171af3cc8",
+  "analysis/rohstoffe/mengen/zweitpruefung.jsonl": "06547833fe40ebe5a2c1b6da97cbe1b45bc454f47b5d9d9b0da7592481390ef2"
  },
  "erzeugt_von": "scripts/analysis/rohstoffe/rohstoffkette.py",
  "kette": {
@@ -4107,7 +4296,7 @@
          "zitat": "\"stand\":\"2026-11-10\""
         }
        ],
-       "text": "Kein Namenstreffer für POSCO Future M Co., Ltd. auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
+       "text": "Kein Namenstreffer für POSCO Future M Co., Ltd., POSCO Holdings Inc. auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
       }
      ],
      "grund": null,
@@ -4143,8 +4332,33 @@
     "status": "APPROVED (LOCALITY)",
     "url": "https://www.wikidata.org/wiki/Q2241791"
    },
-   "risiko": [],
-   "risiko_grund": "Länderanteil nur für Förderstufe",
+   "risiko": [
+    {
+     "art": "BETRIEB",
+     "art_text": "Störung/Betriebsrisiko",
+     "belege": [
+      {
+       "abgerufen": "2026-11-09",
+       "fundstelle": "Textkopie des Flusspakets",
+       "herausgeber": "Syrah Resources Limited",
+       "textkopie": "analysis/research/graphit-flows-v1/raw/syr-q2-2026-p4.txt",
+       "titel": "Quarterly Activities Report, three months ending 30 June 2026 (ASX-Mitteilung vom 23.7.2026)",
+       "url": "https://company-announcements.afr.com/asx/syr/fd6aa8e8-8625-11f1-91f8-56ba1befffc4.pdf",
+       "zitat": "Customer AAM purchasing remained unconfirmed through the quarter … Syrah is only operating Vidalia to the level necessary to progress customer qualification processes"
+      }
+     ],
+     "bezug": "STANDORT",
+     "evidenz": "BELEGT",
+     "freigabe": "FREIGEGEBEN",
+     "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-24 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+     "id": "SR-GR-01",
+     "quelle": "Syrah Resources Limited, Quarterly Activities Report, three months ending 30 June 2026 (ASX-Mitteilung vom 23.7.2026)",
+     "text": "Syrah betreibt Vidalia im Juni-Quartal 2026 nur für Qualifizierungsproben (rund 150 t Anodenmaterial), weil Kundenabnahmen noch nicht bestätigt sind; kommerzielle Lieferungen sind erst ab dem zweiten Halbjahr 2026 geplant.",
+     "url": "https://company-announcements.afr.com/asx/syr/fd6aa8e8-8625-11f1-91f8-56ba1befffc4.pdf",
+     "zitat": "Customer AAM purchasing remained unconfirmed through the quarter … Syrah is only operating Vidalia to the level necessary to progress customer qualification processes"
+    }
+   ],
+   "risiko_grund": null,
    "risiko_land": {
     "belege": [],
     "herkunft": "Land des Glieds im Generator-Datensatz",
@@ -4602,8 +4816,42 @@
     "status": "APPROVED (HQ_CITY)",
     "url": "https://www.wikidata.org/wiki/Q16559"
    },
-   "risiko": [],
-   "risiko_grund": "Länderanteil nur für Förderstufe",
+   "risiko": [
+    {
+     "art": "BETRIEB",
+     "art_text": "Störung/Betriebsrisiko",
+     "belege": [
+      {
+       "abgerufen": "2026-11-09",
+       "fundstelle": "Textkopie des Flusspakets",
+       "herausgeber": "Syrah Resources Limited",
+       "textkopie": "analysis/research/graphit-flows-v1/raw/syr-tesla-2025-09-p1.txt",
+       "titel": "Tesla offtake alleged default cure date extended (ASX-Mitteilung 17.9.2025)",
+       "url": "https://announcements.asx.com.au/asxpdf/20250917/pdf/06p9sspgbz54q0.pdf",
+       "zitat": "received a notice from Tesla alleging that it had defaulted on an obligation under the Offtake Agreement … Tesla may terminate the Offtake Agreement if final qualification"
+      },
+      {
+       "abgerufen": "2026-11-09",
+       "fundstelle": "Textkopie des Flusspakets",
+       "herausgeber": "Syrah Resources Limited",
+       "textkopie": "analysis/research/graphit-flows-v1/raw/syr-q2-2026-p4.txt",
+       "titel": "Quarterly Activities Report, three months ending 30 June 2026 (ASX-Mitteilung vom 23.7.2026)",
+       "url": "https://company-announcements.afr.com/asx/syr/fd6aa8e8-8625-11f1-91f8-56ba1befffc4.pdf",
+       "zitat": "the alleged default of the Tesla offtake agreement was resolved"
+      }
+     ],
+     "bezug": "STANDORT",
+     "evidenz": "BELEGT",
+     "freigabe": "FREIGEGEBEN",
+     "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-24 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+     "id": "SR-GR-02",
+     "quelle": "Syrah Resources Limited, Tesla offtake alleged default cure date extended (ASX-Mitteilung 17.9.2025)",
+     "text": "Tesla warf Syrah 2025 vor, keine vertragsgemäßen Proben aus Vidalia geliefert zu haben, und konnte den Abnahmevertrag kündigen, falls die Qualifizierung nicht rechtzeitig gelingt; laut Syrah wurde der Streit im Juni-Quartal 2026 beigelegt.",
+     "url": "https://announcements.asx.com.au/asxpdf/20250917/pdf/06p9sspgbz54q0.pdf",
+     "zitat": "received a notice from Tesla alleging that it had defaulted on an obligation under the Offtake Agreement … Tesla may terminate the Offtake Agreement if final qualification"
+    }
+   ],
+   "risiko_grund": null,
    "risiko_land": {
     "belege": [
      {
@@ -4741,7 +4989,7 @@
   }
  ],
  "tiefe": {
-  "belegt": 32,
+  "belegt": 36,
   "dimensionen": [
    "Eigentümer/Betreiber",
    "Standort",
@@ -4751,7 +4999,7 @@
    "Risiko"
   ],
   "gesamt": 66,
-  "mit_annahmen": 45,
+  "mit_annahmen": 49,
   "zeilen": [
    {
     "felder": {
@@ -4802,7 +5050,7 @@
      "Eigentümer/Betreiber": "unbekannt",
      "Lieferbeziehung": "belegt",
      "Menge": "belegt",
-     "Risiko": "unbekannt",
+     "Risiko": "belegt",
      "Standort": "belegt",
      "Wert": "unbekannt"
     },
@@ -4821,7 +5069,7 @@
    },
    {
     "felder": {
-     "Eigentümer/Betreiber": "unbekannt",
+     "Eigentümer/Betreiber": "belegt",
      "Lieferbeziehung": "belegt",
      "Menge": "belegt",
      "Risiko": "unbekannt",
@@ -4835,7 +5083,7 @@
      "Eigentümer/Betreiber": "belegt",
      "Lieferbeziehung": "belegt",
      "Menge": "belegt",
-     "Risiko": "unbekannt",
+     "Risiko": "belegt",
      "Standort": "belegt",
      "Wert": "unbekannt"
     },
@@ -4868,7 +5116,7 @@
      "Eigentümer/Betreiber": "belegt",
      "Lieferbeziehung": "belegt",
      "Menge": "unbekannt",
-     "Risiko": "unbekannt",
+     "Risiko": "belegt",
      "Standort": "belegt",
      "Wert": "unbekannt"
     },
@@ -5624,11 +5872,11 @@
  "zaehler": {
   "ausfall_mit_ausweich_menge": 11,
   "belege": 17,
-  "eigentum_belegt": 6,
+  "eigentum_belegt": 7,
   "eigentum_kandidaten": 1,
-  "eigentumskette_freigegeben": 3,
-  "eigentumskette_kanten": 1,
-  "eigentumskette_vollstaendig": 4,
+  "eigentumskette_freigegeben": 5,
+  "eigentumskette_kanten": 2,
+  "eigentumskette_vollstaendig": 5,
   "glieder_mit_ausweichquelle": 10,
   "kette_stufen": 3,
   "mengen_abgeleitet": 1,
@@ -5637,14 +5885,14 @@
   "mengen_freigegeben": 0,
   "mengen_in_tonnen": 3,
   "mengen_mit_annahmen": 8,
-  "risiko_belegt": 1,
+  "risiko_belegt": 3,
   "risikoebene_belegt": 34,
   "risikoebene_felder": 44,
   "standorte": 11,
   "standorte_mit_ort": 9,
-  "tiefe_belegt": 32,
+  "tiefe_belegt": 36,
   "tiefe_gesamt": 66,
-  "tiefe_mit_annahmen": 45,
+  "tiefe_mit_annahmen": 49,
   "verbindungen": 10,
   "verbindungen_auf_globus": 8,
   "verbindungen_freigegeben": 10,

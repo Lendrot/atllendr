@@ -5457,6 +5457,15 @@
      "kante": null,
      "kinder": [
       {
+       "effektiv": 82.0,
+       "kante": "EK-POSCO-HOLDINGS-P-PLS",
+       "kinder": [],
+       "knoten": "R-POSCO-HOLDINGS",
+       "pflicht": true,
+       "schluss": "OBERSTE",
+       "schluss_text": "oberste Gesellschaft"
+      },
+      {
        "effektiv": 18.0,
        "kante": "EK-PLS-P-PLS",
        "kinder": [
@@ -5474,21 +5483,12 @@
        "pflicht": true,
        "schluss": "GESCHLOSSEN",
        "schluss_text": "Eigentümer belegt"
-      },
-      {
-       "effektiv": null,
-       "kante": "EK-POSCO-HOLDINGS-P-PLS",
-       "kinder": [],
-       "knoten": "R-POSCO-HOLDINGS",
-       "pflicht": true,
-       "schluss": "OFFEN",
-       "schluss_text": "endet ohne Beleg"
       }
      ],
      "knoten": "R-P-PLS",
      "pflicht": true,
-     "schluss": "OFFEN",
-     "schluss_text": "endet ohne Beleg"
+     "schluss": "GESCHLOSSEN",
+     "schluss_text": "Eigentümer belegt"
     },
     "belegt": true,
     "betreiber": null,
@@ -5500,8 +5500,8 @@
     "ebenen": 2,
     "einschraenkung": null,
     "grund": null,
-    "status": "OFFEN",
-    "status_text": "Kette endet ohne Beleg",
+    "status": "VOLLSTAENDIG_FREIGEGEBEN",
+    "status_text": "bis oben belegt und freigegeben",
     "wurzel": "R-P-PLS"
    },
    "S23": {
@@ -5832,12 +5832,21 @@
        "pflicht": true,
        "schluss": "GESCHLOSSEN",
        "schluss_text": "Eigentümer belegt"
+      },
+      {
+       "effektiv": 35.0,
+       "kante": "EK-MALI-GOULAMINA",
+       "kinder": [],
+       "knoten": "R-MALI",
+       "pflicht": true,
+       "schluss": "ENDE",
+       "schluss_text": "letzter Eigentümer"
       }
      ],
      "knoten": "R-GOULAMINA",
      "pflicht": true,
-     "schluss": "OFFEN",
-     "schluss_text": "endet ohne Beleg"
+     "schluss": "GESCHLOSSEN",
+     "schluss_text": "Eigentümer belegt"
     },
     "belegt": true,
     "betreiber": null,
@@ -5849,8 +5858,8 @@
     "ebenen": 2,
     "einschraenkung": null,
     "grund": null,
-    "status": "OFFEN",
-    "status_text": "Kette endet ohne Beleg",
+    "status": "VOLLSTAENDIG_FREIGEGEBEN",
+    "status_text": "bis oben belegt und freigegeben",
     "wurzel": "R-GOULAMINA"
    },
    "S6": {
@@ -6465,6 +6474,36 @@
     "von": "R-LMLB"
    },
    {
+    "an": "R-GOULAMINA",
+    "anteil": 35.0,
+    "atlas_id": null,
+    "beherrschend": false,
+    "belege": [
+     {
+      "fundstelle": "PDF-Seite 6 (pdftotext ohne -layout)",
+      "quelle": "rk-gfl-ann-2024-12-05-s006",
+      "rolle": "hauptbeleg",
+      "zitat": "Upon the completion of the Mali government's equity interest participation, the Company will indirectly hold 65% of LMSA's shares, and the Mali government will hold 35% equity interest in LMSA."
+     },
+     {
+      "fundstelle": "PDF-Seite 3 (pdftotext ohne -layout)",
+      "quelle": "rk-gfl-ann-2024-12-05-s003",
+      "rolle": "zusatzbeleg",
+      "zitat": "The construction of first phase of the Goulamana spodumene project held by LMSA has been completed"
+     }
+    ],
+    "einschraenkung": "Anteil an der Projektgesellschaft Lithium du Mali SA (LMSA), die das Projekt hält (Quelle schreibt „Goulamana“). Die Mitteilung beschreibt den Stand nach Vollzug; den Vollzug selbst belegt keine gelesene Quelle, der Ganfeng-Jahresbericht 2025 nennt passend 65 % für Ganfeng.",
+    "evidenz": "FACT",
+    "freigabe": "FREIGEGEBEN",
+    "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-24 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+    "id": "EK-MALI-GOULAMINA",
+    "mass": "KAPITAL",
+    "mass_text": "Kapital",
+    "stand": "2024-12-05",
+    "text": null,
+    "von": "R-MALI"
+   },
+   {
     "an": "R-LMLB",
     "anteil": null,
     "atlas_id": null,
@@ -6544,26 +6583,32 @@
    },
    {
     "an": "R-P-PLS",
-    "anteil": null,
+    "anteil": 82.0,
     "atlas_id": null,
     "beherrschend": false,
     "belege": [
      {
+      "fundstelle": "HTML, Text ohne Tags (Tabellenzellen je Zeile), Abschnitt Item 4.B, Absatz \"POSCO Pilbara Lithium Solution\"",
+      "quelle": "rk-posco-20f-2025-item4b-pls",
+      "rolle": "hauptbeleg",
+      "zitat": "POSCO Pilbara Lithium Solution, a joint venture with PLS in which POSCO HOLDINGS INC. holds a 82% interest"
+     },
+     {
       "fundstelle": "PDF-Seite 203 (pdftotext ohne -layout)",
       "quelle": "rk-pls-ar-2026-s203",
-      "rolle": "hauptbeleg",
+      "rolle": "zusatzbeleg",
       "zitat": "During FY22, the Company formed an incorporated joint venture with POSCO Holdings (POSCO)"
      }
     ],
     "einschraenkung": null,
     "evidenz": "FACT",
     "freigabe": "FREIGEGEBEN",
-    "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
+    "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-24 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
     "id": "EK-POSCO-HOLDINGS-P-PLS",
     "mass": "KAPITAL",
     "mass_text": "Kapital",
-    "stand": "2026-06-30",
-    "text": "Joint-Venture-Partner (Anteil nicht genannt)",
+    "stand": "2025-12-31",
+    "text": null,
     "von": "R-POSCO-HOLDINGS"
    },
    {
@@ -7314,8 +7359,33 @@
     "land": "KR",
     "lei": null,
     "name": "POSCO Holdings Inc.",
-    "oberste": null,
-    "offen": "Anteil und Eigentümer von POSCO Holdings nennt keine gelesene Quelle; LEI-Eintrag abgelaufen."
+    "oberste": {
+     "belege": [
+      {
+       "fundstelle": "HTML, Text ohne Tags (Tabellenzellen je Zeile), Abschnitt Item 7.A Major Shareholders",
+       "quelle": "rk-posco-20f-2025-item7a",
+       "rolle": "hauptbeleg",
+       "zitat": "Item 7.A. Major Shareholders … The following table sets forth certain information relating to the shareholders of our common stock issued as of December 31, 2025."
+      },
+      {
+       "fundstelle": "HTML, Text ohne Tags (Tabellenzellen je Zeile), Abschnitt Item 7.A Major Shareholders",
+       "quelle": "rk-posco-20f-2025-item7a",
+       "rolle": "zusatzbeleg",
+       "zitat": "National Pension Service 6,441,610 7.96 … BlackRock Fund Advisors (1) (2) (3) 4,206,522 5.20 … CITIBANK N.A. (4) 2,289,755 2.83 … Pohang University of Science and Technology 1,981,047 2.45 … Samsung Group (5) 1,861,979 2.30"
+      },
+      {
+       "fundstelle": "HTML, Text ohne Tags (Tabellenzellen je Zeile), Abschnitt Item 7.A Major Shareholders",
+       "quelle": "rk-posco-20f-2025-item7a",
+       "rolle": "zusatzbeleg",
+       "zitat": "Total issued shares of common stock 80,932,952 100.00"
+      }
+     ],
+     "freigabe": "FREIGEGEBEN",
+     "freigabe_herkunft": "ABGELEITET: größter gemeldeter Großaktionär 8,0 % < 10 % (Regel Eddie Sablah 2026-11-23: Großaktionärsliste als Beleg für die oberste Gesellschaft (ABGELEITET)); Liste und 6 Zahlen Zweitprüfung BESTAETIGT 2026-11-24 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+     "grund": "GROSSAKTIONAERE_UNTER_SCHWELLE",
+     "text": "Kein beherrschender Aktionär (ABGELEITET, Regel 2026-11-23): Der Jahresbericht Form 20-F nennt unter Item 7.A „Major Shareholders“ die größten Aktionäre; der größte hält 6.441.610 von 80.932.952 ausgegebenen Aktien (gerechnet 8,0 %, unter der Schwelle 10 %), Stand 31.12.2025. Eigene Aktien (6,56 %) und Streubesitz (72,70 %) sind keine Halter."
+    },
+    "offen": null
    },
    "R-SINOMINE": {
     "art": "GESELLSCHAFT",
@@ -7539,7 +7609,7 @@
     },
     "S22": {
      "ebenen": 2,
-     "status": "OFFEN"
+     "status": "VOLLSTAENDIG_FREIGEGEBEN"
     },
     "S23": {
      "ebenen": 0,
@@ -7575,7 +7645,7 @@
     },
     "S5": {
      "ebenen": 2,
-     "status": "OFFEN"
+     "status": "VOLLSTAENDIG_FREIGEGEBEN"
     },
     "S6": {
      "ebenen": 4,
@@ -7594,10 +7664,10 @@
      "status": "OFFEN"
     }
    },
-   "kanten": 30,
-   "kanten_freigegeben": 30,
+   "kanten": 31,
+   "kanten_freigegeben": 31,
    "kanten_kandidat": 0,
-   "kanten_mit_anteil": 16,
+   "kanten_mit_anteil": 18,
    "knoten": 42,
    "letzte_eigentuemer": [
     "Jiang Weiping",
@@ -7614,24 +7684,44 @@
     "IGO Limited",
     "LG Chem, Ltd. ((주) 엘지화학)",
     "Liontown Resources Limited",
+    "POSCO Holdings Inc.",
     "Wesfarmers Limited"
    ],
-   "offen": 9,
+   "offen": 7,
    "offene_knoten": [
     "Albemarle Corporation",
     "Ford Motor Company",
     "Kodal Minerals plc",
-    "POSCO Holdings Inc.",
     "Sociedad Química y Minera (SQM)"
    ],
    "schwelle_prozent": 10.0,
    "unbekannt": 5,
-   "vollstaendig": 14,
-   "vollstaendig_freigegeben": 14,
+   "vollstaendig": 16,
+   "vollstaendig_freigegeben": 16,
    "vollstaendig_kandidat": 0,
    "zweitpruefung_offen": 0
   },
   "quellen": {
+   "rk-gfl-ann-2024-12-05-s003": {
+    "abgerufen": "2026-11-24",
+    "art": "COMPANY_PRIMARY",
+    "fundstelle": "PDF-Seite 3 (pdftotext ohne -layout)",
+    "herausgeber": "Ganfeng Lithium Group Co., Ltd.",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/gfl-ann-2024-12-05-p003.txt",
+    "text_artifact_sha256": "fb454c5db15a49effb5b68be05584888c10acce9bfb230ef007a04629c25042c",
+    "titel": "Overseas Regulatory Announcement 5.12.2024: Equity interest transfer agreement with the Republic of Mali (LMSA)",
+    "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2024/1205/2024120501874.pdf#page=3"
+   },
+   "rk-gfl-ann-2024-12-05-s006": {
+    "abgerufen": "2026-11-24",
+    "art": "COMPANY_PRIMARY",
+    "fundstelle": "PDF-Seite 6 (pdftotext ohne -layout)",
+    "herausgeber": "Ganfeng Lithium Group Co., Ltd.",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/gfl-ann-2024-12-05-p006.txt",
+    "text_artifact_sha256": "53f7a52f15fcaf3c0373a3b91d68db3b68972cba4d04f2ca7aa49fa0128f9e03",
+    "titel": "Overseas Regulatory Announcement 5.12.2024: Equity interest transfer agreement with the Republic of Mali (LMSA)",
+    "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2024/1205/2024120501874.pdf#page=6"
+   },
    "rk-gfl-ar-2025-s047": {
     "abgerufen": "2026-11-16",
     "art": "COMPANY_PRIMARY",
@@ -7951,6 +8041,26 @@
     "text_artifact_sha256": "6037c761006e9cd2a66d555b53b06a00194db3864a191dbcaeee418c6824228b",
     "titel": "Annual Report 2026",
     "url": "https://announcements.asx.com.au/asxpdf/20260824/pdf/07331p4vgk5jjk.pdf#page=203"
+   },
+   "rk-posco-20f-2025-item4b-pls": {
+    "abgerufen": "2026-11-24",
+    "art": "COMPANY_PRIMARY",
+    "fundstelle": "HTML, Text ohne Tags (Tabellenzellen je Zeile), Abschnitt Item 4.B, Absatz \"POSCO Pilbara Lithium Solution\"",
+    "herausgeber": "POSCO HOLDINGS INC.",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/posco-20f-2025-item4b-pls.txt",
+    "text_artifact_sha256": "a2417887e394dc3b54e82b6c8766aa90ca2563f9369ec71009c52a1655ea6799",
+    "titel": "Annual Report Form 20-F for the fiscal year ended December 31, 2025 (SEC EDGAR, eingereicht 29.4.2026)",
+    "url": "https://www.sec.gov/Archives/edgar/data/889132/000119312526188766/d26797d20f.htm"
+   },
+   "rk-posco-20f-2025-item7a": {
+    "abgerufen": "2026-11-24",
+    "art": "COMPANY_PRIMARY",
+    "fundstelle": "HTML, Text ohne Tags (Tabellenzellen je Zeile), Abschnitt Item 7.A Major Shareholders",
+    "herausgeber": "POSCO HOLDINGS INC.",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/posco-20f-2025-item7a.txt",
+    "text_artifact_sha256": "db7947782c05d399fea3494ed6b08a8ec55bf923c1083392ca1c4ba84a9944d7",
+    "titel": "Annual Report Form 20-F for the fiscal year ended December 31, 2025 (SEC EDGAR, eingereicht 29.4.2026)",
+    "url": "https://www.sec.gov/Archives/edgar/data/889132/000119312526188766/d26797d20f.htm"
    },
    "rk-sino-ar-2025-s029": {
     "abgerufen": "2026-11-08",
@@ -8482,29 +8592,6 @@
     "sitzung": "session_01JgcA7Tamxi4Cn8LEHHDz8t",
     "urteil": "BESTAETIGT",
     "ziel_id": "EK-PLS-PERSONEN-PLS",
-    "ziel_typ": "kante"
-   },
-   {
-    "abgleich": "Joint-Venture-Partner, Anteil nicht genannt",
-    "aussage": "POSCO Holdings Inc. → POSCO Pilbara Lithium Solution Co. Ltd (P-PLS): Joint-Venture-Partner (Anteil nicht genannt), Stand 2026-06-30",
-    "belege": [
-     {
-      "quelle": "rk-pls-ar-2026-s203",
-      "zitat": [
-       "the Company formed an incorporated joint venture with POSCO Holdings (POSCO) named ‘POSCO-Pilbara Minerals Lithium Solution Co Ltd’ (“P-PLS”)"
-      ]
-     }
-    ],
-    "bericht": "analysis/rohstoffe/eigentum/zweitpruefung/Pruefbericht-Eigentuemerkette-Rohstoffe-Zweitpruefung-2026-11-16.pdf",
-    "erstpruefung_sitzung": "session_01JgcA7TdgLRrqKV9kyFuE5E",
-    "geprueft_am": "2026-11-16",
-    "pruef_id": "R38",
-    "pruefer": "Claude (Zweitprüfung, getrennte Sitzung)",
-    "quelle_frisch_geladen": true,
-    "regel": "Eddie Sablah 2026-11-11 13:41Z: Freigabe nur, wenn zwei getrennte Sitzungen bestätigen (Zweite Sitzung + CI + 5 Fälle/Monat)",
-    "sitzung": "session_01JgcA7Tamxi4Cn8LEHHDz8t",
-    "urteil": "BESTAETIGT",
-    "ziel_id": "EK-POSCO-HOLDINGS-P-PLS",
     "ziel_typ": "kante"
    },
    {
@@ -9095,17 +9182,119 @@
     },
     "ziel_id": "EK-CANMAX-PERSONEN-CANMAX",
     "ziel_typ": "kante"
+   },
+   {
+    "abgleich": "",
+    "aufgabe": "Ziel kante/EK-MALI-GOULAMINA. Frage: Welchen Anteil (Kapital) hält Regierung von Mali laut Quelle an Goulamina (Lithiummine)? Stand 2024-12-05. Quellen: rk-gfl-ann-2024-12-05-s003 (PDF-Seite 3 (pdftotext ohne -layout)); rk-gfl-ann-2024-12-05-s006 (PDF-Seite 6 (pdftotext ohne -layout)).",
+    "aussage": "Welchen Anteil (Kapital) hält Regierung von Mali laut Quelle an Goulamina (Lithiummine)? Stand 2024-12-05.",
+    "belege": [
+     {
+      "quelle": "rk-gfl-ann-2024-12-05-s006",
+      "zitat": [
+       "the Mali government will hold 35% equity interest in LMSA"
+      ]
+     }
+    ],
+    "blind": true,
+    "erstmodell": "claude-opus-5-5",
+    "erstpruefung_sitzung": "session_01JgcA7QCmoZYLcPhvk6mJbe",
+    "geprueft_am": "2026-11-24",
+    "hinweis": "Anteil nach Abschluss der Beteiligung der Regierung, an LMSA (Projekteigner).",
+    "pruef_id": "AE29",
+    "pruefer": "auto-zweitpruefung (claude-sonnet-5-5, blind)",
+    "pruefmodell": "claude-sonnet-5-5",
+    "pruefweg": "subagent",
+    "quelle_frisch_geladen": false,
+    "regel": "Eddie Sablah 2026-11-16: Regel 3 automatisch, blinde Zweitprüfung durch ein zweites Modell + Programmprüfung; Stichprobe 5 Fälle/Monat bleibt",
+    "sitzung": "auto:claude-sonnet-5-5:2026-11-24",
+    "textkopie_geprueft": true,
+    "urteil": "BESTAETIGT",
+    "verfahren": "AUTO_ZWEITPRUEFUNG",
+    "wert": {
+     "einheit": "%",
+     "zahl_text": "35"
+    },
+    "ziel_id": "EK-MALI-GOULAMINA",
+    "ziel_typ": "kante"
+   },
+   {
+    "abgleich": "",
+    "aufgabe": "Ziel kante/EK-POSCO-HOLDINGS-P-PLS. Frage: Welchen Anteil (Kapital) hält POSCO Holdings Inc. laut Quelle an POSCO Pilbara Lithium Solution Co. Ltd (P-PLS)? Stand 2025-12-31. Quellen: rk-pls-ar-2026-s203 (PDF-Seite 203 (pdftotext ohne -layout)); rk-posco-20f-2025-item4b-pls (HTML, Text ohne Tags (Tabellenzellen je Zeile), Abschnitt Item 4.B, Absatz \"POSCO Pilbara Lithium Solution\").",
+    "aussage": "Welchen Anteil (Kapital) hält POSCO Holdings Inc. laut Quelle an POSCO Pilbara Lithium Solution Co. Ltd (P-PLS)? Stand 2025-12-31.",
+    "belege": [
+     {
+      "quelle": "rk-posco-20f-2025-item4b-pls",
+      "zitat": [
+       "in which POSCO HOLDINGS INC. holds a 82% interest"
+      ]
+     }
+    ],
+    "blind": true,
+    "erstmodell": "claude-opus-5-5",
+    "erstpruefung_sitzung": "session_01JgcA7QCmoZYLcPhvk6mJbe",
+    "geprueft_am": "2026-11-24",
+    "hinweis": "PLS-Bericht nennt 18% fuer PLS; POSCO 20-F 82% fuer POSCO.",
+    "pruef_id": "AE30",
+    "pruefer": "auto-zweitpruefung (claude-sonnet-5-5, blind)",
+    "pruefmodell": "claude-sonnet-5-5",
+    "pruefweg": "subagent",
+    "quelle_frisch_geladen": false,
+    "regel": "Eddie Sablah 2026-11-16: Regel 3 automatisch, blinde Zweitprüfung durch ein zweites Modell + Programmprüfung; Stichprobe 5 Fälle/Monat bleibt",
+    "sitzung": "auto:claude-sonnet-5-5:2026-11-24",
+    "textkopie_geprueft": true,
+    "urteil": "BESTAETIGT",
+    "verfahren": "AUTO_ZWEITPRUEFUNG",
+    "wert": {
+     "einheit": "%",
+     "zahl_text": "82"
+    },
+    "ziel_id": "EK-POSCO-HOLDINGS-P-PLS",
+    "ziel_typ": "kante"
+   },
+   {
+    "abgleich": "",
+    "aufgabe": "Ziel oberste/R-POSCO-HOLDINGS. Frage: Enthält die Quelle eine Liste der Großaktionäre von POSCO Holdings Inc., die der Gesellschaft ihre Beteiligung gemeldet haben (substantial shareholders) bzw. der größten Aktionäre (Form 20-F Item 7.A \"Major Shareholders\")? Quellen: rk-posco-20f-2025-item7a (HTML, Text ohne Tags (Tabellenzellen je Zeile), Abschnitt Item 7.A Major Shareholders).",
+    "aussage": "Enthält die Quelle eine Liste der Großaktionäre von POSCO Holdings Inc., die der Gesellschaft ihre Beteiligung gemeldet haben (substantial shareholders) bzw. der größten Aktionäre (Form 20-F Item 7.A \"Major Shareholders\")?",
+    "belege": [
+     {
+      "quelle": "rk-posco-20f-2025-item7a",
+      "zitat": [
+       "The following table sets forth certain information relating to the shareholders of our common stock issued as of December 31, 2025."
+      ]
+     }
+    ],
+    "blind": true,
+    "erstmodell": "claude-opus-5-5",
+    "erstpruefung_sitzung": "session_01JgcA7TdgLRrqKV9kyFuE5E",
+    "geprueft_am": "2026-11-24",
+    "hinweis": "",
+    "pruef_id": "AE35",
+    "pruefer": "auto-zweitpruefung (claude-sonnet-5-5, blind)",
+    "pruefmodell": "claude-sonnet-5-5",
+    "pruefweg": "subagent",
+    "quelle_frisch_geladen": false,
+    "regel": "Eddie Sablah 2026-11-16: Regel 3 automatisch, blinde Zweitprüfung durch ein zweites Modell + Programmprüfung; Stichprobe 5 Fälle/Monat bleibt",
+    "sitzung": "auto:claude-sonnet-5-5:2026-11-24",
+    "textkopie_geprueft": true,
+    "urteil": "BESTAETIGT",
+    "verfahren": "AUTO_ZWEITPRUEFUNG",
+    "wert": {
+     "einheit": "",
+     "zahl_text": ""
+    },
+    "ziel_id": "R-POSCO-HOLDINGS",
+    "ziel_typ": "oberste"
    }
   ]
  },
  "eingaben": {
-  "analysis/rohstoffe/eigentum/eigentumskette.json": "5d02f341354c9ed186ce2c189b9619b8061fdb5d2739fbfa3688764f32e1b9ba",
+  "analysis/rohstoffe/eigentum/eigentumskette.json": "74d2ea759f73ced09161ecbfb9bdc830636d18d945d979507263cabc58c15903",
   "analysis/rohstoffe/fluss-freigaben.jsonl": "aaabbdac9c8a96ba0a688d2348a9b29df912fd5f6d05c9915280d05f3e396d66",
   "analysis/rohstoffe/lithium/kandidaten.json": "f5c23d3ae23edae33a67eeac555ca8336c0df5385e471aaeb5d7bac5880de53c",
   "analysis/rohstoffe/lithium/markt.json": "7a16c8ab88fda7ebdb65896703bbc07c8b47658a3f351d8c08df37313ea69303",
   "analysis/rohstoffe/mengen/annahmen-snapshot.json": "5169bc01abcdff017b11b6e2e0bdb0abbc934a843f86a8fbbf4dbdd3585165b1",
-  "analysis/rohstoffe/mengen/mengen.json": "a9c63566dfea221b1a79b37c3a5e4279c95da48436d5d005c1c924156ccb0db3",
-  "analysis/rohstoffe/mengen/zweitpruefung.jsonl": "65e79d9b6e01f162ee1d6274df6ad52c3f25a75345c5dc532269828f56622c7f"
+  "analysis/rohstoffe/mengen/mengen.json": "83eb82f85ec56a551a01ebaf57c79d4b74add31b00a61c29c297c7b171af3cc8",
+  "analysis/rohstoffe/mengen/zweitpruefung.jsonl": "06547833fe40ebe5a2c1b6da97cbe1b45bc454f47b5d9d9b0da7592481390ef2"
  },
  "erzeugt_von": "scripts/analysis/rohstoffe/rohstoffkette.py",
  "kette": {
@@ -10262,7 +10451,7 @@
          "zitat": "\"stand\":\"2026-11-10\""
         }
        ],
-       "text": "Kein Namenstreffer für Goulamina (Lithiummine), Ganfeng Lithium Group Co., Ltd., Natürliche Person(en), im LEI-Register nicht namentlich genannt auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
+       "text": "Kein Namenstreffer für Goulamina (Lithiummine), Ganfeng Lithium Group Co., Ltd., Natürliche Person(en), im LEI-Register nicht namentlich genannt, Regierung von Mali auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
       }
      ],
      "grund": null,
@@ -12469,8 +12658,33 @@
     "status": "APPROVED (LOCALITY)",
     "url": "https://www.wikidata.org/wiki/Q1794961"
    },
-   "risiko": [],
-   "risiko_grund": "Länderanteil nur für Förderstufe",
+   "risiko": [
+    {
+     "art": "BETRIEB",
+     "art_text": "Störung/Betriebsrisiko",
+     "belege": [
+      {
+       "abgerufen": "2026-11-06",
+       "fundstelle": "Textkopie des Flusspakets",
+       "herausgeber": "IGO Limited",
+       "textkopie": "analysis/research/lithium-flows-v1/raw/igo-ar-2026-p35.txt",
+       "titel": "2026 Annual Report",
+       "url": "https://announcements.asx.com.au/asxpdf/20260827/pdf/0738whx97kytmj.pdf",
+       "zitat": "TLK continued to miss operational performance guidance and optimisation programs are continuing. … following the full impairment of the Kwinana assets in FY25"
+      }
+     ],
+     "bezug": "STANDORT",
+     "evidenz": "BELEGT",
+     "freigabe": "FREIGEGEBEN",
+     "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-24 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+     "id": "SR-LI-01",
+     "quelle": "IGO Limited, 2026 Annual Report",
+     "text": "IGO meldet, dass die Kwinana-Raffinerie (Tianqi Lithium Kwinana) im GJ 2025/26 die betrieblichen Vorgaben weiter verfehlte; Optimierungsprogramme laufen, die Anlagen wurden im GJ 2024/25 vollständig wertberichtigt.",
+     "url": "https://announcements.asx.com.au/asxpdf/20260827/pdf/0738whx97kytmj.pdf",
+     "zitat": "TLK continued to miss operational performance guidance and optimisation programs are continuing. … following the full impairment of the Kwinana assets in FY25"
+    }
+   ],
+   "risiko_grund": null,
    "risiko_land": {
     "belege": [],
     "herkunft": "Land des Glieds im Generator-Datensatz",
@@ -12615,8 +12829,33 @@
     "status": "APPROVED (LOCALITY)",
     "url": "https://www.wikidata.org/wiki/Q1794961"
    },
-   "risiko": [],
-   "risiko_grund": "Länderanteil nur für Förderstufe",
+   "risiko": [
+    {
+     "art": "BETRIEB",
+     "art_text": "Störung/Betriebsrisiko",
+     "belege": [
+      {
+       "abgerufen": "2026-11-06",
+       "fundstelle": "Textkopie des Flusspakets",
+       "herausgeber": "Wesfarmers Limited",
+       "textkopie": "analysis/research/lithium-flows-v1/raw/wes-ar-2026-p41.txt",
+       "titel": "2026 Annual Report",
+       "url": "https://announcements.asx.com.au/asxpdf/20260827/pdf/0738z357pt1vhl.pdf",
+       "zitat": "Ramp-up and progression of qualification activities were affected by intermittent odour issues throughout the year"
+      }
+     ],
+     "bezug": "STANDORT",
+     "evidenz": "BELEGT",
+     "freigabe": "FREIGEGEBEN",
+     "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-24 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+     "id": "SR-LI-02",
+     "quelle": "Wesfarmers Limited, 2026 Annual Report",
+     "text": "Wesfarmers meldet, dass Hochlauf und Produktqualifizierung der Kwinana-Raffinerie von Covalent im GJ 2025/26 durch wiederkehrende Geruchsprobleme beeinträchtigt wurden; Gegenmaßnahmen begannen Ende des Geschäftsjahrs.",
+     "url": "https://announcements.asx.com.au/asxpdf/20260827/pdf/0738z357pt1vhl.pdf",
+     "zitat": "Ramp-up and progression of qualification activities were affected by intermittent odour issues throughout the year"
+    }
+   ],
+   "risiko_grund": null,
    "risiko_land": {
     "belege": [],
     "herkunft": "Land des Glieds im Generator-Datensatz",
@@ -13042,7 +13281,7 @@
          "zitat": "\"stand\":\"2026-11-10\""
         }
        ],
-       "text": "Kein Namenstreffer für POSCO Pilbara Lithium Solution Co. Ltd (P-PLS), PLS Group Limited, Natürliche Person(en), im LEI-Register nicht namentlich genannt, POSCO Holdings Inc. auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
+       "text": "Kein Namenstreffer für POSCO Pilbara Lithium Solution Co. Ltd (P-PLS), POSCO Holdings Inc., PLS Group Limited, Natürliche Person(en), im LEI-Register nicht namentlich genannt auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
       }
      ],
      "grund": null,
@@ -13976,7 +14215,7 @@
   }
  ],
  "tiefe": {
-  "belegt": 109,
+  "belegt": 111,
   "dimensionen": [
    "Eigentümer/Betreiber",
    "Standort",
@@ -13986,7 +14225,7 @@
    "Risiko"
   ],
   "gesamt": 168,
-  "mit_annahmen": 145,
+  "mit_annahmen": 147,
   "zeilen": [
    {
     "felder": {
@@ -14191,7 +14430,7 @@
      "Eigentümer/Betreiber": "belegt",
      "Lieferbeziehung": "belegt",
      "Menge": "unbekannt",
-     "Risiko": "unbekannt",
+     "Risiko": "belegt",
      "Standort": "belegt",
      "Wert": "unbekannt"
     },
@@ -14202,7 +14441,7 @@
      "Eigentümer/Betreiber": "belegt",
      "Lieferbeziehung": "belegt",
      "Menge": "unbekannt",
-     "Risiko": "unbekannt",
+     "Risiko": "belegt",
      "Standort": "belegt",
      "Wert": "unbekannt"
     },
@@ -14359,13 +14598,21 @@
       "textkopie": "analysis/rohstoffe/mengen/raw/pls-ar-2026-p99.txt",
       "url": "https://announcements.asx.com.au/asxpdf/20260824/pdf/07331p4vgk5jjk.pdf",
       "zitat": "PLS identified the Port Hedland export supply chain as a key … climate‑related risks and opportunities. As the route through which … the Group exports spodumene concentrate to global customers,"
+     },
+     {
+      "abgerufen": "2026-11-16",
+      "fundstelle": "Annual Report 2026, PDF-Seite 172",
+      "herausgeber": "PLS Group Limited",
+      "textkopie": "analysis/rohstoffe/mengen/raw/pls-ar-2026-p172.txt",
+      "url": "https://announcements.asx.com.au/asxpdf/20260824/pdf/07331p4vgk5jjk.pdf",
+      "zitat": "The Group primarily generates revenue from the sale of spodumene concentrate to customers. … Total spodumene revenue 1,938,565 771,361"
      }
     ],
     "evidenz": "BELEGT",
     "freigabe": "FREIGEGEBEN",
     "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
     "grund": null,
-    "hinweis": "Gesamtversand Spodumenkonzentrat von Pilgangoora im Geschäftsjahr. Die Quelle nennt Port Hedland als den Weg, über den die Gruppe Spodumenkonzentrat exportiert (PDF-Seite 99), führt die Kosten je Tonne FOB Port Hedland und nennt keinen anderen Verladehafen (Zweitprüfung 2026-11-16).",
+    "hinweis": "Gesamtversand Spodumenkonzentrat von Pilgangoora im Geschäftsjahr. Die Quelle nennt Port Hedland als den Weg, über den die Gruppe Spodumenkonzentrat exportiert (PDF-Seite 99), führt die Kosten je Tonne FOB Port Hedland und nennt keinen anderen Verladehafen (Zweitprüfung 2026-11-16). Wert (A7, 2026-11-24): Spodumen-Erlös des Konzerns im Geschäftsjahr laut Anhang 2.1.1 (PDF-Seite 172), Spalte 2026 in A$ Tausend, einschließlich vorläufiger Preisanpassungen; Pilgangoora ist die einzige fördernde Mine des Konzerns. Der Erlös ist CIF (Fracht und Versicherung ab Port Hedland enthalten) und liegt damit über dem Warenwert am Hafen. Euro mit EZB-Jahresmittel 2025, weil für 2026 noch kein Jahresmittel veröffentlicht ist.",
     "pro_jahr": true,
     "quelle_text": "891.592 dmt (verschifft, Geschäftsjahr 1.7.2025 bis 30.6.2026)",
     "rechnung": "",
@@ -14456,6 +14703,17 @@
     "preis_zitat": "Spodumene (6% lithium oxide) prices in Australia (f.o.b.) increased from approximately $800 per … ton in January to approximately $970 per ton in November.",
     "rechnung": "891.592 t (belegte Menge) × 800 bis 970 US$ je t Spodumenkonzentrat (6 % Li2O) (Spanne Januar bis November 2025 (f.o.b. Australien)) = 713 Mio. US$ bis 865 Mio. US$ ÷ EZB-Jahresmittel 2025: 1,1300 US$ je €",
     "text": "≈ 631 Mio. € bis 765 Mio. € pro Jahr"
+   },
+   "wert_kandidat": {
+    "beleg_id": "M-LIF-01",
+    "eur": 1106613197.8536363,
+    "evidenz": "BELEGT",
+    "freigabe": "KANDIDAT",
+    "freigabe_herkunft": "Zweitprüfung ABWEICHUNG 2026-11-24: Betrag stimmt: Total spodumene revenue FY2026 = 1,938,565 Tsd. (inkl. vorläufiger Preisanpassung), aber die Währung ist in den Quellen der Aufgabe für den Erlös nicht ausdrücklich beschriftet: Seite 172 schreibt nur '$’000' im Spaltenkopf, Seite 19 die Erlöszeile nur in '$M'. 'A$' steht wörtlich nur bei den Betriebskosten (Operating costs ... A$M) und im Hinweis zu 'US and AUD'-Preisen, nicht beim Erlös. Dass der Erlös A$ ist, ist nur aus dem Kontext zu schließen, ohne ausdrückliche Angabe.",
+    "grund": null,
+    "quelle_text": "1,94 Mrd. A$ laut Quelle",
+    "rechnung": "1,94 Mrd. A$ ÷ EZB-Jahresmittel 2025: 1,7518 A$ je €",
+    "text": "1,11 Mrd. €"
    }
   },
   {
@@ -15862,7 +16120,7 @@
     "eur": 501326722.916795,
     "evidenz": "BELEGT",
     "freigabe": "FREIGEGEBEN",
-    "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
+    "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-24 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
     "grund": null,
     "quelle_text": "4,07 Mrd. RMB laut Quelle",
     "rechnung": "4,07 Mrd. RMB ÷ EZB-Jahresmittel 2025: 8,1185 RMB je €",
@@ -16277,9 +16535,9 @@
   "belege": 28,
   "eigentum_belegt": 22,
   "eigentum_kandidaten": 11,
-  "eigentumskette_freigegeben": 14,
-  "eigentumskette_kanten": 30,
-  "eigentumskette_vollstaendig": 14,
+  "eigentumskette_freigegeben": 16,
+  "eigentumskette_kanten": 31,
+  "eigentumskette_vollstaendig": 16,
   "glieder_mit_ausweichquelle": 17,
   "kette_stufen": 2,
   "mengen_abgeleitet": 2,
@@ -16288,14 +16546,14 @@
   "mengen_freigegeben": 3,
   "mengen_in_tonnen": 11,
   "mengen_mit_annahmen": 20,
-  "risiko_belegt": 11,
+  "risiko_belegt": 13,
   "risikoebene_belegt": 95,
   "risikoebene_felder": 112,
   "standorte": 28,
   "standorte_mit_ort": 28,
-  "tiefe_belegt": 109,
+  "tiefe_belegt": 111,
   "tiefe_gesamt": 168,
-  "tiefe_mit_annahmen": 145,
+  "tiefe_mit_annahmen": 147,
   "verbindungen": 20,
   "verbindungen_auf_globus": 20,
   "verbindungen_freigegeben": 20,

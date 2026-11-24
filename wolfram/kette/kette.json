@@ -1468,11 +1468,11 @@
   ]
  },
  "eingaben": {
-  "analysis/rohstoffe/eigentum/eigentumskette.json": "5d02f341354c9ed186ce2c189b9619b8061fdb5d2739fbfa3688764f32e1b9ba",
+  "analysis/rohstoffe/eigentum/eigentumskette.json": "74d2ea759f73ced09161ecbfb9bdc830636d18d945d979507263cabc58c15903",
   "analysis/rohstoffe/fluss-freigaben.jsonl": "aaabbdac9c8a96ba0a688d2348a9b29df912fd5f6d05c9915280d05f3e396d66",
   "analysis/rohstoffe/mengen/annahmen-snapshot.json": "5169bc01abcdff017b11b6e2e0bdb0abbc934a843f86a8fbbf4dbdd3585165b1",
-  "analysis/rohstoffe/mengen/mengen.json": "a9c63566dfea221b1a79b37c3a5e4279c95da48436d5d005c1c924156ccb0db3",
-  "analysis/rohstoffe/mengen/zweitpruefung.jsonl": "65e79d9b6e01f162ee1d6274df6ad52c3f25a75345c5dc532269828f56622c7f",
+  "analysis/rohstoffe/mengen/mengen.json": "83eb82f85ec56a551a01ebaf57c79d4b74add31b00a61c29c297c7b171af3cc8",
+  "analysis/rohstoffe/mengen/zweitpruefung.jsonl": "06547833fe40ebe5a2c1b6da97cbe1b45bc454f47b5d9d9b0da7592481390ef2",
   "analysis/rohstoffe/wolfram/kandidaten.json": "7160b56628f84b169b4de4aa4ef1f2a7a41dbcc2921c7e0aa7c428167d7d97ca",
   "analysis/rohstoffe/wolfram/markt.json": "2c55a7bff2ec69921bea2e3e8d3f549c7aaeed67705b81adb8b446028df1111c"
  },

@@ -362,10 +362,20 @@ function render(d) {
       + mengeWertDetail(v) + '<p class="hinweis" style="margin:8px 0 2px"><b>Beleg der Verbindung</b></p>'
       + v.belege.map(b => `<blockquote>„${esc(b.zitat)}“<cite>${esc(b.herausgeber || '')}, ${link(b.url, b.fundstelle)}</cite></blockquote>`).join('');
   }
+  // Standortrisiken mit Zitat (Störung/Betriebsrisiko, Naturgefahr am Standort; Paket A7), Freigabe sichtbar
+  function standortRisikenHtml(s) {
+    const r = (s.risiko || []).filter(x => x.art === 'BETRIEB' || x.art === 'NATURGEFAHR');
+    if (!r.length) return '';
+    return `<h3 style="font-size:14px;margin:10px 0 2px">Störungen und Standortrisiken (mit Quelle)</h3>` + r.map(x =>
+      `<p data-standortrisiko="${esc(x.id)}" style="margin:6px 0 2px"><b>${esc(x.art_text)}:</b> ${esc(x.text)} <span class="chip ${x.freigabe === 'FREIGEGEBEN' ? 'f' : 'k'}">${x.freigabe === 'FREIGEGEBEN' ? 'freigegeben' : 'Kandidat'}</span></p>`
+      + x.belege.map(b => `<blockquote>„${esc(b.zitat)}“<cite>${esc(b.herausgeber || '')}, ${link(b.url, b.titel)}</cite></blockquote>`).join('')
+      + `<p class="hinweis">${esc(x.freigabe_herkunft)}</p>`).join('');
+  }
   function detailStandort(s) {
     return `<h2>${name(s.id)}</h2><p class="hinweis">${esc(s.name)}</p><dl><dt>Rolle</dt><dd>${esc(s.rolle)} (Stufe ${s.stufe})</dd><dt>Land</dt><dd>${esc(s.land)}</dd>`
       + `<dt>Standort</dt><dd>${s.ort.lat === null ? `<span class="unbekannt">unbekannt</span> – ${esc(s.ort.grund)}` : `${s.ort.lat.toFixed(3)}, ${s.ort.lon.toFixed(3)} · ${link(s.ort.url, s.ort.quelle || 'Quelle')}`}</dd>`
       + `</dl><h3 style="font-size:14px;margin:10px 0 2px">Risiko-Ebene</h3>${risikoHtml(d, s)}`
+      + standortRisikenHtml(s)
       + `<h3 style="font-size:14px;margin:10px 0 2px">Eigentümerkette bis oben</h3>${eigentumsketteHtml(d.eigentumskette, s)}`
       + (s.eigentuemer.length ? `<p class="hinweis" style="margin-top:8px"><b>Altliste (nicht geprüft):</b> ${s.eigentuemer.map(e => `${esc(e.name)} <span class="chip k">Kandidat</span> ${link(e.url, 'Altliste')}`).join('; ')}</p>` : '');
   }

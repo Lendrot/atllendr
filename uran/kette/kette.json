@@ -1046,6 +1046,25 @@
      "kante": null,
      "kinder": [
       {
+       "effektiv": 51.0,
+       "kante": "EK-KAZATOMPROM-ORTALYK",
+       "kinder": [
+        {
+         "effektiv": null,
+         "kante": "EK-SAMRUK-KAZATOMPROM",
+         "kinder": [],
+         "knoten": "R-SAMRUK",
+         "pflicht": true,
+         "schluss": "ENDE",
+         "schluss_text": "letzter Eigentümer"
+        }
+       ],
+       "knoten": "R-KAZATOMPROM",
+       "pflicht": true,
+       "schluss": "GESCHLOSSEN",
+       "schluss_text": "Eigentümer belegt"
+      },
+      {
        "effektiv": 49.0,
        "kante": "EK-CGNM-UK-ORTALYK",
        "kinder": [
@@ -1093,31 +1112,12 @@
        "pflicht": true,
        "schluss": "GESCHLOSSEN",
        "schluss_text": "Eigentümer belegt"
-      },
-      {
-       "effektiv": null,
-       "kante": "EK-KAZATOMPROM-ORTALYK",
-       "kinder": [
-        {
-         "effektiv": null,
-         "kante": "EK-SAMRUK-KAZATOMPROM",
-         "kinder": [],
-         "knoten": "R-SAMRUK",
-         "pflicht": true,
-         "schluss": "ENDE",
-         "schluss_text": "letzter Eigentümer"
-        }
-       ],
-       "knoten": "R-KAZATOMPROM",
-       "pflicht": true,
-       "schluss": "GESCHLOSSEN",
-       "schluss_text": "Eigentümer belegt"
       }
      ],
      "knoten": "R-ORTALYK",
      "pflicht": true,
-     "schluss": "OFFEN",
-     "schluss_text": "endet ohne Beleg"
+     "schluss": "GESCHLOSSEN",
+     "schluss_text": "Eigentümer belegt"
     },
     "belegt": true,
     "betreiber": null,
@@ -1136,8 +1136,8 @@
     "ebenen": 5,
     "einschraenkung": null,
     "grund": null,
-    "status": "OFFEN",
-    "status_text": "Kette endet ohne Beleg",
+    "status": "VOLLSTAENDIG_FREIGEGEBEN",
+    "status_text": "bis oben belegt und freigegeben",
     "wurzel": "R-ORTALYK"
    },
    "S2": {
@@ -1200,18 +1200,28 @@
       },
       {
        "effektiv": 25.0,
-       "kante": "EK-LH-MINDERHEIT-LANGER-HEINRICH",
-       "kinder": [],
-       "knoten": "R-LH-MINDERHEIT",
+       "kante": "EK-CNOL-LANGER-HEINRICH",
+       "kinder": [
+        {
+         "effektiv": null,
+         "kante": "EK-CNNC-CNOL",
+         "kinder": [],
+         "knoten": "R-CNNC",
+         "pflicht": true,
+         "schluss": "ENDE",
+         "schluss_text": "letzter Eigentümer"
+        }
+       ],
+       "knoten": "R-CNOL",
        "pflicht": true,
-       "schluss": "OFFEN",
-       "schluss_text": "endet ohne Beleg"
+       "schluss": "GESCHLOSSEN",
+       "schluss_text": "Eigentümer belegt"
       }
      ],
      "knoten": "R-LANGER-HEINRICH",
      "pflicht": true,
-     "schluss": "OFFEN",
-     "schluss_text": "endet ohne Beleg"
+     "schluss": "GESCHLOSSEN",
+     "schluss_text": "Eigentümer belegt"
     },
     "belegt": true,
     "betreiber": null,
@@ -1220,11 +1230,11 @@
     "bezug_freigabe": null,
     "bezug_herkunft": null,
     "bezug_text": "Das Glied ist diese Gesellschaft bzw. dieser Standort",
-    "ebenen": 1,
+    "ebenen": 2,
     "einschraenkung": null,
     "grund": null,
-    "status": "OFFEN",
-    "status_text": "Kette endet ohne Beleg",
+    "status": "VOLLSTAENDIG_FREIGEGEBEN",
+    "status_text": "bis oben belegt und freigegeben",
     "wurzel": "R-LANGER-HEINRICH"
    },
    "S4": {
@@ -1232,6 +1242,25 @@
      "effektiv": 100.0,
      "kante": null,
      "kinder": [
+      {
+       "effektiv": 51.0,
+       "kante": "EK-KAZATOMPROM-ORTALYK",
+       "kinder": [
+        {
+         "effektiv": null,
+         "kante": "EK-SAMRUK-KAZATOMPROM",
+         "kinder": [],
+         "knoten": "R-SAMRUK",
+         "pflicht": true,
+         "schluss": "ENDE",
+         "schluss_text": "letzter Eigentümer"
+        }
+       ],
+       "knoten": "R-KAZATOMPROM",
+       "pflicht": true,
+       "schluss": "GESCHLOSSEN",
+       "schluss_text": "Eigentümer belegt"
+      },
       {
        "effektiv": 49.0,
        "kante": "EK-CGNM-UK-ORTALYK",
@@ -1280,31 +1309,12 @@
        "pflicht": true,
        "schluss": "GESCHLOSSEN",
        "schluss_text": "Eigentümer belegt"
-      },
-      {
-       "effektiv": null,
-       "kante": "EK-KAZATOMPROM-ORTALYK",
-       "kinder": [
-        {
-         "effektiv": null,
-         "kante": "EK-SAMRUK-KAZATOMPROM",
-         "kinder": [],
-         "knoten": "R-SAMRUK",
-         "pflicht": true,
-         "schluss": "ENDE",
-         "schluss_text": "letzter Eigentümer"
-        }
-       ],
-       "knoten": "R-KAZATOMPROM",
-       "pflicht": true,
-       "schluss": "GESCHLOSSEN",
-       "schluss_text": "Eigentümer belegt"
       }
      ],
      "knoten": "R-ORTALYK",
      "pflicht": true,
-     "schluss": "OFFEN",
-     "schluss_text": "endet ohne Beleg"
+     "schluss": "GESCHLOSSEN",
+     "schluss_text": "Eigentümer belegt"
     },
     "belegt": true,
     "betreiber": null,
@@ -1323,8 +1333,8 @@
     "ebenen": 5,
     "einschraenkung": null,
     "grund": null,
-    "status": "OFFEN",
-    "status_text": "Kette endet ohne Beleg",
+    "status": "VOLLSTAENDIG_FREIGEGEBEN",
+    "status_text": "bis oben belegt und freigegeben",
     "wurzel": "R-ORTALYK"
    },
    "S5": {
@@ -1382,20 +1392,41 @@
     "wurzel": "R-CGNM"
    },
    "S6": {
-    "baum": null,
-    "belegt": false,
+    "baum": {
+     "effektiv": 100.0,
+     "kante": null,
+     "kinder": [],
+     "knoten": "R-SOLSTICE",
+     "pflicht": true,
+     "schluss": "OFFEN",
+     "schluss_text": "endet ohne Beleg"
+    },
+    "belegt": true,
     "betreiber": null,
-    "bezug": null,
-    "bezug_belege": [],
-    "bezug_freigabe": null,
-    "bezug_herkunft": null,
-    "bezug_text": null,
+    "bezug": "ZUGEHOERIG",
+    "bezug_belege": [
+     {
+      "fundstelle": "Textkopie des Flusspakets",
+      "quelle": "rk-boe-q-2024-12-s006",
+      "rolle": "hauptbeleg",
+      "zitat": "Honeywell Uranium Hexafluoride Processing Facility in Metropolis, Illinois, USA"
+     },
+     {
+      "fundstelle": "HTML, Text ohne Tags; Tabelle \"Estimated world primary conversion capacity and UF6 production 2024\" (Quelle laut Seite: WNA Nuclear Fuel Report 2025)",
+      "quelle": "rk-wna-konversion",
+      "rolle": "zusatzbeleg",
+      "zitat": "At the Metropolis Works conversion plant in Illinois … It is owned by Solstice Advanced Materials, which was spun off from Honeywell in October 2025."
+     }
+    ],
+    "bezug_freigabe": "FREIGEGEBEN",
+    "bezug_herkunft": "Zweitprüfung BESTAETIGT 2026-11-24 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+    "bezug_text": "Das Glied gehört laut Quelle zu",
     "ebenen": 0,
-    "einschraenkung": null,
-    "grund": "Die gelesene Quelle nennt nur den Anlagennamen \"Honeywell Uranium Hexafluoride Processing Facility\"; Eigentümer und Anteil nennt sie nicht.",
-    "status": "UNBEKANNT",
-    "status_text": "Eigentümer unbekannt",
-    "wurzel": null
+    "einschraenkung": "Die Anlage heißt in der Lieferquelle (Boss Energy, Dezember 2024) noch nach Honeywell; laut WNA gehört das Werk in Metropolis seit der Abspaltung im Oktober 2025 Solstice Advanced Materials. Anteil nicht genannt.",
+    "grund": null,
+    "status": "OFFEN",
+    "status_text": "Kette endet ohne Beleg",
+    "wurzel": "R-SOLSTICE"
    },
    "S7": {
     "baum": null,
@@ -1566,6 +1597,66 @@
     "von": "R-CGNPC-URC"
    },
    {
+    "an": "R-CNOL",
+    "anteil": null,
+    "atlas_id": null,
+    "beherrschend": true,
+    "belege": [
+     {
+      "fundstelle": "PDF-Seite 1 (pdftotext ohne -layout)",
+      "quelle": "rk-cnnci-2023-11-23-s001",
+      "rolle": "hauptbeleg",
+      "zitat": "CNNC Overseas Limited, a direct wholly-owned subsidiary of CNUC and an indirect whollyowned subsidiary of CNNC"
+     }
+    ],
+    "einschraenkung": "Stand der Mitteilung 23.11.2023 (CNNC International); ein späterer Stand ist nicht gelesen.",
+    "evidenz": "FACT",
+    "freigabe": "FREIGEGEBEN",
+    "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-24 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+    "id": "EK-CNNC-CNOL",
+    "mass": "KAPITAL",
+    "mass_text": "Kapital",
+    "stand": "2023-11-23",
+    "text": "mittelbar vollständig (indirect wholly-owned subsidiary), über CNUC; keine Prozentzahl in der Quelle",
+    "von": "R-CNNC"
+   },
+   {
+    "an": "R-LANGER-HEINRICH",
+    "anteil": 25.0,
+    "atlas_id": null,
+    "beherrschend": false,
+    "belege": [
+     {
+      "fundstelle": "PDF-Seite 178 (pdftotext ohne -layout)",
+      "quelle": "rk-pdn-ar-2026-s178",
+      "rolle": "hauptbeleg",
+      "zitat": "form part of CNOL’s 25% interest in LHU"
+     },
+     {
+      "fundstelle": "PDF-Seite 185 (pdftotext ohne -layout)",
+      "quelle": "rk-pdn-ar-2026-s185",
+      "rolle": "zusatzbeleg",
+      "zitat": "upon the sale of a 25% interest in LHMHL to CNOL in 2014"
+     },
+     {
+      "fundstelle": "PDF-Seite 204 (pdftotext ohne -layout)",
+      "quelle": "rk-pdn-ar-2026-s204",
+      "rolle": "zusatzbeleg",
+      "zitat": "The Company owns 75% of Langer Heinrich Holdings Ltd. The remaining 25% is held by non-controlling interests."
+     }
+    ],
+    "einschraenkung": "Anteil an der Betreiberin Langer Heinrich Uranium (LHU) bzw. der Holding (LHMHL); der Jahresbericht nennt CNOL als Halterin der übrigen 25 %.",
+    "evidenz": "FACT",
+    "freigabe": "FREIGEGEBEN",
+    "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-24 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+    "id": "EK-CNOL-LANGER-HEINRICH",
+    "mass": "KAPITAL",
+    "mass_text": "Kapital",
+    "stand": "2026-06-30",
+    "text": null,
+    "von": "R-CNOL"
+   },
+   {
     "an": "R-CGNM",
     "anteil": null,
     "atlas_id": null,
@@ -1591,51 +1682,33 @@
    },
    {
     "an": "R-ORTALYK",
-    "anteil": null,
+    "anteil": 51.0,
     "atlas_id": null,
     "beherrschend": false,
     "belege": [
      {
+      "fundstelle": "PDF-Seite 37 (pdftotext ohne -layout)",
+      "quelle": "rk-cgnm-fy-2025-s037",
+      "rolle": "hauptbeleg",
+      "zitat": "The remaining 51% equity interest of Ortalyk is held by Kazatomprom."
+     },
+     {
       "fundstelle": "HTML, Text ohne Tags",
       "quelle": "rk-wna-kazakhstan",
-      "rolle": "hauptbeleg",
+      "rolle": "zusatzbeleg",
       "zitat": "Zhalpak 15,000 Ortalyk LLP (K'prom)"
      }
     ],
     "einschraenkung": null,
     "evidenz": "FACT",
     "freigabe": "FREIGEGEBEN",
-    "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
+    "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-24 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
     "id": "EK-KAZATOMPROM-ORTALYK",
     "mass": "KAPITAL",
     "mass_text": "Kapital",
-    "stand": "2026-11-16",
-    "text": "laut Tabelle Gesellschaft von Kazatomprom (Anteil nicht genannt)",
-    "von": "R-KAZATOMPROM"
-   },
-   {
-    "an": "R-LANGER-HEINRICH",
-    "anteil": 25.0,
-    "atlas_id": null,
-    "beherrschend": false,
-    "belege": [
-     {
-      "fundstelle": "PDF-Seite 204 (pdftotext ohne -layout)",
-      "quelle": "rk-pdn-ar-2026-s204",
-      "rolle": "hauptbeleg",
-      "zitat": "The Company owns 75% of Langer Heinrich Holdings Ltd. The remaining 25% is held by non-controlling interests."
-     }
-    ],
-    "einschraenkung": "Anteil an der Holding der Mine (Langer Heinrich Holdings Ltd).",
-    "evidenz": "FACT",
-    "freigabe": "FREIGEGEBEN",
-    "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-16 (Claude (Zweitprüfung, getrennte Sitzung)), getrennte Sitzung",
-    "id": "EK-LH-MINDERHEIT-LANGER-HEINRICH",
-    "mass": "KAPITAL",
-    "mass_text": "Kapital",
-    "stand": "2026-06-30",
+    "stand": "2025-12-31",
     "text": null,
-    "von": "R-LH-MINDERHEIT"
+    "von": "R-KAZATOMPROM"
    },
    {
     "an": "R-LANGER-HEINRICH",
@@ -1773,6 +1846,44 @@
     "oberste": null,
     "offen": null
    },
+   "R-CNNC": {
+    "art": "STAATSEIGEN",
+    "art_text": "staatseigene Gesellschaft",
+    "atlas_id": null,
+    "belege": [
+     {
+      "fundstelle": "PDF-Seite 1 (pdftotext ohne -layout)",
+      "quelle": "rk-cnnci-2023-11-23-s001",
+      "rolle": "hauptbeleg",
+      "zitat": "(which is in turn wholly owned by The State-owned Assets Supervision and Administration Commission of the State Council"
+     }
+    ],
+    "hinweis": "Laut Quelle vollständig im Eigentum der staatlichen Aufsichtskommission SASAC der Volksrepublik China (Stand 23.11.2023).",
+    "land": "CN",
+    "lei": null,
+    "name": "China National Nuclear Corporation (CNNC)",
+    "oberste": null,
+    "offen": null
+   },
+   "R-CNOL": {
+    "art": "GESELLSCHAFT",
+    "art_text": "Gesellschaft",
+    "atlas_id": null,
+    "belege": [
+     {
+      "fundstelle": "PDF-Seite 220, Glossar (pdftotext ohne -layout)",
+      "quelle": "rk-pdn-ar-2026-s220",
+      "rolle": "hauptbeleg",
+      "zitat": "CNOL … CNNC Overseas Limited"
+     }
+    ],
+    "hinweis": "Kurzname CNOL laut Glossar des Paladin-Jahresberichts 2026.",
+    "land": "HK",
+    "lei": null,
+    "name": "CNNC Overseas Limited (CNOL)",
+    "oberste": null,
+    "offen": null
+   },
    "R-CUD": {
     "art": "GESELLSCHAFT",
     "art_text": "Gesellschaft",
@@ -1827,18 +1938,6 @@
     "name": "Langer Heinrich (Uranmine)",
     "oberste": null,
     "offen": null
-   },
-   "R-LH-MINDERHEIT": {
-    "art": "GESELLSCHAFT",
-    "art_text": "Gesellschaft",
-    "atlas_id": null,
-    "belege": [],
-    "hinweis": null,
-    "land": null,
-    "lei": null,
-    "name": "Minderheitsgesellschafter von Langer Heinrich Holdings (nicht genannt)",
-    "oberste": null,
-    "offen": "Die Quelle nennt den Halter der übrigen 25 % nicht."
    },
    "R-ORTALYK": {
     "art": "GESELLSCHAFT",
@@ -1907,28 +2006,40 @@
     "name": "JSC Samruk-Kazyna (Staatsfonds)",
     "oberste": null,
     "offen": null
+   },
+   "R-SOLSTICE": {
+    "art": "GESELLSCHAFT",
+    "art_text": "Gesellschaft",
+    "atlas_id": null,
+    "belege": [],
+    "hinweis": null,
+    "land": "US",
+    "lei": null,
+    "name": "Solstice Advanced Materials Inc.",
+    "oberste": null,
+    "offen": "Börsennotiert (Nasdaq, Abspaltung von Honeywell im Oktober 2025); Großaktionäre und eine mögliche beherrschende Mutter sind mit keiner gelesenen Quelle belegt."
    }
   },
   "messung": {
    "glieder": 7,
-   "glieder_eigentum_belegt": 5,
-   "glieder_unbekannt_mit_grund": 2,
+   "glieder_eigentum_belegt": 6,
+   "glieder_unbekannt_mit_grund": 1,
    "je_glied": {
     "S1": {
      "ebenen": 5,
-     "status": "OFFEN"
+     "status": "VOLLSTAENDIG_FREIGEGEBEN"
     },
     "S2": {
      "ebenen": 2,
      "status": "VOLLSTAENDIG_FREIGEGEBEN"
     },
     "S3": {
-     "ebenen": 1,
-     "status": "OFFEN"
+     "ebenen": 2,
+     "status": "VOLLSTAENDIG_FREIGEGEBEN"
     },
     "S4": {
      "ebenen": 5,
-     "status": "OFFEN"
+     "status": "VOLLSTAENDIG_FREIGEGEBEN"
     },
     "S5": {
      "ebenen": 3,
@@ -1936,38 +2047,49 @@
     },
     "S6": {
      "ebenen": 0,
-     "status": "UNBEKANNT"
+     "status": "OFFEN"
     },
     "S7": {
      "ebenen": 0,
      "status": "UNBEKANNT"
     }
    },
-   "kanten": 11,
-   "kanten_freigegeben": 11,
+   "kanten": 12,
+   "kanten_freigegeben": 12,
    "kanten_kandidat": 0,
-   "kanten_mit_anteil": 6,
-   "knoten": 14,
+   "kanten_mit_anteil": 7,
+   "knoten": 16,
    "letzte_eigentuemer": [
     "China General Nuclear Power Corporation (CGNPC)",
+    "China National Nuclear Corporation (CNNC)",
     "JSC Samruk-Kazyna (Staatsfonds)",
     "Natürliche Person(en), im LEI-Register nicht namentlich genannt"
    ],
    "oberste_gesellschaften": [
     "Paladin Energy Ltd"
    ],
-   "offen": 3,
+   "offen": 1,
    "offene_knoten": [
-    "Minderheitsgesellschafter von Langer Heinrich Holdings (nicht genannt)"
+    "Solstice Advanced Materials Inc."
    ],
    "schwelle_prozent": 10.0,
-   "unbekannt": 2,
-   "vollstaendig": 2,
-   "vollstaendig_freigegeben": 2,
+   "unbekannt": 1,
+   "vollstaendig": 5,
+   "vollstaendig_freigegeben": 5,
    "vollstaendig_kandidat": 0,
    "zweitpruefung_offen": 0
   },
   "quellen": {
+   "rk-boe-q-2024-12-s006": {
+    "abgerufen": "2026-11-08",
+    "art": "COMPANY_PRIMARY",
+    "fundstelle": "Textkopie des Flusspakets",
+    "herausgeber": "Boss Energy Limited",
+    "text_artifact": "analysis/research/uran-flows-v1/raw/boe-q-2024-12-p6.txt",
+    "text_artifact_sha256": "e7a994f3b75927ca2f2694ee580de36392185e4323f92856560de8f3ca141315",
+    "titel": "December 2024 Quarterly Report",
+    "url": "https://announcements.asx.com.au/asxpdf/20250129/pdf/06dxg8kfs900xh.pdf"
+   },
    "rk-boe-q-2024-12-s012": {
     "abgerufen": "2026-11-16",
     "art": "COMPANY_PRIMARY",
@@ -2007,6 +2129,26 @@
     "text_artifact_sha256": "694309eafacf93a553760224d9c7fb0a73511c546f513b9c5e8332beb0010b00",
     "titel": "Annual Results Announcement for the year ended 31 December 2025",
     "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0326/2026032603114.pdf"
+   },
+   "rk-cgnm-fy-2025-s037": {
+    "abgerufen": "2026-11-24",
+    "art": "COMPANY_PRIMARY",
+    "fundstelle": "PDF-Seite 37 (pdftotext ohne -layout)",
+    "herausgeber": "CGN Mining Company Limited (HKEX 1164)",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/cgnm-fy-2025-p037.txt",
+    "text_artifact_sha256": "cc757badde9d185d72dc648e3960ca5556c90d703648aa684bb0dee51ab9727a",
+    "titel": "Annual Results Announcement for the year ended 31 December 2025",
+    "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0326/2026032603114.pdf#page=37"
+   },
+   "rk-cnnci-2023-11-23-s001": {
+    "abgerufen": "2026-11-24",
+    "art": "COMPANY_PRIMARY",
+    "fundstelle": "PDF-Seite 1 (pdftotext ohne -layout)",
+    "herausgeber": "CNNC International Limited (HKEX 2302)",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/cnnci-ann-2023-11-23-p001.txt",
+    "text_artifact_sha256": "bfa4ab04418aec6631a1bf92d2dd54ab95894474b2931e348af4cb116b3de49a",
+    "titel": "Announcement 23.11.2023 (Änderung der Aktionärsstruktur der Muttergesellschaft)",
+    "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2023/1123/2023112300897.pdf#page=1"
    },
    "rk-gleif-213800N83GBAZJ4ER974": {
     "abgerufen": "2026-11-16",
@@ -2088,6 +2230,26 @@
     "titel": "Annual Report 2026",
     "url": "https://announcements.asx.com.au/asxpdf/20260826/pdf/07374q7yc9qjxs.pdf#page=11"
    },
+   "rk-pdn-ar-2026-s178": {
+    "abgerufen": "2026-11-24",
+    "art": "COMPANY_PRIMARY",
+    "fundstelle": "PDF-Seite 178 (pdftotext ohne -layout)",
+    "herausgeber": "Paladin Energy Ltd",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/pdn-ar-2026-p178.txt",
+    "text_artifact_sha256": "39a099a6a522d05705f35cb4b6667c5a4ee37fd492463a64ce89efc3639c4407",
+    "titel": "Annual Report 2026",
+    "url": "https://announcements.asx.com.au/asxpdf/20260826/pdf/07374q7yc9qjxs.pdf#page=178"
+   },
+   "rk-pdn-ar-2026-s185": {
+    "abgerufen": "2026-11-24",
+    "art": "COMPANY_PRIMARY",
+    "fundstelle": "PDF-Seite 185 (pdftotext ohne -layout)",
+    "herausgeber": "Paladin Energy Ltd",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/pdn-ar-2026-p185.txt",
+    "text_artifact_sha256": "f09cd5c87c432c1ae1038288820f7a9fc61ec0f02a08829afa1be5f648ce97ab",
+    "titel": "Annual Report 2026",
+    "url": "https://announcements.asx.com.au/asxpdf/20260826/pdf/07374q7yc9qjxs.pdf#page=185"
+   },
    "rk-pdn-ar-2026-s204": {
     "abgerufen": "2026-11-16",
     "art": "COMPANY_PRIMARY",
@@ -2098,6 +2260,16 @@
     "titel": "Annual Report 2026",
     "url": "https://announcements.asx.com.au/asxpdf/20260826/pdf/07374q7yc9qjxs.pdf#page=204"
    },
+   "rk-pdn-ar-2026-s220": {
+    "abgerufen": "2026-11-24",
+    "art": "COMPANY_PRIMARY",
+    "fundstelle": "PDF-Seite 220, Glossar (pdftotext ohne -layout)",
+    "herausgeber": "Paladin Energy Ltd",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/pdn-ar-2026-p220.txt",
+    "text_artifact_sha256": "76ea3f059eb3192781bffc7a9c24d7c771a7ab3c007dc921ad939833f0e8f05f",
+    "titel": "Annual Report 2026",
+    "url": "https://announcements.asx.com.au/asxpdf/20260826/pdf/07374q7yc9qjxs.pdf#page=220"
+   },
    "rk-wna-kazakhstan": {
     "abgerufen": "2026-11-16",
     "art": "INDUSTRY_ASSOCIATION",
@@ -2107,6 +2279,16 @@
     "text_artifact_sha256": "e408bf0967e0793abf309ab399ba5667b350c5b2cdf00cd7aa091b00f19766c9",
     "titel": "Uranium and Nuclear Power in Kazakhstan (Country Profile)",
     "url": "https://world-nuclear.org/information-library/country-profiles/countries-g-n/kazakhstan"
+   },
+   "rk-wna-konversion": {
+    "abgerufen": "2026-11-24",
+    "art": "INDUSTRY_ASSOCIATION",
+    "fundstelle": "HTML, Text ohne Tags; Tabelle \"Estimated world primary conversion capacity and UF6 production 2024\" (Quelle laut Seite: WNA Nuclear Fuel Report 2025)",
+    "herausgeber": "World Nuclear Association",
+    "text_artifact": "analysis/rohstoffe/eigentum/raw/wna-konversion.txt",
+    "text_artifact_sha256": "d9b5af6b99001c4d081c7c8917de8bd55f3be9fd47347288bb72977d8e0f0d77",
+    "titel": "Conversion and Deconversion",
+    "url": "https://world-nuclear.org/information-library/nuclear-fuel-cycle/conversion-enrichment-and-fabrication/conversion-and-deconversion"
    }
   },
   "schwelle_prozent": 10.0,
@@ -2281,55 +2463,6 @@
     "ziel_typ": "kante"
    },
    {
-    "abgleich": "Ortalyk in der Tabelle der Kazatomprom-Gesellschaften; Anteil nicht genannt",
-    "aussage": "NAC Kazatomprom JSC → Ortalyk LLP: laut Tabelle Gesellschaft von Kazatomprom (Anteil nicht genannt), Stand 2026-11-16",
-    "belege": [
-     {
-      "quelle": "rk-wna-kazakhstan",
-      "zitat": [
-       "Zhalpak 15,000 Ortalyk LLP (K'prom)",
-       "Kazatomprom mining subsidiaries and joint ventures"
-      ]
-     }
-    ],
-    "bericht": "analysis/rohstoffe/eigentum/zweitpruefung/Pruefbericht-Eigentuemerkette-Rohstoffe-Zweitpruefung-2026-11-16.pdf",
-    "erstpruefung_sitzung": "session_01JgcA7TdgLRrqKV9kyFuE5E",
-    "geprueft_am": "2026-11-16",
-    "hinweis": "Kazatomprom hält nach dem Verkauf von 49 % an CGN (2021) den Rest; die Quelle nennt den Anteil nicht.",
-    "pruef_id": "R25",
-    "pruefer": "Claude (Zweitprüfung, getrennte Sitzung)",
-    "quelle_frisch_geladen": true,
-    "regel": "Eddie Sablah 2026-11-11 13:41Z: Freigabe nur, wenn zwei getrennte Sitzungen bestätigen (Zweite Sitzung + CI + 5 Fälle/Monat)",
-    "sitzung": "session_01JgcA7Tamxi4Cn8LEHHDz8t",
-    "urteil": "BESTAETIGT",
-    "ziel_id": "EK-KAZATOMPROM-ORTALYK",
-    "ziel_typ": "kante"
-   },
-   {
-    "abgleich": "25 % = 25 %",
-    "aussage": "Minderheitsgesellschafter von Langer Heinrich Holdings (nicht genannt) → Langer Heinrich (Uranmine): 25 % (Kapital), Stand 2026-06-30",
-    "belege": [
-     {
-      "quelle": "rk-pdn-ar-2026-s204",
-      "zitat": [
-       "The Company owns 75% of Langer Heinrich Holdings Ltd. The remaining 25% is held by non-controlling interests."
-      ]
-     }
-    ],
-    "bericht": "analysis/rohstoffe/eigentum/zweitpruefung/Pruefbericht-Eigentuemerkette-Rohstoffe-Zweitpruefung-2026-11-16.pdf",
-    "erstpruefung_sitzung": "session_01JgcA7TdgLRrqKV9kyFuE5E",
-    "geprueft_am": "2026-11-16",
-    "hinweis": "Gehalten an Langer Heinrich Holdings Ltd; die Minderheit wird nicht namentlich genannt.",
-    "pruef_id": "R30",
-    "pruefer": "Claude (Zweitprüfung, getrennte Sitzung)",
-    "quelle_frisch_geladen": true,
-    "regel": "Eddie Sablah 2026-11-11 13:41Z: Freigabe nur, wenn zwei getrennte Sitzungen bestätigen (Zweite Sitzung + CI + 5 Fälle/Monat)",
-    "sitzung": "session_01JgcA7Tamxi4Cn8LEHHDz8t",
-    "urteil": "BESTAETIGT",
-    "ziel_id": "EK-LH-MINDERHEIT-LANGER-HEINRICH",
-    "ziel_typ": "kante"
-   },
-   {
     "abgleich": "75 % = 75 %",
     "aussage": "Paladin Energy Ltd → Langer Heinrich (Uranmine): 75 % (Kapital), Stand 2026-06-30",
     "belege": [
@@ -2458,15 +2591,151 @@
     "urteil": "BESTAETIGT",
     "ziel_id": "uran/uran-site-legacy-row-130",
     "ziel_typ": "glied"
+   },
+   {
+    "abgleich": "",
+    "aufgabe": "Ziel kante/EK-CNOL-LANGER-HEINRICH. Frage: Welchen Anteil (Kapital) hält CNNC Overseas Limited (CNOL) laut Quelle an Langer Heinrich (Uranmine)? Stand 2026-06-30. Quellen: rk-pdn-ar-2026-s178 (PDF-Seite 178 (pdftotext ohne -layout)); rk-pdn-ar-2026-s185 (PDF-Seite 185 (pdftotext ohne -layout)); rk-pdn-ar-2026-s204 (PDF-Seite 204 (pdftotext ohne -layout)).",
+    "aussage": "Welchen Anteil (Kapital) hält CNNC Overseas Limited (CNOL) laut Quelle an Langer Heinrich (Uranmine)? Stand 2026-06-30.",
+    "belege": [
+     {
+      "quelle": "rk-pdn-ar-2026-s178",
+      "zitat": [
+       "form part of CNOL’s 25% interest in LHU"
+      ]
+     }
+    ],
+    "blind": true,
+    "erstmodell": "claude-opus-5-5",
+    "erstpruefung_sitzung": "session_01JgcA7QCmoZYLcPhvk6mJbe",
+    "geprueft_am": "2026-11-24",
+    "hinweis": "Zitat nennt 25% Beteiligung von CNOL an LHU (Langer Heinrich Uranium).",
+    "pruef_id": "AE27",
+    "pruefer": "auto-zweitpruefung (claude-sonnet-5-5, blind)",
+    "pruefmodell": "claude-sonnet-5-5",
+    "pruefweg": "subagent",
+    "quelle_frisch_geladen": false,
+    "regel": "Eddie Sablah 2026-11-16: Regel 3 automatisch, blinde Zweitprüfung durch ein zweites Modell + Programmprüfung; Stichprobe 5 Fälle/Monat bleibt",
+    "sitzung": "auto:claude-sonnet-5-5:2026-11-24",
+    "textkopie_geprueft": true,
+    "urteil": "BESTAETIGT",
+    "verfahren": "AUTO_ZWEITPRUEFUNG",
+    "wert": {
+     "einheit": "%",
+     "zahl_text": "25"
+    },
+    "ziel_id": "EK-CNOL-LANGER-HEINRICH",
+    "ziel_typ": "kante"
+   },
+   {
+    "abgleich": "",
+    "aufgabe": "Ziel kante/EK-KAZATOMPROM-ORTALYK. Frage: Welchen Anteil (Kapital) hält NAC Kazatomprom JSC laut Quelle an Ortalyk LLP? Stand 2025-12-31. Quellen: rk-cgnm-fy-2025-s037 (PDF-Seite 37 (pdftotext ohne -layout)); rk-wna-kazakhstan (HTML, Text ohne Tags).",
+    "aussage": "Welchen Anteil (Kapital) hält NAC Kazatomprom JSC laut Quelle an Ortalyk LLP? Stand 2025-12-31.",
+    "belege": [
+     {
+      "quelle": "rk-cgnm-fy-2025-s037",
+      "zitat": [
+       "The remaining 51% equity interest of Ortalyk is held by Kazatomprom."
+      ]
+     }
+    ],
+    "blind": true,
+    "erstmodell": "claude-opus-5-5",
+    "erstpruefung_sitzung": "session_01JgcA7QCmoZYLcPhvk6mJbe",
+    "geprueft_am": "2026-11-24",
+    "hinweis": "",
+    "pruef_id": "AE28",
+    "pruefer": "auto-zweitpruefung (claude-sonnet-5-5, blind)",
+    "pruefmodell": "claude-sonnet-5-5",
+    "pruefweg": "subagent",
+    "quelle_frisch_geladen": false,
+    "regel": "Eddie Sablah 2026-11-16: Regel 3 automatisch, blinde Zweitprüfung durch ein zweites Modell + Programmprüfung; Stichprobe 5 Fälle/Monat bleibt",
+    "sitzung": "auto:claude-sonnet-5-5:2026-11-24",
+    "textkopie_geprueft": true,
+    "urteil": "BESTAETIGT",
+    "verfahren": "AUTO_ZWEITPRUEFUNG",
+    "wert": {
+     "einheit": "%",
+     "zahl_text": "51"
+    },
+    "ziel_id": "EK-KAZATOMPROM-ORTALYK",
+    "ziel_typ": "kante"
+   },
+   {
+    "abgleich": "",
+    "aufgabe": "Ziel kante/EK-CNNC-CNOL. Frage: Belegt die Quelle, dass China National Nuclear Corporation (CNNC) an CNNC Overseas Limited (CNOL) beteiligt ist (ohne genannten Anteil)? Stand 2023-11-23. Quellen: rk-cnnci-2023-11-23-s001 (PDF-Seite 1 (pdftotext ohne -layout)).",
+    "aussage": "Belegt die Quelle, dass China National Nuclear Corporation (CNNC) an CNNC Overseas Limited (CNOL) beteiligt ist (ohne genannten Anteil)? Stand 2023-11-23.",
+    "belege": [
+     {
+      "quelle": "rk-cnnci-2023-11-23-s001",
+      "zitat": [
+       "an indirect whollyowned subsidiary of CNNC"
+      ]
+     }
+    ],
+    "blind": true,
+    "erstmodell": "claude-opus-5-5",
+    "erstpruefung_sitzung": "session_01JgcA7QCmoZYLcPhvk6mJbe",
+    "geprueft_am": "2026-11-24",
+    "hinweis": "CNOL wird als indirekte Tochter (wholly-owned) von CNNC bezeichnet; keine Prozentzahl genannt.",
+    "pruef_id": "AE42",
+    "pruefer": "auto-zweitpruefung (claude-sonnet-5-5, blind)",
+    "pruefmodell": "claude-sonnet-5-5",
+    "pruefweg": "subagent",
+    "quelle_frisch_geladen": false,
+    "regel": "Eddie Sablah 2026-11-16: Regel 3 automatisch, blinde Zweitprüfung durch ein zweites Modell + Programmprüfung; Stichprobe 5 Fälle/Monat bleibt",
+    "sitzung": "auto:claude-sonnet-5-5:2026-11-24",
+    "textkopie_geprueft": true,
+    "urteil": "BESTAETIGT",
+    "verfahren": "AUTO_ZWEITPRUEFUNG",
+    "wert": {
+     "einheit": "",
+     "zahl_text": ""
+    },
+    "ziel_id": "EK-CNNC-CNOL",
+    "ziel_typ": "kante"
+   },
+   {
+    "abgleich": "",
+    "aufgabe": "Ziel glied/uran/uran-node-honeywell-metropolis. Frage: Gehört der Standort Honeywell Uranium Hexafluoride Processing Facility (Metropolis) laut Quelle zu Solstice Advanced Materials Inc.? Quellen: rk-boe-q-2024-12-s006 (Textkopie des Flusspakets); rk-wna-konversion (HTML, Text ohne Tags; Tabelle \"Estimated world primary conversion capacity and UF6 production 2024\" (Quelle laut Seite: WNA Nuclear Fuel Report 2025)).",
+    "aussage": "Gehört der Standort Honeywell Uranium Hexafluoride Processing Facility (Metropolis) laut Quelle zu Solstice Advanced Materials Inc.?",
+    "belege": [
+     {
+      "quelle": "rk-wna-konversion",
+      "zitat": [
+       "It is owned by Solstice Advanced Materials, which was spun off from Honeywell in October 2025."
+      ]
+     }
+    ],
+    "blind": true,
+    "erstmodell": "claude-opus-5-5",
+    "erstpruefung_sitzung": "session_01JgcA7TdgLRrqKV9kyFuE5E",
+    "geprueft_am": "2026-11-24",
+    "hinweis": "WNA nennt für das Metropolis Works Konversionswerk (Illinois) Solstice Advanced Materials als Eigentümer, ausgegliedert aus Honeywell. Die Anlage heißt dort 'Metropolis Works', nicht wörtlich 'Honeywell Uranium Hexafluoride Processing Facility'; der Standort Metropolis ist derselbe (rk-boe nennt die Honeywell UF6-Anlage in Metropolis, Illinois).",
+    "pruef_id": "AE43",
+    "pruefer": "auto-zweitpruefung (claude-sonnet-5-5, blind)",
+    "pruefmodell": "claude-sonnet-5-5",
+    "pruefweg": "subagent",
+    "quelle_frisch_geladen": false,
+    "regel": "Eddie Sablah 2026-11-16: Regel 3 automatisch, blinde Zweitprüfung durch ein zweites Modell + Programmprüfung; Stichprobe 5 Fälle/Monat bleibt",
+    "sitzung": "auto:claude-sonnet-5-5:2026-11-24",
+    "textkopie_geprueft": true,
+    "urteil": "BESTAETIGT",
+    "verfahren": "AUTO_ZWEITPRUEFUNG",
+    "wert": {
+     "einheit": "",
+     "zahl_text": ""
+    },
+    "ziel_id": "uran/uran-node-honeywell-metropolis",
+    "ziel_typ": "glied"
    }
   ]
  },
  "eingaben": {
-  "analysis/rohstoffe/eigentum/eigentumskette.json": "5d02f341354c9ed186ce2c189b9619b8061fdb5d2739fbfa3688764f32e1b9ba",
+  "analysis/rohstoffe/eigentum/eigentumskette.json": "74d2ea759f73ced09161ecbfb9bdc830636d18d945d979507263cabc58c15903",
   "analysis/rohstoffe/fluss-freigaben.jsonl": "aaabbdac9c8a96ba0a688d2348a9b29df912fd5f6d05c9915280d05f3e396d66",
   "analysis/rohstoffe/mengen/annahmen-snapshot.json": "5169bc01abcdff017b11b6e2e0bdb0abbc934a843f86a8fbbf4dbdd3585165b1",
-  "analysis/rohstoffe/mengen/mengen.json": "a9c63566dfea221b1a79b37c3a5e4279c95da48436d5d005c1c924156ccb0db3",
-  "analysis/rohstoffe/mengen/zweitpruefung.jsonl": "65e79d9b6e01f162ee1d6274df6ad52c3f25a75345c5dc532269828f56622c7f",
+  "analysis/rohstoffe/mengen/mengen.json": "83eb82f85ec56a551a01ebaf57c79d4b74add31b00a61c29c297c7b171af3cc8",
+  "analysis/rohstoffe/mengen/zweitpruefung.jsonl": "06547833fe40ebe5a2c1b6da97cbe1b45bc454f47b5d9d9b0da7592481390ef2",
   "analysis/rohstoffe/uran/kandidaten.json": "11d15a665ba735e90f2b95f5c78921f67413244c684cadafba90f48fa7418b57",
   "analysis/rohstoffe/uran/markt.json": "2041c8a09e8ee623ffc75d7495c78f6c01307a6257184939f41a5fc8d59367ef"
  },
@@ -2517,10 +2786,10 @@
    }
   ],
   "messung": {
-   "anteil_belegt_prozent": 82.1,
-   "belegt": 23,
+   "anteil_belegt_prozent": 85.7,
+   "belegt": 24,
    "belegt_nur_landesebene": 16,
-   "belegt_standort_oder_firma": 7,
+   "belegt_standort_oder_firma": 8,
    "felder": 28,
    "glieder": 7,
    "je_glied": {
@@ -2563,7 +2832,7 @@
     "S7": {
      "KONZENTRATION": "UNBEKANNT",
      "LAENDERRISIKO": "BELEGT_LAND",
-     "NATURGEFAHREN": "UNBEKANNT",
+     "NATURGEFAHREN": "BELEGT_STANDORT",
      "SANKTIONEN": "BELEGT_STANDORT"
     }
    },
@@ -2581,10 +2850,10 @@
      "unbekannt": 0
     },
     "NATURGEFAHREN": {
-     "belegt": 5,
+     "belegt": 6,
      "belegt_nur_landesebene": 5,
-     "belegt_standort_oder_firma": 0,
-     "unbekannt": 2
+     "belegt_standort_oder_firma": 1,
+     "unbekannt": 1
     },
     "SANKTIONEN": {
      "belegt": 7,
@@ -2593,7 +2862,7 @@
      "unbekannt": 0
     }
    },
-   "unbekannt": 5
+   "unbekannt": 4
   },
   "regeln": [
    "Länderrisiko und Naturgefahren nur aus den Reisehinweisen des britischen Außenministeriums (FCDO), Antwort unverändert gespeichert; keine Punktzahl, keine Rangfolge.",
@@ -2779,7 +3048,7 @@
          "zitat": "\"stand\":\"2026-11-10\""
         }
        ],
-       "text": "Kein Namenstreffer für Ortalyk LLP, CGNM UK Limited, CGN Mining Company Limited, China Uranium Development Company Limited, CGNPC Uranium Resources Co. Ltd. (CGNPC-URC), China General Nuclear Power Corporation (CGNPC), NAC Kazatomprom JSC, JSC Samruk-Kazyna (Staatsfonds) auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
+       "text": "Kein Namenstreffer für Ortalyk LLP, NAC Kazatomprom JSC, JSC Samruk-Kazyna (Staatsfonds), CGNM UK Limited, CGN Mining Company Limited, China Uranium Development Company Limited, CGNPC Uranium Resources Co. Ltd. (CGNPC-URC), China General Nuclear Power Corporation (CGNPC) auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
       }
      ],
      "grund": null,
@@ -3116,7 +3385,7 @@
          "zitat": "\"stand\":\"2026-11-10\""
         }
        ],
-       "text": "Kein Namenstreffer für Langer Heinrich (Uranmine), Paladin Energy Ltd, Minderheitsgesellschafter von Langer Heinrich Holdings (nicht genannt) auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
+       "text": "Kein Namenstreffer für Langer Heinrich (Uranmine), Paladin Energy Ltd, CNNC Overseas Limited (CNOL), China National Nuclear Corporation (CNNC) auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
       }
      ],
      "grund": null,
@@ -3297,7 +3566,7 @@
          "zitat": "\"stand\":\"2026-11-10\""
         }
        ],
-       "text": "Kein Namenstreffer für Ortalyk LLP, CGNM UK Limited, CGN Mining Company Limited, China Uranium Development Company Limited, CGNPC Uranium Resources Co. Ltd. (CGNPC-URC), China General Nuclear Power Corporation (CGNPC), NAC Kazatomprom JSC, JSC Samruk-Kazyna (Staatsfonds) auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
+       "text": "Kein Namenstreffer für Ortalyk LLP, NAC Kazatomprom JSC, JSC Samruk-Kazyna (Staatsfonds), CGNM UK Limited, CGN Mining Company Limited, China Uranium Development Company Limited, CGNPC Uranium Resources Co. Ltd. (CGNPC-URC), China General Nuclear Power Corporation (CGNPC) auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
       }
      ],
      "grund": null,
@@ -3325,8 +3594,33 @@
     "status": "APPROVED (HQ_CITY)",
     "url": "https://www.wikidata.org/wiki/Q281527"
    },
-   "risiko": [],
-   "risiko_grund": "Länderanteil nur für Förderstufe",
+   "risiko": [
+    {
+     "art": "BETRIEB",
+     "art_text": "Störung/Betriebsrisiko",
+     "belege": [
+      {
+       "abgerufen": "2026-11-24",
+       "fundstelle": "PDF-Seite 33 (pdftotext ohne -layout)",
+       "herausgeber": "CGN Mining Company Limited (HKEX 1164)",
+       "textkopie": "analysis/rohstoffe/eigentum/raw/cgnm-fy-2025-p033.txt",
+       "titel": "Annual Results Announcement for the year ended 31 December 2025",
+       "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0326/2026032603114.pdf",
+       "zitat": "Production and operational risks of the projects in Kazakhstan. Affected by insufficient domestic sulfuric acid supply in Kazakhstan"
+      }
+     ],
+     "bezug": "STANDORT",
+     "evidenz": "BELEGT",
+     "freigabe": "FREIGEGEBEN",
+     "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-24 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+     "id": "SR-U-03",
+     "quelle": "CGN Mining Company Limited (HKEX 1164), Annual Results Announcement for the year ended 31 December 2025",
+     "text": "CGN Mining nennt für 2026 als Hauptrisiko Produktions- und Betriebsrisiken der Projekte in Kasachstan: zu wenig Schwefelsäure im Land, Förderkürzungen von Kazatomprom und Minen in mittlerer bis später Abbauphase gefährden die Jahresziele.",
+     "url": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0326/2026032603114.pdf",
+     "zitat": "Production and operational risks of the projects in Kazakhstan. Affected by insufficient domestic sulfuric acid supply in Kazakhstan"
+    }
+   ],
+   "risiko_grund": null,
    "risiko_land": {
     "belege": [
      {
@@ -3479,8 +3773,33 @@
     "status": "APPROVED (FACILITY)",
     "url": "https://www.wikidata.org/wiki/Q14687563"
    },
-   "risiko": [],
-   "risiko_grund": "Länderanteil nur für Förderstufe",
+   "risiko": [
+    {
+     "art": "BETRIEB",
+     "art_text": "Störung/Betriebsrisiko",
+     "belege": [
+      {
+       "abgerufen": "2026-11-24",
+       "fundstelle": "HTML, Text ohne Tags; Tabelle \"Estimated world primary conversion capacity and UF6 production 2024\" (Quelle laut Seite: WNA Nuclear Fuel Report 2025)",
+       "herausgeber": "World Nuclear Association",
+       "textkopie": "analysis/rohstoffe/eigentum/raw/wna-konversion.txt",
+       "titel": "Conversion and Deconversion",
+       "url": "https://world-nuclear.org/information-library/nuclear-fuel-cycle/conversion-enrichment-and-fabrication/conversion-and-deconversion",
+       "zitat": "The plant was shut down from 2017 to July 2023 because of poor market conditions."
+      }
+     ],
+     "bezug": "STANDORT",
+     "evidenz": "BELEGT",
+     "freigabe": "FREIGEGEBEN",
+     "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-24 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+     "id": "SR-U-01",
+     "quelle": "World Nuclear Association, Conversion and Deconversion",
+     "text": "Laut World Nuclear Association stand das Konversionswerk Metropolis wegen schlechter Marktlage von 2017 bis Juli 2023 still.",
+     "url": "https://world-nuclear.org/information-library/nuclear-fuel-cycle/conversion-enrichment-and-fabrication/conversion-and-deconversion",
+     "zitat": "The plant was shut down from 2017 to July 2023 because of poor market conditions."
+    }
+   ],
+   "risiko_grund": null,
    "risiko_land": {
     "belege": [],
     "herkunft": "Land des Glieds im Generator-Datensatz",
@@ -3597,7 +3916,7 @@
          "zitat": "\"stand\":\"2026-11-10\""
         }
        ],
-       "text": "Kein Namenstreffer für Honeywell Uranium Hexafluoride Process auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
+       "text": "Kein Namenstreffer für Solstice Advanced Materials Inc. auf den Listen EU (Stand 2026-10-23) und UK (Stand 2026-11-10). Abgleich nur über den Namen ohne Rechtsform; Tochterfirmen und Eigentumsregeln (z. B. 50-%-Regel) nicht geprüft, daher kein Nachweis der Unbedenklichkeit. Nicht abgeglichen: OFAC, UN."
       }
      ],
      "grund": null,
@@ -3625,8 +3944,33 @@
     "status": "APPROVED (LOCALITY)",
     "url": "https://www.wikidata.org/wiki/Q220843"
    },
-   "risiko": [],
-   "risiko_grund": "Länderanteil nur für Förderstufe",
+   "risiko": [
+    {
+     "art": "NATURGEFAHR",
+     "art_text": "Naturgefahr am Standort",
+     "belege": [
+      {
+       "abgerufen": "2026-11-24",
+       "fundstelle": "PDF-Seite 143 (pdftotext ohne -layout)",
+       "herausgeber": "Paladin Energy Ltd",
+       "textkopie": "analysis/rohstoffe/eigentum/raw/pdn-ar-2026-p143.txt",
+       "titel": "Annual Report 2026",
+       "url": "https://announcements.asx.com.au/asxpdf/20260826/pdf/07374q7yc9qjxs.pdf",
+       "zitat": "At Walvis Bay, 1-in-100-year storm surge events (wave height … of 1.6m) are projected to become more frequent, occurring … Paladin does not consider this risk to have a material impact on operational or"
+      }
+     ],
+     "bezug": "STANDORT",
+     "evidenz": "BELEGT",
+     "freigabe": "FREIGEGEBEN",
+     "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-24 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+     "id": "SR-U-02",
+     "quelle": "Paladin Energy Ltd, Annual Report 2026",
+     "text": "Paladin erwartet in Walvis Bay häufigere Sturmfluten (bisher Jahrhundertereignis, im Szenario hoher Emissionen bis 2050 bis zu alle zwei Jahre); Paladin stuft das Risiko für Langer Heinrich als nicht wesentlich ein, weil nur wenige Ladungen im Jahr über den Hafen gehen.",
+     "url": "https://announcements.asx.com.au/asxpdf/20260826/pdf/07374q7yc9qjxs.pdf",
+     "zitat": "At Walvis Bay, 1-in-100-year storm surge events (wave height … of 1.6m) are projected to become more frequent, occurring … Paladin does not consider this risk to have a material impact on operational or"
+    }
+   ],
+   "risiko_grund": null,
    "risiko_land": {
     "belege": [],
     "herkunft": "Land des Glieds im Generator-Datensatz",
@@ -3666,9 +4010,25 @@
      "status": "BELEGT"
     },
     "NATURGEFAHREN": {
-     "belegt": [],
-     "grund": "Der FCDO-Reisehinweis für Namibia hat keinen Abschnitt zu Naturgefahren; standortgenaue Angaben sind nicht erfasst.",
-     "status": "UNBEKANNT"
+     "belegt": [
+      {
+       "bezug": "STANDORT",
+       "evidenz": "FACT",
+       "land": "NA",
+       "quellen": [
+        {
+         "fundstelle": "PDF-Seite 143 (pdftotext ohne -layout)",
+         "herausgeber": "Paladin Energy Ltd",
+         "titel": "Annual Report 2026",
+         "url": "https://announcements.asx.com.au/asxpdf/20260826/pdf/07374q7yc9qjxs.pdf",
+         "zitat": "At Walvis Bay, 1-in-100-year storm surge events (wave height … of 1.6m) are projected to become more frequent, occurring … Paladin does not consider this risk to have a material impact on operational or"
+        }
+       ],
+       "text": "Paladin erwartet in Walvis Bay häufigere Sturmfluten (bisher Jahrhundertereignis, im Szenario hoher Emissionen bis 2050 bis zu alle zwei Jahre); Paladin stuft das Risiko für Langer Heinrich als nicht wesentlich ein, weil nur wenige Ladungen im Jahr über den Hafen gehen."
+      }
+     ],
+     "grund": null,
+     "status": "BELEGT"
     },
     "SANKTIONEN": {
      "belegt": [
@@ -3734,7 +4094,7 @@
   }
  ],
  "tiefe": {
-  "belegt": 24,
+  "belegt": 28,
   "dimensionen": [
    "Eigentümer/Betreiber",
    "Standort",
@@ -3744,7 +4104,7 @@
    "Risiko"
   ],
   "gesamt": 42,
-  "mit_annahmen": 36,
+  "mit_annahmen": 40,
   "zeilen": [
    {
     "felder": {
@@ -3795,7 +4155,7 @@
      "Eigentümer/Betreiber": "belegt",
      "Lieferbeziehung": "belegt",
      "Menge": "unbekannt",
-     "Risiko": "unbekannt",
+     "Risiko": "belegt",
      "Standort": "belegt",
      "Wert": "unbekannt"
     },
@@ -3803,10 +4163,10 @@
    },
    {
     "felder": {
-     "Eigentümer/Betreiber": "unbekannt",
+     "Eigentümer/Betreiber": "belegt",
      "Lieferbeziehung": "belegt",
      "Menge": "belegt",
-     "Risiko": "unbekannt",
+     "Risiko": "belegt",
      "Standort": "belegt",
      "Wert": "unbekannt"
     },
@@ -3817,7 +4177,7 @@
      "Eigentümer/Betreiber": "unbekannt",
      "Lieferbeziehung": "belegt",
      "Menge": "unbekannt",
-     "Risiko": "unbekannt",
+     "Risiko": "belegt",
      "Standort": "belegt",
      "Wert": "unbekannt"
     },
@@ -4226,11 +4586,11 @@
  "zaehler": {
   "ausfall_mit_ausweich_menge": 6,
   "belege": 9,
-  "eigentum_belegt": 5,
+  "eigentum_belegt": 6,
   "eigentum_kandidaten": 4,
-  "eigentumskette_freigegeben": 2,
-  "eigentumskette_kanten": 11,
-  "eigentumskette_vollstaendig": 2,
+  "eigentumskette_freigegeben": 5,
+  "eigentumskette_kanten": 12,
+  "eigentumskette_vollstaendig": 5,
   "glieder_mit_ausweichquelle": 2,
   "kette_stufen": 2,
   "mengen_abgeleitet": 0,
@@ -4239,14 +4599,14 @@
   "mengen_freigegeben": 0,
   "mengen_in_tonnen": 1,
   "mengen_mit_annahmen": 4,
-  "risiko_belegt": 4,
-  "risikoebene_belegt": 23,
+  "risiko_belegt": 7,
+  "risikoebene_belegt": 24,
   "risikoebene_felder": 28,
   "standorte": 7,
   "standorte_mit_ort": 6,
-  "tiefe_belegt": 24,
+  "tiefe_belegt": 28,
   "tiefe_gesamt": 42,
-  "tiefe_mit_annahmen": 36,
+  "tiefe_mit_annahmen": 40,
   "verbindungen": 4,
   "verbindungen_auf_globus": 3,
   "verbindungen_freigegeben": 4,

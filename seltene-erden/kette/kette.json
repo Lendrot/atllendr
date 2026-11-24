@@ -1418,11 +1418,11 @@
   ]
  },
  "eingaben": {
-  "analysis/rohstoffe/eigentum/eigentumskette.json": "5d02f341354c9ed186ce2c189b9619b8061fdb5d2739fbfa3688764f32e1b9ba",
+  "analysis/rohstoffe/eigentum/eigentumskette.json": "74d2ea759f73ced09161ecbfb9bdc830636d18d945d979507263cabc58c15903",
   "analysis/rohstoffe/fluss-freigaben.jsonl": "aaabbdac9c8a96ba0a688d2348a9b29df912fd5f6d05c9915280d05f3e396d66",
   "analysis/rohstoffe/mengen/annahmen-snapshot.json": "5169bc01abcdff017b11b6e2e0bdb0abbc934a843f86a8fbbf4dbdd3585165b1",
-  "analysis/rohstoffe/mengen/mengen.json": "a9c63566dfea221b1a79b37c3a5e4279c95da48436d5d005c1c924156ccb0db3",
-  "analysis/rohstoffe/mengen/zweitpruefung.jsonl": "65e79d9b6e01f162ee1d6274df6ad52c3f25a75345c5dc532269828f56622c7f",
+  "analysis/rohstoffe/mengen/mengen.json": "83eb82f85ec56a551a01ebaf57c79d4b74add31b00a61c29c297c7b171af3cc8",
+  "analysis/rohstoffe/mengen/zweitpruefung.jsonl": "06547833fe40ebe5a2c1b6da97cbe1b45bc454f47b5d9d9b0da7592481390ef2",
   "analysis/rohstoffe/seltene-erden/kandidaten.json": "a5202855d2bd42654475a6577d173498a3f1da70f754c76f6cb54e1772e1648b",
   "analysis/rohstoffe/seltene-erden/markt.json": "d8c04d2dd60eb2cf0200450597debce98f8fc4d602063b8b6757a4e79a469d9e"
  },
@@ -2084,8 +2084,33 @@
     "status": "APPROVED (LOCALITY)",
     "url": "https://www.wikidata.org/wiki/Q329503"
    },
-   "risiko": [],
-   "risiko_grund": "Länderanteil nur für Förderstufe",
+   "risiko": [
+    {
+     "art": "BETRIEB",
+     "art_text": "Störung/Betriebsrisiko",
+     "belege": [
+      {
+       "abgerufen": "2026-11-07",
+       "fundstelle": "Textkopie des Flusspakets",
+       "herausgeber": "Lynas Rare Earths Limited",
+       "textkopie": "analysis/research/seltene-erden-flows-v1/raw/lyc-ar-2026-p18.txt",
+       "titel": "2026 Annual Report (mit Appendix 4E)",
+       "url": "https://announcements.asx.com.au/asxpdf/20260826/pdf/0737nx07s3tnf7.pdf",
+       "zitat": "concentrate quality issues which affected the productivity of cracking and leaching in Kalgoorlie and Kuantan … Operating standards for upstream and downstream processing have now been improved to better manage the ore variation."
+      }
+     ],
+     "bezug": "STANDORT",
+     "evidenz": "BELEGT",
+     "freigabe": "FREIGEGEBEN",
+     "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-24 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+     "id": "SR-SE-01",
+     "quelle": "Lynas Rare Earths Limited, 2026 Annual Report (mit Appendix 4E)",
+     "text": "Lynas meldet für das Juni-Quartal GJ 2025/26 Qualitätsprobleme beim Mt-Weld-Konzentrat, die die Produktivität des Aufschlusses (Cracking and Leaching) in Kalgoorlie und Kuantan und die Menge fertiger Produkte senkten; die Betriebsstandards wurden danach angepasst.",
+     "url": "https://announcements.asx.com.au/asxpdf/20260826/pdf/0737nx07s3tnf7.pdf",
+     "zitat": "concentrate quality issues which affected the productivity of cracking and leaching in Kalgoorlie and Kuantan … Operating standards for upstream and downstream processing have now been improved to better manage the ore variation."
+    }
+   ],
+   "risiko_grund": null,
    "risiko_land": {
     "belege": [],
     "herkunft": "Land des Glieds im Generator-Datensatz",
@@ -2232,8 +2257,33 @@
     "status": "APPROVED (LOCALITY)",
     "url": "https://www.wikidata.org/wiki/Q817578"
    },
-   "risiko": [],
-   "risiko_grund": "Länderanteil nur für Förderstufe",
+   "risiko": [
+    {
+     "art": "BETRIEB",
+     "art_text": "Störung/Betriebsrisiko",
+     "belege": [
+      {
+       "abgerufen": "2026-11-07",
+       "fundstelle": "Textkopie des Flusspakets",
+       "herausgeber": "Lynas Rare Earths Limited",
+       "textkopie": "analysis/research/seltene-erden-flows-v1/raw/lyc-ar-2026-p18.txt",
+       "titel": "2026 Annual Report (mit Appendix 4E)",
+       "url": "https://announcements.asx.com.au/asxpdf/20260826/pdf/0737nx07s3tnf7.pdf",
+       "zitat": "As previously noted, Mt Weld concentrate quality issues affected the productivity of cracking and leaching in Kuantan and the volume of finished products during the June quarter."
+      }
+     ],
+     "bezug": "STANDORT",
+     "evidenz": "BELEGT",
+     "freigabe": "FREIGEGEBEN",
+     "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-24 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+     "id": "SR-SE-02",
+     "quelle": "Lynas Rare Earths Limited, 2026 Annual Report (mit Appendix 4E)",
+     "text": "Lynas meldet für Lynas Malaysia (Kuantan), dass Qualitätsprobleme beim Mt-Weld-Konzentrat im Juni-Quartal GJ 2025/26 die Produktivität des Aufschlusses und die Menge fertiger Produkte senkten.",
+     "url": "https://announcements.asx.com.au/asxpdf/20260826/pdf/0737nx07s3tnf7.pdf",
+     "zitat": "As previously noted, Mt Weld concentrate quality issues affected the productivity of cracking and leaching in Kuantan and the volume of finished products during the June quarter."
+    }
+   ],
+   "risiko_grund": null,
    "risiko_land": {
     "belege": [],
     "herkunft": "Land des Glieds im Generator-Datensatz",
@@ -2362,7 +2412,7 @@
   }
  ],
  "tiefe": {
-  "belegt": 19,
+  "belegt": 21,
   "dimensionen": [
    "Eigentümer/Betreiber",
    "Standort",
@@ -2372,7 +2422,7 @@
    "Risiko"
   ],
   "gesamt": 30,
-  "mit_annahmen": 27,
+  "mit_annahmen": 29,
   "zeilen": [
    {
     "felder": {
@@ -2412,7 +2462,7 @@
      "Eigentümer/Betreiber": "belegt",
      "Lieferbeziehung": "belegt",
      "Menge": "unbekannt",
-     "Risiko": "unbekannt",
+     "Risiko": "belegt",
      "Standort": "belegt",
      "Wert": "unbekannt"
     },
@@ -2423,7 +2473,7 @@
      "Eigentümer/Betreiber": "belegt",
      "Lieferbeziehung": "belegt",
      "Menge": "unbekannt",
-     "Risiko": "unbekannt",
+     "Risiko": "belegt",
      "Standort": "belegt",
      "Wert": "unbekannt"
     },
@@ -2691,14 +2741,14 @@
   "mengen_freigegeben": 0,
   "mengen_in_tonnen": 0,
   "mengen_mit_annahmen": 3,
-  "risiko_belegt": 2,
+  "risiko_belegt": 4,
   "risikoebene_belegt": 17,
   "risikoebene_felder": 20,
   "standorte": 5,
   "standorte_mit_ort": 5,
-  "tiefe_belegt": 19,
+  "tiefe_belegt": 21,
   "tiefe_gesamt": 30,
-  "tiefe_mit_annahmen": 27,
+  "tiefe_mit_annahmen": 29,
   "verbindungen": 3,
   "verbindungen_auf_globus": 3,
   "verbindungen_freigegeben": 3,

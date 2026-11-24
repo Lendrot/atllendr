@@ -141,7 +141,7 @@
    "ersatz": [],
    "mehrkosten": {
     "evidenz": "UNKNOWN",
-    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen."
+    "grund": "Kein Bogen an diesem Glied belegt Menge und Vertragswert zugleich; ohne Vertragspreis gibt es keine belegte Preisdifferenz zum Marktpreis der Ausweichquellen. V2: kein freigegebener Marktpreis für Gold-Antimon-Flotationskonzentrat."
    },
    "mengen": [
     {
@@ -1053,31 +1053,6 @@
     "ziel_typ": "kante"
    },
    {
-    "abgleich": "Die Quelle nennt Costerfield als Betrieb von Mandalay, beschreibt aber zugleich die geplante Übertragung der australischen Mandalay-Gesellschaften an Alkane.",
-    "aussage": "antimon-site-legacy-row-111 gehört laut Quelle zu Mandalay Resources Corporation",
-    "belege": [
-     {
-      "quelle": "rk-alk-gm-2025-06-s013",
-      "zitat": [
-       "Mandalay’s core assets and operations, including the Costerfield Mine in Victoria",
-       "This will result in the Mandalay Australian companies joining the Alkane Australian income tax consolidated group."
-      ]
-     }
-    ],
-    "bericht": "analysis/rohstoffe/eigentum/zweitpruefung/Pruefbericht-Eigentuemerkette-Rohstoffe-Zweitpruefung-2026-11-16.pdf",
-    "erstpruefung_sitzung": "session_01JgcA7TdgLRrqKV9kyFuE5E",
-    "geprueft_am": "2026-11-16",
-    "hinweis": "Abweichung: Die Zugehörigkeit zu Mandalay gilt nur zum Stand 25.06.2025 (Einladung zur Hauptversammlung vor dem Zusammenschluss). Ob und wann der Zusammenschluss vollzogen wurde, belegt die Quelle nicht; ohne Beleg des aktuellen Eigentümers keine Freigabe.",
-    "pruef_id": "R62",
-    "pruefer": "Claude (Zweitprüfung, getrennte Sitzung)",
-    "quelle_frisch_geladen": true,
-    "regel": "Eddie Sablah 2026-11-11 13:41Z: Freigabe nur, wenn zwei getrennte Sitzungen bestätigen (Zweite Sitzung + CI + 5 Fälle/Monat)",
-    "sitzung": "session_01JgcA7Tamxi4Cn8LEHHDz8t",
-    "urteil": "ABWEICHUNG",
-    "ziel_id": "antimon/antimon-site-legacy-row-111",
-    "ziel_typ": "glied"
-   },
-   {
     "abgleich": "\"all of the issued and outstanding common shares\" = 100 % Kapital; Abschluss am 05.08.2025 = Stand 2025-08-05. PDF frisch geladen, SHA-256 gleich der gespeicherten Kopie (d98c8ac3…).",
     "aussage": "Alkane Resources Ltd → Mandalay Resources Corporation: 100 % (Kapital), Stand 2025-08-05",
     "belege": [
@@ -1221,11 +1196,11 @@
  "eingaben": {
   "analysis/rohstoffe/antimon/kandidaten.json": "955d4a3a4c2bcd286394a8f8747c4f2c3eb18dd34d2bf839b0c23177c2349ce7",
   "analysis/rohstoffe/antimon/markt.json": "1ce538ffabf9d98288f1fe28d373d9eba5b97d2b11a3ce5ee5abdacfaa84d616",
-  "analysis/rohstoffe/eigentum/eigentumskette.json": "5d02f341354c9ed186ce2c189b9619b8061fdb5d2739fbfa3688764f32e1b9ba",
+  "analysis/rohstoffe/eigentum/eigentumskette.json": "74d2ea759f73ced09161ecbfb9bdc830636d18d945d979507263cabc58c15903",
   "analysis/rohstoffe/fluss-freigaben.jsonl": "aaabbdac9c8a96ba0a688d2348a9b29df912fd5f6d05c9915280d05f3e396d66",
   "analysis/rohstoffe/mengen/annahmen-snapshot.json": "5169bc01abcdff017b11b6e2e0bdb0abbc934a843f86a8fbbf4dbdd3585165b1",
-  "analysis/rohstoffe/mengen/mengen.json": "a9c63566dfea221b1a79b37c3a5e4279c95da48436d5d005c1c924156ccb0db3",
-  "analysis/rohstoffe/mengen/zweitpruefung.jsonl": "65e79d9b6e01f162ee1d6274df6ad52c3f25a75345c5dc532269828f56622c7f"
+  "analysis/rohstoffe/mengen/mengen.json": "83eb82f85ec56a551a01ebaf57c79d4b74add31b00a61c29c297c7b171af3cc8",
+  "analysis/rohstoffe/mengen/zweitpruefung.jsonl": "06547833fe40ebe5a2c1b6da97cbe1b45bc454f47b5d9d9b0da7592481390ef2"
  },
  "erzeugt_von": "scripts/analysis/rohstoffe/rohstoffkette.py",
  "kette": {
@@ -1974,7 +1949,7 @@
   }
  ],
  "tiefe": {
-  "belegt": 14,
+  "belegt": 16,
   "dimensionen": [
    "Eigentümer/Betreiber",
    "Standort",
@@ -1993,7 +1968,7 @@
      "Menge": "belegt",
      "Risiko": "belegt",
      "Standort": "belegt",
-     "Wert": "unbekannt"
+     "Wert": "belegt"
     },
     "id": "S1"
    },
@@ -2015,7 +1990,7 @@
      "Menge": "belegt",
      "Risiko": "unbekannt",
      "Standort": "belegt",
-     "Wert": "unbekannt"
+     "Wert": "belegt"
     },
     "id": "S3"
    },
@@ -2137,13 +2112,21 @@
       "textkopie": "analysis/research/antimon-flows-v1/raw/alk-gm-2025-06-p15.txt",
       "url": "https://announcements.asx.com.au/asxpdf/20250625/pdf/06l3b4v699n4mj.pdf",
       "zitat": "gold-antimony flotation concentrate is trucked to the port of Melbourne and … shipped to international trader and smelting customers."
+     },
+     {
+      "abgerufen": "2026-11-24",
+      "fundstelle": "Annual Report 2026, PDF-Seite 149",
+      "herausgeber": "Alkane Resources Ltd",
+      "textkopie": "analysis/rohstoffe/mengen/raw/alk-ar-2026-p149.txt",
+      "url": "https://announcements.asx.com.au/asxpdf/20261002/pdf/074w1jc6sy437y.pdf",
+      "zitat": "Disaggregation of revenue … TOMINGLEY COSTERFIELD BJÖRKDAL TOTAL … Antimony - - 30,772 - - - 30,772 -"
      }
     ],
     "evidenz": "BELEGT",
     "freigabe": "FREIGEGEBEN",
     "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-24 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
     "grund": null,
-    "hinweis": "Verkaufte Antimonmenge des Konzerns im Geschäftsjahr; im Konzern fördert nur Costerfield Antimon (Tomingley und Björkdal ohne Antimon, Jahresbericht PDF-Seite 111). Das Gold-Antimon-Flotationskonzentrat geht laut Alkane per Lkw zum Hafen Melbourne, ein anderer Weg ist nicht genannt. Zahl ist Antimon-Inhalt vor Abzug der Bezahlbarkeit (Alkane rechnet mit 70 %), nicht die Konzentrat-Tonnage. Wert mit Annahmen rechnet mit dem USGS-Metallpreis und liegt damit über dem Erlös: Alkane nennt einen Durchschnittserlös von 33,357 A$ je t Antimon (PDF-Seite 111).",
+    "hinweis": "Verkaufte Antimonmenge des Konzerns im Geschäftsjahr; im Konzern fördert nur Costerfield Antimon (Tomingley und Björkdal ohne Antimon, Jahresbericht PDF-Seite 111). Das Gold-Antimon-Flotationskonzentrat geht laut Alkane per Lkw zum Hafen Melbourne, ein anderer Weg ist nicht genannt. Zahl ist Antimon-Inhalt vor Abzug der Bezahlbarkeit (Alkane rechnet mit 70 %), nicht die Konzentrat-Tonnage. Wert (A7, 2026-11-24): Antimon-Erlös aus Verträgen mit Kunden im Segment Costerfield laut Konzernabschluss, Anhang 5 (PDF-Seite 149), Spalte Costerfield 2026 in A$ Tausend; der Goldanteil des Konzentrats ist nicht enthalten. Der Erlös zählt erst ab Erwerb von Mandalay (5.8.2025) und nur den bezahlbaren Antimonanteil, die Menge ist vor Abzug der Bezahlbarkeit; der Klimabericht nennt rund 26,9 Mio. A$ (gerundet, andere Abgrenzung). Euro mit EZB-Jahresmittel 2025, weil für 2026 noch kein Jahresmittel veröffentlicht ist.",
     "pro_jahr": true,
     "quelle_text": "1.364 t Sb (verkauft, Antimon-Inhalt, Geschäftsjahr 1.7.2025 bis 30.6.2026)",
     "rechnung": "",
@@ -2158,77 +2141,18 @@
    "von": "S1",
    "ware": "Gold-Antimon-Flotationskonzentrat",
    "wert": {
-    "eur": null,
-    "evidenz": "UNKNOWN",
-    "grund": "Keine gelesene Quelle nennt einen Wert; Menge × Preis ist eine Rechnung und steht nur in der Ansicht „Mit Annahmen“.",
-    "quelle_text": null,
-    "rechnung": "",
-    "text": "unbekannt"
+    "beleg_id": "M-ANF-02",
+    "eur": 17565932.184039272,
+    "evidenz": "BELEGT",
+    "freigabe": "FREIGEGEBEN",
+    "freigabe_herkunft": "Zweitprüfung BESTAETIGT 2026-11-24 (auto-zweitpruefung, claude-sonnet-5-5, blind, Programmprüfung bestanden)",
+    "grund": null,
+    "quelle_text": "30,8 Mio. A$ laut Quelle",
+    "rechnung": "30,8 Mio. A$ ÷ EZB-Jahresmittel 2025: 1,7518 A$ je €",
+    "text": "17,6 Mio. €"
    },
-   "wert_abgeleitet": {
-    "art": "produkt",
-    "eingaenge": [
-     {
-      "einheit": "t",
-      "freigabe": "FREIGEGEBEN",
-      "hoch": 1,
-      "name": "Menge",
-      "quelle": "1.364 t Sb (verkauft, Antimon-Inhalt, Geschäftsjahr 1.7.2025 bis 30.6.2026)",
-      "ref": "M-ANF-02",
-      "wert": 1364.0
-     },
-     {
-      "einheit": "US$ je t Sb (Metallpreis)",
-      "freigabe": "FREIGEGEBEN",
-      "hoch": 1,
-      "name": "Preis",
-      "quelle": "U.S. Geological Survey, Mineral Commodity Summaries 2026, Antimony",
-      "ref": "preis:antimon",
-      "wert": 55115.5655462194
-     },
-     {
-      "einheit": "US$ je €",
-      "freigabe": "AMTLICH",
-      "hoch": -1,
-      "name": "Kurs",
-      "quelle": "EZB-Jahresmittel 2025: 1,1300 US$ je €",
-      "ref": "ezb:USD:2025",
-      "wert": 1.13
-     }
-    ],
-    "einheit": "€",
-    "ergebnis": [
-     66528877.34959581
-    ],
-    "eur": 66528877.34959581,
-    "eur_spanne": [
-     66528877.34959581
-    ],
-    "evidenz": "ABGELEITET",
-    "hinweis": "Marktwert zum Jahrespreis; der tatsächliche Vertragspreis ist unbekannt.",
-    "preis_basis": "antimon",
-    "preis_jahr": 2025,
-    "preis_quelle": "U.S. Geological Survey, Mineral Commodity Summaries 2026, Antimony",
-    "preis_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-antimony.pdf",
-    "preis_zitat": "The average antimony price in 2025 was $25 per pound",
-    "rechenweg": "1.364 t (1.364 t Sb (verkauft, Antimon-Inhalt, Geschäftsjahr 1.7.2025 bis 30.6.2026)) × 55.115,566 US$ je t Sb (Metallpreis) (25 US$ je lb Antimon (Jahresmittel 2025) × 2.204,62 lb/t (einheit.py); Metallpreis, Konzentrat wird mit Abschlag bezahlt) ÷ EZB-Jahresmittel 2025: 1,1300 US$ je €",
-    "text": "≈ 66,5 Mio. € pro Jahr"
-   },
-   "wert_annahme": {
-    "annahme_art": "RECHNUNG",
-    "eur": 66528877.34959581,
-    "eur_spanne": [
-     66528877.34959581
-    ],
-    "evidenz": "ANNAHME",
-    "preis_basis": "antimon",
-    "preis_datum": null,
-    "preis_quelle": "U.S. Geological Survey, Mineral Commodity Summaries 2026, Antimony",
-    "preis_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-antimony.pdf",
-    "preis_zitat": "The average antimony price in 2025 was $25 per pound",
-    "rechnung": "1.364 t (belegte Menge) × 55.115,566 US$ je t Sb (Metallpreis) (25 US$ je lb Antimon (Jahresmittel 2025) × 2.204,62 lb/t (einheit.py); Metallpreis, Konzentrat wird mit Abschlag bezahlt) = 75,2 Mio. US$ ÷ EZB-Jahresmittel 2025: 1,1300 US$ je €",
-    "text": "≈ 66,5 Mio. € pro Jahr"
-   }
+   "wert_abgeleitet": null,
+   "wert_annahme": null
   }
  ],
  "weltreferenz": {
@@ -2258,15 +2182,15 @@
   "risikoebene_felder": 16,
   "standorte": 4,
   "standorte_mit_ort": 4,
-  "tiefe_belegt": 14,
+  "tiefe_belegt": 16,
   "tiefe_gesamt": 24,
   "tiefe_mit_annahmen": 16,
   "verbindungen": 2,
   "verbindungen_auf_globus": 2,
   "verbindungen_freigegeben": 2,
-  "werte_abgeleitet": 1,
-  "werte_belegt": 0,
-  "werte_in_euro": 0,
+  "werte_abgeleitet": 0,
+  "werte_belegt": 1,
+  "werte_in_euro": 1,
   "werte_mit_annahmen": 1
  }
 }
