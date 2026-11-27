@@ -50,3 +50,4 @@ body:not(.lesehaelfte) .lese-ebenen,body:not(.lesehaelfte) .lese-detail{display:
 /* Eingebettet (?embed=1, Rohstoffseiten): Kopfzeile der Seitenhülle aus, sonst verdeckt sie „Filter & Liste".
    Steht hier, weil embed.css unter Bestandsschutz (preservation-v295) liegt. */
 html.embedded header.ss-kopf[data-site-shell],html.embedded nav.ss-unter[data-site-shell]{display:none!important}
+body.lesehaelfte #app .lese-ebenen .sites-toggle .layer-switch{flex-wrap:wrap;max-width:100%}

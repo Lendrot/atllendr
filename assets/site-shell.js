@@ -252,6 +252,12 @@
   var AUS = 'script,style,code,pre,textarea,option,select,input';
   // Technische Kennungen (UUID, Prüfsummen, Dateipfade) werden als Kennung gezeigt; der volle Wert steht im Tooltip.
   var KENNUNG = /(?:\bsha256\s+)?\b(?:[a-z][a-z-]*:)?(?:[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}|(?=[0-9]*[a-f])[0-9a-f]{12,64})\b…?|\b[\w.-]+(?:\/[\w.-]+)+\.(?:jsonl?|csv|md|sqlite)\b|\bV\d{2}(?:\.\d+)?-[A-Z][A-Z0-9]*(?:-[A-Z0-9]+)+\b|\b[a-z]+:v\d{3}:[\w:-]+/g;
+  // Entfernt interne Kennungen; leere Klammerreste („()“, „(, “, „, )“) fallen mit weg (Design-Audit 2026-11-27, M6).
+  function internWeg(t) {
+    INTERN.lastIndex = 0; var r = t.replace(INTERN, '');
+    if (r === t) return t;
+    return r.replace(/\s*\(\s*\)/g, '').replace(/\(\s*[,·]\s*/g, '(').replace(/\s*[,·]\s*\)/g, ')');
+  }
   function klartext(t) { return t.replace(SNAKE, snakeText).replace(CODE, function (_, c) { return BEGRIFFE[c][0]; }); }
   function begriffeErsetzen(wurzel) {
     var w = document.createTreeWalker(wurzel, NodeFilter.SHOW_TEXT), liste = [];
@@ -266,7 +272,7 @@
     liste.forEach(function (n) {
       var t = n.nodeValue, p = n.parentElement;
       if (p.closest('a[href^="http"]')) return;
-      INTERN.lastIndex = 0; t = t.replace(INTERN, '');
+      t = internWeg(t);
       if (p.closest('svg')) { var k = klartext(t); if (k !== n.nodeValue) n.nodeValue = k; return; }
       var frag = document.createDocumentFragment(), last = 0, m, teile = [];
       CODE.lastIndex = 0; while ((m = CODE.exec(t))) teile.push({i: m.index, l: m[0].length, art: 'code', w: m[1]});
